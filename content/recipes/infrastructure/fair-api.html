@@ -1,0 +1,1901 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Developing FAIR API for the Web</title>
+
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
+    <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/fair-api.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Assessment" href="../assessing-fairness.html" />
+    <link rel="prev" title="6. Using OpenRefine and Karma for FAIRification" href="openrefine-nvt.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/fair-api.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Developing FAIR API for the Web" />
+<meta property="og:description" content="Developing FAIR API for the Web  &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/terms/&#34;, &#34;o" />
+ <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
+<meta name="twitter:card" content="summary" />
+  </head>
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+
+
+<v-app id="app" class="pa-0">
+    <v-container fluid class="pa-0">
+        <v-row class="pa-0" no-gutters>
+            <v-container fluid>
+                <v-row>
+                    <div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
+    <div class="topbar-contents row" style="margin: initial !important;">
+        <div class="col topbar-main d-flex align-center">
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                    data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                    aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                    title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            
+                <a href="../../../index.html">
+                    <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook">
+                </a>
+            
+
+            <v-spacer> </v-spacer>
+            <div style="margin-top: 3px" class="mr-4">
+                
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/infrastructure/fair-api.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+                <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+    <button
+        id="dropdown-buttons-trigger"
+        class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"
+    >
+        <i class="fab fa-github"></i>
+    </button>
+
+    <div class="dropdown-buttons sourcebuttons">
+        
+            <a class="repository-button" href="https://github.com/FAIRplus/the-fair-cookbook">
+                <button
+                    type="button"
+                    class="btn btn-secondary topbarbtn"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="Source repository"><i
+                    class="fab fa-github"
+                >
+
+                </i>repository
+                </button>
+            </a>
+        
+        
+        <a
+            class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/infrastructure/fair-api.html&body=Your%20issue%20content%20here."
+        >
+            <button type="button"
+                    class="btn btn-secondary topbarbtn"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                title="Open an issue"
+            >
+                <i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/infrastructure/fair-api.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+                <!-- Launch buttons -->
+
+            </div>
+                
+                    <form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get"
+>
+  <i class="icon fas fa-search"></i>
+  <input
+          type="search"
+          class="form-control"
+          name="q"
+          id="search-input"
+          placeholder="Search this book..."
+          aria-label="Search this book..."
+          autocomplete="off"
+          style="border-radius:10px"
+  >
+</form>
+
+                
+                
+                
+        </div>
+    </div>
+</div>
+                </v-row>
+                <v-row class="d-flex">
+                    
+                    <div
+                        class=" bd-sidebar site-navigation show"
+                        id="site-navigation"
+                        style="width:350px"
+                    >
+                        
+                            <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+
+    <div class="testTOC">
+        <script>
+    Vue.component("Navigation", {
+        data() { return { recipes: {} }},
+        methods: {
+            async getData(){
+                const recipes = await fetch('/_static/recipes.json')
+                this.recipes = await recipes.json();
+                this.parseDom()
+            },
+            parseDom() {
+                const links = Array.prototype.slice.call(document.getElementsByClassName("reference internal"))
+                const icon = '<i class="fas fa-play-circle grey lighten-3 secondary--text ml-2"></i>'
+                links.forEach(link => {
+                    const recipeSplit = link.innerText.split(". ")
+                    const recipeName = recipeSplit[recipeSplit.length - 1].trim()
+                    recipeSplit.pop()
+                    recipeSplit.forEach(pref => { pref = pref.trim() })
+                    const prefix = recipeSplit.length > 0 ? recipeSplit.join(".") + "." : null
+                    const content = prefix ? `${prefix} ${recipeName}` : recipeName
+                    if (Object.keys(this.recipes).includes(recipeName)) {
+                        if (this.recipes[recipeName].executable === 'Yes') link.innerHTML = content + icon
+                    }
+                })
+            }
+        },
+        mounted() { this.getData() }
+    })
+</script>
+
+
+<Navigation> </Navigation>
+
+    </div>
+
+    <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
+        
+        
+            <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/brief-FAIR-principles.html">
+   What are the FAIR principles?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/metadata-fair.html">
+   Metadata and FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     3. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     4. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     5. Registering Datasets in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     6. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     7. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     8. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       8.9.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       8.9.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       8.9.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.11.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.11.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.11.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     9. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     10. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       10.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       10.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       10.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     11. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     12. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     13. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     14. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     15. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       15.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-catalog.html">
+     3. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-catalog-deployment.html">
+     4. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="vocabularies.html">
+     5. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       5.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       5.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vocabularies/UC3_R13_local_ontology_services.html">
+       5.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openrefine-nvt.html">
+     6. Using OpenRefine and Karma for FAIRification
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     7. Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/approach-cdisc.html">
+     7. Mapping datasets to CDISC-SDTM
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Tools
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../search-wizard.html">
+   Search Wizard
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav>
+        
+        
+             <!-- To handle the deprecated key -->
+
+        
+    </div>
+
+    <div class="text-center px-5 lighten-3 grey py-2">
+        Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
+    </div>
+</div>
+                    </div>
+                    
+                    <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                        <v-container fluid id="main-content" class="pa-0">
+                            <v-row class="d-flex">
+                                
+                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                        
+  <div class="section" id="developing-fair-api-for-the-web">
+<h1><span class="section-number">7. </span>Developing FAIR API for the Web<a class="headerlink" href="#developing-fair-api-for-the-web" title="Permalink to this headline">¶</a></h1>
+<br/>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB073", "sdo:name": "Developing FAIR API for the Web", "sdo:description": "Developing FAIR API for the Web", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566", "Software Engineer|T4FS_0000569"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Technical Guidance", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB073", "dso:url": "https://w3id.org/faircookbook/FCB073", "owl:sameAs": "https://identifiers.org/fcb:FCB073"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H30M0S", "sdo:totalTime": "PT0H30M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB073#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB073#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB073#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB073#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+30 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Developing FAIR API for the Web</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Technical Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000441">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000569">Software Engineer</a></div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars not applicable">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/not applicable" class="secondary white--text" target="_blank" label>not applicable</v-chip></v-chip-group></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB073" class="text--purple-dark">FCB073
+</a></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<a class="reference internal image-reference" href="../../../_images/CFDE-logo1.png"><img alt="../../../_images/CFDE-logo1.png" class="align-right" src="../../../_images/CFDE-logo1.png" style="width: 100px;" /></a>
+<p>This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.</p>
+<p><strong>Authors</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Maintainers</strong>: <a class="reference external" href="https://orcid.org/0000-0003-3471-7416">Daniel J. B. Clarke</a></p>
+<p><strong>Version</strong>: 1.1</p>
+<p><strong>License</strong>: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></p>
+</div>
+<div class="section" id="background">
+<h2><span class="section-number">7.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>An <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#api">Application Programming Interface (API)</a>  refers to a mechanism
+for interfacing with a web service programmatically. Unlike a Graphical User Interface (GUI) designed to be used by an
+end-user, API are designed to be used by other computer programs. Designing and documenting an API for an application
+enables your application to be more interoperable with, and ultimately more reused, by other applications.
+Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be
+documented well. We will not cover <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair">FAIR</a>
+APIs of software libraries, but instead focus on developing FAIR APIs for the web.</p>
+<p>More and more web-based applications are becoming available every day. These applications typically perform complex
+operations on large databases. While web-based applications provide users with the capacity to access a tool, a database,
+or other resource programmatically, they are not always able to interoperate with other independent web applications.
+A web-based application that offers a FAIR API is more accessible to operating as part of workflows, or integration
+systems such as semantic search engines. This makes FAIR API development very relevant for data catalogs or web tools
+developed by the CF DCCs.</p>
+<p>While a slew of standards exist for web API development and documentation, each has their own level of FAIRness.
+Here we are going to focus on <a class="reference external" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">RESTful APIs</a>,
+which can be described with <a class="reference external" href="https://www.openapis.org/">OpenAPI</a> (previously Swagger) to take advantage of RESTful API
+flexibility while still permitting machine readable introspection. Several other standards are machine readable by
+default, including <a class="reference external" href="https://www.w3.org/TR/soap/">SOAP</a>, <a class="reference external" href="https://www.w3.org/TR/sparql11-overview/">SPARQL</a> or
+<a class="reference external" href="https://graphql.org/">GraphQL</a> among many others, but despite this, RESTful APIs are the most widely used because of
+their low barrier to entry. Some standards exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
+We will consider a specific extension of OpenAPI: <a class="reference external" href="https://smart-api.info/">Smart-API</a>, which adds a few additional
+fields and also has its own <a class="reference external" href="https://smart-api.info/guide">get-started guide</a>.</p>
+</div>
+<div class="section" id="motivation">
+<h2><span class="section-number">7.2. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>Documenting APIs or building them from the ground up with SmartAPI in mind have a number of advantages:</p>
+<ul class="simple">
+<li><p>Human readable documentation of that API with a number of packages that can generate it from the OpenAPI schema</p></li>
+<li><p>Server/client libraries from a number of packages that can generate them for numerous programming languages based on the OpenAPI schema</p>
+<ul>
+<li><p>People can access your application features using their favorite programming language</p></li>
+<li><p>People can create an application that shares the same API as another application for interoperability</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/IBM/openapi-to-graphql">Interoperability with GraphQL</a></p></li>
+<li><p>Enabling simple use cases like enhancing findability with <a class="reference external" href="https://apis.guru/browse-apis/">API Catalogs</a></p></li>
+<li><p>Enabling future use cases</p></li>
+</ul>
+<p>SmartAPI specifications inherit all of the benefits of OpenAPI, while adding the potential for interoperability with RDF
+semantically linked data. This can help enable future use cases like <a class="reference external" href="https://biothings.io/">BioThings API</a>, powering
+semantically linked APIs for biomedical knowledge exploration.</p>
+</div>
+<div class="section" id="ingredients">
+<h2><span class="section-number">7.3. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Web Application</p></li>
+<li><p>Existing API Documentation</p></li>
+<li><p>OpenAPI/SmartAPI Editor (see step 1)</p></li>
+</ul>
+</div>
+<div class="section" id="objectives">
+<h2><span class="section-number">7.4. </span>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<p>We will look at the existing REST service provided by the Metabolomics Workbench catalog: <a class="reference external" href="https://www.metabolomicsworkbench.org/tools/mw_rest.php">https://www.metabolomicsworkbench.org/tools/mw_rest.php</a>.
+This API is described for human consumption, including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.</p>
+<p>Although OpenAPI can be edited by most standards editors because it is typically written in <a class="reference external" href="https://yaml.org/spec/1.2/spec.html">YAML</a>
+(a slightly ‘nicer’ version of <a class="reference external" href="https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json">JSON</a> that is equivalent),
+it is helpful to use an OpenAPI editor like <a class="reference external" href="https://app.swaggerhub.com/home">https://app.swaggerhub.com/home</a>.
+This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.</p>
+<p>An example endpoint in an OpenAPI Editor:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="an-example-endpoint-in-an-openapi-editor">
+<a class="reference internal image-reference" href="../../../_images/ss110.png"><img alt="An example endpoint in an OpenAPI Editor" src="../../../_images/ss110.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.4 </span><span class="caption-text">An example endpoint in an OpenAPI Editor</span><a class="headerlink" href="#an-example-endpoint-in-an-openapi-editor" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>A real response in an OpenAPI Editor:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="a-real-response-in-an-openapi-editor">
+<a class="reference internal image-reference" href="../../../_images/ss2.png"><img alt="A real response in an OpenAPI Editor" src="../../../_images/ss2.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.5 </span><span class="caption-text">A real response in an OpenAPI Editor</span><a class="headerlink" href="#a-real-response-in-an-openapi-editor" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<div class="section" id="recipe">
+<h2><span class="section-number">7.5. </span>Recipe<a class="headerlink" href="#recipe" title="Permalink to this headline">¶</a></h2>
+<p>The complete <code class="docutils literal notranslate"><span class="pre">swagger.yaml</span></code> constructed in this recipe is available <a class="reference external" href="https://gist.github.com/u8sand/292c363274ff6e609fadb369c26ca9b6">here</a> for your reference,
+it will be valuable to follow the tutorial and construct it iteratively.</p>
+<div class="section" id="step-1-setting-up-the-openapi-editor">
+<h3><span class="section-number">7.5.1. </span>Step 1: Setting up the OpenAPI Editor<a class="headerlink" href="#step-1-setting-up-the-openapi-editor" title="Permalink to this headline">¶</a></h3>
+<p>Several options exist, including the <a class="reference external" href="https://swagger.io/tools/swagger-editor/">Swagger Editor</a>, especially with APIs
+that are enabled to support CORS.
+Unfortunately, the API we will work with here <strong>does not</strong>, so we will need to obtain a Swagger Editor that can operate
+even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue.
+We specifically modified <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer">an Open Source Visual Studio Code Extension</a> so
+that it supports this specific use case.</p>
+<p>Until our pull request is merged, the modified extension can be accessed <a class="reference external" href="https://github.com/MaayanLab/vs-swagger-viewer/releases">here</a>.
+The <code class="docutils literal notranslate"><span class="pre">vsix</span></code> file can be installed with <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>It can be installed from <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> with the action “Install from VSIX”</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="install-from-vsix-dialog">
+<a class="reference internal image-reference" href="../../../_images/ss3.png"><img alt="Install from VSIX dialog" src="../../../_images/ss3.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.6 </span><span class="caption-text">Install from VSIX dialog</span><a class="headerlink" href="#install-from-vsix-dialog" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>And selecting the <code class="docutils literal notranslate"><span class="pre">.vsix</span></code> file you downloaded.</p>
+<p>Once installed, a swagger file can be edited by opening the swagger.yaml (that we will be writing throughout the rest of
+the recipe), using <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> again and choosing the action “Preview Swagger”.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="previewing-swagger">
+<a class="reference internal image-reference" href="../../../_images/ss4.png"><img alt="Previewing swagger" src="../../../_images/ss4.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.7 </span><span class="caption-text">Previewing swagger</span><a class="headerlink" href="#previewing-swagger" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>The result will be a webview that opens to the side with the Swagger Editor.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="swagger-editor">
+<a class="reference internal image-reference" href="../../../_images/ss5.png"><img alt="Swagger Editor" src="../../../_images/ss5.png" style="width: 1100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Swagger Editor</span><a class="headerlink" href="#swagger-editor" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>Edits to the file will update the view <strong>in real time</strong>, and the view may be used to craft/test API requests.</p>
+</div>
+<div class="section" id="step-2-beginning-an-openapi-specification">
+<h3><span class="section-number">7.5.2. </span>Step 2: Beginning an OpenAPI specification<a class="headerlink" href="#step-2-beginning-an-openapi-specification" title="Permalink to this headline">¶</a></h3>
+<p>We start by annotating useful descriptions for the API in the <code class="docutils literal notranslate"><span class="pre">info</span></code> field, this includes adding descriptors, version, license, and contact information. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including <a class="reference external" href="https://smart-api.info/">SmartAPI</a>, making it possible to find your own APIs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">servers</span></code> field has the base url(s) for accessing the API we’re about to describe.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">openapi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3.0.0</span>
+<span class="nt">info</span><span class="p">:</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metabolomics Workbench REST API</span>
+  <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">The Metabolomics WorkBench REST service enables access to a variety of data (including metabolite structures, study metadata and experimental results) using HTTP requests. These requests may be carried out using a web browser or may be embedded in 3rd party applications or scripts to enable programmatic access. Most modern programming languages including PHP, Perl, Python, Java and Javascript have the capability to create HTTP request and interact with datasets such as this REST service.</span>
+  <span class="nt">license</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metabolomics Workbench Terms of Use</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.metabolomicsworkbench.org/about/termsofuse.php</span>
+  <span class="nt">contact</span><span class="p">:</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.metabolomicsworkbench.org/about/contact.php</span>
+<span class="nt">servers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Metabolomics Workbench</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.metabolomicsworkbench.org/rest</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-describing-a-path">
+<h3><span class="section-number">7.5.3. </span>Step 3: Describing a path<a class="headerlink" href="#step-3-describing-a-path" title="Permalink to this headline">¶</a></h3>
+<p>The Metabolomics API offers several examples, let’s tackle one of them:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Example request</p></th>
+<th class="head"><p>Example URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Show all publicly available studies (Project, Study, Analysis ID)</p></td>
+<td><p><a class="reference external" href="https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available">https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>This tells us what the endpoint does to an extent; let’s add that to our API under the <code class="docutils literal notranslate"><span class="pre">paths</span></code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="nt">/study/study_id/ST/available</span><span class="p">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch summary information for all studies</span>
+</pre></div>
+</div>
+<p>The path is relative to the server url, and <code class="docutils literal notranslate"><span class="pre">get</span></code> refers to the REST method (<code class="docutils literal notranslate"><span class="pre">GET</span></code> as opposed to <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, …), in REST <code class="docutils literal notranslate"><span class="pre">GET</span></code> refers to reading a resource and is what happens when you send the following packet to a web server. These packets can be crafted using <code class="docutils literal notranslate"><span class="pre">curl</span></code>, the <code class="docutils literal notranslate"><span class="pre">-v</span></code> flag helps see input and output packets and the <code class="docutils literal notranslate"><span class="pre">-X</span></code> flag allows you to set the method (<code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, …), the <code class="docutils literal notranslate"><span class="pre">-H</span></code> flag lets you specify headers.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -v -X GET -H <span class="s1">&#39;Content-Type: application/json&#39;</span> https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="o">&gt;</span> <span class="n">GET</span> <span class="o">/</span><span class="n">rest</span><span class="o">/</span><span class="n">study</span><span class="o">/</span><span class="n">study_id</span><span class="o">/</span><span class="n">ST</span><span class="o">/</span><span class="n">available</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span> <span class="c1"># PATH HERE</span>
+<span class="o">&gt;</span> <span class="n">Host</span><span class="p">:</span> <span class="n">www</span><span class="o">.</span><span class="n">metabolomicsworkbench</span><span class="o">.</span><span class="n">org</span>            <span class="c1"># REQUEST HEADERS HERE</span>
+<span class="o">&gt;</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">curl</span><span class="o">/</span><span class="mf">7.70</span><span class="o">.</span><span class="mi">0</span>
+<span class="o">&gt;</span> <span class="n">Accept</span><span class="p">:</span> <span class="o">*/*</span>
+<span class="o">&gt;</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="o">&gt;</span> 
+<span class="o">*</span> <span class="n">Mark</span> <span class="n">bundle</span> <span class="k">as</span> <span class="ow">not</span> <span class="n">supporting</span> <span class="n">multiuse</span>
+<span class="o">&lt;</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span> <span class="mi">200</span> <span class="n">OK</span>                                <span class="c1"># RESPONSE STATUS CODE HERE</span>
+<span class="o">&lt;</span> <span class="n">Date</span><span class="p">:</span> <span class="n">Wed</span><span class="p">,</span> <span class="mi">27</span> <span class="n">May</span> <span class="mi">2020</span> <span class="mi">14</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">27</span> <span class="n">GMT</span>            <span class="c1"># RESPONSE HEADERS HERE</span>
+<span class="o">&lt;</span> <span class="n">Server</span><span class="p">:</span> <span class="n">Apache</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">CentOS</span><span class="p">)</span>
+<span class="o">&lt;</span> <span class="n">X</span><span class="o">-</span><span class="n">Frame</span><span class="o">-</span><span class="n">Options</span><span class="p">:</span> <span class="n">SAMEORIGIN</span>
+<span class="o">&lt;</span> <span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
+<span class="o">&lt;</span> <span class="n">X</span><span class="o">-</span><span class="n">XSS</span><span class="o">-</span><span class="n">Protection</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="n">mode</span><span class="o">=</span><span class="n">block</span>
+<span class="o">&lt;</span> <span class="n">Transfer</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">chunked</span>
+<span class="o">&lt;</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="o">&lt;</span>                                                <span class="c1"># BODY HERE</span>
+<span class="p">{</span>
+  <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;project_id&quot;</span><span class="p">:</span><span class="s2">&quot;PR000001&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;study_id&quot;</span><span class="p">:</span><span class="s2">&quot;ST000001&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;analysis_id&quot;</span><span class="p">:</span><span class="s2">&quot;AN000001&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;2&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;project_id&quot;</span><span class="p">:</span><span class="s2">&quot;PR000002&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;study_id&quot;</span><span class="p">:</span><span class="s2">&quot;ST000002&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;analysis_id&quot;</span><span class="p">:</span><span class="s2">&quot;AN000002&quot;</span>
+  <span class="p">},</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;1783&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;project_id&quot;</span><span class="p">:</span><span class="s2">&quot;PR000928&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;study_id&quot;</span><span class="p">:</span><span class="s2">&quot;ST001364&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;analysis_id&quot;</span><span class="p">:</span><span class="s2">&quot;AN002271&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser information for webpage optimization.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
+&gt; Host: www.metabolomicsworkbench.org
+&gt; Content-Type: text/html
+&gt; User-Agent: Mozilla/5.0 ...
+&gt; Accept-language: en-US,en<span class="p">;</span><span class="nv">q</span><span class="o">=</span><span class="m">0</span>.5
+&gt; Accept-Encoding: gzip, deflate
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">GET</span></code> at the start is changed to <code class="docutils literal notranslate"><span class="pre">POST</span></code> or another value when sending actual data (in the body of the packet). (<code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-v</span> <span class="pre">-X</span> <span class="pre">POST</span> <span class="pre">...</span> <span class="pre">-d</span> <span class="pre">&quot;packet</span> <span class="pre">data&quot;</span></code>)</p>
+<p>We did not know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="nt">/study/study_id/ST/available</span><span class="p">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch summary information for all studies</span>
+      <span class="nt">responses</span><span class="p">:</span>
+        <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Success</span>
+          <span class="nt">content</span><span class="p">:</span>
+            <span class="nt">application/json</span><span class="p">:</span>
+              <span class="nt">schema</span><span class="p">:</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                <span class="nt">additionalProperties</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                  <span class="nt">properties</span><span class="p">:</span>
+                    <span class="nt">project_id</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">study_id</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">analysis_id</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">200</span></code> here refers to the HTTP status code, these are standardized by HTTP but the gist is:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2xx</p></td>
+<td><p>OK (created, no content, …)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3xx</p></td>
+<td><p>Redirect (temporary, permanent, …)</p></td>
+</tr>
+<tr class="row-even"><td><p>4xx</p></td>
+<td><p>Not OK (not found, permission denied, …)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5xx</p></td>
+<td><p>Server Error</p></td>
+</tr>
+</tbody>
+</table>
+<p>We can explicitly describe what the response means for our application in the <code class="docutils literal notranslate"><span class="pre">description</span></code> under the response code. The <code class="docutils literal notranslate"><span class="pre">content</span> <span class="pre">-&gt;</span> <span class="pre">application/json</span></code> refers to the <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> returned on the response header. This header tells you that the body will be json, and not i.e. <code class="docutils literal notranslate"><span class="pre">text/html</span></code> which we view most webpages as.</p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">schema</span></code> is JSON-Schema describing how the JSON should look. It also supports describing each field individually in depth, and specifying optional or mandatory fields. We use <code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> to refer to the <code class="docutils literal notranslate"><span class="pre">values</span></code> in the object, and <code class="docutils literal notranslate"><span class="pre">properties</span></code> on a <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">object</span></code> to refer to the <code class="docutils literal notranslate"><span class="pre">key</span></code> specific description.</p>
+<p>The benefit of fully describing and endpoint like this is that a developer can fully understand what to expect from an endpoint, enabling them to determine code logic validity prior to having to test it at runtime. Furthermore, the SmartAPI initiative has an extension for relating those types to RDF for visions like the <a class="reference external" href="https://biothings.io/">BioThings</a>.</p>
+</div>
+<div class="section" id="step-4-adding-a-path-with-parameters">
+<h3><span class="section-number">7.5.4. </span>Step 4: Adding a path with parameters<a class="headerlink" href="#step-4-adding-a-path-with-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Let’s tackle our next endpoint:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Example request</p></th>
+<th class="head"><p>Example URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fetch analysis information for a study</p></td>
+<td><p><a class="reference external" href="https://www.metabolomicsworkbench.org/rest/study/study_id/ST000001/analysis">https://www.metabolomicsworkbench.org/rest/study/study_id/ST000001/analysis</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>While the example shows <code class="docutils literal notranslate"><span class="pre">ST000001</span></code> in reality, the idea is that this can be any study ID, such as those coming out of the previous endpoint.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">/study/study_id/{study_id}/summary</span><span class="p p-Indicator">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch summary information for a study</span>
+      <span class="nt">parameters</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">study_id</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The unique study identifier</span>
+        <span class="nt">schema</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">pattern</span><span class="p">:</span> <span class="s">&#39;^ST\d*$&#39;</span>
+        <span class="nt">example</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ST000001</span>
+        <span class="nt">required</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">responses</span><span class="p">:</span>
+        <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Success</span>
+</pre></div>
+</div>
+<p>We see some new concepts here, the first is the path which has a variable in it delineated by <code class="docutils literal notranslate"><span class="pre">{study_id}</span></code> where we would want the <code class="docutils literal notranslate"><span class="pre">study_id</span></code> to go. Paired with this we add an entry into the <code class="docutils literal notranslate"><span class="pre">parameters</span></code> array and state the same name <code class="docutils literal notranslate"><span class="pre">study_id</span></code> is <code class="docutils literal notranslate"><span class="pre">in:</span> <span class="pre">path</span></code> referring to this path-style variable substitution.</p>
+<p>Parameters can be added in other places as well. Google, for instance, describes searches like so: <code class="docutils literal notranslate"><span class="pre">https://www.google.com/search?q=smartapi&amp;sourceid=chrome&amp;ie=UTF-8</span></code>, the <code class="docutils literal notranslate"><span class="pre">?q=...&amp;sourceid=...</span></code> are referred to as query parameters and they are in the form: <code class="docutils literal notranslate"><span class="pre">?{name}={value}&amp;{name}={value}&amp;...</span></code>. You could describe these in OpenAPI as well by using <code class="docutils literal notranslate"><span class="pre">in:</span> <span class="pre">query</span></code>.</p>
+<p>In the case of a <code class="docutils literal notranslate"><span class="pre">POST</span></code> you might use, <code class="docutils literal notranslate"><span class="pre">in:</span> <span class="pre">body</span></code> referring to the content you send with your request.</p>
+<p>Again, every parameter is validatable with JSONSchema. In our current example, we have used a JSONSchema pattern to constrain the type of string acceptable by the endpoint. In the case of a body, it could be an elaborate JSON object such as our response schema.</p>
+<p>Finally, we have included an <code class="docutils literal notranslate"><span class="pre">example</span></code> which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="fair-api-images-ss2">
+<a class="reference internal image-reference" href="../../../_images/ss2.png"><img alt="fair-api-images/ss2" src="../../../_images/ss2.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.9 </span><span class="caption-text">fair-api-images/ss2s.</span><a class="headerlink" href="#fair-api-images-ss2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p>With the output, we can complete our path by annotating the response:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">/study/study_id/{study_id}/summary</span><span class="p p-Indicator">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">...</span>
+      <span class="l l-Scalar l-Scalar-Plain">responses</span><span class="p p-Indicator">:</span>
+        <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Success</span>
+          <span class="nt">content</span><span class="p">:</span>
+            <span class="nt">application/json</span><span class="p">:</span>
+              <span class="nt">schema</span><span class="p">:</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+                <span class="nt">items</span><span class="p">:</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                  <span class="nt">properties</span><span class="p">:</span>
+                    <span class="nt">study_id</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">study_title</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">study_type</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">institute</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">department</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">last_name</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">first_name</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">email</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">submit_date</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">study_summary</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">subject_species</span><span class="p">:</span>
+                      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-5-identifying-components">
+<h3><span class="section-number">7.5.5. </span>Step 5: Identifying components<a class="headerlink" href="#step-5-identifying-components" title="Permalink to this headline">¶</a></h3>
+<p>In some cases, a common set of JSON objects are reused throughout the API. It is often meaningful to turn these into their own ‘component’ and reference them. It is also extremely helpful to include descriptions especially for fields that are not directly interpretable.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">/study/study_id/{study_id}/summary</span><span class="p p-Indicator">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">...</span>
+      <span class="l l-Scalar l-Scalar-Plain">responses</span><span class="p p-Indicator">:</span>
+        <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Success</span>
+          <span class="nt">content</span><span class="p">:</span>
+            <span class="nt">application/json</span><span class="p">:</span>
+              <span class="nt">schema</span><span class="p">:</span>
+                <span class="nt">$ref</span><span class="p">:</span> <span class="s">&#39;#/components/schemas/StudySummary&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="nt">components</span><span class="p">:</span>
+  <span class="nt">schemas</span><span class="p">:</span>
+    <span class="nt">StudySummary</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Summary information about a study</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+      <span class="nt">properties</span><span class="p">:</span>
+        <span class="nt">study_id</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">A unique identifier for this study</span>
+        <span class="nt">study_title</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">study_type</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The type of treatment used in the study</span>
+        <span class="nt">institute</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The institution that performed the study</span>
+        <span class="nt">department</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The department in the institute that performed the study</span>
+        <span class="nt">last_name</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The last name of the PI responsible for the study</span>
+        <span class="nt">first_name</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The first name of the PI responsible for the study</span>
+        <span class="nt">email</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The email to contact for information about the study</span>
+        <span class="nt">submit_date</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The date this study was submitted to metabolomics workbench</span>
+        <span class="nt">study_summary</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">A detailed summary describing the study</span>
+        <span class="nt">subject_species</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The species of the subject of the study</span>
+</pre></div>
+</div>
+<p>Under <code class="docutils literal notranslate"><span class="pre">components</span></code>, as many individual components can be specified, and they can be referenced using <code class="docutils literal notranslate"><span class="pre">$ref</span></code> with <a class="reference external" href="https://json-schema.org/draft/2019-09/relative-json-pointer.html">JSON-Schema pointers</a> as shown above.</p>
+</div>
+<div class="section" id="step-6-smartapi-extension">
+<h3><span class="section-number">7.5.6. </span>Step 6: SmartAPI extension<a class="headerlink" href="#step-6-smartapi-extension" title="Permalink to this headline">¶</a></h3>
+<p>When it comes to <em>automatic</em> interoperability, the <a class="reference external" href="https://smart-api.info/guide">SmartAPI extension</a> to OpenAPI is almost essential. It provides mechanisms for adding RDF annotations to parameters or responses. We will demonstrate it on a new endpoint:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Example request</p></th>
+<th class="head"><p>Example URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fetch all protein fields from Entrez gene id</p></td>
+<td><p><a class="reference external" href="https://www.metabolomicsworkbench.org/rest/protein/gene_id/19/all/">https://www.metabolomicsworkbench.org/rest/protein/gene_id/19/all/</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">paths</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">/protein/gene_id/{gene_id}/all/</span><span class="p p-Indicator">:</span>
+    <span class="nt">get</span><span class="p">:</span>
+      <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fetch all protein fields from Entrez gene id</span>
+      <span class="nt">parameters</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gene_id</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The unique study identifier</span>
+        <span class="nt">schema</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">example</span><span class="p">:</span> <span class="s">&#39;19&#39;</span>
+        <span class="nt">required</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">responses</span><span class="p">:</span>
+        <span class="s">&#39;200&#39;</span><span class="p p-Indicator">:</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Success</span>
+          <span class="nt">content</span><span class="p">:</span>
+            <span class="nt">application/json</span><span class="p">:</span>
+              <span class="nt">schema</span><span class="p">:</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                <span class="nt">properties</span><span class="p">:</span>
+                  <span class="nt">gene_id</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Entrez Gene ID</span>
+                  <span class="nt">mgp_id</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MGP ID</span>
+                  <span class="nt">gene_name</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Verbose gene name</span>
+                  <span class="nt">gene_symbol</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Entrez Gene Symbol</span>
+                  <span class="nt">taxid</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Taxonomy taxon ID</span>
+                  <span class="nt">species</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Species name</span>
+                  <span class="nt">species_long</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Species official name</span>
+                  <span class="nt">mrna_id</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ID of the MRNA</span>
+                  <span class="nt">refseq_id</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ID on refseq</span>
+                  <span class="nt">protein_gi</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ID on GI</span>
+                  <span class="nt">uniprot_id</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ID on GI</span>
+                  <span class="nt">protein_entry</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Protein term</span>
+                  <span class="nt">protein_name</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Verbose protein name</span>
+                  <span class="nt">seqlength</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Length of the sequence</span>
+                  <span class="nt">seq</span><span class="p">:</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The protein sequence itself</span>
+          <span class="nt">x-responseValueType</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gene_id</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://identifiers.org/ncbigene</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gene_symbol</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://identifiers.org/genecards</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tax_id</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://identifiers.org/taxonomy</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mrna_id</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.ncbi.nlm.nih.gov/nuccore</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">refseq_id</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.ncbi.nlm.nih.gov/protein</span>
+          <span class="p p-Indicator">-</span> <span class="nt">x-path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">uniprot_id</span>
+            <span class="nt">x-valueType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://identifiers.org/uniprot</span>
+</pre></div>
+</div>
+<p>Here we see our usual path setup with a new section: <code class="docutils literal notranslate"><span class="pre">x-responseValueType</span></code>, this is the smartAPI extension.
+Each <code class="docutils literal notranslate"><span class="pre">x-path</span></code> refers to the path in the JSON object (using <code class="docutils literal notranslate"><span class="pre">.</span></code> on nested keys).
+For instance, the <code class="docutils literal notranslate"><span class="pre">gene_id</span></code> does not need any <code class="docutils literal notranslate"><span class="pre">.</span></code> because it is the root of the response object.
+The <code class="docutils literal notranslate"><span class="pre">x-valueType</span></code> here identifies the id namespace or context for which that value has meaning.
+Typically, this is a prefix path, in other words, you would produce a full URI with: <code class="docutils literal notranslate"><span class="pre">{x-valueType}/{actual_value}</span></code>.</p>
+<p><a class="reference external" href="http://identifiers.org/">identifiers.org</a> is a public resource cataloging actual identifier schemes making it an ideal
+way to namespace a given identifier.
+It has the added benefit of providing an API for accessing additional metadata such as
+cached <a class="reference external" href="https://schema.org/">schema.org</a> annotations on the landing page of the resulting identifier.</p>
+<p>With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF queries
+without any additional effort.
+This was demonstrated by the <a class="reference external" href="https://biothings.io/">BioThings</a>, which can integrate SmartAPI APIs with proper annotations.
+It also permits end users to find your APIs knowing their identifiers (i.e. ncbigenes).</p>
+</div>
+<div class="section" id="step-7-publishing-and-utilizing-your-openapi-smartapi">
+<h3><span class="section-number">7.5.7. </span>Step 7: Publishing and utilizing your OpenAPI/SmartAPI<a class="headerlink" href="#step-7-publishing-and-utilizing-your-openapi-smartapi" title="Permalink to this headline">¶</a></h3>
+<p>Once you have a working OpenAPI document, this open up numerous possibilities that you can now do.
+Firstly, your API can be published on <a class="reference external" href="https://smart-api.info/">smart-api.info</a>, permitting people and machines to locate
+it and potentially utilize it.</p>
+<p>But you can also produce interactive documentation much like the output seen in the OpenAPI editor to publish on your webpage.</p>
+<p>It is even possible to automatically generate statically or dynamically code in many different programming languages for
+API clients or Server stubs (i.e. for API first or compatibility) with the <a class="reference external" href="https://github.com/OpenAPITools/openapi-generator">openapi-generator</a>.</p>
+<p>An <a class="reference external" href="https://github.com/IBM/openapi-to-graphql">initiative by IBM</a> provides a mechanism for interoperating an
+OpenAPI documented endpoint with <a class="reference external" href="https://graphql.org/">GraphQL</a>.</p>
+<p>These various capabilities make an API extremely accessible, lowering many barriers to entry for interoperability and
+reusability of your API.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2><span class="section-number">7.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>We’ve walked you through a case study where we documented an API using OpenAPI and SmartAPI extensions to build a
+document that will vastly improve the FAIRness of your API.
+After registering your API on an API catalog platform, such as <a class="reference external" href="https://smart-api.info/">smart-api.info</a> you will enable
+developers and programs to find, introspect and interoperate with our API.
+Furthermore, existing tooling around OpenAPI can enable the accessibility and reusability of your APIs in many
+programming languages and other standardized systems.</p>
+<div class="section" id="what-to-read-next">
+<h3><span class="section-number">7.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<p>This content type focus on using OpenAPI.</p>
+<blockquote>
+<div><p><a class="reference external" href="http://grlc.io/">Grlc</a>: “converting your SPARQL queries into RESTful APIs”</p>
+<p><a class="reference external" href="https://graphql.org/">GraphQL</a>:  “a Query Language for your API”</p>
+<p><a class="reference external" href="https://github.com/IBM/openapi-to-graphql">OpenAPI-to-GraphQL</a> “From OpenAPI-to-GraphQL “</p>
+<p><a class="reference external" href="https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL">ISA-graphql</a> “an example of a GraphQL querying mechanism built to interrogate ISA metadata”.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">7.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Reference</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<!-- ```{footbibliography}
+``` -->git stat
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2><span class="section-number">7.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/u8sand"></img><div class="d-block">Daniel J. B. Clarke</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0003-3471-7416"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Icahn School of Medicine at Mount Sinai</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Conceptualization, Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2><span class="section-number">7.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">
+    <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg" height="35"/></a>
+    This page is released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/infrastructure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                                    </v-col>
+                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                        <div style="position: fixed">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   7.1. Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation">
+   7.2. Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ingredients">
+   7.3. Ingredients
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectives">
+   7.4. Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recipe">
+   7.5. Recipe
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-setting-up-the-openapi-editor">
+     7.5.1. Step 1: Setting up the OpenAPI Editor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-beginning-an-openapi-specification">
+     7.5.2. Step 2: Beginning an OpenAPI specification
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-describing-a-path">
+     7.5.3. Step 3: Describing a path
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-adding-a-path-with-parameters">
+     7.5.4. Step 4: Adding a path with parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-identifying-components">
+     7.5.5. Step 5: Identifying components
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-smartapi-extension">
+     7.5.6. Step 6: SmartAPI extension
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-publishing-and-utilizing-your-openapi-smartapi">
+     7.5.7. Step 7: Publishing and utilizing your OpenAPI/SmartAPI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   7.6. Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-to-read-next">
+     7.6.1. What to read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   7.7. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   7.8. Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   7.9. License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        </div>
+                                    </div>
+                                
+                            </v-row>
+
+                            
+                                <v-row class="mb-5">
+                                    <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                        
+<a class='left-prev' id="prev-link" href="openrefine-nvt.html" title="previous page"><span class="section-number">6. </span>Using OpenRefine and Karma for FAIRification</a>
+<a class='right-next' id="next-link" href="../assessing-fairness.html" title="next page">Assessment</a>
+
+                                    </div>
+                                </v-row>
+                            
+                        </v-container>
+                    </main>
+                    
+                    
+                </v-row>
+            </v-container>
+        </v-row>
+    </v-container>
+</v-app>
+
+
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-171697285-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+<v-container fluid>
+    <v-row no-gutter>
+        <v-col cols="12"><footer class="footer mt-5 mt-md-0">
+    <div class="container-md mt-4">
+      <div class="row">
+          <div class="col-4">
+            <div class="footerImages">
+              <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
+              <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
+              <a href="https://efpia.eu"><img src="/_static/images/logo/efpia-logo.png" height="40" alt="EFPIA logo"></a>
+            </div>
+            <div class="mb-3"> Grant agreement 802750 </div>
+          </div>
+          <div class="col-2 d-flex">
+              <ul>
+                <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
+                <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
+              </ul>
+          </div>
+          <div class="col-2 d-flex">
+              <ul>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
+              </ul>
+          </div>
+          <div class="col-2">
+            <a href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+            <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="padding:0">
+        <div class="row" style="padding:0; margin:0">
+            <div class="col-12 purple-dark">
+                The FAIR Cookbook is licensed under the
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    Creative Commons Attribution 4.0 International
+                </a> (CC BY 4.0) license.
+            </div>
+        </div>
+        <div class="row extra_footer d-none">
+            <script> mermaid.init() </script>
+        </div>
+    </div>
+
+</footer> </v-col>
+    </v-row>
+</v-container>
+<script type="application/javascript">
+    const vuetify = new Vuetify({
+        theme: {
+            themes: {
+                light: {
+                    primary: '#421C6E',
+                    secondary: '#FC7A4A',
+                    accent: '#8038D1',
+                    error: '#FF5252',
+                    info: '#2196F3',
+                    success: '#7E0038',
+                    warning: '#FFC107'
+                }
+            }
+        },
+        icons: { iconfont: 'fa4' }
+    })
+    const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+</script>
+  </body>
+</html>
