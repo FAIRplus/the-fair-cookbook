@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Using OpenRefine and Karma for FAIRification</title>
+    <title>6. Using OpenRefine and Karma for FAIRification</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Assessment" href="../assessing-fairness.html" />
-    <link rel="prev" title="4.3. Deploying the EBI OLS" href="vocabularies/UC3_R13_local_ontology_services.html" />
+    <link rel="prev" title="5.3. Deploying the EBI OLS" href="vocabularies/UC3_R13_local_ontology_services.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -579,33 +579,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="data-catalog.html">
-     2. Building a catalogue of datasets
+     3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
+     4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="vocabularies.html">
-     4. Vocabulary management
+     5. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
+       5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
+       5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
+       5.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -614,7 +619,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     5. Using OpenRefine and Karma for FAIRification
+     6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
   </ul>
@@ -894,11 +899,11 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="using-openrefine-and-karma-for-fairification">
-<span id="fcp-infra-openrefine"></span><h1><span class="section-number">5. </span>Using OpenRefine and Karma for FAIRification<a class="headerlink" href="#using-openrefine-and-karma-for-fairification" title="Permalink to this headline">¶</a></h1>
+<span id="fcp-infra-openrefine"></span><h1><span class="section-number">6. </span>Using OpenRefine and Karma for FAIRification<a class="headerlink" href="#using-openrefine-and-karma-for-fairification" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
-<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB0XX", "sdo:name": "Using OpenRefine and Karma for FAIRification", "sdo:description": "Using OpenRefine and Karma for FAIRification", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Background information", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCBZZZ", "dso:url": "https://w3id.org/faircookbook/FCB0XX", "owl:sameAs": "https://identifiers.org/fcb:FCBZZZ"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB0XX#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB0XX#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB0XX#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB0XX#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB075", "sdo:name": "Using OpenRefine and Karma for FAIRification", "sdo:description": "Using OpenRefine and Karma for FAIRification", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Background information", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB075", "dso:url": "https://w3id.org/faircookbook/FCB075", "owl:sameAs": "https://identifiers.org/fcb:FCB075"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB075#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB075#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB075#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB075#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -963,12 +968,12 @@ No
 <span class="tooltiptext">Tooltip text</span></div>
 </div>
 </div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB0XX" class="text--purple-dark">FCBZZZ
+<a href="https://w3id.org/faircookbook/FCB075" class="text--purple-dark">FCB075
 </a></div>
 </div>
 </div>
 <div class="section" id="introduction">
-<h2><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>FAIRification is a multi-step process that can be performed via different workflows and at different levels of completeness.</p>
 <p>Here, we focus on “fully FAIRifying” data “<em>a posteriori</em>”.</p>
 <p>That is to express the content of the information (entities, attributes, relations, values) via ontologies
@@ -1005,12 +1010,12 @@ Tabular data covers a prominent use case for data FAIRification and is a buildin
 <p>We focus here on data (rather than metadata), though the distinction between the two vanishes when information is
 expressed as a KG.</p>
 <div class="section" id="reconciliation">
-<h3><span class="section-number">5.1.1. </span>Reconciliation<a class="headerlink" href="#reconciliation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>Reconciliation<a class="headerlink" href="#reconciliation" title="Permalink to this headline">¶</a></h3>
 <p>An essential element of FAIRification is <strong>the ability to identify entities via ontology terms</strong>.
 In general by “reconciliation”, we mean the <strong>capability to identify an entity (via an ID from a knowledge base) given one
 or more references</strong> and eventually additional information.</p>
 <div class="section" id="ingredients-for-reconciliation">
-<h4><span class="section-number">5.1.1.1. </span>Ingredients for reconciliation<a class="headerlink" href="#ingredients-for-reconciliation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.1.1. </span>Ingredients for reconciliation<a class="headerlink" href="#ingredients-for-reconciliation" title="Permalink to this headline">¶</a></h4>
 <p>We generally need:</p>
 <ol class="simple">
 <li><p>A <strong>source of knowledge</strong> to reconcile to. This could be expressed as a knowledge graph (KG), see <a class="reference internal" href="../introduction/public-kg-resource-integration.html#fcb-public-kg"><span class="std std-ref">Public knowledge graphs resources for life sciences</span></a>.</p></li>
@@ -1022,7 +1027,7 @@ attributes or context for the name.</p></li>
 </div>
 </div>
 <div class="section" id="reconciliation-with-openrefine">
-<h3><span class="section-number">5.1.2. </span>Reconciliation with OpenRefine<a class="headerlink" href="#reconciliation-with-openrefine" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2. </span>Reconciliation with OpenRefine<a class="headerlink" href="#reconciliation-with-openrefine" title="Permalink to this headline">¶</a></h3>
 <p>OpenRefine is a Desktop tool to cleanse data that proposes a simple workflow for data reconciliation <a class="footnote-reference brackets" href="#openrefine" id="id1">1</a>.
 In particular, users can load data as a table, and for a column, they can call a “reconciliation service”:
 this will suggest what are the types of entity in a column (e.g.: drugs, treatments) and the user can then ask to
@@ -1044,7 +1049,7 @@ reconcile to entities of one or more of these types. OpenRefine will then presen
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="openrefine-screenshot">
 <a class="reference internal image-reference" href="../../../_images/openrefine.png"><img alt="OpenRefine" src="../../../_images/openrefine.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">OpenRefine</span><a class="headerlink" href="#openrefine-screenshot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">OpenRefine</span><a class="headerlink" href="#openrefine-screenshot" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>OpenRefine: <a class="reference external" href="https://docs.openrefine.org/manual/reconciling">https://docs.openrefine.org/manual/reconciling</a></p>
@@ -1061,9 +1066,9 @@ The triple-store should also be accessible on the network where OpenRefine is ru
 </div>
 </div>
 <div class="section" id="reconciliation-toward-public-knowledge-bases">
-<h3><span class="section-number">5.1.3. </span>Reconciliation toward public knowledge-bases<a class="headerlink" href="#reconciliation-toward-public-knowledge-bases" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>Reconciliation toward public knowledge-bases<a class="headerlink" href="#reconciliation-toward-public-knowledge-bases" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="reconciliation-toward-wikidata">
-<h4><span class="section-number">5.1.3.1. </span>Reconciliation toward wikidata<a class="headerlink" href="#reconciliation-toward-wikidata" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.1. </span>Reconciliation toward wikidata<a class="headerlink" href="#reconciliation-toward-wikidata" title="Permalink to this headline">¶</a></h4>
 <p>One of the best developed systems supporting reconciliation APIs is Wikidata (<a class="reference external" href="https://wikidata.reconci.link">https://wikidata.reconci.link</a>).
 By specifying the URI: <a class="reference external" href="https://wikidata.reconci.link/en/api">https://wikidata.reconci.link/en/api</a> as a reconciliation
 service, OpenRefine will help users to normalise entity references to Wikidata URIs.</p>
@@ -1083,7 +1088,7 @@ service, OpenRefine will help users to normalise entity references to Wikidata U
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="openrefine-wiki-reconci">
 <a class="reference internal image-reference" href="../../../_images/openrefine-wiki-reconci.png"><img alt="Wikidata Reconcile for OpenRefine" src="../../../_images/openrefine-wiki-reconci.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Wikidata Reconcile for OpenRefine</span><a class="headerlink" href="#openrefine-wiki-reconci" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Wikidata Reconcile for OpenRefine</span><a class="headerlink" href="#openrefine-wiki-reconci" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><div class="admonition warning">
@@ -1093,7 +1098,7 @@ in particular entities which may be not public, as in a company setting.</p>
 </div>
 </div>
 <div class="section" id="other-public-reconciliation-services">
-<h4><span class="section-number">5.1.3.2. </span>Other public reconciliation services<a class="headerlink" href="#other-public-reconciliation-services" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.2. </span>Other public reconciliation services<a class="headerlink" href="#other-public-reconciliation-services" title="Permalink to this headline">¶</a></h4>
 <p>Several public resources provide support for OpenRefine reconciliation services.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1103,11 +1108,11 @@ The reconciliation is column specific.</p>
 </div>
 </div>
 <div class="section" id="reconciliation-toward-private-knowledge-bases">
-<h3><span class="section-number">5.1.4. </span>Reconciliation toward private knowledge bases<a class="headerlink" href="#reconciliation-toward-private-knowledge-bases" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.4. </span>Reconciliation toward private knowledge bases<a class="headerlink" href="#reconciliation-toward-private-knowledge-bases" title="Permalink to this headline">¶</a></h3>
 <p>OpenRefine can also be used for internal data (e.g.: MDM systems), by providing “internal” reconciliation services.</p>
 <p>This can be done in several ways:</p>
 <div class="section" id="wikidata-as-a-local-instance">
-<h4><span class="section-number">5.1.4.1. </span>Wikidata as a local instance<a class="headerlink" href="#wikidata-as-a-local-instance" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.4.1. </span>Wikidata as a local instance<a class="headerlink" href="#wikidata-as-a-local-instance" title="Permalink to this headline">¶</a></h4>
 <p>One way of providing reconciliation services for OpenRefine on internal data is to leverage the Wikibase system
 (the system at the basis of Wikidata).</p>
 <p>We could implement a local “empty” version of Wikidata, and populate it with internal data (represented using the Wikidata format).</p>
@@ -1129,12 +1134,12 @@ These scripts are available from <a class="reference external" href="https://git
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="wikidraftworks">
 <a class="reference internal image-reference" href="../../../_images/wikidraftworks.png"><img alt="WikiDraftWorks" src="../../../_images/wikidraftworks.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">WikiDraftWorks</span><a class="headerlink" href="#wikidraftworks" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">WikiDraftWorks</span><a class="headerlink" href="#wikidraftworks" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <div class="section" id="reconciling-toward-a-triplestore">
-<h4><span class="section-number">5.1.4.2. </span>Reconciling toward a triplestore<a class="headerlink" href="#reconciling-toward-a-triplestore" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.4.2. </span>Reconciling toward a triplestore<a class="headerlink" href="#reconciling-toward-a-triplestore" title="Permalink to this headline">¶</a></h4>
 <p>When reference data and ontology exist in a triplestore, a simpler way to support OpenRefine is via
 its <a class="reference external" href="https://github.com/fadmaa/grefine-rdf-extension">grefine RDF extension plugin</a>.
 This allows to specify any triplestore as a reconciliation service, provided it contains suitable content
@@ -1148,7 +1153,7 @@ The export is based on mapping the data to a template graph using the GUI.</p>
 as the plugin works over SPARQL, it has fewer capabilities in terms of ranking of results.</p>
 </div>
 <div class="section" id="authentication">
-<h5><span class="section-number">5.1.4.2.1. </span>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">6.1.4.2.1. </span>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h5>
 <p>One limitation of the above approach is that OpenRefine does not support authentication.
 Any services or triple stores it reconciles to need to be accessible on the same network where the OpenRefine client is working.
 In an enterprise setting, this is a serious limitation, as data is protected by access policies.</p>
@@ -1157,7 +1162,7 @@ In an enterprise setting, this is a serious limitation, as data is protected by 
 </div>
 </div>
 <div class="section" id="implementing-reconciliation-apis">
-<h4><span class="section-number">5.1.4.3. </span>Implementing reconciliation APIs<a class="headerlink" href="#implementing-reconciliation-apis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.4.3. </span>Implementing reconciliation APIs<a class="headerlink" href="#implementing-reconciliation-apis" title="Permalink to this headline">¶</a></h4>
 <p>Finally, it is possible to implement reconciliation APIs on top of proprietary systems (e.g.: MDM):
 <a class="reference external" href="https://reconciliation-api.github.io/specs/latest/">https://reconciliation-api.github.io/specs/latest/</a></p>
 <p>In this case, more complex reconciliation logic can be implemented.
@@ -1167,11 +1172,11 @@ OpenRefine APIs could be one of the possible interfaces for more fundamental rec
 </div>
 </div>
 <div class="section" id="pros-and-cons-of-reconciliation-in-openrefine">
-<h2><span class="section-number">5.2. </span>PROs and CONs of reconciliation in OpenRefine<a class="headerlink" href="#pros-and-cons-of-reconciliation-in-openrefine" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>PROs and CONs of reconciliation in OpenRefine<a class="headerlink" href="#pros-and-cons-of-reconciliation-in-openrefine" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="limitations">
-<h3><span class="section-number">5.2.1. </span>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="client-tool">
-<h4><span class="section-number">5.2.1.1. </span>Client tool<a class="headerlink" href="#client-tool" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.1. </span>Client tool<a class="headerlink" href="#client-tool" title="Permalink to this headline">¶</a></h4>
 <p>OpenRefine is a DeskTop tool. Though implemented as a web C/S system, it does not support concurrent users.
 Therefore, what can be done on OpenRefine is limited by the technical specification of the client, which is typically
 an edge device in modern enterprise environments.</p>
@@ -1187,13 +1192,13 @@ will consider the file system of the virtual desktop environment it is running o
 <p>(embed ways to tune configuration when starting OpenRefine in a server way)</p>
 </div>
 <div class="section" id="id2">
-<h4><span class="section-number">5.2.1.2. </span>Authentication<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.2. </span>Authentication<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>As previously mentioned, OpenRefine does not support access to restricted reconciliation services.</p>
 <p>An extension providing such capability (tested on AllegroGraph) is available at:</p>
 <p><a class="reference external" href="https://github.com/FAIRplus/OpenRefine_Authenticator">https://github.com/FAIRplus/OpenRefine_Authenticator</a></p>
 </div>
 <div class="section" id="performance">
-<h4><span class="section-number">5.2.1.3. </span>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.3. </span>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h4>
 <p>Reconciliation in OpenRefine is not suitable for high data load, in that it is implemented via API calls and
 the performance is very limited.
 Recent development of OR maye have improved performance.
@@ -1203,7 +1208,7 @@ Furthermore, there is limited value in using OpenRefine in ETL processes where i
 </div>
 </div>
 <div class="section" id="when-to-use-openrefine">
-<h3><span class="section-number">5.2.2. </span>When to use OpenRefine<a class="headerlink" href="#when-to-use-openrefine" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>When to use OpenRefine<a class="headerlink" href="#when-to-use-openrefine" title="Permalink to this headline">¶</a></h3>
 <p>OpenRefine is a simple user oriented tool, useful for low curation loads where the aspects of reconciliation are prominent.
 It is particularly good as first tool to introduce reconciliation concepts in an organisation.</p>
 <div class="admonition note">
@@ -1212,7 +1217,7 @@ It is particularly good as first tool to introduce reconciliation concepts in an
 We focus here only on some FAIRification related capabilities.</p>
 </div>
 <div class="section" id="mapping-the-structure-of-data-to-an-ontology-mapping-the-structure-of-data-to-an-ontology">
-<h4><span class="section-number">5.2.2.1. </span>Mapping the structure of data to an ontology {#mapping-the-structure-of-data-to-an-ontology}<a class="headerlink" href="#mapping-the-structure-of-data-to-an-ontology-mapping-the-structure-of-data-to-an-ontology" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.2.1. </span>Mapping the structure of data to an ontology {#mapping-the-structure-of-data-to-an-ontology}<a class="headerlink" href="#mapping-the-structure-of-data-to-an-ontology-mapping-the-structure-of-data-to-an-ontology" title="Permalink to this headline">¶</a></h4>
 <p>The other essential step when transforming a dataset to a KG is mapping its structure to a graph.
 Let’s introduce this notion via a very simple example.</p>
 <table>
@@ -1289,7 +1294,7 @@ vs <a class="reference external" href="http://www.wikidata.org/entity/Q937">http
 </div>
 </div>
 <div class="section" id="mapping-in-openrefine">
-<h4><span class="section-number">5.2.2.2. </span>Mapping in OpenRefine<a class="headerlink" href="#mapping-in-openrefine" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.2.2. </span>Mapping in OpenRefine<a class="headerlink" href="#mapping-in-openrefine" title="Permalink to this headline">¶</a></h4>
 <p>The RDF plugin in OpenRefine allows to map a table in OpenRefine to a graph pattern where the content of other columns can be added.</p>
 <p>[BRIEF SCREENSHOT FROM THE WEB]</p>
 <p>[ADD LINK TO TUTORIALS]</p>
@@ -1309,7 +1314,7 @@ vs <a class="reference external" href="http://www.wikidata.org/entity/Q937">http
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="rdf-schema-alignment-in-openrefine">
 <a class="reference internal image-reference" href="../../../_images/rdf-align-openrefine.png"><img alt="RDF schema alignment in OpenRefine" src="../../../_images/rdf-align-openrefine.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">RDF schema alignment in OpenRefine</span><a class="headerlink" href="#rdf-schema-alignment-in-openrefine" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">RDF schema alignment in OpenRefine</span><a class="headerlink" href="#rdf-schema-alignment-in-openrefine" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The system assists the users in defining how the table should look like in RDF, fundamentally providing a template editor.</p>
@@ -1317,7 +1322,7 @@ vs <a class="reference external" href="http://www.wikidata.org/entity/Q937">http
 <p>[TO REMEMBER/CHECK: does it make blank nodes? Where does auto-suggest fish from?]</p>
 </div>
 <div class="section" id="mapping-in-karma">
-<h4><span class="section-number">5.2.2.3. </span>Mapping in Karma<a class="headerlink" href="#mapping-in-karma" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.2.3. </span>Mapping in Karma<a class="headerlink" href="#mapping-in-karma" title="Permalink to this headline">¶</a></h4>
 <p>Karma (<a class="reference external" href="https://usc-isi-i2.github.io/karma/">https://usc-isi-i2.github.io/karma/</a>) is a Desktop tool specifically
 designed to map data to RDF.
 It covers different input formats (e.g.: JSON and hierarchical content).
@@ -1352,21 +1357,21 @@ Karma expresses mappings in the KARMA language, that is an extension of <a class
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="rdf-schema-alignment-in-karma">
 <a class="reference internal image-reference" href="../../../_images/rdf-align-karma.png"><img alt="RDF schema alignment in Karma" src="../../../_images/rdf-align-karma.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">RDF schema alignment in Karma</span><a class="headerlink" href="#rdf-schema-alignment-in-karma" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">RDF schema alignment in Karma</span><a class="headerlink" href="#rdf-schema-alignment-in-karma" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>[<a class="reference external" href="https://github.com/szeke/karma-tcdl-tutorial/wiki">https://github.com/szeke/karma-tcdl-tutorial/wiki</a>]</p>
 <p>[SHOULD HAVE A STEP BY STEP EXAMPLE WITH THE ABOVE SIMPLE TABLE]</p>
 </div>
 <div class="section" id="r2rml">
-<h4><span class="section-number">5.2.2.4. </span>R2RML<a class="headerlink" href="#r2rml" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.2.4. </span>R2RML<a class="headerlink" href="#r2rml" title="Permalink to this headline">¶</a></h4>
 <p>When source data exists in a relational structure, a mapping to a graph can be expressed via the standard language R2RML (<a class="reference external" href="https://www.w3.org/TR/r2rml/">https://www.w3.org/TR/r2rml/</a>).</p>
 </div>
 </div>
 <div class="section" id="notes-on-the-fairification-as-a-kg-workflow">
-<h3><span class="section-number">5.2.3. </span>Notes on the FAIRification (as a KG) workflow<a class="headerlink" href="#notes-on-the-fairification-as-a-kg-workflow" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.3. </span>Notes on the FAIRification (as a KG) workflow<a class="headerlink" href="#notes-on-the-fairification-as-a-kg-workflow" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="what-comes-first">
-<h4><span class="section-number">5.2.3.1. </span>What comes first<a class="headerlink" href="#what-comes-first" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.3.1. </span>What comes first<a class="headerlink" href="#what-comes-first" title="Permalink to this headline">¶</a></h4>
 <p>Reconciliation and mapping to a graph are to a degree two independent steps.
 The Typical OpenRefine workflow would first do reconciliation and then mapping.
 In general, it makes sense to follow these steps in this order: when mapping to a graph, one could take specific
@@ -1375,7 +1380,7 @@ And predictive approaches could be made more precise.</p>
 <p>It is however possible to map data to a graph without performing any reconciliation step (in general the resulting graph will not be fully FAIR).</p>
 </div>
 <div class="section" id="qa-and-staging">
-<h4><span class="section-number">5.2.3.2. </span>QA and staging<a class="headerlink" href="#qa-and-staging" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.3.2. </span>QA and staging<a class="headerlink" href="#qa-and-staging" title="Permalink to this headline">¶</a></h4>
 <p>OpenRefine is an interactive tool and the user explicitly needs to select which “reconciliation proposal” to
 select among a few presented.
 In general automated reconciliation processes will provide suggestions with a confidence level.
@@ -1384,13 +1389,13 @@ One approach could be to have staging area where mappings are reviewed, and only
 </div>
 </div>
 <div class="section" id="working-on-the-graph">
-<h3><span class="section-number">5.2.4. </span>Working on the graph<a class="headerlink" href="#working-on-the-graph" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.4. </span>Working on the graph<a class="headerlink" href="#working-on-the-graph" title="Permalink to this headline">¶</a></h3>
 <p>A useful set of tools for KG manipulation is the KGTK: <a class="reference external" href="https://kgtk.readthedocs.io/en/latest/">https://kgtk.readthedocs.io/en/latest/</a></p>
 <p>This provides Import/Export between different formats, operators (e.g.: as joins, sub-setting) and useful analytical functions.</p>
 <p>[NOTE: NVS ENGAGED IN A PROJECT FOR KGTK EXTENSION]</p>
 </div>
 <div class="section" id="closed-loop-fairification-very-draft-but-we-did-have-some-architectures-here">
-<h3><span class="section-number">5.2.5. </span>Closed loop FAIRification [very draft, but we did have some architectures here]<a class="headerlink" href="#closed-loop-fairification-very-draft-but-we-did-have-some-architectures-here" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.5. </span>Closed loop FAIRification [very draft, but we did have some architectures here]<a class="headerlink" href="#closed-loop-fairification-very-draft-but-we-did-have-some-architectures-here" title="Permalink to this headline">¶</a></h3>
 <p>We can use OpenRefine to <code class="docutils literal notranslate"><span class="pre">FAIRify</span></code> data using a KG as a source of “reference information” or ontologies.
 At the same time we can export data via OpenRefine into a KG.</p>
 <p>We therefore have a system that can be used to generate a KG that improves the performance of the system itself.</p>
@@ -1398,9 +1403,9 @@ At the same time we can export data via OpenRefine into a KG.</p>
 <p>[<a class="reference external" href="https://github.com/usc-isi-i2/table-linker">https://github.com/usc-isi-i2/table-linker</a>]</p>
 </div>
 <div class="section" id="exploring-the-graph">
-<h3><span class="section-number">5.2.6. </span>Exploring the graph<a class="headerlink" href="#exploring-the-graph" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.6. </span>Exploring the graph<a class="headerlink" href="#exploring-the-graph" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="relfinder">
-<h4><span class="section-number">5.2.6.1. </span>RelFinder<a class="headerlink" href="#relfinder" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.6.1. </span>RelFinder<a class="headerlink" href="#relfinder" title="Permalink to this headline">¶</a></h4>
 <p>Once we have information as a KG, it is useful to have tools to explore it.
 One such simple tool is <a class="reference external" href="http://www.visualdataweb.org/relfinder.php">RelFinder</a> ).</p>
 <p>The tool can be pointed to a triplestore and allows discovering connections between two or more entities.
@@ -1413,7 +1418,7 @@ However, it is a useful tool to demonstrate why a KG is useful.</p>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">5.3. </span>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>This content provides a basic overview of reconciliation tools for dealing with relative lightweight processes to convert tabular data to an RDF Linked Data graph.
 It complements content related to ETL to RDF.
 While a lot of material already exists about using OpenRefine for performing such tasks, the value added by the recipe
@@ -1429,7 +1434,7 @@ rests on the setting up of a Wikibase instance to provide the reconciliation ref
 </div></blockquote>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">5.4. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Reference</strong><div class="summary-down docutils">
@@ -1446,7 +1451,7 @@ rests on the setting up of a Wikibase instance to provide the reconciliation ref
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">5.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1495,7 +1500,7 @@ Martin Magdinier: (RefinePro)
 -->
 </div>
 <div class="section" id="license">
-<h2><span class="section-number">5.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1544,68 +1549,68 @@ Martin Magdinier: (RefinePro)
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   5.1. Introduction
+   6.1. Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reconciliation">
-     5.1.1. Reconciliation
+     6.1.1. Reconciliation
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ingredients-for-reconciliation">
-       5.1.1.1. Ingredients for reconciliation
+       6.1.1.1. Ingredients for reconciliation
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reconciliation-with-openrefine">
-     5.1.2. Reconciliation with OpenRefine
+     6.1.2. Reconciliation with OpenRefine
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reconciliation-toward-public-knowledge-bases">
-     5.1.3. Reconciliation toward public knowledge-bases
+     6.1.3. Reconciliation toward public knowledge-bases
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#reconciliation-toward-wikidata">
-       5.1.3.1. Reconciliation toward wikidata
+       6.1.3.1. Reconciliation toward wikidata
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#other-public-reconciliation-services">
-       5.1.3.2. Other public reconciliation services
+       6.1.3.2. Other public reconciliation services
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reconciliation-toward-private-knowledge-bases">
-     5.1.4. Reconciliation toward private knowledge bases
+     6.1.4. Reconciliation toward private knowledge bases
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#wikidata-as-a-local-instance">
-       5.1.4.1. Wikidata as a local instance
+       6.1.4.1. Wikidata as a local instance
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#reconciling-toward-a-triplestore">
-       5.1.4.2. Reconciling toward a triplestore
+       6.1.4.2. Reconciling toward a triplestore
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#authentication">
-         5.1.4.2.1. Authentication
+         6.1.4.2.1. Authentication
         </a>
        </li>
       </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#implementing-reconciliation-apis">
-       5.1.4.3. Implementing reconciliation APIs
+       6.1.4.3. Implementing reconciliation APIs
       </a>
      </li>
     </ul>
@@ -1614,93 +1619,93 @@ Martin Magdinier: (RefinePro)
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pros-and-cons-of-reconciliation-in-openrefine">
-   5.2. PROs and CONs of reconciliation in OpenRefine
+   6.2. PROs and CONs of reconciliation in OpenRefine
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#limitations">
-     5.2.1. Limitations
+     6.2.1. Limitations
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#client-tool">
-       5.2.1.1. Client tool
+       6.2.1.1. Client tool
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       5.2.1.2. Authentication
+       6.2.1.2. Authentication
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#performance">
-       5.2.1.3. Performance
+       6.2.1.3. Performance
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#when-to-use-openrefine">
-     5.2.2. When to use OpenRefine
+     6.2.2. When to use OpenRefine
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mapping-the-structure-of-data-to-an-ontology-mapping-the-structure-of-data-to-an-ontology">
-       5.2.2.1. Mapping the structure of data to an ontology {#mapping-the-structure-of-data-to-an-ontology}
+       6.2.2.1. Mapping the structure of data to an ontology {#mapping-the-structure-of-data-to-an-ontology}
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mapping-in-openrefine">
-       5.2.2.2. Mapping in OpenRefine
+       6.2.2.2. Mapping in OpenRefine
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mapping-in-karma">
-       5.2.2.3. Mapping in Karma
+       6.2.2.3. Mapping in Karma
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#r2rml">
-       5.2.2.4. R2RML
+       6.2.2.4. R2RML
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notes-on-the-fairification-as-a-kg-workflow">
-     5.2.3. Notes on the FAIRification (as a KG) workflow
+     6.2.3. Notes on the FAIRification (as a KG) workflow
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#what-comes-first">
-       5.2.3.1. What comes first
+       6.2.3.1. What comes first
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#qa-and-staging">
-       5.2.3.2. QA and staging
+       6.2.3.2. QA and staging
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-on-the-graph">
-     5.2.4. Working on the graph
+     6.2.4. Working on the graph
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#closed-loop-fairification-very-draft-but-we-did-have-some-architectures-here">
-     5.2.5. Closed loop FAIRification [very draft, but we did have some architectures here]
+     6.2.5. Closed loop FAIRification [very draft, but we did have some architectures here]
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploring-the-graph">
-     5.2.6. Exploring the graph
+     6.2.6. Exploring the graph
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#relfinder">
-       5.2.6.1. RelFinder
+       6.2.6.1. RelFinder
       </a>
      </li>
     </ul>
@@ -1709,22 +1714,22 @@ Martin Magdinier: (RefinePro)
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   5.3. Conclusion:
+   6.3. Conclusion:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   5.4. References
+   6.4. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   5.5. Authors
+   6.5. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   5.6. License
+   6.6. License
   </a>
  </li>
 </ul>
@@ -1739,7 +1744,7 @@ Martin Magdinier: (RefinePro)
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="vocabularies/UC3_R13_local_ontology_services.html" title="previous page"><span class="section-number">4.3. </span>Deploying the EBI OLS</a>
+<a class='left-prev' id="prev-link" href="vocabularies/UC3_R13_local_ontology_services.html" title="previous page"><span class="section-number">5.3. </span>Deploying the EBI OLS</a>
 <a class='right-next' id="next-link" href="../assessing-fairness.html" title="next page">Assessment</a>
 
                                     </div>

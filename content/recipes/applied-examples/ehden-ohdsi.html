@@ -579,33 +579,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
+     3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
+     4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
+     5. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
+       5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
+       5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
+       5.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -614,7 +619,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
-     5. Using OpenRefine and Karma for FAIRification
+     6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
   </ul>
@@ -1086,7 +1091,7 @@ the main focus of the FAIRification was on developing structured metadata, speci
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure0">
 <img alt="Recipe Steps" src="../../../_images/ehden-ohdsi.md-figure0.mmd.png" />
-<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#ehden-ohdsi-figure0" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.18 </span><span class="caption-text">Recipe Steps</span><a class="headerlink" href="#ehden-ohdsi-figure0" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1097,7 +1102,7 @@ the main focus of the FAIRification was on developing structured metadata, speci
 <p>In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which
 kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM
 itself, the OMOP Standardized Vocabularies, studies, cohort definitions and many more.
-Each digital resource itself can consist of multiple (sub) digital resources, as shown in <a class="reference internal" href="#ehden-ohdsi-figure1"><span class="std std-numref">Fig. 5.13</span></a>.</p>
+Each digital resource itself can consist of multiple (sub) digital resources, as shown in <a class="reference internal" href="#ehden-ohdsi-figure1"><span class="std std-numref">Fig. 5.19</span></a>.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1114,7 +1119,7 @@ Each digital resource itself can consist of multiple (sub) digital resources, as
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure1">
 <img alt="Inventory and prioritization of digital resources" src="../../../_images/ehden-ohdsi.md-figure1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from <a class="reference external" href="https://zenodo.org/record/4474373">EHDEN D4.5</a>).</span><a class="headerlink" href="#ehden-ohdsi-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.19 </span><span class="caption-text">Inventory and prioritization of digital resources. Example of digital resources that are part of an OHDSI study (from <a class="reference external" href="https://zenodo.org/record/4474373">EHDEN D4.5</a>).</span><a class="headerlink" href="#ehden-ohdsi-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive.
@@ -1161,7 +1166,7 @@ data on the internet and to make the data discoverable.</p>
 <li><p><a class="reference external" href="https://schema.org/Organization">Organization</a>: represents an organization, such as a university</p></li>
 <li><p><a class="reference external" href="https://schema.org/Person">Person</a>: represents a person and is mainly used to indicate the authors of / researchers involved in the study</p></li>
 </ul>
-<p><a class="reference internal" href="#ehden-ohdsi-figure-2"><span class="std std-numref">Fig. 5.14</span></a> shows part of the relevant metadata elements in the model.</p>
+<p><a class="reference internal" href="#ehden-ohdsi-figure-2"><span class="std std-numref">Fig. 5.20</span></a> shows part of the relevant metadata elements in the model.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1178,7 +1183,7 @@ data on the internet and to make the data discoverable.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure-2">
 <img alt="Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org concept. Literals (yellow) are data types, e.g integers or strings." src="../../../_images/ehden-ohdsi.md-figure2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Part of the metadata model. Here, each class (orange) and relationship is represented as a <a class="reference external" href="http://schema.org">schema.org</a> concept. Literals (yellow) are data types, e.g integers or strings.</span><a class="headerlink" href="#ehden-ohdsi-figure-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.20 </span><span class="caption-text">Part of the metadata model. Here, each class (orange) and relationship is represented as a <a class="reference external" href="http://schema.org">schema.org</a> concept. Literals (yellow) are data types, e.g integers or strings.</span><a class="headerlink" href="#ehden-ohdsi-figure-2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>RDF representation of two <a class="reference external" href="http://Schema.org">Schema.org</a> types, written in Turtle:</p>
@@ -1293,7 +1298,7 @@ schema:sameAs &quot;http://purl.bioontology.org/ontology/RXNORM/“1546359&quot;
 </div>
 <p>The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML output
 from that which contains the article text but also embeds the entered metadata as JSON-LD
-(see <a class="reference internal" href="#ehden-ohdsi-figure3"><span class="std std-numref">Fig. 5.15</span></a>). In order to do this, we have written custom processing logic that takes the YAML
+(see <a class="reference internal" href="#ehden-ohdsi-figure3"><span class="std std-numref">Fig. 5.21</span></a>). In order to do this, we have written custom processing logic that takes the YAML
 data as input and formats this into RDF in accordance with the metadata model.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1311,7 +1316,7 @@ data as input and formats this into RDF in accordance with the metadata model.</
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure3">
 <img alt="Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project." src="../../../_images/ehden-ohdsi.md-figure3.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.</span><a class="headerlink" href="#ehden-ohdsi-figure3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.21 </span><span class="caption-text">Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concept project.</span><a class="headerlink" href="#ehden-ohdsi-figure3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1422,7 +1427,7 @@ In the front end of the website, this metadata is shown in a human-readable way.
 <h3><span class="section-number">5.6.9. </span>Final result<a class="headerlink" href="#final-result" title="Permalink to this headline">¶</a></h3>
 <p>The final result of applying all these steps looks like this: an HTML page in the browser with JSON-LD metadata under
 the hood.
-A screenshot of the HTML page is presented in <a class="reference internal" href="#ehden-ohdsi-figure6"><span class="std std-numref">Fig. 5.16</span></a>.</p>
+A screenshot of the HTML page is presented in <a class="reference internal" href="#ehden-ohdsi-figure6"><span class="std std-numref">Fig. 5.22</span></a>.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1439,13 +1444,13 @@ A screenshot of the HTML page is presented in <a class="reference internal" href
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure6">
 <img alt="This screenshot shows the &quot;study&quot; view of the Hugo covid19 app, here the entry &quot;covid19icarius&quot; (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the &quot;JSON-LD&quot; tab would allow to see the corresponding JSON-LD for this record." src="../../../_images/ehden-ohdsi.md-figure6.png" />
-<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">This screenshot shows the “study” view of the Hugo covid19 app, here the entry “covid19icarius” (<a class="reference external" href="https://covid19.ohdsi.app/study/covid19icarius/">https://covid19.ohdsi.app/study/covid19icarius/</a>). The selected tab shows collapsed details sections, whereas the “JSON-LD” tab would allow to see the corresponding JSON-LD for this record.</span><a class="headerlink" href="#ehden-ohdsi-figure6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.22 </span><span class="caption-text">This screenshot shows the “study” view of the Hugo covid19 app, here the entry “covid19icarius” (<a class="reference external" href="https://covid19.ohdsi.app/study/covid19icarius/">https://covid19.ohdsi.app/study/covid19icarius/</a>). The selected tab shows collapsed details sections, whereas the “JSON-LD” tab would allow to see the corresponding JSON-LD for this record.</span><a class="headerlink" href="#ehden-ohdsi-figure6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>In the HTML page of the record, the HTML head element is augmented with a script element which embeds the same JSON-LD
 information payload and makes it available to search engines’ crawlers.</p>
 <p>Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid-related
-datasets. <a class="reference internal" href="#ehden-ohdsi-figure7"><span class="std std-numref">Fig. 5.17</span></a> shows the ICARIUS dataset, which was highlighted in the previous sections,
+datasets. <a class="reference internal" href="#ehden-ohdsi-figure7"><span class="std std-numref">Fig. 5.23</span></a> shows the ICARIUS dataset, which was highlighted in the previous sections,
 as indexed in Google Dataset Search.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1463,7 +1468,7 @@ as indexed in Google Dataset Search.</p>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ehden-ohdsi-figure7">
 <img alt="The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe." src="../../../_images/ehden-ohdsi.md-figure7.png" />
-<p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.</span><a class="headerlink" href="#ehden-ohdsi-figure7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.23 </span><span class="caption-text">The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON-LD descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.</span><a class="headerlink" href="#ehden-ohdsi-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>

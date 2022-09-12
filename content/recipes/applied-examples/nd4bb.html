@@ -579,33 +579,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog.html">
-     2. Building a catalogue of datasets
+     3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
+     4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/vocabularies.html">
-     4. Vocabulary management
+     5. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
+       5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
+       5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
+       5.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -614,7 +619,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
-     5. Using OpenRefine and Karma for FAIRification
+     6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
   </ul>
@@ -1010,7 +1015,7 @@ No
 <h3><span class="section-number">2.3.1. </span>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h3>
 <p>The AMR database consists of several nested static HTML pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>) and a machine-readable data set should be easily created.</p>
 <p>To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes three types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results. The descriptive metadata is always stored in a free-text format without data structure.</p>
-<p><a class="reference internal" href="#nd4bb-figure1"><span class="std std-numref">Fig. 2.31</span></a> is an example of the simplified schematic workflow of FAIRification, which includes the extraction, the transformation, the annotation, the licensing and the identifier assigning process. Due to time constraint, we focussed on the extraction and annotation of structural metadata. The administrative and the descriptive metadata will be added in the future.</p>
+<p><a class="reference internal" href="#nd4bb-figure1"><span class="std std-numref">Fig. 2.30</span></a> is an example of the simplified schematic workflow of FAIRification, which includes the extraction, the transformation, the annotation, the licensing and the identifier assigning process. Due to time constraint, we focussed on the extraction and annotation of structural metadata. The administrative and the descriptive metadata will be added in the future.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1027,14 +1032,14 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure1">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure1.png"><img alt="Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows)." src="../../../_images/nd4bb.md-figure1.png" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.31 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#nd4bb-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.30 </span><span class="caption-text">Schematic workflow of the general FAIRification pipeline. Some steps need repetitions (yellow arrows).</span><a class="headerlink" href="#nd4bb-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <div class="section" id="data-extraction">
 <h3><span class="section-number">2.3.2. </span>Data extraction<a class="headerlink" href="#data-extraction" title="Permalink to this headline">¶</a></h3>
 <p>Data are extracted using a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf">KNIME workflow provided here</a>, with which we can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced.</p>
-<p><a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 2.32</span></a> is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML heading level 3 (&lt;h3&gt;, shown in the red box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 2.33</span></a>) and compounds as an unordered list (&lt;ul&gt;, shown in the yellow box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 2.33</span></a>).</p>
+<p><a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 2.31</span></a> is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML heading level 3 (&lt;h3&gt;, shown in the red box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 2.32</span></a>) and compounds as an unordered list (&lt;ul&gt;, shown in the yellow box in <a class="reference internal" href="#nd4bb-figure3"><span class="std std-numref">Fig. 2.32</span></a>).</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1051,7 +1056,7 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure2">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure2.jpg"><img alt="Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted." src="../../../_images/nd4bb.md-figure2.jpg" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.32 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#nd4bb-figure2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.31 </span><span class="caption-text">Snapshot of AMR compound database home page. The blue area listed all compound data to be extracted.</span><a class="headerlink" href="#nd4bb-figure2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1070,10 +1075,10 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure3">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure3.jpg"><img alt="Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound." src="../../../_images/nd4bb.md-figure3.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.33 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#nd4bb-figure3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.32 </span><span class="caption-text">Snapshot of the AMR compound database home page source code. The red box shows the compound class header. The yellow box lists one compound.</span><a class="headerlink" href="#nd4bb-figure3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>We first identified all websites that contain the project data. The homepage (<a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 2.32</span></a>) describes the compound name, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in <a class="reference internal" href="#nd4bb-figure4"><span class="std std-numref">Fig. 2.34</span></a>.</p>
+</details><p>We first identified all websites that contain the project data. The homepage (<a class="reference internal" href="#nd4bb-figure2"><span class="std std-numref">Fig. 2.31</span></a>) describes the compound name, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in <a class="reference internal" href="#nd4bb-figure4"><span class="std std-numref">Fig. 2.33</span></a>.</p>
 <p>Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by HTML &lt;td&gt;…&lt;/td&gt;, chemical “Oxazolidinones” and “Tetracyclines” use different data structure. Therefore the extracted XML document was updated before applying further nodes to the XML document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1091,11 +1096,11 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure4">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure4.png"><img alt="Workflow to extract antimicrobial classes and compounds with their corresponding subpages." src="../../../_images/nd4bb.md-figure4.png" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.34 </span><span class="caption-text">Workflow to extract antimicrobial classes and compounds with their corresponding subpages.</span><a class="headerlink" href="#nd4bb-figure4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.33 </span><span class="caption-text">Workflow to extract antimicrobial classes and compounds with their corresponding subpages.</span><a class="headerlink" href="#nd4bb-figure4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</details><p>Links to all content in the sub-page are also extracted. <a class="reference internal" href="#nd4bb-figure5"><span class="std std-numref">Fig. 2.35</span></a> is an example of the subpage of one compound, which consists of table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. External links were excluded from current data extraction.</p>
-<p>The complete workflow to extract the data from the compound/charge webpage is depicted in <a class="reference internal" href="#nd4bb-figure7"><span class="std std-numref">Fig. 2.36</span></a>.</p>
+</details><p>Links to all content in the sub-page are also extracted. <a class="reference internal" href="#nd4bb-figure5"><span class="std std-numref">Fig. 2.34</span></a> is an example of the subpage of one compound, which consists of table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources. External links were excluded from current data extraction.</p>
+<p>The complete workflow to extract the data from the compound/charge webpage is depicted in <a class="reference internal" href="#nd4bb-figure7"><span class="std std-numref">Fig. 2.35</span></a>.</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1112,7 +1117,7 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure5">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure5.jpg"><img alt="Example of one ND4BB raw data." src="../../../_images/nd4bb.md-figure5.jpg" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.35 </span><span class="caption-text">Example of one ND4BB raw data. Marked in green boxes are a table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources.</span><a class="headerlink" href="#nd4bb-figure5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.34 </span><span class="caption-text">Example of one ND4BB raw data. Marked in green boxes are a table section with the compound name, a 2D and 3D image of the compound structures, two tables with links to related files and properties and one table with links to external sources.</span><a class="headerlink" href="#nd4bb-figure5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1131,13 +1136,13 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure7">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure7.png"><img alt="Workflow to extract the data from compound/charge webpage." src="../../../_images/nd4bb.md-figure7.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.36 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#nd4bb-figure7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.35 </span><span class="caption-text">Workflow to extract the data from compound/charge webpage.</span><a class="headerlink" href="#nd4bb-figure7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <div class="section" id="data-transformation">
 <h3><span class="section-number">2.3.3. </span>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h3>
-<p>The data were extracted following the following schema to facilitate future data annotation: “PropertyGroup - Property - Value” where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in <a class="reference internal" href="#nd4bb-figure6"><span class="std std-numref">Fig. 2.37</span></a>. For each property, the corresponding values in a controlled vocabulary list are collected into a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx">spreadsheet</a>. Missing values were fixed in this step as well.</p>
+<p>The data were extracted following the following schema to facilitate future data annotation: “PropertyGroup - Property - Value” where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in <a class="reference internal" href="#nd4bb-figure6"><span class="std std-numref">Fig. 2.36</span></a>. For each property, the corresponding values in a controlled vocabulary list are collected into a <a class="reference external" href="https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx">spreadsheet</a>. Missing values were fixed in this step as well.</p>
 <p>One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup).</p>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
@@ -1155,7 +1160,7 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="nd4bb-figure6">
 <a class="reference internal image-reference" href="../../../_images/nd4bb.md-figure6.png"><img alt="Example data set for +3 charged Amikacin." src="../../../_images/nd4bb.md-figure6.png" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.37 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#nd4bb-figure6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.36 </span><span class="caption-text">Example data set for +3 charged Amikacin.</span><a class="headerlink" href="#nd4bb-figure6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>

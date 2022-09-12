@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Deploying the IMI data catalogue</title>
+    <title>4. Deploying the IMI data catalogue</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Vocabulary management" href="vocabularies.html" />
-    <link rel="prev" title="2. Building a catalogue of datasets" href="data-catalog.html" />
+    <link rel="next" title="5. Vocabulary management" href="vocabularies.html" />
+    <link rel="prev" title="3. Building a catalogue of datasets" href="data-catalog.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -579,33 +579,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="data-catalog.html">
-     2. Building a catalogue of datasets
+     3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3. Deploying the IMI data catalogue
+     4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="vocabularies.html">
-     4. Vocabulary management
+     5. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
+       5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
+       5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="vocabularies/UC3_R13_local_ontology_services.html">
-       4.3. Deploying the EBI OLS
+       5.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -614,7 +619,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="openrefine-nvt.html">
-     5. Using OpenRefine and Karma for FAIRification
+     6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
   </ul>
@@ -894,7 +899,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="deploying-the-imi-data-catalogue">
-<span id="fcb-infra-imi-cat-deploy"></span><h1><span class="section-number">3. </span>Deploying the IMI data catalogue<a class="headerlink" href="#deploying-the-imi-data-catalogue" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-infra-imi-cat-deploy"></span><h1><span class="section-number">4. </span>Deploying the IMI data catalogue<a class="headerlink" href="#deploying-the-imi-data-catalogue" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB048", "sdo:name": "Deploying the IMI data catalogue", "sdo:description": "Deploying the IMI data catalogue", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Software Developer|NA", "Data Manager|T4FS_0000520", "System Administrator|T4FS_0000570"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB048", "dso:url": "https://w3id.org/faircookbook/FCB048", "owl:sameAs": "https://identifiers.org/fcb:FCB048"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB048#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB048#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB048#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB048#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
@@ -967,11 +972,11 @@ Yes
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in Docker.</p>
 </div>
 <div class="section" id="introduction">
-<h2><span class="section-number">3.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>For a more general introduction to data catalogues, their elements and data models,
 see the <a class="reference external" href="https://www.TODO.uldatacatalog.ul">data catalogue recipe</a>.
 This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue
@@ -981,7 +986,7 @@ The catalogue is not intended to hold the actual data, although it provides link
 together with information on any access restrictions.</p>
 </div>
 <div class="section" id="requirements">
-<h2><span class="section-number">3.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The following need to be installed on the machine the deployment is run on:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-scm.com/">Git</a></p></li>
@@ -989,7 +994,7 @@ together with information on any access restrictions.</p>
 </ul>
 </div>
 <div class="section" id="ingredients">
-<h2><span class="section-number">3.4. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/FAIRplus/imi-data-catalogue">IMI data catalogue code</a></p></li>
 </ul>
@@ -1001,10 +1006,10 @@ together with information on any access restrictions.</p>
 the application.</p>
 </div>
 <div class="section" id="step-by-step-guide">
-<h2><span class="section-number">3.5. </span>Step-by-step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Step-by-step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
 <p>Unless otherwise specified, all the following commands should be run in a terminal <em>from the base directory of the data catalogue code</em>.</p>
 <div class="section" id="building">
-<h3><span class="section-number">3.5.1. </span>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.5.1. </span>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
 <p><strong>(local)</strong> and <strong>(web container)</strong> indicate context of execution.</p>
 <ul class="simple">
 <li><p>First, generate the certificates that will be used to enable HTTPS in reverse proxy. To do so, execute:</p></li>
@@ -1087,7 +1092,7 @@ in <strong>Python</strong>, use the following to generate this key:</p></li>
 </div>
 </div>
 <div class="section" id="maintenance-of-docker-compose">
-<h3><span class="section-number">3.5.2. </span>Maintenance of docker-compose<a class="headerlink" href="#maintenance-of-docker-compose" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.5.2. </span>Maintenance of docker-compose<a class="headerlink" href="#maintenance-of-docker-compose" title="Permalink to this headline">¶</a></h3>
 <p>Docker container keeps the application in the state it was when  built. Therefore, <strong>if you change any files in
 the project, the container has to be rebuilt in order to see changes in application</strong> :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker-compose up --build
@@ -1101,7 +1106,7 @@ the project, the container has to be rebuilt in order to see changes in applicat
 recreate the Solr cores.</p>
 </div>
 <div class="section" id="modifying-the-datasets">
-<h3><span class="section-number">3.5.3. </span>Modifying the datasets<a class="headerlink" href="#modifying-the-datasets" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.5.3. </span>Modifying the datasets<a class="headerlink" href="#modifying-the-datasets" title="Permalink to this headline">¶</a></h3>
 <p>The datasets are all defined in the file <strong>tests/data/records.json</strong>. This file can be modified to add,
 delete and modify datasets. <strong>After saving the file, rebuild and restart docker-compose</strong>.</p>
 <p>First, to stop all the containers:</p>
@@ -1129,7 +1134,7 @@ delete and modify datasets. <strong>After saving the file, rebuild and restart d
 </div>
 <hr class="docutils" />
 <div class="section" id="single-docker-deployment">
-<h2><span class="section-number">3.6. </span>Single Docker deployment<a class="headerlink" href="#single-docker-deployment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.6. </span>Single Docker deployment<a class="headerlink" href="#single-docker-deployment" title="Permalink to this headline">¶</a></h2>
 <p>In some cases, you might not want Solr and Nginx to run (for example, if there are <strong>multiple instances</strong> of
 <strong>Data Catalog</strong> running).
 Then, simply use:</p>
@@ -1139,17 +1144,17 @@ Then, simply use:</p>
 </div>
 </div>
 <div class="section" id="manual-deployment">
-<h2><span class="section-number">3.7. </span>Manual deployment<a class="headerlink" href="#manual-deployment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.7. </span>Manual deployment<a class="headerlink" href="#manual-deployment" title="Permalink to this headline">¶</a></h2>
 <p>If you’d rather not to use Docker and compile and run the data catalogue manually instead, please follow the
 instructions in the <a class="reference external" href="https://github.com/FAIRplus/imi-data-catalogue/blob/master/README.md">README file</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
-<h2><span class="section-number">3.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>This recipe provides a step-by-step guide to deploying the <strong>IMI data catalogue</strong> developed at <a class="reference external" href="https://wwwen.uni.lu/lcsb">University of Luxembourg</a>,
 as part of <a class="reference external" href="https://fairplus-project.eu/">IMI FAIRplus</a> to a local system.</p>
 <div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">3.8.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.8.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="data-catalog.html#fcb-infra-build-catalog"><span class="std std-ref">Building a catalogue of datasets</span></a></p></li>
 <li><p>How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document --> (<em>in preparation</em>)</p></li>
@@ -1160,7 +1165,7 @@ as part of <a class="reference external" href="https://fairplus-project.eu/">IMI
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">3.9. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.9. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1171,7 +1176,7 @@ as part of <a class="reference external" href="https://fairplus-project.eu/">IMI
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">3.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.10. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1230,7 +1235,7 @@ as part of <a class="reference external" href="https://fairplus-project.eu/">IMI
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">3.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.11. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1278,81 +1283,81 @@ as part of <a class="reference external" href="https://fairplus-project.eu/">IMI
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   3.1. Main Objectives
+   4.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   3.2. Introduction
+   4.2. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   3.3. Requirements
+   4.3. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   3.4. Ingredients
+   4.4. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-by-step-guide">
-   3.5. Step-by-step guide
+   4.5. Step-by-step guide
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#building">
-     3.5.1. Building
+     4.5.1. Building
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#maintenance-of-docker-compose">
-     3.5.2. Maintenance of docker-compose
+     4.5.2. Maintenance of docker-compose
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modifying-the-datasets">
-     3.5.3. Modifying the datasets
+     4.5.3. Modifying the datasets
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-docker-deployment">
-   3.6. Single Docker deployment
+   4.6. Single Docker deployment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#manual-deployment">
-   3.7. Manual deployment
+   4.7. Manual deployment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   3.8. Conclusion
+   4.8. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     3.8.1. What should I read next?
+     4.8.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   3.9. References
+   4.9. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   3.10. Authors
+   4.10. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   3.11. License
+   4.11. License
   </a>
  </li>
 </ul>
@@ -1367,8 +1372,8 @@ as part of <a class="reference external" href="https://fairplus-project.eu/">IMI
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="data-catalog.html" title="previous page"><span class="section-number">2. </span>Building a catalogue of datasets</a>
-<a class='right-next' id="next-link" href="vocabularies.html" title="next page"><span class="section-number">4. </span>Vocabulary management</a>
+<a class='left-prev' id="prev-link" href="data-catalog.html" title="previous page"><span class="section-number">3. </span>Building a catalogue of datasets</a>
+<a class='right-next' id="next-link" href="vocabularies.html" title="next page"><span class="section-number">5. </span>Vocabulary management</a>
 
                                     </div>
                                 </v-row>

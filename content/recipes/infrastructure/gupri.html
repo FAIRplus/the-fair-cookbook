@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Introduction to terminologies and ontologies</title>
+    <title>2. Creating resolvable identifiers</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,21 +61,23 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/introduction-terminologies-ontologies.html" />
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/gupri.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Selecting terminologies and ontologies" href="selecting-ontologies.html" />
-    <link rel="prev" title="2.11.1. Using BridgeDb web services" href="bridgedb/bridgedb-example.html" />
+    <link rel="next" title="3. Building a catalogue of datasets" href="data-catalog.html" />
+    <link rel="prev" title="1. Identifier resolution services" href="id-resolution.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/introduction-terminologies-ontologies.html" />
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/gupri.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Introduction to terminologies and ontologies" />
-<meta property="og:description" content="Introduction to terminologies and ontologies  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;htt" />
+<meta property="og:title"       content="Creating resolvable identifiers" />
+<meta property="og:description" content="Creating resolvable identifiers  &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/terms/&#34;, &#34;o" />
  <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
 <meta name="twitter:card" content="summary" />
   </head>
@@ -117,7 +119,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/recipes/interoperability/introduction-terminologies-ontologies.md"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/infrastructure/gupri.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -157,7 +159,7 @@
         
         <a
             class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/interoperability/introduction-terminologies-ontologies.html&body=Your%20issue%20content%20here."
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/infrastructure/gupri.html&body=Your%20issue%20content%20here."
         >
             <button type="button"
                     class="btn btn-secondary topbarbtn"
@@ -166,7 +168,7 @@
                 title="Open an issue"
             >
                 <i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/introduction-terminologies-ontologies.md"><button
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/infrastructure/gupri.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -323,7 +325,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+    <a class="reference internal" href="chemical-identities.html">
      2. InChI and SMILES identifiers for chemical structures
     </a>
    </li>
@@ -399,23 +401,23 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../interoperability.html">
    Interoperability
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="identifier-mapping.html">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
      1. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="bridgedb-recipe.html">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
      2. Identifier mapping with BridgeDb
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="bridgedb/bridgedb-example.html">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
        2.11.1. Using BridgeDb web services
       </a>
      </li>
@@ -423,38 +425,38 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
      3. Introduction to terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="selecting-ontologies.html">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
      4. Selecting terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ontology-new-term-request-recipe.html">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
      5. Requesting new terms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ontology-operations-tools.html">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
      6. Ontology-related tools and services
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="ontology-robot-recipe.html">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
      7. Building an application ontology with ROBOT
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
        7.11.1. Competency questions for the Ontology ROBOT use case
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
        7.11.2. Application ontology for metabolomics
       </a>
      </li>
@@ -463,32 +465,32 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ontology-alignment-oxo.html">
+    <a class="reference internal" href="../interoperability/ontology-alignment-oxo.html">
      8. Ontology mapping with Ontology Xref Service (OxO)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="creating-data-dictionary.html">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
      9. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="creating-minimal-metadata-profiles.html">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
      10. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="transcriptomics-metadata.html">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
        10.4.1. Metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
        10.4.2. Metadata profile validation in RDF
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="bioactivity-profile.html">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
        10.4.3. Bioactivity data profile
       </a>
      </li>
@@ -497,32 +499,32 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
      11. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="rdf-conversion.html">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
      12. An inventory of tools for converting your data to RDF
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="fastq-file-format-validators.html">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
      13. File format validation, FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ETL-tools.html">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
      14. Extraction, transformation, and loading process
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="VCF-to-FHIR-conversion.html">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
      15. Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
        15.9.1. Converting VCF file to FHIR JSON
       </a>
      </li>
@@ -568,48 +570,48 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../infrastructure.html">
    Infrastructure
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/id-resolution.html">
+    <a class="reference internal" href="id-resolution.html">
      1. Identifier resolution services
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/gupri.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      2. Creating resolvable identifiers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog.html">
+    <a class="reference internal" href="data-catalog.html">
      3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+    <a class="reference internal" href="data-catalog-deployment.html">
      4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="../infrastructure/vocabularies.html">
+    <a class="reference internal" href="vocabularies.html">
      5. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+      <a class="reference internal" href="vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
        5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+      <a class="reference internal" href="vocabularies/Selecting_and_using_ontology_lookup_services.html">
        5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+      <a class="reference internal" href="vocabularies/UC3_R13_local_ontology_services.html">
        5.3. Deploying the EBI OLS
       </a>
      </li>
@@ -618,7 +620,7 @@
     </i>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+    <a class="reference internal" href="openrefine-nvt.html">
      6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
@@ -898,12 +900,10 @@
                                 
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
-  <div class="section" id="introduction-to-terminologies-and-ontologies">
-<span id="fcb-introduction-terminologies-ontologies"></span><h1><span class="section-number">3. </span>Introduction to terminologies and ontologies<a class="headerlink" href="#introduction-to-terminologies-and-ontologies" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="creating-resolvable-identifiers">
+<span id="fcb-infra-gupri"></span><h1><span class="section-number">2. </span>Creating resolvable identifiers<a class="headerlink" href="#creating-resolvable-identifiers" title="Permalink to this headline">¶</a></h1>
 <br/>
-<br/>
-<br/>
-<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB019", "sdo:name": "Introduction to terminologies and ontologies", "sdo:description": "Introduction to terminologies and ontologies", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Data Curator|T4FS_0000389", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Survey / Review", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB019", "dso:url": "https://w3id.org/faircookbook/FCB019", "owl:sameAs": "https://identifiers.org/fcb:FCB019"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H15M0S", "sdo:totalTime": "PT0H15M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB019#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB019#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB019#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB019#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB077", "sdo:name": "Creating resolvable identifiers", "sdo:description": "Creating resolvable identifiers", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB077", "dso:url": "https://w3id.org/faircookbook/FCB077", "owl:sameAs": "https://identifiers.org/fcb:FCB077"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H30M0S", "sdo:totalTime": "PT0H30M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB077#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB077#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB077#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB077#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
 <div class="card recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -913,7 +913,7 @@
 <i class="itemIcon fa fa-clock fa-2x text--white"></i>
 <div class="itemContent">
 <div class="label"> Reading Time </div>
-15 minutes
+30 minutes
 </div>
 </div></div>
 <div class="item"><div class="itemContainer">
@@ -938,23 +938,23 @@ No
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Introduction to terminologies and ontologies</div>
+<div style="flex-grow:1; margin-right:5px">Creating resolvable identifiers</div>
 <img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
 <i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
 <div class="label">Recipe Type</div>
-<div class="sectionValue">Survey / Review</div>
+<div class="sectionValue">Hands-on</div>
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
 <i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
 <div class="label">Audience</div>
-<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000389">Data Curator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
 </div>
 </div>
 <div class="section" style="flex-grow: 1;">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars not applicable">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars level-1">
 <path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
 <path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
 <path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
@@ -963,167 +963,197 @@ No
 </svg>
 <div class="sectionContent">
 <div class="label">Maturity Level & Indicator</div>
-<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/not applicable" class="secondary white--text" target="_blank" label>not applicable</v-chip></v-chip-group></div>
+<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/DSM-1-C0" class="secondary white--text" target="_blank" label>DSM-1-C0</v-chip></v-chip-group></div>
 <div class="tooltip">hover me
 <span class="tooltiptext">Tooltip text</span></div>
 </div>
 </div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
-<a href="https://w3id.org/faircookbook/FCB019" class="text--purple-dark">FCB019
+<a href="https://w3id.org/faircookbook/FCB077" class="text--purple-dark">FCB077
 </a></div>
 </div>
 </div>
-<div class="section" id="main-objectives">
-<h2><span class="section-number">3.1. </span>Main objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
-<p>The aim of this recipe is to provide a compact introduction about <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminologies</span></code> and <code class="docutils literal notranslate"><span class="pre">ontologies</span></code>, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.</p>
+<div class="section" id="requirements">
+<h2><span class="section-number">2.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Technical requirements:</p>
+<ul>
+<li><p>Hypertext Transfer Protocol (HTTP)</p></li>
+<li><p>Uniform Resource Locator (URL)</p></li>
+<li><p>Domain Name System (DNS)</p></li>
+</ul>
+</li>
+<li><p>Knowledge requirement:</p>
+<ul>
+<li><p>understanding of <a class="reference internal" href="../findability/identifiers.html"><span class="doc std std-doc">identifiers</span></a>.</p></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="controlled-terminology-or-ontology-what-s-the-difference">
-<h2><span class="section-number">3.2. </span>Controlled terminology or ontology: what’s the difference?<a class="headerlink" href="#controlled-terminology-or-ontology-what-s-the-difference" title="Permalink to this headline">¶</a></h2>
-<p>The need for <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">vocabulary</span></code> often arises in situations where validation of textual information is necessary
-for operational requirements.
-The main initial driver for data entry harmonization is to increase query recall.
-In its most basic form, <code class="docutils literal notranslate"><span class="pre">keywords</span></code> may be used to perform indexation.
-However, if relying on user input alone, the chances of typographic errors increases with the number of users.
-These unavoidable events accumulate over time and end up  hurting the accuracy of search results and this is the reason
-for offering sets of predefined values. It reduces the noise.
-However, this can come at the cost of precision, as the predefined terms may not cover the exact thing users
-may need to describe.
-Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.</p>
-<p>A <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminology</span></code> is a <em><code class="docutils literal notranslate"><span class="pre">normative</span></code></em> collection of terms, the spelling of which is fixed and for which additional information may be provided such as a <code class="docutils literal notranslate"><span class="pre">definition</span></code>, a set of <code class="docutils literal notranslate"><span class="pre">synonyms</span></code>, an <code class="docutils literal notranslate"><span class="pre">editor</span></code>, a <code class="docutils literal notranslate"><span class="pre">version</span></code>, as well as a <code class="docutils literal notranslate"><span class="pre">license</span></code> determining the condition of use.
-The set of information about a specific controlled terminology term is designated as <code class="docutils literal notranslate"><span class="pre">term</span> <span class="pre">metadata</span></code>.
-In a controlled terminology, terms appear as a <code class="docutils literal notranslate"><span class="pre">flat</span> <span class="pre">list</span></code>, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
-This is the main drawback and limitation of <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminologies</span></code>, which are often developed to support a data model or an application.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">ontology</span></code> on the other hand, is a <code class="docutils literal notranslate"><span class="pre">formal</span> <span class="pre">representation</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">domain</span> <span class="pre">knowledge</span> <span class="pre">where</span> <span class="pre">concepts</span> <span class="pre">are</span> <span class="pre">organized</span> <span class="pre">hierarchically</span></code>.
-The qualifier <code class="docutils literal notranslate"><span class="pre">formal</span></code> refers to a set of axioms and rules based on logic (e.g. <code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">order</span> <span class="pre">logic</span></code>) to structure,
-organize and check the consistency of the term hierarchy.
-As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry INCAtools or Robot tool).</p>
+<div class="section" id="abstract">
+<h2><span class="section-number">2.2. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>With this recipe, we will reinforce the notion and importance of Globally Unique, Persistent, Resolvable Identifier (GUPRI) by
+introducing several public services for minting such identifiers. For each service, we will highlight the strengths and weaknesses.</p>
 </div>
-<div class="section" id="how-are-they-built-and-maintained-and-why-does-it-matter">
-<h2><span class="section-number">3.3. </span>How are they built and maintained and why does it matter?<a class="headerlink" href="#how-are-they-built-and-maintained-and-why-does-it-matter" title="Permalink to this headline">¶</a></h2>
-<p>In order to improve over simple <code class="docutils literal notranslate"><span class="pre">controlled</span> <span class="pre">terminologies</span></code>, a huge area of research has developed to provide <code class="docutils literal notranslate"><span class="pre">tools</span></code> and <code class="docutils literal notranslate"><span class="pre">frameworks</span></code> supporting the representations of relationships between entities. The field is known as <code class="docutils literal notranslate"><span class="pre">formal</span> <span class="pre">semantics</span></code> in knowledge representation circles. One of the most immediately available examples of <code class="docutils literal notranslate"><span class="pre">entity</span> <span class="pre">relationships</span></code> found in ontologies, and their potential for improving searches, is the <code class="docutils literal notranslate"><span class="pre">is_a</span></code> relationship, which aims to cover the Parent/Child relationship that holds between two entities. For instance:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">Vertebrate</span>
-<span class="o">--</span><span class="n">Mammal</span>
-<span class="o">---</span><span class="n">Dolphin</span>
-<span class="o">--</span><span class="n">Bird</span>
-<span class="o">---</span><span class="n">Pigeon</span>
-</pre></div>
+<div class="section" id="background-information">
+<h2><span class="section-number">2.3. </span>Background information<a class="headerlink" href="#background-information" title="Permalink to this headline">¶</a></h2>
+<p>In the ideal linked data world, best practice is to provide a URL which can be accessed via HTTP, more specifically the HTTP GET command.</p>
+<blockquote>
+<div><p>(Learn more on HTTP GET here: <a class="reference external" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods</a>)</p>
+</div></blockquote>
+<p>To make this work, you have to guarantee that the HTTP GET command is answered.</p>
+<div class="section" id="how-can-you-do-that">
+<h3><span class="section-number">2.3.1. </span>How can you do that?<a class="headerlink" href="#how-can-you-do-that" title="Permalink to this headline">¶</a></h3>
+<p>HTTP uses Domain Name System (DNS) to decide which computer (i.e. which <a class="reference external" href="https://en.wikipedia.org/wiki/IP_address">IP address</a>)
+to contact and ask for content regarding the URL you want to resolve.</p>
+<p>DNS uses the concept of hierarchical domains to resolve URLs.</p>
+<blockquote>
+<div><p>(Learn more about subdomains here: <a class="reference external" href="https://en.wikipedia.org/wiki/Subdomain">https://en.wikipedia.org/wiki/Subdomain</a>)</p>
+</div></blockquote>
+<p>For example, you might want to resolve the following URL:</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Enzyme_Commission_number">http://en.wikipedia.org/wiki/Enzyme_Commission_number</a></p>
+<p>This will make your computer first look up who is responsible for managing “org” (the top-level domain),
+and ask there who is responsible for managing the domain “<a class="reference external" href="http://wikipedia.org">wikipedia.org</a>”,
+and finally who is responsible for managing “<a class="reference external" href="http://en.wikipedia.org">en.wikipedia.org</a>”.
+All responses might yield different computer systems, i.e. IP addresses.</p>
+<p>This principle can thus be used to delegate authority.
+In an enterprise context, this might be used to delegate authority within hierarchy:</p>
+<p><a class="reference external" href="http://my-department.my-enterprise.com/my-resource">http://my-department.my-enterprise.com/my-resource</a></p>
+<p>can be understood  in the following sense: “my-enterprise” allowed “my-department” to “mint”, i.e. generate / provide / resolve, URLs over the internet.</p>
+<p>If even more granularity / hierarchy is desired, an URL may also look like this:</p>
+<p><a class="reference external" href="http://my-team.my-department.my-enterprise.com/my-resource">http://my-team.my-department.my-enterprise.com/my-resource</a></p>
+<p>This can also be understood in the context of accountability / responsibility:</p>
+<p>“my-team” is responsible for ensuring that “<a class="reference external" href="http://my-team.my-department.my-enterprise.com/my-resource">http://my-team.my-department.my-enterprise.com/my-resource</a>” is accessible and resolvable via the internet.</p>
+<p>As all of this resolution practice is organized by DNS, this allows system administrators to hook in and generate <code class="docutils literal notranslate"><span class="pre">inaccessible</span> <span class="pre">subnets</span></code>.</p>
+<p>Probably you know this phenomenon in the form of an “intranet”, which is only available via VPN if you’re at home, or only available on-site.
+Typical domain names look like this, then:</p>
+<p><a class="reference external" href="http://internal-system.intranet.cnb">http://internal-system.intranet.cnb</a></p>
+<p>Here, your computer is configured in a specific way to resolve “intranet.cnb”,
+which is not accessible from the public internet, to specialized computer systems.</p>
 </div>
-<p>In this representation, <code class="docutils literal notranslate"><span class="pre">classes</span></code> are <em>directly</em> asserted (placed) under a parent class if and only if the rule <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">class</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">child</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">parent</span> <span class="pre">Class</span></code> holds. ‘Orchid’, which in this hierarchy, would not be nested under ‘Vertebrate’.</p>
-<p>While working on small structured vocabularies, it is still possible to detect potential errors but this approach does not scale to support real life semantic artefacts which support complex biological and biomedical information systems.
-Languages such as <a class="reference external" href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/">RDF</a>, <a class="reference external" href="https://www.w3.org/2004/02/skos/">SKOS</a>, and <a class="reference external" href="https://www.w3.org/OWL/">OWL</a>, exist to provide the expressivity required to establish relations between entities.
-In turn, building on these formal rules, automatic classifiers, known as a <code class="docutils literal notranslate"><span class="pre">reasoner</span></code>, can inspect semantic artefacts to detect inconsistencies and suggest parent classes.
-This is a step known as <code class="docutils literal notranslate"><span class="pre">inference</span></code>, where new knowledge is produced by the software agent rather than direct assertion by humans.
-This provides a significant support, even if far from supporting all the subtleties of actual knowledge.</p>
-<p>There are <code class="docutils literal notranslate"><span class="pre">six</span> <span class="pre">important</span> <span class="pre">features</span></code> to consider when selecting a semantic artefact for making FAIR datasets:</p>
+</div>
+<div class="section" id="how-to-realize-a-gupri">
+<h2><span class="section-number">2.4. </span>How to realize a GUPRI?<a class="headerlink" href="#how-to-realize-a-gupri" title="Permalink to this headline">¶</a></h2>
+<p>A Globally Unique, Persistent, Resolvable Identifier (GUPRI) can be realized by implementing all the above.
+Some consider a GUPRI to be equivalent with PID (persistent identifier) or PURL (persistent URL).
+If intended for public use, your GUPRI must be accessible from the public internet; if intended for closed use,
+you would probably use specialized DNS rules and domain names to exclude the public from resolving your identifier.</p>
+</div>
+<div class="section" id="public-services-for-realizing-a-gupri">
+<h2><span class="section-number">2.5. </span>Public services for realizing a GUPRI<a class="headerlink" href="#public-services-for-realizing-a-gupri" title="Permalink to this headline">¶</a></h2>
+<p>Most likely, you don’t want to set up a specialized HTTP web server at home. This would in principle be an option,
+but introduces enormous debt on your side: you have to guarantee it is running all the time,
+and secure it against malicious intents (finally, you have to pay the bill for electricity and internet access as well).
+You have to rent a domain name. You have to be quite an expert to set the system up and keep it running.</p>
+<p>So, what are your options? A public service for realizing GUPRIs sounds like it would be a good idea!</p>
+<p>In the following recipe you will learn about <a class="reference external" href="http://w3id.org">w3id.org</a>, <a class="reference external" href="http://purl.org">purl.org</a>, and the DOI / handle system,
+all of which are (or can be accessed as) free-of-cost services.</p>
+<div class="section" id="purl-org">
+<h3><span class="section-number">2.5.1. </span><a class="reference external" href="http://Purl.org">Purl.org</a><a class="headerlink" href="#purl-org" title="Permalink to this headline">¶</a></h3>
+<p>Although being the oldest and supposedly easiest-to-use service, <a class="reference external" href="http://purl.org">purl.org</a> is known by some veterans for having been
+offline for a long time.
+This was especially bad as a “persistent” identifier should be resolvable at all times.
+This service is run by the non-profit <a class="reference external" href="https://archive.org">Internet Archive</a>.</p>
+<p>To access the graphical user interface / web frontend, you need to register with <a class="reference external" href="http://archive.org">archive.org</a>.
+The frontend is easy to work with, although it is known for sometimes throwing errors or reacting in unexpected ways.</p>
+<p>Using <a class="reference external" href="http://purl.org">purl.org</a>, you can add custom redirects, with <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status codes</a>
+301, 302, 303, 307, or errors encoded as HTTP status codes 404 and 410. It also allows “partial redirects”,
+i.e. it would attach all the string behind a known part to redirect you</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>example
+deposited URL for the partial redirect is <code class="docutils literal notranslate"><span class="pre">http://example.com/one</span></code> and intended to be routed
+from <code class="docutils literal notranslate"><span class="pre">http://purl.org/example</span></code> .
+When you call <code class="docutils literal notranslate"><span class="pre">http://purl.org/example/two</span></code>, it will route you to <code class="docutils literal notranslate"><span class="pre">http://example.com/one/two</span></code>.
+If there was no partial redirect in place, you would receive an error when calling <code class="docutils literal notranslate"><span class="pre">http://purl.org/example/two</span></code>
+because this URL would not be known to the <a class="reference external" href="http://purl.org">purl.org</a> server).</p>
+</div>
+<p>A typical implementation route goes like this:</p>
 <ol class="simple">
-<li><p><strong>What license and terms of use does it mandate?</strong></p></li>
-<li><p><strong>What format does it come in?</strong></p></li>
-<li><p><strong>Is it well maintained, i.e. frequent release, term requests handling, versioning and deprecation policies clarified?</strong></p></li>
-<li><p><strong>Are there stable persistent resolvable identifiers for all terms?</strong></p></li>
-<li><p><strong>Who use it and what resources are being annotated with it?</strong></p></li>
-<li><p><strong>Is it well documented?  There should be enough metadata for each class in the artefact and enough metadata about the artefact itself.</strong></p></li>
+<li><p>Register on <code class="docutils literal notranslate"><span class="pre">archive.org</span></code></p></li>
+<li><p>Log-in to <code class="docutils literal notranslate"><span class="pre">purl.org</span></code></p></li>
+<li><p>Create your domain, e.g. <code class="docutils literal notranslate"><span class="pre">purl.org/faircookbook</span></code></p></li>
+<li><p>Create your individual redirect, e.g. <code class="docutils literal notranslate"><span class="pre">purl.org/faircookbook/recipe1</span></code> with status 302 redirecting to <code class="docutils literal notranslate"><span class="pre">http://example.org/faircookbook/recipe/1</span></code></p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Take home:
+Quick and easy solution; but not the most reliable. You have to register one purl “domain” to one user;
+if multiple users want to manage a common GUPRI space, they have to share the same credentials.</p>
 </div>
-<div class="section" id="why-are-they-useful">
-<h2><span class="section-number">3.4. </span>Why are they useful?<a class="headerlink" href="#why-are-they-useful" title="Permalink to this headline">¶</a></h2>
-<p>As outlined in the introduction, the most immediate use for a controlled terminology is to ensure consistency in data entry. Controlled terminologies are important tools to improve data indexing and query recall.
-The usefulness of ontologies and controlled vocabularies goes beyond this initial use.
-The main purpose of biomedical ontologies is to structure knowledge so that it can be operated on by software agents.</p>
-<p>One needs to also understand that the two processes coexist and operate in parallel.
-As more experiments are performed, new discoveries are made.
-This new knowledge needs to be represented in the domain ontology so the new notions can be used to annotate the results of earlier experiments in the context of retrospective analysis.</p>
-<p>For example, he <a class="reference external" href="http://www.obofoundry.org/ontology/go.html">Gene Ontology (GO)</a> is a widely used resource to describe <code class="docutils literal notranslate"><span class="pre">Molecular</span> <span class="pre">Processes</span></code>, <code class="docutils literal notranslate"><span class="pre">Biological</span> <span class="pre">Functions</span></code> and <code class="docutils literal notranslate"><span class="pre">Molecular</span> <span class="pre">Components</span></code>.
-The <a class="reference external" href="http://geneontology.org/docs/go-consortium/">Gene Ontology Consortium</a> maintains the controlled vocabulary and also releases of Genome Wide <a class="reference external" href="http://geneontology.org/docs/go-annotations/">Gene Ontology Annotations</a>.
-These are resources which associate genes and genomic features found in those genomes with GO terms. These are very important resources especially in the context of genome wide analysis such as transcriptomics profiling analysis.</p>
-<p>A particular type of analysis, <a class="reference external" href="http://geneontology.org/docs/go-enrichment-analysis/"><code class="docutils literal notranslate"><span class="pre">enrichment</span> <span class="pre">analysis</span></code></a>, relies on the availability of such annotations to detect departures from the expected probability distribution in an expression profile and which biological processes are most affected in specific conditions.</p>
-<p>The applications are plentiful. The importance of ontologies for structuring information will only grow with the need to obtain Machine Learning ready datasets and speed up the readiness of datasets. This is what FAIR is all about.</p>
-<p>So ontologies are of particularly help for the following tasks:</p>
-<ul class="simple">
-<li><p><strong>Improve query recall:</strong> Given a ‘search string’, having a resource which holds synonyms can be used by a search index to retrieve data annotated with a synonym.</p></li>
-<li><p><strong>Enable query expansion:</strong> Owing to the hierarchical (parent/child) structure of ontologies, a search index exploiting this information can retrieve all datasets annotated with a child term of items matching the input search string. For example, searching with the string “breast cancer” againts an ontology aware search index could return records annotated with <code class="docutils literal notranslate"><span class="pre">Paget's</span> <span class="pre">Disease</span></code> or <code class="docutils literal notranslate"><span class="pre">ductal</span> <span class="pre">carcinoma</span> <span class="pre">in-situ</span> <span class="pre">(DCIS)</span></code>, both of which are types of mammary gland malignancies.</p></li>
-<li><p><strong>Build knowledge graphs:</strong> Ontology languages can be used to represent domain knowledge and build reference terminologies but the same technologies constitute powerful tools for modelling instance datasets as nodes in a graph and linking resources together.</p></li>
-</ul>
 </div>
-<div class="section" id="are-all-ontologies-compatible-with-each-other">
-<h2><span class="section-number">3.5. </span>Are all ontologies compatible with each other?<a class="headerlink" href="#are-all-ontologies-compatible-with-each-other" title="Permalink to this headline">¶</a></h2>
-<p>There is not a simple answer to that question as it depends heavily on the type of tasks data scientists have in mind.
-If the purpose is simply to improve query recall on a limited set of fields, a curation policy could be devised to mix and match resources to meet the needs at hands, possibly by building an application ontology, i.e. an ontology specifically for designed for the use case with terms drawn from existing ontologies.</p>
-<p>However, in a more integrated framework, it is important to be aware of some of the development choices made by the maintainers of the semantic artefacts.</p>
-<ul class="simple">
-<li><p><strong>In the context of basic research and model organism based research</strong>, the <strong><code class="docutils literal notranslate"><span class="pre">OBO</span> <span class="pre">foundry</span></code></strong> is an organization which coordinates the development of interoperable resources. GO, mentioned earlier is one of them. The establishment of domain specific reference ontologies sharing the same underlying rules means that some level of compositional development can be done. This means that axioms can be built connecting classes from compatible resources.
-This point becomes particularly important when considering the role of the <code class="docutils literal notranslate"><span class="pre">reasoner</span></code> when assessing and checking the consistency of artefacts themselves but also when analysing instance datasets themselves.</p></li>
-<li><p><strong>In the context of observation studies</strong>, the Observational Medical Outcomes Partnership (<a class="reference external" href="https://ohdsi.org/omop/">OMOP</a>) model also relies on controled terminologies such as <a class="reference external" href="https://www.snomed.org/snomed-ct/">SNOMED-CT</a>, <a class="reference external" href="https://www.nlm.nih.gov/research/umls/rxnorm/index.html">RxNORM</a> for drugs and <a class="reference external" href="https://loinc.org/">LOINC</a> for clinical and laboratory test descriptions.</p></li>
-<li><p><strong>In the context of Clinical Data collections</strong>, the Clinical Data Interchange Standards Consortium (<a class="reference external" href="https://www.cdisc.org/">CDISC</a>) models work tightly with <a class="reference external" href="https://www.cdisc.org/standards/terminology/controlled-terminology">CDISC Terminology</a>, National Cancer Institute’s Enterprise Vocabulary Services (<a class="reference external" href="https://evs.nci.nih.gov/">EVS</a>) and also recommend use of <a class="reference external" href="https://www.snomed.org/snomed-ct/">SNOMED-CT</a> and terminologies such as <a class="reference external" href="https://loinc.org/">LOINC</a>, both of which come with specific licensing terms users need to be familiar with.</p></li>
-</ul>
-<div class="section" id="use-cases-and-iterative-approach">
-<h3><span class="section-number">3.5.1. </span>Use cases and iterative approach<a class="headerlink" href="#use-cases-and-iterative-approach" title="Permalink to this headline">¶</a></h3>
-<p>The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying a database. Implementing the use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.</p>
+<div class="section" id="w3id-org">
+<h3><span class="section-number">2.5.2. </span><a class="reference external" href="http://w3id.org">w3id.org</a><a class="headerlink" href="#w3id-org" title="Permalink to this headline">¶</a></h3>
+<p>The service <code class="docutils literal notranslate"><span class="pre">w3id.org</span></code> emerged when <code class="docutils literal notranslate"><span class="pre">purl.org</span></code> was down <a class="footnote-reference brackets" href="#w3id" id="id1">1</a>.
+It is run by multiple stakeholders (see self-description on <a class="reference external" href="http://w3id.org">w3id.org</a>) bound by a “social contract”.</p>
+<p>Management is more difficult than <a class="reference external" href="http://purl.org">purl.org</a>, because <a class="reference external" href="http://w3id.org">w3id.org</a> does not have a graphical user interface / frontend,
+but relies on “raw” <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> files deposited on <a class="reference external" href="http://GitHub.com">GitHub.com</a>.</p>
+<p>You need to have some knowledge about Apache .htaccess redirect rules though.</p>
+<blockquote>
+<div><p>To learn more about Apache .htaccess redirect rules, refer to this <a class="reference external" href="https://httpd.apache.org/docs/current/en/rewrite/flags.html">documentation</a></p>
+</div></blockquote>
+<p>A clear advantage is that it gives you more freedom in the implementation.</p>
+<p>After making a proposal to change the redirection rules via a GitHub Pull Request, maintainers of the <a class="reference external" href="http://w3id.org">w3id.org</a> team
+have to (manually!) accept your changes.
+This is (normally) happening very fast, though (turnaround time &lt; 1 day).
+If you make changes very often though, you will annoy the maintainers, and you should think about using another service.</p>
+<p>A typical implementation route goes like this:</p>
+<ol class="simple">
+<li><p>Register to <a class="reference external" href="http://github.com">github.com</a></p></li>
+<li><p>Fork the GitHub repository at <a class="reference external" href="https://github.com/perma-id/w3id.org">https://github.com/perma-id/w3id.org</a></p></li>
+<li><p>Copy e.g. the folder “faircookbook” to your desired path (if you name the folder “faircookbook”, you can resolve everything that goes like <a class="reference external" href="http://w3id.org/">http://w3id.org/</a> faircookbook /*)</p></li>
+<li><p>Change the README and .htaccess</p></li>
+<li><p>Create a Pull Request</p></li>
+<li><p>Wait for acceptance of the Pull Request, and/or answer questions from the maintainers</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Take home:
+Possibly quick and easy solution.
+If no maintainer reacts on your pull request, you can’t act yourself (but our experience is maintainers always act diligently).
+Bound by social contract, but no formal / legal one.
+You decide yourself how you share the maintenance load within your namespace, and can only hope that the maintainers
+of the <a class="reference external" href="http://w3id.org">w3id.org</a> repo act in accordance with your wishes (e.g. don’t allow “outsiders” to change identifiers in your namespace).</p>
 </div>
-<div class="section" id="selection-criteria">
-<h3><span class="section-number">3.5.2. </span>Selection criteria<a class="headerlink" href="#selection-criteria" title="Permalink to this headline">¶</a></h3>
-<p>A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and FAIRSharing (<a class="reference external" href="http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long">http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long</a>) has been used as starting point to define possible criteria for excluding and/or including a terminology resource.</p>
-<ul class="simple">
-<li><p><strong>Exclusion criteria</strong>:</p>
-<ul>
-<li><p>🔸 Absent licence or terms of use (<em>indicator of usability</em>)</p></li>
-<li><p>🔸 Restrictive licences or terms of use with restrictions on redistribution and reuse</p></li>
-<li><p>🔸 Absence of term definitions</p></li>
-<li><p>🔸 Absence of sufficient class metadata (<em>indicator of quality</em>)</p></li>
-<li><p>🔸 Absence of sustainability indicators (<em>absence of funding records</em>)</p></li>
-</ul>
-</li>
-<li><p><strong>Inclusion criteria</strong>:</p>
-<ul>
-<li><p>🔰  Scope and coverage meets the requirements of the concept identified</p></li>
-<li><p>🔰  Unique URI, textual definition and IDs for each term</p></li>
-<li><p>🔰  Resource releases are versioned</p></li>
-<li><p>🔰  Size of resource (<em>indicator of coverage</em>)</p></li>
-<li><p>🔰  Number of classes and subclasses (<em>indicator of depth</em>)</p></li>
-<li><p>🔰  Number of terms having definitions and synonyms (<em>indicator of richness</em>)</p></li>
-<li><p>🔰  Presence of a help desk and contact point (<em>indicator of community support</em>)</p></li>
-<li><p>🔰  Presence of term submission tracker/issue tracker (<em>indicator of resource agility and capability to grow upon request</em>)</p></li>
-<li><p>🔰  Potential integrative nature of the resource (<em>as indicator of translational application potential</em>)</p></li>
-<li><p>🔰  Licensing information available (<em>as indicator of freedom to use</em>)</p></li>
-<li><p>🔰  Use of a top level ontology (<em>as indicator of a resource built for generic use</em>)</p></li>
-<li><p>🔰  Pragmatism (<em>as indicator of actual, current real life practice)</em></p></li>
-<li><p>🔰  Possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)</p></li>
-</ul>
-</li>
-</ul>
-<p>These criteria are simply indicative and need to be modulated depending on the <code class="docutils literal notranslate"><span class="pre">contexts</span></code> described in the introduction, as specific constraints (e.g. regulatory requirements) may take precedence over some of the criteria listed here.</p>
+</div>
+<div class="section" id="free-services-which-provide-access-to-the-handle-system">
+<h3><span class="section-number">2.5.3. </span>Free services which provide access to the Handle system<a class="headerlink" href="#free-services-which-provide-access-to-the-handle-system" title="Permalink to this headline">¶</a></h3>
+<p>The Handle System (also known as <code class="docutils literal notranslate"><span class="pre">Handle.Net</span></code> or <code class="docutils literal notranslate"><span class="pre">HDL.NET</span></code>) is a globally distributed system to resolve “handles” (which are local identifiers per se).
+The Handle System forms also the basis of DOIs (Digital Object Identifiers).
+DOIs add a layer of policies and specifications on top of The Handle System.
+Unfortunately, it is quite expensive (approx. 5000 €/<span class="math notranslate nohighlight">\( per year) to join the DOI system 
+(which would go via a Registration Agency, see here: https://www.doi.org/registration_agencies.html
+-- well known Registration Agencies are DataCite and Crossref), 
+whereas The Handle System is quite inexpensive (approx. 50 €/\)</span> per year).</p>
+<p>There is also a way to get handles for free, which is described here:</p>
+<p>You can reach out to <code class="docutils literal notranslate"><span class="pre">http://grnet.gr</span></code> – e.g. through the subpage <code class="docutils literal notranslate"><span class="pre">https://epic.grnet.gr/</span></code> where there is a Contact form.</p>
+<p>An alternative is <a class="reference external" href="http://www.pidconsortium.net/">http://www.pidconsortium.net/</a> (of which grnet is a member).</p>
+<p>The author of this recipe managed to get access to both services for free.</p>
+<p>A typical implementation goes like this:</p>
+<ol class="simple">
+<li><p>Request an account for <a class="reference external" href="http://hdl.grnet.gr">hdl.grnet.gr</a></p></li>
+<li><p>Make yourself familiar with the API (no easy-to-use graphical user interface available as of now) – see <a class="reference external" href="http://www.handle.net/tech_manual/HN_Tech_Manual_9.pdf">http://www.handle.net/tech_manual/HN_Tech_Manual_9.pdf</a></p></li>
+<li><p>Make the API call to register a handle</p></li>
+</ol>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="conclusions">
-<h2><span class="section-number">3.6. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
-<p>Choosing an ontology and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow and regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of <code class="docutils literal notranslate"><span class="pre">interoperability</span></code>.
-Clearly, declaring the semantic resources used to annotate a dataset also influences the <code class="docutils literal notranslate"><span class="pre">findability</span></code> and <code class="docutils literal notranslate"><span class="pre">reusability</span></code> and it is good practice to do so as it allows potential users to gauge the amount of mapping work that may be required to combine two datasets.</p>
+<div class="section" id="conclusion">
+<h2><span class="section-number">2.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This recipe provided several options for generated globally unique persistent resolvable identifiers.
+Furthermore, our audience can see how we used the w3id service to generate the identifiers for the recipes and how effective this is.
+One has to bear in mind that the service works well for projects like this one where the expected number of objects remains small.
+However, if scale-up is required and millions of GUPRIs are needed, a different service may be needed.</p>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">3.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="selecting-ontologies.html#fcb-selecting-ontologies"><span class="std std-ref">Selecting terminologies and ontologies</span></a></p></li>
-<li><p><a class="reference internal" href="ontology-new-term-request-recipe.html#fcb-interop-ontorequest"><span class="std std-ref">Requesting new terms</span></a></p></li>
-<li><p><a class="reference internal" href="ontology-robot-recipe.html#fcb-interop-ontorobot"><span class="std std-ref">Building an application ontology with ROBOT</span></a></p></li>
-<li><p><a class="reference internal" href="ontology-operations-tools.html#fcb-interop-onto-op"><span class="std std-ref">Ontology-related tools and services</span></a></p></li>
-</ul>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-4 docutils">
-<div class="card w-100 border-2 docutils">
-<div class="card-header bg-primary pa_dark docutils">
-<a class="reference internal image-reference" href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo"><img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg" /></a>
+<h3><span class="section-number">2.6.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><a class="reference internal" href="../findability/identifiers.html#fcb-find-identifiers"><span class="std std-ref">Unique, persistent identifiers</span></a></p>
+<p><a class="reference internal" href="../findability/identifiers-minids.html#fcb-find-id-minid"><span class="std std-ref">Minting identifiers with Minid</span></a></p>
+<p><a class="reference external" href="http://web.mit.edu/handle/www/purl-eval.html">http://web.mit.edu/handle/www/purl-eval.html</a></p>
+</div></blockquote>
 </div>
-<div class="card-body grey docutils">
-<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/metadata_management.html">More about <code class="docutils literal notranslate"><span class="pre">Metadata</span> <span class="pre">Management</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDMkit</span></code></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- > * TODO: {ref}`fcb-find-biosolr` -->
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">3.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1131,26 +1161,16 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<ol class="simple">
-<li><p class="card-text">RDF. <a class="reference external" href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/">https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/</a></p></li>
-<li><p class="card-text">SKOS. <a class="reference external" href="https://www.w3.org/2004/02/skos/">https://www.w3.org/2004/02/skos/</a></p></li>
-<li><p class="card-text">OWL. <a class="reference external" href="https://www.w3.org/OWL/">https://www.w3.org/OWL/</a></p></li>
-<li><p class="card-text">Hermit. <a class="reference external" href="http://www.hermit-reasoner.com/">http://www.hermit-reasoner.com/</a></p></li>
-<li><p class="card-text">Elk. <a class="reference external" href="http://www.cs.ox.ac.uk/isg/tools/ELK/">http://www.cs.ox.ac.uk/isg/tools/ELK/</a></p></li>
-<li><p class="card-text">OBO Foundry. <a class="reference external" href="http://obofoundry.org/">http://obofoundry.org/</a></p></li>
-<li><p class="card-text">CDISC. <a class="reference external" href="https://www.cdisc.org/standards">https://www.cdisc.org/standards</a></p></li>
-<li><p class="card-text">CDISC Controlled Terminology. <a class="reference external" href="https://www.cdisc.org/standards/terminology">https://www.cdisc.org/standards/terminology</a></p></li>
-<li><p class="card-text">LOINC. <a class="reference external" href="https://loinc.org/">https://loinc.org/</a></p></li>
-<li><p class="card-text">Gene Ontology. <a class="reference external" href="http://geneontology.org/">http://geneontology.org/</a></p></li>
-<li><p class="card-text">Protégé. <a class="reference external" href="https://protege.stanford.edu/">https://protege.stanford.edu/</a></p></li>
-<li><p class="card-text">Topbraid composer. <a class="reference external" href="https://www.topquadrant.com/products/topbraid-composer/">https://www.topquadrant.com/products/topbraid-composer/</a></p></li>
-<li><p class="card-text">INCAtools. <a class="reference external" href="https://github.com/INCATools">https://github.com/INCATools</a></p></li>
-<li><p class="card-text">ROBOT. <a class="reference external" href="https://doi.org/10.1186/s12859-019-3002-3">R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.</a></p></li>
-</ol>
+<p class="card-text" id="bibtex-footbibliography-content/recipes/infrastructure/gupri-0"><dl class="footnote brackets">
+<dt class="label" id="w3id"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p class="card-text">Website source code for w3id.org. 2015. URL: <a class="reference external" href="https://github.com/perma-id/w3id.org">https://github.com/perma-id/w3id.org</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">3.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1169,26 +1189,34 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/robertgiessmann"></img><div class="d-block">Robert Giessmann</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-0254-1500"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Bayer AG</p></td>
+<td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/tabbassidaloii"></img><div class="d-block">Tooba Abbassi-Daloii</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-4904-3269"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Maastricht University</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-NL.svg" ></img></p></td>
+<td><p class="card-text">Reviewing &amp; Editing</p></td>
+</tr>
 <tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
 <td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
 <td><p class="card-text">University of Oxford</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
 <td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p class="card-text">Writing - Original Draft</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/AlasdairGray"></img><div class="d-block">Alasdair J G Gray</div></a></div></p></td>
-<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-5711-4872"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
-<td><p class="card-text">Heriot Watt University</p></td>
-<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
-<td><p class="card-text">Writing - Review &amp; Editing</p></td>
+<td><p class="card-text">Reviewing &amp; Editing</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </details></div>
+<hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">3.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1202,7 +1230,8 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
     <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
     <br/>
 </div>
-</details></div>
+</details><hr class="footnotes docutils" />
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1218,7 +1247,7 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/recipes/interoperability"
+            path: "./content/recipes/infrastructure"
         },
         predefinedOutput: true
     }
@@ -1235,67 +1264,79 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#main-objectives">
-   3.1. Main objectives
+  <a class="reference internal nav-link" href="#requirements">
+   2.1. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#controlled-terminology-or-ontology-what-s-the-difference">
-   3.2. Controlled terminology or ontology: what’s the difference?
+  <a class="reference internal nav-link" href="#abstract">
+   2.2. Abstract
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-are-they-built-and-maintained-and-why-does-it-matter">
-   3.3. How are they built and maintained and why does it matter?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-are-they-useful">
-   3.4. Why are they useful?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#are-all-ontologies-compatible-with-each-other">
-   3.5. Are all ontologies compatible with each other?
+  <a class="reference internal nav-link" href="#background-information">
+   2.3. Background information
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-cases-and-iterative-approach">
-     3.5.1. Use cases and iterative approach
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#selection-criteria">
-     3.5.2. Selection criteria
+    <a class="reference internal nav-link" href="#how-can-you-do-that">
+     2.3.1. How can you do that?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusions">
-   3.6. Conclusions
+  <a class="reference internal nav-link" href="#how-to-realize-a-gupri">
+   2.4. How to realize a GUPRI?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#public-services-for-realizing-a-gupri">
+   2.5. Public services for realizing a GUPRI
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purl-org">
+     2.5.1. Purl.org
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#w3id-org">
+     2.5.2. w3id.org
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#free-services-which-provide-access-to-the-handle-system">
+     2.5.3. Free services which provide access to the Handle system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   2.6. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     3.6.1. What to read next?
+     2.6.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   3.7. References
+   2.7. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   3.8. Authors
+   2.8. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   3.9. License
+   2.9. License
   </a>
  </li>
 </ul>
@@ -1310,8 +1351,8 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="bridgedb/bridgedb-example.html" title="previous page"><span class="section-number">2.11.1. </span>Using BridgeDb web services</a>
-<a class='right-next' id="next-link" href="selecting-ontologies.html" title="next page"><span class="section-number">4. </span>Selecting terminologies and ontologies</a>
+<a class='left-prev' id="prev-link" href="id-resolution.html" title="previous page"><span class="section-number">1. </span>Identifier resolution services</a>
+<a class='right-next' id="next-link" href="data-catalog.html" title="next page"><span class="section-number">3. </span>Building a catalogue of datasets</a>
 
                                     </div>
                                 </v-row>

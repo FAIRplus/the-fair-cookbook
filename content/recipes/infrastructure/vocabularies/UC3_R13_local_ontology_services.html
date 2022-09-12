@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.3. Deploying the EBI OLS</title>
+    <title>5.3. Deploying the EBI OLS</title>
 
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -65,8 +65,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="5. Using OpenRefine and Karma for FAIRification" href="../openrefine-nvt.html" />
-    <link rel="prev" title="4.2. Selecting an ontology lookup service" href="Selecting_and_using_ontology_lookup_services.html" />
+    <link rel="next" title="6. Using OpenRefine and Karma for FAIRification" href="../openrefine-nvt.html" />
+    <link rel="prev" title="5.2. Selecting an ontology lookup service" href="Selecting_and_using_ontology_lookup_services.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -579,33 +579,38 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../data-catalog.html">
-     2. Building a catalogue of datasets
+     3. Building a catalogue of datasets
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../data-catalog-deployment.html">
-     3. Deploying the IMI data catalogue
+     4. Deploying the IMI data catalogue
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="../vocabularies.html">
-     4. Vocabulary management
+     5. Vocabulary management
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       4.1. Portals and look-up services
+       5.1. Portals and look-up services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="Selecting_and_using_ontology_lookup_services.html">
-       4.2. Selecting a look-up service
+       5.2. Selecting a look-up service
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       4.3. Deploying the EBI OLS
+       5.3. Deploying the EBI OLS
       </a>
      </li>
     </ul>
@@ -614,7 +619,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../openrefine-nvt.html">
-     5. Using OpenRefine and Karma for FAIRification
+     6. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
   </ul>
@@ -894,7 +899,7 @@
                                     <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                         
   <div class="section" id="deploying-the-ebi-ols">
-<span id="fcb-infra-localols"></span><h1><span class="section-number">4.3. </span>Deploying the EBI OLS<a class="headerlink" href="#deploying-the-ebi-ols" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-infra-localols"></span><h1><span class="section-number">5.3. </span>Deploying the EBI OLS<a class="headerlink" href="#deploying-the-ebi-ols" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -968,12 +973,12 @@ Yes
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">4.3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service (OLS) <a class="footnote-reference brackets" href="#pmid20460452" id="id1">3</a>, <a class="footnote-reference brackets" href="#ols-jupp" id="id2">1</a> on local machines.
 This demonstrates the workflow for deploying open source ontology service software in-house <a class="footnote-reference brackets" href="#ols-install-guide" id="id3">2</a>.</p>
 </div>
 <div class="section" id="introduction">
-<h2><span class="section-number">4.3.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>With an increasing need for ontology infrastructure to improve the interoperability of information-based R&amp;D activities,
 many pharmaceutical companies seek ontology management solutions and ontology services.
 Compared with developing local ontology services from scratch, reusing and redeveloping open-source ontology services
@@ -994,7 +999,7 @@ services possible.</p>
 terminology management and data annotation activities together to improve the interoperability.</p>
 </div>
 <div class="section" id="requirements">
-<h2><span class="section-number">4.3.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>This recipe is intended for bioinformaticians or developers who want to explore public ontologies and ontology services.
 The users are expected to be familiar with Unix-based OS and basic Bash programming syntax and commands.
 The users should also be comfortable with YAML or other data-serialization languages.
@@ -1009,7 +1014,7 @@ specific policies regarding tool deployment the use of containerized application
 </div>
 </div>
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">4.3.4. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.4. </span>Graphical overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1025,24 +1030,24 @@ specific policies regarding tool deployment the use of containerized application
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ols-deploy">
-<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 4.30 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
+<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <div class="section" id="ingredients">
-<h2><span class="section-number">4.3.5. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.5. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/EBISPOT/OLS-docker">OLS Docker image</a></p></li>
 <li><p><a class="reference external" href="https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config">Ontology metadata in OBO foundry</a></p></li>
 </ul>
 </div>
 <div class="section" id="step-by-step-guide">
-<h2><span class="section-number">4.3.6. </span>Step-by-step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.6. </span>Step-by-step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="install-dependencies">
-<h3><span class="section-number">4.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="edb27aaa-9e9d-44d7-8b9c-f098911aaba3" name="7a9f5d4e-3150-4b6a-8c9e-740cbb72c681" type="radio">
-</input><label class="tabbed-label" for="edb27aaa-9e9d-44d7-8b9c-f098911aaba3">
+<input checked="checked" id="faf01638-7310-49a7-9d5e-52cc6d42348b" name="f7915a17-0a29-4c98-a6a6-3f11b4381d6c" type="radio">
+</input><label class="tabbed-label" for="faf01638-7310-49a7-9d5e-52cc6d42348b">
 Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1066,8 +1071,8 @@ Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils
 </tbody>
 </table>
 </div>
-<input id="2d6c50fd-8baa-41fc-a42b-e44a2099525e" name="7a9f5d4e-3150-4b6a-8c9e-740cbb72c681" type="radio">
-</input><label class="tabbed-label" for="2d6c50fd-8baa-41fc-a42b-e44a2099525e">
+<input id="fa3dee2d-7665-4d22-a39e-437c0a9f4417" name="f7915a17-0a29-4c98-a6a6-3f11b4381d6c" type="radio">
+</input><label class="tabbed-label" for="fa3dee2d-7665-4d22-a39e-437c0a9f4417">
 Windows-based environment (Windows 10 64bits)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1104,7 +1109,7 @@ Windows-based environment (Windows 10 64bits)</label><div class="tabbed-content 
 </div>
 </div>
 <div class="section" id="load-ontologies-into-ols">
-<h3><span class="section-number">4.3.6.2. </span>2. Load ontologies into OLS<a class="headerlink" href="#load-ontologies-into-ols" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.6.2. </span>2. Load ontologies into OLS<a class="headerlink" href="#load-ontologies-into-ols" title="Permalink to this headline">¶</a></h3>
 <p>Ontologies in both <a class="reference external" href="https://fairsharing.org/10.25504/FAIRsharing.aa0eat">OBO</a> and
 <a class="reference external" href="https://fairsharing.org/10.25504/FAIRsharing.atygwy">OWL</a> formats can be loaded to OLS by adding ontology
 metadata to the configuration file, <strong>ols-config.yaml</strong>.</p>
@@ -1154,7 +1159,7 @@ oboSlims: <span class="nb">false</span> // contains OBO style slim annotations
 <a class="reference external" href="https://www.ebi.ac.uk/ols/index">EBI OLS</a> or the <a class="reference external" href="https://obofoundry.org/">OBO Foundry</a> <a class="footnote-reference brackets" href="#pmid17989687obofoundry2007" id="id4">5</a>,
 <a class="footnote-reference brackets" href="#pmid34697637obofoundry2021" id="id5">4</a> .</p>
 <div class="section" id="get-ontology-metadata-from-the-ebi-ols">
-<h4><span class="section-number">4.3.6.2.1. </span>2.1 Get ontology metadata from the EBI OLS<a class="headerlink" href="#get-ontology-metadata-from-the-ebi-ols" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.6.2.1. </span>2.1 Get ontology metadata from the EBI OLS<a class="headerlink" href="#get-ontology-metadata-from-the-ebi-ols" title="Permalink to this headline">¶</a></h4>
 <p>For ontologies included in the EBI OLS, the metadata can be downloaded directly using the EBI OLS endpoint,
 <strong><a class="reference external" href="https://www.ebi.ac.uk/ols/api/ols-config?ids=">https://www.ebi.ac.uk/ols/api/ols-config?ids=</a><ontologies-short-names-list></strong>, by providing the ontology short names.</p>
 <p>Metadata of multiple ontologies can be downloaded at the same time.</p>
@@ -1187,7 +1192,7 @@ and saves it as <strong>ols-config.yaml</strong>:</p>
 </div>
 </div>
 <div class="section" id="set-up-ols-in-the-local-environment">
-<h3><span class="section-number">4.3.6.3. </span>3. Set up OLS in the local environment<a class="headerlink" href="#set-up-ols-in-the-local-environment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.6.3. </span>3. Set up OLS in the local environment<a class="headerlink" href="#set-up-ols-in-the-local-environment" title="Permalink to this headline">¶</a></h3>
 <p><strong>First be sure the Docker daemon is up running. On Windows and MacOS set-ups, this requires starting the Docker Desktop app.</strong></p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">## Download OLS docker image</span>
 git clone https://github.com/EBISPOT/OLS-docker
@@ -1207,17 +1212,17 @@ sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</
 <p>The local OLS service can be accessed at <a class="reference external" href="http://localhost:8080/index">http://localhost:8080/index</a></p>
 </div>
 <div class="section" id="manage-ontologies">
-<h3><span class="section-number">4.3.6.4. </span>4. Manage ontologies<a class="headerlink" href="#manage-ontologies" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.6.4. </span>4. Manage ontologies<a class="headerlink" href="#manage-ontologies" title="Permalink to this headline">¶</a></h3>
 <p>OLS allows the addition, update, and removal of ontologies.</p>
 <p>Such ontology management is achieved through editing the configuration file, <strong>ols-config.yaml</strong>.</p>
 <p>The ontology changes can be loaded by rebuilding the image and restarting the service.</p>
 <div class="section" id="modify-ols-configuration">
-<h4><span class="section-number">4.3.6.4.1. </span>4.1 Modify OLS configuration<a class="headerlink" href="#modify-ols-configuration" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.6.4.1. </span>4.1 Modify OLS configuration<a class="headerlink" href="#modify-ols-configuration" title="Permalink to this headline">¶</a></h4>
 <p>To add or remove ontologies, modify corresponding sections in the configuration file.</p>
 <p>Loaded ontologies will be updated to the latest version automatically by rebuilding the Docker image.</p>
 </div>
 <div class="section" id="rebuild-ols-image-and-restart-ols">
-<h4><span class="section-number">4.3.6.4.2. </span>4.2 Rebuild OLS image and restart OLS<a class="headerlink" href="#rebuild-ols-image-and-restart-ols" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.6.4.2. </span>4.2 Rebuild OLS image and restart OLS<a class="headerlink" href="#rebuild-ols-image-and-restart-ols" title="Permalink to this headline">¶</a></h4>
 <p>Before rebuilding the Docker image, the existing container needs to be stopped and removed.</p>
 <p>The OLS container can be stopped and removed by providing the container name.</p>
 <p>According to the parameters presented on the previous Docker creation command block,
@@ -1250,7 +1255,7 @@ sudo docker run -d -p <span class="m">8080</span>:8080 --name<span class="o">=</
 </div>
 </div>
 <div class="section" id="troubleshooting">
-<h3><span class="section-number">4.3.6.5. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.6.5. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
 <p>Loading multiple ontologies from disk:</p>
 <p>If more than one ontology are going to be loaded into OLS from disk, the <strong>Dockerfile</strong> needs modifying before
 building the Docker container again:</p>
@@ -1269,7 +1274,7 @@ building the Docker container again:</p>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">4.3.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>The local OLS provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a
 user interface for searching and browsing ontologies and ontology terms.</p>
 <p>For example, all ontologies loaded can be queried through endpoint <strong><a class="reference external" href="http://localhost:8080/api/ontologies">http://localhost:8080/api/ontologies</a></strong>.</p>
@@ -1285,7 +1290,7 @@ user interface for searching and browsing ontologies and ontology terms.</p>
 -->
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">4.3.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1314,7 +1319,7 @@ user interface for searching and browsing ontologies and ontology terms.</p>
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">4.3.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1366,7 +1371,7 @@ user interface for searching and browsing ontologies and ontology terms.</p>
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">4.3.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1415,98 +1420,98 @@ user interface for searching and browsing ontologies and ontology terms.</p>
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   4.3.1. Main Objectives
+   5.3.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   4.3.2. Introduction
+   5.3.2. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   4.3.3. Requirements
+   5.3.3. Requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   4.3.4. Graphical overview
+   5.3.4. Graphical overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   4.3.5. Ingredients
+   5.3.5. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-by-step-guide">
-   4.3.6. Step-by-step guide
+   5.3.6. Step-by-step guide
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#install-dependencies">
-     4.3.6.1. 1. Install dependencies
+     5.3.6.1. 1. Install dependencies
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-ontologies-into-ols">
-     4.3.6.2. 2. Load ontologies into OLS
+     5.3.6.2. 2. Load ontologies into OLS
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#get-ontology-metadata-from-the-ebi-ols">
-       4.3.6.2.1. 2.1 Get ontology metadata from the EBI OLS
+       5.3.6.2.1. 2.1 Get ontology metadata from the EBI OLS
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-up-ols-in-the-local-environment">
-     4.3.6.3. 3. Set up OLS in the local environment
+     5.3.6.3. 3. Set up OLS in the local environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#manage-ontologies">
-     4.3.6.4. 4. Manage ontologies
+     5.3.6.4. 4. Manage ontologies
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#modify-ols-configuration">
-       4.3.6.4.1. 4.1 Modify OLS configuration
+       5.3.6.4.1. 4.1 Modify OLS configuration
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#rebuild-ols-image-and-restart-ols">
-       4.3.6.4.2. 4.2 Rebuild OLS image and restart OLS
+       5.3.6.4.2. 4.2 Rebuild OLS image and restart OLS
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#troubleshooting">
-     4.3.6.5. Troubleshooting
+     5.3.6.5. Troubleshooting
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   4.3.7. Conclusion
+   5.3.7. Conclusion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   4.3.8. References
+   5.3.8. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   4.3.9. Authors
+   5.3.9. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   4.3.10. License
+   5.3.10. License
   </a>
  </li>
 </ul>
@@ -1521,8 +1526,8 @@ user interface for searching and browsing ontologies and ontology terms.</p>
                                 <v-row class="mb-5">
                                     <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                         
-<a class='left-prev' id="prev-link" href="Selecting_and_using_ontology_lookup_services.html" title="previous page"><span class="section-number">4.2. </span>Selecting an ontology lookup service</a>
-<a class='right-next' id="next-link" href="../openrefine-nvt.html" title="next page"><span class="section-number">5. </span>Using OpenRefine and Karma for FAIRification</a>
+<a class='left-prev' id="prev-link" href="Selecting_and_using_ontology_lookup_services.html" title="previous page"><span class="section-number">5.2. </span>Selecting an ontology lookup service</a>
+<a class='right-next' id="next-link" href="../openrefine-nvt.html" title="next page"><span class="section-number">6. </span>Using OpenRefine and Karma for FAIRification</a>
 
                                     </div>
                                 </v-row>
