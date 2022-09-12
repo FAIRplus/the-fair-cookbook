@@ -1,0 +1,29 @@
+graph TB
+    A[Identify source ontology term ID]
+    B[Select target ontology]
+    C[Perform mapping]
+    D[Review mapping results]
+
+    B-->A
+    A-->C
+    C-->D
+
+    E((OLS))
+    F((ZOOMA))
+    G((OxO))
+
+    A-.-E
+    A-.-F
+    B-.-E
+    D-.-E
+    C-.-G
+
+    style A stroke:#757575,stroke-width:3px
+    style B stroke:#757575,stroke-width:3px
+    style C stroke:#757575,stroke-width:3px
+    style D stroke:#757575,stroke-width:3px
+
+
+    style E fill:#708c98 ,stroke-width:0px
+    style F fill:#708c98 ,stroke-width:0px
+    style G fill:#708c98 ,stroke-width:0px
