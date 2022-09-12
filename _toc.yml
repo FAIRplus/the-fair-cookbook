@@ -170,7 +170,8 @@
                 title: Deploying the EBI OLS #FCB005
           - file: content/recipes/infrastructure/openrefine-nvt
             title: Using OpenRefine and Karma for FAIRification #FCB075PRE
-
+          - file: content/recipes/infrastructure/fair-api #FCB073
+            title: Developing FAIR API for the Web
 
     - file: content/recipes/assessing-fairness
       title: Assessment
