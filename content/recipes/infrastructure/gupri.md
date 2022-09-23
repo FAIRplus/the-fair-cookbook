@@ -8,9 +8,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: data_manager, data_scientist  
-:has_executable_code: nope
 :maturity_level: 1
 :maturity_indicator: 1
+:has_executable_code: nope
 :recipe_name: Creating resolvable identifiers
 ```` 
 

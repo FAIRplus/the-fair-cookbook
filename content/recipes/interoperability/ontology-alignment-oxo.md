@@ -11,9 +11,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: ontologist, terminology_manager, data_scientist, data_curator, data_manager 
-:has_executable_code: nope
 :maturity_level: 1
 :maturity_indicator: 1
+:has_executable_code: nope
 :recipe_name: Ontology mapping with Ontology Xref Service (OxO)
 ```` 
 
