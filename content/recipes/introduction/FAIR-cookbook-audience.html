@@ -31,11 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -48,10 +49,10 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../_static/js/vue.min.js"></script>
     <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
     <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -86,28 +87,31 @@
 <v-app id="app" class="pa-0">
     <v-container fluid class="pa-0">
         <v-row class="pa-0" no-gutters>
-            <v-container fluid>
+            <v-container fluid class="pa-0">
                 <v-row>
                     <div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
     <div class="topbar-contents row" style="margin: initial !important;">
         <div class="col topbar-main d-flex align-center">
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                    data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                    aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                    title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
+            
+                <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                        data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                        aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                        title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            
 
             
                 <a href="../../../index.html">
-                    <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook">
+                    <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook"
+                         style="width: 135%; max-width: initial !important;">
                 </a>
             
 
             <v-spacer> </v-spacer>
-            <div style="margin-top: 3px" class="mr-4">
+            <div style="margin-top: 3px" class="mr-4 extraButtons">
                 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
@@ -200,15 +204,16 @@
     </div>
 </div>
                 </v-row>
-                <v-row class="d-flex">
+                
+                    <v-row class="d-flex">
                     
-                    <div
-                        class=" bd-sidebar site-navigation show"
-                        id="site-navigation"
-                        style="width:350px"
-                    >
-                        
-                            <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+                        <div
+                            class=" bd-sidebar site-navigation show"
+                            id="site-navigation"
+                            style="width:350px"
+                        >
+                            
+                                <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
 
     <div class="testTOC">
         <script>
@@ -248,7 +253,7 @@
     <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
         
         
-            <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            <nav class="bd-links pt-10" id="bd-docs-nav" aria-label="Main navigation">
     <p class="caption collapsible-parent">
  <span class="caption-text">
   FOREWORD
@@ -895,14 +900,14 @@
         Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
     </div>
 </div>
-                    </div>
-                    
-                    <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
-                        <v-container fluid id="main-content" class="pa-0">
-                            <v-row class="d-flex">
-                                
-                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                        </div>
+                        
+                            <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                                <v-container fluid id="main-content" class="pa-0">
+                                    <v-row class="d-flex">
                                         
+                                            <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                                
   <div class="section" id="introduction">
 <span id="fcb-intro-audience"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="your-guide-in-the-fairification-journey">
@@ -934,6 +939,87 @@ Last but not least, the FAIR Cookbook is a community-driven resource that is bei
 connect. You can now watch the recording of the webinar on this channel:</p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Dxkh5NjwE7U"><img alt="Discovering the FAIR Cookbook" src="../../../_images/FAIRCookbook-webinar.png" /></a></p>
 </div>
+<hr class="docutils" />
+<div class="section" id="how-to-cite-it">
+<h2>How to cite it<a class="headerlink" href="#how-to-cite-it" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>Citing us</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The FAIR Cookbook: a deliverable of the <a class="reference external" href="https://fairplus-project.eu/">FAIRplus project</a> (grant agreement 802750),
+funded by the <a class="reference external" href="https://www.imi.europa.eu">IMI programme</a>, a private-public partnership that receives support
+from the European Union’s Horizon 2020 research and innovation programme and EFPIA Companies.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1472e47d-4331-44a5-b16c-5f95d933d0de" name="43f31d2c-0765-4b5d-b734-37e95c088413" type="radio">
+</input><label class="tabbed-label" for="1472e47d-4331-44a5-b16c-5f95d933d0de">
+To cite the FAIR cookbook FAIRplus deliverable D2.1:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@misc</span><span class="p">{</span><span class="n">rocca_serra_philippe_2022_6783564</span><span class="p">,</span>
+  <span class="n">author</span>       <span class="o">=</span> <span class="p">{</span><span class="n">Rocca</span><span class="o">-</span><span class="n">Serra</span><span class="p">,</span> <span class="n">Philippe</span> <span class="ow">and</span>
+                  <span class="n">Sansone</span><span class="p">,</span> <span class="n">Susanna</span><span class="o">-</span><span class="n">Assunta</span> <span class="ow">and</span>
+                  <span class="n">Gu</span><span class="p">,</span> <span class="n">Wei</span> <span class="ow">and</span>
+                  <span class="n">Welter</span><span class="p">,</span> <span class="n">Danielle</span> <span class="ow">and</span>
+                  <span class="n">Abbassi</span> <span class="n">Daloii</span><span class="p">,</span> <span class="n">Tooba</span> <span class="ow">and</span>
+                  <span class="n">Portell</span><span class="o">-</span><span class="n">Silva</span><span class="p">,</span> <span class="n">Laura</span><span class="p">},</span>
+  <span class="n">title</span>        <span class="o">=</span> <span class="p">{</span><span class="n">D2</span><span class="o">.</span><span class="mi">1</span> <span class="n">FAIR</span> <span class="n">Cookbook</span><span class="p">},</span>
+  <span class="n">month</span>        <span class="o">=</span> <span class="n">jun</span><span class="p">,</span>
+  <span class="n">year</span>         <span class="o">=</span> <span class="mi">2022</span><span class="p">,</span>
+  <span class="n">publisher</span>    <span class="o">=</span> <span class="p">{</span><span class="n">Zenodo</span><span class="p">},</span>
+  <span class="n">doi</span>          <span class="o">=</span> <span class="p">{</span><span class="mf">10.5281</span><span class="o">/</span><span class="n">zenodo</span><span class="o">.</span><span class="mi">6783564</span><span class="p">},</span>
+  <span class="n">url</span>          <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.5281</span><span class="o">/</span><span class="n">zenodo</span><span class="o">.</span><span class="mi">6783564</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="2bc1921d-13b9-4bc9-9272-91141a49d8f0" name="43f31d2c-0765-4b5d-b734-37e95c088413" type="radio">
+</input><label class="tabbed-label" for="2bc1921d-13b9-4bc9-9272-91141a49d8f0">
+To cite the FAIR Cookbook GitHub repository:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@software</span><span class="p">{</span><span class="n">Rocca</span><span class="o">-</span><span class="n">Serra_The_FAIR_Cookbook_2022</span><span class="p">,</span>
+<span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Rocca</span><span class="o">-</span><span class="n">Serra</span><span class="p">,</span> <span class="n">Philippe</span> <span class="ow">and</span> <span class="n">J</span> <span class="n">G</span> <span class="n">Gray</span><span class="p">,</span> <span class="n">Alasdair</span> <span class="ow">and</span> <span class="n">Delfin</span> <span class="n">Rossaro</span><span class="p">,</span> <span class="n">Alejandra</span> <span class="ow">and</span> <span class="n">Splendiani</span><span class="p">,</span> <span class="n">Andrea</span> <span class="ow">and</span> <span class="n">Zaliani</span><span class="p">,</span>
+ <span class="n">Andrea</span> <span class="ow">and</span> <span class="n">Pippow</span><span class="p">,</span> <span class="n">Andreas</span> <span class="ow">and</span> <span class="n">Cambon</span><span class="o">-</span><span class="n">Thomsen</span><span class="p">,</span> <span class="n">Anne</span> <span class="ow">and</span> <span class="n">Sedani</span><span class="p">,</span> <span class="n">Ashni</span> <span class="ow">and</span> <span class="n">Goble</span><span class="p">,</span> <span class="n">Carole</span> <span class="ow">and</span> <span class="n">Evelo</span><span class="p">,</span> <span class="n">Chris</span> <span class="ow">and</span> <span class="n">Kee</span> <span class="n">Ong</span><span class="p">,</span>
+ <span class="n">Chuang</span> <span class="ow">and</span> <span class="n">Wood</span><span class="p">,</span> <span class="n">Colin</span> <span class="ow">and</span> <span class="n">Pommier</span><span class="p">,</span> <span class="n">Cyril</span> <span class="ow">and</span> <span class="n">J</span><span class="o">.</span> <span class="n">B</span><span class="o">.</span> <span class="n">Clarke</span><span class="p">,</span> <span class="n">Daniel</span> <span class="ow">and</span> <span class="n">Welter</span><span class="p">,</span> <span class="n">Danielle</span> <span class="ow">and</span> <span class="n">Henderson</span><span class="p">,</span> <span class="n">David</span> 
+ <span class="ow">and</span> <span class="n">Batista</span><span class="p">,</span> <span class="n">Dominique</span> <span class="ow">and</span> <span class="n">Reilly</span><span class="p">,</span> <span class="n">Dorothy</span> <span class="ow">and</span> <span class="n">Alharbi</span><span class="p">,</span> <span class="n">Ebtisam</span> <span class="ow">and</span> <span class="n">van</span> <span class="n">der</span> <span class="n">Horst</span><span class="p">,</span> <span class="n">Eelke</span> <span class="ow">and</span> <span class="n">Willighagen</span><span class="p">,</span> <span class="n">Egon</span> 
+ <span class="ow">and</span> <span class="n">Reynares</span><span class="p">,</span> <span class="n">Emiliano</span> <span class="ow">and</span> <span class="n">Vos</span><span class="p">,</span> <span class="n">Emma</span> <span class="ow">and</span> <span class="n">LeFloch</span><span class="p">,</span> <span class="n">Erwan</span> <span class="ow">and</span> <span class="n">Marin</span> <span class="k">del</span> <span class="n">Pico</span><span class="p">,</span> <span class="n">Eva</span> <span class="ow">and</span> <span class="n">Ronzano</span><span class="p">,</span> <span class="n">Francesco</span> <span class="ow">and</span> 
+ <span class="n">Kroh</span><span class="p">,</span> <span class="n">Franziska</span> <span class="ow">and</span> <span class="n">Xu</span><span class="p">,</span> <span class="n">Fuqi</span> <span class="ow">and</span> <span class="n">Backianathan</span><span class="p">,</span> <span class="n">Gabriel</span> <span class="ow">and</span> <span class="n">Papadotas</span><span class="p">,</span> <span class="n">George</span> <span class="ow">and</span> <span class="n">Witt</span><span class="p">,</span> <span class="n">Gesa</span> <span class="ow">and</span> 
+ <span class="n">Hurst</span><span class="p">,</span> <span class="n">Hannah</span> <span class="ow">and</span> <span class="n">Van</span> <span class="n">Vlijmen</span><span class="p">,</span> <span class="n">Herman</span> <span class="ow">and</span> <span class="n">Emam</span><span class="p">,</span> <span class="n">Ibrahim</span> <span class="ow">and</span> <span class="n">Liyanage</span><span class="p">,</span> <span class="n">Isuru</span> <span class="ow">and</span> <span class="n">Neefs</span><span class="p">,</span> <span class="n">Jean</span><span class="o">-</span><span class="n">Marc</span> <span class="ow">and</span>
+ <span class="n">Strubel</span><span class="p">,</span> <span class="n">Jolanda</span> <span class="ow">and</span> <span class="n">Quast</span><span class="p">,</span> <span class="n">Karsten</span> <span class="ow">and</span> <span class="n">van</span> <span class="n">Bochove</span><span class="p">,</span> <span class="n">Kees</span> <span class="ow">and</span> <span class="n">Dauth</span><span class="p">,</span> <span class="n">Kurt</span> <span class="ow">and</span> <span class="n">Furlong</span><span class="p">,</span> <span class="n">Laura</span> <span class="ow">and</span> <span class="n">Garcia</span><span class="p">,</span> <span class="n">Leyla</span>
+ <span class="ow">and</span> <span class="n">Giovanni</span><span class="p">,</span> <span class="n">Lucas</span> <span class="ow">and</span> <span class="n">Kohler</span><span class="p">,</span> <span class="n">Manfred</span> <span class="ow">and</span> <span class="n">Pruess</span><span class="p">,</span> <span class="n">Manuela</span> <span class="ow">and</span> <span class="n">Ibberson</span><span class="p">,</span> <span class="n">Mark</span> <span class="ow">and</span> <span class="n">Cook</span><span class="p">,</span> <span class="n">Martin</span> <span class="ow">and</span> 
+ <span class="n">Courtot</span><span class="p">,</span> <span class="n">Melanie</span> <span class="ow">and</span> <span class="n">d</span><span class="s1">&#39;Arcy, Mike and Juty, Nick and Lynch, Nick and Engkvist, Ola and Deniz Beyan, Oya</span>
+ <span class="ow">and</span> <span class="n">Peeters</span><span class="p">,</span> <span class="n">Paul</span> <span class="ow">and</span> <span class="n">Woollard</span><span class="p">,</span> <span class="n">Peter</span> <span class="ow">and</span> <span class="n">Papadopoulos</span><span class="p">,</span> <span class="n">Petros</span> <span class="ow">and</span> <span class="n">Gribbon</span><span class="p">,</span> <span class="n">Philip</span> <span class="ow">and</span> <span class="n">Sahay</span><span class="p">,</span> <span class="n">Ratnesh</span> <span class="ow">and</span>
+ <span class="n">Giessmann</span><span class="p">,</span> <span class="n">Robert</span> <span class="ow">and</span> <span class="n">Verbeeck</span><span class="p">,</span> <span class="n">Rudi</span> <span class="ow">and</span> <span class="n">Capella</span> <span class="n">Gutierrez</span><span class="p">,</span> <span class="n">Salvador</span> <span class="ow">and</span> <span class="n">Lusher</span><span class="p">,</span> <span class="n">Scott</span> <span class="ow">and</span> <span class="n">Beier</span><span class="p">,</span> <span class="n">Sebastian</span> <span class="ow">and</span>
+ <span class="n">Singh</span><span class="p">,</span> <span class="n">Sukhi</span> <span class="ow">and</span> <span class="n">Sansone</span><span class="p">,</span> <span class="n">Susanna</span><span class="o">-</span><span class="n">Assunta</span> <span class="ow">and</span> <span class="n">Plasterer</span><span class="p">,</span> <span class="n">Tom</span> <span class="ow">and</span> <span class="n">Burdett</span><span class="p">,</span> <span class="n">Tony</span> <span class="ow">and</span> <span class="n">Abbassi</span><span class="o">-</span><span class="n">Daloii</span><span class="p">,</span> <span class="n">Tooba</span> <span class="ow">and</span>
+ <span class="n">Goldmann</span><span class="p">,</span> <span class="n">Ulrich</span> <span class="ow">and</span> <span class="n">Grouès</span><span class="p">,</span> <span class="n">Valentin</span> <span class="ow">and</span> <span class="n">Ioannidis</span><span class="p">,</span> <span class="n">Vassilios</span> <span class="ow">and</span> <span class="n">P</span><span class="o">.</span> <span class="n">Satagopam</span><span class="p">,</span> <span class="n">Venkata</span> <span class="ow">and</span> <span class="n">Sedlyarov</span><span class="p">,</span> <span class="n">Vitaly</span>
+ <span class="ow">and</span> <span class="n">Gu</span><span class="p">,</span> <span class="n">Wei</span> <span class="ow">and</span> <span class="n">Gaidya</span><span class="p">,</span> <span class="n">Yojana</span> <span class="ow">and</span> <span class="n">Warnes</span><span class="p">,</span> <span class="n">Zachary</span><span class="p">},</span>
+<span class="n">license</span> <span class="o">=</span> <span class="p">{</span><span class="n">CC</span><span class="o">-</span><span class="n">BY</span><span class="o">-</span><span class="mf">4.0</span><span class="p">},</span>
+<span class="n">month</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">},</span>
+<span class="n">title</span> <span class="o">=</span> <span class="p">{{</span><span class="n">The</span> <span class="n">FAIR</span> <span class="n">Cookbook</span><span class="p">}},</span>
+<span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">FAIRplus</span><span class="o">/</span><span class="n">the</span><span class="o">-</span><span class="n">fair</span><span class="o">-</span><span class="n">cookbook</span><span class="o">/</span><span class="p">},</span>
+<span class="n">version</span> <span class="o">=</span> <span class="p">{</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">0</span><span class="p">},</span>
+<span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2022</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="87fe90c9-b445-4d42-ae59-b962f81beec1" name="43f31d2c-0765-4b5d-b734-37e95c088413" type="radio">
+</input><label class="tabbed-label" for="87fe90c9-b445-4d42-ae59-b962f81beec1">
+To cite the FAIR Cookbook manuscript:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span><span class="p">{</span>
+    <span class="n">author</span>      <span class="o">=</span> <span class="p">{},</span>
+    <span class="n">title</span>       <span class="o">=</span> <span class="p">{</span><span class="n">placeholder</span><span class="p">},</span>
+    <span class="n">month</span>       <span class="o">=</span> <span class="n">sep</span><span class="p">,</span>
+    <span class="n">year</span>        <span class="o">=</span> <span class="mi">2022</span><span class="p">,</span>
+    <span class="n">publisher</span>   <span class="o">=</span> <span class="p">{</span><span class="n">bioRxiv</span><span class="p">},</span>
+    <span class="n">doi</span>         <span class="o">=</span> <span class="p">{},</span>
+    <span class="n">url</span>         <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">xx</span><span class="o">.</span><span class="n">xxxx</span><span class="o">/</span><span class="n">biorxiv</span><span class="o">.</span><span class="n">xxxxxx</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</details></div>
 <hr class="docutils" />
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
@@ -973,9 +1059,9 @@ connect. You can now watch the recording of the webinar on this channel:</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-                                    </v-col>
-                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                        <div style="position: fixed">
+                                            </v-col>
+                                            <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                                <div style="position: fixed">
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i>
             Contents
@@ -1003,6 +1089,11 @@ connect. You can now watch the recording of the webinar on this channel:</p>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-cite-it">
+   How to cite it
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
    License
   </a>
@@ -1011,25 +1102,26 @@ connect. You can now watch the recording of the webinar on this channel:</p>
 
         </nav>
         </div>
-                                    </div>
-                                
-                            </v-row>
-
-                            
-                                <v-row class="mb-5">
-                                    <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                            </div>
                                         
+                                    </v-row>
+
+                                    
+                                        <v-row class="mb-5">
+                                            <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                                
 <a class='left-prev' id="prev-link" href="../../home.html" title="previous page">FAIR Cookbook</a>
 <a class='right-next' id="next-link" href="brief-FAIR-principles.html" title="next page">What are the FAIR Principles?</a>
 
-                                    </div>
-                                </v-row>
-                            
-                        </v-container>
-                    </main>
-                    
+                                            </div>
+                                        </v-row>
+                                    
+                                </v-container>
+                            </main>
+                        
                     
                 </v-row>
+                
             </v-container>
         </v-row>
     </v-container>
@@ -1052,10 +1144,10 @@ connect. You can now watch the recording of the webinar on this channel:</p>
 
 <v-container fluid>
     <v-row no-gutter>
-        <v-col cols="12"><footer class="footer mt-5 mt-md-0">
+        <v-col cols="12"><footer class="footer" style=" margin-top: 12px;  ">
     <div class="container-md mt-4">
-      <div class="row">
-          <div class="col-4">
+      <div class="row" style="display:flex; justify-content: center">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
             <div class="footerImages">
               <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
               <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
@@ -1063,20 +1155,20 @@ connect. You can now watch the recording of the webinar on this channel:</p>
             </div>
             <div class="mb-3"> Grant agreement 802750 </div>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
                 <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
               </ul>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
               </ul>
           </div>
-          <div class="col-2">
-            <a href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+          <div class="col-12 col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3 pb-5">
+            <a class="mr-3" href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
             <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
           </div>
       </div>

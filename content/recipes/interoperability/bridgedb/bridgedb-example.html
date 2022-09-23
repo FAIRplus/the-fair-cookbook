@@ -31,11 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -48,10 +49,10 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../../_static/js/vue.min.js"></script>
     <script src="../../../../_static/js/mermaid.js"></script>
+    <script src="../../../../_static/js/mermaid.core.js"></script>
     <script src="../../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../../_static/js/vue.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -86,28 +87,31 @@
 <v-app id="app" class="pa-0">
     <v-container fluid class="pa-0">
         <v-row class="pa-0" no-gutters>
-            <v-container fluid>
+            <v-container fluid class="pa-0">
                 <v-row>
                     <div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
     <div class="topbar-contents row" style="margin: initial !important;">
         <div class="col topbar-main d-flex align-center">
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                    data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                    aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                    title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
+            
+                <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                        data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                        aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                        title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            
 
             
                 <a href="../../../../index.html">
-                    <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook">
+                    <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook"
+                         style="width: 135%; max-width: initial !important;">
                 </a>
             
 
             <v-spacer> </v-spacer>
-            <div style="margin-top: 3px" class="mr-4">
+            <div style="margin-top: 3px" class="mr-4 extraButtons">
                 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
@@ -222,15 +226,16 @@
     </div>
 </div>
                 </v-row>
-                <v-row class="d-flex">
+                
+                    <v-row class="d-flex">
                     
-                    <div
-                        class=" bd-sidebar site-navigation show"
-                        id="site-navigation"
-                        style="width:350px"
-                    >
-                        
-                            <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+                        <div
+                            class=" bd-sidebar site-navigation show"
+                            id="site-navigation"
+                            style="width:350px"
+                        >
+                            
+                                <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
 
     <div class="testTOC">
         <script>
@@ -270,7 +275,7 @@
     <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
         
         
-            <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            <nav class="bd-links pt-10" id="bd-docs-nav" aria-label="Main navigation">
     <p class="caption collapsible-parent">
  <span class="caption-text">
   FOREWORD
@@ -917,14 +922,14 @@
         Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
     </div>
 </div>
-                    </div>
-                    
-                    <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
-                        <v-container fluid id="main-content" class="pa-0">
-                            <v-row class="d-flex">
-                                
-                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                        </div>
+                        
+                            <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                                <v-container fluid id="main-content" class="pa-0">
+                                    <v-row class="d-flex">
                                         
+                                            <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                                
   <div class="section" id="using-bridgedb-web-services">
 <span id="fcb-bridgedbnotebook"></span><h1><span class="section-number">2.11.1. </span>Using BridgeDb web services<a class="headerlink" href="#using-bridgedb-web-services" title="Permalink to this headline">¶</a></h1>
 <br/>
@@ -1665,9 +1670,9 @@ Yes
     </script>
     <script>kernelName = 'python3'</script>
 
-                                    </v-col>
-                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                        <div style="position: fixed">
+                                            </v-col>
+                                            <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                                <div style="position: fixed">
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i>
             Contents
@@ -1703,25 +1708,26 @@ Yes
 
         </nav>
         </div>
-                                    </div>
-                                
-                            </v-row>
-
-                            
-                                <v-row class="mb-5">
-                                    <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                            </div>
                                         
+                                    </v-row>
+
+                                    
+                                        <v-row class="mb-5">
+                                            <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                                
 <a class='left-prev' id="prev-link" href="../bridgedb-recipe.html" title="previous page"><span class="section-number">2. </span>Identifier mapping with BridgeDb</a>
 <a class='right-next' id="next-link" href="../introduction-terminologies-ontologies.html" title="next page"><span class="section-number">3. </span>Introduction to terminologies and ontologies</a>
 
-                                    </div>
-                                </v-row>
-                            
-                        </v-container>
-                    </main>
-                    
+                                            </div>
+                                        </v-row>
+                                    
+                                </v-container>
+                            </main>
+                        
                     
                 </v-row>
+                
             </v-container>
         </v-row>
     </v-container>
@@ -1744,10 +1750,10 @@ Yes
 
 <v-container fluid>
     <v-row no-gutter>
-        <v-col cols="12"><footer class="footer mt-5 mt-md-0">
+        <v-col cols="12"><footer class="footer" style=" margin-top: 12px;  ">
     <div class="container-md mt-4">
-      <div class="row">
-          <div class="col-4">
+      <div class="row" style="display:flex; justify-content: center">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
             <div class="footerImages">
               <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
               <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
@@ -1755,20 +1761,20 @@ Yes
             </div>
             <div class="mb-3"> Grant agreement 802750 </div>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
                 <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
               </ul>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
               </ul>
           </div>
-          <div class="col-2">
-            <a href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+          <div class="col-12 col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3 pb-5">
+            <a class="mr-3" href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
             <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
           </div>
       </div>

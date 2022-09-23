@@ -1087,8 +1087,11 @@ div.topbar {
    fill: orangered !important;
 }
 
-
-
+@media (max-width: 735px) {
+    .extraButtons {
+        display: none;
+    }
+}
 
 @media (max-width: 1250px) {
     .recipe {
@@ -1153,6 +1156,7 @@ input.rounded {
 .highlighted {
     background-color: #fc7a4a;
     padding: 2px;
+    color: white !important;
 }
 
 #site-navigation.bd-sidebar {
@@ -1161,4 +1165,22 @@ input.rounded {
 
 .fa, .far, .fas {
     font-family: "Font Awesome 5 Free" !important;
+}
+
+.v-application--wrap {
+    min-height: initial !important;
+}
+
+.rotate-0 {
+    transform-origin: right -200px;
+    transform: perspective(1500px) rotateY(16deg);
+}
+
+.rotate-3 {
+    transform-origin: left -200px;
+    transform: perspective(1500px) rotateY(-16deg);
+}
+
+.elevate {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
