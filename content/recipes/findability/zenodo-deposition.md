@@ -13,7 +13,7 @@
 :intended_audience: principal_investigator, data_manager, data_scientist, funder
 :maturity_level: 1
 :maturity_indicator: 5, 6, 7, 8
-:has_executable_code: yeah
+:has_executable_code: nope
 :recipe_name: Depositing in Zenodo generic repository
 ```` 
 

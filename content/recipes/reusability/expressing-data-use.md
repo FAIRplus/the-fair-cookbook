@@ -13,7 +13,7 @@
 :intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
 :maturity_level: 4
 :maturity_indicator: 59
-:has_executable_code: yeah
+:has_executable_code: nope
 :recipe_name: Declaring data's permitted uses
 ```` 
 
