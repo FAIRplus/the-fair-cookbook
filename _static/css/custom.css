@@ -1156,6 +1156,7 @@ input.rounded {
 .highlighted {
     background-color: #fc7a4a;
     padding: 2px;
+    color: white !important;
 }
 
 #site-navigation.bd-sidebar {

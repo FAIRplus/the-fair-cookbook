@@ -151,8 +151,8 @@
                     },
                     {
                         title: "Maturity model",
-                        link: "./recipes/",
-                        icon: "fas fa-plus"
+                        link: "./recipes/maturity.html",
+                        icon: "fas fa-signal"
                     }
                 ]
             }
@@ -293,7 +293,7 @@
                                 <Recipe :recipe="recipes[2]" />
                             </v-col>
                             <v-col cols="12" md="6">
-                                <Recipe :recipe="recipes[3]" :disabled="true" />
+                                <Recipe :recipe="recipes[3]" />
                             </v-col>
                         </v-row>
                     </v-container>
@@ -337,12 +337,11 @@
     })
     Vue.component('Recipe', {
         props: {
-            recipe: {type: Object, default: {}},
-            disabled: {type: Boolean, default: false }
+            recipe: {type: Object, default: {}}
         },
         template: `
              <v-col cols="12">
-                    <v-card class="white--text primary lighten-1 animate__animated animate__zoomInUp" style="width:100%" :disabled="disabled">
+                    <v-card class="white--text primary lighten-1 animate__animated animate__zoomInUp" style="width:100%">
                         <v-card-title class="d-flex justify-center align-center flex-column">
                             {{ '{{ recipe.title }}' }} <br>
                             <v-btn x-large fab><v-icon class="primary--text"> {{ '{{ recipe.icon }}' }} </v-icon></v-btn>
@@ -517,10 +516,10 @@
                             rounded="circle" color="white"
                         >
                            <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
-                               22
+                               18
                            </span>
 
-                           <span class="primary--text">Data Types</span>
+                           <span class="primary--text">Executable</span>
                         </v-card>
                     </v-row>
                 </v-container>

@@ -13,7 +13,7 @@
 :intended_audience: bioinformatician, data_scientist, data_engineer
 :maturity_level: 2
 :maturity_indicator: 1, 2
-  :has_executable_code: nope
+:has_executable_code: nope
 :recipe_name: How to create checksum files
 ```` 
 

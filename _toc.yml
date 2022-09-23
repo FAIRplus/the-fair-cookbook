@@ -3,7 +3,6 @@
 - part: FOREWORD
   numbered: false
   chapters:
-    # - file: content/recipes/introduction
     - file: content/recipes/introduction/FAIR-cookbook-audience
       title: Introduction
     - file: content/recipes/introduction/brief-FAIR-principles
@@ -24,18 +23,7 @@
       title: Practical Considerations for a CRO to do FAIR
     - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
- 
-      # title: Introduction
-      # numbered: true
-      # sections:
-          # - file: content/recipes/glossary-fair-terms
-          # - file: content/recipes/introduction/brief-FAIR-principles
-          # - file: content/recipes/introduction/what-is-IMI
-          # - file: content/recipes/introduction/FAIR-in-IMI-context
-          # - file: content/recipes/introduction/IMI-and-data-management-plans
-          # - file: content/recipes/introduction/IMI-Data-Access-Request-Process
-          # - file: content/recipes/introduction/data-sharing-models
-  
+
 
 - part: FAIR RECIPES
 
@@ -138,12 +126,10 @@
           title: Software licenses #FCB033
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses #FCB034
-        # - file: content/recipes/reusability/license-selection
         - file: content/recipes/reusability/expressing-data-use 
           title: Declaring data's permitted uses #FCB035
         - file: content/recipes/reusability/provenance
           title: Provenance information #FCB036
-        # - file: content/recipes/reusability/community-standards
 
     - file: content/recipes/infrastructure
       title: Infrastructure
@@ -167,29 +153,14 @@
           - file: content/recipes/infrastructure/openrefine-nvt
             title: Using OpenRefine and Karma for FAIRification
 
-
     - file: content/recipes/assessing-fairness
       title: Assessment
       numbered: true
       sections:
-            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
             - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
               title: FAIR Evaluator tool #FCB049
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
               title: FAIRshake tool #FCB050
-
-    #   sections:
-    #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
-    #     - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
-    #     - file: content/recipes/assessing-fairness/cmmi/Data-Usage-Areas
-    #     - file: content/recipes/assessing-fairness/fair-indicators
-    #       sections:
-    #         - file: content/recipes/assessing-fairness/cmmi/RDA-Indicators
-    #         - file: content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators
-    #     - file: content/recipes/assessing-fairness/manual-fair-assessment 
-    #       sections:
-    #         - file: content/recipes/assessing-fairness/cmmi/evaluation-method
-    #         - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
 
 - part: FAIR Maturity
   chapters:
@@ -209,8 +180,6 @@
               title: Moving to a semantically typed version - ISA in RDF
             - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066PRE
               title: Packaging ISA as a Research Object (RO)
-  #            - file: content/recipes/maturity/isa-ro-zenodo-deposition
-  #              title: Programmatic deposition to Zenodo
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
           title: Making omics data matrices FAIR #FCB037
           numbered: true
@@ -225,24 +194,6 @@
               title: Integrating data #FCB041
         - file: content/recipes/applied-examples/fair-workflows
           title: Making Computational Workflows FAIR #FCB062PRE
-
-#- part: FAIRification Fairs
-#  chapters:
-#    - file: content/recipes/maturity
-#      title: Moving through dataset maturity
-#      numbered: true
-#      sections:
-#    - file: content/recipes/maturity/l1
-#      title: Recipes reaching Level I
-#      sections:
-#        - file: content/recipes/infrastructure/id-resolution
-#          title: Identifier resolution services #FCB046
-#    - file: content/recipes/maturity/l2
-#      title: Recipes reaching Level II
-#    - file: content/recipes/maturity/levelthree
-#      title: Recipes reaching Level III
-#    - file: content/recipes/maturity/levelfour
-#      title: Recipes reaching Level IV
 
 
 - part: FAIRified Datasets
@@ -277,7 +228,6 @@
       title: Community
       numbered: false
       sections:
-        # - file: content/recipes/afterword/governance
         - file: content/recipes/afterword/people
           title: Boards and contributors
         - file: content/recipes/afterword/code_of_conduct
@@ -288,12 +238,6 @@
           sections:
             - file: content/recipes/afterword/the-turing-way
               title: Leveraging the Turing Way Book
-        # - file: content/recipes/boilerplate/technology_stack
-        #   title: Technology stack
-        # - file: content/recipes/boilerplate/license
-        # - file: content/recipes/boilerplate/project_information
-        # - file: content/recipes/boilerplate/roadmap
-        # - file: content/recipes/boilerplate/disclaimer
 
     - file: content/recipes/help
       title: Contribute
