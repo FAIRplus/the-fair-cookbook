@@ -9,9 +9,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
-:has_executable_code: nope
 :maturity_level: 1
 :maturity_indicator: 5, 8
+:has_executable_code: nope
 :recipe_name: How to Register a Dataset with Wikidata
 ```` 
 

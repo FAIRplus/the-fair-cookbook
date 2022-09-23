@@ -12,15 +12,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
-<<<<<<< HEAD
-:maturity_level: 2
-:maturity_indicator: 1, 2
-:has_executable_code: nope
-=======
 :maturity_level: 0
 :maturity_indicator: 0
-:has_executable_code: yeah
->>>>>>> c0e00078be1a52895b386308baa3f44222a6fc90
+:has_executable_code: nope
 :recipe_name: FAIR Evaluator tool
 ```` 
 

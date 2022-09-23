@@ -6,14 +6,14 @@
 
 ````{panels_fairplus}
 :identifier_text: FCB067
-:identifier_link: 'http://w3id.org/faircookbook/FCB067'
+:identifier_link: 'https://w3id.org/faircookbook/FCB067'
 :difficulty_level: 3
 :recipe_type: applied_example
 :reading_time_minutes: 15
 :intended_audience: data_manager  
-:has_executable_code: nope
 :maturity_level: 2 
 :maturity_indicator: 1, 2
+:has_executable_code: nope
 :recipe_name: FAIR High-Content Screening data deposition
 ```` 
 

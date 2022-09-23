@@ -10,7 +10,7 @@
 :intended_audience: data_manager, data_scientist, software_developer, system_administrator  
 :maturity_level: 2
 :maturity_indicator: 24
-:has_executable_code: no
+:has_executable_code: nope
 :recipe_name: Building a catalogue of datasets 
 ```` 
 
