@@ -1,17 +1,6 @@
 (fcb-assess-fair-fairshake)=
 # FAIRshake tool
 
-A tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
-
-````{note} 
-
-```{image} ./images/CFDE-logo.png 
-:width: 100px
-:align: right
-```
-This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
-````
-
 <br/>
 <br/>
 
@@ -22,12 +11,23 @@ This recipe was originally write for the NIH Common Fund Data Ecosystem and is r
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist 
-:maturity_level: 2 
-:maturity_indicator: 1, 2
+:maturity_level: 0 
+:maturity_indicator: 0
 :has_executable_code: yeah
 :recipe_name: FAIRshake tool
 ```` 
 
+
+````{note} 
+
+```{image} ./images/CFDE-logo.png 
+:width: 100px
+:align: right
+```
+This is a tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
+
+This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
+````
 
 ## Background
 
@@ -44,6 +44,7 @@ FAIRshake provides:
 
 
 ## Motivation
+
 
 By selecting and adhering to a rubric or set of metrics shared by other projects, a resource can independently assert metric conformance thus improving interoperability between resources that share those metrics. Each metric defines a concrete ideal criterion that is desired and satisfaction of that metric can be represented as a percentage or a number between 0 and 1. Some metrics may be categorical, in which case their contribution can be defined as discrete scores from 0 (least desirable) to 1 (most desirable). Given these normalized bounds, we can always compute a single scalar within the same range by finding the mean value of scores.
 
