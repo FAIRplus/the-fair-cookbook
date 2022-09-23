@@ -118,7 +118,7 @@
             title: Clinical Genetic Information as FHIR JSON #FCB058
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
-                title: Converting VCF file to FHIR JSON #FCB059
+                title: Using the VCF2FHIR python library #FCB059
 
     - file: content/recipes/reusability
       title: Reusability
