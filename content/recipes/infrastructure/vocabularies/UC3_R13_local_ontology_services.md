@@ -12,9 +12,15 @@
 :recipe_type: hands_on
 :reading_time_minutes: 20
 :intended_audience: data_manager, data_scientist, terminology_manager, system_administrator
+<<<<<<< HEAD
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
+=======
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: yeah
+>>>>>>> c0e00078be1a52895b386308baa3f44222a6fc90
 :recipe_name: Deploying the EBI OLS 
 ````
 

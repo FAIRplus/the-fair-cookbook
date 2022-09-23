@@ -16,7 +16,7 @@ CONTROLLED_VOCABULARY_RECIPE_TYPE = {
 CONTROLLED_VOCABULARY_INTENDED_AUDIENCE = {
     "funder"                    : "Funder|NA", #   no CV_term_id
     "procurement_officer"       : "Procurement Officer|T4FS_0000572", # http://purl.obolibrary.org/obo/T4FS_0000572
-    "principal_investigator"    : "Principal Investigator|T4FS_0000571", # http://purl.obolibrary.org/obo/T4FS_0000571
+    "principal_investigator"    : "Principal Investigator|T4FS_0000441", # http://purl.obolibrary.org/obo/T4FS_0000571
     "data_curator"              : "Data Curator|T4FS_0000389",   # database curator http://purl.obolibrary.org/obo/T4FS_0000389
     "data_engineer"             : "Data Engineer|NA",  # is it used?
     "data_manager"              : "Data Manager|T4FS_0000520",   # http://purl.obolibrary.org/obo/T4FS_0000520

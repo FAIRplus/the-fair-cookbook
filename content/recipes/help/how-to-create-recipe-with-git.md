@@ -30,10 +30,10 @@ We rely on GitHub infrastructure for hosting the documents making up the cookboo
 
 To make the most of the GitHub infrastructure, we *strongly* advise about following the git flow process, which we will detail now.
 
-Clone the repo, enter the directory, and test that you are in the master branch by issuing the following command from the terminal:
+Clone the repo, enter the directory, and test that you are in the main branch by issuing the following command from the terminal:
 
 ```bash
-git clone http://github.com/FAIRplus/the-fair-cookbook/
+git clone https://github.com/FAIRplus/the-fair-cookbook/
 cd the-fair-cookbook
 git branch 
 ```
@@ -41,13 +41,13 @@ git branch
 should show:
  
 ```bash
-master 
+main 
 ```
 
 then issue the following git command:
 
 ```bash
-git checkout -b my_username-my_recipe_branch master
+git checkout -b my_recipe_branch_name main
 git branch
 ```
 
@@ -58,19 +58,19 @@ my_recipe
 ```
 
 
-This means you are working on the dedicated copy of the master branch, any change made there will not affect the master files. 
+This means you are working on the dedicated copy of the 'main' branch, any change made there will not affect the `main` files. 
 
 When you are done with your edits, use:
 
 ```bash
-git add .
-git commit -m 'some meaninful message, possibly indicated that would be closing an issue'
+git add content
+git commit -m 'some meaningful message, possibly indicated that would be closing an issue'
 ```
 
 followed by:
 
 ```bash
-git push origin my_recipe_branch
+git push origin my_recipe_branch_name
 ```
 
 
@@ -78,52 +78,159 @@ If you are done with all the edits, you are now ready to send a "Pull Request" t
 
 
 When sending a **Pull Request** also known as **PR**, you will have to specify a **reviewer** known as an **assignee** in the GitHub  world. This optimally ensures that someone will review the contribution before **merging** it with the main **main** branch of the repository.
-You should **NEVER** merge into the master branch without a review (unless you are the master owner / editor-in-chief / benevolent dictator for life).
+You should **NEVER** merge into the main branch without a review (unless you are the main owner / editor-in-chief / benevolent dictator for life).
 
 
 
-Upon this **pull request**`, the **assignee** will perform a review of the contribution. The contribution will either be merged in the master if all the quality control checks have passed or will be sent for correction to the submitter. the submitter will carry out the correction and send a new pull request for revision, following the same pattern of revision, submission acceptance merge.
+Upon this **pull request**`, the **assignee** will perform a review of the contribution. 
+The contribution will either be merged in the `main` if all the quality control checks have passed or will be sent for correction to the submitter. the submitter will carry out the correction and send a new pull request for revision, following the same pattern of revision, submission acceptance merge.
 
 
 
 **Key ideas:**
-- Each recipe should be developed in its own branch from the main github repository or from a branch in a forked version of the said repository.
+- Each recipe should be developed in its own branch from the main GitHub repository or from a branch in a forked version of the said repository.
 more information from the 
 - commit often
-- remember to pull before committing in order to incorporate the latest changes from the master.
+- remember to pull before committing in order to incorporate the latest changes from the `main`.
 
 
 ### test, test and test again before pushing!
 
-So you just wrote a new recipe and you'd like to see how it looks in the FAIRplus cookbook, what do you need to know ?
+So you just wrote a new recipe in a new markdown file or as a jupyter notebook, and you'd like to
+see how it looks in the FAIRplus cookbook, what do you need to know ?
 
- 1. Make sure your new recipe is listed in the **_data/toc.yml** file  where toc.yml is a YAML formatted file defining 
-the Table of Content of the FAIR Cookbook.
+```{note} Tip
+Run this mini-checklist!
+```
+-[ ] Have you updated the `toc.yml` file by adding the file path and title to the relevant section?
 
- 2. Make sure you have python virtualenv running and where you have installed the jupyter-book python module.
+-[ ] Have you updated the `bibliography-faircookbook.bib` file with any relevant entry cited in the markdown file?
+> 
+> -[ ] Have you activated the `Reference section` in the markdown file?
+> 
+> -[ ] Have you listed all the authors using the relevant directive and pattern?
+>
+> -[ ] Have you generated a mermaid file (.mmd extension) to provide a graphical overview of the recipe process (optional but recommended)?
+>
+> -[ ] Have you added any image file referenced in the recipe markdown to the `images` folder?
+>
+> -[ ] Have you built the book locally, either using the Docker image or from source in a local virtual environment ?
+>
+
+
+
+If you can answer 'Yes' to all these questions, you are probably ready for sending a PR and have your received reviewed.
+
+```
+
+```{warning}
+Why does this matters?
+
+Running the checklist ensures that, upon push to the main repo, the build process triggered by the GitHub action is likely to succeed.
+It saves time in the long run and greatly helps the reviewing process, avoiding needless back and forth.
+```
+
+#### Building with Docker:
+
+For testing locally, this is probably the easiest way to do it. To do so, you will need to following:
+
+Prerequisites:
+1. Docker installed on your local machine and running daemon up
+2. Check that you are logged in to https://hub.docker.com
+
+If these conditions are met, then from a terminal and from your local branch, run the following command:
+
+* on Mac OS
+```Bash
+> zsh ./scripts/docker.sh
+```
+
+* for unix users:
+```bash
+bash ./script/docker.sh # 
+```
+
+
+If everything goes without a glitch, your terminal should show something like this:
+
+
+````{dropdown} 
+:open:
+```{figure} ../../../images/docker_success.png
+---
+height: 600px
+name: Successfull Docker build 
+alt: Successfull Docker build
+---
+Successfull Docker build.
+```
+````
+
+and a new `_build` folder should have been created in the directory holding the FAIR cookbook source code. The
+
+
+````{dropdown} 
+:open:
+```{figure} ../../../images/build_folder.png
+---
+height: 400px
+name: resulting _build folder
+alt: resulting _build folder
+---
+resulting _build folder
+```
+````
+
+
+````{warning}
+In case of build failure, you may have to purge (delete) this '_build' folder entirely in order to allow docker to 
+build from source again. This is usually the case when an error has been logged in the build.log file.
+````
+
+
+`````{warning}
+Remember to clear your docker cache to free up resources after a busy session of writing and testing !
+````{dropdown} 
+:open:
+```{figure} ../../../images/docker_cleanup.png
+---
+height: 500px
+name: remember to cleanup Docker images
+alt: remember to cleanup Docker images
+---
+remember to cleanup Docker images
+```
+````
+`````
+
+
+#### Building from source locally:
+
+Prerequisites:
+5. Make sure you have python virtualenv running and where you have installed the jupyter-book python module.
 If you don't know what I am talking about, do the following:
 
-    1. install pyenv
-    2. once done, run **pyenv install <python version>**, for instance 
+   1. install pyenv
+   2. once done, run **pyenv install <python version>**, for instance 
     
 ```bash
-pyenv install 3.7.5
+pyenv install 3.9.0
 ```
 
 	3. then you need to create the virtual environment by invoking:
 
 ```bash
-pyenv virtualenv faircb375 3.7.5
+pyenv virtualenv faircb390 3.9.0
 ```
 	4. to use the virtual environment, you'll have to call it using the following command:
 
 ```bash
-pyenv activate faircb375
+pyenv activate faircb390
 ```
 		if all goes well, your terminal prompt should give you the status, indicate you are running in a virtualenv:
 
  ```bash
-(venv372) hodr-MacBook-Pro-3:docs bob$
+(faircb390) hodr-MacBook-Pro-3:docs bob$
  ```
 
 	5. Now install the python module **jupyter-book**. to do so, simply issue the following command:
@@ -136,24 +243,14 @@ pip install jupyter-book
 to update pip, issue `pip install pip --upgrade'
 ```
 		**Huzza!** You are now reading te test if yuor recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
-```bash
-jupyter-book build docs --overwrite
-```
-<p style='text-align: justify;'>
-	where
-		- `build` is one of the command available from jupyter-book package
-		- `docs` is the name of the target book (it has to be that string)
-		- `--overwrite` is an parameter to the `'builds'` 
-The command telling it to ...well discard all previously generated files by writing over them...pretty self explanatory so far.
-if all goes well, you should have a green banner. If the process fails, your terminal will display a stack trace, indicating that there is an error in your markdown files or your toc.yml.
-if all is well, test locally by start a jekyll server. To do so, you'll have to do:
-</p>
 
+
+
+* From outside the project:
 ```bash
-cd docs
-make serve
+jupyter-book build -W -n --keep-going the-fair-cookbook
 ```
-Open a new tab in your favourite browser and point to the url **[http://127.0.0.1:4000/the-fair-cookbook/]()** 
+
 
 
 ## Option 1: Writing the recipe in Markdown syntax

@@ -12,8 +12,8 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist
 :has_executable_code: nope
-:maturity_level: 3
-:maturity_indicator: 1, 2
+:maturity_level: 1
+:maturity_indicator: 7
 :recipe_name: Transferring data with SFTP
 ```` 
 
