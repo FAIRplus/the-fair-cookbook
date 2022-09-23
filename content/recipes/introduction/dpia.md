@@ -502,7 +502,8 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > ```
 > ^^^
 > [More about `Data Protection` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_protection)
-> ---
+> ````
+<!-- > ---
 > :header: bg-primary pa_dark
 > ```{image} ../../../images/logos/pistoia_logo.png
 > :height: 40px
@@ -510,8 +511,8 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > :name: FAIRtoolkit_logo
 > ```
 > ^^^
-> [More about `Data Protection` from the `Pistoia Alliance FAIR toolkit`]()
-> ````
+> [More about `Data Protection` from the `Pistoia Alliance FAIR toolkit`]() -->
+
 
 
 ## References
