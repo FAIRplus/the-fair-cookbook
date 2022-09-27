@@ -1,7 +1,7 @@
 <v-col cols="12" id="homepage">
     <!-- SCREEN ONE -->
     <v-container
-        class="primary lighten-1 pa-0 d-flex flex-column justify-center align-center"
+        class="primary pa-0 d-flex flex-column justify-center align-center"
         fluid style="min-height:102vh"
     >
         <div class="homeTitle d-flex flex-column justify-center align-center" style="flex-grow: 1">
@@ -44,7 +44,7 @@
     <Lazyload></Lazyload>
 
     <!-- SCREEN THREE -->
-    <v-container fluid class="pa-0 py-10 primary lighten-1 white--text d-flex flex-column justify-center align-center" style="min-height:90vh">
+    <v-container fluid class="pa-0 py-10 primary white--text d-flex flex-column justify-center align-center" style="min-height:90vh">
 
         <!-- TOP SECTION -->
         <v-row no-gutters justify="start" v-if="$vuetify.breakpoint.xlOnly" >
@@ -308,7 +308,7 @@
         },
         template: `
             <v-col cols="12">
-                <v-card color="primary lighten-1" class="d-flex flex-column animate__animated animate__zoomInDown homeFAIRCard">
+                <v-card color="primary" class="d-flex flex-column animate__animated animate__zoomInDown homeFAIRCard">
                     <v-card-title class="text-h5 white--text">
                         <v-btn
                             fab
@@ -318,16 +318,16 @@
                         </v-btn>
                         {{ '{{ item.title }}' }}
                     </v-card-title>
-                    <v-card-text class="primary lighten-1 grey--text d-flex flex-column flex-grow-1" style="flex-grow:1">
+                    <v-card-text class="primary grey--text d-flex flex-column flex-grow-1" style="flex-grow:1">
                         <div style="flex-grow:1">
-                          <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
+                          <p class="pb-0 mb-0 grey--text"> EXEMPLAR RECIPES </p>
                           <ul>
                             <li v-for="(content, y) in item.content" :key="'content_' + item.title + y" class="mr-10">
                                 <a :href="content.link" class="white--text"> {{ '{{ content.text }}' }} </a>
                             </li>
                           </ul>
                         </div>
-                        <v-btn color="primary white--text" class="mx-0" :href="item.link">
+                        <v-btn color="primary darken-2 white--text" class="mx-0" :href="item.link">
                             Learn more
                         </v-btn>
                     </v-card-text>
@@ -341,13 +341,13 @@
         },
         template: `
              <v-col cols="12">
-                    <v-card class="white--text primary lighten-1 animate__animated animate__zoomInUp" style="width:100%">
+                    <v-card class="white--text primary animate__animated animate__zoomInUp" style="width:100%">
                         <v-card-title class="d-flex justify-center align-center flex-column">
                             {{ '{{ recipe.title }}' }} <br>
                             <v-btn x-large fab><v-icon class="primary--text"> {{ '{{ recipe.icon }}' }} </v-icon></v-btn>
                         </v-card-title>
                         <v-card-actions class="d-flex">
-                            <v-btn color="primary white--text flex-grow-1" class="mx-0" :href="recipe.link">
+                            <v-btn color="primary darken-2 white--text flex-grow-1" class="mx-0" :href="recipe.link">
                                 Learn more
                             </v-btn>
                         </v-card-actions>

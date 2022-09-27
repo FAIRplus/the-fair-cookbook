@@ -161,7 +161,7 @@ class PanelFairplus(Directive):
 
             f'{self.get_ld()}',
             '<div class="card recipe d-flex">',
-                '<div class="card-header purple-dark text--white">',
+                '<div class="card-header primary darken-3 text--white">',
                     '<div class="overview">',
                         '<div class="overviewLabel">Recipe Overview</div>',
                         '<div class="overviewContent">',
@@ -190,7 +190,7 @@ class PanelFairplus(Directive):
                         '</div>'
                     '</div>',
                 '</div>',
-                '<div class="card-body text--purple-dark">',
+                '<div class="card-body primary--text">',
                     '<div class="title">',
                         f'<div style="flex-grow:1; margin-right:5px">{self.options["recipe_name"]}</div>',
                         f'<img src="{LINK_TO_THE_FAIRPLUS_LOGO}" alt="FAIRPlus logo"> </img>',
@@ -199,7 +199,7 @@ class PanelFairplus(Directive):
                         '<i class="sectionIcon fa fa-laptop fa-2x"></i>'
                         '<div class="sectionContent">',
                             '<div class="label">Recipe Type</div>',
-                            f'<div class="sectionValue">{ CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]] }</div>',
+                            f'<div class="sectionValue primary--text">{ CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]] }</div>',
                         '</div>',
                     '</div>',
                     '<div class="section" style="flex-grow: 1;">',
@@ -219,7 +219,7 @@ class PanelFairplus(Directive):
                         '</svg>',
                         '<div class="sectionContent">',
                           '<div class="label">Maturity Level & Indicator</div>',
-                          f'<div class="sectionValue">{self.get_indicators()}</div>',
+                          f'<div class="sectionValue primary--text">{self.get_indicators()}</div>',
             '<div class="tooltip">hover me',
             '<span class="tooltiptext">Tooltip text</span></div>',
                         '</div>',

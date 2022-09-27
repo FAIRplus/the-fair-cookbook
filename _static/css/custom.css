@@ -458,7 +458,7 @@ v-col#site-navigation li.active {
 
 #prev-link:hover, #next-link:hover {
     text-decoration: none;
-    box-shadow: 3px 3px 11px #421C6E;
+    box-shadow: 3px 3px 11px #1976D2;
 }
 
 main.bd-content #main-content h1 {
@@ -585,7 +585,7 @@ footer.footer p:not(:first-child) {
 /** BORDERS **/
 hr,
 li.c-sidebar__divider {
-  border-top: 1px solid #fc7a4a;
+  border-top: 1px solid #1976D2;
 }
 
 img.imageez {
@@ -597,28 +597,28 @@ details table tr th,
 #authors table tr td,
 #authors table tr th{
     /*border-top: 1px solid #fc7a4a;*/
-    border-top: 1px solid #421C6E;
+    border-top: 1px solid #1976D2;
 }
 
 #authors table tr th,
 details table tr th {
     /*border-bottom: 1px solid #fc7a4a;*/
-    border-bottom: 1px solid #421C6E;
+    border-bottom: 1px solid #1976D2;
 }
 
 #authors table tbody,
 details table tbody {
     /*border-right: 1px solid #fc7a4a;*/
     /*border-bottom: 1px solid #fc7a4a;*/
-    border-right: 1px solid #421C6E;
-    border-bottom: 1px solid #421C6E;
+    border-right: 1px solid #1976D2;
+    border-bottom: 1px solid #1976D2;
 }
 
 #authors table,
 details table{
     display: table;
     /*border-left: 1px solid #fc7a4a;*/
-    border-left: 1px solid #421C6E;
+    border-left: 1px solid #1976D2;
     border-collapse: separate;
     border-left: 0;
     border-radius: 4px;
@@ -630,7 +630,7 @@ div.topbar div.bd-toc {
 }
 nav#bd-toc-nav li.active,
 nav#bd-toc-nav a.active {
-    border-left: 1px solid #421C6E !important;
+    border-left: 1px solid #1976D2 !important;
 }
 
 div.topbar div.tocsection {
@@ -707,7 +707,7 @@ ul.toc__menu a {
 
 main.bd-content #main-content h2,
 main.bd-content #main-content h1{
-    color: #421C6E !important;
+    color: #1976D2 !important;
 }
 
 li.toc-list-item-active,
@@ -794,19 +794,19 @@ nav.c-textbook__sidebar {
 #authors table tr th,
 details table tr th {
     color: white;
-    background: #421C6E;
+    background: #1976D2;
     border-bottom: 0 !important;
     min-width: 100px;
 }
 
 footer,
 footer *:not(a) {
-    background: #421C6E;
+    background: #1976D2;
     color: white;
 }
 
 .text--primary {
-    color: #421C6E !important
+    color: #1976D2 !important
 }
 
 .text--secondary {
@@ -841,7 +841,7 @@ div.col-12.col-md-3.bd-sidebar.site-navigation.show {
 }
 
 #prev-link, #next-link {
-    background: #421C6E;
+    background: #1976D2;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -862,12 +862,12 @@ aside.sidebar__right {
 
 div.topbar {
     position: fixed;
-    background: #421C6E;
+    background: #1976D2;
     z-index: 2001;
 }
 
 .primary {
-    background: #421C6E !important;
+    background: #1976D2 !important;
 }
 
 .secondary {
@@ -953,7 +953,7 @@ div.topbar {
     flex-direction:row;
     width: 733px;
     border-radius: 8px !important;
-    border: 1px solid #300861 !important;
+    border: 1px solid #1976D2 !important;
 }
 
 .recipe .card-header {
