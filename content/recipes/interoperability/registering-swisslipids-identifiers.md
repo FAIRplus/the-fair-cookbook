@@ -47,9 +47,11 @@ Earlier, a [Swiss Lipid property for Wikidata](https://www.wikidata.org/wiki/Wik
 was already proposed, later approved, and created in Wikidata [just before the 2020 BioHackathon Europe](https://www.wikidata.org/w/index.php?title=Property:P8691&oldid=1287579005).
 An existing Wikidata property is a requirement to adding the external identifiers.
 
-The recipe uses [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021` which can be used in Groovy and Python. We
-will use the first here. The starting point is mappings (tuples) that link the SwissLipid identifiers to InChIKeys. The latter
-is used to find the matching Wikidata items.
+The recipe uses [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`, which can be used in Groovy and Python. 
+
+We will use the first here. 
+The starting point is mappings (tuples) that link the SwissLipid identifiers to InChIKeys. 
+The latter is used to find the matching Wikidata items.
 
 ### Step 1: getting the data
 
