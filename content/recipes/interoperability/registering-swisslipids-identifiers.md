@@ -23,7 +23,8 @@ ___
 ## Requirements
 
 To record identifiers of some resource to make the content more findable and more interoperable, first a [Wikidata](https://www.wikidata.org/) property
-needs to be requested. That process is described [here](https://www.wikidata.org/wiki/Wikidata:Property_proposal).
+needs to be requested. 
+That process is described [here](https://www.wikidata.org/wiki/Wikidata:Property_proposal).
 
 ---
 
