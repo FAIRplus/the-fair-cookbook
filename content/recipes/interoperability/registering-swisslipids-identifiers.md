@@ -102,9 +102,11 @@ Based on existing Bacting scripts, a script is created to take the `swisslipids_
 QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy) This script is using [Apache Groovy](http://www.groovy-lang.org/)
 but Bacting can also be using in Python, see [https://github.com/cthoyt/pybacting](https://github.com/cthoyt/pybacting).
 
+```{note}
 This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Dr [Jerven Bolleman](https://orcid.org/0000-0002-7449-1266)
 who indicated that the [RDF4J](https://rdf4j.org/) backing this SPARQL endpoint will automatically batch the query against Wikidata, overcoming
 limitations of the Wikidata Query Service:
+```
 
 ```sparql
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
