@@ -62,7 +62,7 @@ The data is CC-BY but it was agreed that adding the SwissLipid identifiers to Wi
 
 ### Step 2: extract Swiss Lipid ID <> InChIKey tuples
 
-For this step I use `csvtool` (`apt get install csvtool`):
+For this step, use `csvtool` (`apt get install csvtool`):
 
 ```shell
 csvtool -t TAB col 1,11 swisslipids.tsv
