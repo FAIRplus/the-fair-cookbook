@@ -80,20 +80,29 @@ The Dataset object was the central concept of the initial DATS model but became 
 ### Sub-objects
 
 
-### Assumptions
 
-* study/dataset can't exist without a project
 
 
 ### Ontology annotations
 
 
+
 ### Encoding in JSON-LD
 
-## DATS in context
+
+
 
 ## Implementing DATS in a data catalogue
 
+We implemented DATS v2.0 in the IMI Data Catalog. The DATS model's flexibility presents both a benefit and a challenge in that some concepts could be encoded in a number of ways. Experimental materials for example can be encoded at both the Study level, in `Study.input` or at the Dataset level, in `Dataset.isAbout`. In order to encode metadata consistently and simplify indexing and display processes for the IMI Data Catalog, we therefore made a number of assumptions about how to encode certain metadata entities in the model.
+
+### Assumptions
+
+* Study and Dataset objects can't exist without a Project. This rule was necessary to provide a root for our indexing service.
+
+* The Study object encodes information about the input materials to the experiment, such as study subjects in the case of clinical trials or biological molecules in the case of chemical assays. At this level, we collect cohort descriptions, sample sizes, sample sources, types of samples and diseases.
+ 
+* The Dataset object encodes information about the dataset, including technical information such as version number, creation and update dates, data standards and file types. The dataset also lists the experiment types that generated the data, the number and types of samples that contributed to the dataset and any diseases in the samples. These properties can be distinct from the ones at Study level as not all samples collected in a Study may be used to generate a given dataset, eg blood samples might be used for sequencing experiments, generating a sequencing dataset, while other tissue samples are used in imaging assays, generating an imaging dataset. The number of samples collected can be different from the cohort sample size (ie number of subject), either because multiple samples were collected from each subject or because some samples were excluded from the dataset for quality reasons.
 
 ---
 
