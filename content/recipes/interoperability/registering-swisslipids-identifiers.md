@@ -94,7 +94,8 @@ See the recipe publication by Waagmeester et al. about _A protocol for adding kn
 ### Step 4: creating QuickStatements
 
 Now we have the mappings and the data model in Wikidata, we can create QuickStatements to allow us to enter the
-data into Wikidata. This is not the only approach, and the process can be further automated using "Wikidata bots".
+data into Wikidata. 
+This is not the only approach, and the process can be further automated using "Wikidata bots".
 For this, see BioHackathon Europe [Project 32](https://github.com/elixir-europe/biohackathon-projects-2021/tree/main/projects/32):
 Connecting ELIXIR-related open data on Wikidata via [WikiProject ELIXIR](https://www.wikidata.org/wiki/Wikidata:WikiProject_Elixir).
 
