@@ -34,16 +34,8 @@ The recipe will cover the following elements:
 
 ## Graphical Overview
 
-```TO DO - create Mermaid diagram of the FAIRification process flow```
+![FAIRification Framework](./FAIRificationFramework.png)
 
-```{figure} ./images/C-3PO_droid.png
----
-width: 200px
-name: This is a Robot
-alt: C-3PO_droid
----
-C-3PO_droid 
-```
 
 
 ---
@@ -61,6 +53,9 @@ The FAIRIfication process can be divided into four phases:
 2. Requirement examination
 3. Design and Implementation
 4. Review
+
+![FAIRification Process](./FAIRificationProcess.png)
+
 
 Each of these phases are sequential dependent on each other and involve two to three groups working on them.
 1. The first group is the data or project owner who plays the major role in definition of goals and reviewing the impact of the goals. 
@@ -110,6 +105,9 @@ At this phase, the FAIRification work has been completed by the team. The techni
 
 brief explanation, image & reuse supplementary table 2 from process paper
 
+![FAIRification Template](./FAIRificationTemplate.png)
+
+
 ### The FAIRification Workplan
 
 The FAIRification Workplan is a specific design and implementation plan generated for a specific project based on the goals set in phase 1 and requirements identified in phase 2 of the Process. Relevant elements from the FAIRification Template are selected and broken down into concrete tasks. These tasks are then completed within the agreed cycle time frame as per the FAIRification Process.
@@ -123,7 +121,7 @@ Following a FAIRification cycle, the results of the post-FAIRification assessmen
 If more than one FAIRification cycle is performed, a new version of the Workplan should be produced for each cycle, in particular if there are changes in sections 4 and 5.
 
 
-![FAIRification Workplan CARE project](./FAIRificationWorkplanCare.jpg)
+![FAIRification Workplan CARE project](./FAIRificationWorkplanCare.png)
 
 
 
