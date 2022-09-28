@@ -7,6 +7,8 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
+:maturity_level: 1
+:maturity_indicator: 8
 :has_executable_code: nope
 :recipe_name: Registering SwissLipids identifiers in Wikidata
 ```` 
