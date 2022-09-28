@@ -55,7 +55,17 @@ The latter is used to find the matching Wikidata items.
 
 ### Step 1: getting the data
 
-The data is CC-BY but it was agreed that adding the SwissLipid identifiers to Wikidata (CCZero) is okay.
+The SwissLipids data licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), but because Wikidata
+is [CC0](https://creativecommons.org/publicdomain/zero/1.0/), additional permission was needed. Various
+strategies can be used here, for example asking the provider:
+
+* to make a subset with identifier mappings available under CC0 ([DrugBank](https://go.drugbank.com/releases/latest#open-data) uses this approach)
+* permission to release the mappings to Wikidata (effectively making them CC0)
+
+For SwissLipids an email exchange with the [SIB](https://www.sib.swiss/) gave me
+permission to add the SwissLipids identifiers to Wikidata.
+
+With the licensing issue resolved, the following practical steps were taken:
 
 * Download `lipids.tsv` from the [Downloads](https://www.swisslipids.org/#/downloads) page
 * Gunzip the file
