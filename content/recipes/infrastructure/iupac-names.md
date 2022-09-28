@@ -29,6 +29,7 @@ The main purpose of this recipe is:
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
 OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
+The latter is done by the offical InChI library {footcite}`Goodman2021InChI`.
 
 ### Automating translations with Google Colab
 
@@ -60,17 +61,30 @@ including a button to open the notebook in Colab.
 
 ### Automating translations with Apache Groovy
 
+Because Bacting is written in Java and the libraries being available from
+[Maven Central](https://search.maven.org/), it also be used in
+[Apache Groovy](http://www.groovy-lang.org/) and other Java-based environments.
+The above code in Groovy looks like:
 
+```groovy
+@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.1.0')
+@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.1.0')
 
-Similarly, InChIKeys can be generated:
+workspaceRoot = "."
+inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
+opsin = new net.bioclipse.managers.OpsinManager(workspaceRoot);
 
-```bash
-groovy inchikeys.groovy -f foo.sdf
+anInChI = inchi.generate(opsin.parseIUPACName("methane"))
+println "InChI: ${anInChI.getValue()}"
+println "InchIKey: ${anInChI.getKey()}"
 ```
-
 
 ## Conclusion
 
+Cheminformatics provides us the tools to parse IUPAC names and convert them to
+chemical graph based identifiers, such as the InChIKey. The InChIKey identifier
+can be used to find more information about the chemicals represented by the
+original IUPAC names.
 
 ### What should I read next?
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
