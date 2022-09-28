@@ -22,12 +22,16 @@
 
 ## Main Objectives
 
-This recipe provides a general introduction to the FAIRification framework developed by FAIRplus. 
+This recipe provides a general introduction to the FAIRification Framework developed by FAIRplus. 
 
 The recipe will cover the following elements:
 
 >* The components of the framework
->* How to apply the framework 
+>* Some practical considerations for applying the framework 
+
+This recipe will not provide instructions on how to practically implement the framework as this is covered elsewhere in this Cookbook.
+
+<!--TO DO add link to BYOD recipe once it is available -->
 
 ---
 
@@ -36,13 +40,10 @@ The recipe will cover the following elements:
 
 ![FAIRification Framework](./FAIRificationFramework.png)
 
-
-
 ---
 
 
-
-## The FAIRification framework
+## The FAIRification Framework
 
 general intro - what is the framework, why was it developed (highlight iterative process), what are the components
 
@@ -124,21 +125,22 @@ If more than one FAIRification cycle is performed, a new version of the Workplan
 ![FAIRification Workplan CARE project](./FAIRificationWorkplanCare.png)
 
 
-
-
-
 ## Practical considerations
 
+While this recipe does not deal in detail with how to implement the FAIRification framework, as this is covered elsewhere, it is worth highlighting a few important practical considerations:
+
+* **The importance of good goal setting**. Throughout the development of the framework, we tested iterative versions 
 * multi-disciplinary task teams
-* restate the importance of good goal setting
 * flexibility of the framework w/ regards to assessment approaches etc
 
 ---
 
 ## Conclusion
+***NOTE: this is a direct c/p from Box 1 in the process paper. Do not publish as is!***
 
-> Summerize Key Learnings of the recipe.
-> 
+1. Focus on incrementally achievable targets. Projects approach the FAIR principles in different orders and risk overdoing. Instead, we focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced “FAIR enough” status.
+1. Tailor the generic FAIRification process to individual needs. Projects have different needs, even when the underlying data, capability and resource requirements appear to be quite similar. Customising the relevant template elements allows to form a coherent workplan. 
+1. Assemble a multi-disciplinary team. Projects are often multi-partner, international and distributed in nature, with datasets of different provenance and source. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, as well as curational and technical infrastructure aspects. 
 
 ### What should I read next?
 > * [Tips and Tricks](./tips-tricks.md)
