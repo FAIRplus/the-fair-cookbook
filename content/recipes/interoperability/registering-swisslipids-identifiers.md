@@ -68,8 +68,9 @@ For this step, use `csvtool` (`apt get install csvtool`):
 csvtool -t TAB col 1,11 swisslipids.tsv
 ```
 
-The output needs some further clean up, like removing lines without InChIKeys or "none" and "-" as value. Also,
-the "InChIKey=" prefix is removed in preparation for the next step. The full used code is:
+The output needs some further clean up, like removing lines without InChIKeys or "none" and "-" as value.
+Also, the "InChIKey=" prefix is removed in preparation for the next step.
+The full used code is:
 
 ```shell
 csvtool -t TAB col 1,11 swisslipids.tsv  | sed 's/InChIKey=//' | grep -v "none" | grep -v ",-$" | grep -v ",$" | tee swisslipids_ids.tsv
