@@ -32,9 +32,10 @@ That process is described [here](https://www.wikidata.org/wiki/Wikidata:Property
 ## Main Content
 
 To make datasets more findable and databases more interoperable, it is recommended to share not just top-level metadata, but also record-level
-metadata. For example, for chemical databases, you can share your chemical compound identifiers as open data, while keeping the data itself
-in your own database. That allows other databases, like Wikidata, to link to your database. First, that makes your data more findable,
-but it also makes your data easier to integrate and therefore more interoperable.
+metadata. 
+For example, for chemical databases, one may share the chemical compound identifiers as open data, while keeping the data itself in their own database. 
+That allows other resources, like Wikidata, to link to a private database.
+First, that makes such data more findable, but it also makes the same data easier to integrate, and therefore more interoperable.
 
 This recipe follows this idea and starts with a CCZero-licensed mapping file, linking InChIKeys and database identifiers.
 Recipe *InChI and SMILES identifiers for chemical structures* ([fcb:FCB007](https://w3id.org/faircookbook/FCB007)) explains how InChIKeys
