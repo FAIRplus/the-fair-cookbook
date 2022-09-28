@@ -31,7 +31,7 @@ That process is described [here](https://www.wikidata.org/wiki/Wikidata:Property
 
 ## Main Content
 
-Making datasets more findable and databases more interoperable, it is recommended to share not just top-level metadata, but also record-level
+To make datasets more findable and databases more interoperable, it is recommended to share not just top-level metadata, but also record-level
 metadata. For example, for chemical databases, you can share your chemical compound identifiers as open data, while keeping the data itself
 in your own database. That allows other databases, like Wikidata, to link to your database. First, that makes your data more findable,
 but it also makes your data easier to integrate and therefore more interoperable.
