@@ -28,12 +28,39 @@ The main purpose of this recipe is:
 ### Using the OPSIN website
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
+OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
 
 ### Automating translations with Google Colab
 
-Google Colab allows us to use Python to automate conversions of IUPAC names.
-In Google Colab we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
-to access the OPSIN library.
+[Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC names.
+In Colab we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
+to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:
+
+```python
+from scyjava import config, jimport
+config.endpoints.append('io.github.egonw.bacting:managers-inchi:0.1.0')
+config.endpoints.append('io.github.egonw.bacting:managers-opsin:0.1.0')
+
+inchi_cls = jimport("net.bioclipse.managers.InChIManager")
+inchi = inchi_cls(".")
+opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
+opsin = opsin_cls(".")
+```
+
+After that, we use the manager API to parse the IUPAC name and generate an InChI and InChIKey:
+
+```python
+anInChI = inchi.generate(opsin.parseIUPACName("methane"))
+print(f"InChI: {anInChI.getValue()}")
+print(f"InchIKey: {anInChI.getKey()}")
+```
+
+The full Jupyter notebook can be found [here](https://gist.github.com/egonw/e4c788437a827407457deb764ce8eb93),
+including a button to open the notebook in Colab.
+
+### Automating translations with Apache Groovy
+
+
 
 Similarly, InChIKeys can be generated:
 
