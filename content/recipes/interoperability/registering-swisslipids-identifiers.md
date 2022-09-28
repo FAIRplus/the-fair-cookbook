@@ -154,10 +154,10 @@ are not yet in Wikidata.
 This is the topic of a future recipe.
 
 ## References
-
+````{dropdown} **Reference**
 ```{footbibliography}
 ```
-
+````
 ---
 
 ## Authors
