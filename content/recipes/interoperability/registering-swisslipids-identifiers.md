@@ -37,7 +37,7 @@ For example, for chemical databases, one may share the chemical compound identif
 That allows other resources, like Wikidata, to link to a private database.
 First, that makes such data more findable, but it also makes the same data easier to integrate, and therefore more interoperable.
 
-This recipe follows this idea and starts with a CCZero-licensed mapping file, linking InChIKeys and database identifiers.
+This recipe follows this idea and starts with a [CC0](https://creativecommons.org/publicdomain/zero/1.0/)-licensed mapping file, linking InChIKeys and database identifiers.
 Recipe *InChI and SMILES identifiers for chemical structures* ([fcb:FCB007](https://w3id.org/faircookbook/FCB007)) explains how InChIKeys
 can be generated for chemical compounds in your database.
 
