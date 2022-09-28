@@ -86,8 +86,9 @@ $ wc -l swiss*tsv
 
 ### Step 3: creating a ShEx model
 
-Skipping this step for later this week, but here the task is to create a shape expression for Wikidata, to model how
-the identifiers will be added to Wikidata. See the recept publication by Waagmeester et al. about _A protocol for adding knowledge to Wikidata: aligning resources on human coronaviruses_
+Here the task is to create a *shape expression* for Wikidata, to model how
+the identifiers will be added to Wikidata.
+See the recipe publication by Waagmeester et al. about _A protocol for adding knowledge to Wikidata: aligning resources on human coronaviruses_
 {footcite}`Waagmeester2021`.
 
 ### Step 4: creating QuickStatements
