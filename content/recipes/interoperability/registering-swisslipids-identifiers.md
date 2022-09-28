@@ -144,12 +144,14 @@ The resulting mappings are being added via the [QuickStatements website](https:/
 
 ## Conclusion
 
-It will be clear Bacting can be replaced without too much effort by other tools making the same steps. What is the
-main conclusion is that we can indeed automate adding external identifiers routinely to Wikidata using InChIKey
-matching.
+The main conclusion is that we can automate adding external identifiers routinely to Wikidata using InChIKey matching. 
+
+It will be clear [Bacting tool](https://bio.tools/bacting) can be replaced without too much effort by other tools making the same steps.
 
 What this protocol does not do, however, is create Wikidata items for lipids in the SwissLipids database that
-are not yet in Wikidata. This is the topic of a future recipe.
+are not yet in Wikidata. 
+
+This is the topic of a future recipe.
 
 ## References
 
