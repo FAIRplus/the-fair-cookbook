@@ -40,8 +40,8 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 ---
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: http://example.com
+:identifier_text: FCBXXX
+:identifier_link: https://example.com
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15

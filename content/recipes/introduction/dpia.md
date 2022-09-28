@@ -23,34 +23,27 @@
 
 ## Main Objectives
 
-The main purpose of this recipe is raise awareness in the importance of *data protection*, *data privacy* and the \
-european regulatory framework ruling over data management.
-In particular when dealing with human subject information, especially in the context of medical or clinical information, 
-a number of procedures need to be in place upstream and downstream of data collection.
+The main purpose of this recipe to highlight the existence of semantic resources providing the necessary support to enable
+the generation of a Data Protection Impact Assessment (DPIA), as mandated by the European Union General Data Protection Regulation (GDPR)
+in a machine-readable form.
+The framework presented in the recipe therefore represents an important tool to consider for **Data Controllers** 
+responsible for human subject information. 
 
-Another goal of this recipe is to highlight the existence of semantic resources providing the necessary support to enable
-the structuring of regulatory compliant information in a machine-readable form. The framework therefore represents an
-important tool to consider for anyone in charge of such aspects of data management.
-
-> Learn  about to provide a Data Protection Impact Assessment.
-> Learn  about expressing key information of Data Protection Impact Assessment Report in RDF.
+> Learn what a Data Protection Impact Assessment is.
+> Learn how to express Data Protection Impact Assessment key information in RDF.
 ---
 
 
 ## Graphical Overview
 
-```{note} 
-use this section to provide a decision tree for the overall process described in the recipe
-For more information about the syntax used to generate the diagram, please refer to the [following documentation](https://mermaid-js.github.io/mermaid/#/flowchart)
-```
 
-```{figure} ../../../images/dpia-process-overview.png
+```{figure} ../../../images/dpia-need-flowchart.svg
 ---
 width: 800px
-name: DPIA_overview-TODO
-alt: DPIA_overview-TODO
+name: Flowchart to decide if a DPIA is needed
+alt: Flowchart to decide if a DPIA is needed
 ---
-DPIA_overview-TODO
+Flowchart to decide if a DPIA is needed
 ```
 
 
@@ -63,16 +56,17 @@ DPIA_overview-TODO
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [data privacy impact assessment](https://w3id.org/dpv/dpv-owl#DPIA)  | [text](http://edamontology.org/data_3671)  | [report](http://edamontology.org/data_2048)  |
+| [data privacy impact assessment](https://w3id.org/dpv/dpv-owl#DPIA)  | [text](https://edamontology.org/data_3671)  | [report](https://edamontology.org/data_2048)  |
 ```
 ```{tabbed} Requirements
 * knowledge requirement:
-    * Awareness of european legislation on data protection - General Data Protection Regulation (GDPR)
+    * Awareness of European legislation on data protection - General Data Protection Regulation (GDPR)
     * [GDPR article 35](https://gdpr-info.eu/art-35-gdpr/)
     * [GDPR article 36](https://gdpr-info.eu/art-36-gdpr/)
 * technical requirements:
     * RDF turtle notation
-    * python
+    * SPARQL
+    * Python
 * recipe dependency:
    none
 ```
@@ -87,28 +81,64 @@ DPIA_overview-TODO
 | :------------- | :------------- | :------------- |
 | [RDF](https://www.w3.org/TR/rdf-syntax-grammar/)  | [DPV-OWL](https://w3c.github.io/dpv/dpv-owl/)  | |
 | [Terse RDF Triple Language - (Turtle)](https://doi.org/10.25504/FAIRsharing.3e194c)  | [DPV-SKOS]( https://www.w3id.org/dpv/dpv-skos)  | |
-| |[DPV-NACE]https://w3c.github.io/dpv/dpv-nace/) ||
+| |[DPV-NACE](https://w3c.github.io/dpv/dpv-nace/) ||
 ||[riskonto](https://raw.githubusercontent.com/coolharsh55/riskonto/master/riskonto.ttl)||
 ---
 
 ## Main Content
 
-Data management, especially the data management of personal information, is a sensitive activity which requireS a number of
-specific considerations to be taken and depending on part of the world where the operations are taking place, specific legal
+Data management, especially the management of personal information, is a sensitive activity which requires a number of
+specific considerations and, depending on the part of the world where the operations are taking place, specific legal
 frameworks will apply. Since its adoption in 2018, the European Union General Data Protection Regulation (GDPR), by
-inscribing privacy of information as fundamental right, trail blazes the domain by providing boundaries to what has been 
-for a long time an unregulated space.
+inscribing privacy of information as fundamental right, established a standard for the domain by providing boundaries to
+what had been, for a long time, an unregulated space.
 
 What does the GDPR regulation imply for the research practice and why does it matter for healthcare research? 
-The regulation means that prior to conducting any data collection involving human personal information, a 
+The regulation means that, prior to conducting any data processing involving human personal information, a 
 **Data Protection Impact Assessment (DPIA)** needs to be carried out. 
-Failing to do so may result in research proposals to be turned down or fines issued to failure to respect the regulation.
 
-In the following sections, we will examine the key steps to consider when performing a DPIA and 
-how to code such information in machine-readable form thanks to the 'Data Privacy Vocabulary' (DPV) and its extensions 
-{footcite}`10.1007_978-3-030-33246-4_44`
+In the event that the intended data processing includes data provided by a third party, then the use of this data is dependent on the 
+data access and data use conditions, established by a DPIA formulated by that third party. 
+
+Failure to generate a GDPR-compliant DPIA or adhere to conditions imposed by a third party may result in legal actions for breaching 
+the regulation.
+
+In the following sections, we will examine the key steps to consider when generating a DPIA and 
+how to code such information in machine-readable form, utilizing the 'Data Privacy Vocabulary' (DPV) 
+{footcite}`10.1007_978-3-030-33246-4_44` and its extensions.
 
 
+### Survey the data types of the project
+
+During the survey of the data types, if it becomes clear that personal, patient centric information will be *processed within the EU*,
+then the GDPR regulation applies (i.e. a multi-centric, international clinical trial recruiting patients in the EU and/or
+outside the EU the data of which will be processed in the EU falls under GDPR).
+
+In the context of scientific research, the **purpose** of the research can be explicitly determined as a justification
+for the data collection activity.
+
+
+### Identifying the key entities:
+
+Under GDPR rules, the first requirement is to nominate and identify physical or legal entities that will perform key functions.
+These functions are:
+
+- **Data Protection Officer**: An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority.
+- **Data Controller**: The individual or organisation that decides (or controls) the purpose(s) of processing personal data.
+- **Data Processor**: A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
+
+Then, it is necessary to declare all the **purposes, anticipated uses and actions** on the collected data, so these can 
+be clearly listed and documented.
+
+For each of these actions, a justification needs to be provided, explaining the reasons why information is collected
+and how it contributes to answering the research questions.
+
+The results of this survey should also be included in the **informed consent**, which will be reviewed and signed by the
+*participants (Data Subjects)* in the research project.
+
+The availability of a new semantic resource, developed as a W3C specification, provides the necessary vocabulary to 
+structure information which was until now only available in natural text and legal documents. The figure below shows an 
+excerpt of the Data Privacy Vocabulary in the Protégé ontology editing tool.
 
 ```{figure} ../../../images/dpv_in_protege.png
 ---
@@ -116,15 +146,10 @@ width: 800px
 name: DPIA_RDF
 alt: DPIA_RDF
 ---
-DPIA_RDFe
+A snippet of the Data Privacy Vocabulary as seen in Protégé ontology editor
 ```
 
-
-### Survey the data types of the project
-
-During the survey of the data types, if it becomes clear that patient centric and personal information will be collected and patients are citizens of EU country
-then the GDPR regulation applies.
-In the context of scientific research, the **purpose** of the research can be explicitly determined as a justification for the data collection activity.
+In the following RDF fragment, we show how to express the goal of the data collection of an exemplar study.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -137,35 +162,17 @@ ex:research_purpose a dpv:Purpose ;
     dpv:has_sector dpv-nace:M72 .
 ```
 
-
-There are then 2 situations regarding the origin of the data, i.e. its provenance:
-
-1. The data is generated internally.
-In this case, and if it involved sensitive information, it is necessary to obtain informed consent from all participants, and this should cover aspect of permitted use.
-
-2. The data is aggregated from external sources. 
-In this case, concerns should be about the availability of permitted data uses and licenses as well as a description of the 
+```{note}
+This snippet also makes use of the `NACE extension`, the scope of which is The Statistical Classification of Economic 
+Activities in the European Community. NACE stands for "Nomenclature statistique des Activités économiques dans la Communauté Européenne")
+```
 
 
 
-### Understand the legal restrictions of the project
 
-Under GDPR rules, the first requirement is to nominate and identify physical or legal entities that will perform key functions.
-These functions are:
+#### The Natural Persons
 
-- **Data Protection Officer**: An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority.
-- **Data Controller**: The individual or organisation that decides (or controls) the purpose(s) of processing personal data.
-- **Data Processor**: A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
-- **Data Subject**: The individual (or category of individuals) whose personal data is being processed.
-
-Then, it is necessary to declare all the **anticipated uses and actions88 on the collected data, so these can be clearly listed and documented.
-For each of these actions, a justification needs to be provided, explaining the reasons why information is collected and how it participates to
-answering the research questions.
-
-The goal of this survey is to be able to produce a consent form which can be reviewed and understood by the *Participant* to a research project.
-
-
-#### The physical entities
+These types are meant to formally identify `physical persons`.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -175,12 +182,14 @@ The goal of this survey is to be able to produce a consent form which can be rev
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ex: <http://example.org/> .
 
-ex:Person1 rdf:type foaf:Person, dpv:DataOwner .
-ex:Organization1 rdf:type foaf:Organization, dpv:DataOwner .
-ex:Organization2 rdf:type foaf:Organization, dpv:DataController .
+ex:Person1 rdf:type foaf:Person, dpv:NaturalPerson .
+
 ```
 
 #### The legal entities
+
+These types are meant to assign a function (or a role or a state) to a physical entity, as declared following the pattern
+described in the previous section.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -197,7 +206,6 @@ ex:Acme rdf:type dpv:LegalEntity ;
     dpv:hasRepresentative ex:AcmeDPO,  # internal DPO
 ex:AcmeEUOrg ; # EU Representative
     dpv:hasLocation iso:IE . # if an ISO vocabulary for country-codes is used
-
 ```
 
 
@@ -228,34 +236,63 @@ Here, we explicitly express in machine-readable form that an `Organization` acts
 @prefix dpv-nace: <https://w3id.org/dpv-nace#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ex: <http://example.org/> .
 
-ex:Wolfgang_Rhim rdf:type dpv:Representative, dpv:DataProtectionOfficer  ;
+ex:Person1 rdf:type foaf:Person, dpv:NaturalPerson, dpv:Representative, dpv:DataProtectionOfficer  ;
     dpv:hasEntity ex:Acme .
-ex:AcmeEUOrg rdf:type dpv:LegalEntity;
+ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:Organization, dpv:DataController;
     dpv:hasEntity ex:Acme ;
     dpv:hasLocation "EU"@en .
 ```
 
 
 
-### Identify the risks to privacy and define risk mitigation and security measures
+### Identifying the risks to privacy and define risk mitigation and security measures
 
 With the previous steps performed, the next step consists in understanding the risks to privacy associated with the data
 collection and processing scenarios defined by the research program. 
 
-For each of these identified risks, a mitigation plan must be established.
+For each of these identified risks, a mitigation plan should be established.
 
 A risk is defined as "a risk or possibility or uncertainty of negative effects, impacts, or consequences".
 
-Management of risks associated with data management has two major components. Used in combination, they ensure a strong culture 
-of cyber-security and data security is established and, possibly more importantly, maintained. 
-The first arm focuses on training and ensuring personnel in charge of data receives the proper education. 
-The second arm is obviously the techniques themselves and their implementations. 
- 
+Management of risks associated with data management has two major components. 
+Used in combination, they ensure a strong culture of cyber-security and data security is established and, 
+possibly more importantly, maintained. 
+- The first arm focuses on training and ensuring personnel in charge of the data receives the proper education. 
+- The second arm is obviously the techniques themselves and their implementations. 
 
-#### organisational measures:
+When dealing with human centric sensitive information, the main privacy concerns for data managers are:
+- unauthorized access to the data
+- patient re-identification
 
+which can be represented by the following RDF statements:
+
+```turtle
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+
+ex:DataStore rdf:type dpv:Technology ;
+    dpv:hasRisk ex:UnAuthorisedAccess . 
+
+# unauthorized access risks 
+ex:UnAuthorisedAccess rdf:type dpv:Risk .
+                      
+# patient re-identification risk
+ex:ReIdentification rdf:type dpv:Risk .
+
+```
+
+Both cases are very serious security and privacy issues which demand robust policies to be in place.
+These situations can be de-risked by implementing different types of solutions.
+In the following paragraphs, we show how 'data anonymization' and 'data encryption' can be explicitly declared as measures
+to mitigate patient re-identification or information retrieval in case of unauthorized access.
+
+#### Organisational measures:
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -283,41 +320,6 @@ ex:StaffCredentialsTraining rdf:type dpv:OrganistionalMeasure ;
 
 #### Technical measures:
 
-Situations can be de-risked by implementing technical solutions.
-
-When dealing with human centric sensitive information, the main privacy concerns for data managers are:
-- unauthorized access to the data
-- patient re-identification
-
-
-Step 1: Defining the risk
-
-```turtle
-@prefix dpv: <https://w3id.org/dpv#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ex: <http://example.org/> .
-
-ex:DataStore rdf:type dpv:Technology ;
-    dpv:hasRisk ex:UnAuthorisedAccess . 
-
-# 2: risk registry denoting risks and mitigations
-ex:UnAuthorisedAccess rdf:type dpv:Risk .
-                      
-# patient re-identification risk and
-ex:ReIdentification rdf:type dpv:Risk .
-
-```
-
-
-Both cases are very serious security and privacy issues which demand robust policies to be in place. In the following
-snippets, we show how 'data anonymization' and 'data encryption' are explicitly declared as means to prevent
-patient re-identification or information retrieval in case of unauthorized access.
-
-
-
-Step 2: Providing the means to mitigate the risk
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -349,7 +351,6 @@ ex:RBACCredential rdf:type dpv:TechnicalMeasure ;
 ```
 
 ```{note}
-
 RiskOnto is an ontology of risk, extending the Prov-Model developed to provide semantic support to explicitly describe risk.
 RiskOnto expresses 'risk related concepts based on ISO 31000 series' as a vocabulary and an ontology .
 For more information, see the dedicated github repository: https://github.com/coolharsh55/riskonto
@@ -365,8 +366,8 @@ alt: riskonto viewed with Ontograf in Protégé 5.5
 riskonto viewed with Ontograf in Protégé 5.5
 ```
 
-Now, revisiting the declaration of risks, we can now added a statement to indicate what risk mitigation methods have been
-devised and use the `dpv:isMitigatedByMeasure` relation.
+Now, revisiting the declaration of risks, we can add a statement to indicate what risk mitigation methods have been
+devised and use the `dpv:isMitigatedByMeasure` relation to relate the risk to the procedures set in place.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -395,36 +396,40 @@ ex:ReIdentification rdf:type dpv:Risk ;
 
 Data access requests need to be considered when devising a data protection impact assessment as part of the data governance.
 
-Data access requests are common situations whereby researchers may seek access to research data from another group, within the same jurisdiction or 
-outside the jurisdiction. 
+Data access requests are common situations whereby researchers may seek access to research data from another group,
+within the same jurisdiction or outside the jurisdiction. 
 
-Data access requests need to be appraised and evaluated by specific committees overseeing such tasks: Data Access Committees (DAC).
+Data access requests need to be appraised and evaluated by specific structures, the Data Access Committees (DAC), which 
+establish policy documents detailing the conditions of access and terms of data reuse. 
 
-The DAC will evaluate the request and actions on the data planned by the requester against the data permitted use associated to the dataset. 
+The DAC will evaluate the requests and actions on the data planned by the requester against the data permitted use associated to the dataset. 
 Depending on this assessment, the DAC will decide whether or not to grant the request.
 
-For more information about 'data permitted uses', see this recipe: 
+For more information about 'data permitted uses', see [this dedicated recipe FCB035](https://w3id.org/faircookbook/FCB035): 
 
-In the context of data access requests, the DAC needs to appraise the associated risks, which can range from:
-1. use for un-consented research
-2. data transfer to a different jurisdiction: would the data be protected to the same level once outside EU ?
-3. nature of transfer tools
+In the context of data access requests, a DAC needs to appraise risks such as:
+1. Use for un-consented research
+2. Data transfer to a different jurisdiction: would the data be protected to the same level once outside EU?
+3. Nature of transfer tools, which fall into 3 possible categories:
    1. Standard Contractual Clauses (SCC): 18 statements which can be used to assemble a `boiler plate` agreement to 
-      transfer data outside EU rule of law but in ways which conform to GDPR.
-   2. Binding Corporate Rules (BRC)
-      These are legally binding rules to transfer data within the different branches of a Company, which may operate in different countries. 
-      BRCs need to guarantee at minima the same level of protection as the Standard Contractual Clauses.
+      transfer data outside EU rule of law **but in ways which conform to the EU GDPR**.
+   2. Binding Corporate Rules (BRC):
+      These are legally binding rules to transfer data within the different branches of a Company, which may operate 
+      in different countries. BRCs need to guarantee at minima the same level of protection as the Standard Contractual Clauses.
    3. Code of Conducts (CoC)
-      Code of Conducts represent data protection policies developed for a particular type of data and/or for a particular professionals.
-      For example, [Cloud Security Alliance Code of Conduct](https://downloads.cloudsecurityalliance.org/assets/research/gdpr/CSA_Code_of_Conduct_for_GDPR_Compliance.pdf)
-4. data leak or data breach 
-5. individual re-identification 
+      Code of Conducts represent data protection policies developed for a particular type of data and/or for a 
+      particular professionals. For example, [Cloud Security Alliance Code of Conduct](https://downloads.cloudsecurityalliance.org/assets/research/gdpr/CSA_Code_of_Conduct_for_GDPR_Compliance.pdf)
+4. Data leak or data breach 
+5. Individual re-identification 
 
-Therefore, a specific data protection impact assessment is needed for each request and this can be a time-consuming operation.
+A specific data protection impact assessment is needed for each request and this can be a time-consuming operation.
 
-This is where the availability of i.) DPIA, ii.) data use agreements and iii.) data access requests in machine-readable form can be greatly beneficial. 
-They can support the development of automated assessment tool which can speed up decision regarding data access and reduce potentially the risks associated with use of
-sensitive information. Privacy preserving use of data is of paramount importance as to not erode public confidence.
+This is where the availability of machine-actionable representations of legal documents such as DPIA, data use agreements, 
+and data access requests can yield great beneficial. 
+By enabling the creation of readily exploitable documents, they help the development of automated assessment tool,
+which could expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive information. 
+Privacy preserving use of data is of paramount importance as to retain the public confidence in the scientific practice 
+and the safe-keeping of information.
 
 
 ````{dropdown}
@@ -438,6 +443,8 @@ alt: data-use-agreement
 data-use-agreement
 ```
 ````
+
+<!-- 
 ### Identify the data sources and provenance information
 
 TODO
@@ -450,7 +457,7 @@ TODO
 
 Based on all the information collected in the previous steps, a **data governance** can be drafted:
 
-
+-->
 
 ## Conclusion
 
@@ -473,7 +480,7 @@ The present recipe does not constitute legal advice.
 It merely introduces concepts related to compliance with the GDPR policy and resources that may be used
 to express essential information in a formal, machine readable way. 
 We need to draw the attention of the readership that they should consult with their respective legal representatives to 
-ensure the validatity, accurracy of any representation of legal document statements into RDF. 
+ensure the validity, accuracy of any representation of legal document statements into RDF. 
 We only documented technical options and a number of possible patterns and resources available.
 It is the responsibility of the implementer to also ensure that the legal information aligns with company practices and interests. 
 
@@ -485,7 +492,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 >  We highly recommend following up this recipe with another relevant content type which looks at how to express permitted data uses
 > by relying on two standards, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (DUO).
 > * [Provenance Information](fcb-reusability-provenance)
-> * [Data use Ontology and ODRL](fcb-reusability-data_use)
+> * [Data Use Ontology and ODRL](fcb-reusability-data_use)
 
 
 
@@ -527,11 +534,10 @@ It is the responsibility of the implementer to also ensure that the legal inform
 ## Authors
 
 ````{authors_fairplus}
+David: Conceptualization, Writing
+Anne: Conceptualization, Writing
 Philippe: Conceptualization, Writing 
 Susanna: Conceptualization, Writing 
-Anne: Conceptualization, Reviewing
-David: Reviewing
-
 ````
 
 
@@ -539,4 +545,3 @@ David: Reviewing
 ````{license_fairplus}
 CC-BY-4.0
 ````
-
