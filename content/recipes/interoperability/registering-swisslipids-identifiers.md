@@ -42,7 +42,8 @@ Recipe *InChI and SMILES identifiers for chemical structures* ([fcb:FCB007](http
 can be generated for chemical compounds in your database.
 
 As an example, this recipe demonstrates the approach of listing [SwissLipid](http://www.swisslipids.org/#/) {footcite}`Aimo2015SwissLipids`
-identifiers in Wikidata, developed at the 2021 BioHackathon Europe. Earlier, a [Swiss Lipid property for Wikidata](https://www.wikidata.org/wiki/Wikidata:Property_proposal/SwissLipids_identifier)
+identifiers in Wikidata, developed at the 2021 BioHackathon Europe. 
+Earlier, a [Swiss Lipid property for Wikidata](https://www.wikidata.org/wiki/Wikidata:Property_proposal/SwissLipids_identifier)
 was already proposed, later approved, and created in Wikidata [just before the 2020 BioHackathon Europe](https://www.wikidata.org/w/index.php?title=Property:P8691&oldid=1287579005).
 An existing Wikidata property is a requirement to adding the external identifiers.
 
