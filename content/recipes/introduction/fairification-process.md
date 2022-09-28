@@ -56,12 +56,6 @@ general intro - what is the framework, why was it developed (highlight iterative
 
 ### The FAIRification Process
 
-[comment]: <> (brief intro to the process )
-
-[comment]: <> (include FAIRification process diagram)
-
-[comment]: <> (simplified version of the FAIRification process paper - don't need to focus on the validation aspect as we can reference the paper)
-
 The FAIRIfication process can be divided into four phases:
 1. FAIRification goal defintion
 2. Requirement examination
@@ -118,11 +112,21 @@ brief explanation, image & reuse supplementary table 2 from process paper
 
 ### The FAIRification Workplan
 
-brief explanation & exemplar (eg CARE) or refer to next section 
+The FAIRification Workplan is a specific design and implementation plan generated for a specific project based on the goals set in phase 1 and requirements identified in phase 2 of the Process. Relevant elements from the FAIRification Template are selected and broken down into concrete tasks. These tasks are then completed within the agreed cycle time frame as per the FAIRification Process.
 
-## The framework in action
+The diagram below shows the bespoke FAIRification Workplan for the CARE project. The  Workplan follows the general outline of the FAIRification Process, with the goals listed in section 1 (red), the outcomes of the project examination on section 2 (orange) and the pre-FAIRification assessment outcomes in section 3. It can also be beneficial to explicitly list the indicators targeted for improvement in this section in order to keep this information easily accessible in one place.
 
-an example project from start to finish - how we set the goals, did anything change after the examination, doing the work, post-assessment. Include diagrams etc as appropriate 
+The key parts of the workplan are section 4 (Design Decisions) and 5 (Implementation). Section 4 lists the specific steps from the FAIRification Template that will be addressed in this FAIRification cycle (dark purple) and refines them into more concrete steps relevant for this context (light purple). In section 5, these concrete steps are broken down into clear implementable tasks, which are recorded in colour coded boxes to track progress. If a Cookbook recipe already exists to address a task, this can be linked here. 
+
+Following a FAIRification cycle, the results of the post-FAIRification assessment are recorded in section 6. 
+
+If more than one FAIRification cycle is performed, a new version of the Workplan should be produced for each cycle, in particular if there are changes in sections 4 and 5.
+
+
+![FAIRification Workplan CARE project](./FAIRificationWorkplanCare.jpg)
+
+
+
 
 
 ## Practical considerations
