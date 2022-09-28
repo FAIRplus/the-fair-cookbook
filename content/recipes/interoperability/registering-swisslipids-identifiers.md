@@ -15,7 +15,7 @@
 
 ## Main Objectives
 
-The objective of this recipe is to describe how external identifiers can be added to Wikidata in an automated.
+The objective of this recipe is to describe how external identifiers can be added to Wikidata in an automated way.
 
 ___
 
