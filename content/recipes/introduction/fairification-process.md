@@ -153,9 +153,10 @@ deposited on online catalogs and recipe books such as teh Cookbook, RDMKit, IMI 
 
 The FAIRification template provide an outline of possible FAIRification aspects a dataset could be considered for. 
 
-> :exclamation: This template was formulated based on retrospective and prospective experiences of FAIRification of 
+```{note}
+This template was formulated based on retrospective and prospective experiences of FAIRification of 
 datasets within IMI FAIRplus and does not represent the exhaustive list of all potential FAIRification aspects.
-
+```
 
 The template provides an overview on the data from 3 perspectives: Contents related, Representation and format, and the 
 hosting environment capabilities. Covering these three aspects, 8 steps are required for the implementation of the 
@@ -174,29 +175,30 @@ FAIRification template
 ```
 ````
 
-- **Step 1: Get the data**: This step involves getting access to the underlying dataset via a restricted or open access
-    API and capturing information on how to query the data via the API.
-
-- **Step 2: Model the domain**: Here, the data types involved in the dataset are identified. 
-    Also, the community or domain standards for representation of the data are also captured to align the FAIRification work, if any, along those lines.
-
-- **Step 3: Select the identifier scheme**: Here, the establishment of an identifier for identification of the dataset is done.
-    This could be achieved by generation of new identifiers or reusing of existing ones.
-
-- **Step 4: Apply data standards**: At this step, data standard validation and identification is done to ensure that the
-    representation of the data is in community or domain specified formats for interoperability purposes.
-
-- **Step 5: Choose data vocabularies**: At this step, you would look in depth about the data content and harmonize it
-    with ontologies either pre-existing or formulate an application ontology for your use case.
-
-- **Step 6: Transform data for interoperability**: Not only would you represent the data in one ontology but also link
-    or map to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.
-
-- **Step 7: Host your data**: Once the dataset is ready, hosting and search engine optimization inputs for the dataset
-    need to be in place. Alongside hosting, data versioning and data formats need to also be considered.
-
-- **Step 8: Share your data**: Now that the dataset is FAIRified, one can share this data to the community with licensing.
-    In case of dealing with sensitive data, data anonymization considerations should be placed prior to sharing.
+>
+>- **Step 1: Get the data**: This step involves getting access to the underlying dataset via a restricted or open access
+>    API and capturing information on how to query the data via the API.
+>
+>- **Step 2: Model the domain**: Here, the data types involved in the dataset are identified. 
+>    Also, the community or domain standards for representation of the data are also captured to align the FAIRification work, if any, along those lines.
+>
+>- **Step 3: Select the identifier scheme**: Here, the establishment of an identifier for identification of the dataset is done.
+>    This could be achieved by generation of new identifiers or reusing of existing ones.
+>
+>- **Step 4: Apply data standards**: At this step, data standard validation and identification is done to ensure that the
+>    representation of the data is in community or domain specified formats for interoperability purposes.
+>
+>- **Step 5: Choose data vocabularies**: At this step, you would look in depth about the data content and harmonize it
+>    with ontologies either pre-existing or formulate an application ontology for your use case.
+>
+>- **Step 6: Transform data for interoperability**: Not only would you represent the data in one ontology but also link
+>    or map to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.
+>
+>- **Step 7: Host your data**: Once the dataset is ready, hosting and search engine optimization inputs for the dataset
+>    need to be in place. Alongside hosting, data versioning and data formats need to also be considered.
+>
+>- **Step 8: Share your data**: Now that the dataset is FAIRified, one can share this data to the community with licensing.
+>    In case of dealing with sensitive data, data anonymization considerations should be placed prior to sharing.
 
 
 <!-- [FAIRification Template](./FAIRificationTemplate.png) -->
