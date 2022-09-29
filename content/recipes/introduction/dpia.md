@@ -425,10 +425,10 @@ In the context of data access requests, a DAC needs to appraise risks such as:
 A specific data protection impact assessment is needed for each request and this can be a time-consuming operation.
 
 This is where the availability of machine-actionable representations of legal documents such as DPIA, data use agreements, 
-and data access requests can yield great beneficial. 
-By enabling the creation of readily exploitable documents, they help the development of automated assessment tool,
-which could expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive information. 
-Privacy preserving use of data is of paramount importance as to retain the public confidence in the scientific practice 
+and data access requests can yield great benefits. 
+By enabling the creation of readily exploitable documents, it could help the development of automated assessment tool,
+which would expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive information. 
+Privacy preserving use of data is of paramount importance to retain the public confidence in the scientific practice 
 and the safe-keeping of information.
 
 
@@ -463,9 +463,8 @@ Based on all the information collected in the previous steps, a **data governanc
 
 > With this recipe, we have:
 > - highlighted the importance of the European legal framework devised to ensure protection of privacy.
-> - pointed to the existence of dedicated vocabulary / semantic model to report and structure key information around data protection
-> - provided practical examples of how to convert an Excel template guiding the data protection impact assessment into an 
-> RDF based representation exploiting the vocabulary mentioned above.
+> - highlighted the existence of a dedicated vocabulary / semantic model to express key information about data protection impact assessment
+> - provided practical examples of how to produce an RDF-based representation exploiting the DPV vocabulary.
 > 
 > The reader should understand that this is an active area of research and therefore, patterns for using the 
 vocabularies introduced in this recipe may evolve and be refined. The main point is to raise awareness about these resources. 
