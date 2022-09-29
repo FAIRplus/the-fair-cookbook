@@ -3,20 +3,19 @@
 - part: FOREWORD
   numbered: false
   chapters:
-    # - file: content/recipes/introduction
     - file: content/recipes/introduction/FAIR-cookbook-audience
       title: Introduction
     - file: content/recipes/introduction/brief-FAIR-principles
       title: What are the FAIR principles?
     - file: content/recipes/introduction/FAIRplus-values
       title: Ethical values of FAIR
-    - file: content/recipes/introduction/metadata-fair #FCB068PRE
+    - file: content/recipes/introduction/metadata-fair #FCB068
       title: Metadata and FAIR
-    - file: content/recipes/introduction/training-datasets #FCB069PRE
+    - file: content/recipes/introduction/training-datasets #FCB069
       title: Datasets to train on FAIRification
-    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070PRE
+    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070
       title: FAIR and Knowledge Graphs
-    - file: content/recipes/introduction/public-kg-resource-integration #FCB071PRE
+    - file: content/recipes/introduction/public-kg-resource-integration #FCB071
       title: Public Knowledge Graphs for Life Sciences
     - file: content/recipes/introduction/priorization #FCB055
       title: Selecting projects for FAIRification
@@ -24,18 +23,7 @@
       title: Practical Considerations for a CRO to do FAIR
     - file: content/recipes/introduction/glossary-fair-terms
       title: Glossary
- 
-      # title: Introduction
-      # numbered: true
-      # sections:
-          # - file: content/recipes/glossary-fair-terms
-          # - file: content/recipes/introduction/brief-FAIR-principles
-          # - file: content/recipes/introduction/what-is-IMI
-          # - file: content/recipes/introduction/FAIR-in-IMI-context
-          # - file: content/recipes/introduction/IMI-and-data-management-plans
-          # - file: content/recipes/introduction/IMI-Data-Access-Request-Process
-          # - file: content/recipes/introduction/data-sharing-models
-  
+
 
 - part: FAIR RECIPES
 
@@ -52,8 +40,8 @@
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
         title: Depositing in Zenodo generic repository #FCB009
-      - file: content/recipes/findability/registeringDatasets #FCB060PRE
-        title: Registering Datasets in Wikidata
+      - file: content/recipes/findability/registeringDatasets
+        title: Registering Datasets in Wikidata #FCB060
       - file: content/recipes/findability/checksum-create
         title: Describe data by checksums #FCB052
       - file: content/recipes/findability/checksum-validate
@@ -104,7 +92,7 @@
               - file: content/recipes/interoperability/ontology-robot-recipe/MSIO-robot-build-process.ipynb
                 title: Application ontology for metabolomics  #FCB024
           - file: content/recipes/interoperability/ontology-alignment-oxo
-            title: Ontology mapping with Ontology Xref Service (OxO)
+            title: Ontology mapping with Ontology Xref Service (OxO) #FCB076PRE
           - file: content/recipes/interoperability/creating-data-dictionary 
             title: Creating a data/variable dictionary #FCB025
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
@@ -140,12 +128,10 @@
           title: Software licenses #FCB033
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses #FCB034
-        # - file: content/recipes/reusability/license-selection
         - file: content/recipes/reusability/expressing-data-use 
           title: Declaring data's permitted uses #FCB035
         - file: content/recipes/reusability/provenance
           title: Provenance information #FCB036
-        # - file: content/recipes/reusability/community-standards
 
     - file: content/recipes/infrastructure
       title: Infrastructure
@@ -153,6 +139,8 @@
       sections:
           - file: content/recipes/infrastructure/id-resolution
             title: Identifier resolution services #FCB046
+          - file: content/recipes/infrastructure/gupri
+            title: Creating resolvable identifiers #FCB077PRE
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/data-catalog-deployment
@@ -167,52 +155,37 @@
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying the EBI OLS #FCB005
           - file: content/recipes/infrastructure/openrefine-nvt
-            title: Using OpenRefine and Karma for FAIRification
-
+            title: Using OpenRefine and Karma for FAIRification #FCB075PRE
+          - file: content/recipes/infrastructure/fair-api #FCB073
+            title: Developing FAIR API for the Web
 
     - file: content/recipes/assessing-fairness
       title: Assessment
       numbered: true
       sections:
-            # - file: content/recipes/assessing-fairness/automatic-fair-assessment
             - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
               title: FAIR Evaluator tool #FCB049
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
               title: FAIRshake tool #FCB050
-
-    #   sections:
-    #     - file: content/recipes/assessing-fairness/cmmi/Data-Management-Maturity-Model
-    #     - file: content/recipes/assessing-fairness/cmmi/Datasets-Maturity-Model
-    #     - file: content/recipes/assessing-fairness/cmmi/Data-Usage-Areas
-    #     - file: content/recipes/assessing-fairness/fair-indicators
-    #       sections:
-    #         - file: content/recipes/assessing-fairness/cmmi/RDA-Indicators
-    #         - file: content/recipes/assessing-fairness/cmmi/FAIRPlus-Indicators
-    #     - file: content/recipes/assessing-fairness/manual-fair-assessment 
-    #       sections:
-    #         - file: content/recipes/assessing-fairness/cmmi/evaluation-method
-    #         - file: content/recipes/assessing-fairness/cmmi/rda-evaluation
 
 - part: FAIR Maturity
   chapters:
     - file: content/recipes/maturity
       title: A Model To Gauge Dataset Maturity
       sections:
-        - file: content/recipes/reusability/miappe #FCB061PRE
+        - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - the MIAPPE use case
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
           sections:
-            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063PRE
+            - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063
               title: Creating a basic ISA document
-            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064PRE
+            - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064
               title: Making a community compliant - ISA in JSON
-            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065PRE
+            - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065
               title: Moving to a semantically typed version - ISA in RDF
-            - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066PRE
+            - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066
               title: Packaging ISA as a Research Object (RO)
-  #            - file: content/recipes/maturity/isa-ro-zenodo-deposition
-  #              title: Programmatic deposition to Zenodo
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
           title: Making omics data matrices FAIR #FCB037
           numbered: true
@@ -226,25 +199,8 @@
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
               title: Integrating data #FCB041
         - file: content/recipes/applied-examples/fair-workflows
-          title: Making Computational Workflows FAIR #FCB062PRE
+          title: Making Computational Workflows FAIR #FCB062
 
-#- part: FAIRification Fairs
-#  chapters:
-#    - file: content/recipes/maturity
-#      title: Moving through dataset maturity
-#      numbered: true
-#      sections:
-#    - file: content/recipes/maturity/l1
-#      title: Recipes reaching Level I
-#      sections:
-#        - file: content/recipes/infrastructure/id-resolution
-#          title: Identifier resolution services #FCB046
-#    - file: content/recipes/maturity/l2
-#      title: Recipes reaching Level II
-#    - file: content/recipes/maturity/levelthree
-#      title: Recipes reaching Level III
-#    - file: content/recipes/maturity/levelfour
-#      title: Recipes reaching Level IV
 
 
 - part: FAIRified Datasets
@@ -266,7 +222,7 @@
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
         - file: content/recipes/applied-examples/approach-cdisc
-          title: Mapping datasets to CDISC-SDTM
+          title: Mapping datasets to CDISC-SDTM #FCB078PRE
 
 - part: Tools
   chapters:
@@ -280,7 +236,6 @@
       title: Community
       numbered: false
       sections:
-        # - file: content/recipes/afterword/governance
         - file: content/recipes/afterword/people
           title: Boards and contributors
         - file: content/recipes/afterword/code_of_conduct
@@ -291,12 +246,6 @@
           sections:
             - file: content/recipes/afterword/the-turing-way
               title: Leveraging the Turing Way Book
-        # - file: content/recipes/boilerplate/technology_stack
-        #   title: Technology stack
-        # - file: content/recipes/boilerplate/license
-        # - file: content/recipes/boilerplate/project_information
-        # - file: content/recipes/boilerplate/roadmap
-        # - file: content/recipes/boilerplate/disclaimer
 
     - file: content/recipes/help
       title: Contribute

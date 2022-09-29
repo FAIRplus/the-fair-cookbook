@@ -7,8 +7,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: FCB000
-:identifier_link: 'https://w3id.org/faircookbook/FCB000'
+:identifier_text: FCB078
+:identifier_link: 'https://w3id.org/faircookbook/FCB078'
 :difficulty_level: 3
 :recipe_type: applied_example
 :reading_time_minutes: 20

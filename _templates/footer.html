@@ -1,7 +1,7 @@
-<footer class="footer mt-5 mt-md-0">
+<footer class="footer" style="{% if pagename !='content/home' %} margin-top: 12px; {% endif %} ">
     <div class="container-md mt-4">
-      <div class="row">
-          <div class="col-4">
+      <div class="row" style="display:flex; justify-content: center">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
             <div class="footerImages">
               <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
               <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
@@ -9,20 +9,20 @@
             </div>
             <div class="mb-3"> Grant agreement 802750 </div>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
                 <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
               </ul>
           </div>
-          <div class="col-2 d-flex">
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
               <ul>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
                 <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
               </ul>
           </div>
-          <div class="col-2">
-            <a href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+          <div class="col-12 col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3 pb-5">
+            <a class="mr-3" href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
             <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
           </div>
       </div>
