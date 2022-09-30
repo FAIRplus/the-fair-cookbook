@@ -111,7 +111,7 @@ The FAIRification template provide an outline of possible FAIRification aspects 
 
 The template provides an overview on the data from 3 perspectives: Contents related, Representation and format, and the hosting environment capabilities. Covering these three aspects, 8 steps are required for the implementation of the FAIRification template as shown in Figure 3. We discuss each of the steps below in detail:
 
-[//]: # (Add figure here)
+![FAIRification Template](./FAIRificationTemplate.png)
 
 - **Step 1: Get the data**: This step involves getting access to the underlying dataset via a restricted or open access API and capturing information on how to query the data via the API.
 
@@ -129,8 +129,6 @@ The template provides an overview on the data from 3 perspectives: Contents rela
 
 - **Step 8: Share your data**: Now that the dataset is FAIRified, one can share this data to the community with liscening. In case of dealing with sensitive data, data anonymization considerations should be placed prior to sharing.
 
-
-![FAIRification Template](./FAIRificationTemplate.png)
 
 
 ### The FAIRification Workplan
