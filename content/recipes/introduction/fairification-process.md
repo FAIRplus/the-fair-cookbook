@@ -53,14 +53,18 @@ FAIRification framework
 ```
 ````
 
-
-
 ---
 
 
 ## The FAIRification Framework
 
-general intro - what is the framework, why was it developed (highlight iterative process), what are the components
+The FAIRplus FAIRification Framework was developed to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR principles into actionable, "tried and tested" processes. The framework was developed in an iterative fashion by a multi-disciplinary team of research scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner projects.
+
+The framework consists of 3 components:
+>* a reusable  FAIRification Process, which outlines the main phases of a FAIRification activity
+>* a FAIRification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR transformation
+>* a FAIRification Workplan layout, which provides a structure for organising FAIR implementation work tailored to the needs of a specific project.
+
 
 ### The FAIRification Process
 
@@ -252,29 +256,31 @@ FAIRification Workplan CARE project
 While this recipe does not deal in detail with how to implement the FAIRification framework, as this is covered elsewhere,
 it is worth highlighting a few important practical considerations:
 
-* **The importance of good goal setting**. Throughout the development of the framework, we tested iterative versions 
-* multi-disciplinary task teams
-* flexibility of the framework w/ regards to assessment approaches etc
+* **The importance of good goal setting**. Throughout the development of the framework, we tested iterative versions of the framework on a range of use cases brought to us by other IMI projects. One of the standout lessons from these collaborations was that good FAIRification goals lead to good FAIRification goals. The characteristics of a good FAIRification goals are:
+	* Actionability: goals need to be translatable into concrete tasks. A goal that is too vague can be difficult to implement as it is unclear what steps are involved in its completion. 
+	* Defined scope: a good goal has a clearly defined scope or endpoint. Without this, work on an open-ended goal is likely going to carry on indefinitely with diminishing benefits.
+	* Scientific value: FAIRification work comes at a cost so a good FAIRification goal needs to explicitly state why the work will increase the data's scientific value. Investing a great deal of effort to FAIRify a single-use internal dataset that is not intended to ever be shared or reused would not constitute a prudent investment of resources. 
+ 
+* **Multi-disciplinary task teams**. FAIR considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology maintenance to data management aspects such as the creation of data dictionaries to project-level governance issues like data licensing and reuse conditions. A successful FAIRification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research scientists and project managers, to name just a few. The exact composition of a task team depends on the nature of the FAIRification tasks and may change over the course of the FAIRification process, with different skills required in the goal setting and project examiniation phases than during task implementations.
+
+* **Flexibility of the framework with regards to specific FAIR approaches or implementations**. The FAIRification Framework described here is agnostic of any specific FAIR implementation such as different FAIR assessment methodologies. During the development of the framework, we trialed a range of methodologies including [RDA](https://www.rd-alliance.org/group/fair-data-maturity-model-wg/post/fair-data-maturity-model-indicators), [FAIRsFAIR](https://fairsfair.eu/fairsfair-data-object-assessment-metrics-request-comments) and [FAIR Dataset Maturity (DSM)](https://fairplus.github.io/Data-Maturity/) indicators to assess FAIRification as well as a range of tools to support the definition of FAIRification goals and their translation into a workplan.
 
 ---
 
 ## Conclusion
-***NOTE: this is a direct c/p from Box 1 in the process paper. Do not publish as is!***
+The key take-homes of this recipe are:
 
-1. **Focus on incrementally achievable targets**. Projects approach the FAIR principles in different orders and risk overdoing.
-Instead, we focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR enough”** status.
-2. **Tailor the generic FAIRification process to individual needs**. Projects have different needs, even when the underlying data, 
-capability and resource requirements appear to be quite similar. Customising the relevant template elements allows to form a coherent workplan. 
-3. **Assemble a multi-disciplinary team**. Projects are often multi-partner, international and distributed in nature, 
-with datasets of different provenance and source. A successful FAIRification process starts with bringing together diverse
-teams that include the data owners as well professionals who can tackle the legal, as well as curatorial and technical 
-infrastructure aspects. 
+1. **Tailor the generic FAIRification process to individual needs**. There is no single right way to "do FAIR" and every project will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project's needs. 
+1. **Carefully define FAIRification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR enough”** status.
+1. **Assemble a multi-disciplinary team**. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
 ### What should I read next?
-TODO
-<!-- >* [FAIRification Checklist](FAIRification-checklist.md)
->* [DPIA](dpia.md) -->
-
+>* [Prioritization of projects for FAIRification](../introduction/priorization.md)
+>* [Depositing in Zenodo generic repository](../findability/zenodo-deposition.md)
+>* [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
+>* [Creating data/variable dictionary](../interoperability/creating-data-dictionary.md)
+>* [Interlinking data from different sources](../interoperability/identifier-mapping.md)
+>* [Maturity models](../maturity.md)
 
 ## References:
 
