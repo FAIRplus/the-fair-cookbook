@@ -19,6 +19,8 @@
       title: Public Knowledge Graphs for Life Sciences
     - file: content/recipes/introduction/priorization #FCB055
       title: Selecting projects for FAIRification
+    - file: content/recipes/introduction/fairification-process #FCB079
+      title: FAIRification framework
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Practical Considerations for a CRO to do FAIR
     - file: content/recipes/introduction/glossary-fair-terms
@@ -224,10 +226,10 @@
         - file: content/recipes/applied-examples/approach-cdisc
           title: Mapping datasets to CDISC-SDTM #FCB078PRE
 
-- part: Tools
+- part: Recipes at a Glance
   chapters:
     - file: content/search-wizard
-      title: Search Recipes
+      title: Filter Recipes
 
 
 - part: AFTERWORD
