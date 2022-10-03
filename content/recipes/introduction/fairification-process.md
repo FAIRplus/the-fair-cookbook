@@ -1,4 +1,4 @@
-(fcb-help-recipe-template)=
+(fcb-fairification-process)=
 # FAIRification framework
 
 
@@ -109,7 +109,7 @@ Check out the [DSM recipe](../maturity.md) for more details on how the tool is a
 Upon identification of the goal by the data owners, a discussion with the technical team is done.
 The technical team then start with collection of the data to ensure that they have access to the data that needs to be FAIRified. 
 If the technical team is external, certain legal aspects need to be placed for efficient transition of data between the
-data owners and technicians (for example a DPIA may be needed, see [this recipe](dpia.md) for more details).
+data owners and technicians (for example a DPIA may be needed, see this recipe (dpia.md) for more details).
 
 Following this, the technical team identifies tools and expertise required for the implementation of the work and start
 cataloging this material. Lastly, the team collectively decides on the individuals that would be assigned the FAIRification task.
