@@ -15,8 +15,8 @@ living in that space.
 
 ## Background
 
-Maturity models are not new. There are in fact training programs specifically designed for this such as  
-The **Capability Maturity Model Integration (CMMI)** {footcite}`cmmi`.
+Maturity models are not new. There are in fact training programs specifically designed for this such as the
+**Capability Maturity Model Integration (CMMI)** {footcite}`cmmi`.
 These models originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
 as means to rate the reliability and degree of development of a particular technology, skill or process,
 in other words, a capability. 
