@@ -69,7 +69,7 @@ These can be found in the **Recipe Card**.
 They are there to provide our readership with a pointer to the level of data set maturity they can expect to meet if
 they apply and implement the recipe.
 
-The FAIR DSM indicators are also used to browser the recipes through the lense of maturity improvements level, which is
+The FAIR DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
 of interest. 
 
 Finally, the FAIR Cookbook produced specific content available as jupyter notebooks which use the familiar Investigation Study Assay model {footcite}`pmid20679334` 
