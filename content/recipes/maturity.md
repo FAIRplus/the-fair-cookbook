@@ -33,7 +33,7 @@ great depths the fundamental operations and challenges associated with data mana
 More recently, The FAIR principles articulated key requirements and properties data should have {footcite}`pmid26978244`.
 Following this important work, a number of initiatives have worked at producing domain specific maturity indicators. 
 Among these initiatives, the Research Data Alliance Maturity Indicators seem to have gain notoriety
-{footcite}`RDAindicators`
+{footcite}`RDAindicators`.
 
 Building on these efforts, the FAIRplus project has developed a more targeted approach by focusing on the notion of 
 dataset. 
