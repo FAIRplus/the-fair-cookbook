@@ -38,6 +38,8 @@
         title: Unique, persistent identifiers #FCB006
       - file: content/recipes/infrastructure/chemical-identities
         title: InChI and SMILES identifiers for chemical structures #FCB007
+      - file: content/recipes/infrastructure/iupac-names
+        title: Generating InChIKeys for IUPAC names #FCB080
       - file: content/recipes/findability/identifiers-minids
         title: Minting identifiers with Minid #FCB008
       - file: content/recipes/findability/zenodo-deposition
