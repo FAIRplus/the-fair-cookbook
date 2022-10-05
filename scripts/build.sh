@@ -18,6 +18,8 @@ echo 'Cleanup intermediate files and removed node_modules'
 rm list_of_all_mermaid_files
 rm -rf ./node_modules
 
+echo '{}' > _static/recipes.json
+
 echo 'Build the book'
 jb build . 2>&1 | tee ./build.log
 grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
