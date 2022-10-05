@@ -1,5 +1,5 @@
 (fcb-reusability-data_use)=
-# Declaring data's permitted uses
+# Declaring data permitted uses
 
 <br/>
 <br/>
@@ -14,7 +14,7 @@
 :maturity_level: 4
 :maturity_indicator: 59
 :has_executable_code: nope
-:recipe_name: Declaring data's permitted uses
+:recipe_name: Declaring data permitted uses
 ```` 
 
 ## Main Objectives

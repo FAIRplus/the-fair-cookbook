@@ -5,8 +5,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: FCB0_TOBEMINTED
-:identifier_link: 'https://w3id.org/faircookbook/FCB0_TOBEMINTED'
+:identifier_text: FCB076
+:identifier_link: 'https://w3id.org/faircookbook/FCB076'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
@@ -36,7 +36,7 @@ to map ontology terms between source and target vocabularies {footcite}`oxo` .
 
 ````{dropdown} 
 :open:
-```{figure} ontology-align-oxo.mmd.png
+```{figure} ontology-align-oxo.mmd.svg
 ---
 height: 550px
 name: Aligning Ontologies
