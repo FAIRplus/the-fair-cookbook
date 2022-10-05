@@ -11,9 +11,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: bioinformatician, data_scientist, data_engineer
-:maturity_level: 2
-:maturity_indicator: 1, 2
-  :has_executable_code: nope
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
 :recipe_name: How to create checksum files
 ```` 
 

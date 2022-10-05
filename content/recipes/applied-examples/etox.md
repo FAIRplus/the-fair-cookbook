@@ -11,7 +11,7 @@ TODO: clarify authors
 
 ````{panels_fairplus}
 :identifier_text: FCB042
-:identifier_link: 'http://w3id.org/faircookbook/FCB042'
+:identifier_link: 'https://w3id.org/faircookbook/FCB042'
 :difficulty_level: 4
 :recipe_type: applied_example
 :reading_time_minutes: 20

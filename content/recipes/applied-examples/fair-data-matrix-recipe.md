@@ -6,7 +6,7 @@
 
 ````{panels_fairplus}
 :identifier_text: FCB037
-:identifier_link: 'http://w3id.org/faircookbook/FCB037'
+:identifier_link: 'https://w3id.org/faircookbook/FCB037'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 30

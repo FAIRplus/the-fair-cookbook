@@ -8,12 +8,12 @@
 :identifier_text: FCB035
 :identifier_link: 'https://w3id.org/faircookbook/FCB035'
 :difficulty_level: 4
-:recipe_type: hands_on
+:recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
-:has_executable_code: yeah
+:maturity_level: 4
+:maturity_indicator: 59
+:has_executable_code: nope
 :recipe_name: Declaring data's permitted uses
 ```` 
 

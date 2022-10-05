@@ -162,12 +162,10 @@ footer li {
 }
 
 h1  {
- 	display: inline;
-    font-weight: 400;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 1;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -243,7 +241,7 @@ main.c-textbook__page{
 	font-size: 16px;
 }
 
-div.col-12.col-md-3.bd-sidebar.site-navigation.show {
+.bd-sidebar.site-navigation#site-navigation {
     font-weight: bold;
     opacity: 0.95;
 }
@@ -389,10 +387,6 @@ div.firstCol div.d-block {
         max-width: 100% !important;
         padding-left: 0 !important;
     }
-    div#site-navigation {
-        max-width: 300px;
-        padding: 40px 20px 20px 20px;
-    }
     div#site-navigation .navbar_extra_footer {
         margin-bottom: 0 !important;
         margin-top: 20px;
@@ -412,9 +406,8 @@ div.firstCol div.d-block {
     }
     footer,
     footer {
-        width: 98.5vw !important;
+        width: 100% !important;
         position: absolute;
-        left: -295px;
     }
     footer *:not(img) {
         width: 100% !important;
@@ -443,12 +436,6 @@ div.firstCol div.d-block {
     }
 }
 
-@media (max-width: 1404px) {
-    .footer {
-        margin-right: 20px;
-    }
-}
-
 div#site-navigation img.logo{
     width: 260px !important;
     margin: 0 !important;
@@ -459,7 +446,7 @@ div#site-navigation .navbar-brand-box {
     width: auto;
 }
 
-div#site-navigation li.active {
+v-col#site-navigation li.active {
     border-left: 0 !important
 }
 
@@ -599,10 +586,6 @@ footer.footer p:not(:first-child) {
 hr,
 li.c-sidebar__divider {
   border-top: 1px solid #fc7a4a;
-}
-
-li.active {
-    border-left: 1px solid #fc7a4a;
 }
 
 img.imageez {
@@ -781,6 +764,18 @@ ul.c-sidebar__chapters,
 button.btn.btn-secondary.topbarbtn,
 button.btn.btn-secondary {
   color: #fc7a4a;
+}
+
+.bd-toc div.onthispage, .custom-bdtoc .toc-entry a {
+    color: #5a5a5a !important;
+}
+
+.bd-toc div.onthispage, .custom-bdtoc .toc-entry a.active {
+    color: #fc7a4a !important;
+}
+
+nav#bd-toc-nav ul {
+    padding: 0 !important;
 }
 
 main.c-textbook__page {
@@ -1092,8 +1087,11 @@ div.topbar {
    fill: orangered !important;
 }
 
-
-
+@media (max-width: 735px) {
+    .extraButtons {
+        display: none;
+    }
+}
 
 @media (max-width: 1250px) {
     .recipe {
@@ -1130,4 +1128,65 @@ div.topbar {
 
 .bd-topbar-whitespace {
     max-height:45px;
+}
+
+.custom-bdtoc .tocsection, .custom-bdtoc #bd-toc-nav {
+    border-left: 1px solid #fc7a4a !important;
+}
+
+.custom-bdtoc {
+    right: 35px;
+    padding-bottom: 10px;
+}
+
+.bd-search .icon {
+    top:27px;
+}
+
+input.rounded {
+    border-radius: 50%;
+}
+
+.img-block img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.highlighted {
+    background-color: #fc7a4a;
+    padding: 2px;
+    color: white !important;
+}
+
+#site-navigation.bd-sidebar {
+    margin-top: 0 !important;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+
+.v-application--wrap {
+    min-height: initial !important;
+}
+
+.rotate-0 {
+    transform-origin: right -200px;
+    transform: perspective(1500px) rotateY(16deg);
+}
+
+.rotate-3 {
+    transform-origin: left -200px;
+    transform: perspective(1500px) rotateY(-16deg);
+}
+
+.elevate {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+@media screen and (max-width: 1270px) and (min-width: 1250px) {
+    .homeFAIRCard {
+        min-height: 350px;
+    }
 }

@@ -1,0 +1,343 @@
+{% set title = _('Search') %}
+
+<script>
+    Vue.component("Searchme", {
+        data() {
+            return {
+                recipes: [],
+                headers: [
+                    {
+                        text: 'Identifier',
+                        value: 'identifier',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Recipe Name',
+                        value: 'name',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Recipe Type',
+                        value: 'type',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Reading Time',
+                        value: 'reading_time',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Executable Code',
+                        value: 'executable',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Audience',
+                        value: 'audience',
+                        align: 'left',
+                        sortable: true,
+                    },
+                    {
+                        text: 'Maturity Level',
+                        value: 'maturity',
+                        align: 'left',
+                        sortable: true,
+                    }
+                ],
+                all_recipes: [],
+                loading: false,
+                inputs: {
+                    name: null,
+                    recipeType: {
+                        values: [],
+                        value: null
+                    },
+                    audience: {
+                        values: [],
+                        value: null
+                    },
+                    readingTime: {
+                        min: 0,
+                        max: 60,
+                        range: [0, 60]
+                    },
+                    executable: {
+                        value: 1,
+                        labels: ["Yes", "Both", "No"]
+                    },
+                    maturity: 0
+                }
+            }
+        },
+        computed: {
+            readingTimeLabels() {
+                const min = `From ${this.inputs.readingTime.range[0]} min`
+                const max = `To ${this.inputs.readingTime.range[1]} min`
+                return [min, null, null, null, null, null, null, null, null, null, null, null, max]
+            }
+        },
+        methods: {
+            async getData(){
+                this.loading = true
+                const response = await fetch('/_static/recipes.json');
+                const data = await response.json();
+                this.loading = false
+                this.recipes = Object.entries(data).map((key, value) => {
+                    const recipe = key[1]
+                    // Add autocomplete values for recipe types
+                    if (!this.inputs.recipeType.values.includes(recipe.type)) {
+                        this.inputs.recipeType.values.push(recipe.type)
+                    }
+                    // Add autocomplete values for audience
+                    recipe.audience.forEach(audience => {
+                        if (!this.inputs.audience.values.includes(audience)) {
+                            this.inputs.audience.values.push(audience)
+                        }
+                    })
+                    return recipe
+                })
+                this.all_recipes = [ ...this.recipes ]
+                this.parseURLParams()
+                this.filterRecipes()
+            },
+            filterRecipes() {
+                let recipes = []
+                this.all_recipes.forEach(recipe => {
+                    const name = this.hasName(recipe)
+                    const type = this.hasType(recipe)
+                    const readingTime = this.inReadingTime(recipe)
+                    const audience = this.hasAudience(recipe)
+                    const executable = this.isExecutable(recipe)
+                    const maturity = this.hasMaturity(recipe)
+                    if (name && type && readingTime && audience && executable && maturity) { recipes.push(recipe) }
+                })
+                this.recipes = recipes
+            },
+            hasName(recipe){
+                if (!this.inputs.name) { return true }
+                return recipe.name.toLowerCase().includes(this.inputs.name.toLowerCase())
+            },
+            hasType(recipe){
+                if (!this.inputs.recipeType.value) { return true }
+                return recipe.type.toLowerCase().includes(this.inputs.recipeType.value.toLowerCase())
+            },
+            inReadingTime(recipe) {
+                if (this.inputs.readingTime.range[0] === 0 && this.inputs.readingTime.range[1] === 0) { return true }
+                const readingTime = recipe.reading_time
+                return readingTime >= this.inputs.readingTime.range[0] && readingTime <= this.inputs.readingTime.range[1]
+            },
+            hasAudience(recipe){
+                if (!this.inputs.audience.value) { return true }
+                return recipe.audience.includes(this.inputs.audience.value)
+            },
+            isExecutable(recipe) {
+                const mapping = {
+                    0: "Yes",
+                    2: "No"
+                }
+                if (this.inputs.executable.value === 1) { return true }
+                else {
+                    const value = mapping[this.inputs.executable.value]
+                    return recipe.executable.toLowerCase() === value.toLowerCase()
+                }
+            },
+            getColor(recipe) {
+                if (recipe.executable === "Yes") { return "primary" }
+                return "secondary"
+            },
+            resetFilters() {
+                this.recipes = [ ...this.all_recipes ]
+                this.inputs.name = null
+                this.inputs.recipeType.value = null
+                this.inputs.audience.value = null
+                this.inputs.readingTime.range = [0, 60]
+                this.inputs.executable.value = 1
+                this.inputs.maturity = 0
+            },
+            hasMaturity(recipe) {
+                if (this.inputs.maturity === 0) { return true }
+                return recipe.maturity >= this.inputs.maturity
+            },
+            parseURLParams() {
+                const params = new URLSearchParams(window.location.search)
+                const query = params.get('q')
+               if (query) this.inputs.name = query
+            }
+        },
+        mounted() { this.getData() },
+        template: `
+            <div class="search-wizard" id="search-wizard">
+                <h1 class="mb-5"> Search the cookbook recipes </h1>
+                <hr class="docutils">
+                <v-container fluid>
+                    <v-row>
+                        <v-col xl="2" cols="12" class="pt-8 grey lighten-3">
+                            <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
+                                <v-container fluid class="pa-0">
+                                    <v-row no-gutters> <v-col cols="12"> <span class="secondary--text h3">Filters:</h3></v-col></v-row>
+                                    <v-row no-gutters>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="pa-4">
+                                            <v-text-field
+                                                v-model="inputs.name"
+                                                label="Search recipes names"
+                                                @input="filterRecipes"
+                                                dense
+                                                color="secondary"
+                                            > </v-text-field>
+                                        </v-col>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="pa-4">
+                                            <v-autocomplete
+                                                :items="inputs.recipeType.values"
+                                                v-model="inputs.recipeType.value"
+                                                label="Search recipes by type"
+                                                @input="filterRecipes"
+                                                dense
+                                                color="secondary"
+                                            > </v-autocomplete>
+                                        </v-col>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="pa-4">
+                                            <v-autocomplete
+                                                :items="inputs.audience.values"
+                                                v-model="inputs.audience.value"
+                                                label="Search recipes by audience"
+                                                @input="filterRecipes"
+                                                dense
+                                                color="secondary"
+                                            > </v-autocomplete>
+                                        </v-col>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" id="readingTime" class="px-3">
+                                            <span class="field-name v-label theme--light">Reading Time</span>
+                                            <div class="px-4 mb-3 mt-3">
+                                                <v-range-slider
+                                                    v-model="inputs.readingTime.range"
+                                                    :max="inputs.readingTime.max"
+                                                    :min="inputs.readingTime.min"
+                                                    ticks="always"
+                                                    tick-size="2"
+                                                    step="5"
+                                                    class="align-center"
+                                                    track-color="grey"
+                                                    color="secondary"
+                                                    thumb-color="secondary"
+                                                    @input="filterRecipes"
+                                                    hide-details
+                                                    :tick-labels="readingTimeLabels"
+                                                ></v-range-slider>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3">
+                                            <span class="field-name v-label theme--light">Executable code</span>
+                                            <div class="px-4 mb-6 mt-3">
+                                                <v-slider
+                                                    v-model="inputs.executable.value"
+                                                    min="0"
+                                                    max="2"
+                                                    step="1"
+                                                    ticks="always"
+                                                    tick-size="4"
+                                                    :tick-labels="inputs.executable.labels"
+                                                    color="secondary"
+                                                    track-color="secondary"
+                                                    thumb-color="secondary"
+                                                    @input="filterRecipes"
+                                                    hide-details
+                                                > </v-slider>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3">
+                                            <span class="field-name mb-3 v-label theme--light">Maturity Level</span>
+                                            <div class="d-flex justify-center align-center">
+                                                <v-rating
+                                                    v-model="inputs.maturity"
+                                                    background-color="grey lighten-1"
+                                                    color="secondary"
+                                                    empty-icon="far fa-circle"
+                                                    full-icon="fas fa-circle"
+                                                    @input="filterRecipes"
+                                                    class="pl-3 pt-2"
+                                                    clearable
+                                                ></v-rating>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="12" class="d-flex justify-end align-end mt-2 pt-2 pr-3">
+                                            <v-btn color="secondary" @click="resetFilters()">
+                                            <v-icon small left class="white--text">fas fa-trash</v-icon>
+                                                Reset
+                                            </v-btn>
+                                        </v-col>
+                                    </v-row>
+                                </v-container>
+                            </v-form>
+                        </v-col>
+                        <v-col xl="10" cols="12">
+                            <v-data-table
+                                class="searchRecipesResults pl-5"
+                                fixed-header
+                                height="83vh"
+                                :items="recipes"
+                                :items-per-page="-1"
+                                :headers="headers"
+                                :mobile-breakpoint="900"
+                                hide-default-footer
+                            >
+                                <template v-slot:item.identifier="{ item }">
+                                    <v-chip color="grey lighten-2" label :href="item.url">
+                                        <v-icon small left style="color: rgba(0,0,0,.87);">
+                                        fas fa-fingerprint
+                                        </v-icon>
+                                        <span style="color: rgba(0,0,0,.87);">{{ '{{ item.identifier }}' }} </span>
+                                    </v-chip>
+                                </template>
+                                <template v-slot:item.name="{ item }">
+                                    <a :href="item.url" class="body-2 font-weight-bolder" > {{ '{{ item.name }}' }} </a>
+                                </template>
+                                <template v-slot:item.executable="{ item }">
+                                    <div class="d-flex justify-center align-center">
+                                        <v-icon :color="getColor(item)" v-if="item.executable === 'Yes'">
+                                            fas fa-check
+                                        </v-icon>
+                                        <v-icon :color="getColor(item)" v-else>
+                                            fas fa-times
+                                        </v-icon>
+                                    </div>
+                                </template>
+                                <template v-slot:item.audience="{ item }">
+                                    {{ '{{ item.audience.join(", ") }}' }}
+                                </template>
+                                <template v-slot:item.reading_time="{ item }">
+                                    <v-chip class="grey lighten-2">
+                                        <v-icon left>
+                                            fas fa-clock
+                                        </v-icon>
+                                        {{ '{{ item.reading_time }}' }} min
+                                    </v-chip>
+                                </template>
+                                <template v-slot:item.maturity="{ item }">
+                                    <v-rating
+                                        v-model="item.maturity"
+                                        readonly
+                                        background-color="grey lighten-1"
+                                        color="secondary"
+                                        empty-icon="far fa-circle"
+                                        full-icon="fas fa-circle"
+                                        dense
+                                        small
+                                    ></v-rating>
+                                </template>
+                            </v-data-table>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+        `
+    })
+</script>
+
+{% block body %}
+<Searchme> </Searchme>
+{% endblock %}

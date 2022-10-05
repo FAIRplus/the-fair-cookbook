@@ -4,18 +4,18 @@
 +++
 <br/>
 
-<!-- ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: 'https://example.com'
+````{panels_fairplus}
+:identifier_text: FCB072
+:identifier_link: 'https://w3id.org/faircookbook/FCB072'
 :difficulty_level: 1
 :recipe_type: perspective
 :reading_time_minutes: 15
 :intended_audience: everyone 
-:maturity_level: 2  
-:maturity_indicator: 1, 2 
+:maturity_level: 0  
+:maturity_indicator: 0
 :has_executable_code: nope
 :recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
-```` -->
+````
 
 ---
 

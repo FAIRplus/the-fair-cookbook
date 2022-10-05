@@ -11,9 +11,9 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
-:has_executable_code: yeah
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: nope
 :recipe_name: InChI and SMILES identifiers for chemical structures
 ```` 
 

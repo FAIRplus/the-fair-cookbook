@@ -1,0 +1,35 @@
+<div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
+    <div class="topbar-contents row" style="margin: initial !important;">
+        <div class="col topbar-main d-flex align-center">
+            {% if pagename != 'content/home' %}
+                <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                        data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                        aria-expanded="true" aria-label="{{ translate('Toggle navigation') }}" aria-controls="site-navigation"
+                        title="{{ translate('Toggle navigation') }}" data-toggle="tooltip" data-placement="left">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            {% endif %}
+
+            {% if theme_single_page != True %}
+                <a href="{{ pathto('index') }}">
+                    <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="The FAIR Cookbook"
+                         style="width: 135%; max-width: initial !important;">
+                </a>
+            {% endif %}
+
+            <v-spacer> </v-spacer>
+            <div style="margin-top: 3px" class="mr-4 extraButtons">
+                {% include "topbar/download.html" %}
+                {% include "topbar/repobuttons.html" %}
+                {% include "topbar/launchbuttons.html" %}
+            </div>
+            {%- for sidebartemplate in sidebars %}
+                {% if sidebartemplate == "sidebar-search-bs.html" %}
+                    {% include sidebartemplate %}
+                {% endif %}
+            {%- endfor %}
+        </div>
+    </div>
+</div>

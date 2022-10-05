@@ -1,3 +1,6 @@
+from os import path
+import json
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
@@ -149,8 +152,8 @@ class PanelFairplus(Directive):
             sphinx.errors.ExtensionError(
                 _make_string_red("The colon (i.e. the character ':') is not allowed in recipe_name: %s" % (self.options["recipe_name"])))
 
-
     def _create_content(self):
+        self.build_json()
         content = []
         content.extend([
             '<br/>',
@@ -207,7 +210,7 @@ class PanelFairplus(Directive):
                         '</div>',
                     '</div>',
                     '<div class="section" style="flex-grow: 1;">',
-                        f'<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="bars {self.get_maturity()}">',
+                        f'<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars {self.get_maturity()}">',
                           '<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>',
                           '<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />',  
                           '<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />',
@@ -264,9 +267,15 @@ class PanelFairplus(Directive):
         Gets the list of improved maturity indicators
         :return str: a string properly formatted containing the list of audience targets
         """
-        return "\n ".join(["<a href=\"https://github.com/FAIRplus/Data-Maturity/blob/indicator-definitions/docs/_indicators/\"" + CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+".md\">"+CONTROLLED_VOCABULARY_MATURITY_INDICATOR[target]+"</a>"
-                          for target in self.options["maturity_indicator"]])
-
+        indicators = '<v-chip-group>'
+        base_url = "https://w3id.org/Data-Maturity/"
+        for indicator in self.options['maturity_indicator']:
+            label = CONTROLLED_VOCABULARY_MATURITY_INDICATOR[indicator].replace('[', '').replace(']', '')
+            href = base_url + label
+            indicators += ('<v-chip href="{}" class="secondary white--text" target="_blank" label>'
+                           '{}</v-chip>').format(href, label)
+        indicators += '</v-chip-group>'
+        return indicators
 
     def get_ld(self):
         """
@@ -274,47 +283,96 @@ class PanelFairplus(Directive):
         :return: a json-ld representation of the recipe
         """
         json_ld = {
-            "@context": {"sdo": "https://schema.org/", "bs": "https://bioschema.org/"},
-            "@type": ["sdo:HowTo", "bs:TrainingMaterial"],
-            "name": self.options["recipe_name"],
-            "description": self.options["recipe_name"],
-            "keywords": [],
-            "conformsTo": {
+            "@context": {
+                "bs": "https://bioschema.org/",
+                "dc": "http://purl.org/dc/terms/",
+                "owl": "http://www.w3.org/2002/07/owl#",
+                "sdo": "https://schema.org/",
+            },
+            "@type": ["sdo:HowTo", "sdo:LearningResource"],
+            "@id": self.options["identifier_link"],
+            "sdo:name": self.options["recipe_name"],
+            "sdo:description": self.options["recipe_name"],
+            "sdo:keywords": [],
+            "dc:conformsTo": {
                 "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
                 "@type": "CreativeWork"
             },
-            "inLanguage": ["en-GB"],
-            "audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
-                         for target in self.options["intended_audience"]],
-            "isPartOf": [
+            "sdo:inLanguage": ["en-GB"],
+            "sdo:audience": [CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target]
+                             for target in self.options["intended_audience"]],
+            "sdo:isPartOf": [
                 {
                     "@type": "CreativeWork",
-                    "url": "https://fairplus.github.io/the-fair-cookbook/",
-                    "name": "The FAIR Cookbook"
+                    "@id": "https://fairplus.github.io/the-fair-cookbook/",
+                    "sdo:url": "https://fairplus.github.io/the-fair-cookbook/",
+                    "sdo:name": "The FAIR Cookbook"
                 }
             ],
-            "learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
-            "identifier": {
+            "sdo:learningResourceType": CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            "sdo:identifier": {
                 "@type": "PropertyValue",
-                "name": self.options["identifier_text"],
-                "url": self.options["identifier_link"]
+                "@id": "",
+                "sdo:name": self.options["identifier_text"],
+                "dso:url": self.options["identifier_link"],
+                "owl:sameAs": "https://identifiers.org/fcb:%s" % str(self.options["identifier_text"])
             },
-            "license": {
+            "sdo:license": {
                 "@type": "CreativeWork",
-                "url": "https://creativecommons.org/licenses/by/4.0/",
-                "name": "CC-BY-4.0"
+                "@id": "https://creativecommons.org/licenses/by/4.0/",
+                "sdo:url": "https://creativecommons.org/licenses/by/4.0/",
+                "sdo:name": "CC-BY-4.0"
             },
-            "timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
-            "totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"])
+            "sdo:timeRequired": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "sdo:totalTime": "PT0H%sM0S" % str(self.options["reading_time_minutes"]),
+            "sdo:step": [{
+                "@type": "sdo:HowToSection",
+                "sdo:position": "1",
+                "sdo:name": "Overview",
+                "sdo:url": self.options["identifier_link"] + "#main-objectives",
+                "sdo:itemListElement": [{"@type": "sdo:HowToStep",
+                                         "sdo:position": "1",
+                                         "sdo:name": "",
+                                         "sdo:itemListElement": [{"@type": "sdo:HowToDirection",
+                                                                  "sdo:position": "1",
+                                                                  "sdo:name": "step-by-step section",
+                                                                  "sdo:text": "Follow the step-by-step section.",
+                                                                  "sdo:url": self.options["identifier_link"]
+                                                                             + "#main-objectives",},
+                                                                 {"@type": "sdo:HowToTip",
+                                                                  "sdo:position": "2",
+                                                                  "sdo:name": "Reporting an issue",
+                                                                  "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!",
+                                                                  "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]
+                                         }
+                                        ]},
+                {
+                    "@type": "sdo:HowToSection",
+                    "sdo:position": "2",
+                    "sdo:name": "Conclusion",
+                    "sdo:url": self.options["identifier_link"] + "#conclusion",
+                    "sdo:itemListElement": [{"@type": "sdo:HowToStep",
+                                             "sdo:position": "1",
+                                             "sdo:name": "",
+                                             "sdo:itemListElement": [{"@type": "sdo:HowToDirection",
+                                                                      "sdo:position": "1",
+                                                                      "sdo:name": "conclusion section",
+                                                                      "sdo:text": "What to read next?",
+                                                                      "sdo:url": self.options["identifier_link"]
+                                                                                 + "#conclusion"},
+                                                                     {"@type": "sdo:HowToTip",
+                                                                      "sdo:position": "2",
+                                                                      "sdo:name": "Reporting an issue",
+                                                                      "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!",
+                                                                      "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}
+            ]
         }
         return '<script type="application/ld+json"> %s </script>' % dumps(json_ld)
 
     def run(self):
 
         self._clean_options()
-
         new_content = self._create_content()
-
         if len(self.content) > 0:
             common_filename = self.content.items[0][0]
             for index, (filename, linenumber) in enumerate(self.content.items):
@@ -334,19 +392,44 @@ class PanelFairplus(Directive):
         self.state.nested_parse(self.content, self.content_offset, node)
         return node.children
 
+    def build_json(self):
+        here_path = path.dirname(path.abspath(__file__))
+        json_path = path.join(here_path, '..', '_static', 'recipes.json')
+
+        audience = []
+        for target in self.options["intended_audience"]:
+            audience.append(CONTROLLED_VOCABULARY_INTENDED_AUDIENCE[target].split("|")[0])
+
+        recipe = {
+            'name': self.options['recipe_name'],
+            'reading_time': self.options["reading_time_minutes"],
+            'executable': CONTROLLED_VOCABULARY_EXECUTABLE_CODE[self.options["has_executable_code"]],
+            'audience': audience,
+            'type': CONTROLLED_VOCABULARY_RECIPE_TYPE[self.options["recipe_type"]],
+            'identifier': self.options["identifier_text"],
+            'maturity': self.options["maturity_level"],
+            'url': self.options["identifier_link"],
+        }
+        with open(json_path, 'r') as f:
+            json_data = json.load(f)
+        json_data[recipe['name']] = recipe
+        with open(json_path, 'w') as f:
+            json.dump(json_data, f)
+
 
 def setup(app):
     app.setup_extension("sphinx_panels")
-
     app.add_directive("panels_fairplus", PanelFairplus)
-
     return {
         'version': '0.1',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
 
+
 escape_character_to_make_a_string_red_start = "\033[91m"
 escape_character_to_make_a_string_red_end   = "\033[0m"
+
+
 def _make_string_red(string):
     return escape_character_to_make_a_string_red_start + string + escape_character_to_make_a_string_red_end
