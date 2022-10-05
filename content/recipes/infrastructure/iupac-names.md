@@ -5,7 +5,7 @@
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCBxxx
+:identifier_text: FCB080
 :identifier_link: 'https://w3id.org/faircookbook/FCBxxx'
 :difficulty_level: 2
 :recipe_type: hands_on
