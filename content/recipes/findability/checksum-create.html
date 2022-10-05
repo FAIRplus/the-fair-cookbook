@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. How to create checksum files</title>
+    <title>7. How to create checksum files</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -66,11 +66,14 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="7. How to check file integrity by validating checksums" href="checksum-validate.html" />
-    <link rel="prev" title="5. Registering Datasets in Wikidata" href="registeringDatasets.html" />
+    <link rel="next" title="8. How to check file integrity by validating checksums" href="checksum-validate.html" />
+    <link rel="prev" title="6. Registering Datasets in Wikidata" href="registeringDatasets.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/checksum-create.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="zenodo-deposition.html">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-dataset.html">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -909,7 +922,7 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="how-to-create-checksum-files">
-<span id="fcb-checksum-create"></span><h1><span class="section-number">6. </span>How to create checksum files<a class="headerlink" href="#how-to-create-checksum-files" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-checksum-create"></span><h1><span class="section-number">7. </span>How to create checksum files<a class="headerlink" href="#how-to-create-checksum-files" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -983,7 +996,7 @@ No
 </div>
 </div>
 <div class="section" id="abstract">
-<h2><span class="section-number">6.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>When copying a file (“source file”) to a target location, it may become necessary
 to confirm that the actual content, i.e. the bits that make up the information, arrived correctly in the target system.
 Confirming the identity of two different files may be achieved by calculating
@@ -995,7 +1008,7 @@ the comparison of the checksum indicates whether the files are identical (within
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">6.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1012,13 +1025,13 @@ the comparison of the checksum indicates whether the files are identical (within
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="checksum-create-figure1">
 <a class="reference internal image-reference" href="../../../_images/checksum-create.md-figure1.mmd.png"><img alt="When to apply this recipe." src="../../../_images/checksum-create.md-figure1.mmd.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">When to apply this recipe.</span><a class="headerlink" href="#checksum-create-figure1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">When to apply this recipe.</span><a class="headerlink" href="#checksum-create-figure1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="requirements">
-<h2><span class="section-number">6.3. </span>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>This recipe assumes the following:</p>
 <ul class="simple">
 <li><p>both source and target systems have the Linux operating system, preferentially Debian (no root access needed)</p></li>
@@ -1080,16 +1093,16 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 <hr class="docutils" />
 <div class="section" id="recipe-instructions">
-<h2><span class="section-number">6.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Recipe instructions<a class="headerlink" href="#recipe-instructions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="generating-the-checksums">
-<h3><span class="section-number">6.4.1. </span>Generating the checksums<a class="headerlink" href="#generating-the-checksums" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.1. </span>Generating the checksums<a class="headerlink" href="#generating-the-checksums" title="Permalink to this headline">¶</a></h3>
 <p>On the shell execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/file_to_compare.txt</span></code></p>
 <p>The output should be:</p>
 <p><code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">/home/USERNAME/file_to_compare.txt</span></code></p>
 </div>
 <div class="section" id="storing-the-checksums-in-a-dedicated-file">
-<h3><span class="section-number">6.4.2. </span>Storing the checksums in a dedicated file<a class="headerlink" href="#storing-the-checksums-in-a-dedicated-file" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.2. </span>Storing the checksums in a dedicated file<a class="headerlink" href="#storing-the-checksums-in-a-dedicated-file" title="Permalink to this headline">¶</a></h3>
 <p>On the shell execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/file_to_compare.txt</span> <span class="pre">&gt;</span> <span class="pre">~/checksums.md5</span></code></p>
 <p>You will not get output for this command.</p>
@@ -1099,14 +1112,14 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 <p><code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">/home/USERNAME/file_to_compare.txt</span></code></p>
 </div>
 <div class="section" id="calculating-the-checksums-for-all-files-in-one-directory">
-<h3><span class="section-number">6.4.3. </span>Calculating the checksums for all files in one directory<a class="headerlink" href="#calculating-the-checksums-for-all-files-in-one-directory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.3. </span>Calculating the checksums for all files in one directory<a class="headerlink" href="#calculating-the-checksums-for-all-files-in-one-directory" title="Permalink to this headline">¶</a></h3>
 <p>On the shell execute:</p>
 <p><code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">~/path_to_directory/*.jpg</span> <span class="pre">&gt;</span> <span class="pre">~/checksums.md5</span></code></p>
 <p>There will be no output; however, this command may take a while to execute.</p>
 <p>For 60 pictures of 3.5 MB each, this command took 1.6 seconds on a MacBook Pro (2017) with a SSD drive.</p>
 </div>
 <div class="section" id="limitations-of-this-recipe">
-<h3><span class="section-number">6.4.4. </span>Limitations of this recipe<a class="headerlink" href="#limitations-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.4. </span>Limitations of this recipe<a class="headerlink" href="#limitations-of-this-recipe" title="Permalink to this headline">¶</a></h3>
 <p>This recipe in its current form has the following limitations:</p>
 <ul class="simple">
 <li><p>the above assumes that everything is placed in your home folder. (for a resolution see section “Extendability of this recipe” below.)</p></li>
@@ -1119,7 +1132,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </ul>
 </div>
 <div class="section" id="extendability-of-this-recipe">
-<h3><span class="section-number">6.4.5. </span>Extendability of this recipe<a class="headerlink" href="#extendability-of-this-recipe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.5. </span>Extendability of this recipe<a class="headerlink" href="#extendability-of-this-recipe" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud architecture).</p></li>
 <li><p>the recipe assumes that everything is placed in your home folder. If this is not the case, replace <code class="docutils literal notranslate"><span class="pre">~</span></code>, the home directory indicator, by the corresponding path, or execute specifically all <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> commands only with relative pathes (by navigating in the corresponding directory, first). The command will be something like <code class="docutils literal notranslate"><span class="pre">md5sum</span> <span class="pre">./YOUR_PATH_HERE/*.jpg</span></code>, then, and will output something like <code class="docutils literal notranslate"><span class="pre">c691b3d2fc2678839a9c141b6ee1524e</span>&#160; <span class="pre">./YOUR_PATH_HERE/picture1.jpg</span></code> then.</p></li>
@@ -1128,7 +1141,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 </div>
 <div class="section" id="further-reading">
-<h2><span class="section-number">6.5. </span>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Wikipedia article on checksums: <a class="reference external" href="https://en.wikipedia.org/wiki/Checksum">https://en.wikipedia.org/wiki/Checksum</a></p></li>
 <li><p>Wikipedia article on the algorithm <code class="docutils literal notranslate"><span class="pre">md5</span></code>: <a class="reference external" href="https://en.wikipedia.org/wiki/MD5">https://en.wikipedia.org/wiki/MD5</a></p></li>
@@ -1136,7 +1149,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </ul>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">6.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1147,7 +1160,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">6.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.7. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1178,7 +1191,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">6.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.8. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1226,69 +1239,69 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstract">
-   6.1. Abstract
+   7.1. Abstract
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   6.2. Graphical Overview
+   7.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements">
-   6.3. Requirements:
+   7.3. Requirements:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recipe-instructions">
-   6.4. Recipe instructions
+   7.4. Recipe instructions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generating-the-checksums">
-     6.4.1. Generating the checksums
+     7.4.1. Generating the checksums
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#storing-the-checksums-in-a-dedicated-file">
-     6.4.2. Storing the checksums in a dedicated file
+     7.4.2. Storing the checksums in a dedicated file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calculating-the-checksums-for-all-files-in-one-directory">
-     6.4.3. Calculating the checksums for all files in one directory
+     7.4.3. Calculating the checksums for all files in one directory
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#limitations-of-this-recipe">
-     6.4.4. Limitations of this recipe
+     7.4.4. Limitations of this recipe
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#extendability-of-this-recipe">
-     6.4.5. Extendability of this recipe
+     7.4.5. Extendability of this recipe
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#further-reading">
-   6.5. Further reading
+   7.5. Further reading
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   6.6. References
+   7.6. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   6.7. Authors
+   7.7. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   6.8. License
+   7.8. License
   </a>
  </li>
 </ul>
@@ -1303,8 +1316,8 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="registeringDatasets.html" title="previous page"><span class="section-number">5. </span>Registering Datasets in Wikidata</a>
-<a class='right-next' id="next-link" href="checksum-validate.html" title="next page"><span class="section-number">7. </span>How to check file integrity by validating checksums</a>
+<a class='left-prev' id="prev-link" href="registeringDatasets.html" title="previous page"><span class="section-number">6. </span>Registering Datasets in Wikidata</a>
+<a class='right-next' id="next-link" href="checksum-validate.html" title="next page"><span class="section-number">8. </span>How to check file integrity by validating checksums</a>
 
                                             </div>
                                         </v-row>
@@ -1402,6 +1415,7 @@ Written by Ulrich Drepper, Scott Miller, and David Madore.
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

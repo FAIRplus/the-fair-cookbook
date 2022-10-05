@@ -70,7 +70,10 @@
     <link rel="prev" title="2. ND4BB - chemical activities datasets" href="../nd4bb.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../findability/identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/zenodo-deposition.html">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/checksum-create.html">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../findability/seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -985,8 +998,8 @@ No
 <div class="section" id="ingredients">
 <h2><span class="section-number">3.1. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5397653b-9308-4e1d-b794-293b8e6c80b1" name="ae2d7c63-4f64-4c01-a93e-a4337768adeb" type="radio">
-</input><label class="tabbed-label" for="5397653b-9308-4e1d-b794-293b8e6c80b1">
+<input checked="checked" id="38d0210b-e7ac-4869-a7d3-37dc575a0c5d" name="a9742ba9-8b64-4827-8226-a9fee3c1efea" type="radio">
+</input><label class="tabbed-label" for="38d0210b-e7ac-4869-a7d3-37dc575a0c5d">
 Data Standards</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Metadata model</p>
@@ -1015,8 +1028,8 @@ Data Standards</label><div class="tabbed-content docutils">
 </li>
 </ul>
 </div>
-<input id="4f94cc23-7e51-46f8-8470-dc638abef779" name="ae2d7c63-4f64-4c01-a93e-a4337768adeb" type="radio">
-</input><label class="tabbed-label" for="4f94cc23-7e51-46f8-8470-dc638abef779">
+<input id="004b0af8-e84d-486a-86f8-22327e72943b" name="a9742ba9-8b64-4827-8226-a9fee3c1efea" type="radio">
+</input><label class="tabbed-label" for="004b0af8-e84d-486a-86f8-22327e72943b">
 Tools and software</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Tools and software</p>
@@ -1070,7 +1083,7 @@ _Figure 1: OncoTrack metadata FAIRification pipeline_ -->
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="oncotrack-metadata-fairification-pipeline">
 <a class="reference internal image-reference" href="../../../../_images/image_0.png"><img alt="OncoTrack metadata FAIRification pipeline." src="../../../../_images/image_0.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#oncotrack-metadata-fairification-pipeline" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">OncoTrack metadata FAIRification pipeline.</span><a class="headerlink" href="#oncotrack-metadata-fairification-pipeline" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><div class="section" id="data-description">
@@ -1096,7 +1109,7 @@ _Figure 2: Example of OncoTrack public cohort metadata -->_
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="example-of-oncotrack-public-cohort-metadata">
 <a class="reference internal image-reference" href="../../../../_images/image_1.png"><img alt="Example of OncoTrack public cohort metadata." src="../../../../_images/image_1.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#example-of-oncotrack-public-cohort-metadata" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Example of OncoTrack public cohort metadata.</span><a class="headerlink" href="#example-of-oncotrack-public-cohort-metadata" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The drug sensitivity data is also provided in Excel spreadsheets. Seventeen drugs are tested on patient-derived organoid(PDO) and patient-derived xenografts(PDX) models in five sets of experiments. Different sets have their unique measurement methods, drug response scales. For example, in <em>Sheet 1: PDO drug response</em> experiment, IC50 value is measured and defines the drug <em>response category</em> (Figure 3a). In <em>Sheet 2: PDX drug response test</em>, the <em>response evaluation criteria in solid tumours (<strong>RECIST</strong>)</em> scales defines the <em>drug response category</em> (Figure 3b). In both examples, the <em>drug response category</em> is marked by colour codes.</p>
@@ -1137,7 +1150,7 @@ _Figure 3: Example of Oncotrack drug response data_ -->
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="example-of-oncotrack-drug-response-data">
 <a class="reference internal image-reference" href="../../../../_images/image_3.png"><img alt="Example of Oncotrack drug response data." src="../../../../_images/image_3.png" style="width: 900px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#example-of-oncotrack-drug-response-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Example of Oncotrack drug response data.</span><a class="headerlink" href="#example-of-oncotrack-drug-response-data" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1164,7 +1177,7 @@ _Figure 4: Example of the extracted cohort metadata_ -->
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="example-of-the-extracted-cohort-metadata">
 <a class="reference internal image-reference" href="../../../../_images/image_4.png"><img alt="Example of the extracted cohort metadata." src="../../../../_images/image_4.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#example-of-the-extracted-cohort-metadata" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Example of the extracted cohort metadata.</span><a class="headerlink" href="#example-of-the-extracted-cohort-metadata" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>Drug sensitivity data were also extracted from the original spreadsheets. Each drug test per sample was listed as one entry. To coordinate different measurement approaches and response category scales, all drug sensitivity data were converted to a unified representation. All the measurement results were stored in Attribute <em>“Value”</em>, the drug response categorizes criteria were stored in Attribute <em>“Unit”,</em> and the <em>drug response category</em> was recalculated and stored in Attribute <em>“Response”.</em> Figure 5 is an example of the extracted drug sensitivity data. 1829 drug tests were extracted in total. The drug response summary is <a class="reference external" href="https://drive.google.com/file/d/1BNkuLtKUsqoAPJqDKqdhj2xYAhuxhQkf/view?usp=sharing">here</a>.</p>
@@ -1186,7 +1199,7 @@ _Figure 5: Example of extracted drug sensitivity data_	 -->
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="example-of-extracted-drug-sensitivity-data">
 <a class="reference internal image-reference" href="../../../../_images/image_5.png"><img alt="Example of extracted drug sensitivity data." src="../../../../_images/image_5.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#example-of-extracted-drug-sensitivity-data" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Example of extracted drug sensitivity data.</span><a class="headerlink" href="#example-of-extracted-drug-sensitivity-data" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>To associate drug sensitivity data with related sample cohort metadata and convert them to machine-readable formats, we combined cohort metadata and drug sensitivity data to JSON files. The <a class="reference external" href="https://drive.google.com/file/d/1DoyOZ1uMFv0aPpAQUPkf7mS8vAoS6DCY/view">BioSamples JSON schema</a> was used as the sample metadata template, allowing direct submissions to<a class="reference external" href="https://www.ebi.ac.uk/biosamples/"> BioSamples database</a> and can be easily converted to other formats, like XML, spreadsheets, etc.</p>
@@ -1224,7 +1237,7 @@ _Figure 6: Example of  ZOOMA ontology mapping results_
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="example-of-zooma-ontology-mapping-results">
 <a class="reference internal image-reference" href="../../../../_images/image_6.jpg"><img alt="Example of ZOOMA ontology mapping results." src="../../../../_images/image_6.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#example-of-zooma-ontology-mapping-results" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Example of ZOOMA ontology mapping results.</span><a class="headerlink" href="#example-of-zooma-ontology-mapping-results" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1556,6 +1569,7 @@ _Figure 6: Example of  ZOOMA ontology mapping results_
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

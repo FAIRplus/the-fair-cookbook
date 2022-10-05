@@ -70,7 +70,10 @@
     <link rel="prev" title="5.3. Deploying the EBI OLS" href="vocabularies/UC3_R13_local_ontology_services.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/openrefine-nvt.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../findability/identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/zenodo-deposition.html">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/checksum-create.html">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../findability/checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../findability/seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -1059,7 +1072,7 @@ reconcile to entities of one or more of these types. OpenRefine will then presen
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="openrefine-screenshot">
 <a class="reference internal image-reference" href="../../../_images/openrefine.png"><img alt="OpenRefine" src="../../../_images/openrefine.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">OpenRefine</span><a class="headerlink" href="#openrefine-screenshot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">OpenRefine</span><a class="headerlink" href="#openrefine-screenshot" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>OpenRefine: <a class="reference external" href="https://docs.openrefine.org/manual/reconciling">https://docs.openrefine.org/manual/reconciling</a></p>
@@ -1098,7 +1111,7 @@ service, OpenRefine will help users to normalise entity references to Wikidata U
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="openrefine-wiki-reconci">
 <a class="reference internal image-reference" href="../../../_images/openrefine-wiki-reconci.png"><img alt="Wikidata Reconcile for OpenRefine" src="../../../_images/openrefine-wiki-reconci.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Wikidata Reconcile for OpenRefine</span><a class="headerlink" href="#openrefine-wiki-reconci" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Wikidata Reconcile for OpenRefine</span><a class="headerlink" href="#openrefine-wiki-reconci" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><div class="admonition warning">
@@ -1144,7 +1157,7 @@ These scripts are available from <a class="reference external" href="https://git
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="wikidraftworks">
 <a class="reference internal image-reference" href="../../../_images/wikidraftworks.png"><img alt="WikiDraftWorks" src="../../../_images/wikidraftworks.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">WikiDraftWorks</span><a class="headerlink" href="#wikidraftworks" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">WikiDraftWorks</span><a class="headerlink" href="#wikidraftworks" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1324,7 +1337,7 @@ vs <a class="reference external" href="http://www.wikidata.org/entity/Q937">http
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="rdf-schema-alignment-in-openrefine">
 <a class="reference internal image-reference" href="../../../_images/rdf-align-openrefine.png"><img alt="RDF schema alignment in OpenRefine" src="../../../_images/rdf-align-openrefine.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">RDF schema alignment in OpenRefine</span><a class="headerlink" href="#rdf-schema-alignment-in-openrefine" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.8 </span><span class="caption-text">RDF schema alignment in OpenRefine</span><a class="headerlink" href="#rdf-schema-alignment-in-openrefine" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The system assists the users in defining how the table should look like in RDF, fundamentally providing a template editor.</p>
@@ -1367,7 +1380,7 @@ Karma expresses mappings in the KARMA language, that is an extension of <a class
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="rdf-schema-alignment-in-karma">
 <a class="reference internal image-reference" href="../../../_images/rdf-align-karma.png"><img alt="RDF schema alignment in Karma" src="../../../_images/rdf-align-karma.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">RDF schema alignment in Karma</span><a class="headerlink" href="#rdf-schema-alignment-in-karma" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.9 </span><span class="caption-text">RDF schema alignment in Karma</span><a class="headerlink" href="#rdf-schema-alignment-in-karma" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>[<a class="reference external" href="https://github.com/szeke/karma-tcdl-tutorial/wiki">https://github.com/szeke/karma-tcdl-tutorial/wiki</a>]</p>
@@ -1853,6 +1866,7 @@ Martin Magdinier: (RefinePro)
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8.9.2. Dataset page markup with Schema.org</title>
+    <title>9.9.2. Dataset page markup with Schema.org</title>
 
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -66,11 +66,14 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="8.9.3. Data catalogue markup" href="bioschemas-datacatalog.html" />
-    <link rel="prev" title="8.9.1. Data page markup with Bioschemas" href="bioschemas-data-page.html" />
+    <link rel="next" title="9.9.3. Data catalogue markup" href="bioschemas-datacatalog.html" />
+    <link rel="prev" title="9.9.1. Data page markup with Bioschemas" href="bioschemas-data-page.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/seo/bioschemas-dataset.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../zenodo-deposition.html">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../checksum-create.html">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="../seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -909,7 +922,7 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="dataset-page-markup-with-schema-org">
-<span id="fcb-find-bs-dataset"></span><h1><span class="section-number">8.9.2. </span>Dataset page markup with <a class="reference external" href="http://Schema.org">Schema.org</a><a class="headerlink" href="#dataset-page-markup-with-schema-org" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-find-bs-dataset"></span><h1><span class="section-number">9.9.2. </span>Dataset page markup with <a class="reference external" href="http://Schema.org">Schema.org</a><a class="headerlink" href="#dataset-page-markup-with-schema-org" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -983,14 +996,14 @@ No
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">8.9.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
 <div><p>To embed <code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> markup in a web page representing a dataset.</p>
 </div></blockquote>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e39eae06-5780-46bf-af11-d4a632264ec5" name="f795652e-e646-4f8f-9252-ca0c6601274c" type="radio">
-</input><label class="tabbed-label" for="e39eae06-5780-46bf-af11-d4a632264ec5">
+<input checked="checked" id="d51a67b7-4c1b-4d01-801e-291a47a0c5d8" name="e4fabb8a-fbd0-4398-849c-dce14f884152" type="radio">
+</input><label class="tabbed-label" for="d51a67b7-4c1b-4d01-801e-291a47a0c5d8">
 FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1011,8 +1024,8 @@ FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content d
 </tbody>
 </table>
 </div>
-<input id="815a330f-5a13-4252-b257-673f2112ecca" name="f795652e-e646-4f8f-9252-ca0c6601274c" type="radio">
-</input><label class="tabbed-label" for="815a330f-5a13-4252-b257-673f2112ecca">
+<input id="7a45e119-882d-4e38-9211-e387c5797ce7" name="e4fabb8a-fbd0-4398-849c-dce14f884152" type="radio">
+</input><label class="tabbed-label" for="7a45e119-882d-4e38-9211-e387c5797ce7">
 Table of Data Standards</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1037,7 +1050,7 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">8.9.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1054,13 +1067,13 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/bs-dataset-mermaid.png"><img alt="The process of annotating a dataset webpage with bioschema markup for Search Engine discovery" src="../../../../_images/bs-dataset-mermaid.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">The process of annotating a dataset webpage with bioschema markup for Search Engine discovery.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="method">
-<h2><span class="section-number">8.9.2.3. </span>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.3. </span>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
 <p>We will outline the steps for marking up a page in your site that is about a specific dataset that you publish.
 The resulting markup will be compliant with both <a class="reference external" href="https://developers.google.com/search/docs/data-types/dataset">Google’s Dataset markup guidelines</a>
 and the <a class="reference external" href="https://bioschemas.org/profiles/Dataset">Bioschemas Dataset Profile</a>. The resulting webpage will be indexable by the major search engines and should eventually appear in <a class="reference external" href="https://datasetsearch.research.google.com/">Google’s Dataset Search Tool</a>.</p>
@@ -1089,7 +1102,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="bioschemas-generator-start-screen-3">
 <img alt="Bioschemas Generator start screen." src="../../../../_images/BioschemasGenerator.png" />
-<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Bioschemas Generator start screen.</span><a class="headerlink" href="#bioschemas-generator-start-screen-3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.7 </span><span class="caption-text">Bioschemas Generator start screen.</span><a class="headerlink" href="#bioschemas-generator-start-screen-3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></li>
@@ -1116,7 +1129,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="bioschemas-generator-dataset-profile-form">
 <a class="reference internal image-reference" href="../../../../_images/BioschemasGeneratorDatasetForm.png"><img alt="Bioschemas Generator Dataset profile form" src="../../../../_images/BioschemasGeneratorDatasetForm.png" style="height: 550px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Bioschemas Generator Dataset profile form.</span><a class="headerlink" href="#bioschemas-generator-dataset-profile-form" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.8 </span><span class="caption-text">Bioschemas Generator Dataset profile form.</span><a class="headerlink" href="#bioschemas-generator-dataset-profile-form" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></li>
@@ -1234,9 +1247,9 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusion">
-<h2><span class="section-number">8.9.2.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.4. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">8.9.2.4.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.9.2.4.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="bioschemas-data-page.html#fcb-find-bs-data"><span class="std std-ref">Data page markup with Bioschemas</span></a></p></li>
@@ -1261,7 +1274,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">8.9.2.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1273,7 +1286,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">8.9.2.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.6. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1318,7 +1331,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">8.9.2.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9.2.7. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1366,44 +1379,44 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   8.9.2.1. Main Objectives
+   9.9.2.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   8.9.2.2. Graphical Overview
+   9.9.2.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method">
-   8.9.2.3. Method
+   9.9.2.3. Method
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   8.9.2.4. Conclusion
+   9.9.2.4. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     8.9.2.4.1. What to read next?
+     9.9.2.4.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   8.9.2.5. References
+   9.9.2.5. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   8.9.2.6. Authors
+   9.9.2.6. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   8.9.2.7. License
+   9.9.2.7. License
   </a>
  </li>
 </ul>
@@ -1418,8 +1431,8 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="bioschemas-data-page.html" title="previous page"><span class="section-number">8.9.1. </span>Data page markup with Bioschemas</a>
-<a class='right-next' id="next-link" href="bioschemas-datacatalog.html" title="next page"><span class="section-number">8.9.3. </span>Data catalogue markup</a>
+<a class='left-prev' id="prev-link" href="bioschemas-data-page.html" title="previous page"><span class="section-number">9.9.1. </span>Data page markup with Bioschemas</a>
+<a class='right-next' id="next-link" href="bioschemas-datacatalog.html" title="next page"><span class="section-number">9.9.3. </span>Data catalogue markup</a>
 
                                             </div>
                                         </v-row>
@@ -1517,6 +1530,7 @@ and the <a class="reference external" href="https://bioschemas.org/profiles/Data
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

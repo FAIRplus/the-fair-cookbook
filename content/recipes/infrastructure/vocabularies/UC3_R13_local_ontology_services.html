@@ -70,7 +70,10 @@
     <link rel="prev" title="5.2. Selecting an ontology lookup service" href="Selecting_and_using_ontology_lookup_services.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../findability/identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/zenodo-deposition.html">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/checksum-create.html">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../findability/checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../findability/seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-dataset.html">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../findability/seo/bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -1040,7 +1053,7 @@ specific policies regarding tool deployment the use of containerized application
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="ols-deploy">
-<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
+<img alt="Deploying EMBL-EBI OLS" src="../../../../_images/ols-deploy.svg" /><p class="caption"><span class="caption-number">Fig. 5.25 </span><span class="caption-text">Deploying EMBL-EBI Ontology Lookup Service</span><a class="headerlink" href="#ols-deploy" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1056,8 +1069,8 @@ specific policies regarding tool deployment the use of containerized application
 <div class="section" id="install-dependencies">
 <h3><span class="section-number">5.3.6.1. </span>1. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5351a2df-f34e-4b6b-9d85-93c147379ee8" name="0cff7ebc-702b-43c1-935d-4c6f6a00c98a" type="radio">
-</input><label class="tabbed-label" for="5351a2df-f34e-4b6b-9d85-93c147379ee8">
+<input checked="checked" id="72ff6864-1c96-430a-9aeb-7121c4f73315" name="6614ad9b-5fb1-4cfb-a260-386bbe3073c8" type="radio">
+</input><label class="tabbed-label" for="72ff6864-1c96-430a-9aeb-7121c4f73315">
 Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1081,8 +1094,8 @@ Unix-based environment (macOS, Linux)</label><div class="tabbed-content docutils
 </tbody>
 </table>
 </div>
-<input id="c6dbc363-7f43-4564-91dc-f5ae6dcb74c0" name="0cff7ebc-702b-43c1-935d-4c6f6a00c98a" type="radio">
-</input><label class="tabbed-label" for="c6dbc363-7f43-4564-91dc-f5ae6dcb74c0">
+<input id="25b61209-5acc-48cc-a235-ec170b0d6599" name="6614ad9b-5fb1-4cfb-a260-386bbe3073c8" type="radio">
+</input><label class="tabbed-label" for="25b61209-5acc-48cc-a235-ec170b0d6599">
 Windows-based environment (Windows 10 64bits)</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1635,6 +1648,7 @@ user interface for searching and browsing ontologies and ontology terms.</p>
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Depositing in Zenodo generic repository</title>
+    <title>5. Depositing in Zenodo generic repository</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -66,11 +66,14 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. Registering Datasets in Wikidata" href="registeringDatasets.html" />
-    <link rel="prev" title="3. Minting identifiers with Minid" href="identifiers-minids.html" />
+    <link rel="next" title="6. Registering Datasets in Wikidata" href="registeringDatasets.html" />
+    <link rel="prev" title="4. Minting identifiers with Minid" href="identifiers-minids.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/findability/zenodo-deposition.html" />
@@ -301,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/fairification-process.html">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../introduction/fair-cro.html">
    Practical Considerations for a CRO to do FAIR
   </a>
@@ -333,48 +341,53 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="identifiers-minids.html">
-     3. Minting identifiers with Minid
+     4. Minting identifiers with Minid
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4. Depositing in Zenodo generic repository
+     5. Depositing in Zenodo generic repository
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="registeringDatasets.html">
-     5. Registering Datasets in Wikidata
+     6. Registering Datasets in Wikidata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="checksum-create.html">
-     6. Describe data by checksums
+     7. Describe data by checksums
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="checksum-validate.html">
-     7. Validating data by checksums
+     8. Validating data by checksums
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="seo.html">
-     8. Search engine optimization
+     9. Search engine optimization
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-data-page.html">
-       8.9.1. Data page markup with Bioschemas
+       9.9.1. Data page markup with Bioschemas
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-dataset.html">
-       8.9.2. Dataset page markup with Schema.org
+       9.9.2. Dataset page markup with Schema.org
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="seo/bioschemas-datacatalog.html">
-       8.9.3. Data catalogue markup
+       9.9.3. Data catalogue markup
       </a>
      </li>
     </ul>
@@ -793,13 +806,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Tools
+  Recipes at a Glance
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../search-wizard.html">
-   Search Wizard
+   Filter Recipes
   </a>
  </li>
 </ul>
@@ -909,7 +922,7 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="depositing-in-zenodo-generic-repository">
-<span id="fcb-find-zenodo"></span><h1><span class="section-number">4. </span>Depositing in Zenodo generic repository<a class="headerlink" href="#depositing-in-zenodo-generic-repository" title="Permalink to this headline">¶</a></h1>
+<span id="fcb-find-zenodo"></span><h1><span class="section-number">5. </span>Depositing in Zenodo generic repository<a class="headerlink" href="#depositing-in-zenodo-generic-repository" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <br/>
@@ -983,14 +996,14 @@ No
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">4.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
 <div><p>To show how to take advantage of CERN Zenodo repository to document the existence of datasets, thus increasing its findability. This is of particular relevant for IMI projects since Zenodo is aimed to support the European Commission (EC) nascent Open Data policy and is commissioned by the EC.</p>
 </div></blockquote>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b6dff8cc-8de9-4224-b84e-3cc456308c72" name="539f04ed-a29e-42ac-93db-3b09c1403306" type="radio">
-</input><label class="tabbed-label" for="b6dff8cc-8de9-4224-b84e-3cc456308c72">
+<input checked="checked" id="82ed55e5-f83b-4080-9a9d-f81c394c411d" name="94cac81d-ca33-4c54-a339-cbc155a3acf4" type="radio">
+</input><label class="tabbed-label" for="82ed55e5-f83b-4080-9a9d-f81c394c411d">
 FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1011,8 +1024,8 @@ FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content d
 </tbody>
 </table>
 </div>
-<input id="dfdd3582-0868-4252-a225-d7bdbac38019" name="539f04ed-a29e-42ac-93db-3b09c1403306" type="radio">
-</input><label class="tabbed-label" for="dfdd3582-0868-4252-a225-d7bdbac38019">
+<input id="309b507b-dc00-4ed5-ab91-0f4c6f64181b" name="94cac81d-ca33-4c54-a339-cbc155a3acf4" type="radio">
+</input><label class="tabbed-label" for="309b507b-dc00-4ed5-ab91-0f4c6f64181b">
 Table of Data Standards</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1041,7 +1054,7 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">4.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1058,19 +1071,19 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/zenodo.png"><img alt="The process of depositing to CERN Zenodo" src="../../../_images/zenodo.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">The Zenodo homepage.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The Zenodo homepage.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="introduction-to-zenodo-repository">
-<h2><span class="section-number">4.3. </span>Introduction to Zenodo repository<a class="headerlink" href="#introduction-to-zenodo-repository" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Introduction to Zenodo repository<a class="headerlink" href="#introduction-to-zenodo-repository" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-is-zenodo">
-<h3><span class="section-number">4.3.1. </span>What is Zenodo?<a class="headerlink" href="#what-is-zenodo" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>What is Zenodo?<a class="headerlink" href="#what-is-zenodo" title="Permalink to this headline">¶</a></h3>
 <p>Zenodo is a repository developed by <a class="reference external" href="https://home.cern/">CERN</a> under the <a class="reference external" href="https://www.openaire.eu/">OpenAire</a> program, the focus of which is on <strong>open data</strong>. It was commissioned by the EC to support their nascent Open Data policy by providing a catch-all repository for EC funded research. This of particular relevance for all projects funded under the <code class="docutils literal notranslate"><span class="pre">Innovative</span> <span class="pre">Medicine</span> <span class="pre">Initiative</span> <span class="pre">(IMI)</span></code>.</p>
 </div>
 <div class="section" id="why-use-zenodo">
-<h3><span class="section-number">4.3.2. </span>Why use Zenodo?<a class="headerlink" href="#why-use-zenodo" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.2. </span>Why use Zenodo?<a class="headerlink" href="#why-use-zenodo" title="Permalink to this headline">¶</a></h3>
 <p>To cite <code class="docutils literal notranslate"><span class="pre">Zenodo's</span> <span class="pre">documentation</span></code>, here are a few reasons why using the repository services provides a <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">entry</span> <span class="pre">barrier</span></code> to making data findable:</p>
 <ul class="simple">
 <li><p>Safe — your research is stored safely for the future in CERN’s Data Centre for as long as CERN exists.</p></li>
@@ -1085,11 +1098,11 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="how-to-use-zenodo-deposition-web-interface">
-<h2><span class="section-number">4.4. </span>1. How to use Zenodo Deposition Web Interface?<a class="headerlink" href="#how-to-use-zenodo-deposition-web-interface" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>1. How to use Zenodo Deposition Web Interface?<a class="headerlink" href="#how-to-use-zenodo-deposition-web-interface" title="Permalink to this headline">¶</a></h2>
 <p>This section guides users through the key steps to perform to organize a deposition to Zenodo using the user interface web component provided by the repository.</p>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-login-in">
-<h3><span class="section-number">4.4.1. </span>Zenodo Compatible Data Collection - Login-in<a class="headerlink" href="#zenodo-compatible-data-collection-login-in" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.1. </span>Zenodo Compatible Data Collection - Login-in<a class="headerlink" href="#zenodo-compatible-data-collection-login-in" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Login via ORCID or Github credentials</p></li>
 </ul>
@@ -1100,7 +1113,7 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </div>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-data-upload">
-<h3><span class="section-number">4.4.2. </span>Zenodo Compatible Data Collection - Data upload<a class="headerlink" href="#zenodo-compatible-data-collection-data-upload" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.2. </span>Zenodo Compatible Data Collection - Data upload<a class="headerlink" href="#zenodo-compatible-data-collection-data-upload" title="Permalink to this headline">¶</a></h3>
 <!-- <div> <img src="/images/TYpr8jM.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" />
 </div> -->
 <details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1119,7 +1132,7 @@ Table of Data Standards</label><div class="tabbed-content docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="uploading-files-to-zenodo">
 <a class="reference internal image-reference" href="../../../_images/TYpr8jM.png"><img alt="Uploading files to Zenodo" src="../../../_images/TYpr8jM.png" style="height: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Uploading files to Zenodo Repository.</span><a class="headerlink" href="#uploading-files-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Uploading files to Zenodo Repository.</span><a class="headerlink" href="#uploading-files-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>Files can be dragged and dropped, with the following limitations:</p>
@@ -1146,7 +1159,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="starting-the-file-upload-to-zenodo">
 <a class="reference internal image-reference" href="../../../_images/LwMorlw.png"><img alt="Starting the file upload  to Zenodo" src="../../../_images/LwMorlw.png" style="height: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Starting the file upload to Zenodo Repository.</span><a class="headerlink" href="#starting-the-file-upload-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Starting the file upload to Zenodo Repository.</span><a class="headerlink" href="#starting-the-file-upload-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The next key step is to select the <code class="docutils literal notranslate"><span class="pre">upload</span> <span class="pre">type</span></code>. In this instance, the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> is selected. This matters as it provide strong typing which is relied on by <code class="docutils literal notranslate"><span class="pre">search</span> <span class="pre">engine</span></code> and therefore impacts <code class="docutils literal notranslate"><span class="pre">findability</span></code>.</p>
@@ -1167,13 +1180,13 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="selecting-the-upload-type-to-zenodo">
 <a class="reference internal image-reference" href="../../../_images/OYyz4dT.png"><img alt="Selecting the upload type to Zenodo" src="../../../_images/OYyz4dT.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Selecting the upload type to Zenodo Repository.</span><a class="headerlink" href="#selecting-the-upload-type-to-zenodo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Selecting the upload type to Zenodo Repository.</span><a class="headerlink" href="#selecting-the-upload-type-to-zenodo" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-providing-metadata">
-<h3><span class="section-number">4.4.3. </span>Zenodo Compatible Data Collection - Providing Metadata<a class="headerlink" href="#zenodo-compatible-data-collection-providing-metadata" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.3. </span>Zenodo Compatible Data Collection - Providing Metadata<a class="headerlink" href="#zenodo-compatible-data-collection-providing-metadata" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Basic metadata such as. <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, at minima should be provided.</p></li>
 <li><p>Authors should be identified, ideally using their <code class="docutils literal notranslate"><span class="pre">orcid</span></code>, so linking can be performed. This affects authors citation and impact evaluation. For IMI FAIRplus participants, since all have now such an identifier, the link should be made systematically.</p></li>
@@ -1195,7 +1208,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="basic-metadata-to-report">
 <a class="reference internal image-reference" href="../../../_images/WmlqBjL.png"><img alt="Basic metadata to report" src="../../../_images/WmlqBjL.png" style="height: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Basic metadata to report .</span><a class="headerlink" href="#basic-metadata-to-report" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Basic metadata to report .</span><a class="headerlink" href="#basic-metadata-to-report" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><ul class="simple">
@@ -1219,13 +1232,13 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="setting-keywords-associated-with-the-zenodo-deposition">
 <a class="reference internal image-reference" href="../../../_images/9Bp91gX.png"><img alt="Setting keywords associated with the Zenodo deposition" src="../../../_images/9Bp91gX.png" style="height: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Setting keywords associated with the Zenodo deposition .</span><a class="headerlink" href="#setting-keywords-associated-with-the-zenodo-deposition" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Setting keywords associated with the Zenodo deposition .</span><a class="headerlink" href="#setting-keywords-associated-with-the-zenodo-deposition" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-access-and-license-information">
-<h3><span class="section-number">4.4.4. </span>Zenodo Compatible Data Collection - Access and License information<a class="headerlink" href="#zenodo-compatible-data-collection-access-and-license-information" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.4. </span>Zenodo Compatible Data Collection - Access and License information<a class="headerlink" href="#zenodo-compatible-data-collection-access-and-license-information" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Zenodo provides facilities to set <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">Conditions</span></code> and <code class="docutils literal notranslate"><span class="pre">License</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Controler</span> <span class="pre">Contact</span> <span class="pre">Information</span></code>, as well as <code class="docutils literal notranslate"><span class="pre">Embargo</span> <span class="pre">Duration</span></code> if applicable.</p></li>
 <li><p>As indicated above, it is possible to <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">an</span> <span class="pre">Embargo</span> <span class="pre">Period</span></code>, if the option <code class="docutils literal notranslate"><span class="pre">embargoed</span> <span class="pre">access</span></code> is selected under the <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">right</span></code> section.</p></li>
@@ -1247,7 +1260,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="choosing-a-license-is-essential">
 <a class="reference internal image-reference" href="../../../_images/fSxOjXe.png"><img alt="Choosing a License is essential" src="../../../_images/fSxOjXe.png" style="height: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Choosing a License is essential.</span><a class="headerlink" href="#choosing-a-license-is-essential" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Choosing a License is essential.</span><a class="headerlink" href="#choosing-a-license-is-essential" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><ul class="simple">
@@ -1271,7 +1284,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="setting-access-conditions">
 <a class="reference internal image-reference" href="../../../_images/ty9rpXF.png"><img alt="Setting access conditions" src="../../../_images/ty9rpXF.png" style="height: 350px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Setting access conditions.</span><a class="headerlink" href="#setting-access-conditions" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Setting access conditions.</span><a class="headerlink" href="#setting-access-conditions" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><ul class="simple">
@@ -1294,13 +1307,13 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="autocompletion-prompts-available-licenses">
 <a class="reference internal image-reference" href="../../../_images/249GhMg.png"><img alt="Autocompletion prompts available licenses" src="../../../_images/249GhMg.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Autocompletion prompts available licenses.</span><a class="headerlink" href="#autocompletion-prompts-available-licenses" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Autocompletion prompts available licenses.</span><a class="headerlink" href="#autocompletion-prompts-available-licenses" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-funding-information">
-<h3><span class="section-number">4.4.5. </span>Zenodo Compatible Data Collection - Funding Information<a class="headerlink" href="#zenodo-compatible-data-collection-funding-information" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.5. </span>Zenodo Compatible Data Collection - Funding Information<a class="headerlink" href="#zenodo-compatible-data-collection-funding-information" title="Permalink to this headline">¶</a></h3>
 <p>Since the Zenodo mission is to collect EC funded data, the repository provides the means to lookup <code class="docutils literal notranslate"><span class="pre">Grant</span> <span class="pre">Information</span></code>:</p>
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 <details class="sphinx-bs dropdown card mb-3" open="open">
@@ -1319,7 +1332,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="linking-funding-to-zenodo-submission">
 <a class="reference internal image-reference" href="../../../_images/STjyFbT.png"><img alt="Linking Funding to Zenodo Submission" src="../../../_images/STjyFbT.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Linking Funding to Zenodo Submission.</span><a class="headerlink" href="#linking-funding-to-zenodo-submission" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Linking Funding to Zenodo Submission.</span><a class="headerlink" href="#linking-funding-to-zenodo-submission" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><ul class="simple">
@@ -1329,7 +1342,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </div>
 <hr class="docutils" />
 <div class="section" id="zenodo-compatible-data-collection-miscellaneous-information">
-<h3><span class="section-number">4.4.6. </span>Zenodo Compatible Data Collection - Miscellaneous Information<a class="headerlink" href="#zenodo-compatible-data-collection-miscellaneous-information" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.6. </span>Zenodo Compatible Data Collection - Miscellaneous Information<a class="headerlink" href="#zenodo-compatible-data-collection-miscellaneous-information" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Miscellaneous Information:</p></li>
 </ul>
@@ -1350,7 +1363,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="miscellaneous-information-about-the-zenodo-submission">
 <a class="reference internal image-reference" href="../../../_images/uhGZN5t.png"><img alt="Miscellaneous Information about the Zenodo Submission" src="../../../_images/uhGZN5t.png" style="height: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Miscellaneous Information about the Zenodo Submission.</span><a class="headerlink" href="#miscellaneous-information-about-the-zenodo-submission" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Miscellaneous Information about the Zenodo Submission.</span><a class="headerlink" href="#miscellaneous-information-about-the-zenodo-submission" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><ul class="simple">
@@ -1361,9 +1374,9 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </div>
 </div>
 <div class="section" id="programmatic-deposition-to-zenodo-via-the-rest-api">
-<h2><span class="section-number">4.5. </span>2. Programmatic Deposition to Zenodo via the REST-API<a class="headerlink" href="#programmatic-deposition-to-zenodo-via-the-rest-api" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>2. Programmatic Deposition to Zenodo via the REST-API<a class="headerlink" href="#programmatic-deposition-to-zenodo-via-the-rest-api" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-a-zenodo-account-and-obtain-an-api-token">
-<h3><span class="section-number">4.5.1. </span>Create a zenodo account and obtain an API token<a class="headerlink" href="#create-a-zenodo-account-and-obtain-an-api-token" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.1. </span>Create a zenodo account and obtain an API token<a class="headerlink" href="#create-a-zenodo-account-and-obtain-an-api-token" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>First, it is necessary to obtain an api key:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ACCESS_TOKEN</span></code> = “&lt;enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI  &gt;”</p>
@@ -1392,7 +1405,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </ul>
 </div>
 <div class="section" id="create-the-payload-for-the-programmatic-deposition">
-<h3><span class="section-number">4.5.2. </span>Create the payload for the programmatic deposition<a class="headerlink" href="#create-the-payload-for-the-programmatic-deposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.2. </span>Create the payload for the programmatic deposition<a class="headerlink" href="#create-the-payload-for-the-programmatic-deposition" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>For example, it can be obtained by parsing the content of a metadata template or from a dedicated acquisition form specifically made by a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">manager</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># getting the record id</span>
@@ -1499,7 +1512,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </ul>
 </div>
 <div class="section" id="finalize-request-and-post">
-<h3><span class="section-number">4.5.3. </span>Finalize request and post<a class="headerlink" href="#finalize-request-and-post" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.3. </span>Finalize request and post<a class="headerlink" href="#finalize-request-and-post" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI.</p></li>
 </ul>
@@ -1515,7 +1528,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 </div>
 <hr class="docutils" />
 <div class="section" id="conclusions">
-<h2><span class="section-number">4.6. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Relying on CERN Zenodo repository using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver <strong>dataset findability</strong> for assets generated by publicly funded resources.
 The integration with ORCID<!-- TODO add a link to corresponding document --> makes it very easy to obtain an account on CERN’s service.
@@ -1533,7 +1546,7 @@ Users should however be reminded of the following limitations of the service:</p
 </ul>
 </div></blockquote>
 <div class="section" id="what-should-i-read-next">
-<h3><span class="section-number">4.6.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.6.1. </span>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../infrastructure/data-catalog.html#fcb-infra-build-catalog"><span class="std std-ref">How to build a data catalogue?</span></a></p></li>
 <li><p>How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document --></p></li>
@@ -1556,7 +1569,7 @@ Users should however be reminded of the following limitations of the service:</p
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">4.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>References</strong><div class="summary-down docutils">
@@ -1567,7 +1580,7 @@ Users should however be reminded of the following limitations of the service:</p
 </div>
 </details></div>
 <div class="section" id="authors">
-<h2><span class="section-number">4.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.8. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1605,7 +1618,7 @@ Users should however be reminded of the following limitations of the service:</p
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">4.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1653,115 +1666,115 @@ Users should however be reminded of the following limitations of the service:</p
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   4.1. Main Objectives
+   5.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   4.2. Graphical Overview
+   5.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-zenodo-repository">
-   4.3. Introduction to Zenodo repository
+   5.3. Introduction to Zenodo repository
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-zenodo">
-     4.3.1. What is Zenodo?
+     5.3.1. What is Zenodo?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-use-zenodo">
-     4.3.2. Why use Zenodo?
+     5.3.2. Why use Zenodo?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-use-zenodo-deposition-web-interface">
-   4.4. 1. How to use Zenodo Deposition Web Interface?
+   5.4. 1. How to use Zenodo Deposition Web Interface?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-login-in">
-     4.4.1. Zenodo Compatible Data Collection - Login-in
+     5.4.1. Zenodo Compatible Data Collection - Login-in
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-data-upload">
-     4.4.2. Zenodo Compatible Data Collection - Data upload
+     5.4.2. Zenodo Compatible Data Collection - Data upload
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-providing-metadata">
-     4.4.3. Zenodo Compatible Data Collection - Providing Metadata
+     5.4.3. Zenodo Compatible Data Collection - Providing Metadata
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-access-and-license-information">
-     4.4.4. Zenodo Compatible Data Collection - Access and License information
+     5.4.4. Zenodo Compatible Data Collection - Access and License information
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-funding-information">
-     4.4.5. Zenodo Compatible Data Collection - Funding Information
+     5.4.5. Zenodo Compatible Data Collection - Funding Information
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zenodo-compatible-data-collection-miscellaneous-information">
-     4.4.6. Zenodo Compatible Data Collection - Miscellaneous Information
+     5.4.6. Zenodo Compatible Data Collection - Miscellaneous Information
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#programmatic-deposition-to-zenodo-via-the-rest-api">
-   4.5. 2. Programmatic Deposition to Zenodo via the REST-API
+   5.5. 2. Programmatic Deposition to Zenodo via the REST-API
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-zenodo-account-and-obtain-an-api-token">
-     4.5.1. Create a zenodo account and obtain an API token
+     5.5.1. Create a zenodo account and obtain an API token
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-payload-for-the-programmatic-deposition">
-     4.5.2. Create the payload for the programmatic deposition
+     5.5.2. Create the payload for the programmatic deposition
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finalize-request-and-post">
-     4.5.3. Finalize request and post
+     5.5.3. Finalize request and post
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusions">
-   4.6. Conclusions
+   5.6. Conclusions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-read-next">
-     4.6.1. What should I read next?
+     5.6.1. What should I read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   4.7. References
+   5.7. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   4.8. Authors
+   5.8. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   4.9. License
+   5.9. License
   </a>
  </li>
 </ul>
@@ -1776,8 +1789,8 @@ Users should however be reminded of the following limitations of the service:</p
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="identifiers-minids.html" title="previous page"><span class="section-number">3. </span>Minting identifiers with Minid</a>
-<a class='right-next' id="next-link" href="registeringDatasets.html" title="next page"><span class="section-number">5. </span>Registering Datasets in Wikidata</a>
+<a class='left-prev' id="prev-link" href="identifiers-minids.html" title="previous page"><span class="section-number">4. </span>Minting identifiers with Minid</a>
+<a class='right-next' id="next-link" href="registeringDatasets.html" title="next page"><span class="section-number">6. </span>Registering Datasets in Wikidata</a>
 
                                             </div>
                                         </v-row>
@@ -1875,6 +1888,7 @@ Users should however be reminded of the following limitations of the service:</p
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

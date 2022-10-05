@@ -69,7 +69,10 @@
     <link rel="next" title="Introduction" href="recipes/introduction/FAIR-cookbook-audience.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/home.html" />
@@ -215,7 +218,7 @@
             </h1>
             <v-container>
                 <h2 class="white--text text-center pa-4 mt-0">
-                    <p class="animate__animated animate__slideInLeft" style="font-size: 30px !important;">
+                    <p style="font-size: 30px !important;">
                         <b :style="$vuetify.breakpoint.mdAndUp ? 'line-height:3.2rem' : '' ">
                             An online, <span class="secondary--text">open</span> and <span class="secondary--text">live</span>
                             resource for the Life Sciences with recipes that help you to make
@@ -506,7 +509,7 @@
         },
         template: `
             <v-col cols="12">
-                <v-card color="primary lighten-1" class="d-flex flex-column animate__animated animate__zoomInDown">
+                <v-card color="primary lighten-1" class="d-flex flex-column animate__animated animate__zoomInDown homeFAIRCard">
                     <v-card-title class="text-h5 white--text">
                         <v-btn
                             fab
@@ -815,6 +818,7 @@
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
   </body>
 </html>

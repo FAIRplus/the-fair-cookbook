@@ -45,7 +45,7 @@ We will cover the following points:
 ## Graphical Overview
 
 
-```{figure} data-catalog.md-figure1.mmd.png
+```{figure} ../../../images/data-catalog-md-figure1.png
 ---
 name: data-catalog-figure1
 alt: Building and populating a data catalogue

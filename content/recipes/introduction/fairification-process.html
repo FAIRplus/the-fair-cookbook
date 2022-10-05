@@ -1,0 +1,1535 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAIRification framework</title>
+
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
+    <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/fairification-process.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Practical Considerations for CROs to play FAIR" href="fair-cro.html" />
+    <link rel="prev" title="Prioritization of projects for FAIRification" href="priorization.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/fairification-process.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="FAIRification framework" />
+<meta property="og:description" content="FAIRification framework  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/terms" />
+ <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
+<meta name="twitter:card" content="summary" />
+  </head>
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+
+
+<v-app id="app" class="pa-0">
+    <v-container fluid class="pa-0">
+        <v-row class="pa-0" no-gutters>
+            <v-container fluid class="pa-0">
+                <v-row>
+                    <div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
+    <div class="topbar-contents row" style="margin: initial !important;">
+        <div class="col topbar-main d-flex align-center">
+            
+                <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                        data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                        aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                        title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            
+
+            
+                <a href="../../../index.html">
+                    <img src="../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook"
+                         style="width: 135%; max-width: initial !important;">
+                </a>
+            
+
+            <v-spacer> </v-spacer>
+            <div style="margin-top: 3px" class="mr-4 extraButtons">
+                
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/recipes/introduction/fairification-process.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+                <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+    <button
+        id="dropdown-buttons-trigger"
+        class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"
+    >
+        <i class="fab fa-github"></i>
+    </button>
+
+    <div class="dropdown-buttons sourcebuttons">
+        
+            <a class="repository-button" href="https://github.com/FAIRplus/the-fair-cookbook">
+                <button
+                    type="button"
+                    class="btn btn-secondary topbarbtn"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="Source repository"><i
+                    class="fab fa-github"
+                >
+
+                </i>repository
+                </button>
+            </a>
+        
+        
+        <a
+            class="issues-button"
+            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/fairification-process.html&body=Your%20issue%20content%20here."
+        >
+            <button type="button"
+                    class="btn btn-secondary topbarbtn"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                title="Open an issue"
+            >
+                <i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/introduction/fairification-process.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+                <!-- Launch buttons -->
+
+            </div>
+                
+                    <form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get"
+>
+  <i class="icon fas fa-search"></i>
+  <input
+          type="search"
+          class="form-control"
+          name="q"
+          id="search-input"
+          placeholder="Search this book..."
+          aria-label="Search this book..."
+          autocomplete="off"
+          style="border-radius:10px"
+  >
+</form>
+
+                
+                
+                
+        </div>
+    </div>
+</div>
+                </v-row>
+                
+                    <v-row class="d-flex">
+                    
+                        <div
+                            class=" bd-sidebar site-navigation show"
+                            id="site-navigation"
+                            style="width:350px"
+                        >
+                            
+                                <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+
+    <div class="testTOC">
+        <script>
+    Vue.component("Navigation", {
+        data() { return { recipes: {} }},
+        methods: {
+            async getData(){
+                const recipes = await fetch('/_static/recipes.json')
+                this.recipes = await recipes.json();
+                this.parseDom()
+            },
+            parseDom() {
+                const links = Array.prototype.slice.call(document.getElementsByClassName("reference internal"))
+                const icon = '<i class="fas fa-play-circle grey lighten-3 secondary--text ml-2"></i>'
+                links.forEach(link => {
+                    const recipeSplit = link.innerText.split(". ")
+                    const recipeName = recipeSplit[recipeSplit.length - 1].trim()
+                    recipeSplit.pop()
+                    recipeSplit.forEach(pref => { pref = pref.trim() })
+                    const prefix = recipeSplit.length > 0 ? recipeSplit.join(".") + "." : null
+                    const content = prefix ? `${prefix} ${recipeName}` : recipeName
+                    if (Object.keys(this.recipes).includes(recipeName)) {
+                        if (this.recipes[recipeName].executable === 'Yes') link.innerHTML = content + icon
+                    }
+                })
+            }
+        },
+        mounted() { this.getData() }
+    })
+</script>
+
+
+<Navigation> </Navigation>
+
+    </div>
+
+    <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
+        
+        
+            <nav class="bd-links pt-10" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brief-FAIR-principles.html">
+   What are the FAIR principles?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIRplus-values.html">
+   Ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata-fair.html">
+   Metadata and FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Datasets to train on FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
+   FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="public-kg-resource-integration.html">
+   Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="priorization.html">
+   Selecting projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Practical Considerations for a CRO to do FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. InChI and SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/iupac-names.html">
+     3. Generating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     4. Minting identifiers with Minid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     5. Depositing in Zenodo generic repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     6. Registering Datasets in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     7. Describe data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     8. Validating data by checksums
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     9. Search engine optimization
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       9.9.1. Data page markup with Bioschemas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       9.9.2. Dataset page markup with Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       9.9.3. Data catalogue markup
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     1. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     2. Identifier mapping with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       2.11.1. Using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     3. Introduction to terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     4. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     5. Requesting new terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     6. Ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     7. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       7.11.1. Competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       7.11.2. Application ontology for metabolomics
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-alignment-oxo.html">
+     8. Ontology mapping with Ontology Xref Service (OxO)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     9. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     10. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       10.4.1. Metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       10.4.2. Metadata profile validation in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       10.4.3. Bioactivity data profile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     11. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     12. An inventory of tools for converting your data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     13. File format validation, FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     14. Extraction, transformation, and loading process
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     15. Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       15.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Software licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Data licenses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data's permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Provenance information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     3. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     4. Deploying the IMI data catalogue
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     5. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       5.1. Portals and look-up services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       5.2. Selecting a look-up service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       5.3. Deploying the EBI OLS
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     6. Using OpenRefine and Karma for FAIRification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/fair-api.html">
+     7. Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. FAIR Evaluator tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. FAIRshake tool
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   A Model To Gauge Dataset Maturity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Creating a basic ISA document
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Making a community compliant - ISA in JSON
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA in RDF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making omics data matrices FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       1. Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       2. Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       3. Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       4. Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. IMI Oncotrack - clinical cohort datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. IMI ReSOLUTE - transcriptomics datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. IMI EHDEN-OHDSI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. IMI EUBOPEN FAIR High-Content Screening data deposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/approach-cdisc.html">
+     7. Mapping datasets to CDISC-SDTM
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Recipes at a Glance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../search-wizard.html">
+   Filter Recipes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav>
+        
+        
+             <!-- To handle the deprecated key -->
+
+        
+    </div>
+
+    <div class="text-center px-5 lighten-3 grey py-2">
+        Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
+    </div>
+</div>
+                        </div>
+                        
+                            <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                                <v-container fluid id="main-content" class="pa-0">
+                                    <v-row class="d-flex">
+                                        
+                                            <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                                
+  <div class="section" id="fairification-framework">
+<span id="fcb-fairification-process"></span><h1>FAIRification framework<a class="headerlink" href="#fairification-framework" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<br/>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB079", "sdo:name": "FAIRification framework", "sdo:description": "FAIRification framework", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Everyone|NA"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Experience Report / Applied Example", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB079", "dso:url": "https://w3id.org/faircookbook/FCB079", "owl:sameAs": "https://identifiers.org/fcb:FCB079"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB079#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB079#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB079#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB079#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<div class="card recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+20 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">FAIRification framework</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Experience Report / Applied Example</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue">Everyone</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars not applicable">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/not applicable" class="secondary white--text" target="_blank" label>not applicable</v-chip></v-chip-group></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB079" class="text--purple-dark">FCB079
+</a></div>
+</div>
+</div>
+<div class="section" id="main-objectives">
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This recipe provides a general introduction to the FAIRification Framework developed by FAIRplus.</p>
+<p>The recipe will cover the following elements:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The components of the framework</p></li>
+<li><p>Some practical considerations for applying the framework</p></li>
+</ul>
+</div></blockquote>
+<p>This recipe will not provide instructions on how to practically implement the framework as this is covered elsewhere in this Cookbook.</p>
+<!--TO DO add link to BYOD recipe once it is available -->
+</div>
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<!-- [FAIRification Framework](./FAIRificationFramework.png) -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>FAIRification framework</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="fairification-process">
+<a class="reference internal image-reference" href="../../../_images/FAIRificationFramework.png"><img alt="FAIRification framework" src="../../../_images/FAIRificationFramework.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">FAIRification framework</span><a class="headerlink" href="#fairification-process" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<hr class="docutils" />
+<div class="section" id="the-fairification-framework">
+<h2>The FAIRification Framework<a class="headerlink" href="#the-fairification-framework" title="Permalink to this headline">¶</a></h2>
+<p>The FAIRplus FAIRification Framework was developed to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR principles into actionable, “tried and tested” processes. The framework was developed in an iterative fashion by a multi-disciplinary team of research scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner projects.</p>
+<p>The framework consists of 3 components:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>a reusable  FAIRification Process, which outlines the main phases of a FAIRification activity</p></li>
+<li><p>a FAIRification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR transformation</p></li>
+<li><p>a FAIRification Workplan layout, which provides a structure for organising FAIR implementation work tailored to the needs of a specific project.</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="the-fairification-process">
+<h3>The FAIRification Process<a class="headerlink" href="#the-fairification-process" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>FAIRification process</strong>  can be divided into four phases:</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>FAIRification goal definition</p></li>
+<li><p>Requirement examination</p></li>
+<li><p>Design and Implementation</p></li>
+<li><p>Review</p></li>
+</ol>
+</div></blockquote>
+<!-- [FAIRification Process](./FAIRificationProcess.png) -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each of these phases are sequential dependent on each other and involve two to three groups working on them:</p>
+<ol class="simple">
+<li><p>The first group is the data or project owner who plays the major role in definition of goals and reviewing the impact of the goals.</p></li>
+<li><p>The second group involves the technicians who specialize in processing and analyzing the data to work towards the goal.
+They might be a subset of the data owner group, but a clear distinct between these groups should be made to delegate
+responsibilities and to attain results efficiently.</p></li>
+<li><p>The third group is assessment group who are responsible for checking the alignment of the task done by the technician
+team and the goals set by the FAIRification team. The individuals involved in this team are not part of discussions
+between the data owners and technicians and hence act as peer-reviewers.</p></li>
+</ol>
+</div>
+<p>In the following sections, we will discuss in depth the work involved in the individual phases of the FAIRIfication pipeline.</p>
+<div class="section" id="phase-1-define-fairification-goals">
+<h4>Phase 1: define FAIRification goals<a class="headerlink" href="#phase-1-define-fairification-goals" title="Permalink to this headline">¶</a></h4>
+<p>This phase involves the identification of outcomes and planning of goals that data or project owner would want to achieve
+upon FAIRification of the data.
+These goals are either <strong>centric to one aspect of FAIR</strong>, for example <em>deposition of data to
+Zenodo</em> to increase its findability, or they could cover <strong>multiple aspects of FAIR</strong>, such as <em>use of consistent
+terminologies and controlled vocabularies to represent the data (interoperability aspect) along with deposition of data
+in relevant repositories (findability aspect)</em>.</p>
+<p>Sometimes, the data/project owner may be at a loss when tasked with spelling out a clear FAIRification goal.
+In that case, tools such as the <a class="reference external" href="https://fairplus.github.io/Data-Maturity/">Dataset Maturity (DSM) model</a> can assist in identification of goals.
+Check out the <a class="reference internal" href="../maturity.html"><span class="doc std std-doc">DSM recipe</span></a> for more details on how the tool is able to accomplish it.</p>
+</div>
+<div class="section" id="phase-2-examine-requirements">
+<h4>Phase 2: examine requirements<a class="headerlink" href="#phase-2-examine-requirements" title="Permalink to this headline">¶</a></h4>
+<p>Upon identification of the goal by the data owners, a discussion with the technical team is done.
+The technical team then start with collection of the data to ensure that they have access to the data that needs to be FAIRified.
+If the technical team is external, certain legal aspects need to be placed for efficient transition of data between the
+data owners and technicians (for example a DPIA may be needed, see this recipe (<a class="reference external" href="http://dpia.md">dpia.md</a>) for more details).</p>
+<p>Following this, the technical team identifies tools and expertise required for the implementation of the work and start
+cataloging this material. Lastly, the team collectively decides on the individuals that would be assigned the FAIRification task.</p>
+<p>At the end of this phase, an “action” team (subset of the technical team whose goal is to perform the FAIRification tasks)
+is in place along with a catalog of tools and resources that would be used for achieving this goal.</p>
+</div>
+<div class="section" id="phase-3-assess-design-implement-repeat">
+<h4>Phase 3: assess, design, implement, repeat<a class="headerlink" href="#phase-3-assess-design-implement-repeat" title="Permalink to this headline">¶</a></h4>
+<p>Following the selection of the “action” team, an iterative cycle of assessment, design, and implementation in put in place.</p>
+<p><strong>Assessment :</strong>
+Prior to starting the work, the assessment of goals is done to ensure that individuals in the action team are updated and clear
+with the FAIRification goals formulated by the data owners. This assessment is carried out by review team which could
+be an independent team or certain individuals from the technical team who are not involved in the action team.
+The assessment involves a binary decision of “GO” or “NO GO” based on the FAIRification goals and the catalog provided.
+At this stage, the reviews can also provide suggestion based on their experiences on the resources, tool, or goals.</p>
+<p><strong>Design :</strong>
+Once the team receives a “GO” decision from the review team, the action team now starts by enlisting the steps that
+need to be done performed to achieve the goal. For each task, the resources, an estimate time duration,
+as well as the responsible person is selected.</p>
+<p><strong>Implementation :</strong>
+Once the tasks have been selected and assigned, the actual work begins.
+To ensure that the action team is working smoothly, weekly or bi-weekly meetings is recommended so that the team is
+aware of the progress.</p>
+<p>Once the implementation of task listed in the design phase are done, the action team assess the work done and checks the
+aligned with the FAIRification goal. In case more tasks are needed to achieve the goal, a second round of the
+assess-review-implement cycle takes place as described above with the starting point as the FAIRification goals,
+the completed tasks and the proposed task</p>
+<p>This phase is usually run in short sprints of 3-month.</p>
+</div>
+<div class="section" id="phase-4-review-against-the-goals">
+<h4>Phase 4: review against the goals<a class="headerlink" href="#phase-4-review-against-the-goals" title="Permalink to this headline">¶</a></h4>
+<p>At this phase, the FAIRification work has been completed by the team. The technical team and the data owners now come
+together to assess the output of FAIRification. At this point, the technical team packages all the work done and hands
+it over to the data owners. Decisions on the key learning as well as future aspects of the work take place.
+Finally, to ensure that the work done is sustainable, the deposition of workflows and the information on steps is
+deposited on online catalogs and recipe books such as teh Cookbook, RDMKit, IMI Data Catalog to name a few.</p>
+</div>
+</div>
+<div class="section" id="the-fairification-template">
+<h3>The FAIRification Template<a class="headerlink" href="#the-fairification-template" title="Permalink to this headline">¶</a></h3>
+<p>The FAIRification template provide an outline of possible FAIRification aspects a dataset could be considered for.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This template was formulated based on retrospective and prospective experiences of FAIRification of
+datasets within IMI FAIRplus and does not represent the exhaustive list of all potential FAIRification aspects.</p>
+</div>
+<p>The template provides an overview on the data from 3 perspectives: Contents related, Representation and format, and the
+hosting environment capabilities. Covering these three aspects, 8 steps are required for the implementation of the
+FAIRification template as shown in Figure 3. We discuss each of the steps below in detail:</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>FAIRification template</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="fairification-template">
+<a class="reference internal image-reference" href="../../../_images/FAIRificationTemplate.png"><img alt="FAIRification template" src="../../../_images/FAIRificationTemplate.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">FAIRification template</span><a class="headerlink" href="#fairification-template" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><blockquote>
+<div><ul class="simple">
+<li><p><strong>Step 1: Get the data</strong>: This step involves getting access to the underlying dataset via a restricted or open access
+API and capturing information on how to query the data via the API.</p></li>
+<li><p><strong>Step 2: Model the domain</strong>: Here, the data types involved in the dataset are identified.
+Also, the community or domain standards for representation of the data are also captured to align the FAIRification work, if any, along those lines.</p></li>
+<li><p><strong>Step 3: Select the identifier scheme</strong>: Here, the establishment of an identifier for identification of the dataset is done.
+This could be achieved by generation of new identifiers or reusing of existing ones.</p></li>
+<li><p><strong>Step 4: Apply data standards</strong>: At this step, data standard validation and identification is done to ensure that the
+representation of the data is in community or domain specified formats for interoperability purposes.</p></li>
+<li><p><strong>Step 5: Choose data vocabularies</strong>: At this step, you would look in depth about the data content and harmonize it
+with ontologies either pre-existing or formulate an application ontology for your use case.</p></li>
+<li><p><strong>Step 6: Transform data for interoperability</strong>: Not only would you represent the data in one ontology but also link
+or map to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.</p></li>
+<li><p><strong>Step 7: Host your data</strong>: Once the dataset is ready, hosting and search engine optimization inputs for the dataset
+need to be in place. Alongside hosting, data versioning and data formats need to also be considered.</p></li>
+<li><p><strong>Step 8: Share your data</strong>: Now that the dataset is FAIRified, one can share this data to the community with licensing.
+In case of dealing with sensitive data, data anonymization considerations should be placed prior to sharing.</p></li>
+</ul>
+</div></blockquote>
+<!-- [FAIRification Template](./FAIRificationTemplate.png) -->
+</div>
+<div class="section" id="the-fairification-workplan">
+<h3>The FAIRification Workplan<a class="headerlink" href="#the-fairification-workplan" title="Permalink to this headline">¶</a></h3>
+<p>The FAIRification Workplan is a specific design and implementation plan generated for a specific project based on the
+goals set in phase 1 and requirements identified in phase 2 of the Process.
+Relevant elements from the FAIRification Template are selected and broken down into concrete tasks.
+These tasks are then completed within the agreed cycle time frame as per the FAIRification Process.</p>
+<p>The diagram below shows the bespoke FAIRification Workplan for the CARE project.
+The  Workplan follows the general outline of the FAIRification Process, with the goals listed in section 1 (red),
+the outcomes of the project examination on section 2 (orange) and the pre-FAIRification assessment outcomes in section 3.
+It can also be beneficial to explicitly list the indicators targeted for improvement in this section in order to keep
+this information easily accessible in one place.</p>
+<p>The key parts of the workplan are section 4 (Design Decisions) and 5 (Implementation).
+Section 4 lists the specific steps from the FAIRification Template that will be addressed in this FAIRification cycle
+(dark purple) and refines them into more concrete steps relevant for this context (light purple).</p>
+<p>In section 5, these concrete steps are broken down into clear implementable tasks, which are recorded in colour coded boxes to track progress.
+If a Cookbook recipe already exists to address a task, this can be linked here.</p>
+<p>Following a FAIRification cycle, the results of the post-FAIRification assessment are recorded in section 6.</p>
+<p>If more than one FAIRification cycle is performed, a new version of the Workplan should be produced for each cycle,
+in particular if there are changes in sections 4 and 5.</p>
+<!-- [FAIRification Workplan CARE project](./FAIRificationWorkplanCare.png) -->
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<strong>FAIRification Workplan CARE project</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="fairification-workplancare">
+<a class="reference internal image-reference" href="../../../_images/FAIRificationWorkplanCare.png"><img alt="FAIRification Workplan CARE project" src="../../../_images/FAIRificationWorkplanCare.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">FAIRification Workplan CARE project</span><a class="headerlink" href="#fairification-workplancare" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+</div>
+<div class="section" id="practical-considerations">
+<h2>Practical considerations<a class="headerlink" href="#practical-considerations" title="Permalink to this headline">¶</a></h2>
+<p>While this recipe does not deal in detail with how to implement the FAIRification framework, as this is covered elsewhere,
+it is worth highlighting a few important practical considerations:</p>
+<ul class="simple">
+<li><p><strong>The importance of good goal setting</strong>. Throughout the development of the framework, we tested iterative versions of the framework on a range of use cases brought to us by other IMI projects. One of the standout lessons from these collaborations was that good FAIRification goals lead to good FAIRification goals. The characteristics of a good FAIRification goals are:</p>
+<ul>
+<li><p>Actionability: goals need to be translatable into concrete tasks. A goal that is too vague can be difficult to implement as it is unclear what steps are involved in its completion.</p></li>
+<li><p>Defined scope: a good goal has a clearly defined scope or endpoint. Without this, work on an open-ended goal is likely going to carry on indefinitely with diminishing benefits.</p></li>
+<li><p>Scientific value: FAIRification work comes at a cost so a good FAIRification goal needs to explicitly state why the work will increase the data’s scientific value. Investing a great deal of effort to FAIRify a single-use internal dataset that is not intended to ever be shared or reused would not constitute a prudent investment of resources.</p></li>
+</ul>
+</li>
+<li><p><strong>Multi-disciplinary task teams</strong>. FAIR considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology maintenance to data management aspects such as the creation of data dictionaries to project-level governance issues like data licensing and reuse conditions. A successful FAIRification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research scientists and project managers, to name just a few. The exact composition of a task team depends on the nature of the FAIRification tasks and may change over the course of the FAIRification process, with different skills required in the goal setting and project examiniation phases than during task implementations.</p></li>
+<li><p><strong>Flexibility of the framework with regards to specific FAIR approaches or implementations</strong>. The FAIRification Framework described here is agnostic of any specific FAIR implementation such as different FAIR assessment methodologies. During the development of the framework, we trialed a range of methodologies including <a class="reference external" href="https://www.rd-alliance.org/group/fair-data-maturity-model-wg/post/fair-data-maturity-model-indicators">RDA</a>, <a class="reference external" href="https://fairsfair.eu/fairsfair-data-object-assessment-metrics-request-comments">FAIRsFAIR</a> and <a class="reference external" href="https://fairplus.github.io/Data-Maturity/">FAIR Dataset Maturity (DSM)</a> indicators to assess FAIRification as well as a range of tools to support the definition of FAIRification goals and their translation into a workplan.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The key take-homes of this recipe are:</p>
+<ol class="simple">
+<li><p><strong>Tailor the generic FAIRification process to individual needs</strong>. There is no single right way to “do FAIR” and every project will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project’s needs.</p></li>
+<li><p><strong>Carefully define FAIRification goals, focusing on incrementally achievable targets</strong>. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced <strong>“FAIR enough”</strong> status.</p></li>
+<li><p><strong>Assemble a multi-disciplinary team</strong>. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects.</p></li>
+</ol>
+<div class="section" id="what-should-i-read-next">
+<h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="priorization.html"><span class="doc std std-doc">Prioritization of projects for FAIRification</span></a></p></li>
+<li><p><a class="reference internal" href="../findability/zenodo-deposition.html"><span class="doc std std-doc">Depositing in Zenodo generic repository</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html"><span class="doc std std-doc">Introduction to terminologies and ontologies</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/creating-data-dictionary.html"><span class="doc std std-doc">Creating data/variable dictionary</span></a></p></li>
+<li><p><a class="reference internal" href="../interoperability/identifier-mapping.html"><span class="doc std std-doc">Interlinking data from different sources</span></a></p></li>
+<li><p><a class="reference internal" href="../maturity.html"><span class="doc std std-doc">Maturity models</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0003-1058-2668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Luxembourg</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-LU.svg" ></img></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/YojanaGadiya"></img><div class="d-block">Yojana Gaidya</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-7683-0452"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Fraunhofer Institute</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Writing - Original Draft</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                                            </v-col>
+                                            <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                                <div style="position: fixed">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-fairification-framework">
+   The FAIRification Framework
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-fairification-process">
+     The FAIRification Process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#phase-1-define-fairification-goals">
+       Phase 1: define FAIRification goals
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#phase-2-examine-requirements">
+       Phase 2: examine requirements
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#phase-3-assess-design-implement-repeat">
+       Phase 3: assess, design, implement, repeat
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#phase-4-review-against-the-goals">
+       Phase 4: review against the goals
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-fairification-template">
+     The FAIRification Template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-fairification-workplan">
+     The FAIRification Workplan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practical-considerations">
+   Practical considerations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        </div>
+                                            </div>
+                                        
+                                    </v-row>
+
+                                    
+                                        <v-row class="mb-5">
+                                            <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                                
+<a class='left-prev' id="prev-link" href="priorization.html" title="previous page">Prioritization of projects for FAIRification</a>
+<a class='right-next' id="next-link" href="fair-cro.html" title="next page">Practical Considerations for CROs to play FAIR</a>
+
+                                            </div>
+                                        </v-row>
+                                    
+                                </v-container>
+                            </main>
+                        
+                    
+                </v-row>
+                
+            </v-container>
+        </v-row>
+    </v-container>
+</v-app>
+
+
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-171697285-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+<v-container fluid>
+    <v-row no-gutter>
+        <v-col cols="12"><footer class="footer" style=" margin-top: 12px;  ">
+    <div class="container-md mt-4">
+      <div class="row" style="display:flex; justify-content: center">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+            <div class="footerImages">
+              <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
+              <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
+              <a href="https://efpia.eu"><img src="/_static/images/logo/efpia-logo.png" height="40" alt="EFPIA logo"></a>
+            </div>
+            <div class="mb-3"> Grant agreement 802750 </div>
+          </div>
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
+              <ul>
+                <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
+                <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
+              </ul>
+          </div>
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
+              <ul>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
+              </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3 pb-5">
+            <a class="mr-3" href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+            <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="padding:0">
+        <div class="row" style="padding:0; margin:0">
+            <div class="col-12 purple-dark">
+                The FAIR Cookbook is licensed under the
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    Creative Commons Attribution 4.0 International
+                </a> (CC BY 4.0) license.
+            </div>
+        </div>
+        <div class="row extra_footer d-none">
+            <script> mermaid.init() </script>
+        </div>
+    </div>
+
+</footer> </v-col>
+    </v-row>
+</v-container>
+<script type="application/javascript">
+    const vuetify = new Vuetify({
+        theme: {
+            themes: {
+                light: {
+                    primary: '#421C6E',
+                    secondary: '#FC7A4A',
+                    accent: '#8038D1',
+                    error: '#FF5252',
+                    info: '#2196F3',
+                    success: '#7E0038',
+                    warning: '#FFC107'
+                }
+            }
+        },
+        icons: { iconfont: 'fa4' }
+    })
+    const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
+</script>
+  </body>
+</html>
