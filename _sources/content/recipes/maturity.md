@@ -15,8 +15,8 @@ living in that space.
 
 ## Background
 
-Maturity models are not new. There are in fact training programs specifically designed for this such as  
-The **Capability Maturity Model Integration (CMMI)** {footcite}`cmmi`.
+Maturity models are not new. There are in fact training programs specifically designed for this such as the
+**Capability Maturity Model Integration (CMMI)** {footcite}`cmmi`.
 These models originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
 as means to rate the reliability and degree of development of a particular technology, skill or process,
 in other words, a capability. 
@@ -33,7 +33,7 @@ great depths the fundamental operations and challenges associated with data mana
 More recently, The FAIR principles articulated key requirements and properties data should have {footcite}`pmid26978244`.
 Following this important work, a number of initiatives have worked at producing domain specific maturity indicators. 
 Among these initiatives, the Research Data Alliance Maturity Indicators seem to have gain notoriety
-{footcite}`RDAindicators`
+{footcite}`RDAindicators`.
 
 Building on these efforts, the FAIRplus project has developed a more targeted approach by focusing on the notion of 
 dataset. 
@@ -69,7 +69,7 @@ These can be found in the **Recipe Card**.
 They are there to provide our readership with a pointer to the level of data set maturity they can expect to meet if
 they apply and implement the recipe.
 
-The FAIR DSM indicators are also used to browser the recipes through the lense of maturity improvements level, which is
+The FAIR DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
 of interest. 
 
 Finally, the FAIR Cookbook produced specific content available as jupyter notebooks which use the familiar Investigation Study Assay model {footcite}`pmid20679334` 
