@@ -133,7 +133,7 @@
         - file: content/recipes/reusability/ATI_licensing_data
           title: Data licenses #FCB034
         - file: content/recipes/reusability/expressing-data-use 
-          title: Declaring data's permitted uses #FCB035
+          title: Declaring data permitted uses #FCB035
         - file: content/recipes/reusability/provenance
           title: Provenance information #FCB036
 
@@ -231,7 +231,7 @@
 - part: Recipes at a Glance
   chapters:
     - file: content/search-wizard
-      title: Filter Recipes
+      title: All Recipes In a Table
 
 
 - part: AFTERWORD

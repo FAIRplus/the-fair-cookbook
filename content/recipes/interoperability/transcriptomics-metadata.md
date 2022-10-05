@@ -118,8 +118,16 @@ human cell atlas sequencing json schema.
 ````
 
 ```{note}
-Note the key attributes for which controlled vocabulary may be directly specified as a `json schema ENUM` (e.g. line 79) or may be specified
-via a reference to a dedicated ontology schema as in `  "$ref": "module/ontology/biological_macromolecule_ontology.json"` (e.g. line 82)
+Note the key attributes for which controlled vocabulary may be directly specified as a: 
+
+`json schema ENUM` 
+
+as found at line 79, or may be specified via a reference to a dedicated ontology schema as in:
+ 
+` "$ref": "module/ontology/biological_macromolecule_ontology.json"`
+ 
+as found at line 82.
+
 ```
 
 ````{dropdown}
