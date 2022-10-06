@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 1
 :has_executable_code: yeah
-:recipe_name: Minting identifiers with Minid
+:recipe_name: Minting identifiers with Globus Minid client
 ```` 
 
 

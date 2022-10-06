@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 13, 14
 :has_executable_code: nope
-:recipe_name: Dataset page markup with Schema.org
+:recipe_name: Dataset page markup with Schema.org & Bioschemas.org
 ```` 
 
 

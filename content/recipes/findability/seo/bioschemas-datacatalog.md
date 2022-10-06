@@ -14,7 +14,7 @@
 :maturity_level: 2
 :maturity_indicator: 24
 :has_executable_code: nope
-:recipe_name: Data catalogue markup
+:recipe_name: Data catalogue markup with Schema.org & Bioschemas.org
 ```` 
 
 ## Main Objectives

@@ -14,7 +14,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Search engine optimization
+:recipe_name: Search Engine Optimization
 ```` 
 
 ## Main Objectives
