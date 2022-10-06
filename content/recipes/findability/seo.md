@@ -1,5 +1,5 @@
 (fcb-find-seo)=
-# Search engine optimization
+# Search Engine Optimization (SEO)
 
 +++
 <br/>
@@ -14,7 +14,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Search Engine Optimization
+:recipe_name: Introducing Search Engine Optimization (SEO) 
 ```` 
 
 ## Main Objectives

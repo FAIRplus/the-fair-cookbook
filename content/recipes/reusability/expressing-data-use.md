@@ -1,5 +1,5 @@
 (fcb-reusability-data_use)=
-# Declaring data's permitted uses
+# Declaring data permitted uses
 
 <br/>
 <br/>
@@ -13,8 +13,8 @@
 :intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
 :maturity_level: 4
 :maturity_indicator: 59
-:has_executable_code: yeah
-:recipe_name: Declaring data's permitted uses
+:has_executable_code: nope
+:recipe_name: Declaring data permitted uses
 ```` 
 
 ## Main Objectives

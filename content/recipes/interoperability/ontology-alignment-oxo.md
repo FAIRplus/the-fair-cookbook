@@ -5,16 +5,16 @@
 
 
 ````{panels_fairplus}
-:identifier_text: FCB0_TOBEMINTED
-:identifier_link: 'https://w3id.org/faircookbook/FCB0_TOBEMINTED'
+:identifier_text: FCB076
+:identifier_link: 'https://w3id.org/faircookbook/FCB076'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: ontologist, terminology_manager, data_scientist, data_curator, data_manager 
-:has_executable_code: nope
 :maturity_level: 1
 :maturity_indicator: 1
-:recipe_name: Ontology mapping with Ontology Xref Service (OxO)
+:has_executable_code: nope
+:recipe_name: Mapping Ontologies with OxO, EBI Ontology Xref Service
 ```` 
 
 ---
@@ -36,7 +36,7 @@ to map ontology terms between source and target vocabularies {footcite}`oxo` .
 
 ````{dropdown} 
 :open:
-```{figure} ontology-align-oxo.mmd.png
+```{figure} ontology-align-oxo.mmd.svg
 ---
 height: 550px
 name: Aligning Ontologies

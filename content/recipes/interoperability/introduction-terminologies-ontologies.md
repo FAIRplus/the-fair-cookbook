@@ -14,7 +14,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Introduction to terminologies and ontologies
+:recipe_name: Introducing terminologies and ontologies
 ```` 
 
 ## Main objectives

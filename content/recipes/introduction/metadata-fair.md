@@ -15,7 +15,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: FAIR and the notion of metadata
+:recipe_name: Framing FAIR and the notion of metadata
 ```` 
 
 

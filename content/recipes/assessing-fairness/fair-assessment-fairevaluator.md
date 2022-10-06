@@ -14,8 +14,8 @@
 :intended_audience: principal_investigator, data_manager, data_scientist  
 :maturity_level: 0
 :maturity_indicator: 0
-:has_executable_code: yeah
-:recipe_name: FAIR Evaluator tool
+:has_executable_code: nope
+:recipe_name: Assessing with FAIR Evaluator
 ```` 
 
 

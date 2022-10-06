@@ -6,65 +6,71 @@
     - file: content/recipes/introduction/FAIR-cookbook-audience
       title: Introduction
     - file: content/recipes/introduction/brief-FAIR-principles
-      title: What are the FAIR principles?
+      title: Introducing the FAIR Principles
     - file: content/recipes/introduction/FAIRplus-values
-      title: Ethical values of FAIR
-    - file: content/recipes/introduction/metadata-fair #FCB068
-      title: Metadata and FAIR
-    - file: content/recipes/introduction/training-datasets #FCB069
-      title: Datasets to train on FAIRification
-    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070
-      title: FAIR and Knowledge Graphs
-    - file: content/recipes/introduction/public-kg-resource-integration #FCB071
-      title: Public Knowledge Graphs for Life Sciences
+      title: Reflecting on the ethical values of FAIR
+    - file: content/recipes/introduction/fairification-process #FCB079
+      title: Introducing our FAIRification framework
     - file: content/recipes/introduction/priorization #FCB055
-      title: Selecting projects for FAIRification
+      title: Prioritizing projects for FAIRification
+    - file: content/recipes/introduction/metadata-fair #FCB068
+      title: Framing FAIR and the notion of metadata
+    - file: content/recipes/introduction/FAIR-and-knowledge-graphs #FCB070
+      title: Understanding the relation between FAIR and Knowledge Graphs
+    - file: content/recipes/introduction/training-datasets #FCB069
+      title: Training for FAIRification with open or synthetic biomedical datasets
+    - file: content/recipes/introduction/public-kg-resource-integration #FCB071
+      title: Raising Awareness in Public Knowledge Graphs for Life Sciences
     - file: content/recipes/introduction/fair-cro #FCB056
-      title: Practical Considerations for a CRO to do FAIR
-    - file: content/recipes/introduction/glossary-fair-terms
-      title: Glossary
+      title: Reflecting on Practical Considerations for CROs to play FAIR
 
-  
+
+- part: Recipes at a Glance
+  chapters:
+    - file: content/search-wizard
+      title: All Recipes In a Table
+
 
 - part: FAIR RECIPES
-
   chapters:
     - file: content/recipes/findability 
       title: Findability
       numbered: true
       sections:
       - file: content/recipes/findability/identifiers
-        title: Unique, persistent identifiers #FCB006
+        title: Introducing unique, persistent identifiers #FCB006
       - file: content/recipes/infrastructure/chemical-identities
-        title: InChI and SMILES identifiers for chemical structures #FCB007
+        title: Creating InChI & SMILES identifiers for chemical structures #FCB007
+      - file: content/recipes/infrastructure/iupac-names
+        title: Creating InChIKeys for IUPAC names #FCB080
       - file: content/recipes/findability/identifiers-minids
         title: Minting identifiers with Globus Minid client #FCB008
       - file: content/recipes/findability/zenodo-deposition
-        title: Depositing in Zenodo generic repository #FCB009
+        title: Depositing to generic repositories - Zenodo use case #FCB009
       - file: content/recipes/findability/registeringDatasets
-        title: Registering Datasets in Wikidata #FCB060
+        title: Registering datasets with Wikidata #FCB060
       - file: content/recipes/findability/checksum-create
-        title: Describe data by checksums #FCB052
+        title: Creating file checksums #FCB052
       - file: content/recipes/findability/checksum-validate
-        title: Validating data by checksums #FCB053
+        title: Validating checksums to verify file integrity #FCB053
       - file: content/recipes/findability/seo
-        title: Search Engine Optimization #FCB010
+        title: Introducing Search Engine Optimization (SEO) #FCB010
         sections:
           - file: content/recipes/findability/seo/bioschemas-data-page
-            title: Data page markup with Schema.org & Bioschemas.org #FCB011
+            title: Marking up Data pages with Schema.org & Bioschemas for SEO #FCB011
           - file: content/recipes/findability/seo/bioschemas-dataset
-            title: Dataset page markup with Schema.org & Bioschemas.org #FCB012
+            title: Marking up Dataset page with Schema.org & Bioschemas for SEO #FCB012
           - file: content/recipes/findability/seo/bioschemas-datacatalog
-            title: Data Catalogue page markup with Schema.org & Bioschemas.org #FCB013
+            title: Marking up Data Catalogue page with Schema.org & Bioschemas for SEO #FCB013
 
     - file: content/recipes/accessibility
       title: Accessibility
       numbered: true
       sections:
         - file: content/recipes/accessibility/sftp
-          title: Transferring data with SFTP #FCB014
+          title: Transferring data with SFTP protocol #FCB014
         - file: content/recipes/accessibility/aspera
-          title: Downloading data with Aspera #FCB015
+          title: Downloading data with Aspera protocol #FCB015
 
     - file: content/recipes/interoperability
       title: Interoperability
@@ -73,48 +79,48 @@
           - file: content/recipes/interoperability/identifier-mapping
             title: Interlinking data from different sources #FCB016
           - file: content/recipes/interoperability/bridgedb-recipe
-            title: Identifier mapping with BridgeDb #FCB017
+            title: Mapping identifiers with BridgeDb #FCB017
             sections:
               - file: content/recipes/interoperability/bridgedb/bridgedb-example.ipynb
-                title: Identifier mapping using BridgeDb web services #FCB018
+                title: Mapping identifiers using BridgeDb web services #FCB018
           - file: content/recipes/interoperability/introduction-terminologies-ontologies    
-            title: Introduction to terminologies and ontologies #FCB019
+            title: Introducing terminologies and ontologies #FCB019
           - file: content/recipes/interoperability/selecting-ontologies
             title: Selecting terminologies and ontologies #FCB020
           - file: content/recipes/interoperability/ontology-new-term-request-recipe
-            title: Requesting new terms #FCB021
+            title: Requesting new terms from terminologies and ontologies #FCB021
           - file: content/recipes/interoperability/ontology-operations-tools
-            title: Ontology-related tools and services #FCB022
+            title: Introducing ontology-related tools and services #FCB022
           - file: content/recipes/interoperability/ontology-robot-recipe
             title: Building an application ontology with ROBOT #FCB023
             sections:
-              - file: content/recipes/interoperability/ontology-robot-recipe/competency-questions
-                title: Competency questions for the Ontology ROBOT use case
               - file: content/recipes/interoperability/ontology-robot-recipe/MSIO-robot-build-process.ipynb
-                title: MSIO, an application ontology for metabolomics  #FCB024
+                title: Building an application ontology for metabolomics - MSIO  #FCB024
+              - file: content/recipes/interoperability/ontology-robot-recipe/competency-questions
+                title: Defining competency questions for the Ontology ROBOT use case
           - file: content/recipes/interoperability/ontology-alignment-oxo
-            title: Ontology mapping with Ontology Xref Service (OxO) #FCB076PRE
+            title: Mapping Ontologies with OxO, EBI Ontology Xref Service #FCB076
           - file: content/recipes/interoperability/creating-data-dictionary 
             title: Creating a data/variable dictionary #FCB025
           - file: content/recipes/interoperability/creating-minimal-metadata-profiles
             title: Creating a metadata profile #FCB026
             sections:
               - file: content/recipes/interoperability/transcriptomics-metadata
-                title: Metadata profile for transcriptomics #FCB027
+                title: Outlining a metadata profile for transcriptomics #FCB027
               - file: content/recipes/interoperability/covid19-sample-metadata-profile-shex-use-case
-                title: Metadata profile validation in RDF #FCB028
+                title: Building a community compliant metadata profile - The Covid19 sample profile use case #FCB028
               - file: content/recipes/interoperability/bioactivity-profile
-                title: Bioactivity data profile #FCB057
+                title: Outlining a metadata profile for Bioactivity data #FCB057
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
-          - file: content/recipes/interoperability/rdf-conversion 
-            title: An inventory of tools for converting your data to RDF #FCB051
           - file: content/recipes/interoperability/fastq-file-format-validators
-            title: File format validation, FASTQ example #FCB030
+            title: Validating file format - FASTQ example #FCB030
+          - file: content/recipes/interoperability/rdf-conversion 
+            title: Inventorying tools for converting data to RDF #FCB051
           - file: content/recipes/interoperability/ETL-tools
-            title: Extraction, transformation, and loading process #FCB031
+            title: Surveying extraction, transformation, load (ETL) tools #FCB031
           - file: content/recipes/interoperability/VCF-to-FHIR-conversion
-            title: Clinical Genetic Information as FHIR JSON #FCB058
+            title: Expressing Clinical Genetic Information as FHIR JSON #FCB058
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
                 title: Converting VCF file to FHIR JSON #FCB059
@@ -126,31 +132,31 @@
         - file: content/recipes/reusability/ATI-licensing
           title: Licensing #FCB032
         - file: content/recipes/reusability/ATI_licensing_software
-          title: Software licenses #FCB033
+          title: Licensing Software #FCB033
         - file: content/recipes/reusability/ATI_licensing_data
-          title: Data licenses #FCB034
+          title: Licensing Data #FCB034
         - file: content/recipes/reusability/expressing-data-use 
-          title: Declaring data's permitted uses #FCB035
+          title: Declaring data permitted uses #FCB035
         - file: content/recipes/reusability/provenance
-          title: Provenance information #FCB036
+          title: Introducing Provenance Information #FCB036
 
     - file: content/recipes/infrastructure
       title: Infrastructure
       numbered: true
       sections:
           - file: content/recipes/infrastructure/id-resolution
-            title: Identifier resolution services #FCB046
+            title: Introducing identifier resolution services #FCB046
           - file: content/recipes/infrastructure/gupri
             title: Creating resolvable identifiers #FCB077PRE
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/data-catalog-deployment
-            title: Deploying the IMI data catalogue #FCB048
+            title: Deploying a data catalogue - The IMI data catalogue example #FCB048
           - file: content/recipes/infrastructure/vocabularies
             title: Vocabulary management
             sections:      
               - file: content/recipes/infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services
-                title: Vocabulary portals and lookup services #FCB003
+                title: Introducing vocabulary portals and lookup services #FCB003
               - file: content/recipes/infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services
                 title: Selecting an ontology lookup service #FCB004
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
@@ -165,14 +171,14 @@
       numbered: true
       sections:
             - file: content/recipes/assessing-fairness/fair-assessment-fairevaluator
-              title: FAIR Evaluator tool #FCB049
+              title: Assessing with FAIR Evaluator #FCB049
             - file: content/recipes/assessing-fairness/fair-assessment-fairshake
-              title: FAIRshake tool #FCB050
+              title: Assessing with FAIRshake #FCB050
 
 - part: FAIR Maturity
   chapters:
     - file: content/recipes/maturity
-      title: A Model To Gauge Dataset Maturity
+      title: Changing culture with the Dataset Maturity Model
       sections:
         - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - the MIAPPE use case
@@ -180,27 +186,28 @@
           title: Moving through maturity levels with ISA
           sections:
             - file: content/recipes/maturity/create-a-simple-ISA-descriptor.ipynb #FCB063
-              title: Creating a basic ISA document
+              title: Minimal Data Maturity with ISA - ISA-Tab and free text
             - file: content/recipes/maturity/isa-api-programmatic-rebuild-of-BII-S-3.ipynb #FCB064
-              title: Making a community compliant - ISA in JSON
+              title: Enhanced Data Maturity with ISA - ISA-JSON and ontology markup
             - file: content/recipes/maturity/isa-json-conversion-to-rdf-linked-data.ipynb #FCB065
-              title: Moving to a semantically typed version - ISA in RDF
+              title: Moving to a semantically typed version - ISA-JSON-LD
             - file: content/recipes/maturity/isa-as-RO.ipynb #FCB066
-              title: Packaging ISA as a Research Object (RO)
+              title: Dissemination - Packaging ISA as a Research Object (RO)
         - file: content/recipes/applied-examples/fair-data-matrix-recipe
-          title: Making omics data matrices FAIR #FCB037
+          title: Making an omics data matrix FAIR #FCB037
           numbered: true
           sections:
             - file: content/recipes/applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.ipynb
-              title: Starting material #FCB038
+              title: FAIRifying Data Matrices - Step1 - Starting material #FCB038
             - file: content/recipes/applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.ipynb
-              title: Structuring data #FCB039
+              title: FAIRifying Data Matrices - Step2 - Structuring data #FCB039
             - file: content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.ipynb
-              title: Exploring data with SPARQL #FCB040
+              title: FAIRifying Data Matrices - Step3 - Exploring data with SPARQL #FCB040
             - file: content/recipes/applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.ipynb
-              title: Integrating data #FCB041
+              title: FAIRifying Data Matrices - Step4 - Integrating data #FCB041
         - file: content/recipes/applied-examples/fair-workflows
           title: Making Computational Workflows FAIR #FCB062
+
 
 
 - part: FAIRified Datasets
@@ -214,23 +221,29 @@
         - file: content/recipes/applied-examples/nd4bb
           title: IMI nd4bb - chemical activities datasets #FCB044
         - file: content/recipes/applied-examples/oncotrack_raw/rawRecipe-oncotrack
-          title: IMI Oncotrack - clinical cohort datasets #FCB044
+          title: Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI Biosamples #FCB044
         - file: content/recipes/applied-examples/resolute_raw/resolute
-          title: IMI ReSOLUTE - transcriptomics datasets #FCB045
+          title: Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories #FCB045
         - file: content/recipes/applied-examples/ehden-ohdsi
-          title: IMI EHDEN-OHDSI #FCB054
+          title: Enhancing discoverability of EHDEN OHDSI data with Schema.org markup #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
-          title: IMI EUBOPEN FAIR High-Content Screening data deposition #FCB067
+          title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive #FCB067
         - file: content/recipes/applied-examples/approach-cdisc
-          title: Mapping datasets to CDISC-SDTM #FCB078PRE
-
-- part: Tools
-  chapters:
-    - file: content/search-wizard
-      title: Search Wizard
-
+          title: Mapping IMI APPROACH datasets to CDISC-SDTM standard #FCB078PRE
 
 - part: AFTERWORD
+  chapters:
+      - file: content/recipes/afterword/fair-reflections.md
+        title: Lessons learned from the FAIR journey and project outlook
+        numbered: false
+
+- part: GLOSSARY
+  chapters:
+    - file: content/recipes/introduction/glossary-fair-terms
+      title: Glossary of terms and abbreviations
+
+
+- part: JOIN US
   chapters:
     - file: content/recipes/community
       title: Community

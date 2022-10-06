@@ -4,7 +4,6 @@
     Vue.component("Searchme", {
         data() {
             return {
-                test: 'test1',
                 recipes: [],
                 headers: [
                     {
@@ -90,23 +89,21 @@
                 this.loading = false
                 this.recipes = Object.entries(data).map((key, value) => {
                     const recipe = key[1]
-
                     // Add autocomplete values for recipe types
                     if (!this.inputs.recipeType.values.includes(recipe.type)) {
                         this.inputs.recipeType.values.push(recipe.type)
                     }
-
                     // Add autocomplete values for audience
                     recipe.audience.forEach(audience => {
                         if (!this.inputs.audience.values.includes(audience)) {
                             this.inputs.audience.values.push(audience)
                         }
                     })
-
                     return recipe
-
                 })
                 this.all_recipes = [ ...this.recipes ]
+                this.parseURLParams()
+                this.filterRecipes()
             },
             filterRecipes() {
                 let recipes = []
@@ -158,16 +155,21 @@
                 this.inputs.name = null
                 this.inputs.recipeType.value = null
                 this.inputs.audience.value = null
-                this.inputs.readingTime.value = [0, 60]
+                this.inputs.readingTime.range = [0, 60]
                 this.inputs.executable.value = 1
                 this.inputs.maturity = 0
             },
             hasMaturity(recipe) {
                 if (this.inputs.maturity === 0) { return true }
                 return recipe.maturity >= this.inputs.maturity
+            },
+            parseURLParams() {
+                const params = new URLSearchParams(window.location.search)
+                const query = params.get('q')
+               if (query) this.inputs.name = query
             }
         },
-        mounted() { this.getData(); },
+        mounted() { this.getData() },
         template: `
             <div class="search-wizard" id="search-wizard">
                 <h1 class="mb-5"> Search the cookbook recipes </h1>

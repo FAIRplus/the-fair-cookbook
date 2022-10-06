@@ -10,7 +10,7 @@
 :intended_audience: data_manager, data_scientist, software_developer, system_administrator  
 :maturity_level: 2
 :maturity_indicator: 24
-:has_executable_code: yeah
+:has_executable_code: nope
 :recipe_name: Building a catalogue of datasets 
 ```` 
 
@@ -45,7 +45,7 @@ We will cover the following points:
 ## Graphical Overview
 
 
-```{figure} data-catalog.md-figure1.mmd.png
+```{figure} ../../../images/data-catalog-md-figure1.png
 ---
 name: data-catalog-figure1
 alt: Building and populating a data catalogue

@@ -11,10 +11,10 @@
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist  
-:has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 30, 31
-:recipe_name: Depositing Bioactivity Data
+:has_executable_code: nope
+:recipe_name: Outlining a metadata profile for Bioactivity data
 ```` 
 
 ## Main objective

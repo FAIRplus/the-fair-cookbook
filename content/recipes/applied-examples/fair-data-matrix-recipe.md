@@ -6,7 +6,7 @@
 
 ````{panels_fairplus}
 :identifier_text: FCB037
-:identifier_link: 'http://w3id.org/faircookbook/FCB037'
+:identifier_link: 'https://w3id.org/faircookbook/FCB037'
 :difficulty_level: 4
 :recipe_type: hands_on
 :reading_time_minutes: 30
@@ -14,7 +14,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: yeah
-:recipe_name: Making omics data matrix FAIR
+:recipe_name: Making an omics data matrix FAIR
 ```` 
 
 
