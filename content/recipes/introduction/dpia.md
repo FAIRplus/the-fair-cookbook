@@ -47,7 +47,6 @@ Flowchart to decide if a DPIA is needed
 ```
 
 
-
 ---
 
 
@@ -94,13 +93,14 @@ inscribing privacy of information as fundamental right, established a standard f
 what had been, for a long time, an unregulated space.
 
 What does the GDPR regulation imply for the research practice and why does it matter for healthcare research? 
+
 The regulation means that, prior to conducting any data processing involving human personal information, a 
 **Data Protection Impact Assessment (DPIA)** needs to be carried out. 
 
 In the event that the intended data processing includes data provided by a third party, then the use of this data is dependent on the 
 data access and data use conditions, established by a DPIA formulated by that third party. 
 
-Failure to generate a GDPR-compliant DPIA or adhere to conditions imposed by a third party may result in legal actions for breaching 
+Failure to generate a GDPR-compliant DPIA or adhere to condition(s) imposed by a third party may result in legal actions for breaching 
 the regulation.
 
 In the following sections, we will examine the key steps to consider when generating a DPIA and 
