@@ -156,15 +156,15 @@ Of course not! We'll outline now how future development will take place.
 ### Sustainability through collaborations: the Hub and Spoke model 
 
 Many initiatives exist (the Pistoia Alliance, Elixir-EU, RDMkit sister project, Elixir-UK RMD bites) and productive 
-interactions with industry and academia have already been mapped. There are still huge needs in training in Data 
-Management and this means resources will be available to refine, augment, adapt the FAIR cookbook.
+connections with industry and academia have already been established. There are still huge Data 
+Management training needs and this means resources will be available to refine, augment, adapt the FAIR cookbook.
 
-A great outcome of our efforts is that the FAIR cookbook is now an Elixir-Europe backed resource and several Elixir European Nodes are 
-committed to sustain the resources and contribute to its content. Furthermore, collaborators beyond the European Union 
-have already joined and have been onboarded, such as the US NIH Data Office for Science Strategies. Finally, our close ties 
-with EFPIA / Industry partners can mature into further fruitful collaborations. 
-All these efforts are anchored in the clear necessity of lowering the friction to data integration and make organizations 
-and societies more resilient in time of crisis.  Indeed, timely and unobstructed machine actionability of information 
+A great outcome of our efforts is that the FAIR cookbook is now an Elixir-Europe backed resource and 
+several Elixir European Nodes are committed to sustain the resources and contribute to its content. 
+Furthermore, collaborators beyond the European Union have already joined and have been onboarded, such as the US NIH
+Data Office for Science Strategies. 
+Finally, our close ties with EFPIA / Industry partners can mature into further fruitful collaborations. 
+All these efforts are anchored in the clear necessity of reducing friction to data integration and make organizations 
 is critical to enable efficient and responsive decision-making.
 
 
