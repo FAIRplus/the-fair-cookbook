@@ -1190,3 +1190,11 @@ input.rounded {
         min-height: 265px;
     }
 }
+
+.searchRecipesResults th {
+    min-width: 160px;
+}
+
+.searchRecipesResults th i {
+    margin-left: 5px;
+}
