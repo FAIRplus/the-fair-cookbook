@@ -14,7 +14,7 @@
 :maturity_level: 4
 :maturity_indicator: 49
 :has_executable_code: nope
-:recipe_name: InChI and SMILES identifiers for chemical structures
+:recipe_name: Creating InChI & SMILES identifiers for chemical structures 
 ```` 
 
 ## Main Objectives

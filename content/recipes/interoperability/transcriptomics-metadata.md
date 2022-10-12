@@ -14,7 +14,7 @@
 :maturity_level: 3
 :maturity_indicator: 30
 :has_executable_code: nope
-:recipe_name: Metadata profile for transcriptomics
+:recipe_name: Outlining a metadata profile for transcriptomics
 ```` 
 
 ## Main Objectives:

@@ -221,7 +221,7 @@ The AMR dataset was provided as a first example as it was immediately available.
 
 As a result of our work on the AMR dataset, we identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map to) and other details included in our report.
 
-We also identified key FAIRification steps in the proposed process, some of which are non obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. 
+We also identified key FAIRification steps in the proposed process, some of which are non-obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. 
 
 Overall this dataset has been very useful to start our overall process and team activities.
 

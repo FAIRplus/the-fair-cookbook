@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 1
 :has_executable_code: nope
-:recipe_name: Ontology mapping with Ontology Xref Service (OxO)
+:recipe_name: Mapping Ontologies with OxO, EBI Ontology Xref Service
 ```` 
 
 ---
