@@ -28,7 +28,7 @@ The main purpose of this recipe is to provide guidance on how to select the most
 
 ````{dropdown} 
 :open:
-```{figure} selecting-ontologies.md-figure1.mmd.png
+```{figure} selecting-ontologies.md-figure1.mmd.svg
 ---
 width: 1000px
 name: selecting-ontologies-figure1

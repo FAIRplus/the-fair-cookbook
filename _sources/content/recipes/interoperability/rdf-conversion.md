@@ -1,5 +1,5 @@
 (fcb-rdf-conversion)=
-# An inventory of tools for converting your data to RDF
+# An inventory of tools for converting data to RDF
 
 <br/>
 <br/>
@@ -15,7 +15,7 @@
 :maturity_level: 4
 :maturity_indicator: 57
 :has_executable_code: nope
-:recipe_name: An inventory of tools for converting your data to RDF
+:recipe_name: Inventorying tools for converting data to RDF
 ```` 
 
 ## Main Objectives

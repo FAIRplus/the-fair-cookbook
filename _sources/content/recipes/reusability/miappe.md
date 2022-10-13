@@ -13,7 +13,7 @@
 :has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 15,20
-:recipe_name: Plant genomic and genetic variation data submission to EMBL-EBI
+:recipe_name: Improving dataset maturity - the MIAPPE use case
 ```` 
 
 ## Main Objective

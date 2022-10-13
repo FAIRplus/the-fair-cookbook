@@ -1,6 +1,20 @@
 (fcb-maturity)=
-# Maturity Models
+# Changing culture with the Dataset Maturity Model
 
+<!--
+````{panels_fairplus}
+:identifier_text: FCB081
+:identifier_link: 'https://w3id.org/faircookbook/FCB081'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Changing culture with the Dataset Maturity Model
+```` 
+-->
 
 ## Abstract
 

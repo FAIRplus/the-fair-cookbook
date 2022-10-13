@@ -1,5 +1,5 @@
 (fcb-infra-iupac)=
-# Generating InChIKeys for IUPAC names
+# Creating InChIKeys for IUPAC names
 
 +++
 <br/>
@@ -14,7 +14,7 @@
 :maturity_level: 4
 :maturity_indicator: 49
 :has_executable_code: yeah
-:recipe_name: Generating InChIKeys for IUPAC names
+:recipe_name: Creating InChIKeys for IUPAC names
 ```` 
 
 ## Main Objectives

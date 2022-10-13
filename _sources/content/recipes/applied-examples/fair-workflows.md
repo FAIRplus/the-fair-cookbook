@@ -15,7 +15,7 @@
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: FAIR Computational Workflows
+:recipe_name: Making Computational Workflows FAIR
 ```` 
 
 
