@@ -16,7 +16,7 @@
 :maturity_level: 3  
 :maturity_indicator: 19, 22
 :has_executable_code: nope
-:recipe_name: Mapping datasets to CDISC-SDTM
+:recipe_name: Mapping datasets to CDISC-SDTM standard
 ```` 
 
 

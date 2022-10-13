@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 1
 :has_executable_code: nope
-:recipe_name: Unique, persistent identifiers
+:recipe_name: Introducing unique, persistent identifiers
 ```` 
 <br>
 <br>

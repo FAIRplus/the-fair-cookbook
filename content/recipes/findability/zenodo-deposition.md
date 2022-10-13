@@ -1,5 +1,5 @@
 (fcb-find-zenodo)=
-# Depositing in Zenodo generic repository
+# Depositing to generic repositories - Zenodo use case
 
 <br/>
 <br/>
@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 5, 6, 7, 8
 :has_executable_code: nope
-:recipe_name: Depositing in Zenodo generic repository
+:recipe_name: Depositing to generic repositories - Zenodo use case
 ```` 
 
 ## Main Objectives

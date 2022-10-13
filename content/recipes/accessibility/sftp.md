@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 7
 :has_executable_code: nope
-:recipe_name: Transferring data with SFTP
+:recipe_name: Transferring data with SFTP protocol
 ```` 
 
 

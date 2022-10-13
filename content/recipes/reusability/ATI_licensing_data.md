@@ -14,7 +14,7 @@
 :maturity_level: 3
 :maturity_indicator: 35
 :has_executable_code: nope
-:recipe_name: Data licenses
+:recipe_name: Licensing Data
 ```` 
 
 

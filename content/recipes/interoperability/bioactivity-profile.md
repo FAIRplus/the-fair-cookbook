@@ -14,7 +14,7 @@
 :maturity_level: 3
 :maturity_indicator: 30, 31
 :has_executable_code: nope
-:recipe_name: Depositing Bioactivity Data
+:recipe_name: Outlining a metadata profile for Bioactivity data
 ```` 
 
 ## Main objective

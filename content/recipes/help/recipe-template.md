@@ -40,14 +40,14 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 ---
 
 ````{panels_fairplus}
-:identifier_text: RX.X
-:identifier_link: http://example.com
+:identifier_text: FCB___
+:identifier_link: https://w3id.org/faircookbook/FCB___
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder
-:maturity_level: 2  
-:maturity_indicator: 1, 2
+:maturity_level: 0  
+:maturity_indicator: 0
 :has_executable_code: nope
 :recipe_name: Recipe Template
 ```` 

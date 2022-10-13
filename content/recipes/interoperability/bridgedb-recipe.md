@@ -18,7 +18,7 @@ TODO : the recipe does not reference its figures
 :maturity_level: 4
 :maturity_indicator: 49
 :has_executable_code: nope
-:recipe_name: Identifier mapping with BridgeDb
+:recipe_name: Mapping identifiers with BridgeDb
 ```` 
 
 

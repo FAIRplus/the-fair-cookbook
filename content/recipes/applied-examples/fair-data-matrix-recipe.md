@@ -14,7 +14,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: yeah
-:recipe_name: Making omics data matrix FAIR
+:recipe_name: Making an omics data matrix FAIR
 ```` 
 
 

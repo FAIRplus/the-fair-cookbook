@@ -11,7 +11,7 @@
 :maturity_level: 1
 :maturity_indicator: 6
 :has_executable_code: nope
-:recipe_name: Identifier resolution services
+:recipe_name: Introducing identifier resolution services
 ```` 
 
 ## Main Objective

@@ -14,7 +14,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: FAIR High-Content Screening data deposition
+:recipe_name: Depositing High-Content Screening data to EBI BioImage Archive
 ```` 
 
 

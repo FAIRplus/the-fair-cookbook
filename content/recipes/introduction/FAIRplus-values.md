@@ -1,5 +1,5 @@
 (fcb-intro-fair-values)=
-# Ethical values of FAIR
+# Reflections on the Ethical values of FAIR
 
 +++
 <br/>
@@ -14,7 +14,7 @@
 :maturity_level: 0  
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: The Ethical Values behind FAIR and the FAIRPlus project
+:recipe_name: Reflecting on the ethical values of FAIR
 ````
 
 ---
@@ -97,7 +97,7 @@ As there will be projects related to different subjects and/or with different ki
 - **Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
 
 
-**Legal measures**: The reutilization of data has to respect all restrictions expressed by data subjects, compliance with the initial information and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 
+**Legal measures**: The reuse of data has to respect all restrictions expressed by data subjects, compliance with the initial information and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 
  
 
 A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR principles. This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.

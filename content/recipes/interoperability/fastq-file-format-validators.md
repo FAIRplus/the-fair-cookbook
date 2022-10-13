@@ -14,7 +14,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: File format validation, FASTQ example
+:recipe_name: Validating file format - FASTQ example
 ```` 
 
 ## Main Objectives
