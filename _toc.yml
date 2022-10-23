@@ -168,6 +168,8 @@
                 title: Selecting a look-up service #FCB004
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying the EBI OLS #FCB005
+          - file: content/recipes/infrastructure/redcap
+            title: Capturing research data with RedCap
           - file: content/recipes/infrastructure/openrefine-nvt
             title: Using OpenRefine and Karma for FAIRification #FCB075PRE
           - file: content/recipes/infrastructure/fair-api #FCB073
