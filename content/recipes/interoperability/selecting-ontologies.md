@@ -11,8 +11,8 @@
 :recipe_type: guidance
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 3
+:maturity_indicator: 33
 :has_executable_code: nope
 :recipe_name: Selecting terminologies and ontologies
 ```` 
@@ -28,7 +28,7 @@ The main purpose of this recipe is to provide guidance on how to select the most
 
 ````{dropdown} 
 :open:
-```{figure} selecting-ontologies.md-figure1.mmd.png
+```{figure} selecting-ontologies.md-figure1.mmd.svg
 ---
 width: 1000px
 name: selecting-ontologies-figure1

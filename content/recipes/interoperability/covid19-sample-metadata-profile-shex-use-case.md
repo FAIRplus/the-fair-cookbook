@@ -10,11 +10,11 @@
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
-:intended_audience: principal_investigator, data_manager, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
-:has_executable_code: yeah
-:recipe_name: Metadata profile validation in RDF
+:intended_audience: principal_investigator, data_manager, data_scientist
+:maturity_level: 4
+:maturity_indicator: 56, 58
+:has_executable_code: nope
+:recipe_name: Building a community compliant metadata profile - The Covid19 sample profile use case
 ```` 
 
 ## Main Objectives
@@ -32,10 +32,10 @@ Finally, use queries expressed in SPARQL are shown to demonstrate potential data
 ```{figure} covid19-sample-metadata-profile-shex-use-case-mermaid.png
 ---
 width: 800px
-name: building a commmunity compliant metadata profile
-alt: building a commmunity compliant metadata profile
+name: building a community compliant metadata profile
+alt: building a community compliant metadata profile
 ---
-Building a commmunity compliant metadata profile.
+Building a community compliant metadata profile.
 ```
 ````
 

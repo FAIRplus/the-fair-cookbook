@@ -1,5 +1,5 @@
 (fcb-find-bs-catalog)=
-# Data catalogue markup
+# Marking up Data Catalogue page with Schema.org & Bioschemas for SEO
 
 <br/>
 <br/>
@@ -12,9 +12,9 @@
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist
 :maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_indicator: 24
 :has_executable_code: nope
-:recipe_name: Data catalogue markup
+:recipe_name: Marking up Data Catalogue page with Schema.org & Bioschemas for SEO
 ```` 
 
 ## Main Objectives

@@ -11,10 +11,10 @@
 :recipe_type: survey_review
 :reading_time_minutes: 15
 :intended_audience: data_curator, data_manager, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 0
+:maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Introduction to terminologies and ontologies
+:recipe_name: Introducing terminologies and ontologies
 ```` 
 
 ## Main objectives

@@ -12,9 +12,9 @@
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist 
 :maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_indicator: 20, 21
 :has_executable_code: nope
-:recipe_name: Creating data/variable dictionary
+:recipe_name: Creating a data/variable dictionary
 ```` 
 
 <!-- # Table of Contents

@@ -11,10 +11,10 @@
 :recipe_type: hands_on
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist
-:has_executable_code: yeah
-:maturity_level: 3
-:maturity_indicator: 1, 2
-:recipe_name: Transferring data with SFTP
+:maturity_level: 1
+:maturity_indicator: 7
+:has_executable_code: nope
+:recipe_name: Transferring data with SFTP protocol
 ```` 
 
 

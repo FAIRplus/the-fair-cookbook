@@ -14,7 +14,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: EHDEN OHDSI discovery with Schema.org
+:recipe_name: Enhancing discoverability of EHDEN OHDSI data with Schema.org markup
 ```` 
 
 

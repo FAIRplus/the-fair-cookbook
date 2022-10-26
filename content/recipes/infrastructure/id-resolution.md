@@ -8,10 +8,10 @@
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder 
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 1
+:maturity_indicator: 6
 :has_executable_code: nope
-:recipe_name: Identifier resolution services
+:recipe_name: Introducing identifier resolution services
 ```` 
 
 ## Main Objective

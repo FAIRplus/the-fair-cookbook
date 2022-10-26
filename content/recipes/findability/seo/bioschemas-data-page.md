@@ -1,5 +1,5 @@
 (fcb-find-bs-data)=
-# Data page markup with Bioschemas 
+# Marking up Data pages with Schema.org & Bioschemas for SEO
 
 <br/>
 <br/>
@@ -11,10 +11,10 @@
 :recipe_type: guidance
 :reading_time_minutes: 10
 :intended_audience: software_developer, data_scientist  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 1
+:maturity_indicator: 13, 14
 :has_executable_code: nope
-:recipe_name: Data page markup with Bioschemas
+:recipe_name: Marking up Data pages with Schema.org & Bioschemas for SEO
 ```` 
 
 ## Main Objectives

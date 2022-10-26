@@ -24,7 +24,10 @@
 {%- block extrahead %}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js" integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="{{ pageurl }}" />
@@ -51,51 +54,57 @@
 <v-app id="app" class="pa-0">
     <v-container fluid class="pa-0">
         <v-row class="pa-0" no-gutters>
-            <v-container fluid>
+            <v-container fluid class="pa-0">
                 <v-row>
                     {% include "topbar/index.html" %}
                 </v-row>
-                <v-row class="d-flex">
+                {% if pagename != "content/home" %}
+                    <v-row class="d-flex">
                     {% block docs_sidebar %}
-                    <div
-                        class="{{ sidebar_width_class }} bd-sidebar site-navigation show{% if is_single_page %} single-page{% endif %}"
-                        id="site-navigation"
-                        style="width:350px"
-                    >
-                        {% if not is_single_page %}
-                            {% include "sidebar.html" %}
-                        {%- endif %}
-                    </div>
-                    {% block docs_main %}
-                    <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
-                        <v-container fluid id="main-content" class="pa-0">
-                            <v-row class="d-flex">
-                                {% if pagename != 'content/search-wizard' %}
-                                    <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
-                                        {% block body %} {% endblock %}
-                                    </v-col>
-                                    <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
-                                        <div style="position: fixed">{{ generate_toc_html() }}</div>
-                                    </div>
-                                {% else %}
-                                    <v-col class="col-12 px-10 pt-10 mt-3">
-                                        {% include "search-wizard.html" %}
-                                    </v-col>
-                                {% endif %}
-                            </v-row>
+                        <div
+                            class="{{ sidebar_width_class }} bd-sidebar site-navigation show{% if is_single_page %} single-page{% endif %}"
+                            id="site-navigation"
+                            style="width:350px"
+                        >
+                            {% if not is_single_page %}
+                                {% include "sidebar.html" %}
+                            {%- endif %}
+                        </div>
+                        {% block docs_main %}
+                            <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                                <v-container fluid id="main-content" class="pa-0">
+                                    <v-row class="d-flex">
+                                        {% if pagename != 'content/search-wizard' %}
+                                            <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                                {% block body %} {% endblock %}
+                                            </v-col>
+                                            <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                                <div style="position: fixed">{{ generate_toc_html() }}</div>
+                                            </div>
+                                        {% else %}
+                                            <v-col class="col-12 px-10 pt-10 mt-3">
+                                                {% include "search-wizard.html" %}
+                                            </v-col>
+                                        {% endif %}
+                                    </v-row>
 
-                            {% if theme_show_prev_next %}
-                                <v-row class="mb-5">
-                                    <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
-                                        {{ prev_next(prev, next) }}
-                                    </div>
-                                </v-row>
-                            {% endif %}
-                        </v-container>
-                    </main>
-                    {% endblock %}
+                                    {% if theme_show_prev_next %}
+                                        <v-row class="mb-5">
+                                            <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                                {{ prev_next(prev, next) }}
+                                            </div>
+                                        </v-row>
+                                    {% endif %}
+                                </v-container>
+                            </main>
+                        {% endblock %}
                     {% endblock %}
                 </v-row>
+                {% else %}
+                    <v-row no-gutters>
+                        {% include "home.html" %}
+                    </v-row>
+                {% endif %}
             </v-container>
         </v-row>
     </v-container>
@@ -141,5 +150,6 @@
         icons: { iconfont: 'fa4' }
     })
     const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
 </script>
 {%- endblock %}

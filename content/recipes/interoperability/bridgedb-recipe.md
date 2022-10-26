@@ -15,10 +15,10 @@ TODO : the recipe does not reference its figures
 :recipe_type: hands_on
 :reading_time_minutes: 30
 :intended_audience: principal_investigator, data_manager, data_scientist 
-:maturity_level: 2
-:maturity_indicator: 1, 2
-:has_executable_code: yeah
-:recipe_name: Identifier mapping with BridgeDb
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: nope
+:recipe_name: Mapping identifiers with BridgeDb
 ```` 
 
 

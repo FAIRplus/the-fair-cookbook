@@ -1,5 +1,5 @@
 (fcb-intro-training-datasets)=
-# Datasets of relevance
+# Biomedical datasets of relevance for training in FAIRification
 
 <br/>
 <br/>
@@ -14,7 +14,7 @@
 :has_executable_code: nope
 :maturity_level: 0
 :maturity_indicator: 0
-:recipe_name: Datasets of relevance
+:recipe_name: Training for FAIRification with open or synthetic biomedical datasets
 ```` 
 
 

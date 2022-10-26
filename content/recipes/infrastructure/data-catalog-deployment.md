@@ -11,10 +11,10 @@
 :recipe_type: hands_on
 :reading_time_minutes: 20
 :intended_audience: software_developer, data_manager, system_administrator  
-:maturity_level: 2
-:maturity_indicator: 1, 2
+:maturity_level: 0
+:maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: Deploying the IMI data catalogue
+:recipe_name: Deploying a data catalogue - The IMI data catalogue example
 ```` 
 
 

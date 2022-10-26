@@ -1,5 +1,5 @@
 (fcb-public-kg)=
-# Public knowledge graphs resources for life sciences
+# Public knowledge graph resources for life sciences
 
 <br/>
 <br/>
@@ -14,7 +14,7 @@
 :has_executable_code: nope
 :maturity_level: 0
 :maturity_indicator: 0
-:recipe_name: Public knowledge graphs resources for life sciences
+:recipe_name: Raising Awareness in Public Knowledge Graphs for Life Sciences
 ```` 
 
 ## Main Objectives
