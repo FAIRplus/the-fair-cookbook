@@ -1,16 +1,37 @@
-<form class="bd-search d-flex align-items-center"
-      action="{{ pathto('search') }}"
-      method="get"
->
-  <i class="icon fas fa-search"></i>
-  <input
-          type="search"
-          class="form-control"
-          name="q"
-          id="search-input"
-          placeholder="{{ theme_search_bar_text }}"
-          aria-label="{{ theme_search_bar_text }}"
-          autocomplete="off"
-          style="border-radius:10px"
-  >
-</form>
+<script>
+    Vue.component("Searchfield", {
+      data () { return {
+        query: null
+      } },
+      methods: {
+        search() {
+            if (this.query) window.location.href = "./search-wizard.html?q=" + this.query
+            else window.location.href = "./search-wizard.html"
+        }
+      },
+      template: `
+      <div style="width:250px">
+            <v-text-field
+              v-model="query"
+              append-icon="fa-search"
+              label="Search Wizard..."
+              dense
+              rounded
+              single-line
+              solo
+              hide-details
+              class="white primary--text"
+              @click:append="search"
+              @keyup.enter="search"
+            />
+      </div>
+      `
+    })
+</script>
+
+<Searchfield> </Searchfield>
+
+
+
+
+
