@@ -233,7 +233,9 @@
         },
         template: `
             <v-row>
-            <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center"> Or browse the various sections </v-col>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="3" class="rotate-0">
                     <v-row>
                         <FairCard :item="items[0]"> </FairCard>
@@ -276,6 +278,9 @@
         },
         template: `
             <v-row no-gutters>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="12">
                     <v-container class="pa-0">
                         <v-row>
@@ -475,7 +480,6 @@
                 let styles = ''
                 this.$vuetify.breakpoint.mdAndUp ? styles += ' height: 200px; ' : styles += ' height:150px; '
                 this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
-                console.log(styles)
                 return styles
             },
         },

@@ -1,5 +1,9 @@
 {% set title = _('Search') %}
 
+<script src="{{ pathto('_static/js/searchNodal.js', 1) }}"></script>
+<script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+<script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+
 <script>
     Vue.component("Searchme", {
         data() {
@@ -360,7 +364,7 @@
                                 </v-snackbar>
                             </div>
                             <v-data-table
-                                class="searchRecipesResults elevation-4"
+                                class="searchRecipesResults elevation-4 d-block"
                                 fixed-header
                                 height="79vh"
                                 :items="recipes"
@@ -426,31 +430,51 @@
 
     Vue.component("Nodata", {
         data () {
-            return { query: null }
+            return {
+                query: null,
+                loading: false,
+            }
         },
         methods: {
-            search() {
-                if (this.query) window.location.href = "../search.html?q=" + this.query
-                else window.location.href = "../search.html"
+            async search() {
+                if (this.query && this.query.length > 2) {
+                    this.loading = true
+                    await search(this.query, 'noDataResults')
+                    this.loading = false
+                }
+                else console.log("Query too short")
             }
           },
         template: `
-              <div class="py-5 px-10">
-                <div class="text-h5 mb-5">The search tool only look up recipes names. If you can't find what you are
-                looking for,ry to search the entire cookbook below: </div>
-                <v-text-field
-                  v-model="query"
-                  append-icon="fa-search"
-                  label="Search the cookbook ..."
-                  dense
-                  rounded
-                  single-line
-                  solo
-                  hide-details
-                  class="white primary--text"
-                  @click:append="search"
-                  @keyup.enter="search"
-                />
+              <div class="py-5 px-10 d-flex flex-column align-center noDataResultsContainer">
+                    <div class="text-h5 mb-5">Can't find a recipe? try to search the entire cookbook: </div>
+                    <v-text-field
+                      v-model="query"
+                      append-icon="fa-search"
+                      label="Search the cookbook..."
+                      dense
+                      rounded
+                      single-line
+                      solo
+                      hide-details
+                      class="white primary--text"
+                      @click:append="search"
+                      @keyup.enter="search"
+                      :disabled="loading"
+                      style="width:600px"
+                    />
+                    <div class="px-5" style="margin-top:1px;width:600px" >
+                        <v-card class="px-0 pa-4" v-if="loading">
+                            Loading...
+                        </v-card>
+                        <v-card
+                            class="pa-0"
+                            style="max-height: 40vh; overflow-y: scroll"
+                            :class="loading ? 'd-none' : '' "
+                        >
+                            <div id="noDataResults"> </div>
+                        </v-card>
+                    </div>
               </div>
         `
     })

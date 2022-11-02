@@ -5,8 +5,8 @@
       } },
       methods: {
         search() {
-            if (this.query) window.location.href = "./search-wizard.html?q=" + this.query
-            else window.location.href = "./search-wizard.html"
+            if (this.query) window.location.href = `{{ pathto('content/search-wizard.html', 1)}}?q=` + this.query
+            else window.location.href = `{{ pathto('content/search-wizard.html', 1)}}`
         }
       },
       template: `
