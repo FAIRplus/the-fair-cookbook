@@ -1198,3 +1198,24 @@ input.rounded {
 .searchRecipesResults th i {
     margin-left: 5px;
 }
+
+.homeInputWizard {
+    border: 3px solid #421c6e;
+    width:70vh
+}
+
+.homeInputWizard, .homeInputWizard * {
+    color: #421c6e !important;
+    font-size: 22px !important;
+}
+
+.homeInputWizard .v-input__slot {
+    padding-right: 0 !important;
+}
+
+.homeInputWizard .v-btn {
+    height: 48px !important;
+    border-radius: 50px !important;
+    position: relative;
+    right: -1px;
+}

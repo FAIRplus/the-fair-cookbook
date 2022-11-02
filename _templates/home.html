@@ -154,9 +154,16 @@
                         link: "./recipes/maturity.html",
                         icon: "fas fa-signal"
                     }
-                ]
+                ],
+                query: null
             }
         },
+        methods: {
+            search() {
+                if (this.query) window.location.href = `{{ pathto('content/search-wizard.html', 1)}}?q=` + this.query
+                else window.location.href = `{{ pathto('content/search-wizard.html', 1)}}`
+            }
+          },
         template: `
             <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
                 <v-container fluid class="pa-0 d-flex flex-column grey lighten-2" style="min-height: 95vh">
@@ -187,8 +194,7 @@
                             </v-container>
                         </v-col>
                     </v-row>
-    
-                    <!-- LOGO BREAKER -->
+
                     <v-row
                         justify="center"
                         class="flex-grow-0"
@@ -197,10 +203,29 @@
                     >
                         <v-col cols="12" class="d-flex flex-column justify-center align-center" :class="$vuetify.breakpoint.lgAndDown ? 'pa-0' : ''">
                             <div class="text-h4 mb-5 primary--text font-weight-bold">  Use the wizard to search all recipes </div>
-                             <v-btn x-large class="primary lighten-1 white--text mx-2 text-h3 pa-10" large href="./search-wizard.html">
-                                <v-icon right x-large class="mr-8"> fas fa-search</v-icon>
-                                <span style="text-transform: initial !important"> Search Wizard </span>
-                            </v-btn>
+                            <v-text-field
+                                v-model="query"
+                                color="primary"
+                                class="mt-5 primary--text homeInputWizard"
+                                label="Search Wizard"
+                                solo
+                                single-line
+                                hide-details
+                                rounded
+                                @click:append="search"
+                                @keyup.enter="search"
+                             >
+                                <template v-slot:append>
+                                    <v-btn
+                                        class="primary white--text"
+                                        @click="search"
+                                        elevation="0"
+                                    >
+                                        <v-icon class="white--text mr-3">fas fa-search</v-icon>
+                                        <span class="white--text"> Search </span>
+                                    </v-btn>
+                                </template>
+                             </v-text-field>
                         </v-col>
                     </v-row>
     
@@ -370,6 +395,8 @@
              </v-col>
         `
     })
+
+    /** BOTTOM SCREEN **/
 
     Vue.component('userstext', {
         template: `
