@@ -59,7 +59,7 @@ Data Model Diagram
 
 ## Model overview
 
-Data Tag Suits (DATS) is a data description model designed and produced to describe datasets being ingested in DataMed, a prototype for data discovery developed as part of the bioCADDIE project. DATS was co-developed by the Oxford e-Research Centre and the NIH Data Common Big Data to Knowledge (BD2K) initiative, where it was used to uniformly represent metadata across a number of projects, including the Genotype-Tissue Expression project (GTEx) and Trans-Omics for Precision Medicine (TOPMed).
+Data Tag Suits (DATS) {footcite}`pmid28585923` is a data description model designed and produced to describe datasets being ingested in DataMed, a prototype for data discovery developed as part of the bioCADDIE project {footcite}`pmid28546571`. DATS was co-developed by the Oxford e-Research Centre and the NIH Data Common Big Data to Knowledge (BD2K) initiative, where it was used to uniformly represent metadata across a number of projects, including the Genotype-Tissue Expression project (GTEx) and Trans-Omics for Precision Medicine (TOPMed).
 
 DATS is semantically compatible with the Data Catalog Vocabulary (DCAT), a Resource Description Framework (RDF) vocabulary designed to facilitate interoperability among data catalogues published on the web, as well as schema.org (SDO), which is a community-driven effort with a similar interoperability goal to DCAT but a more general-purpose scope.
 
@@ -78,7 +78,7 @@ The Project object was not part of the original version of DATS. It was added in
 
 #### Study
 
-The Study object, although part of the original DATS model, had a less central role in the first iteration than it has in this latest one. Capturing the context in which the Dataset was either generated or used, the Study provides information about the type of study undertaken (eg clinical trials or chemical toxicity screens), cohorts (or "studyGroups), input materials, selection criteria and the steps involved in the study. 
+The Study object, although part of the original DATS model, had a less central role in the first iteration than it has in this latest one. Capturing the context in which the Dataset was either generated or used, the Study provides information about the type of study undertaken (e.g. clinical trials or chemical toxicity screens), cohorts (or "studyGroups), input materials, selection criteria and the steps involved in the study. 
 
 #### Dataset
 
@@ -112,7 +112,7 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 
 * The Study object encodes information about the input materials to the experiment, such as study subjects in the case of clinical trials or biological molecules in the case of chemical assays. At this level, we collect cohort descriptions, sample sizes, sample sources, types of samples and diseases.
  
-* The Dataset object encodes information about the dataset, including technical information such as version number, creation and update dates, data standards and file types. The dataset also lists the experiment types that generated the data, the number and types of samples that contributed to the dataset and any diseases in the samples. These properties can be distinct from the ones at Study level as not all samples collected in a Study may be used to generate a given dataset, eg blood samples might be used for sequencing experiments, generating a sequencing dataset, while other tissue samples are used in imaging assays, generating an imaging dataset. The number of samples collected can be different from the cohort sample size (ie number of subject), either because multiple samples were collected from each subject or because some samples were excluded from the dataset for quality reasons.
+* The Dataset object encodes information about the dataset, including technical information such as version number, creation and update dates, data standards and file types. The dataset also lists the experiment types that generated the data, the number and types of samples that contributed to the dataset and any diseases in the samples. These properties can be distinct from the ones at Study level as not all samples collected in a Study may be used to generate a given dataset, e.g. blood samples might be used for sequencing experiments, generating a sequencing dataset, while other tissue samples are used in imaging assays, generating an imaging dataset. The number of samples collected can be different from the cohort sample size (i.e. number of subject), either because multiple samples were collected from each subject or because some samples were excluded from the dataset for quality reasons.
 
 * In the implementation of the model, preference as given to specific ontologies in certain contexts, eg MONDO for diseases, UBERON for anatomical components, NCIt, EFO and OBI for experiment types, UO for units etc.
 
@@ -130,13 +130,10 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 > * [Deploying the IMI data catalog](./data-catalog-deployment.md) 
 > * [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
 
-<!--## References:
+## References:
 
 ````{dropdown} **References**
 ```{footbibliography}
-```
-````
--->
 
 
 ## Authors
