@@ -1223,3 +1223,7 @@ input.rounded {
 .homepageMenu a:hover {
     text-decoration: none !important;
 }
+
+footer a, footer a:visited {
+    color: white !important;
+}
