@@ -2,45 +2,75 @@
 {% if theme_repository_url and (theme_use_repository_button or theme_use_issues_button or theme_use_edit_page_button) %}
 <div class="dropdown-buttons-trigger">
 
-    <button
-        id="dropdown-buttons-trigger"
-        class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"
-    >
-        <i class="fab fa-github"></i>
-    </button>
-
-    <div class="dropdown-buttons sourcebuttons">
-        {% if theme_use_repository_button %}
-            <a class="repository-button" href="{{ theme_repository_url }}">
-                <button
-                    type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                    title="{{ translate('Source repository') }}"><i
-                    class="fab fa-github"
-                >
-
-                </i>{{ translate('repository') }}
-                </button>
-            </a>
-        {% endif %}
-        {% if theme_use_issues_button %}
-        <a
-            class="issues-button"
-            href="{{ theme_repository_url }}/issues/new?title=Issue%20on%20page%20%2F{{ pagename }}.html&body=Your%20issue%20content%20here."
-        >
-            <button type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                title="{{ translate('Open an issue') }}"
+    <v-menu offset-y content-class="elevation-0" open-on-hover>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="white"
+              dark
+              v-bind="attrs"
+              v-on="on"
+              flat
+              solo
+              rounded
+              outlined
+              id="dropdown-buttons-trigger"
             >
-                <i class="fas fa-lightbulb"></i>{{ translate('open issue') }}</button></a>{% endif %}
-        {% if theme_use_edit_page_button %}<a class="edit-button" href="{{ get_edit_url() }}"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="{{ translate('Edit this page') }}"><i class="fas fa-pencil-alt"></i>{{ translate('suggest edit') }}</button></a>{% endif %}
-    </div>
+                <v-icon class="mr-3" left>fab fa-github</v-icon>
+                GitHub
+            </v-btn>
+        </template>
+        <div class="homepageMenu d-flex flex-column">
+            {% if theme_use_repository_button %}
+            <v-btn
+              color="white"
+              dark
+              flat
+              solo
+              rounded
+              outlined
+              href="{{ theme_repository_url }}"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fab fa-github</v-icon>
+                {{ translate('repository') }}
+            </v-btn>
+            {% endif %}
+
+            {% if theme_use_issues_button %}
+            <v-btn
+              color="white"
+              dark
+              flat
+              solo
+              rounded
+              outlined
+              href="{{ theme_repository_url }}/issues/new?title=Issue%20on%20page%20%2F{{ pagename }}.html&body=Your%20issue%20content%20here."
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fas fa-lightbulb</v-icon>
+                {{ translate('open issue') }}
+            </v-btn>
+            {% endif %}
+
+            {% if theme_use_edit_page_button %}
+            <v-btn
+              color="white"
+              dark
+              flat
+              solo
+              rounded
+              outlined
+              href="{{ get_edit_url() }}"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mx-3" left>fas fa-pencil-alt</v-icon>
+                {{ translate('suggest edit') }}
+            </v-btn>
+            {% endif %}
+        </div>
+    </v-menu>
 </div>
 {% endif %}

@@ -13,18 +13,22 @@
             {% endif %}
 
             {% if theme_single_page != True %}
-                <a href="{{ pathto('index') }}">
-                    <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="The FAIR Cookbook"
-                         style="width: 40%">
+                <a href="{{ pathto('index') }}" style="width: 300px">
+                    <img
+                        src="{{ pathto('_static/' + logo, 1) }}"
+                        class="logo"
+                        alt="The FAIR Cookbook"
+                        style="width: 100%"
+                    >
                 </a>
             {% endif %}
 
             <v-spacer> </v-spacer>
             <div style="margin-top: 3px" class="mr-4 extraButtons">
-                {% include "topbar/download.html" %}
                 {% include "topbar/repobuttons.html" %}
                 {% include "topbar/launchbuttons.html" %}
             </div>
+
             {%- for sidebartemplate in sidebars %}
                 {% if sidebartemplate == "sidebar-search-bs.html" %}
                     {% include sidebartemplate %}

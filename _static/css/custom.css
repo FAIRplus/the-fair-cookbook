@@ -1219,3 +1219,7 @@ input.rounded {
     position: relative;
     right: -1px;
 }
+
+.homepageMenu a:hover {
+    text-decoration: none !important;
+}
