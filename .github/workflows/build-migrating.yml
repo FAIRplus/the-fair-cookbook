@@ -23,9 +23,32 @@ jobs:
     - name: Install jupyter-book==0.10.2 and fixed dependencies
       run: pip install -r requirements.txt
     - name: Record used pip packages
-      run: pip freeze 
-    - name: Install mermaid and build the book
-      run: ./scripts/build.sh
+      run: pip freeze
+    - name: Install mermaid via npm
+      run: npm install @mermaid-js/mermaid-cli
+    - name: Record mermaid version
+      run: |
+        ./node_modules/.bin/mmdc -V
+        find . -iname "*.mmd" > list_of_all_mermaid_files
+    - name: Search all mermaid files and record a list of them
+      run: cat list_of_all_mermaid_files
+    - name: Convert all mermaid files to pngs and svg
+      run: |
+        cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
+        cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 1600 -o $line.hi-res.png ; done
+        cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.lo-res.png ; done
+        cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -o $line.svg ; done
+    - name: Cleanup intermediate files and removed node_modules
+      run: |
+            rm list_of_all_mermaid_files
+            rm -rf ./node_modules
+    - name: Clean JSON index
+      run: echo '{}' > _static/recipes.json
+    - name: Build the book
+      run: .|
+        jb build . 2>&1 | tee ./build.log
+        grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
+        sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" ./build.log > ./_build/cleaned_build.log
     - name: Check for important warnings
       run: ./scripts/extract-warnings.sh 
     - name: Install SSH Client 🔑
