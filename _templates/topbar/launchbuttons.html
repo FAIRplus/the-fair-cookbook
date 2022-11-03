@@ -1,9 +1,10 @@
 <!-- Launch buttons -->
 {% if binder_url or jupyterhub_url or colab_url or use_thebe %}
-<div class="dropdown-buttons-trigger mr-3">
+<div class="dropdown-buttons-trigger mr-3 d-flex justify-center align-center" style="height:100%">
     <v-menu offset-y content-class="elevation-0" open-on-hover>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
+              id="dropdown-buttons-trigger"
               color="white"
               outlined
               v-bind="attrs"
@@ -11,10 +12,12 @@
               flat
               solo
               rounded
-              id="dropdown-buttons-trigger"
+              :fab="$vuetify.breakpoint.mdAndDown"
+              :small="$vuetify.breakpoint.mdAndDown"
+              :class="$vuetify.breakpoint.mdAndDown ? 'pa-0' : ''"
             >
-                <v-icon class="mr-3" left>far fa-play-circle</v-icon>
-                Execute notebook
+                <v-icon :class="$vuetify.breakpoint.lgAndUp ? 'mr-3' : 'mx-0'" left>far fa-play-circle</v-icon>
+                <span v-if="$vuetify.breakpoint.lgAndUp"> Execute notebook </span>
             </v-btn>
         </template>
         <div class="homepageMenu d-flex flex-column">
