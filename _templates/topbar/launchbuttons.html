@@ -1,34 +1,86 @@
 <!-- Launch buttons -->
 {% if binder_url or jupyterhub_url or colab_url or use_thebe %}
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        {% if binder_url %}
-        <a class="binder-button" href="{{ binder_url }}"><button type="button"
-                class="btn btn-secondary topbarbtn" title="{{ translate('Launch') }} Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="{{ pathto('_static/images/logo_binder.svg', 1) }}"
-                    alt="Interact on binder">Binder</button></a>
-        {% endif %}
-        {% if jupyterhub_url %}
-        <a class="jupyterhub-button" href="{{ jupyterhub_url }}"><button type="button"
-                class="btn btn-secondary topbarbtn" title="{{ translate('Launch') }} JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="{{ pathto('_static/images/logo_jupyterhub.svg', 1) }}"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        {% endif %}
-        {% if colab_url and page_source_suffix==".ipynb" %}
-        <a class="colab-button" href="{{ colab_url }}"><button type="button" class="btn btn-secondary topbarbtn"
-                title="{{ translate('Launch') }} Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="{{ pathto('_static/images/logo_colab.png', 1) }}"
-                    alt="Interact on Colab">Colab</button></a>
-        {% endif %}
-        {% if use_thebe -%}
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="{{ translate('Launch') }} Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        {% endif %}
-    </div>
+<div class="dropdown-buttons-trigger mr-3">
+    <v-menu offset-y content-class="elevation-0" open-on-hover>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="white"
+              outlined
+              v-bind="attrs"
+              v-on="on"
+              flat
+              solo
+              rounded
+              id="dropdown-buttons-trigger"
+            >
+                <v-icon class="mr-3" left>far fa-play-circle</v-icon>
+                Execute notebook
+            </v-btn>
+        </template>
+        <div class="homepageMenu d-flex flex-column">
+            {% if binder_url %}
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="{{ binder_url }}"
+              class="mt-1 d-flex justify-start"
+              target="_blank"
+            >
+                <img style="width:20px; height:auto" src="{{ pathto('_static/images/logo_binder.svg', 1) }}" alt="Interact on binder" class="mr-3">
+                Binder
+            </v-btn>
+            {% endif %}
+
+            {% if jupyterhub_url %}
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="{{ jupyterhub_url }}"
+              class="mt-1 d-flex justify-start"
+              target="_blank"
+            >
+                <img style="width:20px; height:auto" src="{{ pathto('_static/images/logo_jupyterhub.svg', 1) }}" alt="Interact on JupyterHub" class="mr-3">
+                JupyterHub
+            </v-btn>
+            {% endif %}
+
+            {% if colab_url %}
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="{{ colab_url }}"
+              class="mt-1 d-flex justify-start"
+              target="_blank"
+            >
+                <img style="width:20px; height:auto" src="{{ pathto('_static/images/logo_colab.png', 1) }}" alt="Interact on Colab" class="mr-3">
+                Colab
+            </v-btn>
+            {% endif %}
+
+            {% if use_thebe -%}
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              class="mt-1 d-flex justify-start"
+              onclick="initThebeSBT()"
+            >
+                <v-icon class="mr-3" left>far fa-play-circle</v-icon>
+                Live Code
+            </v-btn>
+            {% endif %}
+        </div>
+    </v-menu>
 </div>
 {% endif %}
