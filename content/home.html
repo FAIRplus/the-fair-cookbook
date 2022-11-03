@@ -31,11 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/vuetify.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -49,10 +49,11 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/js/mermaid.js"></script>
     <script src="../_static/js/mermaid.core.js"></script>
-    <script src="../_static/js/mermaid.min.js"></script>
     <script src="../_static/js/vue.min.js"></script>
+    <script src="../_static/js/searchNodal.js"></script>
+    <script src="../_static/js/mermaid.min.js"></script>
+    <script src="../_static/js/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -97,98 +98,134 @@
             
 
             
-                <a href="../index.html">
-                    <img src="../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook"
-                         style="width: 40%">
+                <a href="../index.html" style="width: 300px">
+                    <img
+                        src="../_static/cookbook-logo-small.png"
+                        class="logo"
+                        alt="The FAIR Cookbook"
+                        style="width: 100%"
+                    >
                 </a>
             
 
             <v-spacer> </v-spacer>
-            <div style="margin-top: 3px" class="mr-4 extraButtons">
-                
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/home.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
+            <div class="mr-4 extraButtons">
                 <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
+<div class="dropdown-buttons-trigger d-flex justify-center align-center" style="height:100%">
 
-    <button
-        id="dropdown-buttons-trigger"
-        class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"
-    >
-        <i class="fab fa-github"></i>
-    </button>
-
-    <div class="dropdown-buttons sourcebuttons">
-        
-            <a class="repository-button" href="https://github.com/FAIRplus/the-fair-cookbook">
-                <button
-                    type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                    title="Source repository"><i
-                    class="fab fa-github"
-                >
-
-                </i>repository
-                </button>
-            </a>
-        
-        
-        <a
-            class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here."
-        >
-            <button type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                title="Open an issue"
+    <v-menu offset-y content-class="elevation-0" open-on-hover>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              id="dropdown-buttons-trigger"
+              color="white"
+              outlined
+              v-bind="attrs"
+              v-on="on"
+              flat
+              solo
+              rounded
+              :fab="$vuetify.breakpoint.mdAndDown"
+              :small="$vuetify.breakpoint.mdAndDown"
+              :class="$vuetify.breakpoint.mdAndDown ? 'pa-0' : ''"
             >
-                <i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/home.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+                <v-icon :class="$vuetify.breakpoint.lgAndUp ? 'mr-3' : 'mx-1'" left>fab fa-github</v-icon>
+                <span v-if="$vuetify.breakpoint.lgAndUp"> GitHub </span>
+            </v-btn>
+        </template>
+        <div class="homepageMenu d-flex flex-column">
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fab fa-github</v-icon>
+                repository
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/home.html&body=Your%20issue%20content%20here."
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fas fa-lightbulb</v-icon>
+                open issue
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/home.md"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mx-3" left>fas fa-pencil-alt</v-icon>
+                suggest edit
+            </v-btn>
+            
+        </div>
+    </v-menu>
 </div>
 
                 <!-- Launch buttons -->
 
             </div>
                 
-                    <form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get"
->
-  <i class="icon fas fa-search"></i>
-  <input
-          type="search"
-          class="form-control"
-          name="q"
-          id="search-input"
-          placeholder="Search this book..."
-          aria-label="Search this book..."
-          autocomplete="off"
-          style="border-radius:10px"
-  >
-</form>
+                    <script>
+    Vue.component("Searchfield", {
+      data () { return {
+        query: null
+      } },
+      methods: {
+        search() {
+            if (this.query) window.location.href = `search-wizard.html?q=` + this.query
+            else window.location.href = `search-wizard.html`
+        }
+      },
+      template: `
+      <div style="width:250px">
+            <v-text-field
+              v-model="query"
+              append-icon="fa-search"
+              label="Search Wizard..."
+              dense
+              rounded
+              single-line
+              solo
+              hide-details
+              class="white primary--text"
+              @click:append="search"
+              @keyup.enter="search"
+            />
+      </div>
+      `
+    })
+</script>
+
+<Searchfield> </Searchfield>
+
+
+
+
+
 
                 
                 
@@ -355,9 +392,16 @@
                         link: "./recipes/maturity.html",
                         icon: "fas fa-signal"
                     }
-                ]
+                ],
+                query: null
             }
         },
+        methods: {
+            search() {
+                if (this.query) window.location.href = `search-wizard.html?q=` + this.query
+                else window.location.href = `search-wizard.html`
+            }
+          },
         template: `
             <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
                 <v-container fluid class="pa-0 d-flex flex-column grey lighten-2" style="min-height: 95vh">
@@ -382,19 +426,52 @@
                                     skills required, and the challenges, to achieve and improve FAIRness.
                                     <br>
                                     Each recipe tells you the audience type, reading time, level of difficulty, and the level
-                                    of FAIR maturity it allows you to reach. Recipes are  <b class="primary--text">citable</b> via their unique identifier,
-                                    and their authors are <b class="primary--text">credited</b>.
+                                    of FAIR maturity it allows you to reach. Recipes are  <b class="secondary--text">citable</b> via their unique identifier,
+                                    and their authors are <b class="secondary--text">credited</b>.
                                 </p>
                             </v-container>
                         </v-col>
                     </v-row>
-    
-                    <!-- LOGO BREAKER -->
-                    <v-row justify="center" class="flex-grow-0" :no-gutters="$vuetify.breakpoint.lgAndDown" :class="$vuetify.breakpoint.lgAndDown ? 'mt-0' : 'mt-10'">
-                        <v-col cols="12" class="d-flex justify-center align-center" :class="$vuetify.breakpoint.lgAndDown ? 'pa-0' : ''">
-                             <v-btn x-large class="primary lighten-1 white--text mx-2" large href="./search-wizard.html">
-                                Search All Recipes
-                            </v-btn>
+
+                    <v-row
+                        justify="center"
+                        class="flex-grow-0"
+                        :no-gutters="$vuetify.breakpoint.lgAndDown"
+                        :class="$vuetify.breakpoint.lgAndDown ? 'my-0 mb-8 mt-4' : 'my-5 pb-10'"
+                    >
+                        <v-col
+                            cols="12" class="d-flex flex-column justify-center align-center"
+                            :class="$vuetify.breakpoint.lgAndDown ? 'pa-0 px-2' : ''"
+                        >
+                            <div
+                                class="text-h4 text-center primary--text font-weight-bold"
+                                :class="$vuetify.breakpoint.lgAndDown ? 'mb-0' : 'mb-5'"
+                            >
+                                Use the wizard to search all recipes
+                            </div>
+                            <v-text-field
+                                v-model="query"
+                                color="primary"
+                                class="mt-5 primary--text homeInputWizard"
+                                label="Search Wizard"
+                                solo
+                                single-line
+                                hide-details
+                                rounded
+                                @click:append="search"
+                                @keyup.enter="search"
+                             >
+                                <template v-slot:append>
+                                    <v-btn
+                                        class="primary white--text"
+                                        @click="search"
+                                        elevation="0"
+                                    >
+                                        <v-icon class="white--text mr-3">fas fa-search</v-icon>
+                                        <span class="white--text"> Search </span>
+                                    </v-btn>
+                                </template>
+                             </v-text-field>
                         </v-col>
                     </v-row>
     
@@ -427,6 +504,9 @@
         },
         template: `
             <v-row>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="3" class="rotate-0">
                     <v-row>
                         <FairCard :item="items[0]"> </FairCard>
@@ -469,6 +549,9 @@
         },
         template: `
             <v-row no-gutters>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="12">
                     <v-container class="pa-0">
                         <v-row>
@@ -525,7 +608,7 @@
                         <div style="flex-grow:1">
                           <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
                           <ul>
-                            <li v-for="(content, y) in item.content" :key="'content_' + item.title + y" class="mr-10">
+                            <li v-for="(content, y) in item.content" :key="'content_' + item.title + y">
                                 <a :href="content.link" class="white--text"> {{ content.text }} </a>
                             </li>
                           </ul>
@@ -558,6 +641,8 @@
              </v-col>
         `
     })
+
+    /** BOTTOM SCREEN **/
 
     Vue.component('userstext', {
         template: `
@@ -668,7 +753,6 @@
                 let styles = ''
                 this.$vuetify.breakpoint.mdAndUp ? styles += ' height: 200px; ' : styles += ' height:150px; '
                 this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
-                console.log(styles)
                 return styles
             },
         },

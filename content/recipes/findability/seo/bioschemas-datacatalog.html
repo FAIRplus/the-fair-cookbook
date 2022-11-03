@@ -31,11 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -49,10 +49,11 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/js/mermaid.js"></script>
     <script src="../../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../../_static/js/mermaid.min.js"></script>
     <script src="../../../../_static/js/vue.min.js"></script>
+    <script src="../../../../_static/js/searchNodal.js"></script>
+    <script src="../../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../../_static/js/mermaid.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -107,98 +108,134 @@
             
 
             
-                <a href="../../../../index.html">
-                    <img src="../../../../_static/cookbook-logo-small.png" class="logo" alt="The FAIR Cookbook"
-                         style="width: 40%">
+                <a href="../../../../index.html" style="width: 300px">
+                    <img
+                        src="../../../../_static/cookbook-logo-small.png"
+                        class="logo"
+                        alt="The FAIR Cookbook"
+                        style="width: 100%"
+                    >
                 </a>
             
 
             <v-spacer> </v-spacer>
-            <div style="margin-top: 3px" class="mr-4 extraButtons">
-                
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../../_sources/content/recipes/findability/seo/bioschemas-datacatalog.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
+            <div class="mr-4 extraButtons">
                 <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
+<div class="dropdown-buttons-trigger d-flex justify-center align-center" style="height:100%">
 
-    <button
-        id="dropdown-buttons-trigger"
-        class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"
-    >
-        <i class="fab fa-github"></i>
-    </button>
-
-    <div class="dropdown-buttons sourcebuttons">
-        
-            <a class="repository-button" href="https://github.com/FAIRplus/the-fair-cookbook">
-                <button
-                    type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                    title="Source repository"><i
-                    class="fab fa-github"
-                >
-
-                </i>repository
-                </button>
-            </a>
-        
-        
-        <a
-            class="issues-button"
-            href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/seo/bioschemas-datacatalog.html&body=Your%20issue%20content%20here."
-        >
-            <button type="button"
-                    class="btn btn-secondary topbarbtn"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                title="Open an issue"
+    <v-menu offset-y content-class="elevation-0" open-on-hover>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              id="dropdown-buttons-trigger"
+              color="white"
+              outlined
+              v-bind="attrs"
+              v-on="on"
+              flat
+              solo
+              rounded
+              :fab="$vuetify.breakpoint.mdAndDown"
+              :small="$vuetify.breakpoint.mdAndDown"
+              :class="$vuetify.breakpoint.mdAndDown ? 'pa-0' : ''"
             >
-                <i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/seo/bioschemas-datacatalog.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+                <v-icon :class="$vuetify.breakpoint.lgAndUp ? 'mr-3' : 'mx-1'" left>fab fa-github</v-icon>
+                <span v-if="$vuetify.breakpoint.lgAndUp"> GitHub </span>
+            </v-btn>
+        </template>
+        <div class="homepageMenu d-flex flex-column">
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fab fa-github</v-icon>
+                repository
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/findability/seo/bioschemas-datacatalog.html&body=Your%20issue%20content%20here."
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fas fa-lightbulb</v-icon>
+                open issue
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/findability/seo/bioschemas-datacatalog.md"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mx-3" left>fas fa-pencil-alt</v-icon>
+                suggest edit
+            </v-btn>
+            
+        </div>
+    </v-menu>
 </div>
 
                 <!-- Launch buttons -->
 
             </div>
                 
-                    <form class="bd-search d-flex align-items-center"
-      action="../../../../search.html"
-      method="get"
->
-  <i class="icon fas fa-search"></i>
-  <input
-          type="search"
-          class="form-control"
-          name="q"
-          id="search-input"
-          placeholder="Search this book..."
-          aria-label="Search this book..."
-          autocomplete="off"
-          style="border-radius:10px"
-  >
-</form>
+                    <script>
+    Vue.component("Searchfield", {
+      data () { return {
+        query: null
+      } },
+      methods: {
+        search() {
+            if (this.query) window.location.href = `../../../search-wizard.html?q=` + this.query
+            else window.location.href = `../../../search-wizard.html`
+        }
+      },
+      template: `
+      <div style="width:250px">
+            <v-text-field
+              v-model="query"
+              append-icon="fa-search"
+              label="Search Wizard..."
+              dense
+              rounded
+              single-line
+              solo
+              hide-details
+              class="white primary--text"
+              @click:append="search"
+              @keyup.enter="search"
+            />
+      </div>
+      `
+    })
+</script>
+
+<Searchfield> </Searchfield>
+
+
+
+
+
 
                 
                 
@@ -1021,8 +1058,8 @@ No
 <div><p>To embed <code class="docutils literal notranslate"><span class="pre">Schema.org</span></code> markup in a web page that publishes multiple datasets in a single page.</p>
 </div></blockquote>
 <div class="tabbed-set docutils">
-<input checked="checked" id="49f6bbbc-d761-4bca-ad07-1177716b25fe" name="8bd04970-2626-4712-a525-00b3a68be19b" type="radio">
-</input><label class="tabbed-label" for="49f6bbbc-d761-4bca-ad07-1177716b25fe">
+<input checked="checked" id="62fa7461-743f-462d-b0d1-1c07d846ce72" name="d673638b-40e8-4d80-9adb-0b3ff7cf06cc" type="radio">
+</input><label class="tabbed-label" for="62fa7461-743f-462d-b0d1-1c07d846ce72">
 FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1043,8 +1080,8 @@ FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content d
 </tbody>
 </table>
 </div>
-<input id="00993c64-ab93-4b56-a98f-6cd9c5eff0b1" name="8bd04970-2626-4712-a525-00b3a68be19b" type="radio">
-</input><label class="tabbed-label" for="00993c64-ab93-4b56-a98f-6cd9c5eff0b1">
+<input id="3a9db7b5-26ef-49cb-968f-6faa86496121" name="d673638b-40e8-4d80-9adb-0b3ff7cf06cc" type="radio">
+</input><label class="tabbed-label" for="3a9db7b5-26ef-49cb-968f-6faa86496121">
 Table of Data Standards</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
