@@ -5,14 +5,13 @@
     <v-menu offset-y content-class="elevation-0" open-on-hover>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
-              color="white"
+              color="grey darken-1"
               dark
               v-bind="attrs"
               v-on="on"
               flat
               solo
               rounded
-              outlined
               id="dropdown-buttons-trigger"
             >
                 <v-icon class="mr-3" left>fab fa-github</v-icon>
@@ -22,12 +21,11 @@
         <div class="homepageMenu d-flex flex-column">
             {% if theme_use_repository_button %}
             <v-btn
-              color="white"
+              color="grey darken-2"
               dark
               flat
               solo
               rounded
-              outlined
               href="{{ theme_repository_url }}"
               class="mt-1"
               target="_blank"
@@ -39,12 +37,11 @@
 
             {% if theme_use_issues_button %}
             <v-btn
-              color="white"
+              color="grey darken-2"
               dark
               flat
               solo
               rounded
-              outlined
               href="{{ theme_repository_url }}/issues/new?title=Issue%20on%20page%20%2F{{ pagename }}.html&body=Your%20issue%20content%20here."
               class="mt-1"
               target="_blank"
@@ -56,12 +53,11 @@
 
             {% if theme_use_edit_page_button %}
             <v-btn
-              color="white"
+              color="grey darken-2"
               dark
               flat
               solo
               rounded
-              outlined
               href="{{ get_edit_url() }}"
               class="mt-1"
               target="_blank"
