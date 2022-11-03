@@ -98,7 +98,7 @@ DATS does not prescribe the use of specific ontologies in relation to various pr
 
 ### Encoding in JSON-LD
 
-DATS objects are encoded in JSON-LD, a method for encoding linked data in the open standard file and data interchange format JSON. JSON-LD is designed around the concept of a "context" to provide additional mappings from JSON to an RDF model. DATS provides three sets of context mappings, to DCAT, schema.org (SDO) and the OBO Foundry Ontologies. None of the three sets of contexts individually cover all properties in the model but they can be used in combination to maximise the semantic linking of the model.  
+DATS objects are encoded in JSON-LD, a method for encoding linked data in the open standard file and data interchange format JSON. JSON-LD is designed around the concept of a "context" to provide additional mappings from JSON to an RDF model. DATS provides three sets of context mappings, to DCAT, schema.org (SDO) and the OBO Foundry Ontologies. None of the three sets of contexts individually cover all properties in the model but they can be used in combination to maximise the semantic linking of the model, likely to increase interoperability, for instance with DCAT based catalogues.
 
 
 
