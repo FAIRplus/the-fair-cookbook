@@ -5,8 +5,8 @@
     <v-menu offset-y content-class="elevation-0" open-on-hover>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
-              color="grey darken-1"
-              dark
+              color="white"
+              outlined
               v-bind="attrs"
               v-on="on"
               flat
@@ -21,7 +21,7 @@
         <div class="homepageMenu d-flex flex-column">
             {% if theme_use_repository_button %}
             <v-btn
-              color="grey darken-2"
+              color="grey darken-1"
               dark
               flat
               solo
@@ -37,7 +37,7 @@
 
             {% if theme_use_issues_button %}
             <v-btn
-              color="grey darken-2"
+              color="grey darken-1"
               dark
               flat
               solo
@@ -53,7 +53,7 @@
 
             {% if theme_use_edit_page_button %}
             <v-btn
-              color="grey darken-2"
+              color="grey darken-1"
               dark
               flat
               solo
