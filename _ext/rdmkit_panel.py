@@ -19,17 +19,19 @@ class RDMkitPanel(Directive):
     def _create_content(self):
         self.parse_yaml()
         content = []
-        content.extend([
-            '<div class="card w-100 border-2 col-md-6 p-0 docutils">',
-                '<div class="card-header bg-primary pa_dark docutils">',
-                    '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
-                        '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
-                    '</a>',
-                '</div>',
-                '<div class="card-body docutils">',
-                    self.get_rdmkit_html(),
-                '</div></div>'
-        ])
+        RDMkit_block = self.get_rdmkit_html()
+        if RDMkit_block:
+            content.extend([
+                '<div class="card w-100 border-2 col-md-6 p-0 docutils">',
+                    '<div class="card-header bg-primary pa_dark docutils">',
+                        '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
+                            '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
+                        '</a>',
+                    '</div>',
+                    '<div class="card-body docutils">',
+                        self.get_rdmkit_html(),
+                    '</div></div>'
+            ])
         return content
 
     def get_rdmkit_html(self):
@@ -37,11 +39,12 @@ class RDMkitPanel(Directive):
         Creates the rdmkit html snippets for each link
         :return str: 
         """
-        output = '<ul>'
-        for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
-            output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">General guidance about {rdmkit_title}</a></li>'
-        output += '</ul>'
-        return output
+        if self.fcb_rdmkit_links.items():
+            output = '<ul>'
+            for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
+                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">General guidance about {rdmkit_title}</a></li>'
+            output += '</ul>'
+            return output
 
 
     def parse_yaml(self):
