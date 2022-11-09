@@ -214,16 +214,8 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 > - {ref}`fcb-find-bs-dataset`
 > 
 > ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
+> ````{rdmkit_panel}
+> ````
 > ````
 
 

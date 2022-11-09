@@ -20,20 +20,29 @@ class RDMkitPanel(Directive):
         self.parse_yaml()
         content = []
         content.extend([
-            self.get_rdmkit_html()
+            '<div class="row docutils">',
+                '<div class="d-flex col-4 docutils">',
+                    '<div class="card w-100 border-2 docutils">',
+                        '<div class="card-header bg-primary pa_dark docutils">',
+                            '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference">',
+                                '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
+                            '</a>',
+                        '</div>',
+                        '<div class="card-body grey docutils">',
+                            self.get_rdmkit_html(),
+                        '</div></div></div></div>'
         ])
         return content
 
     def get_rdmkit_html(self):
         """
         Creates the rdmkit html snippets for each link
-        :return str: a dictionary with as keys the RDMkit page names and as value the url
+        :return str: 
         """
-
         
         for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
             output = '<ul>'
-            output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">{rdmkit_title}</a></li>'
+            output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">General guidance about {rdmkit_title}</a></li>'
             output += '</ul>'
             return output
 
@@ -50,15 +59,36 @@ class RDMkitPanel(Directive):
             json_data = json.load(f)
 
         latest_recipe = list(json_data)[-1]
-        fcb_id = latest_recipe['identifier']
+        fcb_id = json_data[latest_recipe]['identifier']
 
         self.fcb_rdmkit_links = {}
 
         for rdmkit_page in yaml_data:
-            for fcb_link in rdmkit_page:
+            for fcb_link in rdmkit_page['links']:
                 if fcb_link['fcb_id'] == fcb_id:
                     self.fcb_rdmkit_links[rdmkit_page['rdmkit_title']] = rdmkit_page['rdmkit_filename']
 
+    def _parse_content_into_nodes(self, new_content):
+        if len(self.content) > 0:
+            common_filename = self.content.items[0][0]
+            for index, (filename, linenumber) in enumerate(self.content.items):
+                assert filename == common_filename, "Unexpected behavior of sphinx."
+                assert linenumber == index        , "Unexpected behavior of sphinx."
+        else:
+            common_filename = None
+        self.content.data = []
+        self.content.items = []
+        for idx, line in enumerate(new_content):
+            self.content.data.append(line)
+            self.content.items.append((common_filename, idx))
+        node = nodes.container()
+        self.state.nested_parse(self.content, self.content_offset, node)
+        return node.children
+
+    def run(self):
+        new_content = self._create_content()
+        new_nodes = self._parse_content_into_nodes(new_content)
+        return new_nodes
 
 def setup(app):
     app.setup_extension("sphinx_panels")

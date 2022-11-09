@@ -463,14 +463,8 @@ This is very useful for including unambiguous, global identifiers in scientific 
 > ^^^
 >[The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
 > ---
-> :header: bg-primary pa_dark
-> :body: grey
-  > ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Identifiers` from the `RDMkit`](https://rdmkit.elixir-europe.org/identifiers.html)
+> ````{rdmkit_panel}
+> ````
 > ````
 
 

@@ -267,16 +267,8 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 > * [Rclone](https://rclone.org)
 >
 > ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
+> ````{rdmkit_panel}
+> ````
 > ````
 
 

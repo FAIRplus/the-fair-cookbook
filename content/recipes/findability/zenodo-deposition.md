@@ -481,16 +481,8 @@ r.status_code
 > * [What is search engine optimization?](fcb-find-seo)
 > 
 > ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Publication` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_publication.html)
+> ````{rdmkit_panel}
+> ````
 > ````
 
 
