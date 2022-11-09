@@ -60,7 +60,6 @@ class RDMkitPanel(Directive):
                     self.fcb_rdmkit_links[rdmkit_page['rdmkit_title']] = rdmkit_page['rdmkit_filename']
 
 
-
 def setup(app):
     app.setup_extension("sphinx_panels")
     app.add_directive("rdmkit_panel", RDMkitPanel)
