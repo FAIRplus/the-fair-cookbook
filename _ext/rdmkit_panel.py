@@ -28,7 +28,7 @@ class RDMkitPanel(Directive):
                                 '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
                             '</a>',
                         '</div>',
-                        '<div class="card-body grey docutils">',
+                        '<div class="card-body docutils">',
                             self.get_rdmkit_html(),
                         '</div></div></div></div>'
         ])
