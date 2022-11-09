@@ -200,35 +200,31 @@ can be managed
 
 
 ### What to read next?
->
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> ```{image} ../../images/logos/pistoia_logo.png
-> :height: 40px
-> :align: center
-> :name: FAIRtoolkit_logo
-> ```
-> ^^^
->[The Pistoia Alliance FAIRtoolkit Data Capability Maturity Model](https://fairtoolkit.pistoiaalliance.org/methods/data-capability-maturity-model/)
-> ````
-> 
-> Moving through maturity levels with ISA by running the following notebooks in the indicated order:
-> 
-> 1.[improving dataset maturity: the MIAPPE use case](https://w3id.org/faircookbook/FCB062)
-> 
-> 2.[create-a-simple-isa-descriptor](https://w3id.org/faircookbook/FCB063)
-> 
-> 3.[isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org/faircookbook/FCB064)
->
-> 4.[isa-json-conversion-to-rdf-linked-data](https://w3id.org/faircookbook/FCB064)
->
-> 5.[isa-as-ro](https://w3id.org/faircookbook/FCB066)
->
+
+ 
+Moving through maturity levels with ISA by running the following notebooks in the indicated order:
+
+- [improving dataset maturity: the MIAPPE use case](https://w3id.org/faircookbook/FCB062) 
+- [create-a-simple-isa-descriptor](https://w3id.org/faircookbook/FCB063)
+- [isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org/faircookbook/FCB064)
+- [isa-json-conversion-to-rdf-linked-data](https://w3id.org/faircookbook/FCB064)
+- [isa-as-ro](https://w3id.org/faircookbook/FCB066)
 
 
+````{panels}
+:column: col-4
+:card: border-2
+:header: bg-primary pa_dark
+```{image} ../../images/logos/pistoia_logo.png
+:height: 40px
+:align: center
+:name: FAIRtoolkit_logo
+```
+^^^
+[The Pistoia Alliance FAIRtoolkit Data Capability Maturity Model](https://fairtoolkit.pistoiaalliance.org/methods/data-capability-maturity-model/)
+````
+````{rdmkit_panel}
+````
 
 
 ## Reference

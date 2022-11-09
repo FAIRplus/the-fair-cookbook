@@ -239,13 +239,13 @@ graph TD;
 
 ## Conclusion
 
-> Summerize Key Learnings of the recipe.
-> 
-> Suggest further reading using the following:
-> ### What should I read next?
-> * [Tips and Tricks](./tips-tricks.md)
-> * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
-> * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
+Summerize Key Learnings of the recipe.
+ 
+Suggest further reading using the following:
+### What to read next?
+* [Tips and Tricks](./tips-tricks.md)
+* [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
+* using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
   [my-prefered-label](fcb-help-recipe-template)
 
 ````{note}
@@ -255,28 +255,18 @@ To the Reviewers and Editors: The following panels show how to link with externa
 * The Turing Way Book of Data Science
 ````
 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
-> ---
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/pistoia_logo.png
-> :height: 40px
-> :align: center
-> :name: FAIRtoolkit_logo
-> ```
-> ^^^
-> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> ````
-
+````{panels}
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/pistoia_logo.png
+:height: 40px
+:align: center
+:name: FAIRtoolkit_logo
+```
+^^^
+[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+````
+````{rdmkit_panel}
+````
 
 ## References:
 

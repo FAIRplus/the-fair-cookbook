@@ -473,17 +473,13 @@ r.status_code
     
     
 
-> ### What should I read next?
-> * [How to build a data catalogue?](fcb-infra-build-catalog)
-> * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
-> * [What is search engine optimization?](fcb-find-seo)
-> 
-> ````{panels}
-> ````{rdmkit_panel}
-> ````
-> ````
-
-
+### What to read next?
+* [How to build a data catalogue?](fcb-infra-build-catalog)
+* How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
+* [What is search engine optimization?](fcb-find-seo)
+ 
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References**

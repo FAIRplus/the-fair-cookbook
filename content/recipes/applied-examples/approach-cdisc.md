@@ -181,10 +181,10 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 > 
 > * The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
 
-### What should I read next?
-> * [Ontology mappings](../interoperability/selecting-ontologies.md)
-> * [Data dictionary](../interoperability/creating-data-dictionary.md)
-> * [ETL processes](../interoperability/ETL-tools.md)
+### What to read next?
+* [Ontology mappings](../interoperability/selecting-ontologies.md)
+* [Data dictionary](../interoperability/creating-data-dictionary.md)
+* [ETL processes](../interoperability/ETL-tools.md)
 
 
 
