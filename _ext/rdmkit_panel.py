@@ -20,17 +20,15 @@ class RDMkitPanel(Directive):
         self.parse_yaml()
         content = []
         content.extend([
-            '<div class="row docutils">',
-                '<div class="d-flex col-4 docutils">',
-                    '<div class="card w-100 border-2 docutils">',
-                        '<div class="card-header bg-primary pa_dark docutils">',
-                            '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
-                                '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
-                            '</a>',
-                        '</div>',
-                        '<div class="card-body docutils">',
-                            self.get_rdmkit_html(),
-                        '</div></div></div></div>'
+            '<div class="card w-100 border-2 docutils">',
+                '<div class="card-header bg-primary pa_dark docutils">',
+                    '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
+                        '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
+                    '</a>',
+                '</div>',
+                '<div class="card-body docutils">',
+                    self.get_rdmkit_html(),
+                '</div></div>'
         ])
         return content
 
