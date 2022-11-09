@@ -406,8 +406,20 @@ material listed below:
 * [FAIR data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
 * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
 
+
+````{panels}
 ````{rdmkit_panel}
 ````
+---
+:header: bg-primary pa_dark	
+````{image} ../../../images/logos/pistoia_logo.png	
+:height: 40px	
+:align: center	
+:name: FAIRtoolkit_logo	
+^^^	
+[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)	
+````
+
 
 <!--
 > :header: bg-primary pa_dark
