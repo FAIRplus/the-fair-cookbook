@@ -37,12 +37,11 @@ class RDMkitPanel(Directive):
         Creates the rdmkit html snippets for each link
         :return str: 
         """
-        
+        output = '<ul>'
         for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
-            output = '<ul>'
             output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">General guidance about {rdmkit_title}</a></li>'
-            output += '</ul>'
-            return output
+        output += '</ul>'
+        return output
 
 
     def parse_yaml(self):
