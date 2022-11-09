@@ -1,8 +1,6 @@
 (fcb-find-id-minid)=
 # Minting identifiers with Minid
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB008

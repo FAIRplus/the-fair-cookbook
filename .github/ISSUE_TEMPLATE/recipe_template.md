@@ -1,8 +1,7 @@
 (fcb-recipeshorthand-template)=
 # Recipe Template
 
-+++
-<br/>
+
 
 ```{admonition} Important
 :class: tip
@@ -245,6 +244,13 @@ graph TD;
 > * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
 > * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
 
+
+### What to read next?
+
+- reference
+
+````{rdmkit_panel}
+````
 
 ---
 

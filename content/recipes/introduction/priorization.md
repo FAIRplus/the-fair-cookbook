@@ -2,8 +2,6 @@
 # Prioritization of projects for FAIRification
 
 +++
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB055

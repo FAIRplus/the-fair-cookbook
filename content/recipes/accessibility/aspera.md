@@ -1,8 +1,6 @@
 (fcb-access-aspera)=
 # Downloading data with Aspera
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB015
@@ -112,11 +110,10 @@ ascp version 3.9.6.176292
 
 ### What to read next?
 
->  - {ref}`fcb-sftp` 
->  - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
->
-> ````{rdmkit_panel}
-> ````
+- {ref}`fcb-sftp` 
+- <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References** 

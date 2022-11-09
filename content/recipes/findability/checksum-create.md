@@ -1,8 +1,6 @@
 (fcb-checksum-create)=
 # How to create checksum files
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB052 

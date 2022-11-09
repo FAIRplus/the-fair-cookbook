@@ -1,8 +1,6 @@
 (fcb-public-kg)=
 # Public knowledge graph resources for life sciences
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB071

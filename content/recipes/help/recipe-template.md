@@ -2,8 +2,6 @@
 # Git recipe template
 
 
-<br/>
-<br/>
 
 ```{admonition} Important
 :class: tip

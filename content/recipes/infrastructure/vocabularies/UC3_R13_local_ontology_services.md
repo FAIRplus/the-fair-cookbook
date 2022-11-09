@@ -2,8 +2,6 @@
 
 # Deploying the EBI OLS
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB005

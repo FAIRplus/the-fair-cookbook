@@ -1,8 +1,6 @@
 (fcb-sftp)=
 # Transferring data with SFTP
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB014
@@ -254,22 +252,15 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-> * [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
->
-> * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
->
-> * [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
->
-> * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
->
-> * {ref}`fcb-access-aspera`
->
-> * [Rclone](https://rclone.org)
->
-> ````{panels}
-> ````{rdmkit_panel}
-> ````
-> ````
+* [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
+* [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+* [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
+* {ref}`fcb-access-aspera`
+* [Rclone](https://rclone.org)
+
+````{rdmkit_panel}
+````
 
 
 

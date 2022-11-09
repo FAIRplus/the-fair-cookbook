@@ -3,8 +3,6 @@
 # Practical Considerations for CROs to play FAIR
 
 +++
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB056

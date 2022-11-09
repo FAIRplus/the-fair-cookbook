@@ -1,8 +1,7 @@
 (fcb-intro-fair-imi)=
 # FAIR in the context of IMI
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

@@ -1,8 +1,6 @@
 (fcb-find-zenodo)=
 # Depositing to generic repositories - Zenodo use case
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB009

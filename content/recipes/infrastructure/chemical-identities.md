@@ -1,8 +1,7 @@
 (fcb-infra-chemid)=
 # InChI and SMILES identifiers for chemical structures
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB007

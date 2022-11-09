@@ -1,8 +1,6 @@
 (fcb-interop-vcf_fhir)=
 # Converting VCF file to HL7 FHIR JSON Genomic Report profile 
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB058

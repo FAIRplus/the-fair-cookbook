@@ -2,8 +2,6 @@
 # Making Computational Workflows FAIR
 
 +++
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB062
@@ -19,8 +17,7 @@
 ```` 
 
 
-+++
-<br/>
+
 
 ## Main Objectives
 

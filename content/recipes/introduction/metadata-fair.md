@@ -1,8 +1,7 @@
 (fcb-metadata)=
 # FAIR and the notion of metadata
 
-+++
-<br/>
+
 
 
 ````{panels_fairplus}

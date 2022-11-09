@@ -1,8 +1,7 @@
 (fcb-find-seo)=
 # Search Engine Optimization (SEO)
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB010
@@ -209,18 +208,12 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 
 ### What to read next?
 
-> - {ref}`fcb-find-bs-data`
-> - {ref}`fcb-find-bs-catalog`
-> - {ref}`fcb-find-bs-dataset`
-> 
-> ````{panels}
-> ````{rdmkit_panel}
-> ````
-> ````
+- {ref}`fcb-find-bs-data`
+- {ref}`fcb-find-bs-catalog`
+- {ref}`fcb-find-bs-dataset`
 
-
-
-
+````{rdmkit_panel}
+````
 
 
 ## References

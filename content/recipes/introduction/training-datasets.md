@@ -1,8 +1,6 @@
 (fcb-intro-training-datasets)=
 # Biomedical datasets of relevance for training in FAIRification
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB069

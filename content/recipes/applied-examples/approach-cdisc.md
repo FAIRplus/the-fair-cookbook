@@ -2,8 +2,6 @@
 # Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK
 
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}

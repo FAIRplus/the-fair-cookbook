@@ -2,8 +2,6 @@
 # A framework for FAIRification processes
 
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}

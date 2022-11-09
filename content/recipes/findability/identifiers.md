@@ -1,8 +1,7 @@
 (fcb-find-identifiers)=
 # Unique, persistent identifiers
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB006
@@ -16,8 +15,7 @@
 :has_executable_code: nope
 :recipe_name: Introducing unique, persistent identifiers
 ```` 
-<br>
-<br>
+
 
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier

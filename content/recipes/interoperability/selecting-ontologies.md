@@ -1,8 +1,6 @@
 (fcb-selecting-ontologies)=
 # Selecting terminologies and ontologies
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB020
@@ -104,7 +102,7 @@ to bear in mind when selecting semantic resources is to assess whether or not `d
 ```{admonition} Tip
 :class: tip
  **[The FAIRsharing registry](https://fairsharing.org)** {footcite}`pmid30940948` is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefact used by public data repositories.
-````
+```
 
 ## Selecting Terminologies 
 
@@ -341,12 +339,15 @@ The notion is important to grasp as it also explains why not all ontologies are 
 <!-- 
 TODO : fill in the links to what-should-I-read-next recipes -->
 
-> ### What should I read next?
-> * How to build an application ontology? {ref}`fcb-interop-ontorobot`
-> * How to select on ontology service? {ref}`fcb-select-onto-service`
-> * How to deploy an ontology server? {ref}`fcb-select-onto-service-criteria`
-> * [How to establish a minimal metadata profile?]
-    > {ref}`fcb-interop-covid-metadata` 
+### What to read next?
+
+* How to build an application ontology? {ref}`fcb-interop-ontorobot`
+* How to select on ontology service? {ref}`fcb-select-onto-service`
+* How to deploy an ontology server? {ref}`fcb-select-onto-service-criteria`
+* [How to establish a minimal metadata profile?] {ref}`fcb-interop-covid-metadata` 
+
+````{rdmkit_panel}
+````s
 
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
