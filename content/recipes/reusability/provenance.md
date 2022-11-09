@@ -410,7 +410,7 @@ material listed below:
 ````{panels}
 :column: col-4
 :card: border-2
-:header: bg-primary pa_dark	
+:header: bg-primary pa_dark
 ```{image} ../../../images/logos/pistoia_logo.png	
 :height: 40px	
 :align: center	
@@ -421,7 +421,6 @@ material listed below:
 ````
 ````{rdmkit_panel}
 ````
-
 
 <!--
 > :header: bg-primary pa_dark
