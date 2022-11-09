@@ -122,9 +122,8 @@ If you would like to read more about the challenges and finer points of licensin
 ### What to read next?
 
 ````{panels}
-````{rdmkit_panel}
-````
----
+:column: col-4
+:card: border-2
 :header: bg-primary pa_dark
 ```{image} ../../../images/logos/TTW.svg
 :height: 40px
@@ -133,7 +132,9 @@ If you would like to read more about the challenges and finer points of licensin
 ```
 ^^^
 - [The Turing Way Book of Data Sciences: Data Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html)
-
+````
+````{rdmkit_panel}
+````
 
 
 ## References
