@@ -46,6 +46,8 @@ jobs:
       run: rm -rf ./node_modules
     - name: Clean JSON index
       run: echo '{}' > _static/recipes.json
+    - name: Pull FAIRCookbook - RDMkit linkage file
+      run: curl -o _static/faircookbook_rdmkit_mapping.yml https://raw.githubusercontent.com/elixir-europe/faircookbook-rdmkit/main/faircookbook_rdmkit_mapping.yml
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
     - name: Let the build fail if there are errors in the build of the jupyter_book

@@ -1,8 +1,6 @@
 (fcb-interop-ontorequest)=
 # Requesting new terms
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB021

@@ -1,8 +1,6 @@
 (fcb-assess-fair-fairshake)=
 # FAIRshake tool
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB050

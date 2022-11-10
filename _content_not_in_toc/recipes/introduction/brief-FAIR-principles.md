@@ -1,7 +1,6 @@
 # What are the FAIR Principles?
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

@@ -2,8 +2,7 @@
 # Compliance with community annotation standards
 
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -26,7 +25,9 @@
 ## Conclusion
 
 ### What to read next?
-	> * [How to meet community standards for annotation](./community-standards)
+	- * [How to meet community standards for annotation](./community-standards)
+	````{rdmkit_panel}
+	````
 
 
 ---

@@ -1,7 +1,5 @@
 (rr-licensing-software)=
 # Software licenses
-<br/>
-<br/>
 
 
 ````{panels_fairplus}

@@ -5,8 +5,6 @@
 TODO: clarify authors
 -->
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -119,6 +117,7 @@ alt: Example of textual analyses of terms / concept labels
 Example of textual analyses of terms / concept labels.
 ```
 ````
+
 
 ## References
 ````{dropdown} **References**

@@ -1,8 +1,6 @@
 (rr-licensing)=
 # Licensing
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB032

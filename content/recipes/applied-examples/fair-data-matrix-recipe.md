@@ -1,8 +1,7 @@
 (fcb-fairify-examples-datamatrix)=
 # Making omics data matrix FAIR
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB037
