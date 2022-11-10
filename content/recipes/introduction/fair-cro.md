@@ -119,17 +119,13 @@ Of course, when considering enacting a policy change such as rolling out FAIR da
 
 With this content, we intended to bring forward the experience gained *"from the trenches"* of data management by highlighting how the FAIR practice could inform key decisions when engaging with Contract Research Organizations, from defining tasks, identifying required capabilities to defining metrics of performance for tracking trends and effects. This goes beyond the notion of FAIR data and touches on the need to also track and assess the quality of data and processes.
 
-### What to read next
+### What to read next?
 
->{ref}`fcb-assess`
->
->{ref}`fcb-assess-fair-fairshake`
->
->{ref}`fcb-assess-fair-automatic-evaluator`
->
->{ref}`fcb-interop-etl`
->
->[FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
+- {ref}`fcb-assess`
+- {ref}`fcb-assess-fair-fairshake`
+- {ref}`fcb-assess-fair-automatic-evaluator`
+- {ref}`fcb-interop-etl`
+- [FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
 
 
 ## Reference

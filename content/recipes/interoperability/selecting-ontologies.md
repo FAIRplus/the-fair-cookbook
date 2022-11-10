@@ -347,7 +347,7 @@ TODO : fill in the links to what-should-I-read-next recipes -->
 * [How to establish a minimal metadata profile?] {ref}`fcb-interop-covid-metadata` 
 
 ````{rdmkit_panel}
-````s
+````
 
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
