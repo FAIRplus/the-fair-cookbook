@@ -31,6 +31,8 @@ This is a placeholder
 ## Conclusion
 ### what to read next?
 
+````{rdmkit_panel}
+````
 
 ## License
 

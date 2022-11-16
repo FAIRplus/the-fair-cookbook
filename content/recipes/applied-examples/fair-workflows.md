@@ -1715,7 +1715,8 @@ or to decide whether to perform new ones.
 * {ref}`fcb-interop-metadataprofile`
 * {ref}`fcb-fairify-examples-datamatrix`
 * {ref}`fcb-reusability-provenance`
-
+````{rdmkit_panel}
+````
 
 
 

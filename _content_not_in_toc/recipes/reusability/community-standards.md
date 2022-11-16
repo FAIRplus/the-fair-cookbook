@@ -22,11 +22,10 @@
 
 ## Conclusion
 
-## Conclusion
-
 ### What to read next?
 
 -  [How to meet community standards for annotation](./community-standards)
+
 ````{rdmkit_panel}
 ````
 

@@ -5,8 +5,6 @@ import json
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
-import sphinx.errors
-import sphinx_panels.panels
 from sphinx.util import logging
 
 logger = logging.getLogger(__name__)
@@ -15,23 +13,30 @@ logger.info('Hello, this is "rdmkit_panel" extension!')
 
 class RDMkitPanel(Directive):
     has_content = False
+    option_spec = {
+        "inline": directives.unchanged_required
+    }
 
     def _create_content(self):
         self.parse_yaml()
         content = []
         RDMkit_block = self.get_rdmkit_html()
         if RDMkit_block:
+            if not 'inline' in self.options:
+                content.append('<div class="card w-100 border-2 col-md-4 p-0 docutils">')
             content.extend([
-                '<div class="card w-100 border-2 col-md-4 p-0 docutils">',
                     '<div class="card-header bg-primary pa_dark docutils">',
                         '<a href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
                             '<img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
                         '</a>',
                     '</div>',
                     '<div class="card-body docutils">',
+                        '<p class="mb-0">Learn more about:</p>',
                         self.get_rdmkit_html(),
-                    '</div></div>'
+                    '</div>'
             ])
+            if not 'inline' in self.options:
+                content.append('</div>')
         return content
 
     def get_rdmkit_html(self):
@@ -42,7 +47,7 @@ class RDMkitPanel(Directive):
         if self.fcb_rdmkit_links.items():
             output = '<ul>'
             for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
-                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">General guidance about {rdmkit_title}</a></li>'
+                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">{rdmkit_title}</a></li>'
             output += '</ul>'
             return output
 

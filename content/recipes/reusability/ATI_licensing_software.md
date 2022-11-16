@@ -212,6 +212,8 @@ They may also require that the recipient of the combined work can re-link the mo
 ^^^
 [The Turing Way Book of Data Sciences: Software Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-software.html)
 ---
-````{rdmkit_panel}
-````
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
 ````

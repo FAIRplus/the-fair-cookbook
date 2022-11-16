@@ -469,9 +469,8 @@ The conversion from VCF to HL7 FHIR JSON message has to do with the `**I and R**
 - Pistoia Alliance FAIR4Clin - Metadata
 - [HL7 FHIR for FAIR implementation guidelines](https://build.fhir.org/ig/HL7/fhir-for-fair/index.html)
 
-
-
-
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References**

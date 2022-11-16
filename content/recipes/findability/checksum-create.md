@@ -165,6 +165,8 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the algorithm `md5`: <https://en.wikipedia.org/wiki/MD5>
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References**

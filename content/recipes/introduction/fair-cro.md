@@ -127,6 +127,8 @@ With this content, we intended to bring forward the experience gained *"from the
 - {ref}`fcb-interop-etl`
 - [FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
 
+````{rdmkit_panel}
+````
 
 ## Reference
 ````{dropdown} **Reference**

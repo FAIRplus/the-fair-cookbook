@@ -132,8 +132,11 @@ If you would like to read more about the challenges and finer points of licensin
 ```
 ^^^
 - [The Turing Way Book of Data Sciences: Data Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html)
-````
-````{rdmkit_panel}
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
 ````
 
 
