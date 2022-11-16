@@ -212,7 +212,7 @@ Moving through maturity levels with ISA by running the following notebooks in th
 
 
 ````{panels}
-:column: col-4
+:column: col-md-4
 :card: border-2
 :header: bg-primary pa_dark
 ```{image} ../../images/logos/pistoia_logo.png

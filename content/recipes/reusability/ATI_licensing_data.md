@@ -122,7 +122,7 @@ If you would like to read more about the challenges and finer points of licensin
 ### What to read next?
 
 ````{panels}
-:column: col-4
+:column: col-md-4
 :card: border-2
 :header: bg-primary pa_dark
 ```{image} ../../../images/logos/TTW.svg
