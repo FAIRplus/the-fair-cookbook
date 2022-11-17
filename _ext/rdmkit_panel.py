@@ -25,7 +25,7 @@ class RDMkitPanel(Directive):
             if not 'inline' in self.options:
                 content.append('<div class="card w-100 border-2 col-md-4 p-0 docutils">')
             content.extend([
-                    '<div class="card-header bg-primary pa_dark docutils">',
+                    '<div class="card-header bg-primary pa_dark docutils text-center">',
                         '<a href="https://rdmkit.elixir-europe.org/"  target="_blank" class="reference internal image-reference" target="_blank">',
                             '<img alt="RDMkit logo" height="40px" src="/_static/images/logo/RDMkit_logo.svg">',
                         '</a>',
