@@ -27,7 +27,7 @@ class RDMkitPanel(Directive):
             content.extend([
                     '<div class="card-header bg-primary pa_dark docutils">',
                         '<a href="https://rdmkit.elixir-europe.org/" id="rdmkit-logo" class="reference internal image-reference" target="_blank">',
-                            '<img alt="RDMkit logo" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg">',
+                            '<img alt="RDMkit logo" height="40px" id="rdmkit-logo" src="../../../images/logos/RDMkit_logo.svg">',
                         '</a>',
                     '</div>',
                     '<div class="card-body docutils">',
