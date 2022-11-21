@@ -20,19 +20,21 @@ fcb-?????)=
 
 ## Introduction
 
-If you ever had to do a literature search for a project, you probably could appretiate the great effort behind traversing the ever expanding volums of texts and trying to organize the extracted information. Throughout the last decades some noticeble progress was made in using AI to automize the process. The modern machine learning approaches are aimed at identifying, extracting and storing important information from the unstructured texts. To make the extracted metadata active and FAIR, one often stores in in a form of a knowledge graph.
+If you ever had to do a literature search for a project, you probably could appreciate the great effort behind traversing the ever-expanding volumes of texts and trying to organize the extracted information. Throughout the last decades, some noticeable progress was made in using AI to automize the process. The modern machine learning approaches aim to identify, extract and store important information from unstructured texts. To make the extracted metadata active and FAIR, one often stores it in the form of a knowledge graph.
 
 The pipeline for information extraction could be seen as a path of several steps:
+
 - Collecting the text data
-- Avoiding ambigiuity of entities with coreference resolution
+- Avoiding ambiguity of entities with coreference resolution
 - Entity recognition and named entity linking
 - Relationship extraction
 - Storing the data in a knowledge graph
 
 ## Collecting the text data
-First, one collects the text to extract the data from. Text may be the collection of the internal documents, artickles, online content, or result of pictures descriptions produced by image-to-text algorithms. 
 
-Here as an example we will collect a dataset of articals' abstracts on the topic "cardiac amyloidosis". In biological domain articles can be collected from the pubmed database using biopython, for the sake of simplicity we will only go through the first 20 articles that come up in the search.
+First, one collects the text to extract the data from. Text may be the collection of internal documents, articles, online content, or the result of picture descriptions produced by image-to-text algorithms.
+
+Here as an example, we will collect a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the PubMed database using biopython, for the sake of simplicity we will only go through the first 20 articles that come up in the search.
 
 ```python
 #importing libraries
@@ -67,7 +69,7 @@ papers = fetch_details(id_list)
 ```
 
 ## Avoiding ambigiuity of entities with coreference resolution
-The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text doesn’t need any extra context to be understood. For example, personal pronounsare being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is crosslingual coreference [https://spacy.io/universe/project/crosslingualcoreference] from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
+The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. For example, personal pronounsare being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is crosslingual coreference [https://spacy.io/universe/project/crosslingualcoreference] from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
 
 ```python
 import spacy
@@ -82,15 +84,14 @@ coref.add_pipe(
 ```
 
 ## Entity recognition and named entity linking
-Nest step is named entity recognition. Here we want to extract all important entities from the sentances. Depending on a usecase, one can train a model to recognize entities of a specific type. For example, in this tutorial [https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f] you can find a way to train a model to recognize some entities from a biomedical domain. However, spaCy universe also provides some pretrained models to recognize entities, which we are going to use in our example.
-Then one intends to standardize the entities and map them to an existing ontology. The process is known as entity linking. Here we map entities from the text to corresponding unique ids from a target knowledge base, for example, Wikipidia. One can also use some databases, relevant to the specific topic of the texts. While mapping to the Wikipidia terms is performed in this tutorial [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754], we will try to map our entities to the NCI Thesarius [https://bioportal.bioontology.org/ontologies/NCIT], for simplicity choosing the first match as a mapping. Note, that in principal that is not always a best choice and one can use different similarity metrics to identify the best matching term in the ontology. 
-(Entity disambiguation without entity linking can also be done with extend project https://github.com/SapienzaNLP/extend.)
+Nest step is named entity recognition. Here we want to extract all important entities from the sentences. Depending on a use case, one can train a model to recognize entities of a specific type. For example, in this tutorial [https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f] you can find a way to train a model to recognize some entities from a biomedical domain. However, the spaCy universe also provides some pre-trained models to recognize entities, which we are going to use in our example.
+Then one intends to standardize the entities and map them to an existing ontology. The process is known as entity linking. Here we map entities from the text to corresponding unique ids from a target knowledge base, for example, Wikipedia. One can also use some databases, relevant to the specific topic of the texts. While mapping to the Wikipedia terms is performed in this tutorial [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754], we will try to map our entities to the NCI Thesaurus [https://bioportal.bioontology.org/ontologies/NCIT], for simplicity choosing the first match as a mapping. Note, that in principle that is not always the best choice and one can use different similarity metrics to identify the best matching term in the ontology. 
 
-## Relationship extraction
+## Relationship Extraction
 After entity linking to get standard trios (object, relation, subject) for a knowledge graph, we extract the relationships between the identified entities. 
-The Rebel project [https://github.com/Babelscape/rebel], which is also available as a spaCy component, allows to extract both entities and relations in one step, which we can use in our pipeline. 
+The Rebel project [https://github.com/Babelscape/rebel], which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
 
-To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from rebel as specified here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754] and turn call_wiki_api function into call_ncit function:
+To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from rebel as specified here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754] and turn call_wiki_api function into call_ncit function.
 
 ```python
 import pandas as pd
@@ -140,9 +141,9 @@ After that the rebel model has extracted the trios of subject, relation and obje
 
 ## Storing the results
 
-The final subject, relation and object trios can be stored as either a labeled property graph or as an RDF graph. The quidlines to store the results as a neo4j labeled property graph are given here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754]. Here we will give an approach to store the results as an RDF graph by using rdflib library.
+The final subject, relation, and object trios can be stored as either a labeled property graph or as an RDF graph. The guidelines to store the results as a neo4j labeled property graph are given here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754]. Here we will give an approach to store the results as an RDF graph by using rdflib library.
 
-Rdflib allows to create the entities with the known URIs with the URIRef command. Also, one can create a custom namespace with new entities and relations. 
+Rdflib allows the creation of entities with known URIs with the URIRef command. Also, one can create a custom namespace with new entities and relations. 
 
 ```python
 from rdflib import Graph
