@@ -32,9 +32,9 @@ The pipeline for information extraction could be seen as a path of several steps
 
 ## Collecting the text data
 
-First, one collects the text to extract the data from. Text may be the collection of internal documents, articles, online content, or the result of picture descriptions produced by image-to-text algorithms.
+First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), or even be a result of picture descriptions produced by image-to-text algorithms.
 
-Here as an example, we will collect a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the PubMed database using biopython, for the sake of simplicity we will only go through the first 20 articles that come up in the search.
+Here as an example, we will collect a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the PubMed database using biopython. For the sake of simplicity we will only go through the first 20 articles that come up in the search.
 
 ```python
 #importing libraries
@@ -69,7 +69,8 @@ papers = fetch_details(id_list)
 ```
 
 ## Avoiding ambigiuity of entities with coreference resolution
-The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. For example, personal pronounsare being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is crosslingual coreference [https://spacy.io/universe/project/crosslingualcoreference] from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
+
+The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. For example, personal pronouns are being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is crosslingual coreference [https://spacy.io/universe/project/crosslingualcoreference] from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
 
 ```python
 import spacy
@@ -84,20 +85,26 @@ coref.add_pipe(
 ```
 
 ## Entity recognition and named entity linking
-Nest step is named entity recognition. Here we want to extract all important entities from the sentences. Depending on a use case, one can train a model to recognize entities of a specific type. For example, in this tutorial [https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f] you can find a way to train a model to recognize some entities from a biomedical domain. However, the spaCy universe also provides some pre-trained models to recognize entities, which we are going to use in our example.
+
+Next step is named entity recognition. Here we want to extract all important entities from the sentences. Depending on a use case, one can train a model to recognize entities of a specific type. For example, in this tutorial [https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f] you can find a way to train a model to recognize some entities from a biomedical domain. However, the spaCy universe also provides some pre-trained models to recognize entities, which we are going to use in our example.
+
 Then one intends to standardize the entities and map them to an existing ontology. The process is known as entity linking. Here we map entities from the text to corresponding unique ids from a target knowledge base, for example, Wikipedia. One can also use some databases, relevant to the specific topic of the texts. While mapping to the Wikipedia terms is performed in this tutorial [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754], we will try to map our entities to the NCI Thesaurus [https://bioportal.bioontology.org/ontologies/NCIT], for simplicity choosing the first match as a mapping. Note, that in principle that is not always the best choice and one can use different similarity metrics to identify the best matching term in the ontology. 
 
 ## Relationship Extraction
+
 After entity linking to get standard trios (object, relation, subject) for a knowledge graph, we extract the relationships between the identified entities. 
 The Rebel project [https://github.com/Babelscape/rebel], which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
 
-To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from rebel as specified here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754] and turn call_wiki_api function into call_ncit function.
+To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from the Rebel code as specified here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754] and turn call_wiki_api function into call_ncit function.
 
 ```python
 import pandas as pd
 import requests
 
 def call_ncit_api(item):
+  """
+  Get the first mapping term from the NCIT
+  """
   try:
     url = f"https://www.ebi.ac.uk/ols/api/search?q={item}&ontology=ncit"
     data = pd.DataFrame(requests.get(url).json().get('response').get('docs'))
@@ -136,12 +143,12 @@ for value, rel_dict in doc._.rel.items():
 #8aa25d264897bd007d389890b2239c2b9c07fa0b: {'relation': 'drug used for treatment', 'head_span': {'text': 'High fever', 'id': 'High Grade Fever'}, 'tail_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}}
 #d91bef9bfc94439523675b5d6a62e1f4635c0cdd: {'relation': 'medical condition treated', 'head_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}, 'tail_span': {'text': 'High fever', 'id': 'High Grade Fever'}}
 ```
-One can observe, that on the coreference step the "it" pronoun in the second sentance was replaced by the unambiguous "High fever" entity. 
-After that the rebel model has extracted the trios of subject, relation and object and mapped them to the NCIT model. One can note, that the mapping is far from perfect. For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. this is because in our mapping procedure for simplisity we have chosen the first result for the term in the NCIT database. To improve this, one would need to develop a more complex mapping algorithm.
+You can see, that on the coreference step the "it" pronoun in the second sentance was replaced by the unambiguous "High fever" entity. 
+After that the rebel model has extracted the trios of subject, relation and object and mapped them to the NCIT model. Note, that the mapping here is far from perfect. For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. this is because in our mapping procedure for simplisity we have chosen the first result for the term in the NCIT database. To improve this, one would need to develop a more complex mapping algorithm.
 
 ## Storing the results
 
-The final subject, relation, and object trios can be stored as either a labeled property graph or as an RDF graph. The guidelines to store the results as a neo4j labeled property graph are given here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754]. Here we will give an approach to store the results as an RDF graph by using rdflib library.
+The final subject, relation, and object trios can be stored as either a labeled property graph or as an RDF graph. The guidelines to store the results as a neo4j labeled property graph are given here [https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754]. Here we will give an approach to store the results as an RDF graph by using rdflib library in python.
 
 Rdflib allows the creation of entities with known URIs with the URIRef command. Also, one can create a custom namespace with new entities and relations. 
 
@@ -151,9 +158,15 @@ from rdflib import URIRef, BNode, Literal, Namespace
 import json
 
 def Capitalise_underscore(relation):
+  """
+  Write the relations in Capitalized_And_Underscored_form
+  """
   return relation.capitalize().replace(' ','_')
 
 def ncit_iri(item):
+  """
+  Get an iri of the first matching term from NCIT
+  """
   try:
     url = f"https://www.ebi.ac.uk/ols/api/search?q={item}&ontology=ncit"
     data = pd.DataFrame(requests.get(url).json().get('response').get('docs'))
@@ -237,7 +250,7 @@ Storing text data in the knowledge graph.
 ````
 
 ## Conclusion
-Modern AI approaches allow to traverse big chunks of unstructured text, extract information and order it in a form of a knowledge graph, making it FAIR. The details of the pipeline would vary depending on the specific usecase, but the final result would definately make your life easier!
+Modern AI approaches allow us to traverse big chunks of unstructured text, extract information and order it in a form of a knowledge graph, making it FAIR. The details of the pipeline would vary depending on the specific use case, but the final result would definitely make your life easier!
 
 > ###  What to read next?
 >
@@ -269,11 +282,6 @@ Liubov: Writing - Original Draft
 ````{license_fairplus}
 CC-BY-4.0
 ````
-
-
-
-
-
 
 
    [dill]: <https://github.com/joemccann/dillinger>
