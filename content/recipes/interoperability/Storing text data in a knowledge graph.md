@@ -1,6 +1,7 @@
 (fcb-interop-text2graph)=
 
-# Storing text data in a knowledge graph
+# Creating knowledge graphs from unstructured text using NLP, NER and language models
+
 
 <br/>
 <br/>
