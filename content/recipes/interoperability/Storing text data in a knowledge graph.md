@@ -123,10 +123,12 @@ Note, that in principle that is not always the best choice and one may wish to u
 
 ## Relationship Extraction
 
-After entity linking to get standard trios (object, relation, subject) for a knowledge graph, we extract the relationships between the identified entities. 
-The [Rebel project](https://github.com/Babelscape/rebel), which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
+Following the step of entity linking, in order to be able to generate  canonical triples, aka RDF predicates (object, relation, subject) for a knowledge graph, we now need to extract the relationships between the identified entities.
 
-To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from the Rebel code as specified [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754) and turn call_wiki_api function into call_ncit function.
+To do so, we will use the [Rebel project](https://github.com/Babelscape/rebel), which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
+
+To implement our approach of linking the entities to NCIT, we can rewrite the `set_annotations function` from the Rebel code as specified [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754) and turn `call_wiki_api function` into `call_ncit function`.
+
 
 ```python
 import pandas as pd
