@@ -298,7 +298,12 @@ Storing text data in the knowledge graph.
 ````
 
 ## Conclusion
-Modern AI approaches allow us to traverse big chunks of unstructured text, extract information and order it in a form of a knowledge graph, making it FAIR. The details of the pipeline would vary depending on the specific use case, but the final result would definitely make your life easier!
+Modern AI/ML approaches allow to process large bodies of unstructured text, extract information and organise it in a form of knowledge graphs, in linked open data (LOD) graphs in ideal cases.
+The present document provides a typical text processing pipeline to achieve this task. Of course, this is a simplified view and processing real life, large text corpora will require more advanced techniques to be deployed, from model training to development of specific algorithm to inclusion of expert curators to assist in the creation of the final knowledge graphs.
+Still, we hope this will provide our readership with a basic understanding of the techniques available to move from unstructured text to generating a knowledge graph.
+
+
+
 
 > ###  What to read next?
 >
