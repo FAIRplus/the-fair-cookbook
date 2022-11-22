@@ -27,7 +27,11 @@
 
 ## Introduction
 
-If you ever had to do a literature search for a project, you probably could appreciate the great effort behind traversing the ever-expanding volumes of texts and trying to organize the extracted information. Throughout the last decades, some noticeable progress was made in using AI to automize the process. The modern machine learning approaches aim to identify, extract and store important information from unstructured texts. To make the extracted metadata active and FAIR, one often stores it in the form of a knowledge graph.
+If you ever had to do a literature search for a project, you probably can appreciate the great effort behind traversing the ever-expanding volumes of texts and trying to organise the extracted information.
+In the past two decades, noticeable progress has been made, harnessing the power of machine-learning (ML) and artificial intelligence (AI) approaches  to extract knowledge from large corpora of scientific literature.
+Modern machine-learning approaches aim to identify, extract and store important information from unstructured text. 
+Among the most popular structured representations, knowledge graphs, in the form of RDF linked data graphs are fast becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR data`.
+
 
 The pipeline for information extraction could be seen as a path of several steps:
 
