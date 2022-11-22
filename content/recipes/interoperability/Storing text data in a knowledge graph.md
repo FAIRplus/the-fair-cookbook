@@ -36,11 +36,12 @@ Among the most popular structured representations, knowledge graphs, in the form
 The pipeline for information extraction could be broken down in the following key steps:
 
 
-- Collecting the text data
-- Avoiding ambiguity of entities with coreference resolution
-- Entity recognition and named entity linking
+- Collecting the text data and assembling the data corpus
+- Performing entity disambiguation using a technique such as coreference resolution
+- Performing Entity Recognition and named entity linking (NER step)
 - Relationship extraction
-- Storing the data in a knowledge graph
+- Creation and Storage of the data in a knowledge graph, RDF linked data graph in our example
+
 
 ## Collecting the text data
 
