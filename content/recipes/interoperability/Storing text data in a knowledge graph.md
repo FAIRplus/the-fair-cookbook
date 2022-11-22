@@ -9,7 +9,8 @@
 ````{panels_fairplus}
 :identifier_text: FCB081
 
-:identifier_link: 'https://w3id.org/faircookbook/??????'
+:identifier_link: 'https://w3id.org/faircookbook/FCB081'
+
 :difficulty_level: 4
 
 :recipe_type: hands_on
