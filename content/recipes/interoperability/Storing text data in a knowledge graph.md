@@ -1,40 +1,56 @@
-fcb-?????)=
-# Storing text data in a knowledge graph
+(fcb-interop-text2graph)=
+
+# Creating knowledge graphs from unstructured text using NLP, NER and language models
+
 
 <br/>
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: 
-:identifier_link: 'https://w3id.org/faircookbook/??????'
-:difficulty_level: 
+:identifier_text: FCB081
+
+:identifier_link: 'https://w3id.org/faircookbook/FCB081'
+
+:difficulty_level: 4
+
 :recipe_type: hands_on
-:reading_time_minutes: 10
+:reading_time_minutes: 45
+
 :intended_audience: principal_investigator, data_manager, data_scientist 
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: Creating a metadata profile
+:recipe_name:  Creating knowledge graphs from unstructured text using NLP, NER and language models
+
 ```` 
 
 
 ## Introduction
 
-If you ever had to do a literature search for a project, you probably could appreciate the great effort behind traversing the ever-expanding volumes of texts and trying to organize the extracted information. Throughout the last decades, some noticeable progress was made in using AI to automize the process. The modern machine learning approaches aim to identify, extract and store important information from unstructured texts. To make the extracted metadata active and FAIR, one often stores it in the form of a knowledge graph.
+If you ever had to do a literature search for a project, you probably can appreciate the great effort behind traversing the ever-expanding volumes of texts and trying to organise the extracted information.
+In the past two decades, noticeable progress has been made, harnessing the power of machine-learning (ML) and artificial intelligence (AI) approaches  to extract knowledge from large corpora of scientific literature.
+Modern machine-learning approaches aim to identify, extract and store important information from unstructured text. 
+Among the most popular structured representations, knowledge graphs, in the form of RDF linked data graphs are fast becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR data`.
 
-The pipeline for information extraction could be seen as a path of several steps:
 
-- Collecting the text data
-- Avoiding ambiguity of entities with coreference resolution
-- Entity recognition and named entity linking
+The pipeline for information extraction could be broken down in the following key steps:
+
+
+- Collecting the text data and assembling the data corpus
+- Performing entity disambiguation using a technique such as coreference resolution
+- Performing Entity Recognition and named entity linking (NER step)
 - Relationship extraction
-- Storing the data in a knowledge graph
+- Creation and Storage of the data in a knowledge graph, RDF linked data graph in our example
+
 
 ## Collecting the text data
 
-First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), or even be a result of picture descriptions produced by image-to-text algorithms.
+First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), patents or even be a result of picture descriptions produced by image-to-text algorithms.
 
-Here as an example, we will collect a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the PubMed database using biopython. For the sake of simplicity we will only go through the first 20 articles that come up in the search.
+
+In our example, we created a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the [PubMed database](https://pubmed.ncbi.nlm.nih.gov/) using [biopython](https://biopython.org/wiki/Download). 
+For the sake of simplicity, we retained only the first 20 articles that come up in the search.
+
 
 ```python
 #importing libraries
@@ -68,9 +84,14 @@ id_list = results['IdList']
 papers = fetch_details(id_list)
 ```
 
-## Avoiding ambigiuity of entities with coreference resolution
+## Entity disambiguation using coreference resolution
 
-The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. For example, personal pronouns are being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
+
+The text corpus prepared in the earlier step is now processed to replaces all ambiguous words in a sentence so that the text does not need any extra context to be understood. 
+Although there are a number of approaches to perform this task, one of the most recently developed is a method known as [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the [spaCy python library](https://spacy.io/). spaCy is  a python library providing a comprehensive yet accessible way to create pipelines for natural language processing.  
+In a nutshell, applying this procedure will, for example, replace personal pronouns with a referred person name.
+
+
 
 ```python
 import spacy
@@ -86,16 +107,28 @@ coref.add_pipe(
 
 ## Entity recognition and named entity linking
 
-Next step is named entity recognition. Here we want to extract all important entities from the sentences. Depending on a use case, one can train a model to recognize entities of a specific type. For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f) you can find a way to train a model to recognize some entities from a biomedical domain. However, the spaCy universe also provides some pre-trained models to recognize entities, which we are going to use in our example.
+The next step is known as Named Entity Recognition (NER).
+Here, we want to detect and extract all important entities from the sentences. 
+Depending on the use case, one may have to specifically train a model to recognise entities of a specific type. For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f), one can find a way to train a model to recognise some entities from a biomedical domain. However, the spaCy library also provides a number of pre-trained models and we will be using those in our example.
 
-Then one intends to standardize the entities and map them to an existing ontology. The process is known as entity linking. Here we map entities from the text to corresponding unique ids from a target knowledge base, for example, Wikipedia. One can also use some databases, relevant to the specific topic of the texts. While mapping to the Wikipedia terms is performed in [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754), we will try to map our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT), for simplicity choosing the first match as a mapping. Note, that in principle that is not always the best choice and one can use different similarity metrics to identify the best matching term in the ontology. 
+
+Then, one needs to standardise the entities and map them to an existing ontology. The process is known as `Entity Linking` (EL). 
+With this step, we map entities from the text to corresponding unique resolvable identifiers from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology such as [disease ontology](DOID).
+One may also use some databases, relevant to the specific topic of the texts. 
+While mapping to Wikipedia terms is demonstrated in [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754), we will  map our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT).
+For simplicity, we will by default choose the first match as a mapping.
+
+```{warning}
+Note, that in principle that is not always the best choice and one may wish to use different similarity metrics to identify the best matching term in the ontology. 
 
 ## Relationship Extraction
 
-After entity linking to get standard trios (object, relation, subject) for a knowledge graph, we extract the relationships between the identified entities. 
-The [Rebel project](https://github.com/Babelscape/rebel), which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
+Following the step of entity linking, in order to be able to generate  canonical triples, aka RDF predicates (object, relation, subject) for a knowledge graph, we now need to extract the relationships between the identified entities.
 
-To implement our approach of linking the entities to NCIT, we can rewrite the set_annotations function from the Rebel code as specified [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754) and turn call_wiki_api function into call_ncit function.
+To do so, we will use the [Rebel project](https://github.com/Babelscape/rebel), which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
+
+To implement our approach of linking the entities to NCIT, we can rewrite the `set_annotations function` from the Rebel code as specified [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754) and turn `call_wiki_api function` into `call_ncit function`.
+
 
 ```python
 import pandas as pd
@@ -143,14 +176,29 @@ for value, rel_dict in doc._.rel.items():
 #8aa25d264897bd007d389890b2239c2b9c07fa0b: {'relation': 'drug used for treatment', 'head_span': {'text': 'High fever', 'id': 'High Grade Fever'}, 'tail_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}}
 #d91bef9bfc94439523675b5d6a62e1f4635c0cdd: {'relation': 'medical condition treated', 'head_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}, 'tail_span': {'text': 'High fever', 'id': 'High Grade Fever'}}
 ```
-You can see, that on the coreference step the "it" pronoun in the second sentance was replaced by the unambiguous "High fever" entity. 
-After that the rebel model has extracted the trios of subject, relation and object and mapped them to the NCIT model. Note, that the mapping here is far from perfect. For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. this is because in our mapping procedure for simplisity we have chosen the first result for the term in the NCIT database. To improve this, one would need to develop a more complex mapping algorithm.
+Following the coreference step (for disambiguation),  the "it" pronoun in the second sentence is replaced by the unambiguous "High fever" entity. 
+After that step, the Rebel model extracted the  subject, relation, object triples and mapped them to the NCIT model. 
+
+```{warning}
+Note that the mapping here is far from perfect.
+For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. 
+This is a consequence of our unrefined mapping procedure in which, for simplicity, we have chosen the first result for the term in the NCIT database. 
+To improve over this simplistic approach, one would need to develop a more advanced mapping heuristic, but this is out of the scope of this recipe. Having said that, a key learning point is that a 'man in the loop' approach is probably still needed to review the mapping resulting from automated approaches.
+```
 
 ## Storing the results
 
-The final subject, relation, and object trios can be stored as either a labeled property graph or as an RDF graph. The guidelines to store the results as a neo4j labeled property graph are given [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754). Here we will give an approach to store the results as an RDF graph by using rdflib library in python.
+The final subject, predicate, object triples can either be stored as a labeled property graph or as an RDF graph.
 
-Rdflib allows the creation of entities with known URIs with the URIRef command. Also, one can create a custom namespace with new entities and relations. 
+Here, we will give an approach to store the results as an RDF graph by using [rdflib]() library in python.
+
+rdflib allows the creation of entities with known URIs with the URIRef command.
+Also, one can create a custom namespace with new entities and relations. 
+
+```{note}
+For our audience interesting in labeled property graphs, the guidelines to store the results as a neo4j labeled property graph are available from  [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754).
+```
+
 
 ```python
 from rdflib import Graph
@@ -250,7 +298,12 @@ Storing text data in the knowledge graph.
 ````
 
 ## Conclusion
-Modern AI approaches allow us to traverse big chunks of unstructured text, extract information and order it in a form of a knowledge graph, making it FAIR. The details of the pipeline would vary depending on the specific use case, but the final result would definitely make your life easier!
+Modern AI/ML approaches allow to process large bodies of unstructured text, extract information and organise it in a form of knowledge graphs, in linked open data (LOD) graphs in ideal cases.
+The present document provides a typical text processing pipeline to achieve this task. Of course, this is a simplified view and processing real life, large text corpora will require more advanced techniques to be deployed, from model training to development of specific algorithm to inclusion of expert curators to assist in the creation of the final knowledge graphs.
+Still, we hope this will provide our readership with a basic understanding of the techniques available to move from unstructured text to generating a knowledge graph.
+
+
+
 
 > ###  What to read next?
 >
@@ -274,6 +327,7 @@ Modern AI approaches allow us to traverse big chunks of unstructured text, extra
 
 ````{authors_fairplus}
 Liubov: Writing - Original Draft
+Philippe: Review, Writing, Conceptualization
 ````
 
 
@@ -284,23 +338,4 @@ CC-BY-4.0
 ````
 
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+   
