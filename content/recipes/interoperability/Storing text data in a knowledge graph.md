@@ -9,7 +9,8 @@
 :identifier_text: FCB081
 
 :identifier_link: 'https://w3id.org/faircookbook/??????'
-:difficulty_level: 
+:difficulty_level: 4
+
 :recipe_type: hands_on
 :reading_time_minutes: 10
 :intended_audience: principal_investigator, data_manager, data_scientist 
