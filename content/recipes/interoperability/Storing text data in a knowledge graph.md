@@ -177,7 +177,7 @@ for value, rel_dict in doc._.rel.items():
 #d91bef9bfc94439523675b5d6a62e1f4635c0cdd: {'relation': 'medical condition treated', 'head_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}, 'tail_span': {'text': 'High fever', 'id': 'High Grade Fever'}}
 ```
 Following the coreference step (for disambiguation),  the "it" pronoun in the second sentence is replaced by the unambiguous "High fever" entity. 
-After that step, the Rebel model extracted the  subject, relation, object triples and mapped them to the NCIT model. 
+After that step, the Rebel model extracted the subject, relation, object triples and mapped them to the NCIT model. 
 
 ```{warning}
 Note that the mapping here is far from perfect.
