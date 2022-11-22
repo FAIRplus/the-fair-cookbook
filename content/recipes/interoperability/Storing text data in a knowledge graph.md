@@ -87,9 +87,9 @@ papers = fetch_details(id_list)
 ## Entity disambiguation using coreference resolution
 
 
-The text corpus prepared in the earlier step is now processed to replaces all ambiguous words in a sentence so that the text does not need any extra context to be understood. 
-Although there are a number of approaches to perform this task, one of the most recently developed is a method known as [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the [spaCy python library](https://spacy.io/). spaCy is  a python library providing a comprehensive yet accessible way to create pipelines for natural language processing.  
-In a nutshell, applying this procedure will, for example, replace personal pronouns with a referred person name.
+The text corpus prepared in the earlier step is now processed to replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. 
+Although there are a number of approaches to perform this task, one of the most recently developed is a method known as [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the [spaCy python library](https://spacy.io/). spaCy is a python library providing a comprehensive yet accessible way to create pipelines for natural language processing.  
+In a nutshell, applying this procedure will, for example, replace personal pronouns with a referred person's name.
 
 
 
@@ -113,22 +113,22 @@ Depending on the use case, one may have to specifically train a model to recogni
 
 
 Then, one needs to standardise the entities and map them to an existing ontology. The process is known as `Entity Linking` (EL). 
-With this step, we map entities from the text to corresponding unique resolvable identifiers from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology such as [disease ontology](DOID).
+With this step, we map entities from the text to corresponding unique resolvable identifiers from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology such as [disease ontology](DOID)).
 One may also use some databases, relevant to the specific topic of the texts. 
-While mapping to Wikipedia terms is demonstrated in [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754), we will  map our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT).
+While mapping to Wikipedia terms is demonstrated in [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754), we will map our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT).
 For simplicity, we will by default choose the first match as a mapping.
 
 ```{warning}
 Note, that in principle that is not always the best choice and one may wish to use different similarity metrics to identify the best matching term in the ontology. 
+```
 
 ## Relationship Extraction
 
-Following the step of entity linking, in order to be able to generate  canonical triples, aka RDF predicates (object, relation, subject) for a knowledge graph, we now need to extract the relationships between the identified entities.
+Following the step of entity linking, in order to be able to generate canonical triples, aka RDF predicates (object, relation, subject) for a knowledge graph, we now need to extract the relationships between the identified entities.
 
 To do so, we will use the [Rebel project](https://github.com/Babelscape/rebel), which is also available as a spaCy component, allows extracting both entities and relations in one step, which we can use in our pipeline. 
 
 To implement our approach of linking the entities to NCIT, we can rewrite the `set_annotations function` from the Rebel code as specified [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754) and turn `call_wiki_api function` into `call_ncit function`.
-
 
 ```python
 import pandas as pd
@@ -246,11 +246,11 @@ for i, paper in enumerate(papers['PubmedArticle']):
     for value, rel_dict in doc._.rel.items():
       subject_iri = ncit_iri(rel_dict['head_span']['text'])
       object_iri = ncit_iri(rel_dict['head_span']['text'])
-      if subject_iri != 'id=less':
+      if subject_iri != 'id-less':
         subj = URIRef(subject_iri)
       else:
         subj = EX[rel_dict['head_span']['text']]
-      if object_iri != 'id=less':
+      if object_iri != 'id-less':
         obj = URIRef(object_iri)
       else:
         subj = EX[rel_dict['head_span']['text']]  
@@ -267,7 +267,7 @@ for i, paper in enumerate(papers['PubmedArticle']):
     relations = pd.concat([relations, df])
 ```
 
-Finally, we can visualize the resulting graph and export it in .ttl format.
+Finally, we can visualise the resulting graph and export it in .ttl format.
 
 ```python
 g.serialize(format = 'ttl')
@@ -290,8 +290,8 @@ plot.show()
 ```{figure} storing-text-data-in-KG-final-graph.png
 ---
 height: 1000px
-name: Final knowledge graph visualiyation. The relations names are omitted.
-alt: Final knowledge graph visualiyation. The relations names are omitted.
+name: Final knowledge graph visualisation. The relations names are omitted.
+alt: Final knowledge graph visualisation. The relations names are omitted.
 ---
 Storing text data in the knowledge graph.
 ```
@@ -299,7 +299,7 @@ Storing text data in the knowledge graph.
 
 ## Conclusion
 Modern AI/ML approaches allow to process large bodies of unstructured text, extract information and organise it in a form of knowledge graphs, in linked open data (LOD) graphs in ideal cases.
-The present document provides a typical text processing pipeline to achieve this task. Of course, this is a simplified view and processing real life, large text corpora will require more advanced techniques to be deployed, from model training to development of specific algorithm to inclusion of expert curators to assist in the creation of the final knowledge graphs.
+The present document provides a typical text processing pipeline to achieve this task. Of course, this is a simplified view. In more realistic cases, large text corpora will require more advanced techniques to be deployed, from model training to the development of a specific algorithm and the inclusion of expert curators to assist in the creation of the final knowledge graphs.
 Still, we hope this will provide our readership with a basic understanding of the techniques available to move from unstructured text to generating a knowledge graph.
 
 
