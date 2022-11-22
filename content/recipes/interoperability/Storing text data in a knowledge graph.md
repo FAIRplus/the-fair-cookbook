@@ -14,7 +14,8 @@
 :difficulty_level: 4
 
 :recipe_type: hands_on
-:reading_time_minutes: 10
+:reading_time_minutes: 45
+
 :intended_audience: principal_investigator, data_manager, data_scientist 
 :maturity_level: 0
 :maturity_indicator: 0
