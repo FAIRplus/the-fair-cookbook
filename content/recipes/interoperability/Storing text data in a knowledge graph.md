@@ -176,8 +176,15 @@ for value, rel_dict in doc._.rel.items():
 #8aa25d264897bd007d389890b2239c2b9c07fa0b: {'relation': 'drug used for treatment', 'head_span': {'text': 'High fever', 'id': 'High Grade Fever'}, 'tail_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}}
 #d91bef9bfc94439523675b5d6a62e1f4635c0cdd: {'relation': 'medical condition treated', 'head_span': {'text': 'paracetamol', 'id': 'Acetaminophen Measurement'}, 'tail_span': {'text': 'High fever', 'id': 'High Grade Fever'}}
 ```
-You can see, that on the coreference step the "it" pronoun in the second sentance was replaced by the unambiguous "High fever" entity. 
-After that the rebel model has extracted the trios of subject, relation and object and mapped them to the NCIT model. Note, that the mapping here is far from perfect. For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. this is because in our mapping procedure for simplisity we have chosen the first result for the term in the NCIT database. To improve this, one would need to develop a more complex mapping algorithm.
+Following the coreference step (for disambiguation),  the "it" pronoun in the second sentence is replaced by the unambiguous "High fever" entity. 
+After that step, the Rebel model extracted the  subject, relation, object triples and mapped them to the NCIT model. 
+
+```{warning}
+Note that the mapping here is far from perfect.
+For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. 
+This is a consequence of our unrefined mapping procedure in which, for simplicity, we have chosen the first result for the term in the NCIT database. 
+To improve over this simplistic approach, one would need to develop a more advanced mapping heuristic, but this is out of the scope of this recipe. Having said that, a key learning point is that a 'man in the loop' approach is probably still needed to review the mapping resulting from automated approaches.
+```
 
 ## Storing the results
 
