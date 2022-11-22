@@ -45,7 +45,8 @@ The pipeline for information extraction could be broken down in the following ke
 
 ## Collecting the text data
 
-First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), or even be a result of picture descriptions produced by image-to-text algorithms.
+First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), patents or even be a result of picture descriptions produced by image-to-text algorithms.
+
 
 Here as an example, we will collect a dataset of articles' abstracts on the topic "cardiac amyloidosis". In the biological domain, articles can be collected from the PubMed database using biopython. For the sake of simplicity we will only go through the first 20 articles that come up in the search.
 
