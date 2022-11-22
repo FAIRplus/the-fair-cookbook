@@ -107,7 +107,10 @@ coref.add_pipe(
 
 ## Entity recognition and named entity linking
 
-Next step is named entity recognition. Here we want to extract all important entities from the sentences. Depending on a use case, one can train a model to recognize entities of a specific type. For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f) you can find a way to train a model to recognize some entities from a biomedical domain. However, the spaCy universe also provides some pre-trained models to recognize entities, which we are going to use in our example.
+The next step is known as Named Entity Recognition (NER).
+Here, we want to detect and extract all important entities from the sentences. 
+Depending on the use case, one may have to specifically train a model to recognise entities of a specific type. For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f), one can find a way to train a model to recognise some entities from a biomedical domain. However, the spaCy library also provides a number of pre-trained models and we will be using those in our example.
+
 
 Then one intends to standardize the entities and map them to an existing ontology. The process is known as entity linking. Here we map entities from the text to corresponding unique ids from a target knowledge base, for example, Wikipedia. One can also use some databases, relevant to the specific topic of the texts. While mapping to the Wikipedia terms is performed in [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754), we will try to map our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT), for simplicity choosing the first match as a mapping. Note, that in principle that is not always the best choice and one can use different similarity metrics to identify the best matching term in the ontology. 
 
