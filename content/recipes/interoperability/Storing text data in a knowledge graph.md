@@ -188,9 +188,17 @@ To improve over this simplistic approach, one would need to develop a more advan
 
 ## Storing the results
 
-The final subject, relation, and object trios can be stored as either a labeled property graph or as an RDF graph. The guidelines to store the results as a neo4j labeled property graph are given [here](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754). Here we will give an approach to store the results as an RDF graph by using rdflib library in python.
+The final subject, predicate, object triples can either be stored as a labeled property graph or as an RDF graph.
 
-Rdflib allows the creation of entities with known URIs with the URIRef command. Also, one can create a custom namespace with new entities and relations. 
+Here, we will give an approach to store the results as an RDF graph by using [rdflib]() library in python.
+
+rdflib allows the creation of entities with known URIs with the URIRef command.
+Also, one can create a custom namespace with new entities and relations. 
+
+```{note}
+For our audience interesting in labeled property graphs, the guidelines to store the results as a neo4j labeled property graph are available from  [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754).
+```
+
 
 ```python
 from rdflib import Graph
