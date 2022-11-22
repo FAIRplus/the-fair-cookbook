@@ -33,7 +33,8 @@ Modern machine-learning approaches aim to identify, extract and store important 
 Among the most popular structured representations, knowledge graphs, in the form of RDF linked data graphs are fast becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR data`.
 
 
-The pipeline for information extraction could be seen as a path of several steps:
+The pipeline for information extraction could be broken down in the following key steps:
+
 
 - Collecting the text data
 - Avoiding ambiguity of entities with coreference resolution
