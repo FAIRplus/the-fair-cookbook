@@ -18,7 +18,8 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: Creating a metadata profile
+:recipe_name:  Creating knowledge graphs from unstructured text using NLP, NER and language models
+
 ```` 
 
 
