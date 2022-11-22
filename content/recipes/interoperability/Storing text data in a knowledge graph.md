@@ -84,7 +84,8 @@ id_list = results['IdList']
 papers = fetch_details(id_list)
 ```
 
-## Avoiding ambigiuity of entities with coreference resolution
+## Entity disambiguation using coreference resolution
+
 
 The prepared text should go through the coreference resolution model. In a nutshell, this process should replace all ambiguous words in a sentence so that the text does not need any extra context to be understood. For example, personal pronouns are being replaced with a referred person’s name. Athough there is a number of approaches to do that, one of the most recently developed is [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the spaCy universe. spaCy is a python library that provides an easy way to create pipelines for natural language processing. 
 
