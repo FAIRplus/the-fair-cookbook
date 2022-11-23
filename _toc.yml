@@ -124,6 +124,8 @@
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
                 title: Converting VCF file to FHIR JSON #FCB059
+          - file: content/recipes/interoperability/creating-knowledge-graph-from-unstructured-text
+            title: Creating knowledge graphs from unstructured text
 
     - file: content/recipes/reusability
       title: Reusability
