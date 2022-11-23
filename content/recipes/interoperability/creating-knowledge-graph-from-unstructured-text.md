@@ -108,14 +108,14 @@ patents or even be a result of picture descriptions produced by image-to-text al
 
 In our example, we created a dataset of articles' abstracts on the topic "cardiac amyloïdosis". In the biological domain,
 articles can be collected from the [PubMed database](https://pubmed.ncbi.nlm.nih.gov/) using [biopython](https://biopython.org/wiki/Download). 
-For the sake of simplicity, we retained only the first 20 articles that come up in the search.
+For the sake of simplicity, we retained only the first 5 articles that come up in the search.
 
 
 ```python
 #importing libraries
 from Bio import Entrez
 
-def search(query, max_papers=20):
+def search(query, max_papers=5):
     """
     Get IDs of papers on the given topic from the pubmed database.
     """
