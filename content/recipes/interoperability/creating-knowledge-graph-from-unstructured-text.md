@@ -382,7 +382,7 @@ height: 800px
 name: Final knowledge graph visualisation. The relations names are omitted.
 alt: Final knowledge graph visualisation. The relations names are omitted.
 ---
-Viewing the knowledge graph with networks and matplotlib - Optimization needed!
+Viewing the knowledge graph with networks and matplotlib
 ```
 ````
 
