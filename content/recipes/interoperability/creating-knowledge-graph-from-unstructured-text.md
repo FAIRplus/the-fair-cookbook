@@ -26,17 +26,17 @@
 If you ever had to do a literature search for a project, you probably can appreciate the great effort behind traversing 
 the ever-expanding volumes of texts and trying to organise the extracted information.
 In the past two decades, noticeable progress has been made, harnessing the power of machine-learning (ML) and 
-artificial intelligence (AI) approaches to extract knowledge from large corpora of scientific literature.
-Modern machine-learning approaches aim to identify, extract and store important information from unstructured text. 
-Among the most popular structured representations, knowledge graphs, in the form of RDF linked data graphs are fast
+artificial intelligence (AI) based approaches to extract knowledge from large corpora of scientific literature.
+Modern ML algorithms aim to identify, extract, and store important information from unstructured text. 
+Among the most popular structured representations, knowledge graphs, in the form of RDF linked data graphs are rapidly
 becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR data`.
 
 In simplified terms, the overall pipeline for information extraction can be broken down in the following key steps:
 
 - Collecting the text data and assembling the data corpus
 - Performing entity disambiguation using a technique such as co-reference resolution
-- Performing Entity Recognition and named entity linking (NER step)
-- Performing Relationship detection and extraction
+- Performing entity recognition and named entity linking (NER step)
+- Performing relationship detection and extraction
 - Creating and storing the data in a knowledge graph (an RDF linked data graph in our example).
 
 
@@ -75,10 +75,10 @@ Overview of natural language processing to knowledge graph creation workflow
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [data retrieval](http://edamontology.org/operation_2422)||[NLP corpus format](http://edamontology.org/format_3863)|
-| [text annotation](http://edamontology.org/operation_3778)|[unstructured text](http://edamontology.org/data_3671)|[annotated text](http://edamontology.org/data_3779)|
-| [named entity recognition](http://edamontology.org/operation_3280)|[unstructured text](http://edamontology.org/data_3671)|[annotated text](http://edamontology.org/data_3779)|
-| [relation extraction](http://edamontology.org/operation_3625) |[annotated text](http://edamontology.org/data_3779)|[Linked data format](http://edamontology.org/format_3748)|
+| [Data retrieval](http://edamontology.org/operation_2422)||[NLP corpus format](http://edamontology.org/format_3863)|
+| [Text annotation](http://edamontology.org/operation_3778)|[Unstructured text](http://edamontology.org/data_3671)|[Annotated text](http://edamontology.org/data_3779)|
+| [Named entity recognition](http://edamontology.org/operation_3280)|[Unstructured text](http://edamontology.org/data_3671)|[Annotated text](http://edamontology.org/data_3779)|
+| [Relation extraction](http://edamontology.org/operation_3625) |[Annotated text](http://edamontology.org/data_3779)|[Linked data format](http://edamontology.org/format_3748)|
 
 ```
 
@@ -90,23 +90,23 @@ The table below lists the software that is used to execute the examples in this 
 
 | Software                                            | Description|
 | --------------------------------------------------- | --------------------------|
-| [biopython](https://biopython.org/wiki/Download)| The Biopython project is an open-source collection of non-commercial Python tools for computational biology and bioinformatics, created by an international association of developers|
-| [spacy](https://spacy.io/) | industry strength natural language processing library|
+| [biopython](https://biopython.org/wiki/Download)| The biopython project is an open-source collection of non-commercial Python tools for computational biology and bioinformatics, created by an international association of developers|
+| [spacy](https://spacy.io/) | Spacy is a beginner level industry strength natural language processing library|
 | [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference)  | A multi-lingual approach to AllenNLP CoReference Resolution along with a wrapper for spaCy|
 | [rebel](https://github.com/Babelscape/rebel) | REBEL is a seq2seq model that simplifies Relation Extraction  |
 | [rdflib](https://github.com/RDFLib)| RDFLib is a Python library for working with RDF, a framework for representing information|
 | [networkx python library](https://networkx.org/)| NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. |
-| [matplotlib library](https://matplotlib.org/)| Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.|
+| [matplotlib library](https://matplotlib.org/)| Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.|
 
 
 
-## Collecting the text data
+## Generation of textual corpora
 
 First, one collects the text to extract the data from. Text may come from the internal documents, articles, online content (web scraping), 
-patents or even be a result of picture descriptions produced by image-to-text algorithms.
+patents, or even be a result of picture descriptions produced by image-to-text algorithms.
 
 
-In our example, we created a dataset of articles' abstracts on the topic "cardiac amyloïdosis". In the biological domain,
+In our example, we created a dataset of articles' abstracts (corpora) on the topic "cardiac amyloidosis". In the biological domain,
 articles can be collected from the [PubMed database](https://pubmed.ncbi.nlm.nih.gov/) using [biopython](https://biopython.org/wiki/Download). 
 For the sake of simplicity, we retained only the first 5 articles that come up in the search.
 
@@ -119,11 +119,13 @@ def search(query, max_papers=5):
     """
     Get IDs of papers on the given topic from the pubmed database.
     """
-    handle = Entrez.esearch(db='pubmed',
-                            sort='relevance',
-                            retmax=max_papers,
-                            retmode='xml',
-                            term=query)
+    handle = Entrez.esearch(
+        db='pubmed',
+        sort='relevance',
+        retmax=max_papers,
+        retmode='xml',
+        term=query
+    )
     results = Entrez.read(handle)
     return results
     
@@ -132,9 +134,11 @@ def fetch_details(id_list):
     Get details on each paper (including the abstract).
     """
     ids = ','.join(id_list)
-    handle = Entrez.efetch(db='pubmed',
-                           retmode='xml',
-                           id=ids)
+    handle = Entrez.efetch(
+        db='pubmed',
+        retmode='xml',
+        id=ids
+    )
     results = Entrez.read(handle)
     return results
     
@@ -163,20 +167,26 @@ import crosslingual_coreference
 DEVICE = -1 # Number of the GPU, -1 if want to use CPU
 
 # Add coreference resolution model
-coref = spacy.load('en_core_web_sm', disable=['ner', 'tagger', 'parser', 'attribute_ruler', 'lemmatizer'])
-coref.add_pipe("xx_coref", config={"chunk_size": 2500, "chunk_overlap": 2, "device": DEVICE})
+coref = spacy.load(
+    'en_core_web_sm', 
+    disable=['ner', 'tagger', 'parser', 'attribute_ruler', 'lemmatizer']
+)
+coref.add_pipe(
+    "xx_coref", 
+    config={"chunk_size": 2500, "chunk_overlap": 2, "device": DEVICE}
+)
 ```
 
 ## Entity recognition and named entity linking
 
 The next step is known as Named Entity Recognition (NER).
-Here, we want to detect and extract all important entities from the sentences. 
+Here, we want to detect and extract all domain relevant entities from the sentences. 
 Depending on the use case, one may have to specifically train a model to recognise entities of a specific type. 
 For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f),
 one can find a way to train a model to recognise some entities from a biomedical domain. 
 However, the spaCy library also provides a number of pre-trained models and, we will be using those in our example.
 
-Then, one needs to standardise the entities and map them to an existing controlled terminology/ontology. 
+Following the entity recognition, one needs to standardise the entities and map them to an existing controlled terminology/ontology. 
 The process is known as `Entity Linking` (EL). 
 With this step, entities recognized from the text are mapped to one or more corresponding unique resolvable identifiers 
 from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology such as 
@@ -228,10 +238,17 @@ def call_ncit_api(item):
 After redefining the `Rebel` spaCy component, we include it into our pipeline:
 
 ```python
-rel_ext = spacy.load('en_core_web_sm', disable=['ner', 'lemmatizer', 'attribute_rules', 'tagger'])
-rel_ext.add_pipe("rebel", config={'device':DEVICE, # Number of the GPU, -1 if want to use CPU
-                                  'model_name':'Babelscape/rebel-large'} # Model used
-                )
+rel_ext = spacy.load(
+    'en_core_web_sm', 
+    disable=['ner', 'lemmatizer', 'attribute_rules', 'tagger']
+)
+rel_ext.add_pipe(
+    "rebel", 
+    config={
+        'device':DEVICE, # Number of the GPU, -1 if want to use CPU
+        'model_name':'Babelscape/rebel-large' # Model used
+    } 
+)
 ```
 
 Now, we can test the pipeline on two simple sentences:
@@ -241,7 +258,7 @@ input_text = "High fever is very dangerous. It can be treated with paracetamol."
 #coreference model
 coref_text = coref(input_text)._.resolved_text
 print(coref_text)
-#output: High fever is very dangerous. High fever can be treated with paracetamol.
+#output: 'High fever is very dangerous. High fever can be treated with paracetamol.'
 
 #entity and relations extraction
 doc = rel_ext(coref_text)
@@ -261,12 +278,12 @@ After that step, the `Rebel` model extracted the subject, relation, object tripl
 ```{warning}
 Note that the automatic mapping is far from perfect.
 For example, the entity 'dangerous' was mapped to the 'DRRI-2 - A: Dangerous Military Duties' in NCIT. 
-This is a consequence of our unrefined mapping procedure in which, for simplicity, default selects the first result for 
-the term in the NCIT database. 
+This is a consequence of our unrefined mapping procedure in which, for simplicity, the default selection of the first result for 
+the term in the NCIT database was done. 
 To improve over this simplistic approach, one would need to develop a more advanced mapping heuristic, but this is out 
 of the scope of this recipe. 
 Having said that, a key learning point is that a 'man in the loop' approach is probably still needed to review the
- mapping resulting from automated approaches.
+ mapping resulting from such automated approaches.
 ```
 
 ## Storing the results
@@ -280,7 +297,7 @@ rdflib allows the creation of entities with known URIs with the URIRef command.
 Also, one can create a custom namespace with new entities and relations. 
 
 ```{note}
-For our audience interesting in labeled property graphs, the guidelines to store the results as a neo4j labeled property
+For our audience interested in labeled property graphs, the guidelines to store the results as a neo4j labeled property
 graph are available from [this tutorial](https://towardsdatascience.com/extract-knowledge-from-text-end-to-end-information-extraction-pipeline-with-spacy-and-neo4j-502b2b1e0754).
 ```
 
@@ -341,13 +358,14 @@ for i, paper in enumerate(papers['PubmedArticle']):
         subj = EX[rel_dict['head_span']['text']]  
       pred = EX[Capitalise_underscore(rel_dict['relation'])]
       g.add((subj, pred, obj))        
+    
     df = pd.DataFrame.from_dict(doc._.rel).transpose()
     df['subject_text'] = df.head_span.apply(lambda x: x['text'])
     df['subject_id'] = df.head_span.apply(lambda x: x['id'])
     df['object_text'] = df.tail_span.apply(lambda x: x['text'])
     df['object_id'] = df.tail_span.apply(lambda x: x['id'])
 
-    df = df.drop(["head_span", "tail_span"], axis = 1)
+    df.drop(["head_span", "tail_span"], axis = 1, inplace=True)
 
     relations = pd.concat([relations, df])
 ```
@@ -366,11 +384,23 @@ g.serialize(format = 'ttl')
 import networkx as ntx
 import matplotlib.pyplot as plot
 
-graph = ntx.from_pandas_edgelist(relations, "subject_text", "object_text", edge_attr=True, create_using=ntx.MultiDiGraph())
+graph = ntx.from_pandas_edgelist(
+    relations, 
+    "subject_text", 
+    "object_text",
+    edge_attr=True, 
+    create_using=ntx.MultiDiGraph()
+)
 
 plot.figure(figsize=(10, 10))
 posn = ntx.spring_layout(graph)
-ntx.draw(graph, with_labels=True, node_color='green', edge_cmap=plot.cm.Blues, pos = posn)
+ntx.draw(
+    graph, 
+    with_labels=True, 
+    node_color='green', 
+    edge_cmap=plot.cm.Blues,
+    pos = posn
+)
 plot.show()
 ```
 
@@ -388,11 +418,11 @@ Viewing the knowledge graph with networks and matplotlib
 
 ## Conclusion
 
-Modern AI/ML approaches allow process large bodies of unstructured text, extract information to structure it more formally. 
+Modern AI/ML algorithms allow processing large corpus of unstructured text and extract information to structure it. 
 For instance, information can be organised in a form of knowledge graphs, e.g. RDF linked open data (LOD) graphs.
 The present document provides a typical text processing pipeline to achieve this task, even if in a simplified form.
 In more realistic cases, large text corpora will require more advanced techniques to be deployed, from model training to
-the development of specific algorithms and the inclusion of expert curators to assist in the creation of the final knowledge graphs.
+the development of specific algorithms, and the inclusion of expert curators to assist in the creation of the final knowledge graphs.
 Still, we hope this will provide our readership with a basic understanding of the techniques available to move from 
 unstructured text to generating knowledge graphs.
 
