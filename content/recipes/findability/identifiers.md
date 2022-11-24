@@ -443,13 +443,13 @@ We have given an overview of the different services available for handling ident
 But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI{footcite}`URL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF{footcite}`RDFconcepts` and HTTP.
 
 ### What to read next?
-* [Identifier Minting with Minid Client](fcb-find-id-minid)
 <!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->
+* [Identifier Minting with Minid Client](fcb-find-id-minid)
 * [Identifier Resolution Services](fcb-infra-idres)
 * [Identifier Mapping Services](fcb-identifier-mapping)
 
 ````{panels}
-:column: col-4
+:column: col-md-4
 :card: border-2
 :header: bg-primary pa_dark
 ```{image} ../../../images/logos/pistoia_logo.png
@@ -459,9 +459,13 @@ But we can not conclude this section on persistent identifiers without stressing
 ```
 ^^^
 - [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
 ````
-````{rdmkit_panel}
-````
+
 
 
 ## References

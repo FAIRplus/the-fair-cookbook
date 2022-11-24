@@ -1,6 +1,8 @@
 name: build-from-main-branch-and-deploy-to-external-repo
 on:
   workflow_dispatch:
+  schedule:
+    - cron:  '0 13 * * 1'
   push:
     branches:
       - main

@@ -169,6 +169,8 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 - Overview of checksum comparison with respect to file transmission: https://en.wikipedia.org/wiki/File:CPT-Hashing-File-Transmission.svg
 
+````{rdmkit_panel}
+````
 
 ---
 

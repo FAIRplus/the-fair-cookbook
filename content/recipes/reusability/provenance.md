@@ -408,7 +408,7 @@ material listed below:
 
 
 ````{panels}
-:column: col-4
+:column: col-md-4
 :card: border-2
 :header: bg-primary pa_dark
 ```{image} ../../../images/logos/pistoia_logo.png
@@ -418,8 +418,11 @@ material listed below:
 ```
 ^^^	
 - [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)	
-````
-````{rdmkit_panel}
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
 ````
 
 <!--

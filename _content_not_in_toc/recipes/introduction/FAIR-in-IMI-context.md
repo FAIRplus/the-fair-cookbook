@@ -112,9 +112,11 @@ The so-called `recipes` will ranges from simple protocols (e.g. computing hash f
 This piece covered how the FAIR principles can be harnessed in the context of IMI funding programs and what it means for IMI funded projects which will elect to collaborate with IMI FAIRplus.
 The section also outlined how IMI FAIRplus can leverage sister projects to scale up and reach out to standardization domains located outside its immediate field of action.
 
-> ### What to read read next?
-> * [the IMI FAIRplus FAIRification Process overview](https://www.TODO.todo)
+### What to read read next?
+* [the IMI FAIRplus FAIRification Process overview](https://www.TODO.todo)
 
+````{rdmkit_panel}
+````
 
 ---
 

@@ -622,7 +622,8 @@ This content type focus on using OpenAPI.
 - [OpenAPI-to-GraphQL](https://github.com/IBM/openapi-to-graphql) "From OpenAPI-to-GraphQL "
 - [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL) "an example of a GraphQL querying mechanism built to interrogate ISA metadata".
 
-
+````{rdmkit_panel}
+````
 
 ## References
 
