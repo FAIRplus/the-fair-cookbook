@@ -47,7 +47,7 @@ class RDMkitPanel(Directive):
         if self.fcb_rdmkit_links.items():
             output = '<ul>'
             for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
-                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}">{rdmkit_title}</a></li>'
+                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}" target="_blank">{rdmkit_title}</a></li>'
             output += '</ul>'
             return output
 
