@@ -1,0 +1,19 @@
+graph TD;
+
+    A(fa:fa-search Literature search):::box2 -->|is a| B(fa:fa-book fa:fa-file-alt text corpus):::box2
+
+    B --> |Named Entity Recognition - Term tagging|C(fa:fa-tags tagged text):::box2
+
+    C --> |Coreference-based disambiguation |D( fa:fa-circle-check disambiguated & fa:fa-tags tagged text):::box2
+
+    D --> |Relation detection| E(fa:fa-tags entity fa:fa-tags relation tagged text):::box2
+
+    E --> |predicate extraction| F(fas:fa-diagram-project RDF linked data graph):::box
+
+    F --> |persistence to an RDF triple store| G(fa:fa-database SPARQL endpoint):::box2
+
+classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
+classDef box2 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+
+linkStyle 0,1,2,3,4,5 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir,font-size:10px
+linkStyle 5 stroke:#B30000,font-family:avenir,stroke-width:1px,color:#B30000,stroke-dasharray:5
