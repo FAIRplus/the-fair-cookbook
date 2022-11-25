@@ -53,7 +53,7 @@ class RDMkitPanel(Directive):
     def parse_yaml(self):
 
         here_path = path.dirname(path.abspath(__file__))
-        yaml_path = path.join(here_path, '..', '_static','faircookbook_rdmkit_mapping.yml')
+        yaml_path = path.join(here_path, '..', '_static', 'faircookbook_rdmkit_mapping.yml')
         json_path = path.join(here_path, '..', '_static', 'recipes.json')
 
         with open(yaml_path, 'r') as f:
