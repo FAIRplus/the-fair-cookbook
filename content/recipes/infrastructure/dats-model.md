@@ -1,13 +1,13 @@
 (fcb-dats-model)=
-# Introduction to the DATS model
+# Introducing the DATS model
 
 
 <br/>
 <br/>
 
 ````{panels_fairplus}
-:identifier_text: FCB000
-:identifier_link: 'https://w3id.org/faircookbook/FCB000'
+:identifier_text: FCB082
+:identifier_link: 'https://w3id.org/faircookbook/FCB082'
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15
@@ -15,7 +15,7 @@
 :maturity_level: 2  
 :maturity_indicator: 15
 :has_executable_code: nope
-:recipe_name: Data Tag Suite (DATS)
+:recipe_name: Introducing the DATS model
 ```` 
 
 
@@ -134,7 +134,8 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 
 ````{dropdown} **References**
 ```{footbibliography}
-
+```
+````
 
 ## Authors
 

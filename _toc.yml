@@ -155,6 +155,8 @@
             title: Creating resolvable identifiers #FCB077PRE
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
+          - file: content/recipes/infrastructure/dats-model
+            title: Introducing the DATS model #FCB082
           - file: content/recipes/infrastructure/data-catalog-deployment
             title: Deploying a data catalogue - The IMI data catalogue example #FCB048
           - file: content/recipes/infrastructure/vocabularies
