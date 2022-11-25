@@ -1,8 +1,6 @@
 (fcb-find-bs-dataset)=
-# Dataset page markup with Schema.org
+# Marking up Dataset page with Schema.org & Bioschemas for SEO
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB012
@@ -14,7 +12,7 @@
 :maturity_level: 1
 :maturity_indicator: 13, 14
 :has_executable_code: nope
-:recipe_name: Dataset page markup with Schema.org
+:recipe_name: Marking up Dataset page with Schema.org & Bioschemas for SEO
 ```` 
 
 
@@ -239,23 +237,12 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
 ### What to read next?
 
->
-> - {ref}`fcb-find-bs-data`
-> - {ref}`fcb-find-bs-catalog`
-> - {ref}`fcb-find-bs-dataset`
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
-> ````
+- {ref}`fcb-find-bs-data`
+- {ref}`fcb-find-bs-catalog`
+- {ref}`fcb-find-bs-dataset`
+
+````{rdmkit_panel}
+````
 
 
 

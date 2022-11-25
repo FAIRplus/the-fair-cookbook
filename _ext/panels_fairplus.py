@@ -156,11 +156,10 @@ class PanelFairplus(Directive):
         self.build_json()
         content = []
         content.extend([
-            '<br/>',
             '',
 
             f'{self.get_ld()}',
-            '<div class="card recipe d-flex">',
+            '<div class="card my-10 recipe d-flex">',
                 '<div class="card-header purple-dark text--white">',
                     '<div class="overview">',
                         '<div class="overviewLabel">Recipe Overview</div>',

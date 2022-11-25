@@ -1,8 +1,6 @@
 (fcb-find-bs-data)=
-# Data page markup with Bioschemas 
+# Marking up Data pages with Schema.org & Bioschemas for SEO
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB011
@@ -14,7 +12,7 @@
 :maturity_level: 1
 :maturity_indicator: 13, 14
 :has_executable_code: nope
-:recipe_name: Data page markup with Bioschemas
+:recipe_name: Marking up Data pages with Schema.org & Bioschemas for SEO
 ```` 
 
 ## Main Objectives
@@ -227,21 +225,12 @@ We will outline the steps for embedding machine processable mark up within a web
 
 ### What to read next?
 
-> - {ref}`fcb-find-bs-catalog`
-> - {ref}`fcb-find-bs-dataset`
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
-> ````
+- {ref}`fcb-find-bs-catalog`
+- {ref}`fcb-find-bs-dataset`
+
+````{rdmkit_panel}
+````
+
 
 
 

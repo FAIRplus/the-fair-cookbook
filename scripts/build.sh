@@ -20,6 +20,9 @@ rm -rf ./node_modules
 
 echo '{}' > _static/recipes.json
 
+echo 'Pull FAIRCookbook - RDMkit linkage file'
+curl -o _static/faircookbook_rdmkit_mapping.yml https://raw.githubusercontent.com/elixir-europe/faircookbook-rdmkit/main/faircookbook_rdmkit_mapping.yml
+
 echo 'Build the book'
 jb build . 2>&1 | tee ./build.log
 grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1

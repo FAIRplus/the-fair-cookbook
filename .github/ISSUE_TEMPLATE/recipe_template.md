@@ -1,8 +1,7 @@
 (fcb-recipeshorthand-template)=
 # Recipe Template
 
-+++
-<br/>
+
 
 ```{admonition} Important
 :class: tip
@@ -237,14 +236,17 @@ graph TD;
 
 ## Conclusion
 
-> Summerize Key Learnings of the recipe.
-> 
-> Suggest further reading using the following:
-> ### What should I read next?
-> * [Tips and Tricks](./tips-tricks.md)
-> * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
-> * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
+Summerize Key Learnings of the recipe.
 
+Suggest further reading using the following:
+
+### What to read next?
+* [Tips and Tricks](./tips-tricks.md)
+* [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
+* using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. {ref}`fcb-intro-fair-principles`
+
+````{rdmkit_panel}
+````
 
 ---
 

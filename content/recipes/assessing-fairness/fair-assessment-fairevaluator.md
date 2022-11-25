@@ -1,8 +1,6 @@
 (fcb-assess-fair-automatic-evaluator)=
 # FAIR Evaluator tool
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -15,7 +13,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: FAIR Evaluator tool
+:recipe_name: Assessing with FAIR Evaluator
 ```` 
 
 

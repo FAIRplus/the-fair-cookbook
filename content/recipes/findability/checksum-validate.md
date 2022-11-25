@@ -1,8 +1,6 @@
 (fcb-checksum-validate)=
 # How to check file integrity by validating checksums
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB053 
@@ -14,7 +12,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: How to check file integrity by validating checksums
+:recipe_name: Validating checksums to verify file integrity
 ```` 
 
 ## Abstract
@@ -171,6 +169,8 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 - Overview of checksum comparison with respect to file transmission: https://en.wikipedia.org/wiki/File:CPT-Hashing-File-Transmission.svg
 
+````{rdmkit_panel}
+````
 
 ---
 

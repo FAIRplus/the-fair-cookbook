@@ -2,8 +2,6 @@
 # Making Computational Workflows FAIR
 
 +++
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB062
@@ -15,12 +13,11 @@
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: FAIR Computational Workflows
+:recipe_name: Making Computational Workflows FAIR
 ```` 
 
 
-+++
-<br/>
+
 
 ## Main Objectives
 
@@ -1713,12 +1710,13 @@ capable of ensure appropriate provenance tracking and information preservation.
 This knowledge could be harnessed to decide whether to trust the results of an analysis or a transformation process,
 or to decide whether to perform new ones.
 
-> ### What should I read next?
+### What to read next?
 * {ref}`fcb-interop-convertopen` 
 * {ref}`fcb-interop-metadataprofile`
 * {ref}`fcb-fairify-examples-datamatrix`
 * {ref}`fcb-reusability-provenance`
-
+````{rdmkit_panel}
+````
 
 
 

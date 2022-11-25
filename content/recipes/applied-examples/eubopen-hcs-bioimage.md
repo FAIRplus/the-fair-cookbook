@@ -1,8 +1,6 @@
 (fcb-eubopen)=
 #  IMI EUBOPEN FAIR High-Content Screening data deposition
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB067
@@ -14,7 +12,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: FAIR High-Content Screening data deposition
+:recipe_name: Depositing High-Content Screening data to EBI BioImage Archive
 ```` 
 
 
@@ -204,11 +202,11 @@ With this content and the associated python scripts, we highlight path to deposi
 This therefore improves **Findability** and **Reusability** of such data.
 
 ### What to read next?
->
-> {ref}`fcb-access-aspera`
-> {ref}`fcb-find-zenodo`
-> 
->
+- {ref}`fcb-access-aspera`
+- {ref}`fcb-find-zenodo`
+````{rdmkit_panel}
+```` 
+
 
 
 ## References

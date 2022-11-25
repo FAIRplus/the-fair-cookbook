@@ -2,8 +2,6 @@
 # ReSOLUTE - transcriptomics datasets
 
 +++
-<br/>
-<br/>
 
 <!--
 TODO clarify authors
@@ -12,7 +10,7 @@ TODO make referenced Google Drive documents available
 
 ````{panels_fairplus}
 :identifier_text: FCB045
-:identifier_link: http://w3id.org/faircookbook/FCB045
+:identifier_link: 'https://w3id.org/faircookbook/FCB045'
 :difficulty_level: 4
 :recipe_type: applied_example
 :reading_time_minutes: 10
@@ -20,7 +18,7 @@ TODO make referenced Google Drive documents available
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: ReSOLUTE - transcriptomics datasets
+:recipe_name: Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories 
 ```` 
 
 

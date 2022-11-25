@@ -1,8 +1,6 @@
 (fcb-bridgedb-recipe)=
 # Identifier mapping with BridgeDb
 
-<br/>
-<br/>
 
 <!--
 TODO : the recipe does not reference its figures
@@ -18,7 +16,7 @@ TODO : the recipe does not reference its figures
 :maturity_level: 4
 :maturity_indicator: 49
 :has_executable_code: nope
-:recipe_name: Identifier mapping with BridgeDb
+:recipe_name: Mapping identifiers with BridgeDb
 ```` 
 
 
@@ -381,9 +379,13 @@ BridgeDb provides handy functionality to make 'omics' data more interoperable an
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
 These are aspects of information provenance which we plan to provide in the future.
  
-### What should I read next?
+### What to read next?
+
 * {ref}`fcb-find-identifiers`
 * {ref}`fcb-identifier-mapping`
+
+````{rdmkit_panel}
+````
 
 ---
 

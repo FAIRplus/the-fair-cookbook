@@ -2,8 +2,6 @@
 # Mapping of clinical trial data to CDISC-SDTM: a practical example based on APPROACH and ABIRISK
 
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -16,7 +14,7 @@
 :maturity_level: 3  
 :maturity_indicator: 19, 22
 :has_executable_code: nope
-:recipe_name: Mapping datasets to CDISC-SDTM
+:recipe_name: Mapping datasets to CDISC-SDTM standard
 ```` 
 
 
@@ -177,18 +175,17 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 
 ## Conclusion
 
-> * We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
-> 
-> * The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
-> 
-> * The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
+* We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC-SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
+* The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
+* The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
 
-### What should I read next?
-> * [Ontology mappings](../interoperability/selecting-ontologies.md)
-> * [Data dictionary](../interoperability/creating-data-dictionary.md)
-> * [ETL processes](../interoperability/ETL-tools.md)
+### What to read next?
+* [Ontology mappings](../interoperability/selecting-ontologies.md)
+* [Data dictionary](../interoperability/creating-data-dictionary.md)
+* [ETL processes](../interoperability/ETL-tools.md)
 
-
+````{rdmkit_panel}
+````
 
 ## References
 

@@ -1,8 +1,6 @@
 (fcb-interop-txmetadata)=
 # Metadata profile for transcriptomics
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB027
@@ -14,7 +12,7 @@
 :maturity_level: 3
 :maturity_indicator: 30
 :has_executable_code: nope
-:recipe_name: Metadata profile for transcriptomics
+:recipe_name: Outlining a metadata profile for transcriptomics
 ```` 
 
 ## Main Objectives:
@@ -102,6 +100,48 @@ Assay-level metadata covers any metadata directly related to the preparation of 
 - Other assay-specific metadata
 - QC information
 - Workflow metadata
+
+The figure below shows an excerpt of the Human Cell Atlas json schema for describing the process of sequencing. 
+
+
+````{dropdown}
+:open:
+```{figure} hca_sequencing_json_schema.png
+---
+name: human cell atlas sequencing json schema
+alt: human cell atlas sequencing json schema.
+---
+human cell atlas sequencing json schema.
+```
+````
+
+```{note}
+Note the key attributes for which controlled vocabulary may be directly specified as a: 
+
+`json schema ENUM` 
+
+as found at line 79, or may be specified via a reference to a dedicated ontology schema as in:
+ 
+` "$ref": "module/ontology/biological_macromolecule_ontology.json"`
+ 
+as found at line 82.
+
+```
+
+````{dropdown}
+:open:
+```{figure} hca_library_amplification_ontology_json_schema.png
+---
+name: hca_library_amplification_ontology_json_schema
+alt: hca_library_amplification_ontology_json_schema.
+---
+human cell atlas sequencing json schema.
+```
+````
+
+```{note}
+Note how the `ontology` element defines a `graph restriction` pointing to a branch in a semantic resource, (EFO in this case).
+```
 
 #### Suggested metadata fields
 

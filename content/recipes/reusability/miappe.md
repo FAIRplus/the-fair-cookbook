@@ -1,7 +1,6 @@
 # Plant genomic and genetic variation data submission to EMBL-EBI databases
 
-<br>
-<br>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB061
@@ -13,7 +12,7 @@
 :has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 15,20
-:recipe_name: Plant genomic and genetic variation data submission to EMBL-EBI
+:recipe_name: Improving dataset maturity - the MIAPPE use case
 ```` 
 
 ## Main Objective
@@ -467,27 +466,15 @@ Data could thus be more easily read and evaluated automatically by machines, and
 connect different data sources with each other, so that in general a higher degree of FAIR has been achieved.
 
 ### What to read next? 
->
-> [Learn to move through maturity levels with ISA metadata model](https://faircookbook.elixir-europe.org/content/recipes/maturity/isa-maturity-progression.html)
-> 
-> [Learn to move expression allowed data use with ODRL and DUO](https://w3id.org/faircookbook/FCB035)
-> 
-> [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB062)
-> 
-> [Check the following resources:]()
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Plant Genomics` from the `RDMkit`](https://rdmkit.elixir-europe.org/plant_genomics_assembly.html)
-> ````
->
+
+- [Learn to move through maturity levels with ISA metadata model](https://faircookbook.elixir-europe.org/content/recipes/maturity/isa-maturity-progression.html) 
+- [Learn to move expression allowed data use with ODRL and DUO](https://w3id.org/faircookbook/FCB035)
+- [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB062) 
+- [Check the following resources:]()
+
+````{rdmkit_panel}
+````
+
 
 ## Reference
 

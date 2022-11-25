@@ -1,8 +1,7 @@
 (fcb-fair-principles)=
 # What are the FAIR Principles?
 
-+++
-<br/>
+
 
 <!-- ````{panels_fairplus}
 :identifier_text: RX.X
@@ -14,7 +13,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: What are the FAIR Principles?
+:recipe_name: Introducing the FAIR Principles
 ```` -->
 
 ## Introduction
@@ -166,175 +165,29 @@ doi: 10.1038/sdata.2016.18
 
 ## The FAIR principles and FAIRplus
 
-The principles will be the organizing principle for the FAIRplus Cookbook. While the book itself can be search in many different ways and its content exposed through a number of angles, personas and facets, the main `Table of Content` organizes a number of atomic recipes around of the principles and their associated sub themes. 
+The principles will be the organizing principle for the FAIRplus Cookbook. While the book itself can be search in
+various ways and its content exposed through a number of angles, personas and facets, 
+the main `Table of Content` organizes a number of atomic recipes around of the principles and their associated sub themes. 
 
 
-## FAIRplus Recipe & FAIR principles
 
-`````{dropdown} **Recipe content according the FAIR principles**
-
-
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
-
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-search fa-2x mr-3"></i>
-    <b class="cardLabel"> FINDABILITY </b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Search Engine Optimitization</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Open Archive Deposition</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table secondary text--white">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Annotation</b>
-</h4>
-^^^
-TODO: add text here
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
-
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cloud fa-2x mr-3"></i>
-    <b class="cardLabel">ACCESSIBILITY</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Access condition</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">License selection</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-light">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Standards</b>
-</h4>
-^^^
-TODO: add text here
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
----
-
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-puzzle-piece fa-2x mr-3"></i>
-    <b class="cardLabel">INTEROPERABILITY</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3 "></i>
-    <b class="cardLabel">Access condition</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3 "></i>
-    <b class="cardLabel">License selection</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white purple-dark">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Standards</b>
-</h4>
-^^^
-TODO: add text here
-````
-
-````{panels}
-:container: container-lg pb-3
-:column: col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-1
-:card: rounded d-flex setHeight
----
-
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-recycle fa-2x mr-3"></i>
-    <b class="cardLabel">REUSABILITY</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Access condition</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">License selection</b>
-</h4>
-^^^
-TODO: add text here
----
-
-<h4 class="my-0 d-table text--white red">
-    <i class="fa fa-cog fa-2x mr-3"></i>
-    <b class="cardLabel">Standards</b>
-</h4>
-^^^
-TODO: add text here
-````
-`````
 
 ---
  
 ## Conclusions
 
-This section should be seen as a refresher for any one unclear about the FAIR principles. Now that key background information has been provided, shining a light on an number of ethical issues driving both the development and implementation of the FAIR principles in the context of Life Science data as well as learning about the overall FAIRification process represent a natural progression in the content of the FAIR Cookbook.
+This section should be seen as a refresher for anyone unclear about the FAIR principles. 
+Now that key background information has been provided, shining a light on a number of ethical issues driving 
+both the development and implementation of the FAIR principles in the context of Life Science data
+as well as learning about the overall FAIRification process represent a natural progression 
+in the content of the FAIR Cookbook.
 
-> ### What to read read next?
-> * [The ethical values of FAIR](./FAIRplus-values)
-> * [Assessing FAIRness](../assessing-fairness)
+### What to read next?
+* [The ethical values of FAIR](./FAIRplus-values)
+* [Assessing FAIRness](../assessing-fairness)
 
+````{rdmkit_panel}
+````
 
 ---
 

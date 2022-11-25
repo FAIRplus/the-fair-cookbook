@@ -1,8 +1,6 @@
 (fcb-assess-fair-fairshake)=
 # FAIRshake tool
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB050
@@ -14,7 +12,7 @@
 :maturity_level: 0 
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: FAIRshake tool
+:recipe_name: Assessing with FAIRshake
 ```` 
 
 

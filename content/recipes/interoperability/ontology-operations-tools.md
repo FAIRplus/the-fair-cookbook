@@ -1,8 +1,6 @@
 (fcb-interop-onto-op)=
 # Ontology-related tools and services
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB022
@@ -14,7 +12,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Ontology-related tools and services
+:recipe_name: Introducing ontology-related tools and services
 ```` 
 
 

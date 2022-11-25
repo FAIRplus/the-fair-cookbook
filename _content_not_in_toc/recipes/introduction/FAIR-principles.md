@@ -1,8 +1,7 @@
 (fcb-intro-fair-principles)=
 # What are the FAIR Principles?
 
-+++
-<br/>
+
 
 ---
 

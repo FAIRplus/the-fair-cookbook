@@ -2,8 +2,6 @@
 
 # Deploying the EBI OLS
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB005
@@ -15,7 +13,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Deploying the EBI OLS 
+:recipe_name: Deploying EBI Ontology Lookup Service 
 ````
 
 ## Main Objectives

@@ -154,9 +154,16 @@
                         link: "./recipes/maturity.html",
                         icon: "fas fa-signal"
                     }
-                ]
+                ],
+                query: null
             }
         },
+        methods: {
+            search() {
+                if (this.query) window.location.href = `{{ pathto('content/search-wizard.html', 1)}}?q=` + this.query
+                else window.location.href = `{{ pathto('content/search-wizard.html', 1)}}`
+            }
+          },
         template: `
             <v-lazy v-model="isActive" :options="{ threshold: 1.0 }" id="recipes">
                 <v-container fluid class="pa-0 d-flex flex-column grey lighten-2" style="min-height: 95vh">
@@ -181,17 +188,52 @@
                                     skills required, and the challenges, to achieve and improve FAIRness.
                                     <br>
                                     Each recipe tells you the audience type, reading time, level of difficulty, and the level
-                                    of FAIR maturity it allows you to reach. Recipes are  <b class="primary--text">citable</b> via their unique identifier,
-                                    and their authors are <b class="primary--text">credited</b>.
+                                    of FAIR maturity it allows you to reach. Recipes are  <b class="secondary--text">citable</b> via their unique identifier,
+                                    and their authors are <b class="secondary--text">credited</b>.
                                 </p>
                             </v-container>
                         </v-col>
                     </v-row>
-    
-                    <!-- LOGO BREAKER -->
-                    <v-row justify="center" class="flex-grow-0" :no-gutters="$vuetify.breakpoint.lgAndDown" :class="$vuetify.breakpoint.lgAndDown ? 'mt-0' : 'mt-10'">
-                        <v-col cols="1" class="d-flex justify-center align-center" :class="$vuetify.breakpoint.lgAndDown ? 'pa-0' : ''">
-                            <img src="/_static/images/fairplus-mini.png" style="width:75px; height:auto" alt="FAIRPlus Logo">
+
+                    <v-row
+                        justify="center"
+                        class="flex-grow-0"
+                        :no-gutters="$vuetify.breakpoint.lgAndDown"
+                        :class="$vuetify.breakpoint.lgAndDown ? 'my-0 mb-8 mt-4' : 'my-5 pb-10'"
+                    >
+                        <v-col
+                            cols="12" class="d-flex flex-column justify-center align-center"
+                            :class="$vuetify.breakpoint.lgAndDown ? 'pa-0 px-2' : ''"
+                        >
+                            <div
+                                class="text-h4 text-center primary--text font-weight-bold"
+                                :class="$vuetify.breakpoint.lgAndDown ? 'mb-0' : 'mb-5'"
+                            >
+                                Use the wizard to search all recipes
+                            </div>
+                            <v-text-field
+                                v-model="query"
+                                color="primary"
+                                class="mt-5 primary--text homeInputWizard"
+                                label="Search Wizard"
+                                solo
+                                single-line
+                                hide-details
+                                rounded
+                                @click:append="search"
+                                @keyup.enter="search"
+                             >
+                                <template v-slot:append>
+                                    <v-btn
+                                        class="primary white--text"
+                                        @click="search"
+                                        elevation="0"
+                                    >
+                                        <v-icon class="white--text mr-3">fas fa-search</v-icon>
+                                        <span class="white--text"> Search </span>
+                                    </v-btn>
+                                </template>
+                             </v-text-field>
                         </v-col>
                     </v-row>
     
@@ -224,6 +266,9 @@
         },
         template: `
             <v-row>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="3" class="rotate-0">
                     <v-row>
                         <FairCard :item="items[0]"> </FairCard>
@@ -266,6 +311,9 @@
         },
         template: `
             <v-row no-gutters>
+                <v-col cols="12" class="text-h4 primary--text font-weight-bold text-center">
+                    Or browse the various sections
+                </v-col>
                 <v-col cols="12">
                     <v-container class="pa-0">
                         <v-row>
@@ -322,7 +370,7 @@
                         <div style="flex-grow:1">
                           <p class="pb-0 mb-0 grey--text"> <b> EXEMPLAR RECIPES <b> </p>
                           <ul>
-                            <li v-for="(content, y) in item.content" :key="'content_' + item.title + y" class="mr-10">
+                            <li v-for="(content, y) in item.content" :key="'content_' + item.title + y">
                                 <a :href="content.link" class="white--text"> {{ '{{ content.text }}' }} </a>
                             </li>
                           </ul>
@@ -355,6 +403,8 @@
              </v-col>
         `
     })
+
+    /** BOTTOM SCREEN **/
 
     Vue.component('userstext', {
         template: `
@@ -451,7 +501,7 @@
                 <p class="text-h5 px-2" :class="$vuetify.breakpoint.xlOnly ? 'text-right' : 'text-center'">
                     As a community-driven <b class="secondary--text">live resource</b>, recipes are added and improved, iteratively, covering more
                     use cases, in an open manner, moderated by an Editorial Board.
-                    Join our thriving <a class="secondary--text" href='/recipes/community.html#fcb-community'>community</a>
+                    Join our thriving <a class="secondary--text" href='./recipes/community.html#fcb-community'>community</a>
                     of Life Science professionals and FAIR experts from the academic and
                     industry sectors and <a class="secondary--text" href='./recipes/help.html'>contribute</a> to get credited via your ORCID. <br>
                     For any question, contact us at <a class="secondary--text" href='mailto:fairplus-cookbook@elixir-europe.org'>fairplus-cookbook@elixir-europe.org</a>.
@@ -465,7 +515,6 @@
                 let styles = ''
                 this.$vuetify.breakpoint.mdAndUp ? styles += ' height: 200px; ' : styles += ' height:150px; '
                 this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
-                console.log(styles)
                 return styles
             },
         },

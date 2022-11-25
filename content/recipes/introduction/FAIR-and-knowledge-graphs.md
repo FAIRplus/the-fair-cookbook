@@ -1,9 +1,7 @@
 (fcb-intro-kr)=
 
-# Knowledge graphs and FAIR
+# FAIR and Knowledge graphs 
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB070
@@ -15,7 +13,7 @@
 :has_executable_code: nope
 :maturity_level: 0
 :maturity_indicator: 0
-:recipe_name: Knowledge graphs and FAIR
+:recipe_name: Understanding the relation between FAIR and Knowledge Graphs
 ```` 
 
 ## Main Objectives
@@ -476,6 +474,10 @@ metadata, data about the data  in a FAIR way.
 -->
 >- {ref}`fcb-interop-covid-metadata`
 >- {ref}`fcb-interop-etl`
+
+
+````{rdmkit_panel}
+````
 
 ## References
 

@@ -5,8 +5,8 @@
 
 
 ````{panels_fairplus}
-:identifier_text: FCB0_TOBEMINTED
-:identifier_link: 'https://w3id.org/faircookbook/FCB0_TOBEMINTED'
+:identifier_text: FCB076
+:identifier_link: 'https://w3id.org/faircookbook/FCB076'
 :difficulty_level: 3
 :recipe_type: hands_on
 :reading_time_minutes: 30
@@ -14,7 +14,7 @@
 :maturity_level: 1
 :maturity_indicator: 1
 :has_executable_code: nope
-:recipe_name: Ontology mapping with Ontology Xref Service (OxO)
+:recipe_name: Mapping Ontologies with OxO, EBI Ontology Xref Service
 ```` 
 
 ---
@@ -36,7 +36,7 @@ to map ontology terms between source and target vocabularies {footcite}`oxo` .
 
 ````{dropdown} 
 :open:
-```{figure} ontology-align-oxo.mmd.png
+```{figure} ontology-align-oxo.mmd.svg
 ---
 height: 550px
 name: Aligning Ontologies
@@ -240,10 +240,13 @@ The corresponding results are as follows:
 This recipe presented OxO, EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
 In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
-> ### What should I read next?
-> * [How to build a data dictionary?](fcb-interop-datadictionary)
-> * [How to build an ontology using robot?](fcb-interop-ontorobot)
+### What to read next?
 
+* [How to build a data dictionary?](fcb-interop-datadictionary)
+* [How to build an ontology using robot?](fcb-interop-ontorobot)
+
+````{rdmkit_panel}
+````
 
 
 ## References
