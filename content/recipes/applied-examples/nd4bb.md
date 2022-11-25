@@ -5,8 +5,6 @@
 TODO: check whether all files can be put on Zenodo
 TODO: clarify authors
 -->
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB043

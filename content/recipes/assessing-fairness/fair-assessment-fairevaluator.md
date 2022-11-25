@@ -1,8 +1,6 @@
 (fcb-assess-fair-automatic-evaluator)=
 # FAIR Evaluator tool
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}

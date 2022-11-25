@@ -1,8 +1,7 @@
 (fcb-intro-imi-engage)=
 # Engaging with IMI Projects
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

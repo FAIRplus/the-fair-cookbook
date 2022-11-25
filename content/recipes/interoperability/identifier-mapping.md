@@ -1,8 +1,6 @@
 (fcb-identifier-mapping)=
 # Interlinking data from different sources
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB016
@@ -248,21 +246,24 @@ The following is an incomplete list of identifier mapping services.
 
 ## Conclusion
 
-> In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
->
-> - The idea of data identifier equivalence;
-> - How to publish and exchange data identifier equivalences;
-> - Data identifier mapping services which can be queried to find equivalences for a given identifier.
->
-> Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
-> As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
->
-> ### What should I read next?
-> * {ref}`fcb-find-identifiers`
-> * [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> * {ref}`fcb-bridgedb-recipe`
-> * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
+In this recipe, we have given an overview of the need to map between globally unique and persistent identifiers from different data sources where they cover the same concept, i.e. FAIR principle I3. We have covered:
 
+- The idea of data identifier equivalence;
+- How to publish and exchange data identifier equivalences;
+- Data identifier mapping services which can be queried to find equivalences for a given identifier.
+
+Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
+As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
+
+### What to read next?
+
+* {ref}`fcb-find-identifiers`
+* [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+* {ref}`fcb-bridgedb-recipe`
+* [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
+
+````{rdmkit_panel}
+````
 <!-- 
     > * [Identifier Resolution Services](./findability/id-resolution.html) 
 -->

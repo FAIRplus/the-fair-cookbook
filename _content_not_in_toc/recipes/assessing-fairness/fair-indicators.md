@@ -1,8 +1,7 @@
 (fcb-assess-fair-indicators)=
 # FAIR Indicators
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

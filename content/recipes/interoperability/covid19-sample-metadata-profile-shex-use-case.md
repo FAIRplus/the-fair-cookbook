@@ -1,8 +1,6 @@
 (fcb-interop-covid-metadata)=
 # Metadata profile validation in RDF 
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB028
@@ -509,19 +507,22 @@ select distinct ?sample ?p ?o
 
 ## Conclusions
 
-> In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard. 
-> Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used. 
-> This recipe tackles an important aspect of the FAIR principles, shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
-> The recipe therefore provides a piece of the jigsaw to establish a FAIR datasets.
-> There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF graph  could be assigned a persistent identifiers (PID).
-> Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.
->
-> ### What should I read next?
-> * How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document -->
-> * How to express Minimal Metadata checklist in machine readable format<!-- TODO add a link to corresponding document -->
-> * How to validate metadata with JSON Schema?<!-- TODO add a link to corresponding document -->
-> * How to perform data integration with SPARQL?<!-- TODO add a link to corresponding document -->
+In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF and Shape Express standard. 
+Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used. 
+This recipe tackles an important aspect of the FAIR principles, shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
+The recipe therefore provides a piece of the jigsaw to establish a FAIR datasets.
+There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF graph  could be assigned a persistent identifiers (PID).
+Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.
 
+### What to read next?
+
+* How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document -->
+* How to express Minimal Metadata checklist in machine readable format<!-- TODO add a link to corresponding document -->
+* How to validate metadata with JSON Schema?<!-- TODO add a link to corresponding document -->
+* How to perform data integration with SPARQL?<!-- TODO add a link to corresponding document -->
+
+````{rdmkit_panel}
+````
 
 
 

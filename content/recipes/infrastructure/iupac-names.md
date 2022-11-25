@@ -1,8 +1,7 @@
 (fcb-infra-iupac)=
 # Creating InChIKeys for IUPAC names
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB080
@@ -86,9 +85,12 @@ chemical graph based identifiers, such as the InChIKey. The InChIKey identifier
 can be used to find more information about the chemicals represented by the
 original IUPAC names.
 
-### What should I read next?
+### What to read next?
+
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
 
+````{rdmkit_panel}
+````
 
 ## References
 

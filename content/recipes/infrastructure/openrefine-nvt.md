@@ -1,8 +1,6 @@
 (fcp-infra-openrefine)=
 # Using OpenRefine and Karma for FAIRification
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB075
@@ -543,17 +541,15 @@ While a lot of material already exists about using OpenRefine for performing suc
 rests on the setting up of a Wikibase instance to provide the reconciliation reference.
 
 
-> What to read next? 
-> 
-> * [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)
-> 
-> * [Creating Linked Data with OpenRefine](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e)
->
-> * [Using OntoRefine to Transform Tabular Data into Linked Data](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e
-> 
-> * [OntoRefine](https://graphdb.ontotext.com/documentation/free/loading-data-using-ontorefine.html) tutorial by [OntoText](https://www.ontotext.com/knowledgehub/fundamentals/ontorefine-2/)
+### What to read next? 
 
+* [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)
+* [Creating Linked Data with OpenRefine](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e)
+* [Using OntoRefine to Transform Tabular Data into Linked Data](https://medium.com/wallscope/creating-linked-data-31c7dd479a9e
+* [OntoRefine](https://graphdb.ontotext.com/documentation/free/loading-data-using-ontorefine.html) tutorial by [OntoText](https://www.ontotext.com/knowledgehub/fundamentals/ontorefine-2/)
 
+````{rdmkit_panel}
+````
 
 ## References
 

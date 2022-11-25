@@ -1,6 +1,8 @@
 name: build-from-main-branch-and-deploy-to-external-repo
 on:
   workflow_dispatch:
+  schedule:
+    - cron:  '0 13 * * 1'
   push:
     branches:
       - main
@@ -23,14 +25,14 @@ jobs:
     - name: Install jupyter-book==0.10.2 and fixed dependencies
       run: pip install -r requirements.txt
     - name: Record used pip packages
-      run: pip freeze 
+      run: pip freeze
     - name: Install mermaid via npm
       run: npm install @mermaid-js/mermaid-cli
-    - name: Record mermaid version 
-      run: ./node_modules/.bin/mmdc -V 
+    - name: Record mermaid version
+      run: ./node_modules/.bin/mmdc -V
     - name: Search all mermaid files and record a list of them
-      run: find . -iname "*.mmd" > list_of_all_mermaid_files 
-    - name: Print the list of mermaid files 
+      run: find . -iname "*.mmd" > list_of_all_mermaid_files
+    - name: Print the list of mermaid files
       run: cat list_of_all_mermaid_files
     - name: Convert all mermaid files to various output formats -- standard png
       run: cat list_of_all_mermaid_files | while read line; do echo $line && ./node_modules/.bin/mmdc -i $line -w 800 -o $line.png ; done
@@ -44,9 +46,13 @@ jobs:
       run: rm list_of_all_mermaid_files
     - name: Remove mermaid and cleanup npm files
       run: rm -rf ./node_modules
+    - name: Clean JSON index
+      run: echo '{}' > _static/recipes.json
+    - name: Pull FAIRCookbook - RDMkit linkage file
+      run: curl -o _static/faircookbook_rdmkit_mapping.yml https://raw.githubusercontent.com/elixir-europe/faircookbook-rdmkit/main/faircookbook_rdmkit_mapping.yml
     - name: Build jupyter-book
       run: jupyter-book build . 2>&1 | tee ./build.log
-    - name: Let the build fail if there are errors in the build of the jupyter_book 
+    - name: Let the build fail if there are errors in the build of the jupyter_book
       run: grep "There was an error in building your book. Look above for the cause." ./build.log; test $? -eq 1
       shell: bash {0}
     - name: Clean up build log (remove escape characters)
