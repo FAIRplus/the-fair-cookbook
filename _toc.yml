@@ -76,6 +76,8 @@
       title: Interoperability
       numbered: true
       sections:
+          - file: content/recipes/interoperability/registering-swisslipids-identifiers
+            title: Registering SwissLipids identifiers in Wikidata #FCB083
           - file: content/recipes/interoperability/identifier-mapping
             title: Interlinking data from different sources #FCB016
           - file: content/recipes/interoperability/bridgedb-recipe
