@@ -1,6 +1,4 @@
 # Registering Datasets in Wikidata
-<br/>
-<br/>
 
  ````{panels_fairplus}
 :identifier_text: FCB060
@@ -12,7 +10,7 @@
 :maturity_level: 1
 :maturity_indicator: 5, 8
 :has_executable_code: nope
-:recipe_name: How to Register a Dataset with Wikidata
+:recipe_name: Registering datasets with Wikidata 
 ```` 
 
 [comment]: <> ("UCnn.x Registering a dataset in Wikidata.")

@@ -1184,3 +1184,46 @@ input.rounded {
 .elevate {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
+
+@media screen and (min-width: 1250px) and (max-width: 1903px) {
+    .homeFAIRCard {
+        min-height: 265px;
+    }
+}
+
+.searchRecipesResults th {
+    min-width: 160px;
+}
+
+.searchRecipesResults th i {
+    margin-left: 5px;
+}
+
+.homeInputWizard {
+    border: 3px solid #421c6e;
+    width:70vh
+}
+
+.homeInputWizard, .homeInputWizard * {
+    color: #421c6e !important;
+    font-size: 22px !important;
+}
+
+.homeInputWizard .v-input__slot {
+    padding-right: 0 !important;
+}
+
+.homeInputWizard .v-btn {
+    height: 48px !important;
+    border-radius: 50px !important;
+    position: relative;
+    right: -1px;
+}
+
+.homepageMenu a:hover {
+    text-decoration: none !important;
+}
+
+footer a, footer a:visited {
+    color: white !important;
+}

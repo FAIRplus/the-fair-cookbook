@@ -1,8 +1,6 @@
 (fcb-fairify-examples-oncotrack)=
 # Oncotrack - observational clinical cohort datasets
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB044
@@ -14,7 +12,7 @@
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: Oncotrack - clinical cohort datasets
+:recipe_name: Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI Biosamples
 ```` 
 
 

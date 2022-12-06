@@ -1,8 +1,7 @@
 (fcb-intro-model-sharing)=
 # High level data sharing models
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

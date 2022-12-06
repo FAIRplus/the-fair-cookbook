@@ -2,8 +2,6 @@
 # Prioritization of projects for FAIRification
 
 +++
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB055
@@ -15,7 +13,7 @@
 :maturity_level: 2
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: Prioritization of projects for FAIRification
+:recipe_name: Prioritizing projects for FAIRification
 ```` 
 
 
@@ -316,20 +314,17 @@ Score card template.
 ---
 ## Conclusion
 
-> Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and
-> prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR, provided 
-> suggestions for assisting in establishing a prioritization procedure. 
-> Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for 
-> ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on 
-> their needs or requirements. 
-> Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
-> 
-> ## What to read next section
-> * [Data catalog](fcb-find-bs-catalog)
-> * [The Value of FAIR](fcb-intro-fair-values)
-> * [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
+Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR, provided suggestions for assisting in establishing a prioritization procedure. 
+Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. 
+Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
+ 
+### What to read next?
+* [Data catalog](fcb-find-bs-catalog)
+* [The Value of FAIR](fcb-intro-fair-values)
+* [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
 
-
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **Reference**

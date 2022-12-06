@@ -1,8 +1,6 @@
 (fcb-bioactivity-profile)=
 # Bioactivity data profile
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB057
@@ -14,7 +12,7 @@
 :maturity_level: 3
 :maturity_indicator: 30, 31
 :has_executable_code: nope
-:recipe_name: Depositing Bioactivity Data
+:recipe_name: Outlining a metadata profile for Bioactivity data
 ```` 
 
 ## Main objective
@@ -192,9 +190,9 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 |AC50|Half maximal Activation Concentration|
 |CC50|Half maximal Cytotoxic Concentration|
 
-## What to read next?
->- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
->- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
+### What to read next?
+- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
+- [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
 
 
 

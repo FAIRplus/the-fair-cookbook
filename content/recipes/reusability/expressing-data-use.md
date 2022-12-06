@@ -1,8 +1,6 @@
 (fcb-reusability-data_use)=
-# Declaring data's permitted uses
+# Declaring data permitted uses
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB035
@@ -14,7 +12,7 @@
 :maturity_level: 4
 :maturity_indicator: 59
 :has_executable_code: nope
-:recipe_name: Declaring data's permitted uses
+:recipe_name: Declaring data permitted uses
 ```` 
 
 ## Main Objectives
@@ -845,6 +843,9 @@ dataset and defined by the data owners/data controllers.
 
 * {ref}`rr-licensing-software`
 * {ref}`rr-licensing-data`
+
+````{rdmkit_panel}
+````
 
 
 

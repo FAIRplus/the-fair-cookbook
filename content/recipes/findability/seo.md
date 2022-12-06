@@ -1,8 +1,7 @@
 (fcb-find-seo)=
-# Search engine optimization
+# Search Engine Optimization (SEO)
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB010
@@ -14,7 +13,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Search engine optimization
+:recipe_name: Introducing Search Engine Optimization (SEO) 
 ```` 
 
 ## Main Objectives
@@ -209,26 +208,12 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 
 ### What to read next?
 
-> - {ref}`fcb-find-bs-data`
-> - {ref}`fcb-find-bs-catalog`
-> - {ref}`fcb-find-bs-dataset`
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
-> ````
+- {ref}`fcb-find-bs-data`
+- {ref}`fcb-find-bs-catalog`
+- {ref}`fcb-find-bs-dataset`
 
-
-
-
+````{rdmkit_panel}
+````
 
 
 ## References

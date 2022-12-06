@@ -1,8 +1,7 @@
 (fcb-infra-imi-cat-deploy)=
 # Deploying the IMI data catalogue
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB048
@@ -14,7 +13,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: Deploying the IMI data catalogue
+:recipe_name: Deploying a data catalogue - The IMI data catalogue example
 ```` 
 
 
@@ -211,13 +210,16 @@ instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue
 This recipe provides a step-by-step guide to deploying the **IMI data catalogue** developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb),
 as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
-> ### What should I read next?
-> * {ref}`fcb-infra-build-catalog`
-> * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document --> (*in preparation*)
-> * {ref}`fcb-find-seo`
-> * {ref}`fcb-interop-metadataprofile`
-> * {ref}`fcb-interop-txmetadata`
+### What to read next?
 
+* {ref}`fcb-infra-build-catalog`
+* How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document --> (*in preparation*)
+* {ref}`fcb-find-seo`
+* {ref}`fcb-interop-metadataprofile`
+* {ref}`fcb-interop-txmetadata`
+
+````{rdmkit_panel}
+````
 ## References
 ````{dropdown} **References**
 ````

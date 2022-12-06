@@ -1,8 +1,6 @@
 (fcb-interop-fastqval)=
 # File format validation, FASTQ example
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB030
@@ -14,7 +12,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: yeah
-:recipe_name: File format validation, FASTQ example
+:recipe_name: Validating file format - FASTQ example
 ```` 
 
 ## Main Objectives
@@ -276,11 +274,14 @@ _*See details in the [FASTQ specification recipe]( TODO include link)._
 In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.
 
 
-### What to read next
+### What to read next?
 
 - 🐙[From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
 - 🐙[FASTQ file specification recipe](TODO include link to recipe https://www.TBD.org )
 - 🐙[FASTQ file validator in Biopython](TODO include link to recipe https://www.TBD.org)
+
+````{rdmkit_panel}
+````
 
 
 

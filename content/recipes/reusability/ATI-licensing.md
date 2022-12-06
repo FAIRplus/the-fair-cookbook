@@ -1,8 +1,6 @@
 (rr-licensing)=
 # Licensing
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB032
@@ -63,24 +61,17 @@ A license gives this consent.
 If you do not have a license for your software, it is effectively unusable by the whole research community.
 
 
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
-> ---
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/TTW.svg
-> :height: 40px
-> :align: center
-> :name: Turing-Way-logo
-> ```
-> ^^^
-> [The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
+
+````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/TTW.svg
+:height: 40px
+:align: center
+:name: Turing-Way-logo
+```
+^^^
+[The Turing Way Book of Data Sciences](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
+````
+

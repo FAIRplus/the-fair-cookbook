@@ -1,8 +1,7 @@
 (fcb-assess-fair-manual)=
 # FAIR assessment by hand
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

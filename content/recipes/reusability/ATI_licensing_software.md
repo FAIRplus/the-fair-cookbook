@@ -1,7 +1,5 @@
 (rr-licensing-software)=
 # Software licenses
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -14,7 +12,7 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Software licenses
+:recipe_name: Licensing Software
 ```` 
 
 
@@ -204,24 +202,18 @@ They may also require that the recipient of the combined work can re-link the mo
 </table>
 
 
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Licensing` from the `RDMkit`](https://rdmkit.elixir-europe.org/licensing.html)
-> ---
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/TTW.svg
-> :height: 40px
-> :align: center
-> :name: Turing-Way-logo
-> ```
-> ^^^
-> [The Turing Way Book of Data Sciences: Software Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-software.html)
+````{panels}
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/TTW.svg
+:height: 40px
+:align: center
+:name: Turing-Way-logo
+```
+^^^
+[The Turing Way Book of Data Sciences: Software Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-software.html)
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+````

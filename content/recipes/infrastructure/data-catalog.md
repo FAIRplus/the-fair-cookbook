@@ -45,7 +45,7 @@ We will cover the following points:
 ## Graphical Overview
 
 
-```{figure} data-catalog.md-figure1.mmd.png
+```{figure} ../../../images/data-catalog-md-figure1.png
 ---
 name: data-catalog-figure1
 alt: Building and populating a data catalogue
@@ -121,19 +121,22 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.
 
-### What should I read next?
+### What to read next?
+
 We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes
 
 * {ref}`fcb-infra-imi-cat-deploy`
 <!-- * TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy` --> 
 <!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
-
 For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR such
 interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`
+
+````{rdmkit_panel}
+````
 
 
 ## References

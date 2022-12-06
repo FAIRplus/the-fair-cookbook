@@ -2,8 +2,6 @@
 # Git recipe template
 
 
-<br/>
-<br/>
 
 ```{admonition} Important
 :class: tip
@@ -40,14 +38,19 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 ---
 
 ````{panels_fairplus}
+<<<<<<< HEAD
 :identifier_text: FCBXXX
 :identifier_link: https://example.com
+=======
+:identifier_text: FCB___
+:identifier_link: https://w3id.org/faircookbook/FCB___
+>>>>>>> 6f3f4b6d7d4437828717984c9288f28f7ac67dc3
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15
 :intended_audience: principal_investigator, data_manager, data_scientist, funder
-:maturity_level: 2  
-:maturity_indicator: 1, 2
+:maturity_level: 0  
+:maturity_indicator: 0
 :has_executable_code: nope
 :recipe_name: Recipe Template
 ```` 
@@ -241,13 +244,13 @@ graph TD;
 
 ## Conclusion
 
-> Summerize Key Learnings of the recipe.
-> 
-> Suggest further reading using the following:
-> ### What should I read next?
-> * [Tips and Tricks](./tips-tricks.md)
-> * [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
-> * using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
+Summerize Key Learnings of the recipe.
+ 
+Suggest further reading using the following:
+### What to read next?
+* [Tips and Tricks](./tips-tricks.md)
+* [how-to-create-recipe-with-hackmd](./how-to-create-recipe-with-hackmd.md)
+* using a reference tag affored by MyST markdown and sphinx with JupyterBook 0.7+. <!-- {ref}`fcb-intro-fair-principles` -->
   [my-prefered-label](fcb-help-recipe-template)
 
 ````{note}
@@ -257,28 +260,21 @@ To the Reviewers and Editors: The following panels show how to link with externa
 * The Turing Way Book of Data Science
 ````
 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
-> ---
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/pistoia_logo.png
-> :height: 40px
-> :align: center
-> :name: FAIRtoolkit_logo
-> ```
-> ^^^
-> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> ````
-
+````{panels}
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/pistoia_logo.png
+:height: 40px
+:align: center
+:name: FAIRtoolkit_logo
+```
+^^^
+[More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+````
 
 ## References:
 

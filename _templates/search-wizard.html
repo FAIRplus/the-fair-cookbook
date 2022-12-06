@@ -1,10 +1,13 @@
 {% set title = _('Search') %}
 
+<script src="{{ pathto('_static/js/searchNodal.js', 1) }}"></script>
+<script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+<script src="{{ pathto('searchindex.js', 1) }}" defer></script>
+
 <script>
     Vue.component("Searchme", {
         data() {
             return {
-                test: 'test1',
                 recipes: [],
                 headers: [
                     {
@@ -72,7 +75,9 @@
                         labels: ["Yes", "Both", "No"]
                     },
                     maturity: 0
-                }
+                },
+                snackbar: false,
+                loaded: false
             }
         },
         computed: {
@@ -90,23 +95,21 @@
                 this.loading = false
                 this.recipes = Object.entries(data).map((key, value) => {
                     const recipe = key[1]
-
                     // Add autocomplete values for recipe types
                     if (!this.inputs.recipeType.values.includes(recipe.type)) {
                         this.inputs.recipeType.values.push(recipe.type)
                     }
-
                     // Add autocomplete values for audience
                     recipe.audience.forEach(audience => {
                         if (!this.inputs.audience.values.includes(audience)) {
                             this.inputs.audience.values.push(audience)
                         }
                     })
-
                     return recipe
-
                 })
                 this.all_recipes = [ ...this.recipes ]
+                this.parseURLParams()
+                this.filterRecipes()
             },
             filterRecipes() {
                 let recipes = []
@@ -165,19 +168,68 @@
             hasMaturity(recipe) {
                 if (this.inputs.maturity === 0) { return true }
                 return recipe.maturity >= this.inputs.maturity
+            },
+            parseURLParams() {
+                const params = new URLSearchParams(window.location.search)
+                let name = params.get('q')
+                let types = params.get('types')
+                let audience = params.get('audience')
+                let readtime = params.get('readtime')
+                let executable = params.get('executable')
+
+                if (name) this.inputs.name = decodeURIComponent(name)
+                if (types) this.inputs.recipeType.value = decodeURIComponent(types)
+                if (audience) this.inputs.audience.value = decodeURIComponent(audience)
+                if (params.get('maturity')) this.inputs.maturity = parseInt(params.get('maturity'))
+                if (readtime) {
+                    readtime = decodeURIComponent(readtime).split(',')
+                    if (readtime.length === 2) {
+                        this.inputs.readingTime.range = [parseInt(readtime[0]), parseInt(readtime[1])]
+                    }
+                }
+                if (executable) {
+                    executable = parseInt(executable)
+                    if (executable === 0 || executable === 2) this.inputs.executable.value = executable
+                }
+            },
+            generateURL() {
+                const baseURL = window.location.origin + window.location.pathname
+                const params = new URLSearchParams()
+                if (this.inputs.name) params.set('q', encodeURIComponent(this.inputs.name))
+                if (this.inputs.recipeType.value) params.set('types', encodeURIComponent(this.inputs.recipeType.value))
+                if (this.inputs.audience.value) params.set('audience', encodeURIComponent(this.inputs.audience.value))
+                if (this.inputs.readingTime.range[0] !== 0 || this.inputs.readingTime.range[1] !== 60) {
+                    params.set('readtime', encodeURIComponent(this.inputs.readingTime.range.join(',')))
+                }
+                if (this.inputs.executable.value === 0 || this.inputs.executable.value === 2) {
+                    params.set('executable', this.inputs.executable.value)
+                }
+                if (this.inputs.maturity !== 0) params.set('maturity', this.inputs.maturity)
+                return params.toString().length > 0 ? baseURL + '?' + params.toString() : baseURL
+            },
+            copyURL() {
+                navigator.clipboard.writeText(this.generateURL())
+                this.snackbar = true
             }
         },
-        mounted() { this.getData(); },
+        async mounted() {
+            await this.getData()
+            this.loaded = true
+        },
         template: `
             <div class="search-wizard" id="search-wizard">
                 <h1 class="mb-5"> Search the cookbook recipes </h1>
                 <hr class="docutils">
                 <v-container fluid>
                     <v-row>
-                        <v-col xl="2" cols="12" class="pt-8 grey lighten-3">
+                        <v-col xl="2" cols="12" class="pa-2">
                             <v-form id="searchRecipesFilters" ref="searchRecipesFilters">
-                                <v-container fluid class="pa-0">
-                                    <v-row no-gutters> <v-col cols="12"> <span class="secondary--text h3">Filters:</h3></v-col></v-row>
+                                <v-container fluid class="grey lighten-3 elevation-4" style="border-radius: 5px">
+                                    <v-row no-gutters>
+                                        <v-col cols="12" class="text-center text-h4 secondary--text">
+                                           Filters
+                                        </v-col>
+                                    </v-row>
                                     <v-row no-gutters>
                                         <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="pa-4">
                                             <v-text-field
@@ -185,6 +237,9 @@
                                                 label="Search recipes names"
                                                 @input="filterRecipes"
                                                 dense
+                                                rounded
+                                                outlined
+                                                hide-details
                                                 color="secondary"
                                             > </v-text-field>
                                         </v-col>
@@ -195,6 +250,9 @@
                                                 label="Search recipes by type"
                                                 @input="filterRecipes"
                                                 dense
+                                                rounded
+                                                outlined
+                                                hide-details
                                                 color="secondary"
                                             > </v-autocomplete>
                                         </v-col>
@@ -205,12 +263,15 @@
                                                 label="Search recipes by audience"
                                                 @input="filterRecipes"
                                                 dense
+                                                rounded
+                                                outlined
+                                                hide-details
                                                 color="secondary"
                                             > </v-autocomplete>
                                         </v-col>
-                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" id="readingTime" class="px-3">
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" id="readingTime" class="px-3 mt-3 mb-3">
                                             <span class="field-name v-label theme--light">Reading Time</span>
-                                            <div class="px-4 mb-3 mt-3">
+                                            <div class="px-4 mb-3">
                                                 <v-range-slider
                                                     v-model="inputs.readingTime.range"
                                                     :max="inputs.readingTime.max"
@@ -228,9 +289,9 @@
                                                 ></v-range-slider>
                                             </div>
                                         </v-col>
-                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3">
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3 mt-3">
                                             <span class="field-name v-label theme--light">Executable code</span>
-                                            <div class="px-4 mb-6 mt-3">
+                                            <div class="px-4 mb-6">
                                                 <v-slider
                                                     v-model="inputs.executable.value"
                                                     min="0"
@@ -247,7 +308,7 @@
                                                 > </v-slider>
                                             </div>
                                         </v-col>
-                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3">
+                                        <v-col cols="12" xl="12" lg="4" md="12" sm="12" xs="12" class="px-3 mt-3">
                                             <span class="field-name mb-3 v-label theme--light">Maturity Level</span>
                                             <div class="d-flex justify-center align-center">
                                                 <v-rating
@@ -257,7 +318,7 @@
                                                     empty-icon="far fa-circle"
                                                     full-icon="fas fa-circle"
                                                     @input="filterRecipes"
-                                                    class="pl-3 pt-2"
+                                                    class="pl-3"
                                                     clearable
                                                 ></v-rating>
                                             </div>
@@ -272,11 +333,40 @@
                                 </v-container>
                             </v-form>
                         </v-col>
-                        <v-col xl="10" cols="12">
+                        <v-col xl="10" cols="12" class="px-4">
+                            <div>
+                                <v-text-field
+                                    label="URL"
+                                    v-model="generateURL()"
+                                    readonly rounded
+                                    outlined
+                                    color="secondary"
+                                >
+                                    <template slot="prepend-inner">
+                                        <v-icon class="secondary--text mr-3" @click="copyURL()"> fas fa-clipboard </v-icon>
+                                    </template>
+                                </v-text-field>
+                                <v-snackbar
+                                  v-model="snackbar"
+                                  :timeout="2000"
+                                >
+                                    URL copied to clipboard
+                                    <template v-slot:action="{ attrs }">
+                                        <v-btn
+                                          color="secondary"
+                                          text
+                                          v-bind="attrs"
+                                          @click="snackbar = false"
+                                        >
+                                          Close
+                                        </v-btn>
+                                    </template>
+                                </v-snackbar>
+                            </div>
                             <v-data-table
-                                class="searchRecipesResults pl-5"
+                                class="searchRecipesResults elevation-4 d-block"
                                 fixed-header
-                                height="83vh"
+                                height="79vh"
                                 :items="recipes"
                                 :items-per-page="-1"
                                 :headers="headers"
@@ -327,11 +417,65 @@
                                         small
                                     ></v-rating>
                                 </template>
+                                <template v-slot:no-data v-if="loaded">
+                                    <Nodata />
+                                </template>
                             </v-data-table>
                         </v-col>
                     </v-row>
                 </v-container>
             </div>
+        `
+    })
+
+    Vue.component("Nodata", {
+        data () {
+            return {
+                query: null,
+                loading: false,
+            }
+        },
+        methods: {
+            async search() {
+                if (this.query && this.query.length > 2) {
+                    this.loading = true
+                    await search(this.query, 'noDataResults')
+                    this.loading = false
+                }
+                else console.log("Query too short")
+            }
+          },
+        template: `
+              <div class="py-5 px-10 d-flex flex-column align-center noDataResultsContainer">
+                    <div class="text-h5 mb-5">Can't find a recipe? try to search the entire cookbook: </div>
+                    <v-text-field
+                      v-model="query"
+                      append-icon="fa-search"
+                      label="Search the cookbook..."
+                      dense
+                      rounded
+                      single-line
+                      solo
+                      hide-details
+                      class="white primary--text"
+                      @click:append="search"
+                      @keyup.enter="search"
+                      :disabled="loading"
+                      style="width:600px"
+                    />
+                    <div class="px-5" style="margin-top:1px;width:600px" >
+                        <v-card class="px-0 pa-4" v-if="loading">
+                            Loading...
+                        </v-card>
+                        <v-card
+                            class="pa-0"
+                            style="max-height: 40vh; overflow-y: scroll"
+                            :class="loading ? 'd-none' : '' "
+                        >
+                            <div id="noDataResults"> </div>
+                        </v-card>
+                    </div>
+              </div>
         `
     })
 </script>
