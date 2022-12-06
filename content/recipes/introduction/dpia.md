@@ -502,7 +502,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 > :card: border-2
 > :header: bg-primary pa_dark
 > :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
+> ```{image} /_static/images/logo/RDMkit_logo.svg
 > :height: 40px
 > :name: rdmkit_logo
 > ```
