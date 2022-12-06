@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11. Converting from proprietary to open format</title>
+    <title>12. Converting from proprietary to open format</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -49,11 +49,11 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../_static/js/vue.min.js"></script>
-    <script src="../../../_static/js/searchNodal.js"></script>
     <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/searchNodal.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
     <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -67,8 +67,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="12. File format validation, FASTQ example" href="fastq-file-format-validators.html" />
-    <link rel="prev" title="10.4.3. Bioactivity data profile" href="bioactivity-profile.html" />
+    <link rel="next" title="13. File format validation, FASTQ example" href="fastq-file-format-validators.html" />
+    <link rel="prev" title="11.5.3. Bioactivity data profile" href="bioactivity-profile.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
@@ -80,7 +80,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Converting from proprietary to open format" />
-<meta property="og:description" content="Converting from proprietary to open format    &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://pu" />
+<meta property="og:description" content="Converting from proprietary to open format  &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/terms/&#34;," />
  <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
 <meta name="twitter:card" content="summary" />
   </head>
@@ -183,7 +183,7 @@
               flat
               solo
               rounded
-              href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md"
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/main/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md"
               class="mt-1"
               target="_blank"
             >
@@ -467,18 +467,23 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="registering-swisslipids-identifiers.html">
+     1. Registering SwissLipids identifiers in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="identifier-mapping.html">
-     1. Interlinking data from different sources
+     2. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     2. Mapping identifiers with BridgeDb
+     3. Mapping identifiers with BridgeDb
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bridgedb/bridgedb-example.html">
-       2.11.1. Mapping identifiers using BridgeDb web services
+       3.11.1. Mapping identifiers using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -487,37 +492,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="introduction-terminologies-ontologies.html">
-     3. Introducing terminologies and ontologies
+     4. Introducing terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="selecting-ontologies.html">
-     4. Selecting terminologies and ontologies
+     5. Selecting terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-new-term-request-recipe.html">
-     5. Requesting new terms from terminologies and ontologies
+     6. Requesting new terms from terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-operations-tools.html">
-     6. Introducing ontology-related tools and services
+     7. Introducing ontology-related tools and services
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ontology-robot-recipe.html">
-     7. Building an application ontology with ROBOT
+     8. Building an application ontology with ROBOT
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.11.1. Building an application ontology for metabolomics - MSIO
+       8.11.1. Building an application ontology for metabolomics - MSIO
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
-       7.11.2. Defining competency questions for the Ontology ROBOT use case
+       8.11.2. Defining competency questions for the Ontology ROBOT use case
       </a>
      </li>
     </ul>
@@ -526,32 +531,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-alignment-oxo.html">
-     8. Mapping Ontologies with OxO, EBI Ontology Xref Service
+     9. Mapping Ontologies with OxO, EBI Ontology Xref Service
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     9. Creating a data/variable dictionary
+     10. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="creating-minimal-metadata-profiles.html">
-     10. Creating a metadata profile
+     11. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       10.4.1. Outlining a metadata profile for transcriptomics
+       11.5.1. Outlining a metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       10.4.2. Building a community compliant metadata profile - The Covid19 sample profile use case
+       11.5.2. Building a community compliant metadata profile - The Covid19 sample profile use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       10.4.3. Outlining a metadata profile for Bioactivity data
+       11.5.3. Outlining a metadata profile for Bioactivity data
       </a>
      </li>
     </ul>
@@ -560,32 +565,46 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     11. Converting from proprietary to open format
+     12. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. Validating file format - FASTQ example
+     13. Validating file format - FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     13. Inventorying tools for converting data to RDF
+     14. Inventorying tools for converting data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     14. Surveying extraction, transformation, load (ETL) tools
+     15. Surveying extraction, transformation, load (ETL) tools
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     15. Expressing Clinical Genetic Information as FHIR JSON
+     16. Expressing Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       15.9.1. Converting VCF file to FHIR JSON
+       16.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-knowledge-graph-from-unstructured-text.html">
+     17. Creating knowledge graphs from unstructured text
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="nlp2kg/creating-knowledge-graph-from-text.html">
+       17.12.1. unstructured text to graph as executable notebook
       </a>
      </li>
     </ul>
@@ -651,28 +670,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/dats-model.html">
+     4. Introducing the DATS model
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     4. Deploying a data catalogue - The IMI data catalogue example
+     5. Deploying a data catalogue - The IMI data catalogue example
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/vocabularies.html">
-     5. Vocabulary management
+     6. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       5.1. Introducing vocabulary portals and lookup services
+       6.1. Introducing vocabulary portals and lookup services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       5.2. Selecting an ontology lookup service
+       6.2. Selecting an ontology lookup service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       5.3. Deploying EBI Ontology Loopkup Service
+       6.3. Deploying EBI Ontology Loopkup Service
       </a>
      </li>
     </ul>
@@ -681,12 +705,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
-     6. Using OpenRefine and Karma for FAIRification
+     7. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/fair-api.html">
-     7. Developing FAIR API for the Web
+     8. Developing FAIR API for the Web
     </a>
    </li>
   </ul>
@@ -978,11 +1002,9 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="converting-from-proprietary-to-open-format">
-<span id="fcb-interop-convertopen"></span><h1><span class="section-number">11. </span>Converting from proprietary to open format<a class="headerlink" href="#converting-from-proprietary-to-open-format" title="Permalink to this headline">¶</a></h1>
-<br/>
-<br/>
+<span id="fcb-interop-convertopen"></span><h1><span class="section-number">12. </span>Converting from proprietary to open format<a class="headerlink" href="#converting-from-proprietary-to-open-format" title="Permalink to this headline">¶</a></h1>
 <script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB029", "sdo:name": "Converting from proprietary to open format", "sdo:description": "Converting from proprietary to open format", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB029", "dso:url": "https://w3id.org/faircookbook/FCB029", "owl:sameAs": "https://identifiers.org/fcb:FCB029"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB029#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB029#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB029#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB029#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
-<div class="card recipe d-flex">
+<div class="card my-10 recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
 <div class="overviewLabel">Recipe Overview</div>
@@ -1051,7 +1073,7 @@ Yes
 </div>
 </div>
 <div class="section" id="main-objectives">
-<h2><span class="section-number">11.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Document how to convert raw data from a propriatory, vendor specific format to an open standard format.</p></li>
 <li><p>Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.</p></li>
@@ -1059,7 +1081,7 @@ Yes
 </div>
 <hr class="docutils" />
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">11.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1076,13 +1098,13 @@ Yes
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="converting-to-an-open-standard-file-format">
 <a class="reference internal image-reference" href="../../../_images/from-proprietary.png"><img alt="Converting to an open standard file format" src="../../../_images/from-proprietary.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Converting to an open standard file format.</span><a class="headerlink" href="#converting-to-an-open-standard-file-format" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Converting to an open standard file format.</span><a class="headerlink" href="#converting-to-an-open-standard-file-format" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="fairification-objectives-inputs-and-outputs">
-<h2><span class="section-number">11.3. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.3. </span>FAIRification Objectives, Inputs and Outputs<a class="headerlink" href="#fairification-objectives-inputs-and-outputs" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
@@ -1103,7 +1125,7 @@ Yes
 </table>
 </div>
 <div class="section" id="table-of-data-standards">
-<h2><span class="section-number">11.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.4. </span>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
@@ -1121,7 +1143,7 @@ Yes
 </div>
 <hr class="docutils" />
 <div class="section" id="ingredients">
-<h2><span class="section-number">11.5. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.5. </span>Ingredients<a class="headerlink" href="#ingredients" title="Permalink to this headline">¶</a></h2>
 <p>Tools and  Software:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/">github</a></p></li>
@@ -1135,9 +1157,9 @@ Yes
 - [sparql](https://www.w3.org/TR/sparql11-query/) -->
 </div>
 <div class="section" id="converting-mass-spectrometry-data-to-mzml-format-a-step-by-step-process">
-<h2><span class="section-number">11.6. </span>Converting Mass Spectrometry data to mzML format: a Step by Step Process.<a class="headerlink" href="#converting-mass-spectrometry-data-to-mzml-format-a-step-by-step-process" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.6. </span>Converting Mass Spectrometry data to mzML format: a Step by Step Process.<a class="headerlink" href="#converting-mass-spectrometry-data-to-mzml-format-a-step-by-step-process" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="step-1-obtain-the-dataset">
-<h3><span class="section-number">11.6.1. </span>Step 1: obtain the dataset<a class="headerlink" href="#step-1-obtain-the-dataset" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.6.1. </span>Step 1: obtain the dataset<a class="headerlink" href="#step-1-obtain-the-dataset" title="Permalink to this headline">¶</a></h3>
 <p>In the case of the IMI RESOLUTE<!-- TODO add a link to corresponding document --> project, the data is released via the University of Luxembourg<!-- TODO add a link to corresponding document --> server (assuming you have access resolved):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$&gt; sftp fairplus@NNN.000.000.NNN
 &gt;get RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
@@ -1148,16 +1170,16 @@ $&gt;
 <p>:warning: <code class="docutils literal notranslate"><span class="pre">NNN.000.000.NNN</span></code> should be replaced with the proper IP address to the University of Luxembourg server once users have obtained data access clearance.</p>
 </div>
 <div class="section" id="step-2-inspect-the-content-of-the-archive">
-<h3><span class="section-number">11.6.2. </span>Step 2: inspect the content of the archive<a class="headerlink" href="#step-2-inspect-the-content-of-the-archive" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.6.2. </span>Step 2: inspect the content of the archive<a class="headerlink" href="#step-2-inspect-the-content-of-the-archive" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="i-copying-the-archive-to-a-working-directory">
-<h4><span class="section-number">11.6.2.1. </span>i. copying the archive to a working directory<a class="headerlink" href="#i-copying-the-archive-to-a-working-directory" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.2.1. </span>i. copying the archive to a working directory<a class="headerlink" href="#i-copying-the-archive-to-a-working-directory" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$&gt;mv RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz /IMI-FAIR+/RESOLUTE
 $&gt;cd /IMI-FAIR+/RESOLUTE/
 </pre></div>
 </div>
 </div>
 <div class="section" id="ii-expand-the-archive">
-<h4><span class="section-number">11.6.2.2. </span>ii. expand the archive<a class="headerlink" href="#ii-expand-the-archive" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.2.2. </span>ii. expand the archive<a class="headerlink" href="#ii-expand-the-archive" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$&gt;gunzip RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
 $&gt;tar -xvf RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar
 $&gt;cd RESOLUTE_Targted_Metabolomics_of_parental_cell_lines
@@ -1165,7 +1187,7 @@ $&gt;cd RESOLUTE_Targted_Metabolomics_of_parental_cell_lines
 </div>
 </div>
 <div class="section" id="iii-inspect-the-folder">
-<h4><span class="section-number">11.6.2.3. </span>iii. inspect the folder<a class="headerlink" href="#iii-inspect-the-folder" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.2.3. </span>iii. inspect the folder<a class="headerlink" href="#iii-inspect-the-folder" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="nv">$anaconda3</span>-2019.10<span class="o">)</span> bob-MacBook-3:RESOLUTE_Targted_Metabolomics_of_parental_cell_lines philippe$ ls -la
 total <span class="m">1400</span>
 drwxr-xr-x   <span class="m">10</span> bob  staff     <span class="m">320</span> <span class="m">14</span> Jan <span class="m">16</span>:05 .
@@ -1191,7 +1213,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </div>
 </div>
 <div class="section" id="step-3-convert-vendor-specific-format-to-an-open-format">
-<h3><span class="section-number">11.6.3. </span>Step 3: Convert vendor specific format to an open format<a class="headerlink" href="#step-3-convert-vendor-specific-format-to-an-open-format" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.6.3. </span>Step 3: Convert vendor specific format to an open format<a class="headerlink" href="#step-3-convert-vendor-specific-format-to-an-open-format" title="Permalink to this headline">¶</a></h3>
 <p>One can consult the Elixir-UK <a class="reference external" href="https://fairsharing.org/">FAIRsharing catalog</a> of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (DOI), <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">https://fairsharing.org/FAIRsharing.26dmba</a> for HUPO-PSI mzML specifications.</p>
 <!-- <div>
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
@@ -1212,7 +1234,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="a-standard-record-in-the-fairsharing-catalog-of-resources">
 <a class="reference internal image-reference" href="../../../_images/AWOWTbr.png"><img alt="A Standard Record in the FAIRsharing catalog of resources" src="../../../_images/AWOWTbr.png" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11.2 </span><span class="caption-text">The <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">HUPI-PSI mzML Standard Record</a> in the <a class="reference external" href="https://fairsharing.org/">Elixir FAIRsharing catalog</a> of resources.</span><a class="headerlink" href="#a-standard-record-in-the-fairsharing-catalog-of-resources" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.2 </span><span class="caption-text">The <a class="reference external" href="https://fairsharing.org/FAIRsharing.26dmba">HUPI-PSI mzML Standard Record</a> in the <a class="reference external" href="https://fairsharing.org/">Elixir FAIRsharing catalog</a> of resources.</span><a class="headerlink" href="#a-standard-record-in-the-fairsharing-catalog-of-resources" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a <code class="docutils literal notranslate"><span class="pre">containerized</span></code> version of the <a class="reference external" href="https://github.com/ProteoWizard/pwiz">Proteowizard</a> <a class="footnote-reference brackets" href="#chambers2012" id="id1">2</a>.</p>
@@ -1220,7 +1242,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 <div><p><strong>requirements</strong>:</p>
 </div></blockquote>
 <div class="section" id="install-docker">
-<h4><span class="section-number">11.6.3.1. </span>1. install docker:<a class="headerlink" href="#install-docker" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.3.1. </span>1. install docker:<a class="headerlink" href="#install-docker" title="Permalink to this headline">¶</a></h4>
 <p>on a MacOS system, invoke the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;brew update
 &gt;brew install docker
@@ -1228,17 +1250,17 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </div>
 </div>
 <div class="section" id="start-and-sign-in-to-docker">
-<h4><span class="section-number">11.6.3.2. </span>2. start and sign in to docker<a class="headerlink" href="#start-and-sign-in-to-docker" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.3.2. </span>2. start and sign in to docker<a class="headerlink" href="#start-and-sign-in-to-docker" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;docker start
 &gt;docker login
 </pre></div>
 </div>
 </div>
 <div class="section" id="sign-up-and-or-login-to-https-hub-docker-com">
-<h4><span class="section-number">11.6.3.3. </span>3. sign-up and/or login to <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a><a class="headerlink" href="#sign-up-and-or-login-to-https-hub-docker-com" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.3.3. </span>3. sign-up and/or login to <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a><a class="headerlink" href="#sign-up-and-or-login-to-https-hub-docker-com" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="pull-the-docker-container-for-proteowizard">
-<h4><span class="section-number">11.6.3.4. </span>4. pull the docker container for ProteoWizard<a class="headerlink" href="#pull-the-docker-container-for-proteowizard" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.3.4. </span>4. pull the docker container for ProteoWizard<a class="headerlink" href="#pull-the-docker-container-for-proteowizard" title="Permalink to this headline">¶</a></h4>
 <p>:warning: be sure to sign-up and login to <a class="reference external" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
 </pre></div>
@@ -1312,7 +1334,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </table>
 </div>
 <div class="section" id="testing-and-processing-the-resulting-mzml-files">
-<h4><span class="section-number">11.6.3.5. </span>5. Testing and processing the resulting mzML files<a class="headerlink" href="#testing-and-processing-the-resulting-mzml-files" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">12.6.3.5. </span>5. Testing and processing the resulting mzML files<a class="headerlink" href="#testing-and-processing-the-resulting-mzml-files" title="Permalink to this headline">¶</a></h4>
 <p>For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.</p>
 <p>A number of libraries are available for parsing (reading and writing) <code class="docutils literal notranslate"><span class="pre">mzML</span></code> document. <code class="docutils literal notranslate"><span class="pre">mzML</span></code> is a king of <code class="docutils literal notranslate"><span class="pre">XML</span></code> format for which an XML schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library <a class="footnote-reference brackets" href="#bald2012" id="id2">1</a>.</p>
 <!-- <div>
@@ -1334,7 +1356,7 @@ drwxr-xr-x  <span class="m">118</span> bob  staff    <span class="m">3776</span>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="pymzml-in-biotools-registry">
 <a class="reference internal image-reference" href="../../../_images/BTs0GUS.png"><img alt="pymzml in Biotools registry" src="../../../_images/BTs0GUS.png" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11.3 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library entry in the <a class="reference external" href="https://bio.tools/">Elixir Biotools catalog</a> of resources.</span><a class="headerlink" href="#pymzml-in-biotools-registry" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.3 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library entry in the <a class="reference external" href="https://bio.tools/">Elixir Biotools catalog</a> of resources.</span><a class="headerlink" href="#pymzml-in-biotools-registry" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import os
@@ -1374,7 +1396,7 @@ pf.save<span class="o">(</span>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="pymzml-rendered-msrun-profile">
 <a class="reference internal image-reference" href="../../../_images/caaqwFo.png"><img alt="pymzml rendered msrun profile" src="../../../_images/caaqwFo.png" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11.4 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.</span><a class="headerlink" href="#pymzml-rendered-msrun-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.4 </span><span class="caption-text">The Python <code class="docutils literal notranslate"><span class="pre">pymzml</span></code> library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.</span><a class="headerlink" href="#pymzml-rendered-msrun-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p>In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we’ll show how to read an mzML file using a python library.</p>
@@ -1382,11 +1404,11 @@ pf.save<span class="o">(</span>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2><span class="section-number">11.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the <a class="reference external" href="https://elixir-europe.org/about-us/who-we-are/nodes/uk">Elixir UK</a> <a class="reference external" href="https://fairsharing.org">FAIRsharing registry</a>, it is possible to identify if such open format specifications are available.
 Then, interrogating the <a class="reference external" href="https://bio.tools/">Biotools catalog</a>, it may well be also possible to retrieve libraries and software components allowing manipulations of such format.</p>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">11.7.1. </span>What to read next<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.7.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../findability/checksum-create.html#fcb-checksum-create"><span class="std std-ref">How to calculate file checksums</span></a><!-- TODO add a link to corresponding document --></p></li>
 <li><p>How to package data for shipping with BDbags<!-- TODO add a link to corresponding document --></p></li>
@@ -1395,9 +1417,8 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
 </ul>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="references">
-<h2><span class="section-number">11.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.8. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p id="bibtex-footbibliography-content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar-0"><dl class="footnote brackets">
 <dt class="label" id="bald2012"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>T. Bald, J. Barth, A. Niehues, M. Specht, M. Hippler, and C. Fufezan. pymzML–Python module for high-throughput bioinformatics on mass spectrometry data. <em>Bioinformatics</em>, 28(7):1052–1053, Apr 2012.</p>
@@ -1411,7 +1432,7 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
 2. Bald T, Barth J, Niehues A, et al. pymzML--Python module for high-throughput bioinformatics on mass spectrometry data. Bioinformatics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI: 10.1093/bioinformatics/bts066. -->
 </div>
 <div class="section" id="authors">
-<h2><span class="section-number">11.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.9. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1457,7 +1478,7 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
 </details></div>
 <hr class="docutils" />
 <div class="section" id="license">
-<h2><span class="section-number">11.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.10. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1506,89 +1527,89 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#main-objectives">
-   11.1. Main Objectives
+   12.1. Main Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   11.2. Graphical Overview
+   12.2. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fairification-objectives-inputs-and-outputs">
-   11.3. FAIRification Objectives, Inputs and Outputs
+   12.3. FAIRification Objectives, Inputs and Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#table-of-data-standards">
-   11.4. Table of Data Standards
+   12.4. Table of Data Standards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ingredients">
-   11.5. Ingredients
+   12.5. Ingredients
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#converting-mass-spectrometry-data-to-mzml-format-a-step-by-step-process">
-   11.6. Converting Mass Spectrometry data to mzML format: a Step by Step Process.
+   12.6. Converting Mass Spectrometry data to mzML format: a Step by Step Process.
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-1-obtain-the-dataset">
-     11.6.1. Step 1: obtain the dataset
+     12.6.1. Step 1: obtain the dataset
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-2-inspect-the-content-of-the-archive">
-     11.6.2. Step 2: inspect the content of the archive
+     12.6.2. Step 2: inspect the content of the archive
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#i-copying-the-archive-to-a-working-directory">
-       11.6.2.1. i. copying the archive to a working directory
+       12.6.2.1. i. copying the archive to a working directory
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ii-expand-the-archive">
-       11.6.2.2. ii. expand the archive
+       12.6.2.2. ii. expand the archive
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#iii-inspect-the-folder">
-       11.6.2.3. iii. inspect the folder
+       12.6.2.3. iii. inspect the folder
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-3-convert-vendor-specific-format-to-an-open-format">
-     11.6.3. Step 3: Convert vendor specific format to an open format
+     12.6.3. Step 3: Convert vendor specific format to an open format
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#install-docker">
-       11.6.3.1. 1. install docker:
+       12.6.3.1. 1. install docker:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#start-and-sign-in-to-docker">
-       11.6.3.2. 2. start and sign in to docker
+       12.6.3.2. 2. start and sign in to docker
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#sign-up-and-or-login-to-https-hub-docker-com">
-       11.6.3.3. 3. sign-up and/or login to https://hub.docker.com/
+       12.6.3.3. 3. sign-up and/or login to https://hub.docker.com/
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pull-the-docker-container-for-proteowizard">
-       11.6.3.4. 4. pull the docker container for ProteoWizard
+       12.6.3.4. 4. pull the docker container for ProteoWizard
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#testing-and-processing-the-resulting-mzml-files">
-       11.6.3.5. 5. Testing and processing the resulting mzML files
+       12.6.3.5. 5. Testing and processing the resulting mzML files
       </a>
      </li>
     </ul>
@@ -1597,29 +1618,29 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
-   11.7. Conclusion
+   12.7. Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-to-read-next">
-     11.7.1. What to read next
+     12.7.1. What to read next?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   11.8. References
+   12.8. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   11.9. Authors
+   12.9. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   11.10. License
+   12.10. License
   </a>
  </li>
 </ul>
@@ -1634,8 +1655,8 @@ Then, interrogating the <a class="reference external" href="https://bio.tools/">
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="bioactivity-profile.html" title="previous page"><span class="section-number">10.4.3. </span>Bioactivity data profile</a>
-<a class='right-next' id="next-link" href="fastq-file-format-validators.html" title="next page"><span class="section-number">12. </span>File format validation, FASTQ example</a>
+<a class='left-prev' id="prev-link" href="bioactivity-profile.html" title="previous page"><span class="section-number">11.5.3. </span>Bioactivity data profile</a>
+<a class='right-next' id="next-link" href="fastq-file-format-validators.html" title="next page"><span class="section-number">13. </span>File format validation, FASTQ example</a>
 
                                             </div>
                                         </v-row>

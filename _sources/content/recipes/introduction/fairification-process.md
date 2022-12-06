@@ -2,8 +2,6 @@
 # A framework for FAIRification processes
 
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -274,13 +272,16 @@ The key take-homes of this recipe are:
 1. **Carefully define FAIRification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR enough”** status.
 1. **Assemble a multi-disciplinary team**. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
-### What should I read next?
->* [Prioritization of projects for FAIRification](../introduction/priorization.md)
->* [Depositing in Zenodo generic repository](../findability/zenodo-deposition.md)
->* [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
->* [Creating data/variable dictionary](../interoperability/creating-data-dictionary.md)
->* [Interlinking data from different sources](../interoperability/identifier-mapping.md)
->* [Maturity models](../maturity.md)
+### What to read next?
+* [Prioritization of projects for FAIRification](../introduction/priorization.md)
+* [Depositing in Zenodo generic repository](../findability/zenodo-deposition.md)
+* [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
+* [Creating data/variable dictionary](../interoperability/creating-data-dictionary.md)
+* [Interlinking data from different sources](../interoperability/identifier-mapping.md)
+* [Maturity models](../maturity.md)
+
+````{rdmkit_panel}
+````
 
 ## References:
 

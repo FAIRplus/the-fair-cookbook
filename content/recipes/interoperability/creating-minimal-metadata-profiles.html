@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Creating a metadata profile</title>
+    <title>11. Creating a metadata profile</title>
 
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -49,11 +49,11 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../_static/js/vue.min.js"></script>
-    <script src="../../../_static/js/searchNodal.js"></script>
     <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/searchNodal.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
     <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -67,8 +67,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="10.4.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
-    <link rel="prev" title="9. Creating data/variable dictionary" href="creating-data-dictionary.html" />
+    <link rel="next" title="11.5.1. Metadata profile for transcriptomics" href="transcriptomics-metadata.html" />
+    <link rel="prev" title="10. Creating data/variable dictionary" href="creating-data-dictionary.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
@@ -80,7 +80,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/creating-minimal-metadata-profiles.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Creating a metadata profile" />
-<meta property="og:description" content="Creating a metadata profile  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/t" />
+<meta property="og:description" content="Creating a metadata profile  &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl.org/dc/terms/&#34;, &#34;owl&#34;: &#34;http:/" />
  <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
 <meta name="twitter:card" content="summary" />
   </head>
@@ -183,7 +183,7 @@
               flat
               solo
               rounded
-              href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/creating-minimal-metadata-profiles.md"
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/main/content/recipes/interoperability/creating-minimal-metadata-profiles.md"
               class="mt-1"
               target="_blank"
             >
@@ -467,18 +467,23 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="registering-swisslipids-identifiers.html">
+     1. Registering SwissLipids identifiers in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="identifier-mapping.html">
-     1. Interlinking data from different sources
+     2. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="bridgedb-recipe.html">
-     2. Mapping identifiers with BridgeDb
+     3. Mapping identifiers with BridgeDb
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="bridgedb/bridgedb-example.html">
-       2.11.1. Mapping identifiers using BridgeDb web services
+       3.11.1. Mapping identifiers using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -487,37 +492,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="introduction-terminologies-ontologies.html">
-     3. Introducing terminologies and ontologies
+     4. Introducing terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="selecting-ontologies.html">
-     4. Selecting terminologies and ontologies
+     5. Selecting terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-new-term-request-recipe.html">
-     5. Requesting new terms from terminologies and ontologies
+     6. Requesting new terms from terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-operations-tools.html">
-     6. Introducing ontology-related tools and services
+     7. Introducing ontology-related tools and services
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ontology-robot-recipe.html">
-     7. Building an application ontology with ROBOT
+     8. Building an application ontology with ROBOT
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.11.1. Building an application ontology for metabolomics - MSIO
+       8.11.1. Building an application ontology for metabolomics - MSIO
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="ontology-robot-recipe/competency-questions.html">
-       7.11.2. Defining competency questions for the Ontology ROBOT use case
+       8.11.2. Defining competency questions for the Ontology ROBOT use case
       </a>
      </li>
     </ul>
@@ -526,32 +531,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ontology-alignment-oxo.html">
-     8. Mapping Ontologies with OxO, EBI Ontology Xref Service
+     9. Mapping Ontologies with OxO, EBI Ontology Xref Service
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-data-dictionary.html">
-     9. Creating a data/variable dictionary
+     10. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="current reference internal" href="#">
-     10. Creating a metadata profile
+     11. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="transcriptomics-metadata.html">
-       10.4.1. Outlining a metadata profile for transcriptomics
+       11.5.1. Outlining a metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html">
-       10.4.2. Building a community compliant metadata profile - The Covid19 sample profile use case
+       11.5.2. Building a community compliant metadata profile - The Covid19 sample profile use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="bioactivity-profile.html">
-       10.4.3. Outlining a metadata profile for Bioactivity data
+       11.5.3. Outlining a metadata profile for Bioactivity data
       </a>
      </li>
     </ul>
@@ -560,32 +565,46 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="from-proprietary-to-open-standard-mzml-exemplar.html">
-     11. Converting from proprietary to open format
+     12. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fastq-file-format-validators.html">
-     12. Validating file format - FASTQ example
+     13. Validating file format - FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rdf-conversion.html">
-     13. Inventorying tools for converting data to RDF
+     14. Inventorying tools for converting data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ETL-tools.html">
-     14. Surveying extraction, transformation, load (ETL) tools
+     15. Surveying extraction, transformation, load (ETL) tools
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="VCF-to-FHIR-conversion.html">
-     15. Expressing Clinical Genetic Information as FHIR JSON
+     16. Expressing Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="vcf2fhir/FAIRcookbook-vcf2fhir.html">
-       15.9.1. Converting VCF file to FHIR JSON
+       16.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="creating-knowledge-graph-from-unstructured-text.html">
+     17. Creating knowledge graphs from unstructured text
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="nlp2kg/creating-knowledge-graph-from-text.html">
+       17.12.1. unstructured text to graph as executable notebook
       </a>
      </li>
     </ul>
@@ -651,28 +670,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/dats-model.html">
+     4. Introducing the DATS model
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
-     4. Deploying a data catalogue - The IMI data catalogue example
+     5. Deploying a data catalogue - The IMI data catalogue example
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/vocabularies.html">
-     5. Vocabulary management
+     6. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       5.1. Introducing vocabulary portals and lookup services
+       6.1. Introducing vocabulary portals and lookup services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       5.2. Selecting an ontology lookup service
+       6.2. Selecting an ontology lookup service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       5.3. Deploying EBI Ontology Loopkup Service
+       6.3. Deploying EBI Ontology Loopkup Service
       </a>
      </li>
     </ul>
@@ -681,12 +705,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
-     6. Using OpenRefine and Karma for FAIRification
+     7. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/fair-api.html">
-     7. Developing FAIR API for the Web
+     8. Developing FAIR API for the Web
     </a>
    </li>
   </ul>
@@ -978,12 +1002,9 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="creating-a-metadata-profile">
-<span id="fcb-interop-metadataprofile"></span><h1><span class="section-number">10. </span>Creating a metadata profile<a class="headerlink" href="#creating-a-metadata-profile" title="Permalink to this headline">¶</a></h1>
-<br/>
-<br/>
-<br/>
+<span id="fcb-interop-metadataprofile"></span><h1><span class="section-number">11. </span>Creating a metadata profile<a class="headerlink" href="#creating-a-metadata-profile" title="Permalink to this headline">¶</a></h1>
 <script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB026", "sdo:name": "Creating a metadata profile", "sdo:description": "Creating a metadata profile", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB026", "dso:url": "https://w3id.org/faircookbook/FCB026", "owl:sameAs": "https://identifiers.org/fcb:FCB026"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H20M0S", "sdo:totalTime": "PT0H20M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB026#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB026#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB026#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB026#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
-<div class="card recipe d-flex">
+<div class="card my-10 recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
 <div class="overviewLabel">Recipe Overview</div>
@@ -1052,7 +1073,7 @@ No
 </div>
 </div>
 <div class="section" id="graphical-overview">
-<h2><span class="section-number">10.1. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
 <svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
@@ -1069,23 +1090,23 @@ No
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="building-a-minimal-metadata-profile">
 <a class="reference internal image-reference" href="../../../_images/creating-minimal-metadata-profiles-mermaid.png"><img alt="Building a minimal metadata profile" src="../../../_images/creating-minimal-metadata-profiles-mermaid.png" style="height: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Building a minimal metadata profile.</span><a class="headerlink" href="#building-a-minimal-metadata-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Building a minimal metadata profile.</span><a class="headerlink" href="#building-a-minimal-metadata-profile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
 <hr class="docutils" />
 <div class="section" id="how-to-generate-a-metadata-template">
-<h2><span class="section-number">10.2. </span>How to generate a metadata template<a class="headerlink" href="#how-to-generate-a-metadata-template" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>How to generate a metadata template<a class="headerlink" href="#how-to-generate-a-metadata-template" title="Permalink to this headline">¶</a></h2>
 <p>The following steps are intended as a starting point to guide the generation of a metadata template.</p>
 <div class="section" id="step-1-define-competency-questions">
-<h3><span class="section-number">10.2.1. </span>Step 1: Define competency questions<a class="headerlink" href="#step-1-define-competency-questions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.1. </span>Step 1: Define competency questions<a class="headerlink" href="#step-1-define-competency-questions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>What are the questions you would like to address with the template?
 Without a set of competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.</p></li>
 </ul>
 </div>
 <div class="section" id="step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions">
-<h3><span class="section-number">10.2.2. </span>Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions<a class="headerlink" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.2. </span>Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions<a class="headerlink" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Compile metadata from different sources</p></li>
 <li><p>Generate a consolidated view on metadata by merging attributes as far as possible</p></li>
@@ -1100,7 +1121,7 @@ Without a set of competency questions, important variables may easily be forgott
 </ul>
 </div>
 <div class="section" id="step-3-introduce-semantics-into-the-template">
-<h3><span class="section-number">10.2.3. </span>Step 3: Introduce semantics into the template<a class="headerlink" href="#step-3-introduce-semantics-into-the-template" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.3. </span>Step 3: Introduce semantics into the template<a class="headerlink" href="#step-3-introduce-semantics-into-the-template" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Identify most important objects to be represented in the model (e.g. study, sample, treatment, result, etc.)</p></li>
 <li><p>Make sure to have an appropriate naming strategy for the objects (e.g. an NGSstudy is an OMICSstudy is a Study; do not call an NGSstudy a Study; make sure the granularity fits your purposes)</p></li>
@@ -1112,7 +1133,7 @@ Without a set of competency questions, important variables may easily be forgott
 </ul>
 </div>
 <div class="section" id="step-4-reality-check">
-<h3><span class="section-number">10.2.4. </span>Step 4:  Reality check<a class="headerlink" href="#step-4-reality-check" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.4. </span>Step 4:  Reality check<a class="headerlink" href="#step-4-reality-check" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Introduce measures allowing to identify errors in reported data according to your model</p></li>
 <li><p>Expose your model to actual data delivered by independent colleagues and capture the errors and gaps that occurred</p></li>
@@ -1121,29 +1142,24 @@ Without a set of competency questions, important variables may easily be forgott
 <li><p>Re-iterate the reality check until no more severe errors and gaps are occurring that are relevant for the previously defined competency questions</p></li>
 </ul>
 </div>
+</div>
 <div class="section" id="what-to-read-next">
-<h3><span class="section-number">10.2.5. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">11.3. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="covid19-sample-metadata-profile-shex-use-case.html#fcb-interop-covid-metadata"><span class="std std-ref">Metadata profile validation in RDF</span></a></p></li>
 </ul>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-4 docutils">
-<div class="card w-100 border-2 docutils">
-<div class="card-header bg-primary pa_dark docutils">
-<a class="reference internal image-reference" href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo"><img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg" /></a>
+<div class="card w-100 border-2 col-md-4 p-0 docutils">
+<div class="card-header bg-primary pa_dark docutils text-center">
+<img alt="RDMkit logo" height="40px" src="/_static/images/logo/RDMkit_logo.svg">
 </div>
-<div class="card-body grey docutils">
-<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/metadata_management.html">More about <code class="docutils literal notranslate"><span class="pre">Metadata</span> <span class="pre">Management</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDMkit</span></code></a></p>
-</div>
-</div>
-</div>
-</div>
+<div class="card-body docutils">
+<p class="mb-0">Learn more about:</p>
+<ul><li><a href="https://rdmkit.elixir-europe.org/data_organisation" target="_blank">Data organisation</a></li><li><a href="https://rdmkit.elixir-europe.org/machine_actionability" target="_blank">Machine actionability</a></li><li><a href="https://rdmkit.elixir-europe.org/metadata_management" target="_blank">Documentation and metadata</a></li></ul>
 </div>
 </div>
 </div>
 <div class="section" id="authors">
-<h2><span class="section-number">10.3. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -1174,7 +1190,7 @@ Without a set of competency questions, important variables may easily be forgott
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">10.4. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.5. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -1224,49 +1240,49 @@ Without a set of competency questions, important variables may easily be forgott
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphical-overview">
-   10.1. Graphical Overview
+   11.1. Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-generate-a-metadata-template">
-   10.2. How to generate a metadata template
+   11.2. How to generate a metadata template
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-1-define-competency-questions">
-     10.2.1. Step 1: Define competency questions
+     11.2.1. Step 1: Define competency questions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-2-define-a-minimal-set-of-metadata-msom-according-to-these-questions">
-     10.2.2. Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
+     11.2.2. Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-3-introduce-semantics-into-the-template">
-     10.2.3. Step 3: Introduce semantics into the template
+     11.2.3. Step 3: Introduce semantics into the template
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-4-reality-check">
-     10.2.4. Step 4:  Reality check
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-to-read-next">
-     10.2.5. What to read next?
+     11.2.4. Step 4:  Reality check
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-read-next">
+   11.3. What to read next?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   10.3. Authors
+   11.4. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   10.4. License
+   11.5. License
   </a>
  </li>
 </ul>
@@ -1281,8 +1297,8 @@ Without a set of competency questions, important variables may easily be forgott
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="creating-data-dictionary.html" title="previous page"><span class="section-number">9. </span>Creating data/variable dictionary</a>
-<a class='right-next' id="next-link" href="transcriptomics-metadata.html" title="next page"><span class="section-number">10.4.1. </span>Metadata profile for transcriptomics</a>
+<a class='left-prev' id="prev-link" href="creating-data-dictionary.html" title="previous page"><span class="section-number">10. </span>Creating data/variable dictionary</a>
+<a class='right-next' id="next-link" href="transcriptomics-metadata.html" title="next page"><span class="section-number">11.5.1. </span>Metadata profile for transcriptomics</a>
 
                                             </div>
                                         </v-row>

@@ -1,8 +1,6 @@
 (fcb-fairify-examples-oncotrack)=
 # Oncotrack - observational clinical cohort datasets
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB044

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15.9.1. Introduction to the VCF2FHIR python library</title>
+    <title>16.9.1. Introduction to the VCF2FHIR python library</title>
 
   <link rel="stylesheet" href="../../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/search.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -49,11 +49,11 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/js/mermaid.core.js"></script>
-    <script src="../../../../_static/js/vue.min.js"></script>
-    <script src="../../../../_static/js/searchNodal.js"></script>
     <script src="../../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../../_static/js/searchNodal.js"></script>
+    <script src="../../../../_static/js/vue.min.js"></script>
     <script src="../../../../_static/js/mermaid.js"></script>
+    <script src="../../../../_static/js/mermaid.core.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -67,8 +67,8 @@
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Reusability" href="../../reusability.html" />
-    <link rel="prev" title="15. Converting VCF file to HL7 FHIR JSON Genomic Report profile" href="../VCF-to-FHIR-conversion.html" />
+    <link rel="next" title="17. Creating knowledge graphs from unstructured text" href="../creating-knowledge-graph-from-unstructured-text.html" />
+    <link rel="prev" title="16. Converting VCF file to HL7 FHIR JSON Genomic Report profile" href="../VCF-to-FHIR-conversion.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
@@ -80,7 +80,7 @@
 <meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Introduction to the VCF2FHIR python library" />
-<meta property="og:description" content="Introduction to the VCF2FHIR python library  &lt;br/&gt; &lt;br/&gt;   &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http" />
+<meta property="og:description" content="Introduction to the VCF2FHIR python library  &lt;br/&gt; &lt;br/&gt;   &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;http://purl." />
  <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
 <meta name="twitter:card" content="summary" />
   </head>
@@ -183,7 +183,7 @@
               flat
               solo
               rounded
-              href="https://github.com/FAIRplus/the-fair-cookbook/edit/migrating/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/main/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
               class="mt-1"
               target="_blank"
             >
@@ -225,7 +225,7 @@
               flat
               solo
               rounded
-              href="https://mybinder.org/v2/gh/FAIRplus/the-fair-cookbook/migrating?urlpath=lab/tree/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
+              href="https://mybinder.org/v2/gh/FAIRplus/the-fair-cookbook/main?urlpath=lab/tree/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
               class="mt-1 d-flex justify-start"
               target="_blank"
             >
@@ -243,7 +243,7 @@
               flat
               solo
               rounded
-              href="https://colab.research.google.com/github/FAIRplus/the-fair-cookbook/blob/migrating/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
+              href="https://colab.research.google.com/github/FAIRplus/the-fair-cookbook/blob/main/content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb"
               class="mt-1 d-flex justify-start"
               target="_blank"
             >
@@ -527,18 +527,23 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
+    <a class="reference internal" href="../registering-swisslipids-identifiers.html">
+     1. Registering SwissLipids identifiers in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../identifier-mapping.html">
-     1. Interlinking data from different sources
+     2. Interlinking data from different sources
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../bridgedb-recipe.html">
-     2. Mapping identifiers with BridgeDb
+     3. Mapping identifiers with BridgeDb
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../bridgedb/bridgedb-example.html">
-       2.11.1. Mapping identifiers using BridgeDb web services
+       3.11.1. Mapping identifiers using BridgeDb web services
       </a>
      </li>
     </ul>
@@ -547,37 +552,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction-terminologies-ontologies.html">
-     3. Introducing terminologies and ontologies
+     4. Introducing terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../selecting-ontologies.html">
-     4. Selecting terminologies and ontologies
+     5. Selecting terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ontology-new-term-request-recipe.html">
-     5. Requesting new terms from terminologies and ontologies
+     6. Requesting new terms from terminologies and ontologies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ontology-operations-tools.html">
-     6. Introducing ontology-related tools and services
+     7. Introducing ontology-related tools and services
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../ontology-robot-recipe.html">
-     7. Building an application ontology with ROBOT
+     8. Building an application ontology with ROBOT
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../ontology-robot-recipe/MSIO-robot-build-process.html">
-       7.11.1. Building an application ontology for metabolomics - MSIO
+       8.11.1. Building an application ontology for metabolomics - MSIO
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ontology-robot-recipe/competency-questions.html">
-       7.11.2. Defining competency questions for the Ontology ROBOT use case
+       8.11.2. Defining competency questions for the Ontology ROBOT use case
       </a>
      </li>
     </ul>
@@ -586,32 +591,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ontology-alignment-oxo.html">
-     8. Mapping Ontologies with OxO, EBI Ontology Xref Service
+     9. Mapping Ontologies with OxO, EBI Ontology Xref Service
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../creating-data-dictionary.html">
-     9. Creating a data/variable dictionary
+     10. Creating a data/variable dictionary
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../creating-minimal-metadata-profiles.html">
-     10. Creating a metadata profile
+     11. Creating a metadata profile
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../transcriptomics-metadata.html">
-       10.4.1. Outlining a metadata profile for transcriptomics
+       11.5.1. Outlining a metadata profile for transcriptomics
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../covid19-sample-metadata-profile-shex-use-case.html">
-       10.4.2. Building a community compliant metadata profile - The Covid19 sample profile use case
+       11.5.2. Building a community compliant metadata profile - The Covid19 sample profile use case
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../bioactivity-profile.html">
-       10.4.3. Outlining a metadata profile for Bioactivity data
+       11.5.3. Outlining a metadata profile for Bioactivity data
       </a>
      </li>
     </ul>
@@ -620,32 +625,46 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../from-proprietary-to-open-standard-mzml-exemplar.html">
-     11. Converting from proprietary to open format
+     12. Converting from proprietary to open format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../fastq-file-format-validators.html">
-     12. Validating file format - FASTQ example
+     13. Validating file format - FASTQ example
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../rdf-conversion.html">
-     13. Inventorying tools for converting data to RDF
+     14. Inventorying tools for converting data to RDF
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ETL-tools.html">
-     14. Surveying extraction, transformation, load (ETL) tools
+     15. Surveying extraction, transformation, load (ETL) tools
     </a>
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="../VCF-to-FHIR-conversion.html">
-     15. Expressing Clinical Genetic Information as FHIR JSON
+     16. Expressing Clinical Genetic Information as FHIR JSON
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       15.9.1. Converting VCF file to FHIR JSON
+       16.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../creating-knowledge-graph-from-unstructured-text.html">
+     17. Creating knowledge graphs from unstructured text
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nlp2kg/creating-knowledge-graph-from-text.html">
+       17.12.1. unstructured text to graph as executable notebook
       </a>
      </li>
     </ul>
@@ -711,28 +730,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../infrastructure/dats-model.html">
+     4. Introducing the DATS model
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../infrastructure/data-catalog-deployment.html">
-     4. Deploying a data catalogue - The IMI data catalogue example
+     5. Deploying a data catalogue - The IMI data catalogue example
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../../infrastructure/vocabularies.html">
-     5. Vocabulary management
+     6. Vocabulary management
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
       <a class="reference internal" href="../../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
-       5.1. Introducing vocabulary portals and lookup services
+       6.1. Introducing vocabulary portals and lookup services
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
-       5.2. Selecting an ontology lookup service
+       6.2. Selecting an ontology lookup service
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
-       5.3. Deploying EBI Ontology Loopkup Service
+       6.3. Deploying EBI Ontology Loopkup Service
       </a>
      </li>
     </ul>
@@ -741,12 +765,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../infrastructure/openrefine-nvt.html">
-     6. Using OpenRefine and Karma for FAIRification
+     7. Using OpenRefine and Karma for FAIRification
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../infrastructure/fair-api.html">
-     7. Developing FAIR API for the Web
+     8. Developing FAIR API for the Web
     </a>
    </li>
   </ul>
@@ -1038,12 +1062,11 @@
                                             <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
                                                 
   <div class="section" id="introduction-to-the-vcf2fhir-python-library">
-<h1><span class="section-number">15.9.1. </span>Introduction to the VCF2FHIR python library<a class="headerlink" href="#introduction-to-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h1>
-<br/>
+<h1><span class="section-number">16.9.1. </span>Introduction to the VCF2FHIR python library<a class="headerlink" href="#introduction-to-the-vcf2fhir-python-library" title="Permalink to this headline">¶</a></h1>
 <br/>
 <br/>
 <script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB059", "sdo:name": "Converting VCF file to FHIR JSON", "sdo:description": "Converting VCF file to FHIR JSON", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Hands-on", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB059", "dso:url": "https://w3id.org/faircookbook/FCB059", "owl:sameAs": "https://identifiers.org/fcb:FCB059"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H30M0S", "sdo:totalTime": "PT0H30M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB059#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB059#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB059#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB059#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
-<div class="card recipe d-flex">
+<div class="card my-10 recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
 <div class="overviewLabel">Recipe Overview</div>
@@ -1133,7 +1156,7 @@ Yes
 </li>
 </ul>
 <div class="section" id="let-s-get-going-by-importing-all-the-necessary-python-libraries">
-<h2><span class="section-number">15.9.1.1. </span>Let’s get going by importing all the necessary python libraries<a class="headerlink" href="#let-s-get-going-by-importing-all-the-necessary-python-libraries" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.9.1.1. </span>Let’s get going by importing all the necessary python libraries<a class="headerlink" href="#let-s-get-going-by-importing-all-the-necessary-python-libraries" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -1145,7 +1168,7 @@ Yes
 </div>
 </div>
 <div class="section" id="vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional">
-<h3><span class="section-number">15.9.1.1.1. </span>VCF2FHIR python library<code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> main method is called <code class="docutils literal notranslate"><span class="pre">Converter</span></code> and takes a number of arguments, most of which are optional.<a class="headerlink" href="#vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.1. </span>VCF2FHIR python library<code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> main method is called <code class="docutils literal notranslate"><span class="pre">Converter</span></code> and takes a number of arguments, most of which are optional.<a class="headerlink" href="#vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Required arguments:</p></li>
 </ul>
@@ -1182,7 +1205,7 @@ Yes
 </ul>
 <p>For more information about those options, refer to the <a class="reference external" href="https://vcf2fhir.readthedocs.io/en/latest/API.html">library documentation</a>.</p>
 <div class="section" id="invoking-the-converter-is-as-simple-as-the-following-command">
-<h4><span class="section-number">15.9.1.1.1.1. </span>Invoking the converter is as simple as the following command:<a class="headerlink" href="#invoking-the-converter-is-as-simple-as-the-following-command" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.1.1. </span>Invoking the converter is as simple as the following command:<a class="headerlink" href="#invoking-the-converter-is-as-simple-as-the-following-command" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fhir</span> <span class="o">=</span> <span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh37&#39;</span><span class="p">)</span>
@@ -1192,7 +1215,7 @@ Yes
 </div>
 </div>
 <div class="section" id="invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output">
-<h4><span class="section-number">15.9.1.1.1.2. </span>Invoking the <code class="docutils literal notranslate"><span class="pre">convert()</span></code> submethod to serialize the information as a HL7 FHIR JSON message to a default file output.<a class="headerlink" href="#invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.1.2. </span>Invoking the <code class="docutils literal notranslate"><span class="pre">convert()</span></code> submethod to serialize the information as a HL7 FHIR JSON message to a default file output.<a class="headerlink" href="#invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fhir</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
@@ -1202,7 +1225,7 @@ Yes
 </div>
 </div>
 <div class="section" id="performing-both-actions-in-one-go-while-using-an-additional-optional-argument">
-<h4><span class="section-number">15.9.1.1.1.3. </span>Performing both actions in one go while using an additional optional argument<a class="headerlink" href="#performing-both-actions-in-one-go-while-using-an-additional-optional-argument" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.1.3. </span>Performing both actions in one go while using an additional optional argument<a class="headerlink" href="#performing-both-actions-in-one-go-while-using-an-additional-optional-argument" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh38&#39;</span><span class="p">,</span> <span class="s1">&#39;patient01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
@@ -1212,7 +1235,7 @@ Yes
 </div>
 </div>
 <div class="section" id="invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file">
-<h4><span class="section-number">15.9.1.1.1.4. </span>Invoking the conversion and writing to a user defined file instead of the default file.<a class="headerlink" href="#invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.1.4. </span>Invoking the conversion and writing to a user defined file instead of the default file.<a class="headerlink" href="#invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="o">=</span><span class="n">vcf2fhir</span><span class="o">.</span><span class="n">Converter</span><span class="p">(</span><span class="s1">&#39;vcftests.vcf&#39;</span><span class="p">,</span><span class="s1">&#39;GRCh37&#39;</span><span class="p">,</span> <span class="s1">&#39;patient01&#39;</span><span class="p">,</span> <span class="n">ratio_ad_dp</span> <span class="o">=</span> <span class="mf">0.89</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">output_filename</span><span class="o">=</span><span class="s1">&#39;patient01.json&#39;</span><span class="p">)</span>
@@ -1223,7 +1246,7 @@ Yes
 </div>
 </div>
 <div class="section" id="peaking-at-the-resulting-json-file">
-<h3><span class="section-number">15.9.1.1.2. </span>Peaking at the resulting JSON file:<a class="headerlink" href="#peaking-at-the-resulting-json-file" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.2. </span>Peaking at the resulting JSON file:<a class="headerlink" href="#peaking-at-the-resulting-json-file" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;patient01.json&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">input</span><span class="p">:</span>
@@ -2972,12 +2995,12 @@ Yes
 </div>
 </div>
 <div class="section" id="tracking-conversion-errors-by-activating-the-logger-function">
-<h3><span class="section-number">15.9.1.1.3. </span>Tracking conversion errors by activating the logger function<a class="headerlink" href="#tracking-conversion-errors-by-activating-the-logger-function" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.3. </span>Tracking conversion errors by activating the logger function<a class="headerlink" href="#tracking-conversion-errors-by-activating-the-logger-function" title="Permalink to this headline">¶</a></h3>
 <p>As with all conversions, things can go awry. It is therefore always good to log any error when executing code.
 The authors of the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> library provide 2 distinct logging modes, which we’ll now use.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> logging process simply builds on the well established python <code class="docutils literal notranslate"><span class="pre">logging</span></code> library and therefore to use it is as simple as using said library:</p>
 <div class="section" id="i-instantiate-a-logger-and-set-a-error-logging-level">
-<h4><span class="section-number">15.9.1.1.3.1. </span>i. instantiate a logger and set a error logging level<a class="headerlink" href="#i-instantiate-a-logger-and-set-a-error-logging-level" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.3.1. </span>i. instantiate a logger and set a error logging level<a class="headerlink" href="#i-instantiate-a-logger-and-set-a-error-logging-level" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">general_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;vcf2fhir.general&#39;</span><span class="p">)</span>
@@ -2988,7 +3011,7 @@ The authors of the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="ii-define-an-file-as-output-and-a-formatter-pattern">
-<h4><span class="section-number">15.9.1.1.3.2. </span>ii. define an file as output and a formatter pattern<a class="headerlink" href="#ii-define-an-file-as-output-and-a-formatter-pattern" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.3.2. </span>ii. define an file as output and a formatter pattern<a class="headerlink" href="#ii-define-an-file-as-output-and-a-formatter-pattern" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create console handler and set level to debug</span>
@@ -3007,9 +3030,9 @@ The authors of the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="using-the-dedicated-invalid-record-logger">
-<h3><span class="section-number">15.9.1.1.4. </span>Using the dedicated <code class="docutils literal notranslate"><span class="pre">invalid_record_logger</span></code>:<a class="headerlink" href="#using-the-dedicated-invalid-record-logger" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.4. </span>Using the dedicated <code class="docutils literal notranslate"><span class="pre">invalid_record_logger</span></code>:<a class="headerlink" href="#using-the-dedicated-invalid-record-logger" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows">
-<h4><span class="section-number">15.9.1.1.4.1. </span>i. create a logger and pass it the specific vcf2fhir logger as follows:<a class="headerlink" href="#i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.4.1. </span>i. create a logger and pass it the specific vcf2fhir logger as follows:<a class="headerlink" href="#i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invalid_record_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;vcf2fhir.invalidrecord&#39;</span><span class="p">)</span>
@@ -3019,7 +3042,7 @@ The authors of the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="ii-configure-the-logger-output-file-error-logging-level-and-output-formatting">
-<h4><span class="section-number">15.9.1.1.4.2. </span>ii. configure the logger output file, error logging level and output formatting<a class="headerlink" href="#ii-configure-the-logger-output-file-error-logging-level-and-output-formatting" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.4.2. </span>ii. configure the logger output file, error logging level and output formatting<a class="headerlink" href="#ii-configure-the-logger-output-file-error-logging-level-and-output-formatting" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inv_ch</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s1">&#39;vcf2fhir-invalid-record-errors.log&#39;</span><span class="p">)</span>
@@ -3032,7 +3055,7 @@ The authors of the <code class="docutils literal notranslate"><span class="pre">
 <p><code class="docutils literal notranslate"><span class="pre">note</span></code>: *we reuse the <code class="docutils literal notranslate"><span class="pre">formatter</span></code> created previously</p>
 </div>
 <div class="section" id="iii-plug-the-error-handler-in-the-logger-and-execute">
-<h4><span class="section-number">15.9.1.1.4.3. </span>iii.  plug the error handler in the logger  and execute<a class="headerlink" href="#iii-plug-the-error-handler-in-the-logger-and-execute" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.4.3. </span>iii.  plug the error handler in the logger  and execute<a class="headerlink" href="#iii-plug-the-error-handler-in-the-logger-and-execute" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invalid_record_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">inv_ch</span><span class="p">)</span>
@@ -3043,7 +3066,7 @@ The authors of the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json">
-<h3><span class="section-number">15.9.1.1.5. </span>We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.<a class="headerlink" href="#we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.5. </span>We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.<a class="headerlink" href="#we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json" title="Permalink to this headline">¶</a></h3>
 <p>This is an important Quality Control step as the <code class="docutils literal notranslate"><span class="pre">vcf2fhir</span></code> is still experimental and under active development.
 Therefore, users of the tool need to excert critical thinking, understand the parsing and conversion rules as well as understand
 the limit of the envelop of the tool, as explained by the authors in their manuscript .</p>
@@ -3064,10 +3087,10 @@ the limit of the envelop of the tool, as explained by the authors in their manus
 </div>
 </div>
 <div class="section" id="conclusion">
-<h3><span class="section-number">15.9.1.1.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.6. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
 <p>With this notebook, we’ve shown how to convert genetic variation information held in a VCF formatted file (it must comply with v4.1 or higher for this conversion to work) and generate a JSON-based HL7 FHIR Genomics Report message.</p>
 <div class="section" id="why-does-this-matter-and-how-does-it-relate-to-fair">
-<h4><span class="section-number">15.9.1.1.6.1. </span>Why does this matter and how does it relate to FAIR:<a class="headerlink" href="#why-does-this-matter-and-how-does-it-relate-to-fair" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">16.9.1.1.6.1. </span>Why does this matter and how does it relate to FAIR:<a class="headerlink" href="#why-does-this-matter-and-how-does-it-relate-to-fair" title="Permalink to this headline">¶</a></h4>
 <p>The conversion from VCF to HL7 FHIR JSON message has to do with the <code class="docutils literal notranslate"><span class="pre">**I</span> <span class="pre">and</span> <span class="pre">R**</span></code> of <code class="docutils literal notranslate"><span class="pre">FAIR</span></code>, that is interoperability and reusability.
 From a syntactic standpoint, the availability of genetic variation information at a granular level in an easily parseable form (JSON) is a gain for anyone looking at merging this information with other clinical messages.
 From a semantic standpoint, the reliance on <code class="docutils literal notranslate"><span class="pre">LOINC</span></code> vocabulary to mark up the patterns defined in the HL7 FHIR Genomics Reports enhances interoperation between systems by provided unambiguous annotations.
@@ -3076,7 +3099,7 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
 </div>
 </div>
 <div class="section" id="reference">
-<h3><span class="section-number">15.9.1.1.7. </span>Reference:<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.9.1.1.7. </span>Reference:<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Reference</strong><div class="summary-down docutils">
@@ -3092,7 +3115,7 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
 </details></div>
 </div>
 <div class="section" id="authors">
-<h2><span class="section-number">15.9.1.2. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.9.1.2. </span>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Authors</strong><div class="summary-down docutils">
@@ -3137,7 +3160,7 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
 </div>
 </details></div>
 <div class="section" id="license">
-<h2><span class="section-number">15.9.1.3. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.9.1.3. </span>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>License</strong><div class="summary-down docutils">
@@ -3185,12 +3208,12 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#let-s-get-going-by-importing-all-the-necessary-python-libraries">
-   15.9.1.1. Let’s get going by importing all the necessary python libraries
+   16.9.1.1. Let’s get going by importing all the necessary python libraries
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vcf2fhir-python-libraryvcf2fhir-main-method-is-called-converter-and-takes-a-number-of-arguments-most-of-which-are-optional">
-     15.9.1.1.1. VCF2FHIR python library
+     16.9.1.1.1. VCF2FHIR python library
      <code class="docutils literal notranslate">
       <span class="pre">
        vcf2fhir
@@ -3207,12 +3230,12 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#invoking-the-converter-is-as-simple-as-the-following-command">
-       15.9.1.1.1.1. Invoking the converter is as simple as the following command:
+       16.9.1.1.1.1. Invoking the converter is as simple as the following command:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#invoking-the-convert-submethod-to-serialize-the-information-as-a-hl7-fhir-json-message-to-a-default-file-output">
-       15.9.1.1.1.2. Invoking the
+       16.9.1.1.1.2. Invoking the
        <code class="docutils literal notranslate">
         <span class="pre">
          convert()
@@ -3223,41 +3246,41 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#performing-both-actions-in-one-go-while-using-an-additional-optional-argument">
-       15.9.1.1.1.3. Performing both actions in one go while using an additional optional argument
+       16.9.1.1.1.3. Performing both actions in one go while using an additional optional argument
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#invoking-the-conversion-and-writing-to-a-user-defined-file-instead-of-the-default-file">
-       15.9.1.1.1.4. Invoking the conversion and writing to a user defined file instead of the default file.
+       16.9.1.1.1.4. Invoking the conversion and writing to a user defined file instead of the default file.
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#peaking-at-the-resulting-json-file">
-     15.9.1.1.2. Peaking at the resulting JSON file:
+     16.9.1.1.2. Peaking at the resulting JSON file:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracking-conversion-errors-by-activating-the-logger-function">
-     15.9.1.1.3. Tracking conversion errors by activating the logger function
+     16.9.1.1.3. Tracking conversion errors by activating the logger function
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#i-instantiate-a-logger-and-set-a-error-logging-level">
-       15.9.1.1.3.1. i. instantiate a logger and set a error logging level
+       16.9.1.1.3.1. i. instantiate a logger and set a error logging level
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ii-define-an-file-as-output-and-a-formatter-pattern">
-       15.9.1.1.3.2. ii. define an file as output and a formatter pattern
+       16.9.1.1.3.2. ii. define an file as output and a formatter pattern
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-the-dedicated-invalid-record-logger">
-     15.9.1.1.4. Using the dedicated
+     16.9.1.1.4. Using the dedicated
      <code class="docutils literal notranslate">
       <span class="pre">
        invalid_record_logger
@@ -3268,53 +3291,53 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#i-create-a-logger-and-pass-it-the-specific-vcf2fhir-logger-as-follows">
-       15.9.1.1.4.1. i. create a logger and pass it the specific vcf2fhir logger as follows:
+       16.9.1.1.4.1. i. create a logger and pass it the specific vcf2fhir logger as follows:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ii-configure-the-logger-output-file-error-logging-level-and-output-formatting">
-       15.9.1.1.4.2. ii. configure the logger output file, error logging level and output formatting
+       16.9.1.1.4.2. ii. configure the logger output file, error logging level and output formatting
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#iii-plug-the-error-handler-in-the-logger-and-execute">
-       15.9.1.1.4.3. iii.  plug the error handler in the logger  and execute
+       16.9.1.1.4.3. iii.  plug the error handler in the logger  and execute
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#we-can-now-read-the-log-file-to-check-what-happened-during-the-conversion-from-vcf-to-fhir-json">
-     15.9.1.1.5. We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.
+     16.9.1.1.5. We can now read the log file to check what happened during the conversion from VCF to FHIR JSON.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conclusion">
-     15.9.1.1.6. Conclusion
+     16.9.1.1.6. Conclusion
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#why-does-this-matter-and-how-does-it-relate-to-fair">
-       15.9.1.1.6.1. Why does this matter and how does it relate to FAIR:
+       16.9.1.1.6.1. Why does this matter and how does it relate to FAIR:
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reference">
-     15.9.1.1.7. Reference:
+     16.9.1.1.7. Reference:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors">
-   15.9.1.2. Authors
+   16.9.1.2. Authors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license">
-   15.9.1.3. License
+   16.9.1.3. License
   </a>
  </li>
 </ul>
@@ -3329,8 +3352,8 @@ Finally, as more systems are able to produce FHIR message from a variety of inst
                                         <v-row class="mb-5">
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
-<a class='left-prev' id="prev-link" href="../VCF-to-FHIR-conversion.html" title="previous page"><span class="section-number">15. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile</a>
-<a class='right-next' id="next-link" href="../../reusability.html" title="next page">Reusability</a>
+<a class='left-prev' id="prev-link" href="../VCF-to-FHIR-conversion.html" title="previous page"><span class="section-number">16. </span>Converting VCF file to HL7 FHIR JSON Genomic Report profile</a>
+<a class='right-next' id="next-link" href="../creating-knowledge-graph-from-unstructured-text.html" title="next page"><span class="section-number">17. </span>Creating knowledge graphs from unstructured text</a>
 
                                             </div>
                                         </v-row>

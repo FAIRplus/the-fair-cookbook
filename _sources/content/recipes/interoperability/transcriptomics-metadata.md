@@ -1,8 +1,6 @@
 (fcb-interop-txmetadata)=
 # Metadata profile for transcriptomics
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB027
