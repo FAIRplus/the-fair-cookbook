@@ -1,8 +1,7 @@
 (fcb-intro-fair-values)=
 # Reflections on the Ethical values of FAIR
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB072

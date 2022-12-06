@@ -1,0 +1,124 @@
+- rdmkit_title: Compliance monitoring & measurement
+  rdmkit_filename: compliance_monitoring
+  links:
+    - fcb_title: Creating a data/variable dictionary
+      fcb_id: FCB025
+    - fcb_title: FAIR Evaluator tool
+      fcb_id: FCB049
+    - fcb_title: FAIRshake tool
+      fcb_id: FCB050
+
+- rdmkit_title: Data analysis
+  rdmkit_filename: data_analysis
+  links:
+    - fcb_title: Provenance information
+      fcb_id: FCB036
+
+- rdmkit_title:  Data organisation
+  rdmkit_filename: data_organisation
+  links:
+    - fcb_title: Creating a data/variable dictionary
+      fcb_id: FCB025
+    - fcb_title: Creating a metadata profile
+      fcb_id: FCB026
+    - fcb_title: Extraction, transformation, and loading process
+      fcb_id: FCB031
+
+- rdmkit_title:  Data protection
+  rdmkit_filename: data_protection
+  links:
+    - fcb_title: Data licenses
+      fcb_id: FCB034
+    - fcb_title: Declaring data's permitted uses
+      fcb_id: FCB035
+
+- rdmkit_title: Data publication
+  rdmkit_filename: data_publication
+  links:
+    - fcb_title: Depositing in Zenodo generic repository
+      fcb_id: FCB009
+
+- rdmkit_title: Data quality
+  rdmkit_filename: data_quality
+  links:
+    - fcb_title: Provenance information
+      fcb_id: FCB036
+
+- rdmkit_title: Data transfer
+  rdmkit_filename: data_transfer
+  links:
+    - fcb_title: Transferring data with SFTP
+      fcb_id: FCB014
+    - fcb_title: Downloading data with Aspera
+      fcb_id: FCB015
+    - fcb_title: Describe data by checksums
+      fcb_id: FCB052
+
+- rdmkit_title: Identifiers
+  rdmkit_filename: identifiers
+  links:
+    - fcb_title: Unique, persistent identifiers
+      fcb_id: FCB006
+    - fcb_title: InChI and SMILES identifiers for chemical structures
+      fcb_id: FCB007
+    - fcb_title: Minting identifiers with Minid
+      fcb_id: FCB008
+
+- rdmkit_title: Licensing
+  rdmkit_filename: licensing
+  links:
+    - fcb_title: Licensing
+      fcb_id: FCB032
+    - fcb_title: Software licenses
+      fcb_id: FCB033
+    - fcb_title: Data licenses
+      fcb_id: FCB034
+    - fcb_title: Declaring data's permitted uses
+      fcb_id: FCB035
+
+- rdmkit_title: Machine actionability
+  rdmkit_filename: machine_actionability
+  links:
+    - fcb_title: Unique, persistent identifiers
+      fcb_id: FCB006
+    - fcb_title: Search engine optimization
+      fcb_id: FCB010
+    - fcb_title: Creating a metadata profile
+      fcb_id: FCB026
+
+- rdmkit_title: Documentation and metadata
+  rdmkit_filename: metadata_management
+  links:
+    - fcb_title: Introduction to terminologies and ontologies
+      fcb_id: FCB019
+    - fcb_title: Creating data/variable dictionary
+      fcb_id: FCB025
+    - fcb_title: Creating a metadata profile
+      fcb_id: FCB026
+    - fcb_title: Search engine optimization
+      fcb_id: FCB010
+    - fcb_title: Selecting terminologies and ontologies
+      fcb_id: FCB020
+    - fcb_title: Requesting new terms
+      fcb_id: FCB021
+    - fcb_title: Ontology-related tools and services
+      fcb_id: FCB022
+
+- rdmkit_title: Sensitive data
+  rdmkit_filename: sensitive_data
+  links:
+    - fcb_title: Declaring data's permitted uses
+      fcb_id: FCB035
+
+- rdmkit_title: Plant sciences
+  rdmkit_filename: plant_sciences
+  links:
+    - fcb_title: Plant genomic and genetic variation data submission to EMBL-EBI databases
+      fcb_id: FCB061
+
+- rdmkit_title: Plant Genomics
+  rdmkit_filename: plant_genomics_assembly
+  links:
+    - fcb_title: Plant genomic and genetic variation data submission to EMBL-EBI databases
+      fcb_id: FCB061
+

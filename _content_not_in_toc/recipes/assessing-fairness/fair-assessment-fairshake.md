@@ -1,8 +1,7 @@
 (fcb-assess-fair-fairshake)=
 # FAIR assessment with FAIRShake
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

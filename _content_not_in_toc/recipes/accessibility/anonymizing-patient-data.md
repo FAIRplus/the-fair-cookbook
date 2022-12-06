@@ -29,8 +29,10 @@ This is a placeholder
      ### Step5:
 
 ## Conclusion
-### what to read next
+### what to read next?
 
+````{rdmkit_panel}
+````
 
 ## License
 

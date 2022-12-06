@@ -1,8 +1,6 @@
 (fcb-public-kg)=
 # Public knowledge graph resources for life sciences
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB071
@@ -371,20 +369,20 @@ Link Prediction example notebook: https://github.com/tomasonjo/blogs/blob/master
 ---
 ## Conclusion
 
-> With this recipe, the intent was to raise awareness in the wealth of Life Science information available as Knowledge Graph and ongoing integrative efforts.
-> We have also tried to convey information about the license for each of the resources as well as some insights into the curation protocols specific to each the KG.
-> Finally, we wanted to highlight how some KGs are already used to train models and make predictions in the context of drug repurposing for instance. 
-> This is of particular interest in the context of the Innovative Medicine Initiative but not only, obviously.
-> It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as the process to perform in order to be able to be compatible with specific resources for a specific task at hand.
->
+With this recipe, the intent was to raise awareness in the wealth of Life Science information available as Knowledge Graph and ongoing integrative efforts.
+We have also tried to convey information about the license for each of the resources as well as some insights into the curation protocols specific to each the KG.
+Finally, we wanted to highlight how some KGs are already used to train models and make predictions in the context of drug repurposing for instance. 
+This is of particular interest in the context of the Innovative Medicine Initiative but not only, obviously.
+It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as the process to perform in order to be able to be compatible with specific resources for a specific task at hand.
 
-> ### What should I read next?
-> 
-> * [Knowledge graph completion with PyKEEN and neo4j](https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43)
-> 
-> * [Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs](https://arxiv.org/abs/2112.06567) {footcite}`DBLP:journals/corr/abs-2112-06567`
->
-> * [A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective](https://doi.org/10.48550/arXiv.2102.10062) {footcite}`https://doi.org/10.48550/arxiv.2102.10062`
+### What to read next?
+
+* [Knowledge graph completion with PyKEEN and neo4j](https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43)
+* [Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs](https://arxiv.org/abs/2112.06567) {footcite}`DBLP:journals/corr/abs-2112-06567`
+* [A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective](https://doi.org/10.48550/arXiv.2102.10062) {footcite}`https://doi.org/10.48550/arxiv.2102.10062`
+
+````{rdmkit_panel}
+````
 
 ---
 

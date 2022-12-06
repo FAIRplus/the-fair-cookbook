@@ -2,8 +2,6 @@
 
 # Add via GoogleDocs 
 
-<br/>
-<br/>
 
 The FAIR cookbook content can be expanded by adding a recipe. We present here the easiest way to do so.
 

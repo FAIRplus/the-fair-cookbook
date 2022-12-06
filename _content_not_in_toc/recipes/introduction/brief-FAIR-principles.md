@@ -1,7 +1,6 @@
 # What are the FAIR Principles?
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X
@@ -256,10 +255,14 @@ TODO: add text here
 
 This section should be seen as a refresher for any one unclear about the FAIR principles. Now that key background information has been provided, shining a light on an number of ethical issues driving both the development and implementation of the FAIR principles in the context of Life Science data as well as learning about the overall FAIRification process represent a natural progression in the content of the FAIR Cookbook.
 
-> ### What to read read next?
-> * [The ethical values of FAIR](./FAIRplus-values)
-> * [Assessing FAIRness](../assessing-fairness)
-> * [What is IMI](./what-is-IMI.md)
+### What to read read next?
+
+* [The ethical values of FAIR](./FAIRplus-values)
+* [Assessing FAIRness](../assessing-fairness)
+* [What is IMI](./what-is-IMI.md)
+
+````{rdmkit_panel}
+````
 
 ---
 

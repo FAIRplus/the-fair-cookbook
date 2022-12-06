@@ -1,8 +1,7 @@
 (fcb-level-four-maturity)=
 # Recipes reaching Level IV
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB0YY
