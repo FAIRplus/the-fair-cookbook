@@ -327,17 +327,17 @@ Interestingly, two use cases for using the BIKG are discussed in the associated 
 > CRISPR Screen Hit ranking
 
 
-## pyKEEN
+## PyKEEN
 
 PyKEEN (Python KnowlEdge EmbeddiNgs) is a Python package designed to train and evaluate knowledge graph embedding models (KGEM) (incorporating multi-modal information) {footcite}`pmid34735335`, {footcite}`pmid30768158`.
 
-GitHb Repository: https://github.com/pykeen/pykeen
+GitHub Repository: https://github.com/pykeen/pykeen
 
 So, as such, PyKEEN is more a tool than a KG, however PyKEEN contains many reference KGs and datasets which can be used for a variety of data science tasks and machine learning applications. PyKEEN is mainly geared towards helping developers train KGEM for tasks such as link prediction.
 
 The following figure shows a snippet of the various KGs available from the python package.
 
-````{dropdown} pyKEEN datasets
+````{dropdown} PyKEEN datasets
 :open:
 ```{figure} ../../../images/pykeen_datasets.png
 ---
@@ -345,7 +345,7 @@ width: 750px
 name: pykeen
 alt: pykeen
 ---
-pykeen
+A screenshot of the README on the PyKEEN GitHub repository
 ```
 
 pykeen
@@ -377,7 +377,7 @@ It certainly should provide food for thoughts when engaging with a FAIRification
 
 ### What to read next?
 
-* [Knowledge graph completion with pykeen and neo4j](https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43)
+* [Knowledge graph completion with PyKEEN and neo4j](https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43)
 * [Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs](https://arxiv.org/abs/2112.06567) {footcite}`DBLP:journals/corr/abs-2112-06567`
 * [A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective](https://doi.org/10.48550/arXiv.2102.10062) {footcite}`https://doi.org/10.48550/arxiv.2102.10062`
 
