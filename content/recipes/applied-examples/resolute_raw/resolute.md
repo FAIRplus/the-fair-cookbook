@@ -2,8 +2,6 @@
 # ReSOLUTE - transcriptomics datasets
 
 +++
-<br/>
-<br/>
 
 <!--
 TODO clarify authors

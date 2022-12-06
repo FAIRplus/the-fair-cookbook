@@ -1,8 +1,6 @@
 (fcb-rdf-conversion)=
 # An inventory of tools for converting data to RDF
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -300,10 +298,12 @@ For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyt
 For Java the two most common libraries for working with RDF are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
-#### What should I read next?
+## What to read next?
 
 * [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
+````{rdmkit_panel}
+````
 
 ````{dropdown} **References**
 ````

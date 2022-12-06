@@ -1,8 +1,7 @@
 (fcb-fair-principles)=
 # What are the FAIR Principles?
 
-+++
-<br/>
+
 
 <!-- ````{panels_fairplus}
 :identifier_text: RX.X
@@ -183,10 +182,12 @@ both the development and implementation of the FAIR principles in the context of
 as well as learning about the overall FAIRification process represent a natural progression 
 in the content of the FAIR Cookbook.
 
-> ### What to read read next?
-> * [The ethical values of FAIR](./FAIRplus-values)
-> * [Assessing FAIRness](../assessing-fairness)
+### What to read next?
+* [The ethical values of FAIR](./FAIRplus-values)
+* [Assessing FAIRness](../assessing-fairness)
 
+````{rdmkit_panel}
+````
 
 ---
 

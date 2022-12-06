@@ -1,8 +1,7 @@
 (fcb-metadata)=
 # FAIR and the notion of metadata
 
-+++
-<br/>
+
 
 
 ````{panels_fairplus}
@@ -151,17 +150,19 @@ As with all human things, there will be redundant, overlapping, competing effort
 ---
 ## Conclusion
 
-> 
+
 In this recipe, we introduced the concept of metadata and presented a possible typology for it. We also showed the close relation between metadata and semantic models used to represent information as well as how, with the reliance on the Resource Description Framework, the boundary with syntax and semantics somehow becomes more fuzzy. We therefore encourage readers to delve into these other sections of the FAIR Cookbook.
 
-> 
-> ## What to read next section
-> * [FAIR and Knowledge Graphs](https://w3id.org/faircookbook/FCB070)
-> * [Creating a metadata profile](https://w3id.org/faircookbook/FCB026)
-> * [Provenance Information](https://w3id.org/faircookbook/FCB036)
-> * [Declaring permitted use](https://w3id.org/faircookbook/FCB035)
+ 
+### What to read next?
 
+* [FAIR and Knowledge Graphs](https://w3id.org/faircookbook/FCB070)
+* [Creating a metadata profile](https://w3id.org/faircookbook/FCB026)
+* [Provenance Information](https://w3id.org/faircookbook/FCB036)
+* [Declaring permitted use](https://w3id.org/faircookbook/FCB035)
 
+````{rdmkit_panel}
+````
 
 ---
 ## References

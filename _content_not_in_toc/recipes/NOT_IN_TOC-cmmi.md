@@ -1,8 +1,7 @@
 (fcb-cmmi)=
 # FAIR & Capability Maturity Model
 
-+++
-<br/>
+
 
 ---
 

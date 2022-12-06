@@ -1,8 +1,7 @@
 (fcb-intro-imi-dmgnt)=
 # IMI and Data Management
 
-+++
-<br/>
+
 
 ---
 

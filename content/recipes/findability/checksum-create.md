@@ -1,8 +1,6 @@
 (fcb-checksum-create)=
 # How to create checksum files
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB052 
@@ -167,6 +165,8 @@ This recipe in its current form has the following limitations:
 - Wikipedia article on the algorithm `md5`: <https://en.wikipedia.org/wiki/MD5>
 - Wikipedia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References**

@@ -1,8 +1,7 @@
 (fcb-select-onto-service)=
 # Selecting an ontology lookup service
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB004
