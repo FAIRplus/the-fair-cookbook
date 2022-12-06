@@ -365,15 +365,16 @@ Fill all the necessary information and press the blue **Push** button.
 
 ## Conclusion:
 
->This recipe should get you started to contribute content, writing Markdown documents, following the FAIRplus guidance 
-> and FAIRplus recipe template.
->
->☢ If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the
-> [dedicated email](mailto:FAIRplus-cookbook@elixir-europe.org) or via our [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
-> ### What should I read next?
-> * [HackMD & MarkDown Tips and Tricks](fcb-help-tips)
-> * [How to create jupyter notebook?](https://jupyter-notebook.readthedocs.io/en/stable/)
-> * [FAIRplus recipe template](https://the-fair-cookbook.netlify.app/recipes/help/recipe-template)
+This recipe should get you started to contribute content, writing Markdown documents, following the FAIRplus guidance 
+and FAIRplus recipe template.
+
+If unsure about these steps, contact the FAIRPlus editorial team for assistance, using the
+[dedicated email](mailto:FAIRplus-cookbook@elixir-europe.org) or via our [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
+
+### What to read next?
+* [HackMD & MarkDown Tips and Tricks](fcb-help-tips)
+* [How to create jupyter notebook?](https://jupyter-notebook.readthedocs.io/en/stable/)
+* [FAIRplus recipe template](https://the-fair-cookbook.netlify.app/recipes/help/recipe-template)
 
 
 

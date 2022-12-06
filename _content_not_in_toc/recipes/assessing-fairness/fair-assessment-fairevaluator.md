@@ -1,8 +1,7 @@
 (fcb-assess-fair-automatic-evaluator)=
 # Assessing FAIRness with FAIREvaluator
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

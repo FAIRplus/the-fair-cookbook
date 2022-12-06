@@ -1,6 +1,4 @@
 # Registering Datasets in Wikidata
-<br/>
-<br/>
 
  ````{panels_fairplus}
 :identifier_text: FCB060

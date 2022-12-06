@@ -1,8 +1,6 @@
 (fcb-intro-ati-twb)=
 # Leveraging the Turing Way Book
 
-<br/>
-<br/>
 
 ## The Background
 

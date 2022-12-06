@@ -1,8 +1,6 @@
 (fcb-find-bs-catalog)=
 # Marking up Data Catalogue page with Schema.org & Bioschemas for SEO
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB013
@@ -255,21 +253,12 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 
 ### What to read next?
 
-> - {ref}`fcb-find-bs-data`
-> - {ref}`fcb-find-bs-dataset`
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
-> ````
+- {ref}`fcb-find-bs-data`
+- {ref}`fcb-find-bs-dataset`
+ 
+````{rdmkit_panel}
+````
+
 
 
 

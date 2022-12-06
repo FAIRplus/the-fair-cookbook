@@ -76,6 +76,8 @@
       title: Interoperability
       numbered: true
       sections:
+          - file: content/recipes/interoperability/registering-swisslipids-identifiers
+            title: Registering SwissLipids identifiers in Wikidata #FCB083
           - file: content/recipes/interoperability/identifier-mapping
             title: Interlinking data from different sources #FCB016
           - file: content/recipes/interoperability/bridgedb-recipe
@@ -124,6 +126,11 @@
             sections:
               - file: content/recipes/interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.ipynb
                 title: Converting VCF file to FHIR JSON #FCB059
+          - file: content/recipes/interoperability/creating-knowledge-graph-from-unstructured-text
+            title: Creating knowledge graphs from unstructured text #FCB081
+            sections:
+              - file: content/recipes/interoperability/nlp2kg/creating-knowledge-graph-from-text.ipynb
+                title: unstructured text to graph as executable notebook
 
     - file: content/recipes/reusability
       title: Reusability
@@ -150,6 +157,8 @@
             title: Creating resolvable identifiers #FCB077PRE
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
+          - file: content/recipes/infrastructure/dats-model
+            title: Introducing the DATS model #FCB082
           - file: content/recipes/infrastructure/data-catalog-deployment
             title: Deploying a data catalogue - The IMI data catalogue example #FCB048
           - file: content/recipes/infrastructure/vocabularies

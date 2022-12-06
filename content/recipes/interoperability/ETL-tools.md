@@ -2,8 +2,6 @@
 
 # Extraction, transformation, and loading process
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB031

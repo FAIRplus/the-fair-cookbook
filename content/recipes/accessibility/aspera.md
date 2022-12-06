@@ -1,8 +1,6 @@
 (fcb-access-aspera)=
 # Downloading data with Aspera
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB015
@@ -27,14 +25,17 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 
 ````{dropdown}
 :open:
-```{figure} aspera.md-figure1.mmd
+```{figure} aspera.md-figure1.svg
+---
 width: 650px
 name: aspera-figure1
-subtitle: Aspera Data Transfer Process.
+alt: Aspera Data Transfer Process.
+---
+Aspera Data Transfer Process.
 ```
 ````
 
----
+
 ## Obtain Aspera services
 
 ### Get accounts permissions
@@ -112,21 +113,10 @@ ascp version 3.9.6.176292
 
 ### What to read next?
 
->  - {ref}`fcb-sftp` 
->  - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
-> ````
+- {ref}`fcb-sftp` 
+- <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
+````{rdmkit_panel}
+````
 
 ## References
 ````{dropdown} **References** 
