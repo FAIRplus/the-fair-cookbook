@@ -1,0 +1,15 @@
+flowchart TD
+    A[data]:::box --> B{"Is <b>Data Processing</b> taking <br/> place in the EU?" }:::box1
+    B -- Yes --> C{Does the data relate <br/> to human subjects?}:::box1
+    B -- No --> D(No need for a GDPR DPIA):::box2
+    C -- Yes --> E{"Is data  <br/>obtained from 3rd party<br/> sources ?"}:::box1
+    C -- No --> D
+    E -- Yes --> H(Obtain data access and data use conditions <br/> from data provider):::box
+    E -- No --> F{Can the data lead <br/> to subject identification ?}:::box1
+    F --> G(GDPR compliant DPIA required):::box
+
+classDef box font-family:avenir,font-size:14px,fill:#B30000,stroke:#222,color:#fff,stroke-width:1px
+classDef box1 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
+classDef box2 font-family:avenir,font-size:14px,fill:white,stroke:#222,color:black,stroke-width:1px
+linkStyle 0,1,3,5,7 stroke:#B30000,stroke-width:1px,color:#B30000,font-family:avenir;
+linkStyle 2,4,6 stroke:black,stroke-width:1px,color:black,font-family:avenir;
