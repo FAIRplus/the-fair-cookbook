@@ -38,13 +38,8 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 ---
 
 ````{panels_fairplus}
-<<<<<<< HEAD
-:identifier_text: FCBXXX
-:identifier_link: https://example.com
-=======
 :identifier_text: FCB___
 :identifier_link: https://w3id.org/faircookbook/FCB___
->>>>>>> 6f3f4b6d7d4437828717984c9288f28f7ac67dc3
 :difficulty_level: 2
 :recipe_type: background_information
 :reading_time_minutes: 15
