@@ -1,0 +1,1913 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Protection Impact Assessment and Data Privacy</title>
+
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+
+
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/searchNodal.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
+    <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/dpia.html" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Glossary" href="glossary-fair-terms.html" />
+    <link rel="prev" title="Practical Considerations for CROs to play FAIR" href="fair-cro.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.9/vuetify.js"
+        integrity="sha512-cgrSlRKhr/ovJePDoGIdcfZ3wiGcc0fT4Q7hAo0x3P1lyLwUmv2NgJtCo2gzFbxqFjKvNnCfVUjZ1XADm0/ZdQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://fairplus.github.io/the-fair-cookbook/content/recipes/introduction/dpia.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Data Protection Impact Assessment and Data Privacy" />
+<meta property="og:description" content="Data Protection Impact Assessment and Data Privacy  &lt;br/&gt; &lt;br/&gt;     &lt;script type=&#34;application/ld+json&#34;&gt; {&#34;@context&#34;: {&#34;bs&#34;: &#34;https://bioschema.org/&#34;, &#34;dc&#34;: &#34;htt" />
+ <meta property="og:image"       content="https://fairplus.github.io/the-fair-cookbook/_static/cookbook-logo-small.png" /> 
+<meta name="twitter:card" content="summary" />
+  </head>
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+
+
+<v-app id="app" class="pa-0">
+    <v-container fluid class="pa-0">
+        <v-row class="pa-0" no-gutters>
+            <v-container fluid class="pa-0">
+                <v-row>
+                    <div class="topbar container-xl fixed-top pl-0 primary lighten-1 py-2" style="height:65px !important;">
+    <div class="topbar-contents row" style="margin: initial !important;">
+        <div class="col topbar-main d-flex align-center">
+            
+                <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                        data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                        aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                        title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            
+
+            
+                <a href="../../../index.html" style="width: 300px">
+                    <img
+                        src="../../../_static/cookbook-logo-small.png"
+                        class="logo"
+                        alt="The FAIR Cookbook"
+                        style="width: 100%"
+                    >
+                </a>
+            
+
+            <v-spacer> </v-spacer>
+            <div class="mr-4 extraButtons">
+                <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger d-flex justify-center align-center" style="height:100%">
+
+    <v-menu offset-y content-class="elevation-0" open-on-hover>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              id="dropdown-buttons-trigger"
+              color="white"
+              outlined
+              v-bind="attrs"
+              v-on="on"
+              flat
+              solo
+              rounded
+              :fab="$vuetify.breakpoint.mdAndDown"
+              :small="$vuetify.breakpoint.mdAndDown"
+              :class="$vuetify.breakpoint.mdAndDown ? 'pa-0' : ''"
+            >
+                <v-icon :class="$vuetify.breakpoint.lgAndUp ? 'mr-3' : 'mx-1'" left>fab fa-github</v-icon>
+                <span v-if="$vuetify.breakpoint.lgAndUp"> GitHub </span>
+            </v-btn>
+        </template>
+        <div class="homepageMenu d-flex flex-column">
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fab fa-github</v-icon>
+                repository
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/issues/new?title=Issue%20on%20page%20%2Fcontent/recipes/introduction/dpia.html&body=Your%20issue%20content%20here."
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mr-3" left>fas fa-lightbulb</v-icon>
+                open issue
+            </v-btn>
+            
+
+            
+            <v-btn
+              color="grey darken-1"
+              dark
+              flat
+              solo
+              rounded
+              href="https://github.com/FAIRplus/the-fair-cookbook/edit/main/content/recipes/introduction/dpia.md"
+              class="mt-1"
+              target="_blank"
+            >
+                <v-icon class="mx-3" left>fas fa-pencil-alt</v-icon>
+                suggest edit
+            </v-btn>
+            
+        </div>
+    </v-menu>
+</div>
+
+                <!-- Launch buttons -->
+
+            </div>
+                
+                    <script>
+    Vue.component("Searchfield", {
+      data () { return {
+        query: null
+      } },
+      methods: {
+        search() {
+            if (this.query) window.location.href = `../../search-wizard.html?q=` + this.query
+            else window.location.href = `../../search-wizard.html`
+        }
+      },
+      template: `
+      <div style="width:250px">
+            <v-text-field
+              v-model="query"
+              append-icon="fa-search"
+              label="Search Wizard..."
+              dense
+              rounded
+              single-line
+              solo
+              hide-details
+              class="white primary--text"
+              @click:append="search"
+              @keyup.enter="search"
+            />
+      </div>
+      `
+    })
+</script>
+
+<Searchfield> </Searchfield>
+
+
+
+
+
+
+                
+                
+                
+        </div>
+    </div>
+</div>
+                </v-row>
+                
+                    <v-row class="d-flex">
+                    
+                        <div
+                            class=" bd-sidebar site-navigation show"
+                            id="site-navigation"
+                            style="width:350px"
+                        >
+                            
+                                <div class="nav-drawer d-flex flex-column grey lighten-3" style="height:100%;padding-top: 40px;">
+
+    <div class="testTOC">
+        <script>
+    Vue.component("Navigation", {
+        data() { return { recipes: {} }},
+        methods: {
+            async getData(){
+                const recipes = await fetch('/_static/recipes.json')
+                this.recipes = await recipes.json();
+                this.parseDom()
+            },
+            parseDom() {
+                const links = Array.prototype.slice.call(document.getElementsByClassName("reference internal"))
+                const icon = '<i class="fas fa-play-circle grey lighten-3 secondary--text ml-2"></i>'
+                links.forEach(link => {
+                    const recipeSplit = link.innerText.split(". ")
+                    const recipeName = recipeSplit[recipeSplit.length - 1].trim()
+                    recipeSplit.pop()
+                    recipeSplit.forEach(pref => { pref = pref.trim() })
+                    const prefix = recipeSplit.length > 0 ? recipeSplit.join(".") + "." : null
+                    const content = prefix ? `${prefix} ${recipeName}` : recipeName
+                    if (Object.keys(this.recipes).includes(recipeName)) {
+                        if (this.recipes[recipeName].executable === 'Yes') link.innerHTML = content + icon
+                    }
+                })
+            }
+        },
+        mounted() { this.getData() }
+    })
+</script>
+
+
+<Navigation> </Navigation>
+
+    </div>
+
+    <div class="nav-tree grey px-5 lighten-3 pb-5" style="flex-grow: 1; border-bottom: 1px solid #ccc !important">
+        
+        
+            <nav class="bd-links pt-10" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  FOREWORD
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-cookbook-audience.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="brief-FAIR-principles.html">
+   Introducing the FAIR Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIRplus-values.html">
+   Reflecting on the ethical values of FAIR
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fairification-process.html">
+   Introducing our FAIRification framework
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="priorization.html">
+   Prioritizing projects for FAIRification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata-fair.html">
+   Framing FAIR and the notion of metadata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAIR-and-knowledge-graphs.html">
+   Understanding the relation between FAIR and Knowledge Graphs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="training-datasets.html">
+   Training for FAIRification with open or synthetic biomedical datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="public-kg-resource-integration.html">
+   Raising Awareness in Public Knowledge Graphs for Life Sciences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fair-cro.html">
+   Reflecting on Practical Considerations for CROs to play FAIR
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Protection Impact Assessment and Data Privacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Recipes at a Glance
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../search-wizard.html">
+   All Recipes In a Table
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR RECIPES
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../findability.html">
+   Findability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers.html">
+     1. Introducing unique, persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/chemical-identities.html">
+     2. Creating InChI &amp; SMILES identifiers for chemical structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/iupac-names.html">
+     3. Creating InChIKeys for IUPAC names
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/identifiers-minids.html">
+     4. Minting identifiers with Globus Minid client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/zenodo-deposition.html">
+     5. Depositing to generic repositories - Zenodo use case
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/registeringDatasets.html">
+     6. Registering datasets with Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-create.html">
+     7. Creating file checksums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../findability/checksum-validate.html">
+     8. Validating checksums to verify file integrity
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../findability/seo.html">
+     9. Introducing Search Engine Optimization (SEO)
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-data-page.html">
+       9.9.1. Marking up Data pages with Schema.org &amp; Bioschemas for SEO
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-dataset.html">
+       9.9.2. Marking up Dataset page with Schema.org &amp; Bioschemas for SEO
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../findability/seo/bioschemas-datacatalog.html">
+       9.9.3. Marking up Data Catalogue page with Schema.org &amp; Bioschemas for SEO
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../accessibility.html">
+   Accessibility
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/sftp.html">
+     1. Transferring data with SFTP protocol
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../accessibility/aspera.html">
+     2. Downloading data with Aspera protocol
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interoperability.html">
+   Interoperability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/registering-swisslipids-identifiers.html">
+     1. Registering SwissLipids identifiers in Wikidata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/identifier-mapping.html">
+     2. Interlinking data from different sources
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/bridgedb-recipe.html">
+     3. Mapping identifiers with BridgeDb
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bridgedb/bridgedb-example.html">
+       3.11.1. Mapping identifiers using BridgeDb web services
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/introduction-terminologies-ontologies.html">
+     4. Introducing terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/selecting-ontologies.html">
+     5. Selecting terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-new-term-request-recipe.html">
+     6. Requesting new terms from terminologies and ontologies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-operations-tools.html">
+     7. Introducing ontology-related tools and services
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/ontology-robot-recipe.html">
+     8. Building an application ontology with ROBOT
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/MSIO-robot-build-process.html">
+       8.11.1. Building an application ontology for metabolomics - MSIO
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/ontology-robot-recipe/competency-questions.html">
+       8.11.2. Defining competency questions for the Ontology ROBOT use case
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ontology-alignment-oxo.html">
+     9. Mapping Ontologies with OxO, EBI Ontology Xref Service
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/creating-data-dictionary.html">
+     10. Creating a data/variable dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-minimal-metadata-profiles.html">
+     11. Creating a metadata profile
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/transcriptomics-metadata.html">
+       11.5.1. Outlining a metadata profile for transcriptomics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/covid19-sample-metadata-profile-shex-use-case.html">
+       11.5.2. Building a community compliant metadata profile - The Covid19 sample profile use case
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/bioactivity-profile.html">
+       11.5.3. Outlining a metadata profile for Bioactivity data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/from-proprietary-to-open-standard-mzml-exemplar.html">
+     12. Converting from proprietary to open format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/fastq-file-format-validators.html">
+     13. Validating file format - FASTQ example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/rdf-conversion.html">
+     14. Inventorying tools for converting data to RDF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interoperability/ETL-tools.html">
+     15. Surveying extraction, transformation, load (ETL) tools
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/VCF-to-FHIR-conversion.html">
+     16. Expressing Clinical Genetic Information as FHIR JSON
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/vcf2fhir/FAIRcookbook-vcf2fhir.html">
+       16.9.1. Converting VCF file to FHIR JSON
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../interoperability/creating-knowledge-graph-from-unstructured-text.html">
+     17. Creating knowledge graphs from unstructured text
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/nlp2kg/creating-knowledge-graph-from-text.html">
+       17.12.1. unstructured text to graph as executable notebook
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../reusability.html">
+   Reusability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI-licensing.html">
+     1. Licensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_software.html">
+     2. Licensing Software
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/ATI_licensing_data.html">
+     3. Licensing Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/expressing-data-use.html">
+     4. Declaring data permitted uses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/provenance.html">
+     5. Introducing Provenance Information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/id-resolution.html">
+     1. Introducing identifier resolution services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gupri.html">
+     2. Creating resolvable identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog.html">
+     3. Building a catalogue of datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/dats-model.html">
+     4. Introducing the DATS model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/data-catalog-deployment.html">
+     5. Deploying a data catalogue - The IMI data catalogue example
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../infrastructure/vocabularies.html">
+     6. Vocabulary management
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/technical-and-architectural-selection-criteria-of-ontology-lookup-services.html">
+       6.1. Introducing vocabulary portals and lookup services
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/Selecting_and_using_ontology_lookup_services.html">
+       6.2. Selecting an ontology lookup service
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vocabularies/UC3_R13_local_ontology_services.html">
+       6.3. Deploying EBI Ontology Loopkup Service
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/openrefine-nvt.html">
+     7. Using OpenRefine and Karma for FAIRification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/fair-api.html">
+     8. Developing FAIR API for the Web
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../assessing-fairness.html">
+   Assessment
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairevaluator.html">
+     1. Assessing with FAIR Evaluator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assessing-fairness/fair-assessment-fairshake.html">
+     2. Assessing with FAIRshake
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIR Maturity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../maturity.html">
+   Changing culture with the Dataset Maturity Model
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reusability/miappe.html">
+     Improving dataset maturity - the MIAPPE use case
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../maturity/isa-maturity-progression.html">
+     Moving through maturity levels with ISA
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/create-a-simple-ISA-descriptor.html">
+       Minimal Data Maturity with ISA - ISA-Tab and free text
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-api-programmatic-rebuild-of-BII-S-3.html">
+       Enhanced Data Maturity with ISA - ISA-JSON and ontology markup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-json-conversion-to-rdf-linked-data.html">
+       Moving to a semantically typed version - ISA-JSON-LD
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../maturity/isa-as-RO.html">
+       Dissemination - Packaging ISA as a Research Object (RO)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../applied-examples/fair-data-matrix-recipe.html">
+     Making an omics data matrix FAIR
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/0-rose-metabolites-Python-data-handling.html">
+       FAIRifying Data Matrices - Step1 - Starting material
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/1-rose-metabolites-Python-analysis.html">
+       FAIRifying Data Matrices - Step2 - Structuring data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html">
+       FAIRifying Data Matrices - Step3 - Exploring data with SPARQL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../applied-examples/fair-data-matrix/3-rose-metabolites-R-analysis.html">
+       FAIRifying Data Matrices - Step4 - Integrating data
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/fair-workflows.html">
+     Making Computational Workflows FAIR
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  FAIRified Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../applied-examples.html">
+   Applied examples
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/etox.html">
+     1. IMI eTox - toxicity datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/nd4bb.html">
+     2. IMI nd4bb - chemical activities datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/oncotrack_raw/rawRecipe-oncotrack.html">
+     3. Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI Biosamples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/resolute_raw/resolute.html">
+     4. Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/ehden-ohdsi.html">
+     5. Enhancing discoverability of EHDEN OHDSI data with Schema.org markup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/eubopen-hcs-bioimage.html">
+     6. Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/approach-cdisc.html">
+     7. Mapping IMI APPROACH datasets to CDISC-SDTM standard
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  AFTERWORD
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../afterword/fair-reflections.html">
+   Lessons learned from the FAIR journey and project outlook
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  GLOSSARY
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary-fair-terms.html">
+   Glossary of terms and abbreviations
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  JOIN US
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community.html">
+   Community
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/people.html">
+     Boards and contributors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/code_of_conduct.html">
+     Code of conduct
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../afterword.html">
+     Platform
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../afterword/the-turing-way.html">
+       Leveraging the Turing Way Book
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../help.html">
+   Contribute
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../afterword/contributing.html">
+     1. How to contribute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-gdoc.html">
+     2. Add via GoogleDoc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-hackmd.html">
+     3. Add via HackMD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/how-to-create-recipe-with-git.html">
+     4. Add via Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/recipe-template.html">
+     5. Git recipe template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/tips-tricks.html">
+     6. Tips and tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../help/myst.html">
+     7. Markdown cheatsheet
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav>
+        
+        
+             <!-- To handle the deprecated key -->
+
+        
+    </div>
+
+    <div class="text-center px-5 lighten-3 grey py-2">
+        Powered by <a href="https://jupyterbook.org" class="secondary--text">Jupyter Book</a>
+    </div>
+</div>
+                        </div>
+                        
+                            <main class="bd-content" role="main" style="width:1%; flex-grow:1;">
+                                <v-container fluid id="main-content" class="pa-0">
+                                    <v-row class="d-flex">
+                                        
+                                            <v-col class="col-xl-10 col-lg-10 col-md-9 col-12 px-10 pt-10 mt-3">
+                                                
+  <div class="section" id="data-protection-impact-assessment-and-data-privacy">
+<span id="fcb-interop-dpia"></span><h1>Data Protection Impact Assessment and Data Privacy<a class="headerlink" href="#data-protection-impact-assessment-and-data-privacy" title="Permalink to this headline">¶</a></h1>
+<br/>
+<br/>
+<hr class="docutils" />
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB074", "sdo:name": "Data Protection Impact Assessment and Data Privacy", "sdo:description": "Data Protection Impact Assessment and Data Privacy", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Principal Investigator|T4FS_0000441", "Data Manager|T4FS_0000520", "Data Scientist|T4FS_0000566"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Technical Guidance", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB074", "dso:url": "https://w3id.org/faircookbook/FCB074", "owl:sameAs": "https://identifiers.org/fcb:FCB074"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H15M0S", "sdo:totalTime": "PT0H15M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB074#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB074#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB074#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB074#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<div class="card my-10 recipe d-flex">
+<div class="card-header purple-dark text--white">
+<div class="overview">
+<div class="overviewLabel">Recipe Overview</div>
+<div class="overviewContent">
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-clock fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Reading Time </div>
+15 minutes
+</div>
+</div></div>
+<div class="item"><div class="itemContainer">
+<i class="itemIcon fa fa-play-circle fa-2x text--white"></i>
+<div class="itemContent">
+<div class="label"> Executable Code </div>
+No
+</div>
+</div></div>
+<div class="item" style="margin-bottom:10px"><div class="itemContainer">
+<i class="itemIcon fa fa-fire fa-2x text--white" style="margin-left:4px;margin-right: 5px;"></i>
+<div class="itemContent">
+<div class="label" style="position:relative; left:-6px">Difficulty</div>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+<i class="fa fa-fire" style="color:grey"></i>
+</div>
+</div></div>
+</div></div>
+</div>
+<div class="card-body text--purple-dark">
+<div class="title">
+<div style="flex-grow:1; margin-right:5px">Data Protection Impact Assessment and Data Privacy</div>
+<img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
+</div>
+<div class="section">
+<i class="sectionIcon fa fa-laptop fa-2x"></i><div class="sectionContent">
+<div class="label">Recipe Type</div>
+<div class="sectionValue">Technical Guidance</div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<i class="sectionIcon fa fa-users fa-2x"></i><div class="sectionContent">
+<div class="label">Audience</div>
+<div class="sectionValue"><a href="http://purl.obolibrary.org/obo/T4FS_0000441">Principal Investigator</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000520">Data Manager</a>, <a href="http://purl.obolibrary.org/obo/T4FS_0000566">Data Scientist</a></div>
+</div>
+</div>
+<div class="section" style="flex-grow: 1;">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" class="bars level-2">
+<path class="bar5" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z"/>
+<path class="bar4" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600" />
+<path class="bar3" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84" />
+<path class="bar1" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84"/>
+<path class="bar2" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84"/>
+</svg>
+<div class="sectionContent">
+<div class="label">Maturity Level & Indicator</div>
+<div class="sectionValue"><v-chip-group><v-chip href="https://w3id.org/Data-Maturity/DSM-1-C0" class="secondary white--text" target="_blank" label>DSM-1-C0</v-chip><v-chip href="https://w3id.org/Data-Maturity/DSM-1-C1" class="secondary white--text" target="_blank" label>DSM-1-C1</v-chip></v-chip-group></div>
+<div class="tooltip">hover me
+<span class="tooltiptext">Tooltip text</span></div>
+</div>
+</div><div class="card-footer text--orange sphinx-bs.badge.badge-primary"> Cite me with 
+<a href="https://w3id.org/faircookbook/FCB074" class="text--purple-dark">FCB074
+</a></div>
+</div>
+</div>
+<div class="section" id="main-objectives">
+<h2>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this recipe to highlight the existence of semantic resources providing the necessary support to enable
+the generation of a Data Protection Impact Assessment (DPIA), as mandated by the European Union General Data Protection Regulation (GDPR)
+in a machine-readable form.
+The framework presented in the recipe therefore represents an important tool to consider for <strong>Data Controllers</strong>
+responsible for human subject information.</p>
+<blockquote>
+<div><p>Learn what a Data Protection Impact Assessment is.
+Learn how to express Data Protection Impact Assessment key information in RDF.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphical-overview">
+<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="flowchart-to-decide-if-a-dpia-is-needed">
+<a class="reference internal image-reference" href="../../../_images/dpia-need-flowchart.svg"><img alt="Flowchart to decide if a DPIA is needed" src="../../../_images/dpia-need-flowchart.svg" width="800px" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Flowchart to decide if a DPIA is needed</span><a class="headerlink" href="#flowchart-to-decide-if-a-dpia-is-needed" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="6b180e37-1d89-439e-a2a7-63b8d59ae93d" name="2f15a8cf-8058-4dac-8c42-91f0725859ca" type="radio">
+</input><label class="tabbed-label" for="6b180e37-1d89-439e-a2a7-63b8d59ae93d">
+FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Actions.Objectives.Tasks</p></th>
+<th class="text-align:left head"><p>Input</p></th>
+<th class="text-align:left head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://w3id.org/dpv/dpv-owl#DPIA">data privacy impact assessment</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://edamontology.org/data_3671">text</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://edamontology.org/data_2048">report</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="bf8ba322-f9eb-4854-a5fd-5f60ca36c3dd" name="2f15a8cf-8058-4dac-8c42-91f0725859ca" type="radio">
+</input><label class="tabbed-label" for="bf8ba322-f9eb-4854-a5fd-5f60ca36c3dd">
+Requirements</label><div class="tabbed-content docutils">
+<ul class="simple">
+<li><p>knowledge requirement:</p>
+<ul>
+<li><p>Awareness of European legislation on data protection - General Data Protection Regulation (GDPR)</p></li>
+<li><p><a class="reference external" href="https://gdpr-info.eu/art-35-gdpr/">GDPR article 35</a></p></li>
+<li><p><a class="reference external" href="https://gdpr-info.eu/art-36-gdpr/">GDPR article 36</a></p></li>
+</ul>
+</li>
+<li><p>technical requirements:</p>
+<ul>
+<li><p>RDF turtle notation</p></li>
+<li><p>SPARQL</p></li>
+<li><p>Python</p></li>
+</ul>
+</li>
+<li><p>recipe dependency:
+none</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="table-of-data-standards">
+<h2>Table of Data Standards<a class="headerlink" href="#table-of-data-standards" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Data Formats</p></th>
+<th class="text-align:left head"><p>Terminologies</p></th>
+<th class="text-align:left head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://www.w3.org/TR/rdf-syntax-grammar/">RDF</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://w3c.github.io/dpv/dpv-owl/">DPV-OWL</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://doi.org/10.25504/FAIRsharing.3e194c">Terse RDF Triple Language - (Turtle)</a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://www.w3id.org/dpv/dpv-skos">DPV-SKOS</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://w3c.github.io/dpv/dpv-nace/">DPV-NACE</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://raw.githubusercontent.com/coolharsh55/riskonto/master/riskonto.ttl">riskonto</a></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="main-content">
+<h2>Main Content<a class="headerlink" href="#main-content" title="Permalink to this headline">¶</a></h2>
+<p>Data management, especially the management of personal information, is a sensitive activity which requires a number of
+specific considerations and, depending on the part of the world where the operations are taking place, specific legal
+frameworks will apply. Since its adoption in 2018, the European Union General Data Protection Regulation (GDPR), by
+inscribing privacy of information as fundamental right, established a standard for the domain by providing boundaries to
+what had been, for a long time, an unregulated space.</p>
+<p>What does the GDPR regulation imply for the research practice and why does it matter for healthcare research?</p>
+<p>The regulation means that, prior to conducting any data processing involving human personal information, a
+<strong>Data Protection Impact Assessment (DPIA)</strong> needs to be carried out.</p>
+<p>In the event that the intended data processing includes data provided by a third party, then the use of this data is dependent on the
+data access and data use conditions, established by a DPIA formulated by that third party.</p>
+<p>Failure to generate a GDPR-compliant DPIA or adhere to condition(s) imposed by a third party may result in legal actions for breaching
+the regulation.</p>
+<p>In the following sections, we will examine the key steps to consider when generating a DPIA and
+how to code such information in machine-readable form, utilizing the ‘Data Privacy Vocabulary’ (DPV)
+<a class="footnote-reference brackets" href="#id3" id="id1">2</a> and its extensions.</p>
+<div class="section" id="survey-the-data-types-of-the-project">
+<h3>Survey the data types of the project<a class="headerlink" href="#survey-the-data-types-of-the-project" title="Permalink to this headline">¶</a></h3>
+<p>During the survey of the data types, if it becomes clear that personal, patient centric information will be <em>processed within the EU</em>,
+then the GDPR regulation applies (i.e. a multi-centric, international clinical trial recruiting patients in the EU and/or
+outside the EU the data of which will be processed in the EU falls under GDPR).</p>
+<p>In the context of scientific research, the <strong>purpose</strong> of the research can be explicitly determined as a justification
+for the data collection activity.</p>
+</div>
+<div class="section" id="identifying-the-key-entities">
+<h3>Identifying the key entities:<a class="headerlink" href="#identifying-the-key-entities" title="Permalink to this headline">¶</a></h3>
+<p>Under GDPR rules, the first requirement is to nominate and identify physical or legal entities that will perform key functions.
+These functions are:</p>
+<ul class="simple">
+<li><p><strong>Data Protection Officer</strong>: An entity within or authorised by an organisation to monitor internal compliance, inform and advise on data protection obligations and act as a contact point for data subjects and the supervisory authority.</p></li>
+<li><p><strong>Data Controller</strong>: The individual or organisation that decides (or controls) the purpose(s) of processing personal data.</p></li>
+<li><p><strong>Data Processor</strong>: A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.</p></li>
+</ul>
+<p>Then, it is necessary to declare all the <strong>purposes, anticipated uses and actions</strong> on the collected data, so these can
+be clearly listed and documented.</p>
+<p>For each of these actions, a justification needs to be provided, explaining the reasons why information is collected
+and how it contributes to answering the research questions.</p>
+<p>The results of this survey should also be included in the <strong>informed consent</strong>, which will be reviewed and signed by the
+<em>participants (Data Subjects)</em> in the research project.</p>
+<p>The availability of a new semantic resource, developed as a W3C specification, provides the necessary vocabulary to
+structure information which was until now only available in natural text and legal documents. The figure below shows an
+excerpt of the Data Privacy Vocabulary in the Protégé ontology editing tool.</p>
+<div class="figure align-default" id="dpia-rdf">
+<a class="reference internal image-reference" href="../../../_images/dpv_in_protege.png"><img alt="DPIA_RDF" src="../../../_images/dpv_in_protege.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">A snippet of the Data Privacy Vocabulary as seen in Protégé ontology editor</span><a class="headerlink" href="#dpia-rdf" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the following RDF fragment, we show how to express the goal of the data collection of an exemplar study.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv-nace:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv-nace#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">research_purpose</span> <span class="kt">a</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Purpose</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">Label</span> <span class="s">&quot;Identifying therapeutic targets among solute carrier genes to cure rare diseases&quot;</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">has_sector</span> <span class="nn">dpv-nace</span><span class="p">:</span><span class="nt">M72</span> <span class="p">.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This snippet also makes use of the <code class="docutils literal notranslate"><span class="pre">NACE</span> <span class="pre">extension</span></code>, the scope of which is The Statistical Classification of Economic
+Activities in the European Community. NACE stands for “Nomenclature statistique des Activités économiques dans la Communauté Européenne”)</p>
+</div>
+<div class="section" id="the-natural-persons">
+<h4>The Natural Persons<a class="headerlink" href="#the-natural-persons" title="Permalink to this headline">¶</a></h4>
+<p>These types are meant to formally identify <code class="docutils literal notranslate"><span class="pre">physical</span> <span class="pre">persons</span></code>.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv-nace:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv-nace#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">foaf:</span><span class="w"> </span><span class="nv">&lt;http://xmlns.com/foaf/0.1/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">Person1</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">foaf</span><span class="p">:</span><span class="nt">Person</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">NaturalPerson</span> <span class="p">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-legal-entities">
+<h4>The legal entities<a class="headerlink" href="#the-legal-entities" title="Permalink to this headline">¶</a></h4>
+<p>These types are meant to assign a function (or a role or a state) to a physical entity, as declared following the pattern
+described in the previous section.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv-nace:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv-nace#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">iso:</span><span class="w"> </span><span class="nv">&lt;https://www.iso.org/country-code&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">Acme</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">LegalEntity</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasName</span> <span class="s">&quot;Acme&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasAddress</span> <span class="s">&quot;Dublin, Ireland&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasContact</span> <span class="s">&quot;acme@example.com&quot;</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasRepresentative</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">AcmeDPO</span><span class="p">,</span>  <span class="c"># internal DPO</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">AcmeEUOrg</span> <span class="p">;</span> <span class="c"># EU Representative</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasLocation</span> <span class="nn">iso</span><span class="p">:</span><span class="nt">IE</span> <span class="p">.</span> <span class="c"># if an ISO vocabulary for country-codes is used</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-functions-and-roles">
+<h4>the functions and roles:<a class="headerlink" href="#the-functions-and-roles" title="Permalink to this headline">¶</a></h4>
+<p>Here, we explicitly express in machine-readable form that an <code class="docutils literal notranslate"><span class="pre">Organization</span></code> acts as a <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Controller</span></code>.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv-nace:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv-nace#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">Acme</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">DataController</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">AcmeMarketing</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">PersonalDataHandling</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasDataController</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Acme</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasPersonalDataCategory</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">EmailAddress</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasProcessing</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Collect</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Use</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasPurpose</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">ServiceProvision</span> <span class="p">.</span>
+</pre></div>
+</div>
+<p>Here, we explicitly express in machine-readable form that an <code class="docutils literal notranslate"><span class="pre">Organization</span></code> acts as a <code class="docutils literal notranslate"><span class="pre">DataProtectionOfficer</span></code>.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv-nace:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv-nace#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">foaf:</span><span class="w"> </span><span class="nv">&lt;http://xmlns.com/foaf/0.1/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">Person1</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">foaf</span><span class="p">:</span><span class="nt">Person</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">NaturalPerson</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Representative</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">DataProtectionOfficer</span>  <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasEntity</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Acme</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">AcmeEUOrg</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">LegalEntity</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Organization</span><span class="p">,</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">DataController</span><span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasEntity</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">Acme</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasLocation</span> <span class="s">&quot;EU&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="identifying-the-risks-to-privacy-and-define-risk-mitigation-and-security-measures">
+<h3>Identifying the risks to privacy and define risk mitigation and security measures<a class="headerlink" href="#identifying-the-risks-to-privacy-and-define-risk-mitigation-and-security-measures" title="Permalink to this headline">¶</a></h3>
+<p>With the previous steps performed, the next step consists in understanding the risks to privacy associated with the data
+collection and processing scenarios defined by the research program.</p>
+<p>For each of these identified risks, a mitigation plan should be established.</p>
+<p>A risk is defined as “a risk or possibility or uncertainty of negative effects, impacts, or consequences”.</p>
+<p>Management of risks associated with data management has two major components.
+Used in combination, they ensure a strong culture of cyber-security and data security is established and,
+possibly more importantly, maintained.</p>
+<ul class="simple">
+<li><p>The first arm focuses on training and ensuring personnel in charge of the data receives the proper education.</p></li>
+<li><p>The second arm is obviously the techniques themselves and their implementations.</p></li>
+</ul>
+<p>When dealing with human centric sensitive information, the main privacy concerns for data managers are:</p>
+<ul class="simple">
+<li><p>unauthorized access to the data</p></li>
+<li><p>patient re-identification</p></li>
+</ul>
+<p>which can be represented by the following RDF statements:</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">DataStore</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Technology</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasRisk</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">UnAuthorisedAccess</span> <span class="p">.</span> 
+
+<span class="c"># unauthorized access risks </span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">UnAuthorisedAccess</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Risk</span> <span class="p">.</span>
+                      
+<span class="c"># patient re-identification risk</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">ReIdentification</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Risk</span> <span class="p">.</span>
+</pre></div>
+</div>
+<p>Both cases are very serious security and privacy issues which demand robust policies to be in place.
+These situations can be de-risked by implementing different types of solutions.
+In the following paragraphs, we show how ‘data anonymization’ and ‘data encryption’ can be explicitly declared as measures
+to mitigate patient re-identification or information retrieval in case of unauthorized access.</p>
+<div class="section" id="organisational-measures">
+<h4>Organisational measures:<a class="headerlink" href="#organisational-measures" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="c"># 1: directly associating staff training with credentials used</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">StaffCredentialsTraining</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">OrganistionalMeasure</span> <span class="p">;</span>
+                            <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">StaffTraining</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">RBACCredential</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasOrganisationalMeasure</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">StaffCredentialTraining</span> <span class="p">.</span>
+
+<span class="c"># 2: security policy containing staff training and access control</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">SecurityPolicy</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">OrganisationalMeasure</span> <span class="p">;</span>
+                  <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Policy</span> <span class="p">;</span>
+                  <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasOrganisationalMeasure</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">StaffTraining</span> <span class="p">;</span>
+                  <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasTechnicalMeasure</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">AccessControlMethod</span> <span class="p">.</span>
+
+<span class="c"># 3: indicating staff training contains access control methods</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">StaffCredentialsTraining</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">OrganistionalMeasure</span> <span class="p">;</span>
+                            <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">StaffTraining</span> <span class="p">;</span>
+                            <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasTechnicalMeasure</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">RBACCredential</span> <span class="p">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="technical-measures">
+<h4>Technical measures:<a class="headerlink" href="#technical-measures" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">RSAEncryption</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">TechnicalMeasure</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Encryption</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">scopeNote</span> <span class="s">&quot;Key size: 2048, Custom Implementation&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">RBACCredential</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">TechnicalMeasure</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">AccessControlMethod</span> <span class="p">.</span> 
+</pre></div>
+</div>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">RSAEncryption</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Anonymization</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Encryption</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">scopeNote</span> <span class="s">&quot;Key size: 2048, Custom Implementation&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">RBACCredential</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">TechnicalMeasure</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">broaderTransitive</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">AccessControlMethod</span> <span class="p">.</span> 
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>RiskOnto is an ontology of risk, extending the Prov-Model developed to provide semantic support to explicitly describe risk.
+RiskOnto expresses ‘risk related concepts based on ISO 31000 series’ as a vocabulary and an ontology .
+For more information, see the dedicated github repository: <a class="reference external" href="https://github.com/coolharsh55/riskonto">https://github.com/coolharsh55/riskonto</a>
+<a class="footnote-reference brackets" href="#pandit-harshvardhan-j-2022-6783955" id="id2">1</a></p>
+</div>
+<div class="figure align-default" id="riskonto-viewed-with-ontograf-in-protege-5-5">
+<a class="reference internal image-reference" href="../../../_images/riskonto-protege-ontograf.png"><img alt="riskonto viewed with Ontograf in Protégé 5.5" src="../../../_images/riskonto-protege-ontograf.png" style="width: 900px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">riskonto viewed with Ontograf in Protégé 5.5</span><a class="headerlink" href="#riskonto-viewed-with-ontograf-in-protege-5-5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, revisiting the declaration of risks, we can add a statement to indicate what risk mitigation methods have been
+devised and use the <code class="docutils literal notranslate"><span class="pre">dpv:isMitigatedByMeasure</span></code> relation to relate the risk to the procedures set in place.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dpv:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/dpv#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w"> </span><span class="nv">&lt;http://example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">DataStore</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Technology</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">hasRisk</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">UnAuthorisedAccess</span> <span class="p">.</span> 
+
+<span class="c"># 2: risk registry denoting risks and mitigations</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">UnAuthorisedAccess</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Risk</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">isMitigatedByMeasure</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">RBACCredential</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">isMitigatedByMeasure</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">RSAEncryption</span> <span class="p">.</span>
+
+<span class="c"># patient re-identification risk and</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">ReIdentification</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">dpv</span><span class="p">:</span><span class="nt">Risk</span> <span class="p">;</span>
+    <span class="nn">dpv</span><span class="p">:</span><span class="nt">isMitigatedByPatient</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">RSAEncryption</span> <span class="p">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-access-requests-data-access-agreements-and-dpia">
+<h4>Data Access Requests, Data Access Agreements and DPIA:<a class="headerlink" href="#data-access-requests-data-access-agreements-and-dpia" title="Permalink to this headline">¶</a></h4>
+<p>Data access requests need to be considered when devising a data protection impact assessment as part of the data governance.</p>
+<p>Data access requests are common situations whereby researchers may seek access to research data from another group,
+within the same jurisdiction or outside the jurisdiction.</p>
+<p>Data access requests need to be appraised and evaluated by specific structures, the Data Access Committees (DAC), which
+establish policy documents detailing the conditions of access and terms of data reuse.</p>
+<p>The DAC will evaluate the requests and actions on the data planned by the requester against the data permitted use associated to the dataset.
+Depending on this assessment, the DAC will decide whether or not to grant the request.</p>
+<p>For more information about ‘data permitted uses’, see <a class="reference external" href="https://w3id.org/faircookbook/FCB035">this dedicated recipe FCB035</a>:</p>
+<p>In the context of data access requests, a DAC needs to appraise risks such as:</p>
+<ol class="simple">
+<li><p>Use for un-consented research</p></li>
+<li><p>Data transfer to a different jurisdiction: would the data be protected to the same level once outside EU?</p></li>
+<li><p>Nature of transfer tools, which fall into 3 possible categories:</p>
+<ol class="simple">
+<li><p>Standard Contractual Clauses (SCC): 18 statements which can be used to assemble a <code class="docutils literal notranslate"><span class="pre">boiler</span> <span class="pre">plate</span></code> agreement to
+transfer data outside EU rule of law <strong>but in ways which conform to the EU GDPR</strong>.</p></li>
+<li><p>Binding Corporate Rules (BRC):
+These are legally binding rules to transfer data within the different branches of a Company, which may operate
+in different countries. BRCs need to guarantee at minima the same level of protection as the Standard Contractual Clauses.</p></li>
+<li><p>Code of Conducts (CoC)
+Code of Conducts represent data protection policies developed for a particular type of data and/or for a
+particular professionals. For example, <a class="reference external" href="https://downloads.cloudsecurityalliance.org/assets/research/gdpr/CSA_Code_of_Conduct_for_GDPR_Compliance.pdf">Cloud Security Alliance Code of Conduct</a></p></li>
+</ol>
+</li>
+<li><p>Data leak or data breach</p></li>
+<li><p>Individual re-identification</p></li>
+</ol>
+<p>A specific data protection impact assessment is needed for each request and this can be a time-consuming operation.</p>
+<p>This is where the availability of machine-actionable representations of legal documents such as DPIA, data use agreements,
+and data access requests can yield great benefits.
+By enabling the creation of readily exploitable documents, it could help the development of automated assessment tool,
+which would expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive information.
+Privacy preserving use of data is of paramount importance to retain the public confidence in the scientific practice
+and the safe-keeping of information.</p>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="data-use-agreement">
+<a class="reference internal image-reference" href="../../../_images/data-use-agreement-main.png"><img alt="data-use-agreement" src="../../../_images/data-use-agreement-main.png" style="width: 850px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">data-use-agreement</span><a class="headerlink" href="#data-use-agreement" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><!-- 
+### Identify the data sources and provenance information
+
+TODO
+
+### Define the data validation procedure
+
+TODO
+
+### Define the data governance framework
+
+Based on all the information collected in the previous steps, a **data governance** can be drafted:
+
+-->
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>With this recipe, we have:</p>
+<ul class="simple">
+<li><p>highlighted the importance of the European legal framework devised to ensure protection of privacy.</p></li>
+<li><p>highlighted the existence of a dedicated vocabulary / semantic model to express key information about data protection impact assessment</p></li>
+<li><p>provided practical examples of how to produce an RDF-based representation exploiting the DPV vocabulary.</p></li>
+</ul>
+<p>The reader should understand that this is an active area of research and therefore, patterns for using the
+vocabularies introduced in this recipe may evolve and be refined. The main point is to raise awareness about these resources.
+which can be used for mapping DPIA documents which are in pure narrative form.
+The recipe should also be used as guide when creating DPIA documents to ensure that key information is covered.
+Finally, as more DPIA document data are represented using these resources, it is likely that new toolsets will be available to produce
+new DPIA documents which are FAIR by design, available as textual documents for humans and as linked data graphs for machines.</p>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The present recipe does not constitute legal advice.
+It merely introduces concepts related to compliance with the GDPR policy and resources that may be used
+to express essential information in a formal, machine readable way.
+We need to draw the attention of the readership that they should consult with their respective legal representatives to
+ensure the validity, accuracy of any representation of legal document statements into RDF.
+We only documented technical options and a number of possible patterns and resources available.
+It is the responsibility of the implementer to also ensure that the legal information aligns with company practices and interests.</p>
+</div>
+<div class="section" id="what-should-i-read-next">
+<h3>What should I read next?<a class="headerlink" href="#what-should-i-read-next" title="Permalink to this headline">¶</a></h3>
+<p>We highly recommend following up this recipe with another relevant content type which looks at how to express permitted data uses
+by relying on two standards, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (DUO).</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reusability/provenance.html#fcb-reusability-provenance"><span class="std std-ref">Provenance Information</span></a></p></li>
+<li><p><a class="reference internal" href="../reusability/expressing-data-use.html#fcb-reusability-data-use"><span class="std std-ref">Data Use Ontology and ODRL</span></a></p></li>
+</ul>
+</div>
+<blockquote>
+<div><div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header bg-primary pa_dark docutils">
+<a class="reference internal image-reference" href="../../../_images/RDMkit_logo.svg" id="rdmkit-logo"><img alt="../../../_images/RDMkit_logo.svg" height="40px" id="rdmkit-logo" src="../../../_images/RDMkit_logo.svg" /></a>
+</div>
+<div class="card-body grey docutils">
+<p class="card-text"><a class="reference external" href="https://rdmkit.elixir-europe.org/data_protection">More about <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Protection</span></code> from the <code class="docutils literal notranslate"><span class="pre">RDMkit</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></blockquote>
+<!-- > ---
+> :header: bg-primary pa_dark
+> ```{image} ../../../images/logos/pistoia_logo.png
+> :height: 40px
+> :align: center
+> :name: FAIRtoolkit_logo
+> ```
+> ^^^
+> [More about `Data Protection` from the `Pistoia Alliance FAIR toolkit`]() -->
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>References</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text" id="bibtex-footbibliography-content/recipes/introduction/dpia-0"><dl class="footnote brackets">
+<dt class="label" id="pandit-harshvardhan-j-2022-6783955"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p class="card-text"><em>A Semantic Specification for Data Protection Impact Assessments (DPIA)</em>, Zenodo, June 2022. This work has been funded by Irish Research Council Government of Ireland Postdoctoral Fellow- ship Grant#GOIPD/2020/790. The ADAPT SFI Centre for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and is co-funded under the European Re- gional Development Fund (ERDF) through Grant#13/RC/2106 P2. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.6783955">https://doi.org/10.5281/zenodo.6783955</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.6783955">doi:10.5281/zenodo.6783955</a>.</p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p class="card-text">Harshvardhan J. Pandit, Axel Polleres, Bert Bos, Rob Brennan, Bud Bruegger, Fajar J. Ekaputra, Javier D. Fernández, Roghaiyeh Gachpaz Hamed, Elmar Kiesling, Mark Lizar, Eva Schlehahn, Simon Steyskal, and Rigo Wenning. Creating a vocabulary for data privacy. In Hervé Panetto, Christophe Debruyne, Martin Hepp, Dave Lewis, Claudio Agostino Ardagna, and Robert Meersman, editors, <em>On the Move to Meaningful Internet Systems: OTM 2019 Conferences</em>, 714–730. Cham, 2019. Springer International Publishing.</p>
+</dd>
+</dl>
+</p>
+</div>
+</details></div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Authors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">Name</p></th>
+<th class="head"><p class="card-text">ORCID</p></th>
+<th class="head"><p class="card-text">Affiliation</p></th>
+<th class="head"><p class="card-text">Type</p></th>
+<th class="head"><p class="card-text">ELIXIR Node</p></th>
+<th class="head"><p class="card-text">Contribution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">David Henderson</div></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-6433-200X"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Bayer AG</p></td>
+<td><p class="card-text"><i class="fas fa-industry fa-1x text--purple-light" alt="EFPIA"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Conceptualization, Writing</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><img class="avatar-style" src="https://avatars.githubusercontent.com/NONE"></img><div class="d-block">Anne Cambon-Thomsen</div></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-8793-3644"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">Universite Paul Sabatier</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"></p></td>
+<td><p class="card-text">Conceptualization, Writing</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/proccaserra"></img><div class="d-block">Philippe Rocca-Serra</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-9853-5668"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Conceptualization, Writing</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/susannasansone"></img><div class="d-block">Susanna-Assunta Sansone</div></a></div></p></td>
+<td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0001-5306-5690"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
+<td><p class="card-text">University of Oxford</p></td>
+<td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-UK.svg" ></img></p></td>
+<td><p class="card-text">Conceptualization, Writing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>License</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="../../../_static/images/logo/cc.svg"  height="25"/>
+    <img src="../../../_static/images/logo/by.svg"  height="25"/></a>
+    <a href="https://creativecommons.org/licenses/by/4.0/"> The Creative Commons 4.0 BY license</a></br>
+    <br/>
+</div>
+</details><hr class="footnotes docutils" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/recipes/introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                                            </v-col>
+                                            <div class="d-none d-md-block col-md-2 bd-toc show collapse custom-bdtoc pt-5">
+                                                <div style="position: fixed">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-objectives">
+   Main Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-data-standards">
+   Table of Data Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-content">
+   Main Content
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#survey-the-data-types-of-the-project">
+     Survey the data types of the project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-key-entities">
+     Identifying the key entities:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-natural-persons">
+       The Natural Persons
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-legal-entities">
+       The legal entities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-functions-and-roles">
+       the functions and roles:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-risks-to-privacy-and-define-risk-mitigation-and-security-measures">
+     Identifying the risks to privacy and define risk mitigation and security measures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#organisational-measures">
+       Organisational measures:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#technical-measures">
+       Technical measures:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-access-requests-data-access-agreements-and-dpia">
+       Data Access Requests, Data Access Agreements and DPIA:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-read-next">
+     What should I read next?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        </div>
+                                            </div>
+                                        
+                                    </v-row>
+
+                                    
+                                        <v-row class="mb-5">
+                                            <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
+                                                
+<a class='left-prev' id="prev-link" href="fair-cro.html" title="previous page">Practical Considerations for CROs to play FAIR</a>
+<a class='right-next' id="next-link" href="glossary-fair-terms.html" title="next page">Glossary</a>
+
+                                            </div>
+                                        </v-row>
+                                    
+                                </v-container>
+                            </main>
+                        
+                    
+                </v-row>
+                
+            </v-container>
+        </v-row>
+    </v-container>
+</v-app>
+
+
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-171697285-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+<v-container fluid>
+    <v-row no-gutter>
+        <v-col cols="12"><footer class="footer" style=" margin-top: 12px;  ">
+    <div class="container-md mt-4">
+      <div class="row" style="display:flex; justify-content: center">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+            <div class="footerImages">
+              <a href="https://europa.eu/"><img src="/_static/images/logo/eu-flag.png" height="40" alt="EU flag"></a>
+              <a href="https://www.imi.europa.eu/"><img src="/_static/images/logo/imi-logo.png" height="40" alt="IMI logo"></a>
+              <a href="https://efpia.eu"><img src="/_static/images/logo/efpia-logo.png" height="40" alt="EFPIA logo"></a>
+            </div>
+            <div class="mb-3"> Grant agreement 802750 </div>
+          </div>
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
+              <ul>
+                <li><a href="mailto:fairplus-cookbook@elixir-europe.org"> Contact us </a></li>
+                <li><a href="https://fairplus-project.eu" target="_blank"> FAIRplus </a> </li>
+              </ul>
+          </div>
+          <div class="col-5 col-sm-2 col-xs-5 col-md-2 col-lg-2 col-xl-2">
+              <ul>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/afterword/people.html  "> Contributors </a> </li> </li>
+                <li> <a href="https://faircookbook.elixir-europe.org/content/recipes/help.html"> How to contribute </a> </li>
+              </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3 pb-5">
+            <a class="mr-3" href="https://elixir-europe.org/" target="_blank"><img src="/_static/images/logo/Elixir/ELIXIR.png" height="50" alt="Elixir logo"></a>
+            <a href="https://fairplus-project.eu/"><img src="https://fairplus-project.eu/images/fairplus-logo.png" alt="FAIRplus logo" style="background:white;padding:5px;height:33px;"></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="padding:0">
+        <div class="row" style="padding:0; margin:0">
+            <div class="col-12 purple-dark">
+                The FAIR Cookbook is licensed under the
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    Creative Commons Attribution 4.0 International
+                </a> (CC BY 4.0) license.
+            </div>
+        </div>
+        <div class="row extra_footer d-none">
+            <script> mermaid.init() </script>
+        </div>
+    </div>
+
+</footer> </v-col>
+    </v-row>
+</v-container>
+<script type="application/javascript">
+    const vuetify = new Vuetify({
+        theme: {
+            themes: {
+                light: {
+                    primary: '#421C6E',
+                    secondary: '#FC7A4A',
+                    accent: '#8038D1',
+                    error: '#FF5252',
+                    info: '#2196F3',
+                    success: '#7E0038',
+                    warning: '#FFC107'
+                }
+            }
+        },
+        icons: { iconfont: 'fa4' }
+    })
+    const my_vue = new Vue({ el: '#app', vuetify: vuetify })
+
+</script>
+  </body>
+</html>

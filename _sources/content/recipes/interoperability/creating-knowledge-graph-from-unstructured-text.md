@@ -381,27 +381,51 @@ g.serialize(format = 'ttl')
 
 
 ```python
-import networkx as ntx
-import matplotlib.pyplot as plot
 
-graph = ntx.from_pandas_edgelist(
-    relations, 
-    "subject_text", 
-    "object_text",
-    edge_attr=True, 
-    create_using=ntx.MultiDiGraph()
-)
+from matplotlib import colors as mcolors
+from matplotlib.lines import Line2D
 
-plot.figure(figsize=(10, 10))
-posn = ntx.spring_layout(graph)
-ntx.draw(
-    graph, 
-    with_labels=True, 
-    node_color='green', 
-    edge_cmap=plot.cm.Blues,
-    pos = posn
-)
-plot.show()
+def make_proxy(clr, mappable, **kwargs):
+    return Line2D([0, 1], [0, 1], color=clr, **kwargs)
+
+#for id-less set the identified entity as the id
+relations.replace(['id-less'], [None], inplace=True)
+relations['subject_id'] = relations['subject_id'].fillna(relations['subject_text'])
+relations['object_id'] = relations['object_id'].fillna(relations['object_text'])
+
+#bring all entities to upper case
+relations = relations.applymap(lambda s:s.upper())
+relations['relation'] = relations['relation'].apply(lambda s:s.lower())
+relations['relation']=pd.Categorical(relations['relation'])
+
+
+#select colors for edges
+clrs = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'aqua', 'brown', 'darkgray', 
+        'orange', 'burlywood', 'cadetblue', 'chartreuse', 
+        'chocolate', 'coral','cornflowerblue','cornsilk','crimson']
+#map relations to colors
+color_map = dict(zip(relations['relation'].unique(), clrs)) 
+#create the list of edge colors
+relations['edge_colors'] = relations["relation"].apply(lambda x: color_map[x])
+graph = ntx.from_pandas_edgelist(relations, "subject_id", "object_id", edge_attr="edge_colors", create_using=ntx.MultiDiGraph())
+
+## PLOT
+plt.figure(figsize=(20, 20))
+posn = ntx.shell_layout(graph)
+
+colors = ntx.get_edge_attributes(graph,'edge_colors').values()
+
+##add graph elements
+h1 = ntx.draw_networkx_nodes(graph, pos=posn, node_color = 'lightgray', node_size = 300)
+h2 = ntx.draw_networkx_edges(graph, pos=posn, width=1, edge_color=colors)
+h3 = ntx.draw_networkx_labels(graph, pos=posn, font_size=10)
+
+# generate proxies
+proxies = [make_proxy(clr, h2, lw=5) for clr in color_map.values()]
+#create legend labels
+labels = color_map.keys()
+plt.legend(proxies, labels)
+
 ```
 
 ````{dropdown} 

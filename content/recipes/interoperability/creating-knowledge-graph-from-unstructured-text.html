@@ -350,6 +350,16 @@
    Reflecting on Practical Considerations for CROs to play FAIR
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/dpia.html">
+   Data Protection Impact Assessment and Data Privacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/glossary-fair-terms.html">
+   Glossary
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -1116,8 +1126,8 @@ becoming a dominant form. This is chiefly due to it being a favourite form of  <
 </div>
 </details><hr class="docutils" />
 <div class="tabbed-set docutils">
-<input checked="checked" id="406e6514-1737-4842-bb2a-72fb3f5d34da" name="9e0c6ef6-f18a-4fe8-9dc6-3e1bd06df8f2" type="radio">
-</input><label class="tabbed-label" for="406e6514-1737-4842-bb2a-72fb3f5d34da">
+<input checked="checked" id="b1c8abeb-4046-4931-a39e-946cf8d5f890" name="a9c83616-ba0a-41b8-8b24-ee4633e7406d" type="radio">
+</input><label class="tabbed-label" for="b1c8abeb-4046-4931-a39e-946cf8d5f890">
 Requirements</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Recipe dependency:</p>
@@ -1139,8 +1149,8 @@ Requirements</label><div class="tabbed-content docutils">
 </li>
 </ul>
 </div>
-<input id="9d7b1dd6-4f9f-41c9-90d4-ec446e96d5a1" name="9e0c6ef6-f18a-4fe8-9dc6-3e1bd06df8f2" type="radio">
-</input><label class="tabbed-label" for="9d7b1dd6-4f9f-41c9-90d4-ec446e96d5a1">
+<input id="deecc223-27be-4377-baf4-ef87218c7363" name="a9c83616-ba0a-41b8-8b24-ee4633e7406d" type="radio">
+</input><label class="tabbed-label" for="deecc223-27be-4377-baf4-ef87218c7363">
 FAIRification Objectives, Inputs and Outputs</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1461,27 +1471,51 @@ library.</p>
 </pre></div>
 </div>
 <p>…and visualise it using the well known <a class="reference external" href="https://networkx.org/">networkx python library</a> and <a class="reference external" href="https://matplotlib.org/">matplotlib library</a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">ntx</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span> <span class="k">as</span> <span class="n">mcolors</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
 
-<span class="n">graph</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
-    <span class="n">relations</span><span class="p">,</span> 
-    <span class="s2">&quot;subject_text&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;object_text&quot;</span><span class="p">,</span>
-    <span class="n">edge_attr</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-    <span class="n">create_using</span><span class="o">=</span><span class="n">ntx</span><span class="o">.</span><span class="n">MultiDiGraph</span><span class="p">()</span>
-<span class="p">)</span>
+<span class="k">def</span> <span class="nf">make_proxy</span><span class="p">(</span><span class="n">clr</span><span class="p">,</span> <span class="n">mappable</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">clr</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="n">plot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">posn</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-<span class="n">ntx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
-    <span class="n">graph</span><span class="p">,</span> 
-    <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-    <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> 
-    <span class="n">edge_cmap</span><span class="o">=</span><span class="n">plot</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">,</span>
-    <span class="n">pos</span> <span class="o">=</span> <span class="n">posn</span>
-<span class="p">)</span>
-<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#for id-less set the identified entity as the id</span>
+<span class="n">relations</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;id-less&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">relations</span><span class="p">[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relations</span><span class="p">[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">relations</span><span class="p">[</span><span class="s1">&#39;subject_text&#39;</span><span class="p">])</span>
+<span class="n">relations</span><span class="p">[</span><span class="s1">&#39;object_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relations</span><span class="p">[</span><span class="s1">&#39;object_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">relations</span><span class="p">[</span><span class="s1">&#39;object_text&#39;</span><span class="p">])</span>
+
+<span class="c1">#bring all entities to upper case</span>
+<span class="n">relations</span> <span class="o">=</span> <span class="n">relations</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="n">relations</span><span class="p">[</span><span class="s1">&#39;relation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relations</span><span class="p">[</span><span class="s1">&#39;relation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">relations</span><span class="p">[</span><span class="s1">&#39;relation&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">relations</span><span class="p">[</span><span class="s1">&#39;relation&#39;</span><span class="p">])</span>
+
+
+<span class="c1">#select colors for edges</span>
+<span class="n">clrs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;aqua&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;darkgray&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;burlywood&#39;</span><span class="p">,</span> <span class="s1">&#39;cadetblue&#39;</span><span class="p">,</span> <span class="s1">&#39;chartreuse&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;chocolate&#39;</span><span class="p">,</span> <span class="s1">&#39;coral&#39;</span><span class="p">,</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span><span class="s1">&#39;cornsilk&#39;</span><span class="p">,</span><span class="s1">&#39;crimson&#39;</span><span class="p">]</span>
+<span class="c1">#map relations to colors</span>
+<span class="n">color_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">relations</span><span class="p">[</span><span class="s1">&#39;relation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">clrs</span><span class="p">))</span> 
+<span class="c1">#create the list of edge colors</span>
+<span class="n">relations</span><span class="p">[</span><span class="s1">&#39;edge_colors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relations</span><span class="p">[</span><span class="s2">&quot;relation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">color_map</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="s2">&quot;subject_id&quot;</span><span class="p">,</span> <span class="s2">&quot;object_id&quot;</span><span class="p">,</span> <span class="n">edge_attr</span><span class="o">=</span><span class="s2">&quot;edge_colors&quot;</span><span class="p">,</span> <span class="n">create_using</span><span class="o">=</span><span class="n">ntx</span><span class="o">.</span><span class="n">MultiDiGraph</span><span class="p">())</span>
+
+<span class="c1">## PLOT</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">posn</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">shell_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span><span class="s1">&#39;edge_colors&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="c1">##add graph elements</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">posn</span><span class="p">,</span> <span class="n">node_color</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">node_size</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">posn</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+<span class="n">h3</span> <span class="o">=</span> <span class="n">ntx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">posn</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># generate proxies</span>
+<span class="n">proxies</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_proxy</span><span class="p">(</span><span class="n">clr</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">clr</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<span class="c1">#create legend labels</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">color_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">proxies</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3" open="open">
