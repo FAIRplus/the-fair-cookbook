@@ -61,7 +61,8 @@ When the identifier is not a resolvable URL, then `Identifier Resolution Service
 
 
 
-### Introducing CURIES or Compact URIs
+### Introducing CURIEs or Compact URIs
+
 CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note [CURIE Syntax 1.0](https://www.w3.org/TR/2010/NOTE-curie-20101216/), and provide a human readable shortening of IRIs.
 
 The CURIE consists of a **`namespace prefix`** followed by the **`local identifier`**.
@@ -103,9 +104,9 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 
 
-* [Name2Things](https://n2t.net/)
+* [Name-to-Thing](https://n2t.net/)
 
-  > [Name2Things](https://n2t.net/) (N2T) is a **Resolution Service**, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL shorteners like bit.ly, N2T serves content **indirectly**.
+  > [Name-to-Thing](https://n2t.net/) (N2T) is a **Resolution Service**, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL shorteners like bit.ly, N2T serves content **indirectly**.
   > N2T can store more than one "target" (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
   > N2T.net is also a "meta-resolver". In collaboration with identifiers.org, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier's type to look for an overall target rule.
 
@@ -113,7 +114,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 * [Bioregistry](https://bioregistry.io/)
 
-  > [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like Identifiers.org it has a registry, but also a registry of registries, and it imports data from Identifiers.org and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/chebi:138488 resolves to the ChEBI page https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488. Bioregistry provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
+  > The [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry) {footcite}`Hoyt2022`. Like Identifiers.org, it has a registry, but also a registry of registries, and it imports data from Identifiers.org,  Name-to-Thing, and 20+ other registries that extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/chebi:138488 resolves to the ChEBI page https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138488. Bioregistry provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
 
 
 ### PURL stands for Persistent URL

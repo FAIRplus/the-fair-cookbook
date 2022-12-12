@@ -23,6 +23,10 @@
       title: Raising Awareness in Public Knowledge Graphs for Life Sciences
     - file: content/recipes/introduction/fair-cro #FCB056
       title: Reflecting on Practical Considerations for CROs to play FAIR
+    - file: content/recipes/introduction/dpia #FCB074
+      title: Data Protection Impact Assessment and Data Privacy
+    - file: content/recipes/introduction/glossary-fair-terms
+      title: Glossary
 
 
 - part: Recipes at a Glance
@@ -131,6 +135,7 @@
             sections:
               - file: content/recipes/interoperability/nlp2kg/creating-knowledge-graph-from-text.ipynb
                 title: unstructured text to graph as executable notebook
+
 
     - file: content/recipes/reusability
       title: Reusability
