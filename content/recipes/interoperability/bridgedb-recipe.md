@@ -109,7 +109,27 @@ In this case, the input data is a list of elements with an identifier that is pa
 
 One of the biggest benefits of using BridgeDb webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb Python library, we show here how to use the BridgeDb Webservices to perform exemplary mappings.
 
-We start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map to a specific data source, e.g. Ensembl.
+First, the required libraries need to be set up through several 'pip install' command (in the terminal)
+
+```bash
+## Install pandas:
+pip install wheel
+pip install pandas
+## Install API calls library
+pip install requests
+```
+
+Second, load the required libraries in your Python code:
+
+```python
+##Load library to work with pandas data formats:
+import pandas
+##Check the version of this library:
+pandas.__version__
+##Load library to post get requests :
+import requests
+```
+Then, we start by defining strings containing the URL of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map to a specific data source, e.g. Ensembl.
 
 ```python
 url = "https://webservice.bridgedb.org/"
