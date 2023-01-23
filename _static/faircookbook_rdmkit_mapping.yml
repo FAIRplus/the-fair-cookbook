@@ -54,16 +54,6 @@
   - fcb_title: Describe data by checksums
     fcb_id: FCB052
 
-- rdmkit_title: Identifiers
-  rdmkit_filename: identifiers
-  links:
-  - fcb_title: Unique, persistent identifiers
-    fcb_id: FCB006
-  - fcb_title: InChI and SMILES identifiers for chemical structures
-    fcb_id: FCB007
-  - fcb_title: Minting identifiers with Minid
-    fcb_id: FCB008
-
 - rdmkit_title: Licensing
   rdmkit_filename: licensing
   links:
@@ -85,6 +75,8 @@
     fcb_id: FCB010
   - fcb_title: Creating a metadata profile
     fcb_id: FCB026
+  - fcb_title: Interlinking data from different sources
+    fcb_id: FCB016
 
 - rdmkit_title: Documentation and metadata
   rdmkit_filename: metadata_management
@@ -122,3 +114,58 @@
   - fcb_title: Plant genomic and genetic variation data submission to EMBL-EBI databases
     fcb_id: FCB061
 
+- rdmkit_title: Bioimaging data
+  rdmkit_filename: bioimaging_data
+  links:
+  - fcb_title: IMI EUBOPEN FAIR High-Content Screening data deposition
+    fcb_id: FCB067
+
+- rdmkit_title: Data brokering
+  rdmkit_filename: data_brokering
+  links:
+  - fcb_title: Introduction to terminologies and ontologies
+    fcb_id: FCB019
+  - fcb_title: Creating data/variable dictionary
+    fcb_id: FCB025
+  - fcb_title: Creating a metadata profile
+    fcb_id: FCB026
+  - fcb_title: Selecting terminologies and ontologies
+    fcb_id: FCB020
+  - fcb_title: Ontology-related tools and services
+    fcb_id: FCB022
+
+- rdmkit_title: Existing data
+  rdmkit_filename: existing_data
+  links:
+  - fcb_title: Licensing
+    fcb_id: FCB032
+
+- rdmkit_title: Toxicology data
+  rdmkit_filename: toxicology_data
+  links:
+  - fcb_title: Creating InChIKeys for IUPAC names
+    fcb_id: FCB080
+
+- rdmkit_title: Identifiers
+  rdmkit_filename: identifiers
+  links:
+  - fcb_title: Creating resolvable identifiers
+    fcb_id: FCB077
+  - fcb_title: Interlinking data from different sources
+    fcb_id: FCB016
+  - fcb_title: Unique, persistent identifiers
+    fcb_id: FCB006
+  - fcb_title: Minting identifiers with Minid
+    fcb_id: FCB008
+
+- rdmkit_title: Data storage
+  rdmkit_filename: storage
+  links:
+  - fcb_title: Licensing Software
+    fcb_id: FCB033
+  - fcb_title: Making Computational Workflows FAIR
+    fcb_id: FCB062
+  - fcb_title: Depositing to generic repositories - Zenodo use case
+    fcb_id: FCB0009
+  - fcb_title: Registering datasets with Wikidata
+    fcb_id: FCB060
