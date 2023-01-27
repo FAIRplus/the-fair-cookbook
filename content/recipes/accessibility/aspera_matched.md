@@ -18,7 +18,7 @@
 
 ## Main objectives
 
-This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) such as NCBI SRA(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/sra) and EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena), it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) compliance.
+This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as NCBI SRA(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/sra) and EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena), it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) compliance.
 
 
 ## Graphical overview

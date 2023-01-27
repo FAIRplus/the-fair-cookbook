@@ -23,13 +23,13 @@ This recipe is a step-by-step guide on how to deploy the IMI Data Catalog(URL_TO
 
 ## Introduction
 
-For a more general introduction to data catalogues, their elements and data model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s, 
+For a more general introduction to data catalogues, their elements and data model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, 
 see the [data catalogue recipe](https://www.TODO.uldatacatalog.ul). 
 This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalog(URL_TO_INSERT_RECORD https://datacatalog.elixir-luxembourg.org/)ue
 developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host 
-dataset-level metadata for a wide range of IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s. Datasets are FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ified and search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able by a range facets. 
+dataset-level metadata for a wide range of IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s. Datasets are FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ified and search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able by a range facets. 
 The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, 
-together with informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion on any access restrictions.
+together with informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion on any access restrictions.
 
 ## Requirements
 
@@ -138,7 +138,7 @@ os.urandom(24)
 
 ### Maintenance of docker-compose
 Docker container keeps the application in the state it was when  built. Therefore, **if you change any files in 
-the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project), the container has to be rebuilt in order to see changes in application** :
+the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) , the container has to be rebuilt in order to see changes in application** :
 
 ```shell
 $ docker-compose up --build

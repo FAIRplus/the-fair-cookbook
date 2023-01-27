@@ -20,7 +20,7 @@
 
 The main purpose of this recipe is:
 
-To create a **persistent**, **globally unique** and **resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s`.
+To create a **persistent**, **globally unique** and **resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ** using the ***Minid client*** accessing the Minid 2.0 release {footcite}`Madduri2019` {footcite}`minid-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s`.
 
 ---
 
@@ -40,9 +40,9 @@ To create a **persistent**, **globally unique** and **resolvable identifier (URL
 ---
 height: 550px
 name: Minting Minid
-alt: An overview of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) minting process
+alt: An overview of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  minting process
 ---
-An overview of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) minting process.
+An overview of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  minting process.
 ```
 ````
 
@@ -72,7 +72,7 @@ pip3 install --pre minid
 ### building from source:
 
 use the dev branch to obtain to source
-[minid github(URL_TO_INSERT_RECORD https://github.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/fair-research/minid)
+[minid github(URL_TO_INSERT_RECORD https://github.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/fair-research/minid)
 
 ---
 
@@ -81,7 +81,7 @@ use the dev branch to obtain to source
 
 1. prerequisite: create a minig-config.cfg file
   
-  As a convenience you need specify this informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion in a minid configuration file (`~/.minid/minid-config.cfg`)
+  As a convenience you need specify this informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion in a minid configuration file (`~/.minid/minid-config.cfg`)
   To do so from the command line, issue the following:
 
 ```bash
@@ -218,7 +218,7 @@ Globus account login success.
 
 The CL(URL_TO_INSERT_RECORD https://github.com/obophenotype/cell-ontology)I supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
 
-* Check a known minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)
+* Check a known minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
 
 ```bash
 $ minid check hdl:20.500.12633/1HK1DTv1wPt3a
@@ -236,13 +236,13 @@ EZID Landing Page:   https://ezid.cdlib.org/id/hdl:20.500.12633/1HK1DTv1wPt3a
 Locations:           http://example.com/foo.txt
 ```
 
-* Create a new identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (the `--location` option, if provided, must be at the end).
+* Create a new identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (the `--location` option, if provided, must be at the end).
 
 ```bash
 $ minid --register [--title <title>] <file_name> [--locations <loc1>..<locN>]
 ```
 
-* Update metadata about an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema):
+* Update metadata about an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) :
 
 ```bash
 $ minid --update [--title <title>] [--status <status>] [--obsoleted_by <minid>] [--locations <loc1> <loc2>] <identifier>
@@ -261,9 +261,9 @@ Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid
 ### file manifest format
 
 
-Minids can only be assigned to a single file. In order to assign a minid to a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) of files, we recommend using a `BDBag <https://github.com(URL_TO_INSERT_RECORD https://github.com/)/ini-bdds/bdbag>`_ or the minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+Minids can only be assigned to a single file. In order to assign a minid to a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of files, we recommend using a `BDBag <https://github.com(URL_TO_INSERT_RECORD https://github.com/)/ini-bdds/bdbag>`_ or the minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 
-The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) is a JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-based format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) that enumerates a list of files as JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) objects that have the following attributes:
+The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is a JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-based format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  that enumerates a list of files as JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) objects that have the following attributes:
 
 
 * length: The length of the file in bytes.
@@ -280,7 +280,7 @@ The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/searc
 
 * url: the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) to the file.
 
-The manifest may be used to create a minid for a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) of files or alternatively as input to the minid batch-register command.
+The manifest may be used to create a minid for a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of files or alternatively as input to the minid batch-register command.
 
 Below is a sample file manifest configuration file:
 
@@ -304,7 +304,7 @@ Below is a sample file manifest configuration file:
 
 ## Conclusions
 
-Using the `Minid` service, resources can now generate stable, resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets can be looked up using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
+Using the `Minid` service, resources can now generate stable, resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for their digitial documents. The `Minid` service thus provides a key component to enable `interoperability` and `reusability` by ensuring digital assets can be looked up using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  protocol (HTTP request). The service also supports data integrity checks thanks to the native support of checksumming functions, with sha256 being recommended.
 
 
 ## References

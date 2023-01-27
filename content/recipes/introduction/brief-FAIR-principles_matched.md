@@ -4,12 +4,12 @@
 
 
 <!-- ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)_text: RX.X
-:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)_link: 'https://example.com'
+:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) _text: RX.X
+:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://example.com'
 :difficulty_level: 1
-:recipe_type: background_informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion
+:recipe_type: background_informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
 :reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist, funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)
+:intended_audience: principal_investigator, data_manager, data_scientist, funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder) 
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
@@ -53,11 +53,11 @@ doi: 10.1038/sdata.2016.18
 :open:
 > **To be Findable:**
 
->F1. (meta)data are assigned a **`globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)`**
+>F1. (meta)data are assigned a **`globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) `**
 >
 >F2. data are described with **`rich metadata`** (defined by R1 below)
 >
->F3. metadata **`clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) of the data it describes`**
+>F3. metadata **`clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes`**
 >
 >F4. (meta)data are registered or **`indexed in a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able resource`**
 ````
@@ -67,7 +67,7 @@ doi: 10.1038/sdata.2016.18
 
 > **To be Accessible:**
 
->A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) using **`a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized communications protocol`**
+>A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  using **`a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ized communications protocol`**
 >
 >A1.1 the protocol is **`open, free, and universally implementable`**
 >
@@ -100,7 +100,7 @@ doi: 10.1038/sdata.2016.18
 >
 >R1.2. (meta)data are associated with **`detailed provenance`**
 >
->R1.3. (meta)data meet domain-relevant **`community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s`**
+>R1.3. (meta)data meet domain-relevant **`community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s`**
 
 ````
 
@@ -116,11 +116,11 @@ doi: 10.1038/sdata.2016.18
 
 > To be Findable:
 
->F1. (meta)data are assigned a **globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)**
+>F1. (meta)data are assigned a **globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) **
 >
 >F2. data are described with **rich metadata** (defined by R1 below)
 >
->F3. metadata clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) of the data it describes
+>F3. metadata clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes
 >
 >F4. (meta)data are registered or **indexed in a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able resource**
 ```
@@ -128,7 +128,7 @@ doi: 10.1038/sdata.2016.18
 ```{tabbed} A.
 > To be Accessible:
 
->A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) using **a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized communications protocol**
+>A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  using **a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ized communications protocol**
 >
 >A1.1 the protocol is **open, free, and universally implementable**
 >
@@ -156,7 +156,7 @@ doi: 10.1038/sdata.2016.18
 >
 >R1.2. (meta)data are associated with **detailed provenance**
 >
->R1.3. (meta)data meet domain-relevant **community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s**
+>R1.3. (meta)data meet domain-relevant **community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s**
 ```
 ```` -->
 
@@ -177,7 +177,7 @@ the main `Table of Content` organizes a number of atomic recipes around of the p
 ## Conclusions
 
 This section should be seen as a refresher for anyone unclear about the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/). 
-Now that key background informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion has been provided, shining a light on a number of ethical issues driving 
+Now that key background informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion has been provided, shining a light on a number of ethical issues driving 
 both the development and implementation of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) in the context of Life Science data
 as well as learning about the overall FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process represent a natural progression 
 in the content of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059).

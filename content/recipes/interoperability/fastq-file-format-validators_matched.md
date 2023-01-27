@@ -30,10 +30,10 @@ The main purpose of this recipe is to:
 ```{figure} fastq-validation.png
 ---
 width: 350px
-name: Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
-alt: Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+name: Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+alt: Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ---
-Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+Validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 ```
 ````
 
@@ -47,7 +47,7 @@ The table below lists common file validation use cases. This recipe provides sol
 |---|--|--|
 |Data owner| Validate my sequencing files before depositing to public arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ives| Reduce the risk of submitting invalid files or submission rejection|
 |Data consumer| Validate files before running analysis|Avoid wasting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) time and resource processing corrupted files|
-|Data consumer| Integrate file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
+|Data consumer| Integrate file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
 |Data librarian| Check files downloaded from unknown sources before deposition| Ensure the file is usable in the future.|
 
 
@@ -57,18 +57,18 @@ The table below lists common file validation use cases. This recipe provides sol
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)  | [FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2182)  | Validation results  |
+| [Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)  | [FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2182)  | Validation results  |
 
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  |
+| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | [FASTQ](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2182)  | |
 | [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)%2Fformat_4006)| |
 ---
 
-[FASTQ](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2182) is the _de facto_ sequencing file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) and one of the most common file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s in bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics analysis {footcite}`ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)fastq`, {footcite}`NCBIformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s`. Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ers receive FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files from various sources. These files are used intensively in automated bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics analysis pipelines. Therefore, it is important to validate FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files to improve the data reusability and build error-proof data analysis processes.
+[FASTQ](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2182) is the _de facto_ sequencing file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  and one of the most common file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s in bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis {footcite}`ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)fastq`, {footcite}`NCBIformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s`. Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ers receive FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files from various sources. These files are used intensively in automated bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipelines. Therefore, it is important to validate FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files to improve the data reusability and build error-proof data analysis processes.
 
 FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q validators detect truncated reads, base calls and quality score(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q variants automatically and handle(URL_TO_INSERT_RECORD http://handle.net) compressed FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files. 
 
@@ -247,16 +247,16 @@ The table lists technical considerations when selecting the validator, including
 
 |Aspects|Validation content |Description|FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q-utils|
 |--|--|--|--|
-|Basic validation|4-line format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)|Check if the FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file is a 4-line file|☑️|
+|Basic validation|4-line format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) |Check if the FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file is a 4-line file|☑️|
 | |Character encoding| Check if the base calls and quality score(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) encoding are correct.  |☑️| 
 ||Read length| Check if the length of the base calls are the same as that of the quality score(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)s|☑️|
 ||File truncation|Check if the file is truncated or not|☑️|
 |Paired-end reads validation| Deinterleaved paired reads| Validate when the forward and reverse reads are in two files.|☑️|
 | |Interleaved _"8-line"_ files|Validate when the forward and reverse reads are listed together as an 8-line file|☑️|
 |Compressed file validation| gzip| Validate compressed fastq files, with extension `fastq.gz`|☑️|
-|FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q variants* validation| fastq-illumina|Validate the _fastq-illumina_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)|☑️|
-| |fastq-sanger|Validate the _fastq-sanger_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)|☑️||
-| |fastq-solexa|Validate the _fastq-solexa_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)|☑️|
+|FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q variants* validation| fastq-illumina|Validate the _fastq-illumina_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) |☑️|
+| |fastq-sanger|Validate the _fastq-sanger_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) |☑️||
+| |fastq-solexa|Validate the _fastq-solexa_ format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) |☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
 |Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ieve compatiablity|ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)|File validated can be submitted to the ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena) arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive.|☑️|
@@ -271,12 +271,12 @@ _*See details in the [FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/th
  
 ## Conclusion
 
-In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s and other use cases.
+In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and other use cases.
 
 
 ### What to read next?
 
-- 🐙[From proprietary format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) to open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): an exemplar](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
+- 🐙[From proprietary format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  to open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : an exemplar](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
 - 🐙[FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file specification recipe](TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO include link to recipe https://www.TBD.org )
 - 🐙[FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file validator in Biopython](TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO include link to recipe https://www.TBD.org)
 
@@ -290,9 +290,9 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 ```{footbibliography}
 ```
 ````
-<!-- - Cock, Peter J. A., Christopher J. Field(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/1369)s, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) for Sequences with Quality Score(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)s, and the Solexa/Illumina FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q Variants’. Nucleic Acids Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) 38, no. 6 (1 April 2010): 1767-71. https://doi.org/10.1093/nar/gkp1137.
-- ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena). ‘Accepted Read Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s — ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena) Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.
-- NCBI. ‘File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/sra)/docs/submitformats/#fastq-files.
+<!-- - Cock, Peter J. A., Christopher J. Field(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/1369)s, Naohisa Goto, Michael L. Heuer, and Peter M. Rice. ‘The Sanger FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  for Sequences with Quality Score(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)s, and the Solexa/Illumina FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q Variants’. Nucleic Acids Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) 38, no. 6 (1 April 2010): 1767-71. https://doi.org/10.1093/nar/gkp1137.
+- ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena). ‘Accepted Read Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s — ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena) Training Modules 1 Documentation’. Accessed 6 July 2020. https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format.
+- NCBI. ‘File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  Guide’. Accessed 14 July 2020. https://www.ncbi.nlm.nih.gov/sra(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/sra)/docs/submitformats/#fastq-files.
 - Nuno Fonseca, and Jonathan Manning. Nunofonseca/Fastq_utils 0.24.0. Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org), 2020. https://doi.org/10.5281/zenodo.3936692. -->
 
 

@@ -22,15 +22,15 @@
   * Uniform Resource Locator(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) (URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630))
   * Domain Name System (DNS)
 * Knowledge requirement:
-    * understanding of [identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s](../findability/identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.md).
+    * understanding of [identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s](../findability/identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.md).
 
 
     
 
 ## Abstract
 
-With this recipe, we will reinforce the notion and importance of Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (GUPRI) by 
-introducing several public services for minting such identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s. For each service, we will highlight the strengths and weaknesses.
+With this recipe, we will reinforce the notion and importance of Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) by 
+introducing several public services for minting such identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s. For each service, we will highlight the strengths and weaknesses.
 
 
 ## Background information
@@ -89,10 +89,10 @@ which is not accessible from the public internet, to specialized computer system
 
 ## How to realize a GUPRI?
 
-A Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (GUPRI) can be realized by implementing all the above. 
-Some consider a GUPRI to be equivalent with PID(URL_TO_INSERT_RECORD http://pid.nci.nih.gov/) (persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)) or PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) (persistent URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)). 
+A Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) can be realized by implementing all the above. 
+Some consider a GUPRI to be equivalent with PID(URL_TO_INSERT_RECORD http://pid.nci.nih.gov/) (persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ) or PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) (persistent URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)). 
 If intended for public use, your GUPRI must be accessible from the public internet; if intended for closed use, 
-you would probably use specialized DNS rules and domain names to exclude the public from resolving your identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema).
+you would probably use specialized DNS rules and domain names to exclude the public from resolving your identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) .
 
 
 ## Public services for realizing a GUPRI
@@ -112,7 +112,7 @@ all of which are (or can be accessed as) free-of-cost services.
 
 Although being the oldest and supposedly easiest-to-use service, purl.org is known by some veterans for having been 
 offline for a long time.
-This was especially bad as a "persistent" identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) should be resolvable at all times. 
+This was especially bad as a "persistent" identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  should be resolvable at all times. 
 This service is run by the non-profit [Internet Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive](https://archive.org).
 
 
@@ -166,7 +166,7 @@ If you make changes very often though, you will annoy the maintainers, and you s
 A typical implementation route goes like this:
 
 1.	Register to github(URL_TO_INSERT_RECORD https://github.com/).com
-2.	Fork the GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) at https://github.com(URL_TO_INSERT_RECORD https://github.com/)/perma-id/w3id.org(URL_TO_INSERT_RECORD https://w3id.org/) 
+2.	Fork the GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  at https://github.com(URL_TO_INSERT_RECORD https://github.com/)/perma-id/w3id.org(URL_TO_INSERT_RECORD https://w3id.org/) 
 3.	Copy e.g. the folder "faircookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)" to your desired path (if you name the folder "faircookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)", you can resolve everything that goes like http://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ faircookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) /*)
 4.	Change the README and .htaccess
 5.	Create a Pull Request
@@ -184,9 +184,9 @@ of the w3id.org repo act in accordance with your wishes (e.g. don’t allow "out
 
 ### Free services which provide access to the Handle system
 
-The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System (also known as `Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net).Net` or `HDL.NET`) is a globally distributed system to resolve "handle(URL_TO_INSERT_RECORD http://handle.net)s" (which are local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s per se).
-The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System forms also the basis of DOI(URL_TO_INSERT_RECORD https://www.doi.org)s (Digital Object Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)(URL_TO_INSERT_RECORD https://www.doi.org)s). 
-DOI(URL_TO_INSERT_RECORD https://www.doi.org)s add a layer of policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy) and specifications on top of The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System. 
+The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System (also known as `Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net).Net` or `HDL.NET`) is a globally distributed system to resolve "handle(URL_TO_INSERT_RECORD http://handle.net)s" (which are local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s per se).
+The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System forms also the basis of DOI(URL_TO_INSERT_RECORD https://www.doi.org)s (Digital Object Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (URL_TO_INSERT_RECORD https://www.doi.org)s). 
+DOI(URL_TO_INSERT_RECORD https://www.doi.org)s add a layer of policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  and specifications on top of The Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) System. 
 Unfortunately, it is quite expensive (approx. 5000 €/$ per year) to join the DOI(URL_TO_INSERT_RECORD https://www.doi.org) system 
 (which would go via a Registration Agency, see here: https://www.doi.org(URL_TO_INSERT_RECORD https://www.doi.org)/registration_agencies.html
 -- well known Registration Agencies are DataCite(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/datacite)(URL_TO_INSERT_RECORD https://search.datacite.org/) and Crossref(URL_TO_INSERT_RECORD https://www.crossref.org/)(URL_TO_INSERT_RECORD https://www.crossref.org/)), 
@@ -210,15 +210,15 @@ A typical implementation goes like this:
 
 ## Conclusion
 
-This recipe provided several options for generated globally unique persistent resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s. 
-Furthermore, our audience can see how we used the w3id(URL_TO_INSERT_RECORD https://w3id.org/) service to generate the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for the recipes and how effective this is.
-One has to bear in mind that the service works well for project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s like this one where the expected number of objects remains small.
+This recipe provided several options for generated globally unique persistent resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s. 
+Furthermore, our audience can see how we used the w3id(URL_TO_INSERT_RECORD https://w3id.org/) service to generate the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for the recipes and how effective this is.
+One has to bear in mind that the service works well for project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s like this one where the expected number of objects remains small.
 However, if scale-up is required and millions of GUPRIs are needed, a different service may be needed.
 
 
 ### What to read next?
 
-- {ref}`fcb-find-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s` 
+- {ref}`fcb-find-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s` 
 - {ref}`fcb-find-id-minid` 
 - http://web.mit.edu/handle/www/purl-eval.html
 

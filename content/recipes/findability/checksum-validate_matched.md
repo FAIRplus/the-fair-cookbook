@@ -18,7 +18,7 @@
 ## Abstract
 
 When copying a file ("source file") to a target location, it may become necessary
-to confirm that the actual content, i.e. the bits that make up the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion, arrived correctly in the target system.
+to confirm that the actual content, i.e. the bits that make up the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, arrived correctly in the target system.
 Confirming the identity of two different files may be achieved by calculating
 a so-called "checksum" of the file
 in the source system, calculating the checksum in the target system, and comparing
@@ -150,7 +150,7 @@ This recipe in its current form has the following limitations:
   - the above assumes that everything is placed in your home folder. (for a resolution see section "Extendability of this recipe" below.)
   - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CP(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/complexportal/)U time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB(URL_TO_INSERT_RECORD http://www.Metabase.net) of data.
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
-  - there is a known clash between the output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
+  - there is a known clash between the output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
   - Windows users may use the included PowerShell function "Get-FileHash"
   - the recipe assumes that the absolute paths of the files are the same on source as well as on target system. If necessary for the use case, the "relative mode" by executing e.g. `md5sum ./*` can be used to circumvent problems with absolute paths.
   - `md5` is the most common hashing algorithm, but is also known to have vulnerabilities for checksum hacking (see <https://en.wikipedia.org/wiki/MD5#Security>), and has obviously also higher collision frequencies than functions which generate longer hashes, e.g. `sha512`.

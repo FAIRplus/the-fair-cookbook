@@ -56,12 +56,12 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification fra
 
 ## The FAIRification Framework
 
-The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Framework was developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles into actionable, "tried and tested" processes. The framework was developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) in an iterative fashion by a multi-disciplinary team of research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s.
+The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Framework was developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles into actionable, "tried and tested" processes. The framework was developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) in an iterative fashion by a multi-disciplinary team of research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s.
 
 The framework consists of 3 components:
 >* a reusable  FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Process, which outlines the main phases of a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification activity
->* a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion
->* a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan layout, which provides a structure for organising FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) implementation work tailored to the needs of a specific project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project).
+>* a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
+>* a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan layout, which provides a structure for organising FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) implementation work tailored to the needs of a specific project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) .
 
 
 ### The FAIRification Process
@@ -91,21 +91,21 @@ In the following sections, we will discuss in depth the work involved in the ind
 
 #### Phase 1: define FAIRification goals
 
-This phase involves the identification of outcomes and planning of goals that data or project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) owner would want to achieve
+This phase involves the identification of outcomes and planning of goals that data or project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  owner would want to achieve
 upon FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification of the data. 
 These goals are either **centric to one aspect of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)**, for example *deposition of data to
 Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org)* to increase its findability, or they could cover **multiple aspects of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)**, such as *use of consistent 
-terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) and controlled vocabularies to represent the data (interoperability aspect) along with deposition of data
-in relevant repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) (findability aspect)*. 
+terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and controlled vocabularies to represent the data (interoperability aspect) along with deposition of data
+in relevant repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  (findability aspect)*. 
 
-Sometimes, the data/project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) owner may be at a loss when tasked with spelling out a clear FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goal. 
+Sometimes, the data/project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  owner may be at a loss when tasked with spelling out a clear FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goal. 
 In that case, tools such as the [Dataset Maturity (DSM) model](https://fairplus.github.io/Data-Maturity/) can assist in identification of goals.
 Check out the [DSM recipe](../maturity.md) for more details on how the tool is able to accomplish it.
 
 #### Phase 2: examine requirements
 
 Upon identification of the goal by the data owners, a discussion with the technical team is done.
-The technical team then start with collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) of the data to ensure that they have access to the data that needs to be FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ified. 
+The technical team then start with collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of the data to ensure that they have access to the data that needs to be FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ified. 
 If the technical team is external, certain legal aspects need to be placed for efficient transition of data between the
 data owners and technicians (for example a DPIA may be needed, see this recipe (dpia.md) for more details).
 
@@ -148,7 +148,7 @@ This phase is usually run in short sprints(URL_TO_INSERT_RECORD http://www.bioin
 At this phase, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification work has been completed by the team. The technical team and the data owners now come 
 together to assess the output of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification. At this point, the technical team packages all the work done and hands
 it over to the data owners. Decisions on the key learning as well as future aspects of the work take place. 
-Finally, to ensure that the work done is sustainable, the deposition of workflows and the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion on steps is 
+Finally, to ensure that the work done is sustainable, the deposition of workflows and the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion on steps is 
 deposited on online catalogs and recipe book(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)s such as teh Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059), RDMKit, IMI Data Catalog(URL_TO_INSERT_RECORD https://datacatalog.elixir-luxembourg.org/) to name a few.
 
 ### The FAIRification Template
@@ -160,7 +160,7 @@ This template was formulated based on retrospective and prospective experiences 
 datasets within IMI FAIRplus and does not represent the exhaustive list of all potential FAIRification aspects.
 ```
 
-The template provides an overview on the data from 3 perspectives: Contents related, Representation and format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), and the 
+The template provides an overview on the data from 3 perspectives: Contents related, Representation and format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , and the 
 hosting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) environment capabilities. Covering these three aspects, 8 steps are required for the implementation of the 
 FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification template as shown in Figure 3. We discuss each of the steps below in detail:
 
@@ -179,25 +179,25 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification tem
 
 >
 >- **Step 1: Get the data**: This step involves getting access to the underlying dataset via a restricted or open access
->    API and capturing informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion on how to query the data via the API.
+>    API and capturing informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion on how to query the data via the API.
 >
->- **Step 2: Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) the domain**: Here, the data types involved in the dataset are identified. 
->    Also, the community or domain standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s for representation of the data are also captured to align the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification work, if any, along those lines.
+>- **Step 2: Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  the domain**: Here, the data types involved in the dataset are identified. 
+>    Also, the community or domain standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s for representation of the data are also captured to align the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification work, if any, along those lines.
 >
->- **Step 3: Select the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) scheme**: Here, the establishment of an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) for identification of the dataset is done.
->    This could be achieved by generation of new identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s or reusing of existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) ones.
+>- **Step 3: Select the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  scheme**: Here, the establishment of an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  for identification of the dataset is done.
+>    This could be achieved by generation of new identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s or reusing of existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) ones.
 >
->- **Step 4: Apply data standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s**: At this step, data standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) validation and identification is done to ensure that the
->    representation of the data is in community or domain specified format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s for interoperability purposes.
+>- **Step 4: Apply data standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s**: At this step, data standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  validation and identification is done to ensure that the
+>    representation of the data is in community or domain specified format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s for interoperability purposes.
 >
 >- **Step 5: Choose data vocabularies**: At this step, you would look in depth about the data content and harmonize it
->    with ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) either pre-existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) or formulate an application ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) for your use case.
+>    with ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  either pre-existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) or formulate an application ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  for your use case.
 >
->- **Step 6: Transform data for interoperability**: Not only would you represent the data in one ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) but also link
->    or map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) to corresponding ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) such that the data is interoperable with multiple vocabularies and terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) rather than just one.
+>- **Step 6: Transform data for interoperability**: Not only would you represent the data in one ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  but also link
+>    or map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) to corresponding ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  such that the data is interoperable with multiple vocabularies and terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  rather than just one.
 >
 >- **Step 7: Host your data**: Once the dataset is ready, hosting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) and search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) engine optimization inputs for the dataset
->    need to be in place. Alongside hosting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html), data versioning and data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s need to also be considered.
+>    need to be in place. Alongside hosting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html), data versioning and data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s need to also be considered.
 >
 >- **Step 8: Share your data**: Now that the dataset is FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ified, one can share this data to the community with licensing.
 >    In case of dealing with sensitive data, data anonymization considerations should be placed prior to sharing.
@@ -208,16 +208,16 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification tem
 
 ### The FAIRification Workplan
 
-The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan is a specific design and implementation plan generated for a specific project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) based on the 
+The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan is a specific design and implementation plan generated for a specific project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  based on the 
 goals set in phase 1 and requirements identified in phase 2 of the Process. 
 Relevant elements from the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Template are selected and broken down into concrete tasks. 
 These tasks are then completed within the agreed cycle time frame as per the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Process.
 
-The diagram below shows the bespoke FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan for the CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project). 
+The diagram below shows the bespoke FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan for the CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) . 
 The  Workplan follows the general outline of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Process, with the goals listed in section 1 (red),
-the outcomes of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) examination on section 2 (orange) and the pre-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification assessment outcomes in section 3.
+the outcomes of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  examination on section 2 (orange) and the pre-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification assessment outcomes in section 3.
 It can also be beneficial to explicitly list the indicators targeted for improvement in this section in order to keep
-this informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion easily accessible in one place.
+this informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion easily accessible in one place.
 
 The key parts of the workplan are section 4 (Design Decisions) and 5 (Implementation).
 Section 4 lists the specific steps from the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Template that will be addressed in this FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification cycle
@@ -232,7 +232,7 @@ If more than one FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principl
 in particular if there are changes in sections 4 and 5.
 
 
-<!-- [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)](./FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ificationWorkplanCare.png) -->
+<!-- [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) ](./FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ificationWorkplanCare.png) -->
 
 
 ````{dropdown} **FAIRification Workplan CARE project**
@@ -242,9 +242,9 @@ in particular if there are changes in sections 4 and 5.
 ---
 width: 800px
 name: fairification-workplancare
-alt: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)
+alt: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) 
 ---
-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)
+FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Workplan CARE(URL_TO_INSERT_RECORD https://www.care-statement.org/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) 
 ```
 ````
 
@@ -254,12 +254,12 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Wor
 While this recipe does not deal in detail with how to implement the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification framework, as this is covered elsewhere,
 it is worth highlighting a few important practical considerations:
 
-* **The importance of good goal setting**. Throughout the development of the framework, we tested iterative versions of the framework on a range of use cases brought to us by other IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s. One of the standout lessons from these collaborations was that good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals lead to good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals. The characteristics of a good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals are:
+* **The importance of good goal setting**. Throughout the development of the framework, we tested iterative versions of the framework on a range of use cases brought to us by other IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s. One of the standout lessons from these collaborations was that good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals lead to good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals. The characteristics of a good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals are:
 	* Actionability: goals need to be translatable into concrete tasks. A goal that is too vague can be difficult to implement as it is unclear what steps are involved in its completion. 
 	* Defined scope: a good goal has a clearly defined scope or endpoint. Without this, work on an open-ended goal is likely going to carry on indefinitely with diminishing benefits.
 	* Scientific value: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification work comes at a cost so a good FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goal needs to explicitly state why the work will increase the data's scientific value. Investing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) a great deal of effort to FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ify a single-use internal dataset that is not intended to ever be shared or reused would not constitute a prudent investment of resources. 
  
-* **Multi-disciplinary task teams**. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) maintenance to data management aspects such as the creation of data dictionaries to project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)-level governance issues like data licensing and reuse conditions. A successful FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) scientists and project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) managers, to name just a few. The exact composition of a task team depends on the nature of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification tasks and may change over the course of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process, with different skills required in the goal setting and project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) examiniation phases than during task implementations.
+* **Multi-disciplinary task teams**. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  maintenance to data management aspects such as the creation of data dictionaries to project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) -level governance issues like data licensing and reuse conditions. A successful FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) scientists and project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  managers, to name just a few. The exact composition of a task team depends on the nature of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification tasks and may change over the course of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process, with different skills required in the goal setting and project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  examiniation phases than during task implementations.
 
 * **Flexibility of the framework with regards to specific FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) approaches or implementations**. The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Framework described here is agnostic of any specific FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) implementation such as different FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) assessment methodologies. During the development of the framework, we trialed a range of methodologies including [RDA](https://www.rd-alliance.org(URL_TO_INSERT_RECORD https://rd-alliance.org/)/group/fair-data-maturity-model-wg/post/fair-data-maturity-model-indicators), [FAIRsFAIR](https://fairsfair.eu/fairsfair-data-object-assessment-metrics-request-comments) and [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity (DSM)](https://fairplus.github.io/Data-Maturity/) indicators to assess FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification as well as a range of tools to support the definition of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals and their translation into a workplan.
 
@@ -268,17 +268,17 @@ it is worth highlighting a few important practical considerations:
 ## Conclusion
 The key take-homes of this recipe are:
 
-1. **Tailor the generic FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process to individual needs**. There is no single right way to "do FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)" and every project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)'s needs. 
-1. **Carefully define FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness that matter most to the needs of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) to reach a balanced **“FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) enough”** status.
+1. **Tailor the generic FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process to individual needs**. There is no single right way to "do FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)" and every project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) 's needs. 
+1. **Carefully define FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness that matter most to the needs of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  to reach a balanced **“FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) enough”** status.
 1. **Assemble a multi-disciplinary team**. A successful FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
 ### What to read next?
-* [Prioritization of project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s for FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification](../introduction/priorization.md)
-* [Depositing in Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org) generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)](../findability/zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)-deposition.md)
-* [Introduction to terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) and ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)](../interoperability/introduction-terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)-ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact).md)
+* [Prioritization of project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s for FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification](../introduction/priorization.md)
+* [Depositing in Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org) generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](../findability/zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)-deposition.md)
+* [Introduction to terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ](../interoperability/introduction-terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .md)
 * [Creating data/variable dictionary](../interoperability/creating-data-dictionary.md)
-* [Interlinking data from different sources](../interoperability/identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.md)
-* [Maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s](../maturity.md)
+* [Interlinking data from different sources](../interoperability/identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) -map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.md)
+* [Maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s](../maturity.md)
 
 ````{rdmkit_panel}
 ````

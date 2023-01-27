@@ -1,4 +1,4 @@
-(fcb-find-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s)=
+(fcb-find-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s)=
 # Unique, persistent identifiers
 
 
@@ -18,16 +18,16 @@
 
 
 The **FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
-> F1. (Meta)data are assigned a globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)
+> F1. (Meta)data are assigned a globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
 > 
->A1. (Meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ised communications protocol 
+>A1. (Meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ised communications protocol 
 
 ## Main Objectives
 
 The main goals of this recipe are therefore:
 
-> To understand the purpose of a globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) and how they can be used to retrieve the associated (meta)data using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized communication protocol.
-> To provide explanations on how to generate globaly unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s, explain what IRIs are and how they can be generated, retrieved and resolved.
+> To understand the purpose of a globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  and how they can be used to retrieve the associated (meta)data using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ized communication protocol.
+> To provide explanations on how to generate globaly unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s, explain what IRIs are and how they can be generated, retrieved and resolved.
 
 
 From these principles, it is necessary to explain three key processes, which are: 
@@ -58,7 +58,7 @@ From these principles, it is necessary to explain three key processes, which are
 :class: tip 
 **`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
 ```
-The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
+The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 All these key points will be developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) in this recipe.
 
@@ -71,9 +71,9 @@ All these key points will be developed(URL_TO_INSERT_RECORD https://www.cog-geno
 ---
 width: 700px
 name: 
-alt: identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) services
+alt: identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  services
 ---
-Key Processes to sustain Globally Unique Persistent Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s (GUPRID) .
+Key Processes to sustain Globally Unique Persistent Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s (GUPRID) .
 ```
 ````
 
@@ -88,7 +88,7 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifier (URL_T
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  |
+| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | [IRI](https://tools.ietf.org/html/rfc3987) |   |   |
 | [CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)/) |   |   |
@@ -109,21 +109,21 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifier (URL_T
 ```
 
 
-Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s are used to tag, identify, find and retrieve entities which are part of a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) or a resource maintained by some organization. This organization is the `authority` which rules over that area of knowledge. The core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) assumption is that identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s must be unique, that is they can not be shared and there is a 1 to 1 relation between the 'identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)' and the entity it identifies.
+Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s are used to tag, identify, find and retrieve entities which are part of a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  or a resource maintained by some organization. This organization is the `authority` which rules over that area of knowledge. The core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) assumption is that identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s must be unique, that is they can not be shared and there is a 1 to 1 relation between the 'identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ' and the entity it identifies.
 
-With isolated systems, disconnected from any other system, the risk of identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) collision is null but two isolated systems can create local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s which could be completely identical but which denote completely different entities. In fact, this happens all the time.
+With isolated systems, disconnected from any other system, the risk of identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  collision is null but two isolated systems can create local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s which could be completely identical but which denote completely different entities. In fact, this happens all the time.
 
-So these identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s are said to be locally unique, as there is no guarantee these are unique to all other systems that exist, in other words, that they are globally unique.
+So these identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s are said to be locally unique, as there is no guarantee these are unique to all other systems that exist, in other words, that they are globally unique.
 
 
 ## How to produce globally unique identifiers?
 
-There are 2 ways to produce non-resolvable, globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s:
+There are 2 ways to produce non-resolvable, globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s:
 
 ### UUID based identifiers
 
-With this approach, the notion of `universally unique` is a probabilistic one. *The probability to find a duplicate within 103 trillion version-4 UUIDs is one in a billion*. The likelihood of collision (generation of the exact same identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)) is extremely small but not null. Therefore, with an ever increasing number of digital resources to index, collisions should not be ruled out.
-According to the [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), a UUID is an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) that is unique across both space and time, with respect to the space of all UUIDs.  Since a UUID is a fixed  size and contains a time field, it is possible for values to rollover (around A.D. 3400, depending on the specific algorithm  used).  A UUID can be used for multiple purposes, from tagging objects with an extremely short lifetime, to reliably identifying very persistent objects across a network.
+With this approach, the notion of `universally unique` is a probabilistic one. *The probability to find a duplicate within 103 trillion version-4 UUIDs is one in a billion*. The likelihood of collision (generation of the exact same identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ) is extremely small but not null. Therefore, with an ever increasing number of digital resources to index, collisions should not be ruled out.
+According to the [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), a UUID is an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  that is unique across both space and time, with respect to the space of all UUIDs.  Since a UUID is a fixed  size and contains a time field, it is possible for values to rollover (around A.D. 3400, depending on the specific algorithm  used).  A UUID can be used for multiple purposes, from tagging objects with an extremely short lifetime, to reliably identifying very persistent objects across a network.
 
 
 ---
@@ -161,7 +161,7 @@ This approach uses 2 inputs:
 - a cryptographic hashing algorithm implemented as a software function
 - a digital resource (e.g. a file)
 
-Indeed, the approach generates an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string(URL_TO_INSERT_RECORD https://string-db.org/), which is therefore a signature (or fingerprint) of the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
+Indeed, the approach generates an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string(URL_TO_INSERT_RECORD https://string-db.org/), which is therefore a signature (or fingerprint) of the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
 A number of algorithms can be used and some are already widely used such as *Message Digest algorithm MD5* specified by the RFC1321 {footcite}`MD5`, the *Secure Hash Algorithm (SHA1)*,  *Secure Hash Algorithm 2 (SHA256)*, *Secure Hash Algorithm 3 (SHA3)* or *BLAKE2b-256* (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
@@ -225,9 +225,9 @@ In our context, the use of the hashing function is to generate a unique key whic
  **URI construction is fundamentally about scoping the authority**.
 ```
 
-Having covered the technical details to generated globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s, it is now necessary to discuss the issue making identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s *resolvable (a notion also known as `dereferenceable`)*.
+Having covered the technical details to generated globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s, it is now necessary to discuss the issue making identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s *resolvable (a notion also known as `dereferenceable`)*.
 
-In other words, in order to create globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s `for the web`, it is necessary to understand what Uniform Resource Locator(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> (a.k.a `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document -->.
+In other words, in order to create globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s `for the web`, it is necessary to understand what Uniform Resource Locator(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> (a.k.a `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`) are and how to construct them for use with the Hypertext Transfer Protocol<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document -->.
 
 This results in URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s of the following form
 
@@ -258,7 +258,7 @@ Besides setting the `scheme`, the other essential fragment of a URI(URL_TO_INSER
 ```
 authority = [userinfo@]host[:port]
 ```
-Note how the required part is the `host`, with `userinfo` and `port` informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion being optional and should be avoided in identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for data.
+Note how the required part is the `host`, with `userinfo` and `port` informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion being optional and should be avoided in identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for data.
 
 ### `host`:
 
@@ -298,21 +298,21 @@ The `fragement` is an optional part of the URL(URL_TO_INSERT_RECORD https://tool
 
 ## Generating Resolvable URLs
 
-In the context of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) data, resources on the web must have **unique**, **persistent**, and **resolvable** identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.
-In order to achieve the capability of `persistence`, it is necessary for the resource identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s to comply to the RFC 3986 IETF standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) for URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s (and IRIs, which are URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986) extended to cope with unicode). This means that it must comprise the following components:
+In the context of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) data, resources on the web must have **unique**, **persistent**, and **resolvable** identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.
+In order to achieve the capability of `persistence`, it is necessary for the resource identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s to comply to the RFC 3986 IETF standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  for URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s (and IRIs, which are URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986) extended to cope with unicode). This means that it must comprise the following components:
 
 1. scheme: https
 2. an authority: www.example.com
 3. optionally a path: `/dataset-name/`
-4. a local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (such as database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) accession number, such as P12133 from uniprot) or a globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (such as a UUID or hash code).
+4. a local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (such as database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  accession number, such as P12133 from uniprot) or a globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (such as a UUID or hash code).
 
-In a virtual example which uses a UUID for the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) and does not use a path, it looks like this:
+In a virtual example which uses a UUID for the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  and does not use a path, it looks like this:
 
 ```bash
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)` (IRI - commonly referred to as a URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)) by appending the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) onto a namesapce.
+Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ` (IRI - commonly referred to as a URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)) by appending the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  onto a namesapce.
 
 ---
 
@@ -326,14 +326,14 @@ In the case of UniProt, the resource has provided IRIs for each page about a pro
 - UniProt P38398 web page IRI: https://www.uniprot.org(URL_TO_INSERT_RECORD https://www.uniprot.org)/uniprot/P38398
 - UniProt protein P38398 IRI: http://purl.uniprot.org/uniprot/P38398
 
-Once such URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s are available, one may also turn them into compact identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s called CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s. This will be discussed further in the next section.
+Once such URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s are available, one may also turn them into compact identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s called CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s. This will be discussed further in the next section.
 
 ## Identifier Resolution - Enabling persistence through indirection
 
 
 This relates to the following FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principle mentioned in the introduction:
 
-> A1. (Meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ised communications protocol.
+> A1. (Meta)data are retrievable by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  using a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ised communications protocol.
 
 
 ```{admonition} Tip
@@ -341,7 +341,7 @@ This relates to the following FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/
  **`URI resolution` is fundamentally about directing requests to the relevant identified entity.** 
 ```
 
-The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
+The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
 A PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) is a **`persistent URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`**, meaning that it provides a **permanent address to access a resource on the web**.
 
@@ -361,24 +361,24 @@ PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_REC
 
 
 FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Principle A1 states that:
->(meta)data should be retrievable by its identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema).
+>(meta)data should be retrievable by its identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) .
 
-When the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) is not a resolvable URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630), then `Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Resolution Services` are required that know how to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) an IRI to a location for the data. 
+When the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  is not a resolvable URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630), then `Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Resolution Services` are required that know how to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) an IRI to a location for the data. 
 
 
 
 ### Introducing CURIES or Compact URIs
 CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s (short for compact URI(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s) are defined by a World Wide Web Consortium Working Group Note [CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) Syntax 1.0](https://www.w3.org/TR/2010/NOTE-curie-20101216(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)/), and provide a human readable shortening of IRIs. 
 
-The CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) consists of a **`namespace prefix`** followed by the **`local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)`**.
+The CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) consists of a **`namespace prefix`** followed by the **`local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) `**.
 
-There are some widely used and defined CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s such as DOI(URL_TO_INSERT_RECORD https://www.doi.org)s and ISBN numbers. For example the DOI(URL_TO_INSERT_RECORD https://www.doi.org) `[doi:10.1038/sdata.2016.18]` refers to the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) paper. The Digital Object Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)(URL_TO_INSERT_RECORD https://www.doi.org) System web site (https://www.doi.org(URL_TO_INSERT_RECORD https://www.doi.org)/) provides a resolution service for DOI(URL_TO_INSERT_RECORD https://www.doi.org)s. The service is available as a web form on the site or can be used by appending a DOI(URL_TO_INSERT_RECORD https://www.doi.org) to the website.The client will be redirected to the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) where the resource about the concept is located, e.g. for the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Data Principles paper we can use the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://www.doi.org(URL_TO_INSERT_RECORD https://www.doi.org)/10.1038/sdata.2016.18 to resolve the paper's DOI(URL_TO_INSERT_RECORD https://www.doi.org). This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+There are some widely used and defined CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s such as DOI(URL_TO_INSERT_RECORD https://www.doi.org)s and ISBN numbers. For example the DOI(URL_TO_INSERT_RECORD https://www.doi.org) `[doi:10.1038/sdata.2016.18]` refers to the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) paper. The Digital Object Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (URL_TO_INSERT_RECORD https://www.doi.org) System web site (https://www.doi.org(URL_TO_INSERT_RECORD https://www.doi.org)/) provides a resolution service for DOI(URL_TO_INSERT_RECORD https://www.doi.org)s. The service is available as a web form on the site or can be used by appending a DOI(URL_TO_INSERT_RECORD https://www.doi.org) to the website.The client will be redirected to the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) where the resource about the concept is located, e.g. for the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Data Principles paper we can use the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://www.doi.org(URL_TO_INSERT_RECORD https://www.doi.org)/10.1038/sdata.2016.18 to resolve the paper's DOI(URL_TO_INSERT_RECORD https://www.doi.org). This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
 
-`Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s (see [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Resolution Services](##identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-resolution-services) below). These are extensively used to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s to URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s that can be resolved.
+`Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s (see [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Resolution Services](##identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) -resolution-services) below). These are extensively used to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s to URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s that can be resolved.
 
 Going back to our *Life Science context*, we can use the following CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) `[uniprot:P38398]` to refer to the UniProt record for the protein. 
 
-This is very useful for including unambiguous, global identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s in scientific articles.
+This is very useful for including unambiguous, global identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s in scientific articles.
 
 [^safe-CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)]: The CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)S are included in square brackets to make them *safe CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)s*, meaning that they should not be confused for URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s.
 
@@ -390,12 +390,12 @@ This is very useful for including unambiguous, global identifier (URL_TO_INSERT_
 
 * [purl.org](https://archive.org/services/purl/)
 
-    > The PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) system is a service of the Internet Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive, which provides an interface to administer domain. For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion about the service, visit https://archive.org/services/purl/help
+    > The PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) system is a service of the Internet Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive, which provides an interface to administer domain. For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the service, visit https://archive.org/services/purl/help
     >
 
 * [w3id(URL_TO_INSERT_RECORD https://w3id.org/)s](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/)
     
-    > Permanent Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for the Web. Secure, permanent URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s for your Web application that will stand the test of time.
+    > Permanent Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for the Web. Secure, permanent URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s for your Web application that will stand the test of time.
     > - authority registration service
     > - resolution service
     > - redirection service:
@@ -403,50 +403,50 @@ This is very useful for including unambiguous, global identifier (URL_TO_INSERT_
     > Send a request to add a redirect to the public-perma-id@w3.org mailing list. Make sure to include the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) that you want on w3id(URL_TO_INSERT_RECORD https://w3id.org/).org(URL_TO_INSERT_RECORD https://w3id.org/), the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) that you want to redirect to, and the HTTP code that you want to use when redirecting. An administrator will then create the redirect for you.
 
 
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org](http://identifiers.org/)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org](http://identifiers.org/)
 
     > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifier(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s`](https://www.w3.org/TR/2010/NOTE-curie-20101216(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/)/), hosted by the EBI provides a resolution service, both as a web form and through the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) pattern {footcite}`Juty2012`. 
-    >`Compact Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s` consist of an `assigned`, `unique` `prefix` and a `local provider designated` **`accession number`** (prefix:accession).
-    > The resolving location of `Compact Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s` is determined using informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion that is stored in the [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org Registry](http://identifiers.org/).
-    > Datasets can register their *namespace `prefix`* together with their `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) pattern`. The service can then be used in the same way as the DOI(URL_TO_INSERT_RECORD https://www.doi.org) resolution service. So for the UniProt page about BRCA1, we can resolve the CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) `[uniprot:P38938]` using Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org. This means that the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org(URL_TO_INSERT_RECORD https://www.uniprot.org)/uniprot/P38938.
+    >`Compact Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s` consist of an `assigned`, `unique` `prefix` and a `local provider designated` **`accession number`** (prefix:accession).
+    > The resolving location of `Compact Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s` is determined using informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion that is stored in the [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org Registry](http://identifiers.org/).
+    > Datasets can register their *namespace `prefix`* together with their `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  pattern`. The service can then be used in the same way as the DOI(URL_TO_INSERT_RECORD https://www.doi.org) resolution service. So for the UniProt page about BRCA1, we can resolve the CURI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)E(URL_TO_INSERT_RECORD https://www.w3.org/TR/2010/NOTE-curie-20101216/) `[uniprot:P38938]` using Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org. This means that the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org(URL_TO_INSERT_RECORD https://www.uniprot.org)/uniprot/P38938.
 
 
 
 * [Name2Things](https://n2t.net/)
 
     > [Name2Things](https://n2t.net/) (N2T) is a **Resolution Service**, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) shorteners like bit.ly, N2T serves content **indirectly**.
-    > N2T can store more than one "target" (forwarding link) for an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema), as well as any kind or amount of metadata (descriptive informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion)
-        > N2T.net is also a "meta-resolver". In collaboration with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org, it recognizes over 600 well-known identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) types and knows where their respective servers are. Failing to find forwarding informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion for a specific individual identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema), it uses the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)'s type to look for an overall target rule.
+    > N2T can store more than one "target" (forwarding link) for an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) , as well as any kind or amount of metadata (descriptive informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion)
+        > N2T.net is also a "meta-resolver". In collaboration with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org, it recognizes over 600 well-known identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  types and knows where their respective servers are. Failing to find forwarding informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion for a specific individual identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) , it uses the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 's type to look for an overall target rule.
 
 
 
 * [Bioregistry(URL_TO_INSERT_RECORD https://bioregistry.io)](https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/)
 
-    > [Bioregistry](https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/) is a **Resolution Service**, developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) in a [GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) repository](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biopragmatics/bioregistry). Like Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org it has a registry, but also a registry of registries, and it imports data from Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.org and Name-to-Thing but extends beyond identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for things but also supports, for example, ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact). As a community effort, new namespace prefixes and their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) patterns can be [registered via GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) issues](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biopragmatics/bioregistry/issues/new/choose). Compact identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s are supported and the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/chebi:138488 resolves to the ChEBI(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/chebi/) page https://www.ebi.ac.uk/chebi(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/chebi/)/searchId.do?chebiId=CHEBI:138488. Bioregistry(URL_TO_INSERT_RECORD https://bioregistry.io) provides an [API to query the registry](https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/apidocs/) itself.
+    > [Bioregistry](https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/) is a **Resolution Service**, developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) in a [GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) repository](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biopragmatics/bioregistry). Like Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org it has a registry, but also a registry of registries, and it imports data from Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.org and Name-to-Thing but extends beyond identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for things but also supports, for example, ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . As a community effort, new namespace prefixes and their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  patterns can be [registered via GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) issues](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biopragmatics/bioregistry/issues/new/choose). Compact identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s are supported and the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/chebi:138488 resolves to the ChEBI(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/chebi/) page https://www.ebi.ac.uk/chebi(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/chebi/)/searchId.do?chebiId=CHEBI:138488. Bioregistry(URL_TO_INSERT_RECORD https://bioregistry.io) provides an [API to query the registry](https://bioregistry.io(URL_TO_INSERT_RECORD https://bioregistry.io)/apidocs/) itself.
 
 
 
-*For more details, see the [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Resolution Services recipe](fcb-infra-idres).*
+*For more details, see the [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Resolution Services recipe](fcb-infra-idres).*
 
 ---
 
 ## Conclusion
 
-In this recipe, we have given an overview of globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principle F1. We have covered:
+In this recipe, we have given an overview of globally unique and persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principle F1. We have covered:
 
-- The difference between global and local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s;
-- How to convert a local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) into a global one;
-- Opaque and transparent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s
+- The difference between global and local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s;
+- How to convert a local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  into a global one;
+- Opaque and transparent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s
 
-We have given an overview of the different services available for handling identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.
+We have given an overview of the different services available for handling identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.
  
-But we can not conclude this section on persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s: URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986){footcite}`URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/){footcite}`RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)concepts` and HTTP.
+But we can not conclude this section on persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s: URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986){footcite}`URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/){footcite}`RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)concepts` and HTTP.
 
 ### What to read next?
-<!-- > * [Why resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s matter?](https://www.TODO.org/findability/why-identifiers.html) -->
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Minting with Minid Client](fcb-find-id-minid)
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Resolution Services](fcb-infra-idres)
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping Services](fcb-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping)
+<!-- > * [Why resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s matter?](https://www.TODO.org/findability/why-identifiers.html) -->
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Minting with Minid Client](fcb-find-id-minid)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Resolution Services](fcb-infra-idres)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  Map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping Services](fcb-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) -map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping)
 
 ````{panels}
 :column: col-md-4

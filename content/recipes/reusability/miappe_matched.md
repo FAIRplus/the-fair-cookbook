@@ -20,30 +20,30 @@
 Plant genotyping and phenotyping data are often used in combination to make evidence-based inferences about different 
 trait expressions. 
 A challenge here is not necessarily to collect the data, but to offer them in a stable way over the
-long term in public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) with sufficient metadata informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion to make conclusions about them, in line with FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
+long term in public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  with sufficient metadata informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion to make conclusions about them, in line with FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
 principles. 
-Since these repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) are often not linked directly, it is even more important to provide metadata that
-allows users to recognise these links by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.
-A key point here is sample management:  the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s assigned here help both humans and machines to understand
+Since these repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  are often not linked directly, it is even more important to provide metadata that
+allows users to recognise these links by their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.
+A key point here is sample management:  the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s assigned here help both humans and machines to understand
 which experimental data are linked.
 
-The main objective of the recipe is to provide a means of submitting to public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) and tracking genotyping
+The main objective of the recipe is to provide a means of submitting to public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  and tracking genotyping
 data, with a particular focus on plants.  This includes:
 
-    1) Submission of sample data and metadata informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion to BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s.
+    1) Submission of sample data and metadata informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion to BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s.
     2) Submission of sequencing data and metadata to ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena).
     3) Retrieval of the correct genome assembly for the genotyping experiment
-    4) Conversion of the resulting analysis file (in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)) to be FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
+    4) Conversion of the resulting analysis file (in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ) to be FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
     5) Submission of the genotyping results to EVA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/eva/).
 
-In terms of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals, this means obtaining stable, resolvable  identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for the datasets and meeting
+In terms of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification goals, this means obtaining stable, resolvable  identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for the datasets and meeting
 community annotation requirements as expressed in the MIAPP(URL_TO_INSERT_RECORD https://bitbucket.org/PlantExpAssay/ontology)E(URL_TO_INSERT_RECORD http://miappe.org)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE) requirements. 
 
 ## Summary
 
-This recipe provides guidance for submitting plant genotyping data to public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository). It explains in a step-wise
+This recipe provides guidance for submitting plant genotyping data to public repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . It explains in a step-wise
 fashion which work should be done and when. Special attention should be paid to the metadata maintenance of the data
-that will be deposited in different repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) as part of this recipe. A prerequisite for fully understanding
+that will be deposited in different repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  as part of this recipe. A prerequisite for fully understanding
 this recipe is a basic knowledge of the [MIAPP(URL_TO_INSERT_RECORD https://bitbucket.org/PlantExpAssay/ontology)E(URL_TO_INSERT_RECORD http://miappe.org)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE) standard](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/bsg-s000543/). 
 
 The exact listing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) of the metadata fields required for a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification of the genotyping data set within a VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) file is 
@@ -73,19 +73,19 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Obj
 |Actions.Objectives.Tasks|Input|Output|
 |--- |--- |--- |
 |[text annotation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3778)|[MIAPPE](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.nd9ce9)|[annotated text](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_3779)|
-|[conversion](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3434)|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|[annotated text](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_3779)|
-|[format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|[report](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_2048)|
-|[format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)|[MIAPPE](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.nd9ce9)|[report](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_2048)|
+|[conversion](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3434)|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|[annotated text](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_3779)|
+|[format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|[report](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_2048)|
+|[format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_0336)|[MIAPPE](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.nd9ce9)|[report](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_2048)|
 
 
 ## Table of Data Standards
 
-|Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s|Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)|Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)|
+|Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s|Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) |Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) |
 |--- |--- |--- |
 |[FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.r2ts5t)|||
 |[FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)A(URL_TO_INSERT_RECORD http://blast.ncbi.nlm.nih.gov/blastcgihelp.shtml)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.rz4vfg)|||
 |[MIAPP(URL_TO_INSERT_RECORD https://bitbucket.org/PlantExpAssay/ontology)E(URL_TO_INSERT_RECORD http://miappe.org)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.nd9ce9)|||
-|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|||
+|[Variant File Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (.vcf)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.cfzz0h)|||
 |[BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s - Plant MIAPP(URL_TO_INSERT_RECORD https://bitbucket.org/PlantExpAssay/ontology)E(URL_TO_INSERT_RECORD http://miappe.org)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE) checklist](https://www.ebi.ac.uk/biosamples(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/biosamples/)/schemas/certification/plant-miappe.json)|||
 
 
@@ -96,7 +96,7 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification Obj
 |[BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s](https://www.ebi.ac.uk/biosamples(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/biosamples/)/)|
 |[European Nucleotide Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena), ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)](https://www.ebi.ac.uk/ena(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)/browser/home)|
 |[European Variation Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/eva/),EVA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/eva/)](https://www.ebi.ac.uk/eva(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/eva/)/)|
-|[International Nucleotide Sequence Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) Collaboration](https://www.insdc.org/)
+|[International Nucleotide Sequence Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  Collaboration](https://www.insdc.org/)
 |[VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) Validator](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/EBIvariation/vcf-validator/wiki/User's-Guide)|
 |[Curl](https://curl.se/)|
 
@@ -113,7 +113,7 @@ The sample metadata are collected according to
 _the [MIAPPE](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1) specifications,
 Biological Material section_. 
 It enriches minimal [MCPD](https://www.bioversityinternational.org/e-library/publications/detail/faobioversity-multi-crop-passport-descriptors-v21-mcpd-v21/) 
-fields with sample traceability informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion.
+fields with sample traceability informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion.
 
 
 ### Step 2: Register sample material at BioSamples
@@ -126,7 +126,7 @@ Here is the proposed procedure:
 
 1. Create a user account
 
-First you need an account to submit samples to EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L-EBI BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database). We recommend new users, or those planning 
+First you need an account to submit samples to EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L-EBI BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) . We recommend new users, or those planning 
 to make downstream submissions to ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena), to use the Webin Authentication service. You can create a Webin account using 
 [Webin web interface](https://www.ebi.ac.uk/ena(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)/submit/sra/#home). 
 Please refer to [ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena) documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html) 
@@ -164,7 +164,7 @@ Please refer to the [BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov
 
 
 
-More general informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion is available on the RDMkit {footcite}`rdmkit_plant_genomics_assembly`. 
+More general informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion is available on the RDMkit {footcite}`rdmkit_plant_genomics_assembly`. 
 A specific checklist is used: [BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s - Plant MIAPP(URL_TO_INSERT_RECORD https://bitbucket.org/PlantExpAssay/ontology)E(URL_TO_INSERT_RECORD http://miappe.org)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE) checklist](https://www.ebi.ac.uk/biosamples(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/biosamples/)/schemas/certification/plant-miappe.json).
 
 
@@ -174,7 +174,7 @@ A specific checklist is used: [BioSample(URL_TO_INSERT_RECORD https://www.ncbi.n
 ### Step 3: Perform sequencing of DNA sample
 
 The sequencing staff performs the sequencing of the DNA sample, which is followed by a quality control. The reads are 
-then arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ived in the institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution)al Laboratory Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion Management System (LIMS).
+then arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ived in the institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) al Laboratory Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion Management System (LIMS).
 
 
 ### Step 4: Register and submit sequencing reads to ENA 
@@ -189,7 +189,7 @@ objects beneath it, and controls when the data becomes public. A study is requir
 
 1. Log in to the [Webin Submission Portal](https://www.ebi.ac.uk/ena(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)/submit/sra/#home) with your Webin credentials.
  
-2. Click the '**New Submission**' tab and find the '**Register study (project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project))**' radio button. Click '**Next**' to see 
+2. Click the '**New Submission**' tab and find the '**Register study (project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) )**' radio button. Click '**Next**' to see 
 the study registration interface
 
 
@@ -209,7 +209,7 @@ EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L-EBI Webin Submission Interfac
 3. The '**Short Name**' field should be filled in with something brief and meaningful, e.g.:*barley_study_2021*
 
 
-4. You should take time to provide a descriptive title and informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ive abstract for your own studies, but these can be 
+4. You should take time to provide a descriptive title and informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ive abstract for your own studies, but these can be 
 edited later if needed. For now, use as your title: *GBS Study of Barley from &lt;Your Town/Lab>*
 
 5. When you have completed all required fields, click '**Submit**' and then confirm.
@@ -271,7 +271,7 @@ samples in your submission.
 when it appears. 
 
     Further taxonomic details are automatically filled below this box. This box will only accept values which match with 
-a species-rank entry in the [NCBI Taxonomy(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/taxonomy) database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)](https://www.ncbi.nlm.nih.gov/taxonomy(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/taxonomy)).
+a species-rank entry in the [NCBI Taxonomy(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/taxonomy) database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ](https://www.ncbi.nlm.nih.gov/taxonomy(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/taxonomy)).
 
 12. Fill out the remaining details by reference to the values to the best of your knowledge. Only fields marked with 
 a ***** are required, but it is best to fill as many fields as possible.
@@ -283,7 +283,7 @@ You can always find out more about what a field means and what information it ac
 ```
 
 13. By the time you have completed this, your sample will be well-annotated and     understandable to people finding it 
-in the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) later. 
+in the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  later. 
 
     You are ready to submit when all the checks on the right of the page are green ticks, and none are red crosses.
 
@@ -318,7 +318,7 @@ to a staging area before submitting them through this interface, refer to the [E
 
 
     * **Sample reference:** *<enter the BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s accession here>*
-    * **Instrument Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format):** Illumina HiSeq 2500
+    * **Instrument Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) :** Illumina HiSeq 2500
     * **Library Name:** barley_library_1
     * **Library Source:** GENO(URL_TO_INSERT_RECORD https://github.com/monarch-initiative/GENO-ontology/)MIC
     * **Library Selection:** Restriction Digest
@@ -333,7 +333,7 @@ to a staging area before submitting them through this interface, refer to the [E
 ```
 
 7. Click '**Submit**' and see if your submission validates successfully. If you encounter errors, try using the 
-'**Download Template Spreadsheet'** button, open the file and check it in this plain text format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format); 
+'**Download Template Spreadsheet'** button, open the file and check it in this plain text format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ; 
 it can be easier to fix errors this way than in the interface. 
 
 
@@ -359,21 +359,21 @@ to [INSDC](https://www.insdc.org/) (NCBI Genbank / EMB(URL_TO_INSERT_RECORD http
 
 ### Step 6: Analyse sequencing results
 
-The bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ician performs the computational analysis, then the genotyping results are arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ived into the LIMS.
+The bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ician performs the computational analysis, then the genotyping results are arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ived into the LIMS.
 
 
 ### Step 7: Prepare genotyping dataset for submission of VCF file to EVA
 
 In order to ensure interoperability of VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) files, in accordance with the good practice outlined in 
-{footcite}`beier_f1000r_2022`, the following VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) meta-informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion lines should be used:
+{footcite}`beier_f1000r_2022`, the following VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) meta-informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion lines should be used:
 
 
 #### Obligatory meta-information line :
 
-**##fileformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)** : file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format). 
+**##fileformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ** : file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . 
 
 > Example:
->  `##fileformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)=VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41)v4.3  `
+>  `##fileformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) =VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41)v4.3  `
 
 
 #### Recommended meta-information lines :
@@ -383,13 +383,13 @@ In order to ensure interoperability of VCF(URL_TO_INSERT_RECORD http://www.1000g
 > Example:
 >  `##fileDate=20120921` 
 
-**##bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics_source (URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) or URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986))**: Analytic approach usually consisting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) of chains of bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics tools for 
-creating the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) file specified as the DOI(URL_TO_INSERT_RECORD https://www.doi.org) of a publication, or more generally as URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)/URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986), like a public repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) for
-the scripts used. The preferred way to describe this would be to use WorkflowHub(URL_TO_INSERT_RECORD https://workflowhub.eu)(URL_TO_INSERT_RECORD https://workflowhub.eu).eu (possibly in CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)) and to be
-fully transparent about the bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics toolchain used to generate the results.
+**##bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics_source (URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) or URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986))**: Analytic approach usually consisting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) of chains of bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics tools for 
+creating the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) file specified as the DOI(URL_TO_INSERT_RECORD https://www.doi.org) of a publication, or more generally as URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)/URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986), like a public repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  for
+the scripts used. The preferred way to describe this would be to use WorkflowHub(URL_TO_INSERT_RECORD https://workflowhub.eu)(URL_TO_INSERT_RECORD https://workflowhub.eu).eu (possibly in CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ) and to be
+fully transparent about the bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics toolchain used to generate the results.
 
 > Example:
-> `##bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics_source="doi.org/10.1038/s41588-018-0266-x"` 
+> `##bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics_source="doi.org/10.1038/s41588-018-0266-x"` 
 
 
 **##reference_ac (assembly_accession)**: accession number, including the version, of the reference sequence on 
@@ -410,13 +410,13 @@ The individual sequence(s) of the reference genome.
 > Example: 
 > `##contig=<ID=chr1H,length=522466905,assembly=GCA_902498975.1,md5=8d21a35cc68340ecf40e2a8dec9428fa,species=NCBITaxon:4513>`
 
-**##SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools)P(URL_TO_INSERT_RECORD http://ivoa.net/documents/SAMP/index.html)(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)LE(<ID=$BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)_accession, DOI(URL_TO_INSERT_RECORD https://www.doi.org)=$url, ext_ID=$registry:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)>)** : Describe the material whose variants 
-are given in the genotype call columns in greater detail and can be extended using the specifications of the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+**##SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools)P(URL_TO_INSERT_RECORD http://ivoa.net/documents/SAMP/index.html)(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)LE(<ID=$BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)_accession, DOI(URL_TO_INSERT_RECORD https://www.doi.org)=$url, ext_ID=$registry:identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) >)** : Describe the material whose variants 
+are given in the genotype call columns in greater detail and can be extended using the specifications of the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 
 In case no DOI(URL_TO_INSERT_RECORD https://www.doi.org) exists and the material is held by a FAO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/AO)(URL_TO_INSERT_RECORD https://github.com/obophenotype/fungal-anatomy-ontology)-WIEWS ([https://www.fao.org/wiews/background/en/](https://www.fao.org/wiews/background/en/)) 
-recognised institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution), the external ID consists of the FAO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/AO)(URL_TO_INSERT_RECORD https://github.com/obophenotype/fungal-anatomy-ontology)-WIEWS instcode, the genus and the accession number (see example 2).
-If the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) is not registered with FAO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/AO)(URL_TO_INSERT_RECORD https://github.com/obophenotype/fungal-anatomy-ontology)-WIEWS and is not available under a DOI(URL_TO_INSERT_RECORD https://www.doi.org), the DNS of the holding institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution),
-the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema), the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) scheme and the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) value should be provided (see example 3).
+recognised institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) , the external ID consists of the FAO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/AO)(URL_TO_INSERT_RECORD https://github.com/obophenotype/fungal-anatomy-ontology)-WIEWS instcode, the genus and the accession number (see example 2).
+If the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  is not registered with FAO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/AO)(URL_TO_INSERT_RECORD https://github.com/obophenotype/fungal-anatomy-ontology)-WIEWS and is not available under a DOI(URL_TO_INSERT_RECORD https://www.doi.org), the DNS of the holding institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) ,
+the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) , the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  scheme and the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  value should be provided (see example 3).
 For multiple external IDs the field should be used multiple times (delimited by commas). 
 
 > Examples:
@@ -438,11 +438,11 @@ For multiple external IDs the field should be used multiple times (delimited by 
 
 #### In case of adding new fields : 
 
-Please check the official format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) specifications to avoid redundancy and possible incompatibilities.
+Please check the official format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  specifications to avoid redundancy and possible incompatibilities.
 
 ### Step 8: Submit VCF file to EVA
 
-Once the metadata and data has been format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ted according to the specifications above, make sure that the resulting VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) 
+Once the metadata and data has been format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ted according to the specifications above, make sure that the resulting VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) 
 file complies with VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) specifications. 
 For that purpose, we propose the [VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) validator tool on GitHub](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/EBIvariation/vcf-validator)  
 
@@ -460,7 +460,7 @@ for the sequencing reads of the material used. Refer to the official [documentat
    
  
 ## Conclusion
-At this point, the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) contains metadata and data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ted for the purpose of better discoverability and higher 
+At this point, the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) contains metadata and data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ted for the purpose of better discoverability and higher 
 interoperability. 
 Data could thus be more easily read and evaluated automatically by machines, and it is made easier to 
 connect different data sources with each other, so that in general a higher degree of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) has been achieved.
