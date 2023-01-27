@@ -5,6 +5,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB078
+:identifier_link: 'https://w3id.org/faircookbook/FCB078'
+:difficulty_level: 3
+:recipe_type: applied_example
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist, terminology_manager, ontologist
+:maturity_level: 3  
+:maturity_indicator: 19, 22
+:has_executable_code: nope
+:recipe_name: Mapping datasets to CDISC-SDTM standard
 ```` 
 
 
@@ -26,6 +36,7 @@ The recipe will cover the following elements:
 ## Graphical Overview
 
 ````{dropdown}
+:open:
 ```{figure} approach-cdisc.md-figure0.mmd.png
 ---
 name: approach-cdisc(URL_TO_INSERT_RECORD https://www.cdisc.org/)-figure0
@@ -82,11 +93,18 @@ on implementing SDTM for specific use cases or "domains" {footcite}`sdtm_v2`. A 
 [on the CDI(URL_TO_INSERT_RECORD https://www.seadatanet.org/Metadata/CDI-Common-Data-Index)SC(URL_TO_INSERT_RECORD https://www.cdisc.org/)(URL_TO_INSERT_RECORD https://www.cdisc.org/) website](https://www.cdisc.org(URL_TO_INSERT_RECORD https://www.cdisc.org/)/standards/foundational/sdtm(URL_TO_INSERT_RECORD https://www.cdisc.org/standards/foundational/sdtm)ig/primer) {footcite}`sdtmig_v3_4`.
 
 ```{warning}
+Given the complexity of CDISC standards, any project team intending conversion of their datasets to SDTM at any point 
+in the project life cycle should aim to align with the standard **as early on in the process as possible**. 
 
+Data dictionaries and data collection instruments should, where possible, be aligned to the relevant CDISC standards to
+facilitate data conversions later on. In particular, CDISC standards provide procedures and guidelines for encoding 
+project-specific data that might not fit into the existing domains.
 ```
 
 ```{note}
+Commercial solutions are available to address all of these use cases but these are outside the scope of this recipe. 
 
+We will focus on outlining how to perform the mapping process manually, without bespoke tooling.
 ```
 
 
@@ -182,10 +200,13 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 
 
 ````{authors_fairplus}
+Danielle: Writing - Original Draft
+Philippe:  Writing - Review & Editing
 ````
 
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

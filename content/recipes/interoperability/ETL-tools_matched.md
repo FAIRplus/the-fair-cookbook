@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB031
+:identifier_link: 'https://w3id.org/faircookbook/FCB031'
+:difficulty_level: 5
+:recipe_type: survey_review
+:reading_time_minutes: 15
+:intended_audience: data_curator, data_manager, data_scientist  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Surveying extraction, transformation, load (ETL) tools
 ```` 
 
 
@@ -18,6 +28,9 @@ This recipe aims to serve as a start point for designing ETL workflows, rather t
 >The lists of tools are generated either by manual curation, which reflects what is being used in the industry, or automatally discovered from the bio.tools(URL_TO_INSERT_RECORD https://bio.tools/)(URL_TO_INSERT_RECORD https://bio.tools/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository).
 
 ```{warning} 
+The content in these tables was generated in March 2021.
+For updated content, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
+To provide feedback on this content or report issues, please do so via the [FAIR Cookbook github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues)
 ```
 
 ## Graphical Overview
@@ -26,6 +39,7 @@ The figure below shows different ETL-related operations and their relationships,
 
 
 ````{dropdown} 
+:open:
 ```{figure} ETL-tools-mermaid.png
 ---
 width: 800px
@@ -61,6 +75,7 @@ For ETL tools for RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-c
 | CP(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/complexportal/)AD                     |                               |                 |
 
 ```{warning} 
+The tools list above aims to provide a basic overview of what is available on the market. It is *not* a formal recommendation. If you think key tools are missing or the list needs an update, please contact us via the [github issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues).
 ```
 
 
@@ -204,12 +219,17 @@ To show how some of these tools may be used, the following related recipes provi
 ## Authors
 
 ````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Original Draft
+Sukhi: Tool curation
+Philippe: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB007
+:identifier_link: 'https://w3id.org/faircookbook/FCB007'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: nope
+:recipe_name: Creating InChI & SMILES identifiers for chemical structures 
 ```` 
 
 ## Main Objectives
@@ -16,8 +26,17 @@ The main purpose of this recipe is:
 ---
 
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [validation](http://edamontology.org/operation_2428)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [report](http://edamontology.org/data_2048)  |
+| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7) | [InChI](https://fairsharing.org/FAIRsharing.ddk9t9) |
+| [calculation](http://edamontology.org/operation_3438)  | [Structure Data File (SDF)](https://fairsharing.org/FAIRsharing.ew26v7)  | [SMILES](https://fairsharing.org/FAIRsharing.qv4b3c)  |
 ```
 ```{tabbed} Requirements
+* Skill dependency:
+   * Bash experience
+* Technical requirements:
+   * Groovy
 ```
 
 ## Creating InChI and SMILES identifiers for chemical structures
@@ -35,11 +54,15 @@ When generating InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)s, the I
 the compound record in the SDF(URL_TO_INSERT_RECORD http://en.wikipedia.org/wiki/SD_format#SDF) file, including: WARNING and ERRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)R(URL_TO_INSERT_RECORD https://ror.org). This first script reports such issues:
 
 ```bash
+groovy badRecords.groovy -f foo.sdf
 ```
 
 The output may look like this:
 
 ```
+Sulfinpyrazone  Omitted undefined stereo        WARNING
+Isosorbide mononitrate  Charges were rearranged WARNING
+Compound52      Proton(s) added/removed WARNING
 ```
 
 ### Calculate InChls
@@ -47,6 +70,7 @@ The output may look like this:
 Similarly, InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Keys can be generated:
 
 ```bash
+groovy inchikeys.groovy -f foo.sdf
 ```
 
 When the success state is ERRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)R(URL_TO_INSERT_RECORD https://ror.org), nothing is outputted.
@@ -56,6 +80,7 @@ When the success state is ERRO(URL_TO_INSERT_RECORD https://github.com/oborel/ob
 The last script calculates a SMILES(URL_TO_INSERT_RECORD http://opensmiles.org/opensmiles.html) for each entry in the SDF(URL_TO_INSERT_RECORD http://en.wikipedia.org/wiki/SD_format#SDF) file:
 
 ```bash
+groovy smiles.groovy -f foo.sdf
 ```
 
 ## Conclusion
@@ -82,11 +107,14 @@ with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_REC
 ## Authors
 
 ````{authors_fairplus}
+Egon: Writing - Original Draft, Conceptualization
+Philippe: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

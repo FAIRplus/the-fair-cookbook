@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB034
+:identifier_link: 'https://w3id.org/faircookbook/FCB034'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone 
+:maturity_level: 3
+:maturity_indicator: 35
+:has_executable_code: nope
+:recipe_name: Licensing Data
 ```` 
 
 
@@ -11,6 +21,8 @@
 :width: 60px
 :align: right
 ```
+[The sections about licensing are original content from The Turing Way](https://the-turing-way.netlify.app/welcome) and are included in the FAIRCookbook for convenience. Please cite keeping this in mind.
+> The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [http://doi.org/10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)
 ````
 
 
@@ -110,11 +122,18 @@ If you would like to read more about the challenges and finer points of licensin
 ### What to read next?
 
 ````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
 ```{image} ../../../images/logos/TTW.svg
 :height: 40px
 :align: center
 :name: Turing-Way-logo
 ```
+^^^
+- [The Turing Way Book of Data Sciences: Data Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html)
+---
+:body: p-0
 ```{rdmkit_panel}
 :inline: true
 ```

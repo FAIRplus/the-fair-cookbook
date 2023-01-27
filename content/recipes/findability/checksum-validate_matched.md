@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB053 
+:identifier_link: 'https://w3id.org/faircookbook/FCB053'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: bioinformatician, data_scientist, data_engineer
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Validating checksums to verify file integrity
 ```` 
 
 ## Abstract
@@ -24,6 +34,7 @@ focusing exclusively on the output of the Linux tool `md5sum`.
 ## Graphical Overview
 
 ````{dropdown} 
+:open:
 ```{figure} checksum-validate.md-figure1.mmd.png
 ---
 width: 450px
@@ -123,6 +134,10 @@ On the shell execute:
 The output should be something like:
 
 ```
+/home/USERNAME/path_to_directory/picture1.jpg: OK
+/home/USERNAME/path_to_directory/picture2.jpg: OK
+/home/USERNAME/path_to_directory/picture3.jpg: OK
+...
 ```
 
 This step will take as long as it needs to calculate the checksums of all files on the target system. As a benchmark you can expect 0.01 seconds per MB(URL_TO_INSERT_RECORD http://www.Metabase.net) of data.
@@ -162,6 +177,7 @@ This recipe in its current form has the following limitations:
 ## Authors
 
 ````{authors_fairplus}
+Robert: Writing - Original Draft
 ````
 
 
@@ -170,4 +186,5 @@ This recipe in its current form has the following limitations:
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

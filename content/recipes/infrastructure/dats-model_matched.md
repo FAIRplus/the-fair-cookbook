@@ -6,6 +6,16 @@
 <br/>
 
 ````{panels_fairplus}
+:identifier_text: FCB082
+:identifier_link: 'https://w3id.org/faircookbook/FCB082'
+:difficulty_level: 2
+:recipe_type: background_information
+:reading_time_minutes: 15
+:intended_audience: data_manager, data_curator, software_developer
+:maturity_level: 2  
+:maturity_indicator: 15
+:has_executable_code: nope
+:recipe_name: Introducing the DATS model
 ```` 
 
 
@@ -22,6 +32,7 @@ The main purpose of this recipe is:
 ## Graphical Overview
 
 ````{dropdown} **Data Model**
+:open:
 ```{figure} DataModelDiagram.png
 ---
 width: 800px
@@ -129,10 +140,13 @@ We implemented DATS(URL_TO_INSERT_RECORD https://github.com/biocaddie/WG3-Metada
 ## Authors
 
 ````{authors_fairplus}
+Danielle: Writing - original draft
+Philippe: Writing - review & editing
 ````
 
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

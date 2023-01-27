@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB008
+:identifier_link: 'https://w3id.org/faircookbook/FCB008'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: nope
+:recipe_name: Minting identifiers with Globus Minid client
 ```` 
 
 
@@ -25,6 +35,7 @@ To create a **persistent**, **globally unique** and **resolvable identifier (URL
  -->
 
 ````{dropdown} 
+:open:
 ```{figure} identifiers-minids-fig1.png
 ---
 height: 550px
@@ -55,6 +66,7 @@ This is a prerequisite to be able to call the minid API hosted on a server at th
 ### installing with pip
 
 ```python
+pip3 install --pre minid
 ```
 
 ### building from source:
@@ -73,6 +85,9 @@ use the dev branch to obtain to source
   To do so from the command line, issue the following:
 
 ```bash
+$ mkdir ~/Users/philippe/.minid
+$ cd .minid
+$ touch minid-config.cfg
 ```
 
 
@@ -89,6 +104,7 @@ use the dev branch to obtain to source
   <!-- ![](/images/B5UbkpF.png) -->
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/globus-account-create.png
 ---
 height: 500px
@@ -128,6 +144,7 @@ Creating a Globus account.
 </div>  -->
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/globus-account-login.png
 ---
 height: 250px
@@ -150,6 +167,7 @@ Globus account login.
 </div> -->
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/globus-account-allow.png
 ---
 height: 550px
@@ -174,6 +192,7 @@ Globus account allow.
 
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/globus-account-login-success.png
 ---
 height: 200px
@@ -202,26 +221,37 @@ The CL(URL_TO_INSERT_RECORD https://github.com/obophenotype/cell-ontology)I supp
 * Check a known minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)
 
 ```bash
+$ minid check hdl:20.500.12633/1HK1DTv1wPt3a
 ```
 
 if everything is setup correctly, the command will return:
 
 ```bash
+Minid:               hdl:20.500.12633/1HK1DTv1wPt3a
+Title:
+Checksums:           e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (sha256)
+Created:
+Landing Page:        https://identifiers.fair-research.org/hdl:20.500.12633/1HK1DTv1wPt3a
+EZID Landing Page:   https://ezid.cdlib.org/id/hdl:20.500.12633/1HK1DTv1wPt3a
+Locations:           http://example.com/foo.txt
 ```
 
 * Create a new identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (the `--location` option, if provided, must be at the end).
 
 ```bash
+$ minid --register [--title <title>] <file_name> [--locations <loc1>..<locN>]
 ```
 
 * Update metadata about an identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema):
 
 ```bash
+$ minid --update [--title <title>] [--status <status>] [--obsoleted_by <minid>] [--locations <loc1> <loc2>] <identifier>
 ```
 
 *  View all minid options:
 
 ```bash
+$ minid -h
 ```
 
 Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid/landingpage/\<identifier\>](http://minid.bd2k.org/minid/landingpage/\<identifier\>).
@@ -255,6 +285,21 @@ The manifest may be used to create a minid for a collection (URL_TO_INSERT_TERM 
 Below is a sample file manifest configuration file:
 
 ```bash
+  [
+      {
+          "length":321,
+          "filename":"file1.txt",
+          "md5":"5bbf5a52328e7439ae6e719dfe712200",
+          "sha256":"2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806",
+          "url" : "globus://ddb59aef-6d04-11e5-ba46-22000b92c6ec/share/godata/file1.txt"
+      },
+      {
+          "length": 632860,
+          "filename": "minid_v0.1_Nov_2015.pdf",
+          "sha256": "cacc1abf711425d3c554277a5989df269cefaa906d27f1aaa72205d30224ed5f",
+          "url" : "http://bd2k.ini.usc.edu/assets/all-hands-meeting/minid_v0.1_Nov_2015.pdf"
+      }
+  ]
 ```
 
 ## Conclusions
@@ -277,9 +322,12 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 ## Authors
 
 ````{authors_fairplus}
+Mike: Writing - Original Draft
+Philippe: Writing - Review & Editing
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

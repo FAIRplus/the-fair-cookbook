@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB021
+:identifier_link: 'https://w3id.org/faircookbook/FCB021'
+:difficulty_level: 1
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist 
+:maturity_level: 3
+:maturity_indicator: 33
+:has_executable_code: nope
+:recipe_name: Requesting new terms from terminologies and ontologies
 ```` 
 
 ## Main Objective
@@ -29,6 +39,7 @@ In most ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType
 
 
 ````{dropdown} 
+:open:
 ```{figure} onto-new-term.png
 ---
 width: 650px
@@ -151,11 +162,15 @@ UMLS is updated in May and November of each year.
 ## Authors
 
 ````{authors_fairplus}
+Ulrich: Writing - Original Draft
+Emma: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization 
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

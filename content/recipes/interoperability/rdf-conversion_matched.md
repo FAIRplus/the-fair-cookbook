@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB051
+:identifier_link: 'https://w3id.org/faircookbook/FCB051'
+:difficulty_level: 3
+:recipe_type: inventory
+:reading_time_minutes: 30
+:intended_audience: data_producer, data_engineer
+:maturity_level: 4
+:maturity_indicator: 57
+:has_executable_code: nope
+:recipe_name: Inventorying tools for converting data to RDF
 ```` 
 
 ## Main Objectives
@@ -21,6 +31,7 @@ Figure {numref}`rdf-conversion-figure1` shows an example ETL workflow.
 
 
 ````{dropdown} 
+:open:
 ```{figure} rdf-conversion.md-figure1.mmd.png
 ---
 name: rdf-conversion-figure1
@@ -299,10 +310,14 @@ For Java the two most common libraries for working with RDF(URL_TO_INSERT_RECORD
 
 ## Authors
 ````{authors_fairplus}
+Eelke: Writing - Original Draft
+Jolanda: Writing - Review & Editing
+Kees: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

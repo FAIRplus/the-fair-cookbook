@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB010
+:identifier_link: 'https://w3id.org/faircookbook/FCB010'
+:difficulty_level: 2
+:recipe_type: guidance
+:reading_time_minutes: 10
+:intended_audience: software_developer, data_scientist
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Introducing Search Engine Optimization (SEO) 
 ```` 
 
 ## Main Objectives
@@ -27,6 +37,7 @@ There are sub-recipes for embedding search(URL_TO_INSERT_RECORD https://arch.lib
 -->
 
 ````{dropdown} 
+:open:
 ```{figure} images/seo-mermaid.png
 ---
 height: 750px
@@ -64,11 +75,66 @@ The principle is actually fairly simple. It relies on embedding machine readable
 Below is a regular plain vanilla HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) page providing informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion about an scientific journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal) article.
 
 ```HTML
+<!-- A list of the issues for a single volume of a given periodical. -->
+<div>
+ <h1>The Lancet</h1>
+ <p>Volume 376, July 2010-December 2010</p>
+ <p>Published by Elsevier
+ <ul>
+   <li>ISSN: 0140-6736</li>
+ </ul>
+ <h3>Issues:</h3>
+ <ul>
+   <li>No. 9734 Jul 3, 2010 p 1-68</li>
+   <li>No. 9735 Jul 10, 2010 p 69-140</li>
+ </ul>
+</div>
 ```
 
 Now, we are presenting the same informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion augmented with the JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) file using Schema.org(URL_TO_INSERT_RECORD http://schema.org/)(URL_TO_INSERT_RECORD http://schema.org/) `ScholarlyArticle` profile. Note how the file is provided with the HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) `script` tag
 
 ```bash
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+        "@id": "#issue",
+        "@type": "PublicationIssue",
+        "issueNumber": "5",
+        "datePublished": "2012",
+        "isPartOf": {
+            "@id": "#periodical",
+            "@type": [
+                "PublicationVolume",
+                "Periodical"
+            ],
+            "name": "Cataloging & Classification Quarterly",
+            "issn": [
+                "1544-4554",
+                "0163-9374"
+            ],
+            "volumeNumber": "50",
+            "publisher": "Taylor & Francis Group"
+        }
+    },
+    {
+        "@type": "ScholarlyArticle",
+        "isPartOf": "#issue",
+        "description": "The library catalog as a catalog of works was an infectious idea, which together with research led to reconceptualization in the form of the FRBR conceptual model. Two categories of lacunae emerge--the expression entity, and gaps in the model such as aggregates and dynamic documents. Evidence needed to extend the FRBR model is available in contemporary research on instantiation. The challenge for the bibliographic community is to begin to think of FRBR as a form of knowledge organization system, adding a final dimension to classification. The articles in the present special issue offer a compendium of the promise of the FRBR model.",
+        "sameAs": "https://doi.org/10.1080/01639374.2012.682254",
+        "about": [
+            "Works",
+            "Catalog"
+        ],
+        "pageEnd": "368",
+        "pageStart": "360",
+        "name": "Be Careful What You Wish For: FRBR, Some Lacunae, A Review",
+        "author": "Smiraglia, Richard P."
+    }
+  ]
+}
+</script>
 
 ```
 
@@ -88,6 +154,7 @@ The tool is known as the [`Google Structured Data Testing(URL_TO_INSERT_RECORD h
 </div> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/Ge8gsWL.png
 ---
 height: 580px
@@ -158,10 +225,14 @@ The [main profiles](https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschem
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft, Conceptualization
+Alasdair: Writing - Original Draft, Writing - Review & Editing
+Leyla: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

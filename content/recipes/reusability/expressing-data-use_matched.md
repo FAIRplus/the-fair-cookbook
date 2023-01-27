@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB035
+:identifier_link: 'https://w3id.org/faircookbook/FCB035'
+:difficulty_level: 4
+:recipe_type: background_information
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, ontologist  
+:maturity_level: 4
+:maturity_indicator: 59
+:has_executable_code: nope
+:recipe_name: Declaring data permitted uses
 ```` 
 
 ## Main Objectives
@@ -19,6 +29,7 @@ implementation patterns in the context of **data cataloguing efforts**, for inst
 
 
 ````{dropdown}
+:open:
 ```{figure} data-usage-mermaid.png
 ---
 width: 850px
@@ -88,6 +99,7 @@ We summarize here the key objects used by the European Genome Arch(URL_TO_INSERT
 https://ega-archive.org(URL_TO_INSERT_RECORD https://ega-archive.org/)/data-use-conditions
 
 ````{dropdown}
+:open:
 ```{figure} duo-ols-view-1.png
 ---
 width: 700px
@@ -99,6 +111,7 @@ Data Use Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=
 ````
 
 ````{dropdown}
+:open:
 ```{figure} duo-ols-view-2.png
 ---
 width: 700px
@@ -111,9 +124,16 @@ Data Use Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=
 
 <!-- 
 ````{panels}
+:column: col-8
+:card: border-2
+DUO in OLS
+^^^
 ```{figure} duo-ols-view-1.png
 width: 400px
 ```
+---
+DUO in OLS
+^^^
 ```{figure} duo-ols-view-2.png
 width: 400px
 ```
@@ -128,6 +148,19 @@ The informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model
 1. The **Data Access Committee** and Contact informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion
 
 ```XML
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DAC_SET>
+    <DAC alias="DAC-2011-08-11T11:45:28Z-1873" accession="EGAC00000000001" center_name="EBI" broker_name="EGA">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAC00000000001</PRIMARY_ID>
+            <SUBMITTER_ID namespace="EBI">DAC-2011-08-11T11:45:28Z-1873</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE>EGA DAC TITLE</TITLE>
+        <CONTACTS>
+            <CONTACT name="Joe Bloggs" email="joe@noname.com" organisation="EBI"/>
+        </CONTACTS>
+    </DAC>
+</DAC_SET>
 ```
 
 
@@ -139,25 +172,86 @@ https://github.com(URL_TO_INSERT_RECORD https://github.com/)/enasequence/schema/
 https://github.com(URL_TO_INSERT_RECORD https://github.com/)/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml
 
 ```{note}
+in the following example, the text of the policy is present in the XML representation
 ```
 
 
 ```XML
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<POLICY_SET>
+    <POLICY center_name="EBI" alias="Policy-2011-08-26T12:23:53Z-1868" accession="EGAP00001000001" broker_name="EBI">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAP00001000001</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">Policy-2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE/>
+        <DAC_REF accession="EGAP00001000001" refname="DAC_-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAC00001000001</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">DAC_-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </DAC_REF>
+        <POLICY_TEXT>https://www.sanger.ac.uk/datasharing/</POLICY_TEXT>
+    </POLICY>
+</POLICY_SET>
 ```
 
 
 ```{note}
+In the following example, the file address (url) to the policy is included in the XML representation.
+Ideally, the url provided should be a globally unique persistent identifier so one can be sure to obtain at least the metadata about the document.
 ```
 
 ```XML
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<POLICY_SET>
+    <POLICY center_name="EBI" alias="Policy-2011-08-26T12:23:53Z-1868" accession="EGAP00001000001" broker_name="EBI">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAP00001000001</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">Policy-2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE/>
+        <DAC_REF accession="EGAP00001000001" refname="DAC_-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAC00001000001</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">DAC_-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </DAC_REF>
+        <POLICY_FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+    </POLICY>
+</POLICY_SET>
 ```
 
 
 3. Expressing Data Use with EGA(URL_TO_INSERT_RECORD https://ega-archive.org/) XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/) and **Data Use Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)** codes.
 
 ```XML
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<POLICY_SET>
+    <POLICY center_name="EBI" alias="Policy-2011-08-26T12:23:53Z-1868" accession="EGAP00001000001" broker_name="EBI">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAP00001000001</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">Policy-2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE/>
+        <DAC_REF accession="EGAP00001000001" refname="DAC_-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAC00001000001</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">DAC_-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </DAC_REF>
+        <POLICY_FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+        <DATA_USES>
+                   	<!-- no restriction -->
+   			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000004</DATA_USE>
 
+			<DATA_USES>
+			   <DATA_USE ontology="DUO" code="0000004" version="17-07-2016"/>
+			</DATA_USES>
 
+        </DATA_USES>
+    </POLICY>
+</POLICY_SET>
 ```
 
 
@@ -168,15 +262,73 @@ Indicating disease specific restriction on research(URL_TO_INSERT_RECORD https:/
 
 
 ```XML
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<POLICY_SET>
+    <POLICY center_name="EBI" alias="Policy-2011-08-26T12:23:53Z-1868" accession="EGAP00001000001" broker_name="EBI">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAP00001000001</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">Policy-2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE/>
+        <DAC_REF accession="EGAP00001000001" refname="DAC_-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAC00001000001</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">DAC_-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </DAC_REF>
+        <POLICY_FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+        <DATA_USES>
+           	<!-- ethics approval required -->
+   			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000021</DATA_USE>
+   			<!-- geographical restriction -->
+   			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000022</DATA_USE>
+   			<!-- not-for-profit-organization-use-only -->
+   			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000045</DATA_USE>
+   			<!-- disease specific research -->
+   			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000007</DATA_USE>
+        </DATA_USES>
+    </POLICY>
+</POLICY_SET>
 ```
 
 
 ```{note}
+When using the consent code DUO_0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifiers from well established disease terminologies such as MONDO, DOID, SNOMED-CT.
+For instance, if data reuse is restricted to research into `juvenile idiopathic arthritis`, the code should be displayed as DUO_0000007; MONDO:0011429
 ```
 
 
 
 ```XML
+<POLICY_SET>
+  <POLICY alias="ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62" center_name="BABRAHAM" accession="EGAP00001000615" broker_name="EGA">  
+    <IDENTIFIERS> 
+      <PRIMARY_ID>EGAP00001000615</PRIMARY_ID>
+      <SUBMITTER_ID namespace="BABRAHAM">ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62</SUBMITTER_ID>
+    </IDENTIFIERS>
+    <TITLE>Data Access Agreement for PCHiC, RNA-Seq, ChIP-Seq</TITLE>
+    <DAC_REF accession="EGAC00001000523">
+      <IDENTIFIERS>
+        <PRIMARY_ID>EGAC00001000523</PRIMARY_ID>
+      </IDENTIFIERS>
+    </DAC_REF>
+    <POLICY_FILE>ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx</POLICY_FILE>
+    <DATA_USES>
+      <DATA_USE ontology="DUO" code="0000007" version="17-07-2016">
+      	<!-- disease specific research -->
+        <MODIFIER>
+           <DB>EFO</DB>
+           <ID>0001645</ID>
+        </MODIFIER> 
+        <MODIFIER>
+           <DB>EFO</DB>
+           <ID>0001655</ID>
+        </MODIFIER>
+       </DATA_USE>
+       <DATA_USE ontology="DUO" code="0000014" version="17-07-2016"/>
+       </DATA_USES>
+   </POLICY>
+</POLICY_SET>
 ```
 
 
@@ -186,6 +338,27 @@ https://github.com(URL_TO_INSERT_RECORD https://github.com/)/enasequence/schema/
 
 
 ```XML
+<DATASETS>
+    <DATASET alias="EGAS000000001-sc-20110919" center_name="SC" broker_name="EGA" accession="EGAD00001000039">
+        <IDENTIFIERS>
+            <PRIMARY_ID>EGAD00001000039</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">EGAS000000001-sc-20110919</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <TITLE>Platelet collagen defect</TITLE>
+        <RUN_REF accession="EGAR0000000001" refname="RUN_1" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAR0000000001</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">RUN_1</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </RUN_REF>
+        <POLICY_REF accession="EGAP00000001" refname="Policy_-2011-08-17T15:05:39Z-1888" refcenter="EBI">
+            <IDENTIFIERS>
+                <PRIMARY_ID>EGAP00001000024</PRIMARY_ID>
+                <SUBMITTER_ID namespace="EBI">Policy_-2011-08-17T15:05:39Z-1888</SUBMITTER_ID>
+            </IDENTIFIERS>
+        </POLICY_REF>
+    </DATASET>
+</DATASETS>
 ```
 
 
@@ -194,6 +367,7 @@ https://github.com(URL_TO_INSERT_RECORD https://github.com/)/enasequence/schema/
 Browsing Data Access Committees available from EGA(URL_TO_INSERT_RECORD https://ega-archive.org/):
 
 ````{dropdown}
+:open:
 ```{figure} dac-ega.png
 ---
 width: 700px
@@ -214,6 +388,7 @@ ODR(URL_TO_INSERT_RECORD http://data.donders.ru.nl)L is made up of several compo
 - [The ODR(URL_TO_INSERT_RECORD http://data.donders.ru.nl)L Model](https://www.w3.org/TR/odrl-model/) {footcite}`ODR(URL_TO_INSERT_RECORD http://data.donders.ru.nl)Lmodel (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)`
 
 ````{dropdown}
+:open:
 ```{figure} https://www.w3.org/TR/odrl-model/00Model.png
 ---
 width: 700px
@@ -234,8 +409,15 @@ The ODR(URL_TO_INSERT_RECORD http://data.donders.ru.nl)L Vocabulary and Expressi
 
 
 ```{warning}
+In 2015, the dedicated working group produced the following JSON schema implementation guidance
+https://www.w3.org/community/odrl/json/2.1/#section-Schema
 
+We base our representations on this specification {footcite}`ODRLJSON`. 
 
+We are aware of a possible misalignment between the specifications of the Working Group (from 2015) and the latest
+specifications as to whether to use the keys "name" or "leftOperand" (https://www.w3.org/TR/odrl-model/#constraint-rule, 2018).
+In the following representations, we use the key "name" to validate against the 2015 JSON-schema
+ https://www.w3.org/community/odrl/json/2.1/#section-Schema / https://github.com/iptc/rightsml-dev/blob/master/licensed/ODRL21.json
 
 ```
 
@@ -246,6 +428,29 @@ The ODR(URL_TO_INSERT_RECORD http://data.donders.ru.nl)L model (URL_TO_INSERT_TE
 ##### Describing an agreement with ODRL
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Agreement",
+    "policyid": "http://example.com/policy:5531",
+    "inheritallowed": true,
+    "permissions": [{
+        "target": "http://example.com/report:2321",
+        "action": "http://www.w3.org/ns/odrl/2/print",
+        "assigner": "http://example.com/pub:88",
+        "assignee": "http://example.com/billie:888"
+    }]
+}
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Agreement",
+    "policyid": "http://example.com/policy:9999",
+    "inheritfrom": "http://example.com/policy:5531",
+    "permissions": [{
+        "target": "http://example.com/report:2333",
+        "action": "http://www.w3.org/ns/odrl/2/display",
+        "assigner": "http://example.com/pub:88",
+        "assignee": "http://example.com/class:IT01",
+        "assignee_scope": "http://www.w3.org/ns/odrl/2/group"
+    }]
+}
 ```
 
 
@@ -256,9 +461,28 @@ situation where SecondaryUse of the data is allowed on the condition that work i
 
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
+    "permissions": [
+        {
+        "target": "https://fairplus.github.io/examples/dataset_00001",
+        "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
+        "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+        "constraints":[{
+              "name": "http://www.w3.org/ns/odrl/2/purpose",
+              "operator": "http://www.w3.org/ns/odrl/2/eq",
+              "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+            }
+            ]
+        }
+    ]
+}
 ```
 
 ```{note}
+:class: tip
+The main limitation of the representation is that it provides no information about which diseases are vetted for research.
 ```
 
 The following representation is more sophisticated and includes 3 types of restrictions:
@@ -274,17 +498,57 @@ Let's proceed stepwise.
 
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
+    "permissions": [
+        {
+            "target": "https://fairplus.github.io/examples/dataset_00001",
+            "action": [{
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
+                        "xone": { 
+                        "@list": [ 
+                            { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                    }
+                }
+            }],
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+            "constraints":[{
+                "name": "http://www.w3.org/ns/odrl/2/purpose",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 ```{note}
 
+When using refinements, note the difference in representation to indicate the nature of the action.
+here it uses:
 
+while the ordinary is simpler: 
+"action": "http://www.w3.org/ns/odrl/2/secondaryUse",
 
+vs
 
+"action": [{
+           		"rdf:value": { "@id": "odrl:secondaryUse" },
 ```
 
 
 ```{note}
+While DUO is unique in its coverage of data uses, various disease ontologies exist and may be used to specify the
+specific focus research should have.
+For instance, SNOMED-CT, Disease Ontology could also be used.
+It is worth noting that extensive cross referencing exists between resources such as DOID, MONDO and
+SNOMED-CT but this is something to consider when implementing brokering systems.
 ```
 
 
@@ -299,6 +563,39 @@ encoded using the **ISO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)-3
 
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
+    "permissions": [
+        {
+            "target": "https://fairplus.github.io/examples/dataset_00001",
+            "action": [{
+           	    "rdf:value": { "@id": "odrl:secondaryUse" },
+                    "refinement": {
+                        "xone": { 
+                        "@list": [ 
+                        { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                        { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                        { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                    }
+                }
+            }],
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+            "constraints":[{
+                "name": "http://www.w3.org/ns/odrl/2/purpose",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                },
+                {
+                "name": "http://www.w3.org/ns/odrl/2/spatial",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://www.itu.int/tML/tML-ISO-3166:it"
+            }
+            ]
+        }
+    ]
+}
 ```
 
 * Representing Obligations regarding Data Management
@@ -308,6 +605,49 @@ period of time (3 years in this example).
 Duration and time related value should be represented using **ISO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)-8601 standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)**.
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://fairplus.github.io/examples/policy_122334",
+    "permissions": [
+        {
+            "target": "https://fairplus.github.io/examples/dataset_00001",
+            "action": "http://www.w3.org/ns/odrl/2/secondaryUse",
+            "action": [{
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
+                    "xone": { 
+                    "@list": [ 
+                            { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                  }
+                }
+            }],
+            "assigner": "https://fairplus.github.io/examples/examples/efpia_organization_00002",
+            "constraints":[{
+                    "name": "http://www.w3.org/ns/odrl/2/purpose",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                },
+                {
+                "name": "http://www.w3.org/ns/odrl/2/spatial",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://www.itu.int/tML/tML-ISO-3166:it"
+            }
+            ],
+            "duties": [{
+                "action": "http://www.w3.org/ns/odrl/2/delete",
+                "target": "https://fairplus.github.io/examples/dataset_00001",
+                "constraints": [{
+                    "name": "http://www.w3.org/ns/odrl/2/dateTime",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "P36M"
+                }]
+        }]
+        }
+    ]
+}
 ```
 
 
@@ -315,10 +655,54 @@ Duration and time related value should be represented using **ISO(URL_TO_INSERT_
 
 ```{warning} 
 
+This ODRL representation is **not vetted, nor endorsed by GA4GH or EGA**.
+This example is currently meant to present an example of how to use ODRL to represent some of the information represented in EGA.
 
 ```
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "https://ega-archive.org/datasets/EGAP0000000XYZ",
+    "permissions": [
+        {
+            "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
+            "action": [{
+                "rdf:value": { "@id": "odrl:secondaryUse" },
+                "refinement": {
+                    "xone": { 
+                    "@list": [ 
+                            { "@id": "http://purl.obolibrary.org/obo/MONDO_0011429" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001645" },
+                            { "@id": "http://purl.obolibrary.org/obo/EFO_0001655" }  
+                        ]
+                  }
+                }
+            }],
+            "assigner": "https://ega-archive.org/",
+            "constraints":[{
+                    "name": "http://www.w3.org/ns/odrl/2/purpose",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "http://purl.obolibrary.org/obo/DUO_0000007"
+                },
+                {
+                "name": "http://www.w3.org/ns/odrl/2/spatial",
+                "operator": "http://www.w3.org/ns/odrl/2/eq",
+                "rightoperand": "http://www.itu.int/tML/tML-ISO-3166:it"
+            }
+            ],
+            "duties": [{
+                "action": "http://www.w3.org/ns/odrl/2/delete",
+                "target": "https://ega-archive.org/datasets/EGAD0000000YYY",
+                "constraints": [{
+                    "name": "http://www.w3.org/ns/odrl/2/dateTime",
+                    "operator": "http://www.w3.org/ns/odrl/2/eq",
+                    "rightoperand": "P36M"
+                }]
+        }]
+        }
+    ]
+}
 ```
 
 ### Indicating Prohibitions and Interdictions
@@ -329,6 +713,18 @@ Complex prohibitions can be expressed using **constraints** and **refinement** e
 
 
 ```json
+{
+    "policytype": "http://www.w3.org/ns/odrl/2/Policy",
+    "policyid": "http://example.com/policy:0099",
+    "permissions": [{
+        "target": "http://example.com/asset:9898",
+        "action": "http://www.w3.org/ns/odrl/2/reproduce"
+    }],
+    "prohibitions": [{
+        "target": "http://example.com/asset:9898",
+        "action": "http://www.w3.org/ns/odrl/2/modify"
+    }]
+}
 ```
 
 
@@ -339,8 +735,27 @@ Complex prohibitions can be expressed using **constraints** and **refinement** e
 ### Referring to an ODRL Policy from a DCAT DataSet
 
 ```bash
+@prefix dcat:<https://www.w3.org/ns/dcat> .
+@prefix odrl:<https://www.w3.org/ns/odrl/2/core> .
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<#daa-policy-1>
+ a odrl:Policy .
 
+<#dataset-001>
+  a dcat:Dataset ;
+  dct:title "Human Patient Genomic Dataset"@en ;
+  dcat:keyword "genotype"@en, "phenotyping"@en, "IMI"@en ;
+  dct:creator "imi-consortium-XYZ" ;
+  dct:issued "2021-12-05"^^xsd:date ;
+  dct:modified "2021-12-15"^^xsd:date ;
+  dcat:contactPoint <http://example.org/imi-project-xyz/contact1> ;
+  dct:publisher "imi-consortium-XYZ";
+  dct:language <http://id.loc.gov/vocabulary/iso639-1/en>  ;
+  dcat:distribution _:dataset-001-csv ;
+  odrl:hasPolicy <#daa-policy-1>;
+  .
 
 ```
 
@@ -369,6 +784,7 @@ http://odrlapi.appspot.com/
 
 
 ````{dropdown}
+:open:
 ```{figure} ./odrl-validation-app.png
 ---
 width: 800px
@@ -394,6 +810,7 @@ Well, when it comes to genomics data, there is the Broad Institute's
 [Data Use Oversight System (DUOS)](https://duos.broadinstitute.org/#/home) is one such tool.
 
 ````{dropdown}
+:open:
 ```{figure} ./broads-duos.png
 ---
 width: 800px
@@ -442,11 +859,17 @@ dataset and defined by the data owners/data controllers.
 ## Authors
 
 ````{authors_fairplus}
+Tom: Conceptualization, Writing, Review & Editing
+Philippe: Conceptualization,Writing - Original Draft, Review & Editing 
+Melanie: Review & Editing 
+Fuqi: Review & Editing 
+Wei: Review & Editing 
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

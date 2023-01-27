@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB014
+:identifier_link: https://w3id.org/faircookbook/FCB014
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist
+:maturity_level: 1
+:maturity_indicator: 7
+:has_executable_code: nope
+:recipe_name: Transferring data with SFTP protocol
 ```` 
 
 
@@ -79,36 +89,46 @@ You can run an SFTP server in a Windows environment, e.g. using the open source 
 a.	Create a dedicated group for all future SFTP users:
 
 ```bash
+$ groupadd sftpusers
 ```
 
 b.	First create a folder on a volume with sufficient free space:
 
 ```bash
+$ mkdir -p /data/sftp
 ```
 
 c.	Set permissions:
 
 ```bash
+$ chown root:sftpusers /data/sftp
+$ chmod 775 /data/sftp
 ```
 
 d.	Create one or more SFTP users, assigning them to the previously created group:
 
 ```bash
+$ useradd -g sftpusers -d / -s /sbin/nologin USERNAME
 ```
 
 e.	Set the password for the new user:
 
 ```bash
+$ passwd USERNAME
 ```
 
 f.	Edit the SSHD configuration at /etc/ssh/sshd_config (e.g. using vi or nano) by adding the following lines:
 
 ```bash
+Match Group sftpusers
+ChrootDirectory /data/sftp
+ForceCommand internal-sftp
 ```
 
 g.	Restart the SSH services
 
 ```bash
+$ service sshd restart
 ```
 
 h.	Now you have to make sure you open port 22 in your network to the outside world under a specific domain name or static IP address.
@@ -153,6 +173,8 @@ Data could be transferred to/from SFTP server using multiple clients. Here there
 ##### Other SFTP clients: Cyberduck, MonstaFTP (Free and paid) and many others
 
 ```{admonition} Tip
+:class: tip
+The portable version of WinSCP can be preconfigured so that a user only needs to enter the password, without requiring knowledge of host names, protocols, ports or user name!
 ```
 
 #### Automatic
@@ -172,9 +194,11 @@ It is a good practice to ensure that file transfer is correct and complete.
 Sender should calculate checksum (md5, sha512, etc) for every file:
 
 ```python
+bash: md5sum * > md5sum.txt
 ```
 or
 ```python
+bash: sha512sum * > sha512sum.txt
 ```
 
 Windows: CertUtil -hashfile FILENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)ME MD5
@@ -182,10 +206,12 @@ Windows: CertUtil -hashfile FILENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena
 Recipient compares checksums:
 
 ```bash
+bash: md5sum -c md5sum.txt *
 ```
 or
 
 ```bash
+bash: sha512sum -c sha512sum.txt *
 ```
 
 
@@ -245,11 +271,16 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 ## Authors
 
 ````{authors_fairplus}
+Dorothy: Writing - Original Draft
+Vitaly: Writing - Original Draft
+Ulrich: Writing - Original Draft
+Philippe: Writing - Review & Editing
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

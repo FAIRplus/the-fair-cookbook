@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB025
+:identifier_link: https://w3id.org/faircookbook/FCB025
+:difficulty_level: 3
+:recipe_type: technical_guidance
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 2
+:maturity_indicator: 20, 21
+:has_executable_code: nope
+:recipe_name: Creating a data/variable dictionary
 ```` 
 
 <!-- # Table of Contents
@@ -37,6 +47,7 @@ A well defined data dictionary is essential for data curation and analysis. It s
 
 
 ````{dropdown} 
+:open:
 ```{figure} creating-data-dictionary.md-figure1.mmd.png
 ---
 width: 1000px
@@ -154,6 +165,9 @@ Depending on the persistence system, how this needs to be specified varies. We p
 - https://specs.frictionlessdata.io/table-schema/#missing-values
 
 ```
+"missingValues": [""]
+"missingValues": ["-"]
+"missingValues": ["NaN", "-"]
 ```
 
 #### Remember to provide descriptive metadata for the data dictionary itself
@@ -202,6 +216,9 @@ Why? Simply because if affords several key data management processes to take pla
 ## Authors
 
 ````{authors_fairplus}
+Danielle: Writing - Original Draft
+Wei: Writing - Original Draft
+Philippe: Writing - Original Draft
 ````
 
 
@@ -209,4 +226,5 @@ Why? Simply because if affords several key data management processes to take pla
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

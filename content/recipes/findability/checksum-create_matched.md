@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB052 
+:identifier_link: 'https://w3id.org/faircookbook/FCB052'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: bioinformatician, data_scientist, data_engineer
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Creating file checksums
 ```` 
 
 ## Abstract
@@ -22,6 +32,7 @@ the comparison of the checksum indicates whether the files are identical (within
 ## Graphical Overview
 
 ````{dropdown} 
+:open:
 ```{figure} checksum-create.md-figure1.mmd.png
 ---
 width: 450px
@@ -164,10 +175,12 @@ This recipe in its current form has the following limitations:
 ## Authors
 
 ````{authors_fairplus}
+Robert: Writing - Original Draft
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

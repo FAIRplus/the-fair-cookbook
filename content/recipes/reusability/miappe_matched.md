@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB061
+:identifier_link: 'https://w3id.org/faircookbook/FCB061'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 30
+:intended_audience:  everyone 
+:has_executable_code: nope
+:maturity_level: 3
+:maturity_indicator: 15,20
+:recipe_name: Improving dataset maturity - the MIAPPE use case
 ```` 
 
 ## Main Objective
@@ -45,6 +55,7 @@ also part of this recipe with examples and explanations (See details in Section 
 [comment]: <> (<!-- ![]&#40;https://i.imgur.com/iqdjWqo.png&#41; -->)
 
 ````{dropdown} **FAIRification Objectives**
+:open:
 
 ```{figure} ../../../images/iqdjWqo.png
 ---
@@ -133,6 +144,8 @@ and use PO(URL_TO_INSERT_RECORD http://plantontology.org/)ST /token endpoint to 
 B: Use CURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) or a programmatic method.
 
 ```bash
+`TOKEN=$(curl -X POST "https://www.ebi.ac.uk/ena/submit/webin/auth/token" -H "accept: */*" 
+-H "Content-Type: application/json" -d "{\"authRealms\":[\"ENA\"],\"password\":\"PASSWORD\",\"username\":\"WEBIN_ID\"}")`
 ```
 
 3. Allocate accessions via the pre-accessioning endpoint.
@@ -142,6 +155,9 @@ release dates. The only mandatory field for pre-accessioning is the sample name.
 
 The following CURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) command returns 3 accessions as the body contains names for 3 samples.
 ```bash
+`curl 'https://www.ebi.ac.uk/biosamples/samples/bulk-accession?authProvider=WEBIN' 
+-i -X POST -H "Content-Type: application/json;charset=UTF-8" -H "Accept: application/hal+json" 
+-H "Authorization: Bearer $TOKEN" -d '[{  "name" : "FakeSample 1"}, { "name" : "FakeSample 2"}, {  "name" : "FakeSample 3"}]'`
 ```
 
 Please refer to the [BioSample(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/biosample)s documentation](https://www.ebi.ac.uk/biosamples(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/biosamples/)/docs/references/api/submit(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/biosamples/docs/references/api/submit)#_submit_a_sample). 
@@ -178,6 +194,7 @@ the study registration interface
 
 
 ````{dropdown} **EMBL-EBI Webin Submission Interface**
+:open:
 
 ```{figure} ../../../images/JrDztCg.png
 ---
@@ -262,6 +279,7 @@ a ***** are required, but it is best to fill as many fields as possible.
 Use a markdown directive (note: not supported by hackMD but supported by jupyter notebook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059))
 
 ``` {note}
+You can always find out more about what a field means and what information it accepts by hovering over the blue 'i'.
 ```
 
 13. By the time you have completed this, your sample will be well-annotated and     understandable to people finding it 
@@ -310,6 +328,8 @@ to a staging area before submitting them through this interface, refer to the [E
 
 
 ```{note}
+ If you did not note down your sample accession, you can safely visit the ‘**Samples**’ tab, copy the accession, 
+ then return to the New Submission tab: your progress will be saved.
 ```
 
 7. Click '**Submit**' and see if your submission validates successfully. If you encounter errors, try using the 
@@ -318,6 +338,7 @@ it can be easier to fix errors this way than in the interface.
 
 
 ```{note}
+Note that the use of template spreadsheets is the best way to submit multiple datasets through this interface.
 ```
 
 8. If you manage to complete your submission, visit the 'Runs' tab to review your submission.
@@ -426,9 +447,11 @@ file complies with VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Anal
 For that purpose, we propose the [VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) validator tool on GitHub](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/EBIvariation/vcf-validator)  
 
 ```bash
+vcf_validator -i /path/to/file.vcf
 ```
 
 ```bash
+vcf_validator -i /path/to/compressed_file.vcf.gz
 ```
 
 Once the file has been fully validated without any error messages, you can submit the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) file to EVA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/eva/), using 
@@ -463,10 +486,17 @@ connect different data sources with each other, so that in general a higher degr
 
 ## Authors
 ````{authors_fairplus}
+Sebastian: Writing - Original Draft
+Cyril: Writing
+Erwan: Writing
+Isuru: Writing
+Fuqi: Review & Editing
+Philippe: Review & Editing
 ````
 
 
 
 ## Licence
 ````{license_fairplus}
+CC-BY-4.0
 ````

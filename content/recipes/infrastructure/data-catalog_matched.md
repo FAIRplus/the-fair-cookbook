@@ -2,6 +2,16 @@
 # Building a catalogue of datasets
 
 ````{panels_fairplus}
+:identifier_text: FCB047
+:identifier_link: 'https://w3id.org/faircookbook/FCB047'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 60
+:intended_audience: data_manager, data_scientist, software_developer, system_administrator  
+:maturity_level: 2
+:maturity_indicator: 24
+:has_executable_code: nope
+:recipe_name: Building a catalogue of datasets 
 ```` 
 
 ## Main Objectives
@@ -21,6 +31,12 @@ We will cover the following points:
 7. minting of stable, persistent and resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s
 
 ```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| JSON<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v1<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| RDF<!-- TODO add a link to corresponding document -->  | DCAT v2<!-- TODO add a link to corresponding document -->  | DATS<!-- TODO add a link to corresponding document -->  |
+| JSON-LD<!-- TODO add a link to corresponding document -->  | Schema.org<!-- TODO add a link to corresponding document -->  | <!-- TODO add a link to corresponding document -->  |
 ``` 
 
 ---
@@ -30,6 +46,11 @@ We will cover the following points:
 
 
 ```{figure} ../../../images/data-catalog-md-figure1.png
+---
+name: data-catalog-figure1
+alt: Building and populating a data catalogue
+---
+Building and populating a data catalogue
 ```
 
 ---
@@ -126,10 +147,13 @@ interoperability and reusability, see the following:
 
 <!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO seems unlikely that all authors did review, but no-one the original draft. Clarify -->
 ````{authors_fairplus}
+Philippe: Writing - Review & Editing
+Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

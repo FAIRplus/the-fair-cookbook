@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB054
+:identifier_link: 'https://w3id.org/faircookbook/FCB054'
+:difficulty_level: 1
+:recipe_type: applied_example
+:reading_time_minutes: 15
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist 
+:maturity_level: 2 
+:maturity_indicator: 1, 2
+:has_executable_code: nope
+:recipe_name: Enhancing discoverability of EHDEN OHDSI data with Schema.org markup
 ```` 
 
 
@@ -90,6 +100,7 @@ This recipe will describe a proof-of-concept that shows the step-by-step process
 ## Graphical Overview of the FAIRification Recipe Objectives
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure0.mmd.png
 ---
 name: ehden-ohdsi-figure0
@@ -110,6 +121,7 @@ itself, the OMO(URL_TO_INSERT_RECORD http://mged.sourceforge.net/ontologies/MGED
 Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure1.jpg
 ---
 name: ehden-ohdsi-figure1
@@ -177,6 +189,7 @@ Relevant Schema.org(URL_TO_INSERT_RECORD http://schema.org/)(URL_TO_INSERT_RECOR
 {numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure2.jpg
 ---
 name: ehden-ohdsi-figure-2
@@ -189,6 +202,7 @@ Part of the metadata model (URL_TO_INSERT_TERM https://fairsharing.org/search?re
 RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) representation of two Schema.org(URL_TO_INSERT_RECORD http://schema.org/)(URL_TO_INSERT_RECORD http://schema.org/) types, written in Turtle(URL_TO_INSERT_RECORD http://www.w3.org/TR/turtle/):
 
 ````{dropdown}
+:open:
 ```
 schema:MedicalObservationalStudy a owl:Class ;
        rdfs:isDefinedBy  
@@ -221,6 +235,7 @@ For OHD(URL_TO_INSERT_RECORD https://purl.obolibrary.org/obo/ohd/home)SI specifi
 The RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) was validated using Apache Jena RIOT (version 3.15.0), using the following command:
 
 ```bash
+riot.bat --validate ohdsi_semantic_model.ttl
 ```
 
 
@@ -239,20 +254,58 @@ In YAML, the data looks like this:
 ```yaml
 # Study identifier, specifically created for the website.
 # The identifier is the last part of the URL directing to the particular study
+study_id: ‘Covid19Icarius’
 # Analytics Use Case of the Study, choose 0, 1, 2 or 3:
 # 0: Characterization
 # 1: Population-Level Estimation
 # 2: Patient-Level Prediction
 # 3: Characterization and Population-Level Estimation
+study_usecase: [1]
 # Conditions studied; if multiple conditions are being studied,
 # duplicate all keys under "conditions"
+conditions:
+- concept_name: "Disease caused by 2019-nCoV"
+  concept_id: "37311061"
+  code:
+    concept_code: "840539006"
+    vocabulary_id: "SNOMED CT"
+    concept_code_url: "http://snomed.info/id/840539006"
 # Drug studied; if multiple subjects are being studied,
 # duplicate all keys under "study_subject"
+study_subject:
+- concept_name: "quinaprilat"
+  concept_id: "45775375"
+  code:
+    concept_code: "1546359"
+    vocabulary_id: "RxNorm"
+    concept_code_url: "http://purl.bioontology.org/ontology/RXNORM/1546359"
 ```
 
 The data in YAML gets converted into Turtle(URL_TO_INSERT_RECORD http://www.w3.org/TR/turtle/) programatically:
 
 ```text
+@prefix ohdsi: <http://data.ohdsi.org/> .
+@prefix concept: <http://data.ohdsi.org/concept/> .
+@prefix study: <https://covid19.ohdsi.app/study/> .
+@prefix schema: <http://schema.org/> .
+study:Covid19Icarius a schema:MedicalObservationalStudy ;
+ohdsi:analyticsUseCase ohdsi:PopulationLevelEstimation ;
+schema:healthCondition concept:37311061 ;
+schema:studySubject concept:45775375 .
+concept:37311061 a schema:MedicalCondition ;
+schema:name "Disease caused by 2019-nCoV" ;
+schema:identifier "37311061" ;
+schema:code [ a schema:MedicalCode ;
+schema:codeValue "840539006" ;
+schema:codingSystem "SNOMED CT" ;
+schema:sameAs "http://snomed.info/id/840539006" ] .
+concept:45775375 a schema:Drug ;
+schema:name "quinaprilat" ;
+schema:identifier "1777087" ;
+schema:code [ a schema:MedicalCode ;
+schema:codeValue “1546359" ;
+schema:codingSystem "RxNorm" ;
+schema:sameAs "http://purl.bioontology.org/ontology/RXNORM/“1546359" ] .
 ```
 
 The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) output
@@ -261,6 +314,7 @@ from that which contains the article text but also embeds the entered metadata a
 data as input and format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s this into RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) in accordance with the metadata model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure3.jpg
 ---
 name: ehden-ohdsi-figure3
@@ -300,6 +354,7 @@ Setting up a `robots.txt` file at the root of a website will give search(URL_TO_
 be crawled, and which pages can’t be crawled. Crawling all pages is possible by adding this line to the `robots.txt` file:
 
 ```text
+User-agent: *
 ```
 
 The Hugo framework automatically generates a sitemap(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) when building a website 
@@ -319,6 +374,54 @@ To illustrate, the JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(U
 JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) (compare the metadata presented above in YAML and Turtle(URL_TO_INSERT_RECORD http://www.w3.org/TR/turtle/) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)):
 
 ```
+{ "@graph" : [ 
+     { "@id" : "study:Covid19Icarius",
+       "@type" : "schema:MedicalObservationalStudy",
+       "analyticsUseCase" : "ohdsi:PopulationLevelEstimation",
+       "healthCondition" : "concept:37311061",
+       "studySubject" : "concept:45775375"  },
+    {
+      "@id": "concept:37311061",
+      "@type": "schema:MedicalCondition",
+      "code": {
+           "@type": "schema:MedicalCode",
+           "codeValue": "840539006",S
+           "codingSystem": "SNOMED",
+           "sameAs": "http://snomed.info/id/840539006"
+      },
+      "identifier": "37311061",
+      "name": "Disease caused by 2019-nCoV"
+     },
+   {
+      "@id": "concept:45775375",
+      "@type": "schema:Drug",
+      "code": {
+           "@type": "schema:MedicalCode",
+           "codeValue": "1546359",
+           "codingSystem": "RxNorm"
+      },
+      "identifier": "45775375",
+      "name": "quinaprilat"
+     }
+   ],
+ "@context" : {
+     "analyticsUseCase" : {
+          "@id" : "http://data.ohdsi.org/analyticsUseCase",
+          "@type" : "@id" },
+      "healthCondition" : {
+          "@id" : "http://schema.org/healthCondition",
+          "@type" : "@id"},
+      "studySubject" : {
+          "@id" : "http://schema.org/studySubject",
+          "@type" : "@id" },
+      "name" : {
+          "@id" : "http://schema.org/name" },
+      "identifier" : {
+          "@id" : "http://schema.org/identifier" },
+      "code" : {
+          "@id" : "http://schema.org/code",
+          "@type" : "@id" }}
+}
 ```
 
 
@@ -346,6 +449,7 @@ the hood.
 A screenshot of the HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) page is presented in {numref}`ehden-ohdsi-figure6`.
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure6.png
 ---
 name: ehden-ohdsi-figure6
@@ -363,6 +467,7 @@ datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was hig
 as indexed in Google Dataset Search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/).
 
 ````{dropdown}
+:open:
 ```{figure} ehden-ohdsi.md-figure7.png
 ---
 name: ehden-ohdsi-figure7
@@ -409,10 +514,17 @@ describing web crawling, robots.txt, sitemap(URL_TO_INSERT_RECORD https://www.co
 ## Authors
 
 ````{authors_fairplus}
+Kees: Writing - Original Draft, Conceptualization
+Emma: Writing - Original Draft
+Jolanda: Writing - Original Draft
+Philippe: Writing - Review & Editing
+Alasdair: Writing - Review & Editing
+Robert: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB049
+:identifier_link: 'https://w3id.org/faircookbook/FCB049'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Assessing with FAIR Evaluator
 ```` 
 
 
@@ -55,6 +65,7 @@ Navigate the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
 
 <!-- ![the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator Home page](./assets/fair-eval-img1.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img1.png
 ---
 width: 800px
@@ -75,6 +86,7 @@ One may browse the list of currently community defined indicators from the `Coll
 <!-- ![Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s'](./assets/fair-eval-img2.png)  -->
 
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img2.png
 ---
 width: 800px
@@ -97,6 +109,7 @@ To run an evaluation, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair
 <!-- ![Running the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img4.png
 ---
 width: 800px
@@ -115,6 +128,7 @@ Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluat
 <!-- ![Running the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator - part 2: execution ](./assets/fair-eval-img5.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img5.png
 ---
 width: 800px
@@ -133,6 +147,7 @@ Following execution of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fai
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator report - overall report ](./assets/fair-eval-img6.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img6.png
 ---
 width: 800px
@@ -148,6 +163,7 @@ Time to dig into the details and figure out the reasons why some indicators are 
 <!-- ![apparently a problem with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) persistence if using DOI(URL_TO_INSERT_RECORD https://www.doi.org), which are URN rather than URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) *sensu stricto*](./assets/fair-eval-img7.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./assets/fair-eval-img7.png
 ---
 width: 800px
@@ -186,10 +202,13 @@ Clarke et al. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Dominique: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

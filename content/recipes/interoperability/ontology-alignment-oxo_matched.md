@@ -5,6 +5,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB076
+:identifier_link: 'https://w3id.org/faircookbook/FCB076'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: ontologist, terminology_manager, data_scientist, data_curator, data_manager 
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: nope
+:recipe_name: Mapping Ontologies with OxO, EBI Ontology Xref Service
 ```` 
 
 ---
@@ -25,6 +35,7 @@ to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) ont
 
 
 ````{dropdown} 
+:open:
 ```{figure} ontology-align-oxo.mmd.svg
 ---
 height: 550px
@@ -81,6 +92,7 @@ OxO(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/spot/oxo/) allows users to explor
 
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/bi5WoIf.png
 ---
 width: 600px
@@ -113,6 +125,7 @@ Having greater map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/form
 
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/1EepmN9.png
 ---
 width: 600px
@@ -127,6 +140,7 @@ Figure 3 shows the corresponding map(URL_TO_INSERT_RECORD https://www.cog-genomi
 
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/l1z8OgL.png
 ---
 width: 600px
@@ -142,6 +156,7 @@ OxO(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/spot/oxo/) map(URL_TO_INSERT_RECO
 To ensure the quality of the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping, users are recommended to review the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping results, especially when the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping distance increases. OxO(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/spot/oxo/) allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion about each term in the [Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) lookup service(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/ols/index)](https://www.ebi.ac.uk/ols/index(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/ols/index)).
 
 ````{dropdown} 
+:open:
 ```{figure} ../../../images/937iuPV.png
 ---
 width: 600px
@@ -160,11 +175,43 @@ It is therefore possible to invoke the map(URL_TO_INSERT_RECORD https://www.cog-
 In the following code snippet, an API request invoked via `curl` performed the same map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping presented in the section above, at step 3:
 
 ```bash
+curl 'https://www.ebi.ac.uk/spot/oxo/api/search' -i 
+-X POST 
+-H 'Content-Type: application/json' 
+-H 'Accept: application/json' 
+-d '{
+  "ids" : [ "DOID:9352","MeSH:D003924"],
+  "inputSource" : null,
+  "mappingTarget" : [ "MONDO" ],
+  "mappingSource" : [ "MONDO" ],
+  "distance" : 1
+}'
 ```
 
 The corresponding results are as follows:
 
 ```bash
+{
+      "queryId" : "DOID:9352",
+      "querySource" : null,
+      "curie" : "DOID:9352",
+      "label" : "type 2 diabetes mellitus",
+      "mappingResponseList" : [ {
+        "curie" : "MONDO:0005148",
+        "label" : "type 2 diabetes mellitus",
+        "sourcePrefixes" : [ "MONDO" ],
+        "targetPrefix" : "MONDO",
+        "distance" : 1
+      } ],
+      "_links" : {
+        "self" : {
+          "href" : "https://www.ebi.ac.uk/spot/oxo/api/terms/DOID:9352"
+        },
+        "mappings" : {
+          "href" : "https://www.ebi.ac.uk/spot/oxo/api/mappings?fromId=DOID:9352"
+        }
+      }
+    }
 ```
 
 
@@ -212,10 +259,15 @@ In the context of a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-princ
 ## Authors
 
 ````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Karsten: Writing - Original Draft
+Peter: Writing - Original Draft
+Philippe: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

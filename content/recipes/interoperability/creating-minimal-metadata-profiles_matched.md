@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB026
+:identifier_link: 'https://w3id.org/faircookbook/FCB026'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Creating a metadata profile
 ```` 
 
 
@@ -11,6 +21,7 @@
 
 
 ````{dropdown} 
+:open:
 ```{figure} creating-minimal-metadata-profiles-mermaid.png
 ---
 height: 1000px
@@ -73,12 +84,14 @@ Without a set of competency questions, important variables may easily be forgott
 ## Authors
 
 ````{authors_fairplus}
+Danielle: Writing - Original Draft
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

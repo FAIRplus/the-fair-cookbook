@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB037
+:identifier_link: 'https://w3id.org/faircookbook/FCB037'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: data_manager, data_scientist 
+:maturity_level: 2 
+:maturity_indicator: 1, 2
+:has_executable_code: yeah
+:recipe_name: Making an omics data matrix FAIR
 ```` 
 
 
@@ -38,6 +48,7 @@ Scientific data is often stored as unstructured data in proprietary file format 
 ## Graphical Overview
 
 ````{dropdown}
+:open:
 ```{figure} fair-data-matrix-recipe.md-figure1.mmd.png
 ---
 width: 800px
@@ -152,15 +163,19 @@ Lastly, we produced a study description file, in ISA-Tab(URL_TO_INSERT_RECORD ht
 
 ## Reference
 ````{dropdown} **Reference**
+Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) [doi:10.1038/s41597-019-0286-0](https://doi.org/10.1038/s41597-019-0286-0)
 ````
 
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

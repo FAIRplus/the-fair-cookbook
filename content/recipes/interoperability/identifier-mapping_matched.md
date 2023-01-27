@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB016
+:identifier_link: 'https://w3id.org/faircookbook/FCB016'
+:difficulty_level: 2
+:recipe_type: background_information
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: nope
+:recipe_name: Interlinking data from different sources
 ```` 
 
 
@@ -30,6 +40,7 @@ This recipe will cover the topics highlighted in orange:
 
 
 ````{dropdown} 
+:open:
 ```{figure} identifier-mapping.md-figure1.mmd.png
 ---
 width: 850px
@@ -89,6 +100,7 @@ Examples of types of map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink
 ## Identifier Mappings
 
 ```{note} 
+**"Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. "**
 ```
 
 To satisfy the Findability criteria F1, organisations must create identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for the concepts within their database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database). This generates locally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s which can in turn be transformed into globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s using namespaces for which the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) organisation are the `authority`. 
@@ -127,6 +139,9 @@ The simplest way to exchange equivalences is in a simple text file, which could 
 The following example shows the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping equivalences between ChEMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/chembl)(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/chembl) target components (proteins) and UniProt proteins.
 
 ```bash
+ChEMBL_Target_Component	UniProt
+CHEMBL_TC_4803	A0ZX81
+CHEMBL_TC_2584	A1ZA98 
 ```
 
 
@@ -137,6 +152,9 @@ The OBO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD ht
 The following TSV(URL_TO_INSERT_RECORD http://www.iana.org/assignments/media-types/text/tab-separated-values) shows our example data as a map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping file using the minimal columns (correct as of November 2020). The informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion provided is less than the minimal VoID model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) above.
 
 ```bash
+subject_id  predicate_id  object_id match_type
+chembl:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81  sio:database-cross-reference
+chembl:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98  sio:database-cross-reference
 ```
 
 
@@ -149,8 +167,25 @@ A `linkset` contains the identifier (URL_TO_INSERT_TERM https://fairsharing.org/
 The following example shows a VoID Linkset in turtle notation with the minimum metadata given in the header. The metadata block links to the ChEMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/chembl)(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/chembl) 17 RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) description and the UniProt March(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) 2015 release. The `linkPredicate` tells us that the link is an exact match, i.e. the linked instances can be deemed equivalent for most applications, and the `linksetJustification` property states that the link is declared as a Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) Cross Reference assertion, rather than being computed based on an equivalent protein sequence. These properties allow consuming applications to make more informed choices about their reuse of the data.
 
 ```bash
+@prefix bdb: <http://vocabularies.bridgedb.org/ops#> .
+@prefix chembl: <http://rdf.ebi.ac.uk/resource/chembl/> .
+@prefix chembl_target_cmpt: <http://rdf.ebi.ac.uk/resource/chembl/targetcomponent/> .
+@prefix sio: <https://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+:chembl17-uniprot-exactMatch-linkset a void:Linkset ;
+    void:subjectsTarget :chembl17-rdf ;
+    void:objectsTarget <http://purl.uniprot.org/void#UniProtDataset_2015_03> ;
+    void:linkPredicate skos:exactMatch ;
+    bdb:linksetJustification sio:database-cross-reference
+    void:triples "6367"^^xsd:integer .
 
+chembl_target_cmpt:CHEMBL_TC_4803 skos:exactMatch uniprot:A0ZX81 .
+chembl_target_cmpt:CHEMBL_TC_2584 skos:exactMatch uniprot:A1ZA98 .
+...
 ```
 
 ### A couple of observations
