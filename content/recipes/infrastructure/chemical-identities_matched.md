@@ -44,8 +44,8 @@ The main purpose of this recipe is:
 To run the below scripts, you need a [Groovy](https://groovy.apache.org/download.html) installation.
 The Groovy scripts use version 2.7.1 of the [Chemistry(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/)(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/) Development Kit](https://cdk.github.io/)
 (see {footcite}`Willighagen2017`). This library and its use in Groovy is further explain in
-the book(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) [Groovy Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics with the Chemistry(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/)(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/) Development Kit](https://egonw.github.io/cdkbook/).
-Check this git repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) for more detailed use instructions and where to find the tools:
+the book(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) [Groovy Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics with the Chemistry(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/)(URL_TO_INSERT_RECORD https://www.go-fair.org/implementation-networks/overview/chemistryin/) Development Kit](https://egonw.github.io/cdkbook/).
+Check this git repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  for more detailed use instructions and where to find the tools:
 [https://github.com(URL_TO_INSERT_RECORD https://github.com/)/FAIRplus/fairplus-sdf](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/FAIRplus/fairplus-sdf)
 
 ### Record validation
@@ -87,11 +87,11 @@ groovy smiles.groovy -f foo.sdf
 
 This recipe explained who to validate the chemical structures in an SDF(URL_TO_INSERT_RECORD http://en.wikipedia.org/wiki/SD_format#SDF) file,
 and convert them to SMILES(URL_TO_INSERT_RECORD http://opensmiles.org/opensmiles.html), InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/), and InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key. The latter can then be used
-with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io) and its metabolite ID map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)s to get additional identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s.
+with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io) and its metabolite ID map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s to get additional identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.
 
 ### What to read next?
 
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io)](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/faircookbook/FCB017)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io)](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/faircookbook/FCB017)
 
 ````{rdmkit_panel}
 ````

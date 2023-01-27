@@ -40,7 +40,7 @@ Below are a number of commonly found definitions of metadata:
 
 * The fractal definition  **"your metadata is my data"**, which conveys the notion that `quantity has a quality all of its own` when it comes to metadata, and by accumulating enough metadata, however small, statistical handling may reveal patterns and provide insights. This in fact can have unforeseen and possibly untoward consequences, such as loss of privacy and risks of reidentification of supposedly anonymized data.
 
-The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society) which relies on informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion technology.
+The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society)  which relies on informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion technology.
 
 In the following sections, we will delve further into the possibly controversial typology of metadata {footcite}`NISO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)Metadata`.
 
@@ -82,8 +82,8 @@ Taking an example, let's consider the domain of a bibliographic record and look 
 ```bash
 @Article{Alter2020DATS(URL_TO_INSERT_RECORD https://github.com/biocaddie/WG3-MetadataSpecifications),
    Author="Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. ",
-   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) for discovering data access and use requirements}",
-   Journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)="Gigascience",
+   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  for discovering data access and use requirements}",
+   Journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal) ="Gigascience",
    Year="2020",
    Volume="9",
    Number="2",
@@ -131,7 +131,7 @@ It can range from quantitative metrics such as the variance or standard error of
 
 
 ````{note}
-This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
+This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
 ````
 
 

@@ -32,7 +32,7 @@ A software license governs the extent of use or redistribution of software, with
 There are many software licenses in existence.
 Many of those allow the licensee to do very little, but some give you more freedom to use and re-use the licensed software.
 
-The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project).
+The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) .
 
 To make some sense of this variety, we can categorize them as follows.
 
@@ -87,7 +87,7 @@ These four freedoms together effectively neutralize copyright; *Freedoms 0* and 
 
 Note that it is perfectly acceptable to sell copies of free software, warranty, or development services; this is about the freedom to do things with the software, not about its price.
 
-There are two other, similar definitions in use; the Open Source Institute's [Open Source Definition](https://opensource.org/osd-annotated) and the [Debian Free Software Guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline)s](https://www.debian.org/social_contract#guidelines).
+There are two other, similar definitions in use; the Open Source Institute's [Open Source Definition](https://opensource.org/osd-annotated) and the [Debian Free Software Guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s](https://www.debian.org/social_contract#guidelines).
 The free software definition above, by Richard Stallman, is the most straightforward and concise, and in practice, the categories they define are almost identical.
 
 Software that is not free is proprietary.

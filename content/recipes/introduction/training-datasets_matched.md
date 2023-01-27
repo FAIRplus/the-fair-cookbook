@@ -22,8 +22,8 @@
 and develop related computational tools while minimizing the challenges of accessing real-world human data.
 
 The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) aims to provide hands-on, practical advice on how to deliver FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) data through interactions with
-Innovative Medicine Initiative(IMI) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s. These research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s, by nature, often involve patient-centric informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion. 
-But dealing with real-world data and human-centric informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion, clinical data, in particular, is challenging. 
+Innovative Medicine Initiative(IMI) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s. These research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s, by nature, often involve patient-centric informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. 
+But dealing with real-world data and human-centric informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, clinical data, in particular, is challenging. 
 It most often mandates interacting with Data Access Committees (DAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)s), and undergoes a vetting process, 
 which can be lengthy and convoluted. This can become a hindrance if the focus of the work is to deliver training on 
 the computational methods available to deal with such data rather than data custody-related tasks,
@@ -35,7 +35,7 @@ This recipe aims to provide a list of relevant resources belonging to the realm 
 - obtain datasets with which to work and hone computational skills.
 
 The recipe will cover two types of datasets:
-- `real datasets`, such as the Medical Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion Mart for Intensive Care III(URL_TO_INSERT_RECORD http://mimic.physionet.org/)(MIM(URL_TO_INSERT_RECORD http://discover.nci.nih.gov/mim/)IC-III(URL_TO_INSERT_RECORD http://mimic.physionet.org/)) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
+- `real datasets`, such as the Medical Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion Mart for Intensive Care III(URL_TO_INSERT_RECORD http://mimic.physionet.org/)(MIM(URL_TO_INSERT_RECORD http://discover.nci.nih.gov/mim/)IC-III(URL_TO_INSERT_RECORD http://mimic.physionet.org/)) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
 for which data access requests must be made but which are made available to computational scientists
 for research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) purposes.
 - `synthetic datasets`, which are available without restrictions since produced by computational methods 
@@ -110,7 +110,7 @@ This synthetic dataset corresponds to 1000 person composite dataset:
 
 http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip
 
-For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion about the OMO(URL_TO_INSERT_RECORD http://mged.sourceforge.net/ontologies/MGEDontology.php)P(URL_TO_INSERT_RECORD https://github.com/rsc-ontologies/rxno) Common Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), refer to the following:
+For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the OMO(URL_TO_INSERT_RECORD http://mged.sourceforge.net/ontologies/MGEDontology.php)P(URL_TO_INSERT_RECORD https://github.com/rsc-ontologies/rxno) Common Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , refer to the following:
 
 CDM 5.2.2 DDL for the OHD(URL_TO_INSERT_RECORD https://purl.obolibrary.org/obo/ohd/home)SI supported DBMSs is available health-related
 
@@ -185,7 +185,7 @@ TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#displ
 * How to deal with unstructured text?< TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document >
 --->
 
-<!-- {download}`bibliography-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.bib <./bibref/bibliography-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.bib>` -->
+<!-- {download}`bibliography-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) -map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.bib <./bibref/bibliography-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) -map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping.bib>` -->
 
 ## References
 
@@ -193,7 +193,7 @@ TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#displ
 ```{footbibliography}
 ```
 ````
-<!-- Johnson, A., Pollard, T., Shen, L. et al. MIM(URL_TO_INSERT_RECORD http://discover.nci.nih.gov/mim/)IC-III(URL_TO_INSERT_RECORD http://mimic.physionet.org/), a freely accessible critical care database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database). Sci Data 3, 160035 (2016). https://doi.org/10.1038/sdata.2016.35
+<!-- Johnson, A., Pollard, T., Shen, L. et al. MIM(URL_TO_INSERT_RECORD http://discover.nci.nih.gov/mim/)IC-III(URL_TO_INSERT_RECORD http://mimic.physionet.org/), a freely accessible critical care database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) . Sci Data 3, 160035 (2016). https://doi.org/10.1038/sdata.2016.35
 
 https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Presentation.pdf
 

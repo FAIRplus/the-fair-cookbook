@@ -19,8 +19,8 @@
 
 ## Main Objectives
 
-- Document how to convert raw data from a propriatory, vendor specific format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
-- Apply the approach to a targeted metabolic profiling using Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)rates kit produced by IMI Resolute project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project).
+- Document how to convert raw data from a propriatory, vendor specific format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
+- Apply the approach to a targeted metabolic profiling using Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)rates kit produced by IMI Resolute project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) .
 
 
 ---
@@ -35,10 +35,10 @@
 ```{figure} from-proprietary.png
 ---
 width: 450px
-name: Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
-alt: Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+name: Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+alt: Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ---
-Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 ```
 ````
 
@@ -49,14 +49,14 @@ Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/searc
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [formatting](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3438)  | Waters MS format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document -->  | [mzML](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba)  |
+| [formatting](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3438)  | Waters MS format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) <!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document -->  | [mzML](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba)  |
 | [text annotation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3778)  | [PSI-MS](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.284e1z)  | [annotated text](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_3779)  |
 
 
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  |
+| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | [mzML](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba)  | [PSI-MS](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.284e1z)  |   |
 
@@ -85,7 +85,7 @@ Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/searc
 
 ### Step 1: obtain the dataset
 
-In the case of the IMI RESO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)LUTE<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project), the data is released via the University of Luxembourg<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> server (assuming you have access resolved):
+In the case of the IMI RESO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)LUTE<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) , the data is released via the University of Luxembourg<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> server (assuming you have access resolved):
 
 ```bash
 $> sftp fairplus@NNN.000.000.NNN
@@ -135,7 +135,7 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 
 ### Step 3: Convert vendor specific format to an open format
 
-One can consult the Elixir-UK [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/) of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)(URL_TO_INSERT_RECORD https://www.doi.org) (DOI(URL_TO_INSERT_RECORD https://www.doi.org)), https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba for HUPO(URL_TO_INSERT_RECORD http://plantontology.org/)-PSI(URL_TO_INSERT_RECORD http://www.psidev.info/) mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml) specifications.
+One can consult the Elixir-UK [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/) of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) (URL_TO_INSERT_RECORD https://www.doi.org) (DOI(URL_TO_INSERT_RECORD https://www.doi.org)), https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba for HUPO(URL_TO_INSERT_RECORD http://plantontology.org/)-PSI(URL_TO_INSERT_RECORD http://www.psidev.info/) mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml) specifications.
 
 <!-- <div>
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba">
@@ -147,15 +147,15 @@ One can consult the Elixir-UK [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org
 ```{figure} /images/AWOWTbr.png
 ---
 width: 750px
-name: A Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) Record in the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog of resources
-alt: A Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) Record in the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog of resources
+name: A Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  Record in the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog of resources
+alt: A Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  Record in the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog of resources
 ---
-The [HUPI-PSI mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml) Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) Record](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba) in the [Elixir FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/) of resources.
+The [HUPI-PSI mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml) Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  Record](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.26dmba) in the [Elixir FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) catalog](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/) of resources.
 ```
 ````
 
 
-The objective here is to conversion raw data in manufacturer format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) to an open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/ProteoWizard/pwiz) {footcite}`Chambers2012`.
+The objective here is to conversion raw data in manufacturer format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  to an open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/ProteoWizard/pwiz) {footcite}`Chambers2012`.
 
 > **requirements**:
 
@@ -203,14 +203,14 @@ By essence, the resulting mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)
 
 In some situations, the conversion will fails and no mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml) output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:
  - raw data files 
- - unsupported vendor format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+ - unsupported vendor format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 
 To address the former, it is good practice to compute a hash (md5, sha2) checksum fingerprinting each of the files. This allows to ensure that no file corruption has occurred during transfer and copy.
 
 To address the latter, one should consult the table of compatibility:
 
 
-|          Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)         |    Status   |
+|          Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)          |    Status   |
 |:----------------------- |:----------- |
 | ABI T2D                 | not working |
 | Agilent MHDAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) (non-IMS) | working     |
@@ -230,9 +230,9 @@ To address the latter, one should consult the table of compatibility:
 
 #### 5. Testing and processing the resulting mzML files
 
-For users unfam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliar with format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) via popular search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
+For users unfam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliar with format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) via popular search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
 
-A number of libraries are available for parsing (reading and writing) `mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)` document. `mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)` is a king of `XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) for which an XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/) schema has been defined and allows syntactic validation through standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
+A number of libraries are available for parsing (reading and writing) `mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)` document. `mzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)` is a king of `XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  for which an XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/) schema has been defined and allows syntactic validation through standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
 <img src="/images/BT(URL_TO_INSERT_RECORD http://biotopontology.github.io/)s0GUS.png" width="750" border="1"/>
@@ -287,7 +287,7 @@ width: 650px
 name: pymzml rendered msrun profile
 alt: pymzml rendered msrun profile
 ---
-The Python `pymzml` library rendering of a spectrum as extracted from an mzml format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ted mass spectrum data file.
+The Python `pymzml` library rendering of a spectrum as extracted from an mzml format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ted mass spectrum data file.
 ```
 ````
 
@@ -295,8 +295,8 @@ In the follow-up recipe, we will show how to boostrap the creation of an ISA met
 
 ## Conclusion
 
-In this recipe, we have shown how to convert a proprietary file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s and unfortunately not all benefit from the support of open source / open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) communities. However by consulting the [Elixir UK](https://elixir-europe.org(URL_TO_INSERT_RECORD https://elixir-europe.org/)/about-us/who-we-are/nodes/uk) [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) registry](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)), it is possible to identify if such open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) specifications are available.
-Then, interrogating the [Biotools catalog](https://bio.tools(URL_TO_INSERT_RECORD https://bio.tools/)/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+In this recipe, we have shown how to convert a proprietary file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and unfortunately not all benefit from the support of open source / open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  communities. However by consulting the [Elixir UK](https://elixir-europe.org(URL_TO_INSERT_RECORD https://elixir-europe.org/)/about-us/who-we-are/nodes/uk) [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) registry](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)), it is possible to identify if such open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  specifications are available.
+Then, interrogating the [Biotools catalog](https://bio.tools(URL_TO_INSERT_RECORD https://bio.tools/)/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 
 
 
@@ -316,7 +316,7 @@ Then, interrogating the [Biotools catalog](https://bio.tools(URL_TO_INSERT_RECOR
 ```
 
 <!-- 1. Chambers, M., Maclean, B., Burke, R. et al. A cross-platform toolkit for mass spectrometry and proteomics. Nat Biotechnol 30, 918-920 (2012). https://doi.org/10.1038/nbt.237
-2. Bald T, Barth J, Niehues A, et al. pymzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)--Python module for high-throughput bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics on mass spectrometry data. Bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI(URL_TO_INSERT_RECORD https://www.doi.org): 10.1093/bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics/bts066. -->
+2. Bald T, Barth J, Niehues A, et al. pymzML(URL_TO_INSERT_RECORD http://www.psidev.info/mzml)--Python module for high-throughput bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics on mass spectrometry data. Bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics (Oxford, England). 2012 Apr;28(7):1052-1053. DOI(URL_TO_INSERT_RECORD https://www.doi.org): 10.1093/bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics/bts066. -->
 
 
 ## Authors

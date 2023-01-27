@@ -22,17 +22,17 @@
 | Ingredient | Type| Comment|
 |:-----| :----|:-----|
 |[HTTP1.1 protocol](https://tools.ietf.org/html/rfc2616)| data communication protocol | |
-|[guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)| policy (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)| |
+|[guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)| policy (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy) | |
 |[Persistent Uniform Resource Locator(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org)s - PURL](https://archive.org/services/purl/)|redirection service| |
-|[Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ival Resource Key](https://n2t.net/e/ark_ids.html)| identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) minting service; identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) resolution service| |
-|[Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) system](http://www.rfc-editor.org/rfc/rfc3650.txt)|identifier minting service; identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) resolution service| |
-|[DOI](https://doi.org/)| identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) minting service| based on Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) system |
+|[Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ival Resource Key](https://n2t.net/e/ark_ids.html)| identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  minting service; identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
+|[Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) system](http://www.rfc-editor.org/rfc/rfc3650.txt)|identifier minting service; identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
+|[DOI](https://doi.org/)| identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  minting service| based on Handle(URL_TO_INSERT_RECORD http://handle.net)(URL_TO_INSERT_RECORD http://handle.net) system |
 |[identifiers.org](https://identifiers.org/)|identifier resolution service||
 |[EZID resolution service](https://ezid.cdlib.org/)|identifier resolution service||
 |[name2things rsolution service](http://n2t.net/)|identifier resolution service||
 |[FAIREvaluator](https://W3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/AmIFAIR)|FAIR assessment||
 |[FAIRShake](https://fairshake.cloud/)| FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) assessment||
-|[RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)/Linked Data](https://www.w3.org/standards/semanticweb/data)| model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) | |
+|[RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)/Linked Data](https://www.w3.org/standards/semanticweb/data)| model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  | |
 
 
 
@@ -80,20 +80,20 @@ the [FAIREvaluator](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/AmI
 
 ### Understanding the FAIR indicators
 
-In order the run the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator, it is important to understand to notion of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) indicators (formerly referred to as FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s).
-One may browse the list of currently community defined indicators from the `Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s` page 
+In order the run the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator, it is important to understand to notion of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) indicators (formerly referred to as FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) s).
+One may browse the list of currently community defined indicators from the `Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) s` page 
 
-<!-- ![Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s'](./assets/fair-eval-img2.png)  -->
+<!-- ![Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) s'](./assets/fair-eval-img2.png)  -->
 
 ````{dropdown}
 :open:
 ```{figure} ./assets/fair-eval-img2.png
 ---
 width: 800px
-name: Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s'
-alt: Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s'
+name: Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) s'
+alt: Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) s'
 ---
-Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)s'
+Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Maturity Indicator - Collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) s'
 ```
 ````    
 
@@ -101,10 +101,10 @@ Select a 'FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Ma
 
 To run an evaluation, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator needs to following 5 inputs from users:
 
-1. a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) indicators, selected from the list described above.
-2. a globally unique, persistent, resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) for the resource to be evaluated.
+1. a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) indicators, selected from the list described above.
+2. a globally unique, persistent, resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  for the resource to be evaluated.
 3. a title for the evaluation. Enforce a naming convention to make future search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)es easier as these evaluations are saved.
-4. a person identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) in the form of an ORCID(URL_TO_INSERT_RECORD https://cid.curie.fr)(URL_TO_INSERT_RECORD http://orcid.org/).
+4. a person identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  in the form of an ORCID(URL_TO_INSERT_RECORD https://cid.curie.fr)(URL_TO_INSERT_RECORD http://orcid.org/).
 
 <!-- ![Running the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
@@ -160,7 +160,7 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator rep
 
 Time to dig into the details and figure out the reasons why some indicators are reporting a failure:
 
-<!-- ![apparently a problem with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) persistence if using DOI(URL_TO_INSERT_RECORD https://www.doi.org), which are URN rather than URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) *sensu stricto*](./assets/fair-eval-img7.png) -->
+<!-- ![apparently a problem with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  persistence if using DOI(URL_TO_INSERT_RECORD https://www.doi.org), which are URN rather than URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) *sensu stricto*](./assets/fair-eval-img7.png) -->
 
 ````{dropdown}
 :open:
@@ -170,7 +170,7 @@ width: 800px
 name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator error report 
 alt: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)Evaluator error report
 ---
-apparently a problem with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) persistence if using DOI(URL_TO_INSERT_RECORD https://www.doi.org), which are URN rather than URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) *sensu stricto*
+apparently a problem with identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  persistence if using DOI(URL_TO_INSERT_RECORD https://www.doi.org), which are URN rather than URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) *sensu stricto*
 ```
 ````
 

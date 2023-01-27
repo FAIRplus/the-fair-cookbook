@@ -93,7 +93,7 @@ We will use [UniProtKB](https://www.uniprot.org(URL_TO_INSERT_RECORD https://www
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
    - Where possible you should link to other resources. The Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a `url` and no other properties
-   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)`, this defaults to `PropertyValue` but `Text` or `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) ` will be more appropriate in most cases
+   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) `, this defaults to `PropertyValue` but `Text` or `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) ` will be more appropriate in most cases
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
    ````{dropdown} 
@@ -108,7 +108,7 @@ We will use [UniProtKB](https://www.uniprot.org(URL_TO_INSERT_RECORD https://www
    ``` 
    ````
    
-4. You will now see the generated markup in `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format). You can click on the `Microdata` and `RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)a(URL_TO_INSERT_RECORD https://www.w3.org/TR/rdfa-primer/)` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s. However, we recommend the use of `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`. For our UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org) example, we get the following markup
+4. You will now see the generated markup in `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . You can click on the `Microdata` and `RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)a(URL_TO_INSERT_RECORD https://www.w3.org/TR/rdfa-primer/)` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s. However, we recommend the use of `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`. For our UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org) example, we get the following markup
    
    ```
    <script type="application/ld+json" >
@@ -127,17 +127,17 @@ We will use [UniProtKB](https://www.uniprot.org(URL_TO_INSERT_RECORD https://www
          "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
          "@type": "Organization",
          "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Organization/0.2-DRAFT-2019_07_19",
-         "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion. ",
+         "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. ",
          "name": "UniProt Consortium"
        }
      ],
      "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Dataset(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/Dataset/)/0.3-RELEASE-2019_06_14",
-     "description": "The UniProt Knowledgebas(URL_TO_INSERT_RECORD http://ebas.nilu.no/)e (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=knowledgebase)(URL_TO_INSERT_RECORD https://www.uniprot.org) (UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org)) is the central hub for the collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection) of functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion on proteins, with accurate, consistent and rich annotation. In addition to capturing the core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) data mandatory for each UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org) entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion), as much annotation informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion as possible is added.",
+     "description": "The UniProt Knowledgebas(URL_TO_INSERT_RECORD http://ebas.nilu.no/)e (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=knowledgebase) (URL_TO_INSERT_RECORD https://www.uniprot.org) (UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org)) is the central hub for the collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion on proteins, with accurate, consistent and rich annotation. In addition to capturing the core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) data mandatory for each UniProtKB(URL_TO_INSERT_RECORD https://www.uniprot.org) entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion), as much annotation informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion as possible is added.",
      "distribution": {
        "@id": "https://www.uniprot.org(URL_TO_INSERT_RECORD https://www.uniprot.org)/downloads#uniprotkblink",
        "@type": "DataDownload"
      },
-     "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": [
+     "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
        "https://www.uniprot.org(URL_TO_INSERT_RECORD https://www.uniprot.org)/uniprot/"
      ],
      "includedInDataCatalog": [
@@ -197,7 +197,7 @@ We will use [UniProtKB](https://www.uniprot.org(URL_TO_INSERT_RECORD https://www
 
    Make sure that this is before the closing `</html>` tag
 
-8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database). For example, the follow snippet uses variables of the form `%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%`
+8. If you have multiple datasets released through your site, then you should make a template for your datasets. In your template you should replace the values in your markup that will change from dataset to dataset with variables. Your web page templating system will replace the variables with values from your database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) . For example, the follow snippet uses variables of the form `%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%`
 
    ```
       <script type="application/ld+json">
@@ -216,7 +216,7 @@ We will use [UniProtKB](https://www.uniprot.org(URL_TO_INSERT_RECORD https://www
             "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
             "@type": "Organization",
             "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Organization/0.2-DRAFT-2019_07_19",
-            "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion. ",
+            "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. ",
             "name": "UniProt Consortium"
           }
           ...

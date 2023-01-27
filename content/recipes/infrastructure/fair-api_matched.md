@@ -47,19 +47,19 @@ documented well. We will not cover [FAIR](https://cfde-published-documentation.r
 APIs of software libraries, but instead focus on developing FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) APIs for the web.
 
 More and more web-based applications are becoming available every day. These applications typically perform complex 
-operations on large database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)s. While web-based applications provide users with the capacity to access a tool, a database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database), 
+operations on large database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s. While web-based applications provide users with the capacity to access a tool, a database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) , 
 or other resource programmatically, they are not always able to interoperate with other independent web applications. 
 A web-based application that offers a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) API is more accessible to operating as part of workflows, or integration 
 systems such as semantic search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) engines. This makes FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) API development very relevant for data catalogs or web tools 
 developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by the CF DC(URL_TO_INSERT_RECORD http://dublincore.org/documents/dces/)(URL_TO_INSERT_RECORD https://doi.org/10.25504/FAIRsharing.3nx7t)Cs.
 
-While a slew of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s exist for web API development and documentation, each has their own level of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness. 
+While a slew of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for web API development and documentation, each has their own level of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness. 
 Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm), 
 which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API 
-flexibility while still permitting machine readable introspection. Several other standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s are machine readable by
+flexibility while still permitting machine readable introspection. Several other standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s are machine readable by
 default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview(URL_TO_INSERT_RECORD http://www.w3.org/TR/sparql11-overview/)/) or
 [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of
-their low barrier to entry. Some standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
+their low barrier to entry. Some standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
 We will consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)/), which adds a few additional 
 fields and also has its own [get-started guide](https://smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)/guide).
 
@@ -87,7 +87,7 @@ semantically linked APIs for biomedical knowledge exploration.
 We will look at the existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) REST service provided by the Metabolomics Workbench(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/) catalog: <https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/tools/mw_rest.php>.
 This API is described for human consumption, including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
 
-Although OpenAPI can be edited by most standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)s editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html)
+Although OpenAPI can be edited by most standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html)
 (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent),
 it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. 
 This will catch errors as you edit, and permit testing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) of the endpoints as you encode immediately.
@@ -191,7 +191,7 @@ Swagger Editor
 Edits to the file will update the view **in real time**, and the view may be used to craft/test API requests.
 
 ### Step 2: Beginning an OpenAPI specification
-We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)/), making it possible to find your own APIs.
+We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)/), making it possible to find your own APIs.
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
 
@@ -217,7 +217,7 @@ The Metabolomics API offers several examples, let's tackle one of them:
 
 |Example request|Example URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)|
 |-|-|
-|Show all publicly available studies (Project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project), Study, Analysis ID)|https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/rest/study/study_id/ST/available|
+|Show all publicly available studies (Project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) , Study, Analysis ID)|https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/rest/study/study_id/ST/available|
 
 This tells us what the endpoint does to an extent; let's add that to our API under the `paths`.
 
@@ -273,7 +273,7 @@ curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkb
 ...
 ```
 
-Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion for webpage optimization.
+Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion for webpage optimization.
 
 ```bash
 > GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
@@ -312,7 +312,7 @@ paths:
                       type: string
 ```
 
-The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized by HTTP but the gist is:
+The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ized by HTTP but the gist is:
 
 |Code|Meaning|
 |-|-|
@@ -332,7 +332,7 @@ Let's tackle our next endpoint:
 
 |Example request|Example URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)|
 |-|-|
-|Fetch analysis informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion for a study|https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/rest/study/study_id/ST000001/analysis|
+|Fetch analysis informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion for a study|https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/rest/study/study_id/ST000001/analysis|
 
 While the example shows `ST000001` in reality, the idea is that this can be any study ID, such as those coming out of the previous endpoint.
 
@@ -577,15 +577,15 @@ For instance, the `gene_id` does not need any `.` because it is the root of the 
 The `x-valueType` here identifies the id namespace or context for which that value has meaning.
 Typically, this is a prefix path, in other words, you would produce a full URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986) with: `{x-valueType}/{actual_value}`.
 
-[identifiers.org](http://identifiers.org/) is a public resource cataloging actual identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) schemes making it an ideal
-way to namespace a given identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema). 
+[identifiers.org](http://identifiers.org/) is a public resource cataloging actual identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  schemes making it an ideal
+way to namespace a given identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) . 
 It has the added benefit of providing an API for accessing additional metadata such as 
-cached [schema.org(URL_TO_INSERT_RECORD http://schema.org/)](https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/) annotations on the landing page of the resulting identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema).
+cached [schema.org(URL_TO_INSERT_RECORD http://schema.org/)](https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/) annotations on the landing page of the resulting identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) .
 
 With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) queries 
 without any additional effort. 
 This was demonstrated by the [BioThings](https://biothings.io/), which can integrate SmartAPI APIs with proper annotations.
-It also permits end users to find your APIs knowing their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s (i.e. ncbigenes).
+It also permits end users to find your APIs knowing their identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s (i.e. ncbigenes).
 
 ### Step 7: Publishing and utilizing your OpenAPI/SmartAPI
 Once you have a working OpenAPI document, this open up numerous possibilities that you can now do. 
@@ -610,7 +610,7 @@ document that will vastly improve the FAIR(URL_TO_INSERT_RECORD https://www.go-f
 After registering your API on an API catalog platform, such as [smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)](https://smart-api.info(URL_TO_INSERT_RECORD http://smart-api.info)/) you will enable
 developers and programs to find, introspect and interoperate with our API.
 Furthermore, existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) tooling around OpenAPI can enable the accessibility and reusability of your APIs in many 
-programming languages and other standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized systems.
+programming languages and other standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ized systems.
 
 
 ### What to read next?

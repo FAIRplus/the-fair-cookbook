@@ -18,9 +18,9 @@
 
 ## Abstract
 
-The present content introduces the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus "Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)", shows how to use it in the context of a 
+The present content introduces the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus "Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ", shows how to use it in the context of a 
 FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process to decide how far to go on a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) journey.
-We also show how each FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) recipes has been anchored to the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+We also show how each FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) recipes has been anchored to the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 Recipes can therefore be assembled to build a coherent path which should guarantee that datasets handle(URL_TO_INSERT_RECORD http://handle.net)d according 
 to the recommendations can meet data management expectations in terms of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness.
 Therefore, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus DSM provides a handy tool for data managers to advise on changing the culture of data management 
@@ -29,15 +29,15 @@ living in that space.
 
 ## Background
 
-Maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s are not new. There are in fact training programs specifically designed for this such as the
-**Capability Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) Integration (CMMI)** {footcite}`cmmi`.
-These model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
+Maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s are not new. There are in fact training programs specifically designed for this such as the
+**Capability Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  Integration (CMMI)** {footcite}`cmmi`.
+These model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
 as means to rate the reliability and degree of development of a particular technology, skill or process,
 in other words, a capability. 
 Notions such as **Technical Readiness Levels**  or TRLs define a scale of 9 levels to rate
 a process from basic idea to production grade technology. 
 
-With the digitization of society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society) and the pervasiveness of digital technology, the life sciences, as other fields, are 
+With the digitization of society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society)  and the pervasiveness of digital technology, the life sciences, as other fields, are 
 wrestling with the challenges of data management as defined in  the *Fourth paradigm: Data-intensive Scientific Discovery*
 {footcite}`hey2009`. 
 Organizations need to decide how to allocate resources to increase the impact of digital artefacts as they are created. 
@@ -49,15 +49,15 @@ Following this important work, a number of initiatives have worked at producing 
 Among these initiatives, the Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Data Alliance Maturity Indicators seem to have gain notoriety
 {footcite}`RDA(URL_TO_INSERT_RECORD https://researchdata.edu.au/)indicators`.
 
-Building on these efforts, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) has developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) a more targeted approach by focusing on the notion of 
+Building on these efforts, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  has developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) a more targeted approach by focusing on the notion of 
 dataset. 
 
 ## Presentation of the FAIRplus Dataset Maturity Model (DSM)
 
-The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) proposes a framework to incorporate key concepts defined by the Capability and
-Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s and apply them to define maturity levels which can used to describe a dataset.
+The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  proposes a framework to incorporate key concepts defined by the Capability and
+Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and apply them to define maturity levels which can used to describe a dataset.
 
-For a comprehensive overview of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), refer to the [dedicated site](https://fairplus.github.io/Data-Maturity/),
+For a comprehensive overview of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , refer to the [dedicated site](https://fairplus.github.io/Data-Maturity/),
 a screenshot of which is presented below.
 
 ````{dropdown} **FAIR DSM**
@@ -66,10 +66,10 @@ a screenshot of which is presented below.
 ```{figure} ../../images/maturity_img_1.png
 ---
 width: 700px
-name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
-alt:  FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+alt:  FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ---
- FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ```
 ````
 
@@ -86,7 +86,7 @@ they apply and implement the recipe.
 The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
 of interest. 
 
-Finally, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) produced specific content available as jupyter notebook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)s which use the fam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliar Investigation Study Assay model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) {footcite}`pmid20679334` 
+Finally, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) produced specific content available as jupyter notebook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)s which use the fam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliar Investigation Study Assay model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  {footcite}`pmid20679334` 
 and Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Objects {footcite}`sefton_peter_2022_5841615` to showcase how users can move through maturity levels and decide for themselves how far they need to go along the scale.
 
 
@@ -112,7 +112,7 @@ alt:  FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM in
 The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus DSM has subsequently been used to assess the effectiveness of interventions on datasets presented 
 to FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus experts.
 
-Each of the 20 project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)s, which have interacted with FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus, have been subjected to a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) protocol looking at
+Each of the 20 project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s, which have interacted with FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus, have been subjected to a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  protocol looking at
 FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) maturity before and after intervention, when performing retrospective processing of the data. 
 In few instances, the effect of prospective interventions could also be measured. 
 
@@ -127,7 +127,7 @@ can use the framework in a consistent fashion.
 ### Performing the assessment
 
 The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus DSM group therefore recruited FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) experts and over the
-course of a dedicated workshop presented the DSM model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), proposed exercises and then asked participants to rate several
+course of a dedicated workshop presented the DSM model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , proposed exercises and then asked participants to rate several
 datasets independently.
 
 The next step consisted in evaluating the inter-rater agreement when using the framework.
@@ -136,7 +136,7 @@ A debriefing of the rating was carried out and was the ideal opportunity to clar
 indicator definitions and therefore reconcile rating discrepancies between the participant.
 Difference in interpretations
 were identified leading in a refinement of the definitions and improvement of the documentation of the
-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus dataset maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format).
+FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus dataset maturity model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 It also resulted in streamlining both the training program and the evaluation program.
 
 The following figure shows the effect of a FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process on an IMI eTO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)X dataset.
@@ -162,10 +162,10 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicato
 ```{figure} ../../images/DSMeval-img2.png
 ---
 width: 800px
-name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
-alt:   FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+alt:   FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ---
-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
+FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 ```
 ````
 
@@ -190,9 +190,9 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) DSM indicato
 
 ## Conclusions: It is about changing the data management culture!
 
-The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) (DSM) developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by the consortium is proving a valuable tool for Data Managers, 
+The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Dataset Maturity Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (DSM) developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by the consortium is proving a valuable tool for Data Managers, 
 Decision Makers and Data Scientist to identify the weak points in their FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification strategies or more simply to define
-the level of maturity they are capable of delivery within the constraints of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) or research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) program.
+the level of maturity they are capable of delivery within the constraints of the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)  or research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) program.
 The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus DSM, following a minimal fam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliarization and training period, provides the means to effective quantity and 
 articulate on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification strategies and choke points. Therefore, by enabling a clearer way for communicating and talking
 about FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process, the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus DSM constitutes an excellent tool to plan and enable changes in the way datasets

@@ -77,7 +77,7 @@ We will outline the steps for embedding machine processable mark up within a web
         
         - `Taxon` for a page about a taxon
       
-   2. Enter the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) of the page in URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) box, e.g. `https://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/wiki/Q227339`. Note that this URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) will be used as the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) for the resource being described in the markup.
+   2. Enter the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) of the page in URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) box, e.g. `https://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/wiki/Q227339`. Note that this URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) will be used as the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  for the resource being described in the markup.
 
    3. Click on the `Show Form` button
     
@@ -96,7 +96,7 @@ We will outline the steps for embedding machine processable mark up within a web
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
-   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)` this defaults to `PropertyValue` but `Text` or `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) ` will be more appropriate in most cases
+   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ` this defaults to `PropertyValue` but `Text` or `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) ` will be more appropriate in most cases
    - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
     
     ````{dropdown} 
@@ -111,7 +111,7 @@ We will outline the steps for embedding machine processable mark up within a web
     ```
     ````
     
-4. You should now see the generated markup in `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format). You can click on the `Microdata` and `RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)a(URL_TO_INSERT_RECORD https://www.w3.org/TR/rdfa-primer/)` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s. However, we recommend the use of `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`. For our Wikidata(URL_TO_INSERT_RECORD http://wikidata.org/)(URL_TO_INSERT_RECORD http://wikidata.org/) example, we get the following markup
+4. You should now see the generated markup in `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . You can click on the `Microdata` and `RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)a(URL_TO_INSERT_RECORD https://www.w3.org/TR/rdfa-primer/)` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s. However, we recommend the use of `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`. For our Wikidata(URL_TO_INSERT_RECORD http://wikidata.org/)(URL_TO_INSERT_RECORD http://wikidata.org/) example, we get the following markup
 
     ```html
     <script type="application/ld+json" >
@@ -140,8 +140,8 @@ We will outline the steps for embedding machine processable mark up within a web
         "@type": "BioChemEntity",
         "@id": "https://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/wiki/Q17487737"
       },
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "https://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/wiki/Q227339",
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "Q227339",
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "https://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/wiki/Q227339",
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "Q227339",
       "image": {
         "@type": "ImageObject",
         "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Protein_BRCA1_PDB_1jm7.png/220px-Protein_BRCA1_PDB_1jm7.png"
@@ -194,7 +194,7 @@ We will outline the steps for embedding machine processable mark up within a web
     
 7. Once you are happy with your markup, include the `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`, script tags and all, at the bottom of your HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) page template. Make sure that this is before the closing `</html>` tag
     
-   1. Replace the values in your markup with variables that your web page templating system will replace with values from your database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database). For example, the follow snippet uses variables of the form `%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%`
+   1. Replace the values in your markup with variables that your web page templating system will replace with values from your database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) . For example, the follow snippet uses variables of the form `%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%`
 
        ```html
        <script type="application/ld+json" >
@@ -203,7 +203,7 @@ We will outline the steps for embedding machine processable mark up within a web
          "@id": "%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%",
          "@type": "Gene",
          "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Gene/0.7-RELEASE",
-         "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%",
+         "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "%%%PAGEURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)%%%",
          "description": "%%%DESCRIPTION%%%",
          ...
        }

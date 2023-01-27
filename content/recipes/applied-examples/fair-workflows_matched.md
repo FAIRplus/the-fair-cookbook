@@ -24,7 +24,7 @@
 The main purpose of this recipe is:
 
 > Provide guidance on resources available to help developers and data scientists make the various workflows used for daily tasks
-> (for extract-load-transform, quality control, deployment or analytical workflow) available in open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) and reusable.
+> (for extract-load-transform, quality control, deployment or analytical workflow) available in open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  and reusable.
 > 
 > Provide guidance for regulator(URL_TO_INSERT_RECORD http://www.bioinformatics.org/regulator)y submissions for nucleic acid sequence analysis using the BioCompute Object (BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco))
 > specification.
@@ -63,7 +63,7 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) workflows
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)s  |
+| Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | [CWL](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.8y5ayx) | [EDAM](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.a6r7zs)  |   |
 |[Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute Object - IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/)](https://opensource.ieee.org/2791-object/ieee-2791-schema/)|||
@@ -93,7 +93,7 @@ associated with human operator fatigue.
 Workflow engines such as Galaxy {footcite}`galaxy`, Snakemake{footcite}`pmid34035898`, Cromwell{footcite}`cromwell`, 
 Knime{footcite}`knime`, Apache Airflow{footcite}`apache_airflow`,  and Toil {footcite}`pmid28398314`
 to name a few offerings, have popularized the use of workflows in the field of life science computational applications. 
-This however be can also become a source of difficulty when buying-in in a particular platform and then trying to exchange informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion
+This however be can also become a source of difficulty when buying-in in a particular platform and then trying to exchange informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
 with other platforms or migration away from the initial choice.
 Hence, a community of experts has dedicated efforts to define open specifications for the description of workflows
 as well as supporting tools, such as converters.
@@ -105,8 +105,8 @@ make workflow more interoperable and reusable thanks to the use of existing(URL_
 
 ### 1. CWL: Common Workflow Language - A brief overview
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org), short for Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org), is an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by a consortium of experts, including workflow 
-engine developers, data scientists, data analysts and bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)icians.
+* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org), short for Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org), is an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by a consortium of experts, including workflow 
+engine developers, data scientists, data analysts and bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) icians.
 
 * CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) specifications are available from: https://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/v1.2/Workflow.html
 
@@ -144,7 +144,7 @@ inputs:
   annotation_file:
     type: File
     label: "Annotation file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3475"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3475"
     doc: "Tab-separated input annotation file"
 
   genome_size:
@@ -155,21 +155,21 @@ inputs:
   chrom_length:
     type: File
     label: "Chromosome length file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
     doc: "Chromosome length file"
 
   control_file:
     type: File?
     default: null
     label: "Control BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2572"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2572"
     doc: "Control BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file file for MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2 peak calling"
 
   fastq_file:
     type: File
     label: "FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q input file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_1930"
-    doc: "Reads data in a FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format), received after single end sequencing"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_1930"
+    doc: "Reads data in a FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , received after single end sequencing"
 
 ...
 
@@ -189,7 +189,7 @@ outputs:
 
   bigwig:
     type: File
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3006"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3006"
     label: "BigWig file"
     doc: "Generated BigWig file"
     outputSource: bam_to_bigwig/bigwig_file
@@ -197,14 +197,14 @@ outputs:
   fastx_statistics:
     type: File
     label: "FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q statistics"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
     doc: "fastx_quality_stats generated FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file quality statistics file"
     outputSource: fastx_quality_stats/statistics_file
 
   bowtie_log:
     type: File
     label: "BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE alignment log"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format): "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
     doc: "BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE generated alignment log"
     outputSource: bowtie_aligner/log_file
 
@@ -353,7 +353,7 @@ $schemas:
 
 s:name: "biowardrobe_chipseq_se"
 s:downloadUrl: https://raw.githubusercontent.com/Barski-lab/ga4gh_challenge/master/biowardrobe_chipseq_se.cwl
-s:codeRepository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository): https://github.com(URL_TO_INSERT_RECORD https://github.com/)/Barski-lab/ga4gh_challenge
+s:codeRepository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) : https://github.com(URL_TO_INSERT_RECORD https://github.com/)/Barski-lab/ga4gh_challenge
 s:license: http://www.apache.org/licenses/LICENSE-2.0
 
 s:isPartOf:
@@ -398,8 +398,8 @@ s:about: |
   (Langmead et al., 2009) to perform alignment to a reference genome, resulting in an unsorted SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools) file.
   The SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools) file is then sorted and indexed with samtools (Li et al., 2009) to obtain a BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file and a BAI index.
   Next MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2 (Zhang et al., 2008) is used to call peaks and to estimate fragment size. In the last few steps,
-  the coverage by estimated fragments is calculated from the BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file and is reported in bigWig format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format). The pipeline
-  also reports statistics, such as read quality, peak number and base frequency, and other troubleshooting informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion
+  the coverage by estimated fragments is calculated from the BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file and is reported in bigWig format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . The pipeline
+  also reports statistics, such as read quality, peak number and base frequency, and other troubleshooting informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
   using tools such as fastx-toolkit and bamtools.
 ```
 ````
@@ -411,11 +411,11 @@ s:about: |
 
 * Workflows are digital objects which can and should be preserved. 
 
-* A number of repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) exist and may be used to deposit workflows.
+* A number of repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  exist and may be used to deposit workflows.
 
-* One may use a generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) such as Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org) to do so (see recipe {ref}`fcb-find-zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)`).
+* One may use a generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org) to do so (see recipe {ref}`fcb-find-zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)`).
 
-* Preferably, one should use a **specialized repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)** such as [Workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu](https://workflowhub.eu(URL_TO_INSERT_RECORD https://workflowhub.eu)/),
+* Preferably, one should use a **specialized repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ** such as [Workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu](https://workflowhub.eu(URL_TO_INSERT_RECORD https://workflowhub.eu)/),
 which is presented below.
 
 ````{dropdown}
@@ -445,14 +445,14 @@ The european workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu) website 2.
 ### 5. Tools: Apache AIRflow playing with CWL
 
 Apache Airflow is a  **platform created by the community to programmatically author, schedule and monitor workflows** , to 
-quote the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)'s site.
+quote the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) 's site.
 It has established itself in industry settings and has broad uptake.
 
 Apache Airflow represents workflows as **Directed Acyclic Graph** (or DAGs) and Airflow allows the serialization of these
 as JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) documents.
 
 The main thing about Apache Airflow is that code is used to generate the workflows. 
-For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
+For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
 
 A tool developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) support to the Apache Airflow 
 framework, meaning that CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
@@ -479,13 +479,13 @@ With this example, we aim to bring awareness about the value of having platform 
 
 If computational analyses on sequence data are performed in the context of clinical trials, for instance to demonstrate
 the transcriptomics response to a drug or to show to safety of a compound in populations of distinct genetic background
-using genotyping informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion, it is a regulator(URL_TO_INSERT_RECORD http://www.bioinformatics.org/regulator)y requirements of the US FDA to submit the computational workflows 
+using genotyping informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, it is a regulator(URL_TO_INSERT_RECORD http://www.bioinformatics.org/regulator)y requirements of the US FDA to submit the computational workflows 
 if seeking approval.
-The availability of such informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion in this context is a prerequisite for FDA auditors to examine the data.
+The availability of such informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion in this context is a prerequisite for FDA auditors to examine the data.
 
 The IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/) specifications, also known as BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) for BioCompute Object is a specification to do this.
 
-This has been made possible thanks to the fast-track submission of a new data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) specifically tailored to ensure
+This has been made possible thanks to the fast-track submission of a new data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  specifically tailored to ensure
 reproducibility and unambiguous description of workflow key descriptors.
 
 
@@ -537,9 +537,9 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
         "license": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/chipseq/blob/1.2.1/LICENSE"
     },
     "usability_domain": [
-        "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data.",
-        "For use with multiple replicates, the group identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) should be identical when you have multiple replicates from the same experimental group, just increment the replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) appropriately. The first replicate value for any given experimental group must be 1.",
-        "Both the group and replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s should be the same when you have re-sequenced the same sample more than once e.g. to increase sequencing depth. The pipeline will perform the alignments in parallel, and subsequently merge them before further analysis. "
+        "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data.",
+        "For use with multiple replicates, the group identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  should be identical when you have multiple replicates from the same experimental group, just increment the replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  appropriately. The first replicate value for any given experimental group must be 1.",
+        "Both the group and replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s should be the same when you have re-sequenced the same sample more than once e.g. to increase sequencing depth. The pipeline will perform the alignments in parallel, and subsequently merge them before further analysis. "
     ],
     "description_domain": {
         "keywords": [
@@ -563,7 +563,7 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
             {"step_number": 15, "name": "MERGED_BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html)_REMO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/EMO)(URL_TO_INSERT_RECORD http://mged.sourceforge.net/ontologies/MGEDontology.php)VE_ORPHAN", "description": "", "input_list": [], "output_list": []},
             {"step_number": 16, "name": "PHANTO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)MP(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)(URL_TO_INSERT_RECORD https://microbialphenotypes.org)E(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKQUALTO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)OLS(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/ols/index)", "description": "", "input_list": [], "output_list": []},
             {"step_number": 17, "name": "BIGWIG(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/wiggle.html)", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 18, "name": "PICARD(URL_TO_INSERT_RECORD http://arpcard.mcmaster.ca)_METRIC (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)S", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 18, "name": "PICARD(URL_TO_INSERT_RECORD http://arpcard.mcmaster.ca)_METRIC (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) S", "description": "", "input_list": [], "output_list": []},
             {"step_number": 19, "name": "PLOTFINGERPRINT", "description": "", "input_list": [], "output_list": []},
             {"step_number": 20, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2", "description": "", "input_list": [], "output_list": []},
             {"step_number": 21, "name": "PLOTPRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/pro)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://proconsortium.org/)(URL_TO_INSERT_RECORD https://w3id.org/ro/)F(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF)ILE", "description": "", "input_list": [], "output_list": []},
@@ -676,7 +676,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       "about": {
         "@id": "./"
       },
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "ro-crate-metadata.json",
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "ro-crate-metadata.json",
       "conformsTo": {
         "@id": "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ro(URL_TO_INSERT_RECORD https://w3id.org/ro/)/crate(URL_TO_INSERT_RECORD https://w3id.org/ro/crate)/1.0"
       },
@@ -746,7 +746,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
         "@id": "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ieee/ieee-2791-schema/"
       },
       "dateModified": "2020-09-10T13:50:02.378Z",
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": {
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": {
         "@id": "urn:uuid:dc308d7c-7949-446a-9c39-511b8ab40caf"
       },
       "license": {
@@ -765,7 +765,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "Organization",
-      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/) Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard), and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) is maintained by an IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E GitLab(URL_TO_INSERT_RECORD https://about.gitlab.com/)(URL_TO_INSERT_RECORD https://about.gitlab.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository). ",
+      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/) Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) , and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  is maintained by an IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E GitLab(URL_TO_INSERT_RECORD https://about.gitlab.com/)(URL_TO_INSERT_RECORD https://about.gitlab.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . ",
       "name": "BioCompute Objects",
       "@reverse": {
         "publisher": [
@@ -793,7 +793,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "CreativeWork",
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "https://spdx.org/licenses/MIT",
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "https://spdx.org/licenses/MIT",
       "name": "MIT License",
       "@reverse": {
         "license": [
@@ -904,7 +904,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       "citation": {
         "@id": "https://doi.org/10.5281/zenodo.3966161"
       },
-      "description": "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data",
+      "description": "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data",
       "license": {
         "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/chipseq/blob/1.2.1/LICENSE"
       },
@@ -1021,7 +1021,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           "@id": "results/bwa/mergedLibrary/phantompeakqualtools/"
         },
         {
-          "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s/"
+          "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) s/"
         }
       ],
       "name": "mergedLibrary",
@@ -1139,7 +1139,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     {
       "@type": "Dataset",
       "dateModified": "2020-09-10T12:04:45.952Z",
-      "name": "picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s",
+      "name": "picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) s",
       "@reverse": {
         "hasPart": [
           {
@@ -1147,7 +1147,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s/"
+      "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) s/"
     },
     {
       "@type": "Dataset",
@@ -1343,7 +1343,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
         "@id": "https://raw.githubusercontent.com/nf-core/chipseq/1.2.1/main.nf"
       },
       "dateModified": "2020-09-10T12:27:01.755Z",
-      "encodingFormat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)": "image/svg+xml",
+      "encodingFormat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ": "image/svg+xml",
       "name": "pipeline_dag.svg",
       "@reverse": {
         "hasPart": [
@@ -1431,7 +1431,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "CreativeWork",
-      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": "https://spdx.org/licenses/CC0-1.0",
+      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "https://spdx.org/licenses/CC0-1.0",
       "name": "Creative Commons Zero v1.0 Universal",
       "@reverse": {
         "license": [
@@ -1591,7 +1591,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       "name": "object_id",
       "value": "dc308d7c-7949-446a-9c39-511b8ab40caf",
       "@reverse": {
-        "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)": [
+        "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
           {
             "@id": "chipseq_20200910.json"
           }
@@ -1698,16 +1698,16 @@ Seven Bridges(URL_TO_INSERT_RECORD https://bridges.monash.edu/)(URL_TO_INSERT_RE
 ## Conclusion
 
 This recipe focused on highlighting important considerations to bear in mind when dealing with workflows as these
-digital objects have become essential informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion carriers to assist data science tasks.
+digital objects have become essential informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion carriers to assist data science tasks.
 
 While there is no shortage of tools and frameworks for building, saving, executing workflows, making sure these can be
 found, interpreted by machine without human intervention and executed are essential aspects of **reusability** and
 **interoperability**.
 
-Data Scientists and Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion managers should therefore tap into a number of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ization efforts
-capable of ensure appropriate provenance tracking and informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion preservation.
+Data Scientists and Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion managers should therefore tap into a number of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ization efforts
+capable of ensure appropriate provenance tracking and informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion preservation.
 
-This knowledge could be harnessed to decide whether to trust the results of an analysis or a transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion process,
+This knowledge could be harnessed to decide whether to trust the results of an analysis or a transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion process,
 or to decide whether to perform new ones.
 
 ### What to read next?
@@ -1736,7 +1736,7 @@ or to decide whether to perform new ones.
 
 [4]. https://workflowhub.eu(URL_TO_INSERT_RECORD https://workflowhub.eu)
 
-[5].  Simonyan V, Goecks J, Mazumder R. Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute Objects—A Step towards Evaluation and Validation of Biomedical Scientific Computations. PDA journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal) of pharmaceutical science and technology. 2017;71(2):136-146. doi:10.5731/pdajpst.2016.006734.
+[5].  Simonyan V, Goecks J, Mazumder R. Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute Objects—A Step towards Evaluation and Validation of Biomedical Scientific Computations. PDA journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  of pharmaceutical science and technology. 2017;71(2):136-146. doi:10.5731/pdajpst.2016.006734.
 
 [6].BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) App: tools for generating BioCompute Objects from next-generation sequencing workflows and computations.   https://doi.org/10.12688/f1000research.25902.1
 -->

@@ -80,14 +80,14 @@ println "InchIKey: ${anInChI.getKey()}"
 
 ## Conclusion
 
-Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics provides us the tools to parse IUPAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) names and convert them to
-chemical graph based identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s, such as the InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key. The InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)
-can be used to find more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion about the chemicals represented by the
+Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) names and convert them to
+chemical graph based identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key. The InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
+can be used to find more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
 original IUPAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) names.
 
 ### What to read next?
 
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io)](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/faircookbook/FCB017)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping with BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.io)(URL_TO_INSERT_RECORD https://bridgedb.github.io)](https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/faircookbook/FCB017)
 
 ````{rdmkit_panel}
 ````
