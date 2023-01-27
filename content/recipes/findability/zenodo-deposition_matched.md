@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB009
+:identifier_link: 'https://w3id.org/faircookbook/FCB009'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, funder
+:maturity_level: 1
+:maturity_indicator: 5, 6, 7, 8
+:has_executable_code: nope
+:recipe_name: Depositing to generic repositories - Zenodo use case
 ```` 
 
 ## Main Objectives
@@ -13,9 +23,18 @@ The main purpose of this recipe is:
 
 
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
+| Actions.Objectives.Tasks  | Input | Output  |
+| :------------- | :------------- | :------------- |
+| [deposition](http://edamontology.org/operation_3431)  | [text](http://edamontology.org/data_3671)  | [DOI](http://edamontology.org/data_1188)  |
+||file||
 
 ```
 ```{tabbed} Table of Data Standards
+| Data Formats  | Terminologies | Models  |
+| :------------- | :------------- | :------------- |
+| [Datacite](https://fairsharing.org/fairsharing.me4qwe)  | none  |   |
+| [JSON](https://fairsharing.org/bsg-s001212/)|||
+| [JSON-LD](https://fairsharing.org/bsg-s001214/)|||
 ```
 
 
@@ -25,6 +44,7 @@ The main purpose of this recipe is:
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/zenodo.png
 ---
 width: 500px
@@ -67,7 +87,9 @@ This section guides users through the key steps to perform to organize a deposit
 * Login via ORCID(URL_TO_INSERT_RECORD https://cid.curie.fr)(URL_TO_INSERT_RECORD http://orcid.org/) or Github(URL_TO_INSERT_RECORD https://github.com/) credentials
 
 ```{admonition} Tip
+:class: tip
 
+[Zenodo](https://zenodo.org/) has integrated authentication mechanism key partners such as [github](https://github.com)  and [Orcid](https://orcid.org). For [IMI](https://www.imi.europa.eu/) and for [FAIRplus](https://fairplus-project.eu), this means that consortium members can easyly login if they already have credentials on these 2 services. 
 ```
 
 ---
@@ -78,6 +100,7 @@ This section guides users through the key steps to perform to organize a deposit
 </div> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/TYpr8jM.png
 ---
 height: 600px
@@ -99,6 +122,7 @@ Failing to do so will result in a failure to proceed with the submission and an 
 <!-- <img src="/images/LwMorlw.png" alt="drawing" style="width:650px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/LwMorlw.png
 ---
 height: 600px
@@ -115,6 +139,7 @@ The next key step is to select the `upload type`. In this instance, the `Dataset
 <!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/OYyz4dT.png
 ---
 height: 150px
@@ -136,6 +161,7 @@ Selecting the upload type to Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)
 <!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/WmlqBjL.png
 ---
 height: 600px
@@ -155,6 +181,7 @@ Basic metadata to report .
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/9Bp91gX.png
 ---
 height: 600px
@@ -176,6 +203,7 @@ Setting keywords associated with the Zenodo(URL_TO_INSERT_RECORD https://www.zen
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/fSxOjXe.png
 ---
 height: 400px
@@ -196,6 +224,7 @@ Choosing a License is essential.
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/ty9rpXF.png
 ---
 height: 350px
@@ -211,6 +240,7 @@ Setting access conditions.
 <!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/249GhMg.png
 ---
 height: 150px
@@ -231,6 +261,7 @@ Since the Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECO
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/STjyFbT.png
 ---
 height: 200px
@@ -254,6 +285,7 @@ Linking Funding to Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_IN
 <!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
 ````{dropdown} 
+:open:
 ```{figure} /images/uhGZN5t.png
 ---
 height: 500px
@@ -415,6 +447,12 @@ Miscellaneous Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?record
 * Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI(URL_TO_INSERT_RECORD https://www.doi.org).
 
 ```python
+data_2 = {'filename': 'rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv'}
+files_2 = {'file': open('../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv', 'rb')}
+r = requests.post('https://zenodo.org/api/deposit/depositions/%s/files' % deposition_id,
+                   params={'access_token': ACCESS_TOKEN}, data=data_2,
+                   files=files_2)
+r.status_code
 ```
 ---
 
@@ -450,9 +488,12 @@ Miscellaneous Informat (URL_TO_INSERT_TERM https://fairsharing.org/search?record
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Writing, Conceptualization
+Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

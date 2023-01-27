@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB028
+:identifier_link: 'https://w3id.org/faircookbook/FCB028'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist
+:maturity_level: 4
+:maturity_indicator: 56, 58
+:has_executable_code: nope
+:recipe_name: Building a community compliant metadata profile - The Covid19 sample profile use case
 ```` 
 
 ## Main Objectives
@@ -16,6 +26,7 @@ Finally, use queries expressed in SP(URL_TO_INSERT_RECORD http://bioportal.bioon
 
 
 ````{dropdown} 
+:open:
 ```{figure} covid19-sample-metadata-profile-shex-use-case-mermaid.png
 ---
 width: 800px
@@ -86,6 +97,7 @@ The following sections detail each of these steps
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/lwV1cPd.png
 ---
 width: 300px
@@ -124,6 +136,7 @@ Several distinct to the following resources map(URL_TO_INSERT_RECORD https://www
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/Ro92a7D.png
 ---
 width: 800px
@@ -145,6 +158,7 @@ However, for the final implementation, only the OBO(URL_TO_INSERT_RECORD http://
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/Lc7FcPs.png
 ---
 width: 800px
@@ -175,8 +189,63 @@ Below is a partial view of the YAML defined metadata  form, showing how `host` i
 
 
 ```bash
+$base: http://biohackathon.org/bh20-seq-schema
+$namespaces:
+  sch: https://schema.org/
+  efo: http://www.ebi.ac.uk/efo/
+  obo: http://purl.obolibrary.org/obo/
+  sio: http://semanticscience.org/resource/
+  edam: http://edamontology.org/
+  evs: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#
 
+$graph:
 
+- name: hostSchema
+  type: record
+  fields:
+    host_species:
+        doc: Host species as defined in NCBITaxon, e.g. http://purl.obolibrary.org/obo/NCBITaxon_9606 for Homo sapiens
+        type: string
+        jsonldPredicate:
+          _id: http://www.ebi.ac.uk/efo/EFO_0000532
+          _type: "@id"
+          noLinkCheck: true
+    host_id:
+        doc: Identifer for the host. If you submit multiple samples from the same host, use the same host_id for those samples
+        type: string?
+        jsonldPredicate:
+          _id: http://semanticscience.org/resource/SIO_000115
+    host_sex:
+        doc: Sex of the host as defined in PATO, expect Male (http://purl.obolibrary.org/obo/PATO_0000384) or Female (http://purl.obolibrary.org/obo/PATO_0000383) or in Intersex (http://purl.obolibrary.org/obo/PATO_0001340)
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/PATO_0000047
+          _type: "@id"
+          noLinkCheck: true
+    host_age:
+        doc: Age of the host as number (e.g. 50)
+        type: int?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/PATO_0000011
+    host_age_unit:
+        doc: Unit of host age e.g. http://purl.obolibrary.org/obo/UO_0000036
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/NCIT_C42574
+          _type: "@id"
+          noLinkCheck: true
+    host_health_status:
+        doc: A condition or state at a particular time, must be one of the following (obo:NCIT_C115935 obo:NCIT_C3833 obo:NCIT_C25269 obo:GENEPIO_0002020 obo:GENEPIO_0001849 obo:NCIT_C28554 obo:NCIT_C37987)
+        type: string?
+        jsonldPredicate:
+          _id: http://purl.obolibrary.org/obo/NCIT_C25688
+          _type: "@id"
+          noLinkCheck: true
+    host_treatment:
+      doc: Process in which the act is intended to modify or alter host status
+      type: string?
+      jsonldPredicate:
+          _id: http://www.ebi.ac.uk/efo/EFO_0000727
 ```
 
 `source`: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml
@@ -188,6 +257,7 @@ Below is a partial view of the YAML defined metadata  form, showing how `host` i
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/5eQN9hw.png
 ---
 width: 800px
@@ -205,6 +275,7 @@ alt: The corresponding metadata acquisition web form
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/RR5GSgi.png
 ---
 width: 800px
@@ -223,11 +294,52 @@ When users submit informat (URL_TO_INSERT_TERM https://fairsharing.org/search?re
 
 
 ```bash
+id: placeholder
 
+host:
+    host_id: XX1
+    host_species: http://purl.obolibrary.org/obo/NCBITaxon_9606
+    host_sex: http://purl.obolibrary.org/obo/PATO_0000384
+    host_age: 20
+    host_age_unit: http://purl.obolibrary.org/obo/UO_0000036
+    host_health_status: http://purl.obolibrary.org/obo/NCIT_C25269
+    host_treatment: Process in which the act is intended to modify or alter host status (Compounds)
+    host_vaccination: [vaccines1,vaccine2]
+    ethnicity: http://purl.obolibrary.org/obo/HANCESTRO_0010
+    additional_host_information: Optional free text field for additional information
 
+sample:
+    sample_id: Id of the sample as defined by the submitter 
+    collector_name: Name of the person that took the sample
+    collecting_institution: Institute that was responsible of sampling  
+    specimen_source: [http://purl.obolibrary.org/obo/NCIT_C155831,http://purl.obolibrary.org/obo/NCIT_C155835]
+    collection_date: "2020-01-01"
+    collection_location: http://www.wikidata.org/entity/Q148
+    sample_storage_conditions: frozen specimen
+    source_database_accession: [http://identifiers.org/insdc/LC522350.1#sequence]
+    additional_collection_information: Optional free text field for additional information
 
+virus:
+    virus_species: http://purl.obolibrary.org/obo/NCBITaxon_2697049
+    virus_strain: SARS-CoV-2/human/CHN/HS_8/2020
 
+technology:
+    sample_sequencing_technology: [http://www.ebi.ac.uk/efo/EFO_0009173,http://www.ebi.ac.uk/efo/EFO_0009173]
+    sequence_assembly_method: Protocol used for assembly
+    sequencing_coverage: [70.0, 100.0]
+    additional_technology_information: Optional free text field for additional information
 
+submitter:
+    authors: [John Doe, Joe Boe, Jonny Oe]
+    submitter_name: [John Doe]
+    submitter_address: John Doe\'s address
+    originating_lab: John Doe kitchen
+    lab_address: John Doe\'s address
+    provider_sample_id: XXX1
+    submitter_sample_id: XXX2
+    publication: PMID00001113
+    submitter_orcid: [https://orcid.org/0000-0000-0000-0000,https://orcid.org/0000-0000-0000-0001]
+    additional_submitter_information: Optional free text field for additional information
 
 ```
 
@@ -238,13 +350,16 @@ When users submit informat (URL_TO_INSERT_TERM https://fairsharing.org/search?re
 Using the schema SALA(URL_TO_INSERT_RECORD https://www.ala.org.au/)D(URL_TO_INSERT_RECORD http://darwin.biochem.okstate.edu/lad/ilat/) python package, the YAML instance file can be easily converted to RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) as shown in the code snippet below:
 
 ```bash
+$ pip install schema_salad
 ```
 Get JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) context::
 ```bash
+$ schema-salad-tool --print-jsonld-context myschema.yml mydocument.yml
 ```
 
 Convert a document to JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)::
 ```bash
+$ schema-salad-tool --print-pre myschema.yml mydocument.yml > mydocument.jsonld
 
 ```
 
@@ -267,12 +382,74 @@ While defining a SALA(URL_TO_INSERT_RECORD https://www.ala.org.au/)D(URL_TO_INSE
 
 
 ```bash
+PREFIX : <https://raw.githubusercontent.com/arvados/bh20-seq-resource/master/bh20sequploader/bh20seq-shex.rdf#>
+PREFIX MainSchema: <http://biohackathon.org/bh20-seq-schema#MainSchema/>
+PREFIX hostSchema: <http://biohackathon.org/bh20-seq-schema#hostSchema/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX evs: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX edam: <http://edamontology.org/>
+PREFIX wikidata: <http://www.wikidata.org/entity/>
 
+:submissionShape {
+  MainSchema:host   @:hostShape ;
+  MainSchema:sample @:sampleShape ;
+  MainSchema:submitter @:submitterShape ;
+  MainSchema:technology @:technologyShape ;
+  MainSchema:virus @:virusShape;
+}
 
+:hostShape  {
+    efo:EFO_0000532 [ obo:NCBITaxon_~ ] ;
+    sio:SIO_000115 xsd:string ?;
+    obo:PATO_0000047 [ obo:PATO_0000384 obo:PATO_0000383 obo:PATO_0001340] ?;
+    obo:PATO_0000011 xsd:integer ?;
+    obo:NCIT_C42574 [ obo:UO_~ ] ?;
+  obo:NCIT_C25688 [obo:NCIT_C115935 obo:NCIT_C3833 obo:NCIT_C25269 obo:GENEPIO_0002020 obo:GENEPIO_0001849 obo:NCIT_C28554 obo:NCIT_C37987 ] ? ;
+    efo:EFO_0000727 xsd:string ?;
+    obo:VO_0000002 xsd:string {0,10};
+    sio:SIO_001167 xsd:string ?;
+    sio:SIO_001014 [ obo:HANCESTRO_~ ] ? ; #ethnicity
+}
 
+:sampleShape  {
+    sio:SIO_000115 xsd:string;
+    evs:C25164 xsd:string;
+    obo:GAZ_00000448 [wikidata:~] ;
+    obo:OBI_0001895 xsd:string ?;
+    obo:NCIT_C41206 xsd:string ?;
+    obo:OBI_0001479 IRI {0,2};
+    obo:OBI_0001472 xsd:string ?;
+    sio:SIO_001167 xsd:string ?;
+  edam:data_2091 IRI {0,3};
+}
 
+:submitterShape {
+    obo:NCIT_C42781 xsd:string + ;
+    sio:SIO_000116 xsd:string *;
+    sio:SIO_000172 xsd:string ?;
+    obo:NCIT_C37984 xsd:string ?;
+    obo:OBI_0600047 xsd:string ?;
+    obo:NCIT_C37900 xsd:string ?;
+    efo:EFO_0001741 xsd:string ?;
+    obo:NCIT_C19026 xsd:string ?;
+    sio:SIO_000115 
+    sio:SIO_001167 xsd:string ?;
+}
 
+:technologyShape {
+    obo:OBI_0600047 IRI {0,3} ;
+    efo:EFO_0002699 xsd:string ?;
+    obo:FLU_0000848 xsd:double OR xsd:integer {0,3};
+    sio:SIO_001167 xsd:string ?;
+}
 
+:virusShape{
+  edam:data_1875 [ obo:NCBITaxon_~ ] ;
+    sio:SIO_010055 xsd:string ?;
+}
 ```
 
 `source:` https://github.com(URL_TO_INSERT_RECORD https://github.com/)/arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf
@@ -284,6 +461,7 @@ Using the [WESO](http://www.weso.es/) developed(URL_TO_INSERT_RECORD https://www
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/z2rriQu.png
 ---
 width: 1200px
@@ -316,6 +494,13 @@ Limiting search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) to 
 
 
 ```bash
+PREFIX pubseq: <http://biohackathon.org/bh20-seq-schema#MainSchema/>
+PREFIX sio: <http://semanticscience.org/resource/>
+select distinct ?sample ?p ?o
+{
+   ?sample sio:SIO_000115 "MT326090.1" .
+   ?sample ?p ?o .
+}
 ```
 
 
@@ -344,13 +529,22 @@ Another improvement could be a better integration with repositories (URL_TO_INSE
 
 ## References
 ````{dropdown} **References**
+[1]. Avro - http://avro.apache.org
+[2]. metaschema - https://github.com/common-workflow-language/schema_salad/blob/main/schema_salad/metaschema/metaschema.yml
+[3]. schema salad - http://www.commonwl.org/v1.0/SchemaSalad.html
+[4]. https://www.w3.org/RDF/
+[5]. https://shex.io/shex-semantics/
 ````
 
 
 ## Authors
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Danielle: Writing - Review & Editing
+Robert: Writing - Review & Editing
 ````
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````

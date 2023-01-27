@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB075
+:identifier_link: 'https://w3id.org/faircookbook/FCB075'
+:difficulty_level: 3
+:recipe_type: background_information
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 1, 2
+:has_executable_code: nope
+:recipe_name: Using OpenRefine and Karma for FAIRification
 ```` 
 
 
@@ -28,6 +38,9 @@ Two fundamental steps are needed to perform such transformat (URL_TO_INSERT_TERM
 That is assigning the same URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s to the same entities, even when these are referred to by different names.
 
 ```{note}
+In practice, we could have different but related URIs.
+It remains that in this step, we should go beyond names (labels) and use **coherent identifiers** to point 
+to the entities names refer to.
 ```
 
 * **Map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) the structure of the data to an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)**.
@@ -36,6 +49,8 @@ This is akin to reconciling properties (referred by a name, e.g.: a column name)
 Except for simple cases, such map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)pings go beyond simple names to URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986) relations and generally include **small graph patterns**.
 
 ```{note}
+As for many data cleansing exercises, we may need extra steps that are not specific to the transformation to a KG, 
+but often necessary. For instance, split an "address" in "Country", "Street", "City").
 ```
 
 We mentioned that we assume here that source data is represented as one or more CSV(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc4180) files.
@@ -75,6 +90,7 @@ reconcile to entities of one or more of these types. OpenRefine will then presen
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/openrefine.png
 ---
 width: 800px
@@ -96,6 +112,9 @@ Via a plugin called **grefine-rdf-extension** [https://github.com(URL_TO_INSERT_
 It is also possible to use a generic triple-store as a reconciliation service.
 
 ```{note}
+In that case, the triple-store should contain a list of entities, with labels in one or more languages and the corresponding classes. 
+The triple-store should also be accessible on the network where OpenRefine is running.
+(no authorisation is possible, except via extensions).
 ```
 
 ### Reconciliation toward public knowledge-bases
@@ -109,6 +128,7 @@ service, OpenRefine will help users to normalise entity references to Wikidata(U
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/openrefine-wiki-reconci.png
 ---
 width: 800px
@@ -121,6 +141,8 @@ Wikidata(URL_TO_INSERT_RECORD http://wikidata.org/)(URL_TO_INSERT_RECORD http://
 
 
 ```{warning}
+The drawback of using Wikidata is obviously that not all entities exist in Wikidata,
+in particular entities which may be not public, as in a company setting.
 ```
 
 #### Other public reconciliation services
@@ -130,6 +152,8 @@ Several public resources provide support for OpenRefine reconciliation services.
 
 
 ```{note}
+in OpenRefine, users can use various reconciliation services over the same dataset.
+The reconciliation is column specific.
 ```
 
 ### Reconciliation toward private knowledge bases
@@ -151,6 +175,7 @@ These scripts are available from [https://github.com(URL_TO_INSERT_RECORD https:
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/wikidraftworks.png
 ---
 width: 800px
@@ -174,6 +199,8 @@ The export is based on map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/pli
 The [RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) transform extension](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/AtesComp/rdf-transform) now replaces 'grefine' 
 
 ```{note}
+Note that this is not equivalent to the Wikidata services: 
+as the plugin works over SPARQL, it has fewer capabilities in terms of ranking of results.
 ```
 
 
@@ -253,6 +280,8 @@ OpenRefine is a simple user oriented tool, useful for low curation loads where t
 It is particularly good as first tool to introduce reconciliation concepts in an organisation.
 
 ```{note}
+OpenRefine can be used in more complex scenarios when its overall data cleansing capabilities are used. 
+We focus here only on some FAIRification related capabilities.
 ```
 
 
@@ -302,9 +331,15 @@ After reconciliation, we could imagine this data to look like:
 To express the above as a graph, we need to make the structure or this table explicit, referring to an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact), example, for people and relations.
 
 ```{admonition} Tip
+:class: tip
 
+Wikidata uses 2 sets of uri 
 
+[https://www.wikidata.org/wiki/Q937](https://www.wikidata.org/wiki/Q937) (does not work in the wikidata sparql endpoint)  
+ vs [http://www.wikidata.org/entity/Q937](http://www.wikidata.org/entity/Q937)
+  (should be used for the sparql: these uri redirect to the html link above)
 
+Important point to bear in mind when using Wikidata.
 
 ```
 
@@ -356,6 +391,7 @@ Vs
 [http://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/prop/direct/P18](http://www.wikidata.org(URL_TO_INSERT_RECORD http://wikidata.org/)/prop/direct/P18)
 
 ```{warning}
+Check documentation about the wikidata model to understand the various identifier patterns and their meaning/effect
 ````
 
 
@@ -370,6 +406,7 @@ The RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-201402
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/rdf-align-openrefine.png
 ---
 width: 800px
@@ -412,6 +449,7 @@ Karma expresses map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/for
 An example of a map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping session in Karma:
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/rdf-align-karma.png
 ---
 width: 800px
@@ -523,6 +561,9 @@ rests on the setting up of a Wikibase instance to provide the reconciliation ref
 
 ## Authors
 ````{authors_fairplus}
+AndreaSplendiani: Writing - Original Draft
+Philippe: Review & Editing
+Yojana: Review & Editing
 ````
 
 <!-- 
@@ -532,6 +573,7 @@ Martin Magdinier: (RefinePro)
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

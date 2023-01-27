@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB057
+:identifier_link: 'https://w3id.org/faircookbook/FCB057'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 3
+:maturity_indicator: 30, 31
+:has_executable_code: nope
+:recipe_name: Outlining a metadata profile for Bioactivity data
 ```` 
 
 ## Main objective
@@ -198,10 +208,14 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 ## Authors
 
 ```{authors_fairplus}
+AndreaZaliani: Writing - Original Draft, Editing, Conceptualization
+Fuqi: Writing - Writing - Original Draft, Editing, Conceptualization
+Philippe: Writing - Review & Editing
 ```
 
 ## Licence
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

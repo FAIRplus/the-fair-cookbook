@@ -1,6 +1,16 @@
 # Developing FAIR API for the Web
 
 ````{panels_fairplus}
+:identifier_text: FCB073
+:identifier_link: 'https://w3id.org/faircookbook/FCB073'
+:difficulty_level: 3
+:recipe_type: technical_guidance
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist,software_engineer  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Developing FAIR API for the Web
 ```` 
 
 
@@ -13,10 +23,15 @@
 :width: 100px
 :align: right
 ```
+This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
 
+**Authors**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
+**Maintainers**: [Daniel J. B. Clarke](https://orcid.org/0000-0003-3471-7416)
 
+**Version**: 1.1
 
+**License**: [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 
 ````
@@ -81,6 +96,7 @@ This will catch errors as you edit, and permit testing(URL_TO_INSERT_RECORD http
 An example endpoint in an OpenAPI Editor:
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss1.png
 ---
 width: 800px
@@ -94,6 +110,7 @@ An example endpoint in an OpenAPI Editor
 A real response in an OpenAPI Editor:
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss2.png
 ---
 width: 800px
@@ -125,6 +142,7 @@ The `vsix` file can be installed with [Visual Studio Code](https://code.visualst
 It can be installed from `Ctrl+Shift+P` with the action "Install from VSIX"
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss3.png
 ---
 width: 800px
@@ -144,6 +162,7 @@ the recipe), using `Ctrl+Shift+P` again and choosing the action "Preview Swagger
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss4.png
 ---
 width: 800px
@@ -158,6 +177,7 @@ The result will be a webview that opens to the side with the Swagger Editor.
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss5.png
 ---
 width: 1100px
@@ -176,6 +196,20 @@ We start by annotating useful descriptions for the API in the `info` field, this
 The `servers` field has the base url(s) for accessing the API we're about to describe.
 
 ```yaml
+openapi: 3.0.0
+info:
+  title: Metabolomics Workbench REST API
+  version: "1.0.0"
+  description: |
+    The Metabolomics WorkBench REST service enables access to a variety of data (including metabolite structures, study metadata and experimental results) using HTTP requests. These requests may be carried out using a web browser or may be embedded in 3rd party applications or scripts to enable programmatic access. Most modern programming languages including PHP, Perl, Python, Java and Javascript have the capability to create HTTP request and interact with datasets such as this REST service.
+  license:
+    name: Metabolomics Workbench Terms of Use
+    url: https://www.metabolomicsworkbench.org/about/termsofuse.php
+  contact:
+    url: https://www.metabolomicsworkbench.org/about/contact.php
+servers:
+  - description: Metabolomics Workbench
+    url: https://www.metabolomicsworkbench.org/rest
 ```
 
 ### Step 3: Describing a path
@@ -188,19 +222,66 @@ The Metabolomics API offers several examples, let's tackle one of them:
 This tells us what the endpoint does to an extent; let's add that to our API under the `paths`.
 
 ```yaml
+paths:
+  /study/study_id/ST/available:
+    get:
+      description: Fetch summary information for all studies
 ```
 
 The path is relative to the server url, and `get` refers to the REST method (`GET` as opposed to `PO(URL_TO_INSERT_RECORD http://plantontology.org/)ST`, `PUT`, `DELETE`, ...), in REST `GET` refers to reading a resource and is what happens when you send the following packet to a web server. These packets can be crafted using `curl`, the `-v` flag helps see input and output packets and the `-X` flag allows you to set the method (`GET`, `PO(URL_TO_INSERT_RECORD http://plantontology.org/)ST`, ...), the `-H` flag lets you specify headers.
 
 ```bash
+curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available
 ```
 
 ```
+...
+> GET /rest/study/study_id/ST/available HTTP/1.1 # PATH HERE
+> Host: www.metabolomicsworkbench.org            # REQUEST HEADERS HERE
+> User-Agent: curl/7.70.0
+> Accept: */*
+> Content-Type: application/json
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK                                # RESPONSE STATUS CODE HERE
+< Date: Wed, 27 May 2020 14:29:27 GMT            # RESPONSE HEADERS HERE
+< Server: Apache/2.4.6 (CentOS)
+< X-Frame-Options: SAMEORIGIN
+< Vary: Accept-Encoding
+< X-XSS-Protection: 1; mode=block
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+<                                                # BODY HERE
+{
+  "1": {
+    "project_id":"PR000001",
+    "study_id":"ST000001",
+    "analysis_id":"AN000001"
+  },
+  "2":{
+    "project_id":"PR000002",
+    "study_id":"ST000002",
+    "analysis_id":"AN000002"
+  },
+  ...
+  "1783":{
+    "project_id":"PR000928",
+    "study_id":"ST001364",
+    "analysis_id":"AN002271"
+  }
+}
+...
 ```
 
 Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion for webpage optimization.
 
 ```bash
+> GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
+> Host: www.metabolomicsworkbench.org
+> Content-Type: text/html
+> User-Agent: Mozilla/5.0 ...
+> Accept-language: en-US,en;q=0.5
+> Accept-Encoding: gzip, deflate
 
 ```
 
@@ -209,6 +290,26 @@ The `GET` at the start is changed to `PO(URL_TO_INSERT_RECORD http://plantontolo
 We did not know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
 
 ```yaml
+paths:
+  /study/study_id/ST/available:
+    get:
+      description: Fetch summary information for all studies
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    project_id:
+                      type: string
+                    study_id:
+                      type: string
+                    analysis_id:
+                      type: string
 ```
 
 The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)ized by HTTP but the gist is:
@@ -236,6 +337,23 @@ Let's tackle our next endpoint:
 While the example shows `ST000001` in reality, the idea is that this can be any study ID, such as those coming out of the previous endpoint.
 
 ```yaml
+paths:
+  ...
+  /study/study_id/{study_id}/summary:
+    get:
+      description: Fetch summary information for a study
+      parameters:
+      - in: path
+        name: study_id
+        description: The unique study identifier
+        schema:
+          type: string
+          pattern: '^ST\d*$'
+        example: ST000001
+        required: true
+      responses:
+        '200':
+          description: Success
 ```
 
 We see some new concepts here, the first is the path which has a variable in it delineated by `{study_id}` where we would want the `study_id` to go. Paired with this we add an entry into the `parameters` array and state the same name `study_id` is `in: path` referring to this path-style variable substitution.
@@ -250,6 +368,7 @@ Finally, we have included an `example` which will help developers with rapid tes
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/ss2.png
 ---
 width: 800px
@@ -265,6 +384,43 @@ fair-api-images/ss2s.
 With the output, we can complete our path by annotating the response:
 
 ```yaml
+paths:
+  ...
+  /study/study_id/{study_id}/summary:
+    get:
+      ...
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    study_id:
+                      type: string
+                    study_title:
+                      type: string
+                    study_type:
+                      type: string
+                    institute:
+                      type: string
+                    department:
+                      type: string
+                    last_name:
+                      type: string
+                    first_name:
+                      type: string
+                    email:
+                      type: string
+                    submit_date:
+                      type: string
+                    study_summary:
+                      type: string
+                    subject_species:
+                      type: string
 ```
 
 ### Step 5: Identifying components
@@ -272,6 +428,57 @@ In some cases, a common set of JSO(URL_TO_INSERT_RECORD http://www.sequenceontol
 
 
 ```yaml
+paths:
+  ...
+  /study/study_id/{study_id}/summary:
+    get:
+      ...
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudySummary'
+  ...
+components:
+  schemas:
+    StudySummary:
+      description: Summary information about a study
+      type: object
+      properties:
+        study_id:
+          type: string
+          description: A unique identifier for this study
+        study_title:
+          type: string
+        study_type:
+          type: string
+          description: The type of treatment used in the study
+        institute:
+          type: string
+          description: The institution that performed the study
+        department:
+          type: string
+          description: The department in the institute that performed the study
+        last_name:
+          type: string
+          description: The last name of the PI responsible for the study
+        first_name:
+          type: string
+          description: The first name of the PI responsible for the study
+        email:
+          type: string
+          description: The email to contact for information about the study
+        submit_date:
+          type: string
+          description: The date this study was submitted to metabolomics workbench
+        study_summary:
+          type: string
+          description: A detailed summary describing the study
+        subject_species:
+          type: string
+          description: The species of the subject of the study
 ```
 
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-Schema pointers](https://json-schema.org(URL_TO_INSERT_RECORD http://schema.org/)/draft/2019-09/relative-json-pointer.html) as shown above.
@@ -284,6 +491,84 @@ When it comes to *automatic* interoperability, the [SmartAPI extension](https://
 |Fetch all protein fields from Entrez gene id|https://www.metabolomicsworkbench.org(URL_TO_INSERT_RECORD https://www.metabolomicsworkbench.org/)/rest/protein/gene_id/19/all/|
 
 ```yaml
+paths:
+  /protein/gene_id/{gene_id}/all/:
+    get:
+      description: Fetch all protein fields from Entrez gene id
+      parameters:
+      - in: path
+        name: gene_id
+        description: The unique study identifier
+        schema:
+          type: string
+        example: '19'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  gene_id:
+                    type: string
+                    description: Entrez Gene ID
+                  mgp_id:
+                    type: string
+                    description: MGP ID
+                  gene_name:
+                    type: string
+                    description: Verbose gene name
+                  gene_symbol:
+                    type: string
+                    description: Entrez Gene Symbol
+                  taxid:
+                    type: string
+                    description: Taxonomy taxon ID
+                  species:
+                    type: string
+                    description: Species name
+                  species_long:
+                    type: string
+                    description: Species official name
+                  mrna_id:
+                    type: string
+                    description: ID of the MRNA
+                  refseq_id:
+                    type: string
+                    description: ID on refseq
+                  protein_gi:
+                    type: string
+                    description: ID on GI
+                  uniprot_id:
+                    type: string
+                    description: ID on GI
+                  protein_entry:
+                    type: string
+                    description: Protein term
+                  protein_name:
+                    type: string
+                    description: Verbose protein name
+                  seqlength:
+                    type: string
+                    description: Length of the sequence
+                  seq:
+                    type: string
+                    description: The protein sequence itself
+          x-responseValueType:
+          - x-path: gene_id
+            x-valueType: https://identifiers.org/ncbigene
+          - x-path: gene_symbol
+            x-valueType: https://identifiers.org/genecards
+          - x-path: tax_id
+            x-valueType: https://identifiers.org/taxonomy
+          - x-path: mrna_id
+            x-valueType: https://www.ncbi.nlm.nih.gov/nuccore
+          - x-path: refseq_id
+            x-valueType: https://www.ncbi.nlm.nih.gov/protein
+          - x-path: uniprot_id
+            x-valueType: https://identifiers.org/uniprot
 ```
 
 Here we see our usual path setup with a new section: `x-responseValueType`, this is the smartAPI(URL_TO_INSERT_RECORD http://smart-api.info) extension. 
@@ -343,6 +628,7 @@ This content type focus on using OpenAPI.
 ## References
 
 ````{dropdown} **Reference**
+<!-- ```{footbibliography}
 ``` -->git stat
 ````
 

@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB006
+:identifier_link: https://w3id.org/faircookbook/FCB006
+:difficulty_level: 3
+:recipe_type: background_information
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: nope
+:recipe_name: Introducing unique, persistent identifiers
 ```` 
 
 
@@ -24,6 +34,8 @@ From these principles, it is necessary to explain three key processes, which are
 
 ### Identifier minting
 ```{admonition} Tip
+:class: tip 
+ **`Identifier minting`** is fundamentally about the **`authority deciding identity`**. 
 ``` 
  - the tax office
  - the HR department
@@ -32,6 +44,8 @@ From these principles, it is necessary to explain three key processes, which are
 
 ### URI construction
 ```{admonition} Tip
+:class: tip 
+**`URI construction`** is fundamentally about **`scoping the authority`**.
 ```
 > for example, should the web address be:
 > http://organization/people/1123 
@@ -41,6 +55,8 @@ From these principles, it is necessary to explain three key processes, which are
 
 ### URI Resolution: 
 ```{admonition} Tip
+:class: tip 
+**`URI resolution`** is fundamentally about **`directing requests to the relevant identified entity`**
 ```
 The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
@@ -50,6 +66,7 @@ All these key points will be developed(URL_TO_INSERT_RECORD https://www.cog-geno
 
 
 ````{dropdown} Identifier services
+:open:  
 ```{figure} ./identifiers-fig1.svg
 ---
 width: 700px
@@ -86,7 +103,9 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifier (URL_T
 
 
 ```{admonition} Tip
+:class: tip 
 
+ **Identifier minting is fundamentally about the *authority deciding identity.**
 ```
 
 
@@ -111,6 +130,12 @@ According to the [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), 
 
 ```{note}
 
+Key Fact about UUID: 
+> - `no centralized authority is required to administer them`
+> - `content independent, entirely disconnected from the identify they can be associated with for identification purpose`
+> - `generation on demand can be completely automated`
+> - `non resolvable`
+> - `completely semantic free (opaque) identifier`
 ```
 
 ---
@@ -121,7 +146,11 @@ The following code snippet shows the generation of a UUID using the Python uuid 
 
 
 ```python
+import uuid
+id = uuid.uuid4() 
 
+print(id)
+5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
 
@@ -139,6 +168,10 @@ The first two are considered obsolete, while the latter two are most advanced an
 ---
 
 ```{note} 
+>Key fact about hash identifiers: It is not possible to reconstruct the original data from these hash strings. These are only **fingerprints**, which can therefore only be used to do the following tasks:
+>- message authentication
+>- digital signature
+>- public key encryption
 ```
 
 
@@ -148,23 +181,34 @@ The first two are considered obsolete, while the latter two are most advanced an
 The following code snippet shows the generation of a hash for a string(URL_TO_INSERT_RECORD https://string-db.org/) using the Python hashlib package:
 
 ```python
+import hashlib
 
 # encode it to bytes using UTF-8 encoding
+message = "creating globally unique identifiers for FAIR data".encode()
 
 # hash with MD5 (not recommended)
+print("MD5:", hashlib.md5(message).hexdigest())
 
 # hash with SHA-2 (SHA-256 bits & SHA-512 bits long)
+print("SHA-256:", hashlib.sha256(message).hexdigest())
+print("SHA-512:", hashlib.sha512(message).hexdigest())
 
 # hash with SHA-3
+print("SHA-3-256:", hashlib.sha3_256(message).hexdigest())
+print("SHA-3-512:", hashlib.sha3_512(message).hexdigest())
 
 # hash with BLAKE2 (256-bits BLAKE2s & 512-bits BLAKE2c)
+print("BLAKE2s:", hashlib.blake2s(message).hexdigest())
+print("BLAKE2b:", hashlib.blake2b(message).hexdigest())
 ```
 
 #### Generation of hashes using curl
 The following snippet shows how a b2sum hash can be generated using [`curl`](https://curl.haxx.se/)
 
 ```bash
+curl https://fairplus.github.io/cookbook-dev/intro | b2sum --length 256 --binary
 
+24d470987fda1278c63c3f97ab30869b821906449f3ecf290ee48086b8215668
 ```
 
 
@@ -176,7 +220,9 @@ In our context, the use of the hashing function is to generate a unique key whic
 ## Understanding Uniform Resource Locators (URLs)
 
 ```{admonition} Tip
+:class: tip
 
+ **URI construction is fundamentally about scoping the authority**.
 ```
 
 Having covered the technical details to generated globally unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s, it is now necessary to discuss the issue making identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s *resolvable (a notion also known as `dereferenceable`)*.
@@ -186,6 +232,11 @@ In other words, in order to create globally unique identifier (URL_TO_INSERT_TER
 This results in URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s of the following form
 
 ````bash
+        userinfo       host      port
+        ┌──┴───┐ ┌──────┴──────┐ ┌┴┐
+https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+└─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
+scheme          authority                  path                 query           fragment
 ````
 source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 
@@ -193,6 +244,7 @@ source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wi
 The structure of `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)`, according to the World Wide Web Consortium (W3C) specification, is as follows:
 
 ```bash
+URI = scheme:[//authority]path[?query][#fragment]
 ```
 
 ### `scheme`:
@@ -204,6 +256,7 @@ The most relevant `URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc39
 
 Besides setting the `scheme`, the other essential fragment of a URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986) is the `authority`, which according to the Internet Engineering Task Force (IETF) specifications, presents the following characteristics:
 ```
+authority = [userinfo@]host[:port]
 ```
 Note how the required part is the `host`, with `userinfo` and `port` informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion being optional and should be avoided in identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s for data.
 
@@ -215,6 +268,11 @@ In the `authority`, the notion of `host` corresponds to the `Internet Protocol (
 
 ```{note} Tip
 
+it is often the case the `authority` is reduced to the `host` , which is then referred to as a 'namespace' or 'domain name' in an abuse of language.
+`host` is in fact further specified by 3 element
+>  - top-level domain , `com` in the www.example.com web address
+>  - second-level domain,  `example` in the www.example.com web address
+> - hostname subdomain,`www` in the www.example.com web address
 ```
 
 ---
@@ -222,6 +280,7 @@ In the `authority`, the notion of `host` corresponds to the `Internet Protocol (
 
 ```{note} Tip
 
+>`subdomain` can be defined in the Domain Name Service and belong to the main domain.  Technically, to add a subdomain pointing to the domain name, one needs to create/add a CNAME to the DNS for a registered domain name
 ```
 
 ---
@@ -250,6 +309,7 @@ In order to achieve the capability of `persistence`, it is necessary for the res
 In a virtual example which uses a UUID for the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) and does not use a path, it looks like this:
 
 ```bash
+https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
 Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)` (IRI - commonly referred to as a URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)) by appending the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) onto a namesapce.
@@ -257,6 +317,8 @@ Taking a real life example, to make the `UniProt accession number` globally uniq
 ---
 
 ```{admonition} Tip
+:class: tip
+> You should only use a `namespace` over which you have ownership (the authority), otherwise you cannot guarantee that the minted IRI will be **globally unique**; the organization or person who owns the namespace may already, or at some point in the future, use the IRI that you created for some other purpose.
 ```
 
 In the case of UniProt, the resource has provided IRIs for each page about a protein as well as separate IRIs for the protein itself; this is because the page is not the concept of the protein by a document that describes properties of the protein. This separation of identities is achieved by using different namespaces for the different types of resource.
@@ -275,6 +337,8 @@ This relates to the following FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/
 
 
 ```{admonition} Tip
+:class: tip
+ **`URI resolution` is fundamentally about directing requests to the relevant identified entity.** 
 ```
 
 The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
@@ -287,6 +351,8 @@ When a user retrieves a PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rf
 When an author needs to move a page, they can update the PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) to point to the new location.
 
 ```{admonition} Tip
+:class: tip
+The practice of **indirection** comes handy as it ensures invariant url address for resources which are known to change, owing to version changes for instance or owing to change in ownership. 
 ```
 
 We can see this practice in action with the reliance on purl.org url for identifying OBO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) Foundry(URL_TO_INSERT_RECORD http://www.obofoundry.org/) resources. For instance, the following url [`http://purl.obolibrary.org/obo/stato.owl`](http://purl.obolibrary.org/obo/stato.owl) is a redirect to the latest release of the file, which is [https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl](https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl).
@@ -383,11 +449,18 @@ But we can not conclude this section on persistent identifier (URL_TO_INSERT_TER
 * [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) Map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping Services](fcb-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)-map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping)
 
 ````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
 ```{image} ../../../images/logos/pistoia_logo.png
 :height: 40px
 :align: center
 :name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)toolkit_logo
 ```
+^^^
+- [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+---
+:body: p-0
 ```{rdmkit_panel}
 :inline: true
 ```
@@ -405,9 +478,15 @@ But we can not conclude this section on persistent identifier (URL_TO_INSERT_TER
 ## Authors
 
 ````{authors_fairplus}
+AndreaSplendiani: Conceptualization
+Alasdair: Writing - Original Draft
+Chris: Writing - Original Draft
+Egon: Writing - Original Draft
+Philippe: Writing - Review & Editing, Conceptualization
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

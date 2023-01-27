@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB015
+:identifier_link: https://w3id.org/faircookbook/FCB015
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 7
+:has_executable_code: nope
+:recipe_name: Downloading data with Aspera protocol
 ```` 
 
 
@@ -14,6 +24,7 @@ This recipe covers documentation of the popular Aspera Fast Transfer Protocol an
 ## Graphical overview
 
 ````{dropdown}
+:open:
 ```{figure} aspera.md-figure1.svg
 ---
 width: 650px
@@ -62,11 +73,18 @@ Aspera Data Transfer Process.
 
 ```bash
 #set the password variable corresponding to your Aspera account.
+export ASPERA_SCP_FILEPASS="mypassword"
+ 
 #example to download the files recursively from a specific directory on the Aspera server to
+$ /hpc/apps/current/aspera/v3.9.6.app/bin/ascp -k 1 -P 33001  -o FileCrypt=decrypt aspera.myacc@aspera-immport.niaid.nih.gov:dir_to_download ./
 ```
  
 * Ascp Version we used:
 ```bash
+$ ascp --version
+IBM Aspera Desktop Client version 3.9.6.176292
+ascp version 3.9.6.176292
+...
 ```
 
 ### Monitoring connections and file transfers
@@ -107,10 +125,13 @@ Aspera Data Transfer Process.
 ## Authors
 
 ````{authors_fairplus}
+Peter: Writing - Original Draft, Conceptualization
+Philippe: Writing - Review & Editing
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB067
+:identifier_link: 'https://w3id.org/faircookbook/FCB067'
+:difficulty_level: 3
+:recipe_type: applied_example
+:reading_time_minutes: 15
+:intended_audience: data_manager  
+:maturity_level: 2 
+:maturity_indicator: 1, 2
+:has_executable_code: nope
+:recipe_name: Depositing High-Content Screening data to EBI BioImage Archive
 ```` 
 
 
@@ -154,6 +164,7 @@ or this [GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD h
 
 
 ````{dropdown}
+:open:
 ```{figure} ../../../images/bioimage-excel.png
 ---
 width: 800px
@@ -168,6 +179,7 @@ Overview of the bioimage-excel.
 3. Generate file lists with the Python scripts.
 
 ```python
+python first_python_script.py        yourinputfilelist.xlsx
 ```
 
 
@@ -177,6 +189,7 @@ Overview of the bioimage-excel.
 5. Run the automated analysis of your data with the Python scripts.
 
 ```python
+python other_python_script.py other_input_file.extension
 ```
 
 
@@ -206,10 +219,14 @@ This therefore improves **Findability** and **Reusability** of such data.
 ## Authors
 
 ````{authors_fairplus}
+Robert: Writing - Original Draft
+Wei: Writing - Review & Editing
+Philippe: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

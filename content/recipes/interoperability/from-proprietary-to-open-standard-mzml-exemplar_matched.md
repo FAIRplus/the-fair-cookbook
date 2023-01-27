@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB029
+:identifier_link: 'https://w3id.org/faircookbook/FCB029'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 3
+:maturity_indicator: 44
+:has_executable_code: yeah
+:recipe_name: Converting from proprietary to open format
 ```` 
 
 
@@ -21,6 +31,7 @@
 
 
 ````{dropdown} 
+:open:
 ```{figure} from-proprietary.png
 ---
 width: 450px
@@ -77,6 +88,10 @@ Converting to an open standard (URL_TO_INSERT_TERM https://fairsharing.org/searc
 In the case of the IMI RESO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)LUTE<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project), the data is released via the University of Luxembourg<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> server (assuming you have access resolved):
 
 ```bash
+$> sftp fairplus@NNN.000.000.NNN
+>get RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
+>exit
+$>
 ```
 :warning: `NN(URL_TO_INSERT_RECORD http://braininfo.org/Nnont.aspx)N.000.000.NN(URL_TO_INSERT_RECORD http://braininfo.org/Nnont.aspx)N` should be replaced with the proper IP address to the University of Luxembourg server once users have obtained data access clearance.
 
@@ -84,14 +99,30 @@ In the case of the IMI RESO(URL_TO_INSERT_RECORD http://www.sequenceontology.org
 
 #### i. copying the archive to a working directory
 ```bash
+$>mv RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz /IMI-FAIR+/RESOLUTE
+$>cd /IMI-FAIR+/RESOLUTE/
 ```
 #### ii. expand the archive
 
 ```bash
+$>gunzip RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar.gz
+$>tar -xvf RESOLUTE_Targted_Metabolomics_of_parental_cell_lines.tar
+$>cd RESOLUTE_Targted_Metabolomics_of_parental_cell_lines
 ```
 #### iii. inspect the folder
 
 ```bash
+>$anaconda3-2019.10) bob-MacBook-3:RESOLUTE_Targted_Metabolomics_of_parental_cell_lines philippe$ ls -la
+total 1400
+drwxr-xr-x   10 bob  staff     320 14 Jan 16:05 .
+drwxr-xr-x    8 bob  staff     256 14 Jan 10:29 ..
+-rwxr-xr-x@   1 bob  staff  520170 15 Nov 14:02 Data_Release_Proposal_20191115_Metabolome_of_parental_cell_lines.docx
+-rw-r--r--@   1 bob  staff   72868  5 Nov 20:49 EX0003_processed_data.txt
+-rw-r--r--@   1 bob  staff    6907 23 Oct 16:06 EX0003_sample_metadata.tsv
+drwxr-xr-x@   7 bob  staff     224 14 Jan 10:43 Raw
+drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
+-rw-r--r--@   1 bob  staff   95677  7 Nov 11:02 p180_metabolites_metadata.tsv
+-rw-r--r--@   1 bob  staff     162 14 Jan 10:59 ~$ta_Release_Proposal_20191115_Metabolome_of_parental_cell_lines.doc
 ```
 
 > :octopus: The arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive would have benefited from having a manifest file listing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) all the files and their associated checksums. In so doing, it would have allowed validation and verification that no corruption happened during file transfer.
@@ -112,6 +143,7 @@ One can consult the Elixir-UK [FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/AWOWTbr.png
 ---
 width: 750px
@@ -132,11 +164,15 @@ The objective here is to conversion raw data in manufacturer format (URL_TO_INSE
 on a MacOS system, invoke the following:
 
 ```bash
+>brew update
+>brew install docker
 ```
 
 #### 2. start and sign in to docker
 
 ```bash
+>docker start
+>docker login
 ```
 
 #### 3. sign-up and/or login to https://hub.docker.com/
@@ -146,6 +182,7 @@ on a MacOS system, invoke the following:
 :warning: be sure to sign-up and login to https://hub.docker.com(URL_TO_INSERT_RECORD https://hub.docker.com/)/
 
 ```bash
+>docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
 ```
 
 * In order to be able to reach
@@ -156,6 +193,7 @@ https://hub.docker.com(URL_TO_INSERT_RECORD https://hub.docker.com/)/r/chambm/pw
 * Run the Proteowizard `pwiz tool` from the container over the WATERS(URL_TO_INSERT_RECORD http://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=RS:0000457) raw data, by issueing the following command from the terminal:
 
 ```bash
+>docker run -it --rm -e WINEDEBUG=-all -v /Users/bob/Documents/IMI-FAIR+/Resolute/RESOLUTE_Targted_Metabolomics_of_parental_cell_lines/Raw/MCC025_p180_102024_102059_20190125/raw\ data/KIT2-0-8015_1024503073/:/data chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/KIT2-0-8015_1024503073_01_0_1_1_10_11000002.raw --mzML
 ```
 
 The command explained:
@@ -202,6 +240,7 @@ A number of libraries are available for parsing (reading and writing) `mzML(URL_
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/BTs0GUS.png
 ---
 width: 750px
@@ -216,8 +255,22 @@ The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.t
 
 
 ```bash
+import os
+import sys
+import pymzml
+from pymzml.plot import Factory
 
+mzml_file ="KIT3-0-8015_1024503088_42_0_1_1_00_1024502932.mzML"
+msrun = pymzml.run.Reader(mzml_file)
 
+mzml_basename = os.path.basename(mzml_file)
+pf = Factory()
+pf.new_plot()
+pf.add(msrun["TIC"].peaks(), color=(0, 0, 0), style="lines", title=mzml_basename)
+pf.save(
+        "chromatogram_{0}.html".format(mzml_basename),
+        layout={"xaxis": {"title": "Retention time"}, "yaxis": {"title": "TIC"}},
+)
 
 ```
 
@@ -227,6 +280,7 @@ The Python `pymzml` library entry in the [Elixir Biotools catalog](https://bio.t
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/caaqwFo.png
 ---
 width: 650px
@@ -268,6 +322,9 @@ Then, interrogating the [Biotools catalog](https://bio.tools(URL_TO_INSERT_RECOR
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding acquisition
+Robert: Writing - Review & Editing
 ````
 
 
@@ -276,4 +333,5 @@ Then, interrogating the [Biotools catalog](https://bio.tools(URL_TO_INSERT_RECOR
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

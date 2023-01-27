@@ -2,6 +2,16 @@
 # Creating resolvable identifiers
 
 ````{panels_fairplus}
+:identifier_text: FCB077
+:identifier_link: 'https://w3id.org/faircookbook/FCB077'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: data_manager, data_scientist  
+:maturity_level: 1
+:maturity_indicator: 1
+:has_executable_code: nope
+:recipe_name: Creating resolvable identifiers
 ```` 
 
 
@@ -114,6 +124,11 @@ Using purl.org, you can add custom redirects, with [HTTP status codes](https://e
 i.e. it would attach all the string(URL_TO_INSERT_RECORD https://string-db.org/) behind a known part to redirect you 
 
 ```{note} example
+deposited URL for the partial redirect is `http://example.com/one` and intended to be routed 
+from `http://purl.org/example` . 
+When you call `http://purl.org/example/two`, it will route you to `http://example.com/one/two`.
+If there was no partial redirect in place, you would receive an error when calling `http://purl.org/example/two`
+because this URL would not be known to the purl.org server).
 ```
 
 
@@ -124,6 +139,9 @@ A typical implementation route goes like this:
 4.	Create your individual redirect, e.g. `purl.org/faircookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)/recipe1` with status 302 redirecting to `http://example.org/faircookbook/recipe/1`
 
 ```{note}
+Take home: 
+Quick and easy solution; but not the most reliable. You have to register one purl "domain" to one user; 
+if multiple users want to manage a common GUPRI space, they have to share the same credentials.
 ```
 
 ### w3id.org 
@@ -155,6 +173,12 @@ A typical implementation route goes like this:
 6.	Wait for acceptance of the Pull Request, and/or answer questions from the maintainers
 
 ```{note}
+Take home:
+Possibly quick and easy solution. 
+If no maintainer reacts on your pull request, you can’t act yourself (but our experience is maintainers always act diligently).
+Bound by social contract, but no formal / legal one. 
+You decide yourself how you share the maintenance load within your namespace, and can only hope that the maintainers
+of the w3id.org repo act in accordance with your wishes (e.g. don’t allow "outsiders" to change identifiers in your namespace).
 ```
 
 
@@ -212,6 +236,9 @@ However, if scale-up is required and millions of GUPRIs are needed, a different 
 ## Authors
 
 ````{authors_fairplus}
+Robert: Writing - Original Draft
+Tooba: Reviewing & Editing
+Philippe: Reviewing & Editing
 ````
 
 
@@ -220,4 +247,5 @@ However, if scale-up is required and millions of GUPRIs are needed, a different 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB048
+:identifier_link: 'https://w3id.org/faircookbook/FCB048'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 20
+:intended_audience: software_developer, data_manager, system_administrator  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: yeah
+:recipe_name: Deploying a data catalogue - The IMI data catalogue example
 ```` 
 
 
@@ -34,6 +44,7 @@ The following need to be installed on the machine the deployment is run on:
 Check out the code to your local machine by running the following command in a terminal:
 
 ```shell
+$ git clone git@github.com:FAIRplus/imi-data-catalogue.git
 ```
 
 Thanks to **docker-compose**, it is possible to easily manage all the components (solr and web server) required to run
@@ -51,9 +62,13 @@ Unless otherwise specified, all the following commands should be run in a termin
 * First, generate the certificates that will be used to enable HTTPS(URL_TO_INSERT_RECORD https://en.wikipedia.org/wiki/HTTPS) in reverse proxy. To do so, execute:
 
 ```bash
+$ cd docker/nginx/
+$ ./generate_keys.sh
 ``` 
  
 ````{warning}       
+⚡ _Please note that if you run this command outside the `nginx` directory, the certificate and key will be generated in the wrong location._         
+This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
 
 ```{warning}
 ⚡ However, be aware that skipping this would cause the HTTPS(URL_TO_INSERT_RECORD https://en.wikipedia.org/wiki/HTTPS) connection to be unsafe!
@@ -64,17 +79,22 @@ Unless otherwise specified, all the following commands should be run in a termin
 * Return to the root directory (`$cd ../..`), then copy **datacatalog/settings.py.template** to **datacatalog/settings.py**. 
 
 ```bash
+$ cd ../..
+$ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
 * Edit the **settings.py** file to add a random string(URL_TO_INSERT_RECORD https://string-db.org/) of characters in **SECRET_KEY** attribute. For maximum security,
 in **Python**, use the following to generate this key:
 
 ```python
+import os
+os.urandom(24)
 ```
     
 * Build and start the docker containers by running:
 
 ```bash
+(local) $ docker-compose up --build
 ```
 	
     That will create:
@@ -83,28 +103,37 @@ in **Python**, use the following to generate this key:
     * a container for `Solr`
  
 ```{note} 
+> ⚡ the data will be persistant between runs.
 ```
 
 
 * In a new terminal, to create `Solr` core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)s, do:
 
 ```bash
+(local) $ docker-compose exec solr solr create_core -c datacatalog
+(local) $ docker-compose exec solr solr create_core -c datacatalog_test
 ```
 
 * Then, still in the second terminal, put Solr data into the core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)s:  
 
 ```bash
+(local) $ docker-compose exec web /bin/bash
 ```
 
 ```bash
+(web container) $ python manage.py init_index 
+(web container) $ python manage.py import_entities Json dataset 
 ```
 
 ```{admonition} Tip
+:class: tip
+> ⚡ to kill the container, press "`CTRL+D`" or type: "`exit`" from the terminal
 ```
 	
 * The web application should now be available with loaded data via  http://localhost and https://localhost with ssl connection 
  
 ```{warning}
+⚡ - Most browsers display a warning or block self-signed certificates. 
 ```
 
 ### Maintenance of docker-compose
@@ -112,11 +141,13 @@ Docker container keeps the application in the state it was when  built. Therefor
 the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project), the container has to be rebuilt in order to see changes in application** :
 
 ```shell
+$ docker-compose up --build
 ```
 
 If you wanted to delete Solr data, you'd need to run:
 
 ```shell
+$ docker-compose down --volumes
 ```
 
 This will remove any persisted data - you must redo **solr create_core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)** (see step 4 in the previous section) to 
@@ -130,23 +161,29 @@ delete and modify datasets. **After saving the file, rebuild and restart docker-
 First, to stop all the containers:
 
 ```shell
+$ CTRL+D
 ```
 
 Then rebuild and restart the containers:
 
 ```shell
+$ docker-compose up --build
 ```
 
 Finally, reindex the datasets using:
 
 ```shell
+(local) $ docker-compose exec web /bin/bash
 ```
 
 ```shell
+(web container) $ python manage.py import_entities Json dataset 
 ```
 
 
 ```{admonition} Tip
+:class: tip
+> ⚡ to kill the container, press "`CTRL+D`" or type: "`exit`" from the terminal
 ```
 
 ---
@@ -157,6 +194,8 @@ In some cases, you might not want Solr and Nginx to run (for example, if there a
 Then, simply use:
 
 ```shell
+(local) $ docker build . -t "data-catalog"
+(local) $ docker run --name data-catalog --entrypoint "gunicorn" -p 5000:5000 -t data-catalog -t 600 -w 2 datacatalog:app --bind 0.0.0.0:5000
 ```
 
 ## Manual deployment
@@ -188,9 +227,15 @@ as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 ## Authors
 
 ````{authors_fairplus}
+Danielle: Writing - Original Draft
+Valentin: Writing - Original Draft
+Wei: Writing - Review & Editing
+Venkata: Writing - Review & Editing
+Philippe: Writing - Review & Editing
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

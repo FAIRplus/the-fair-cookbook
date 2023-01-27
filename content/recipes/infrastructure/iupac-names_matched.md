@@ -4,6 +4,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB080
+:identifier_link: 'https://w3id.org/faircookbook/FCB080'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: chemoinformatician, data_curator, data_manager, data_scientist  
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: yeah
+:recipe_name: Creating InChIKeys for IUPAC names
 ```` 
 
 ## Main Objectives
@@ -27,12 +37,22 @@ In Colab we can use [Bacting](https://github.com(URL_TO_INSERT_RECORD https://gi
 to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:
 
 ```python
+from scyjava import config, jimport
+config.endpoints.append('io.github.egonw.bacting:managers-inchi:0.1.0')
+config.endpoints.append('io.github.egonw.bacting:managers-opsin:0.1.0')
 
+inchi_cls = jimport("net.bioclipse.managers.InChIManager")
+inchi = inchi_cls(".")
+opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
+opsin = opsin_cls(".")
 ```
 
 After that, we use the manager API to parse the IUPAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) name and generate an InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/) and InChI(URL_TO_INSERT_RECORD https://www.inchi-trust.org/)Key:
 
 ```python
+anInChI = inchi.generate(opsin.parseIUPACName("methane"))
+print(f"InChI: {anInChI.getValue()}")
+print(f"InchIKey: {anInChI.getKey()}")
 ```
 
 The full Jupyter notebook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) can be found [here](https://gist.github.com(URL_TO_INSERT_RECORD https://github.com/)/egonw/e4c788437a827407457deb764ce8eb93),
@@ -46,8 +66,16 @@ Because Bacting is written in Java and the libraries being available from
 The above code in Groovy looks like:
 
 ```groovy
+@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.1.0')
+@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.1.0')
 
+workspaceRoot = "."
+inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
+opsin = new net.bioclipse.managers.OpsinManager(workspaceRoot);
 
+anInChI = inchi.generate(opsin.parseIUPACName("methane"))
+println "InChI: ${anInChI.getValue()}"
+println "InchIKey: ${anInChI.getKey()}"
 ```
 
 ## Conclusion
@@ -74,11 +102,13 @@ original IUPAC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/) names.
 ## Authors
 
 ````{authors_fairplus}
+Egon: Writing - Original Draft
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 

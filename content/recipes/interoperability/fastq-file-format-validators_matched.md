@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB030
+:identifier_link: 'https://w3id.org/faircookbook/FCB030'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: yeah
+:recipe_name: Validating file format - FASTQ example
 ```` 
 
 ## Main Objectives
@@ -16,6 +26,7 @@ The main purpose of this recipe is to:
 
 
 ````{dropdown} 
+:open:
 ```{figure} fastq-validation.png
 ---
 width: 350px
@@ -66,6 +77,7 @@ FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast
 This recipe provides an example of validating FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files with _FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q-utils_ on MacOS and Linux machines.
 
 ```{warning}
+⚠️ Quality control is out of the scope of file format validation.
 ```
 
 
@@ -73,6 +85,7 @@ This recipe provides an example of validating FAST(URL_TO_INSERT_RECORD https://
 
 
 ````{dropdown} 
+:open:
 ```{figure} /images/jOYK2ZM.jpg
 ---
 width: 800px
@@ -98,12 +111,15 @@ The users are expected to be comfortable with Unix-based OS and basic Bash progr
 The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nunofonseca/fastq_utils) {footcite}`nuno_fonseca_2020_3936692`.
 
 ```shell
+conda install -c bioconda fastq_utils
 ```
 
 
 ### Step 2: Get example file for testing*
 
 ```{admonition} Note
+:class: tip
+*  Users can skip this step and test with their own files._ 
 ```
 
 
@@ -114,22 +130,50 @@ __Example 1: Get single read FAST(URL_TO_INSERT_RECORD https://www.oclc.org/rese
 The command below downloads an _Ion Torrent S5_ fastq file from ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena). [This file](https://www.ebi.ac.uk/ena(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)/browser/view/SRR12132977) is the whole genome sequencing file of SARS(URL_TO_INSERT_RECORD http://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=RS:0000457)-CoV-2. The complete file is 192Mb. 
 
 ```shell
+wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
 ```
 Users can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of this FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file.
 ```
+@SRR12132977.1 1/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACAAACTAAAATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAG
++
+C@CCD>DBC?B692;;;09?<BBBBC>BBBBBBBBB@?ABB@BC<BBB>@A?:999992;=>>@??==:=C;>=<:'555)8;;;;;AG:AAAAADD;CCBB>?@;;;0:<@A>CEE?CFCC
+@SRR12132977.2 2/1
+AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAACTAATTACTGTCGTTGACAGGACACGAGTAACTCGTCTATCTTCTGCAGGCTGCTTACGGTTTCGTCCGTGTTGCAGCCGATCATCAGCAC
++
+A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB@AAC>>9BBBB;;;@@?;><::;99<9<;A;>><@@A:=:>@@@>A@>:>===>:=<<>>;;;>=BCAA?>=A>>>:==>;998<=;===@@@<>>9>>>?;??==:=>>>>:>>;;;;;;;<;;
 ```
 __Example 2: Get paired-read FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q files__
 
 The command below downloads Illumina iSeq 100 paired end sequencing files from ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena). [These files](https://www.ebi.ac.uk/ena(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)/data/view/SRR11542244) are raw sequence reads of a SARS(URL_TO_INSERT_RECORD http://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=RS:0000457)-CoV-2 sample. Each file is 26 Mb.
 
 ```shell
+wget -c \
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_1.fastq.gz \
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR115/044/SRR11542244/SRR11542244_2.fastq.gz
 ```
 Below is the headers of the two files. The read pairs info is listed in the read IDs.
 ```
 # Header of the forward read, SRR11542244_1.fastq.gz
+@SRR11542244.1 1/1
+GTGTGTGTATACATATATATATATATCACATTTTCTTTATCCATTTATCTGTTGTTGGACACTTAGGTTGATTCCATATCTTGGCTATTGTGAATAGTG
++
+,,FFFFFFFFFFFFFFFFFFFFFFFF:FFF:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFFF
+@SRR11542244.2 2/1
+GTGATTCCTCAAAGATTTAGAACCAGAAATACCATGTGACCCAGCAATTCCATTACCAGGTCTAAACCCAAAGGAATATAAATCATTCTGTAATGAAGATA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 # Header of the reverse read, SRR11542244_2.fastq.gz
+@SRR11542244.1 1/2
+CTATTGGGTATTTAATCCAAAGAAAGGAAATCGGTATATCAAAGAGACATCTGCATGCCCATGTTTATTGTAGCACTATTCACAATAGCCAAGATATGGAA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFF
+@SRR11542244.2 2/2
+GAACATATGTGTGCATGTATCTTCATTACAGAATGATTTATATTCCTTTGGGTTTAGACCTGGTAATGGAATTGCTGGGTCACATGGTATTTCTGGTTCTA
++
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 ```
 
 
@@ -138,19 +182,44 @@ Below is the headers of the two files. The read pairs info is listed in the read
 The command below validates the single read file in _Example 1_. 
 
 ```shell
+fastq_info -r SRR12132977.fastq.gz
 ```
 Below are the validation results. _fastq-utils_ returns the number of reads, read length details, and encoding info. Field(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/1369) `Quality encoding` indicates the fastq file variant. FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q-utils returns `OK` for a valid fastq file. Otherwise, it will return the validation details in the Error message.
 
 ```
+Skipping check for duplicated read names
+1900000
+------------------------------------
+Number of reads: 1919741
+Quality encoding range: 34 77
+Quality encoding: 33
+Read length: 25 352 215
+OK
 ```
 
 The validation of paired end reads is similar to single read file validation. 
 
 ```shell
+fastq_info SRR11542244_1.fastq.gz SRR11542244_2.fastq.gz
 ```
 Here are the validation results.
 ```
+fastq_utils 0.23.0
+DEFAULT_HASHSIZE=39000001
+Scanning and indexing all reads from SRR11542244_1.fastq.gz
+700000Scanning complete.
 
+Reads processed: 733611
+Memory used in indexing: ~47 MB
+File SRR11542244_1.fastq.gz processed
+Next file SRR11542244_2.fastq.gz
+700000
+------------------------------------
+Number of reads: 733611
+Quality encoding range: 35 70
+Quality encoding: 33
+Read length: 35 101 96
+OK
 ```
 _fastq_util_ also provides additional arguments to tune the validation:
 
@@ -230,10 +299,14 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 ## Authors
 
 ````{authors_fairplus}
+Fuqi: Writing - Original Draft
+Eva: Writing - Review & Editing
+Peter: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

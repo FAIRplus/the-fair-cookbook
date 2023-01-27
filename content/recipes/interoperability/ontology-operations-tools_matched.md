@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB022
+:identifier_link: https://w3id.org/faircookbook/FCB022
+:difficulty_level: 5
+:recipe_type: survey_review
+:reading_time_minutes: 15
+:intended_audience: data_curator, data_manager, data_scientist, ontologist, software_engineer, terminology_manager 
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Introducing ontology-related tools and services
 ```` 
 
 
@@ -13,11 +23,14 @@ This recipe aims to provide `an overview of tools available` to perform a number
 It aims to serve as a starting point to identify tools for FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification tasks where ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) and semantic frameworks are needed. 
 
 ```{admonition} disclaimer
+It is not intended to provide a comprehensive list covering all possible tools.
 ```
 
 >The lists of tools are generated either automatically by querying the [bio.tools(URL_TO_INSERT_RECORD https://bio.tools/)](https://bio.tools(URL_TO_INSERT_RECORD https://bio.tools/)/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository), or through manual curation. In this last instance, the list produced reflects what is being used in the industry and is influenced by the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) partners that have been surveyed for the purpose of this work.
 
 ```{warning} 
+The content in these tables was generated in March 2021.
+For an updated contents, please check the [FAIR tooling repository](https://github.com/FAIRplus/WP3_FAIR_tooling).
 ```
 
 
@@ -44,6 +57,7 @@ The figure below shows different ontology (URL_TO_INSERT_TERM https://fairsharin
 
 
 ````{dropdown} 
+:open: 
 ```{figure} ontology-operations-mermaid.png
 ---
 width: 700px
@@ -199,6 +213,10 @@ To show how these tools can be used in real life examples, please check the rela
 ## Authors
 
 ````{authors_fairplus}
+Fuqi: Writing - Original Draft, Software
+Eva: Writing - Original Draft, Software
+Sukhi: Data curation, Software
+Philippe: Writing - Review & Editing 
 ````
 
 
@@ -206,6 +224,7 @@ To show how these tools can be used in real life examples, please check the rela
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

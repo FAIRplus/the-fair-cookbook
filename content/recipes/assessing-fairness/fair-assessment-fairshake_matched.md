@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB050
+:identifier_link: 'https://w3id.org/faircookbook/FCB050'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 0 
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Assessing with FAIRshake
 ```` 
 
 
@@ -12,7 +22,9 @@
 :width: 100px
 :align: right
 ```
+This is a tutorial that demonstrates how to use FAIRshake to perform FAIR evaluations of DATS serialized metadata in the context of the CFDE.
 
+This recipe was originally write for the NIH Common Fund Data Ecosystem and is reproduced here for convenience.
 ````
 
 ## Background
@@ -40,6 +52,7 @@ The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) insignia
 <!-- <div><img src="https://fairshake.cloud/static/image/insignia-anatomy.png"  style="padding:1px;"/></div> -->
 
 ````{dropdown}
+:open:
 ```{figure} https://fairshake.cloud/static/image/insignia-anatomy.png
 ---
 width: 800px
@@ -97,6 +110,7 @@ After logging in:
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake login page](./images/ss8.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss8.png
 ---
 width: 800px
@@ -111,6 +125,7 @@ You're brought back to [the home page](https://fairshake.cloud/?q=lincs&projects
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake performing a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)](./images/ss9.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss9.png
 ---
 width: 800px
@@ -127,6 +142,7 @@ Janice is interested in a resource she contributed to: [L1000 dataset of CRIS(UR
 
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake Chrome Extension install](./images/ss10.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss10.png
 ---
 width: 800px
@@ -142,6 +158,7 @@ After installing the extension she went to the [resource's own landing page](htt
 <!-- ![Screenshot showing the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake chrome extension assessment summary](./images/ss6.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss6.png
 ---
 width: 800px
@@ -156,6 +173,7 @@ She points her mouse over some of the red squares revealing informat (URL_TO_INS
 
 <!-- ![Screenshot showing the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake chrome extension assessment summary tooltip](./images/ss7.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss7.png
 ---
 width: 800px
@@ -176,6 +194,7 @@ To that end, and to get a better sense of the scope of the FAIR(URL_TO_INSERT_RE
 
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s Rubric on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake](./images/ss1.png)] -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss1.png
 ---
 width: 800px
@@ -194,6 +213,7 @@ Janice decides to perform a manual assessment of her resource using the FAIR(URL
 
 <!-- ![View on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake with extension](./images/ss11.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss11.png
 ---
 width: 500px
@@ -208,6 +228,7 @@ Which brings her to FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-princ
 
 <!-- ![View on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake link location](./images/ss12.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss12.png
 ---
 width: 800px
@@ -224,6 +245,7 @@ Clicking the assess button, she ends up at [the assessment preparation page](htt
 
 <!-- ![Preparing an assessment on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake](./images/ss13.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss13.png
 ---
 width: 800px
@@ -238,6 +260,7 @@ The digital object and its only rubric were selected automatically, but she ends
 
 <!-- ![Selecting the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s rubric](./images/ss14.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss14.png
 ---
 width: 800px
@@ -252,6 +275,7 @@ Instead of using the CFDE project (URL_TO_INSERT_TERM https://fairsharing.org/se
 
 <!-- ![Selecting the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project)](./images/ss15.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss15.png
 ---
 width: 800px
@@ -266,6 +290,7 @@ It's also important to note that project (URL_TO_INSERT_TERM https://fairsharing
 
 <!-- ![Preparing the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake Assessment](./images/ss16.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss16.png
 ---
 width: 800px
@@ -280,6 +305,7 @@ Confirming this, Janice [begins a manual assessment](https://fairshake.cloud/ass
 
 <!-- ![Performing a Manual Assessment with FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake](./images/ss17.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss17.png
 ---
 width: 800px
@@ -294,6 +320,7 @@ Each metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric
 
 <!-- ![Global unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake](./images/ss18.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss18.png
 ---
 width: 800px
@@ -308,6 +335,7 @@ Global unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?reco
 
 <!-- ![Assessments for Global unique identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)](./images/ss19.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss19.png
 ---
 width: 800px
@@ -324,6 +352,7 @@ Getting back to the assessment, Janice must determine whether the digital object
 
 <!-- ![Identifying identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s](./images/ss20.png) -->
 ````{dropdown}
+:open:
 ```{figure} ./images/ss20.png
 ---
 width: 800px
@@ -345,6 +374,7 @@ While all of these are identifier (URL_TO_INSERT_TERM https://fairsharing.org/se
 <!-- ![FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s](./images/ss21.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss21.png
 ---
 width: 800px
@@ -364,6 +394,7 @@ Thus the matric *is* satisfied in a broad context, though if the question was mo
 <!-- ![Answer to question 1](./images/ss22.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss22.png
 ---
 width: 800px
@@ -380,6 +411,7 @@ The next metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=me
 <!-- ![LINCS dataset terms](./images/ss23.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss23.png
 ---
 width: 800px
@@ -402,6 +434,7 @@ This demonstrates a scenario where even though LINCS *has* persistent identifier
 <!-- ![Answer to question 2](./images/ss24.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss24.png
 ---
 width: 800px
@@ -423,6 +456,7 @@ This API provides a structured way of accessing the informat (URL_TO_INSERT_TERM
 <!-- ![Answer to question 3](./images/ss25.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss25.png
 ---
 width: 800px
@@ -443,6 +477,7 @@ When we're done with our assessment (or just want to save it for later) we can s
 <!-- ![Save publish or delete assessment](./images/ss26.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss26.png
 ---
 width: 800px
@@ -458,6 +493,7 @@ If you complete and publish an assessment, your answers will become associated w
 <!-- ![Assessment shown on FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)shake](./images/ss27.png) -->
 
 ````{dropdown}
+:open:
 ```{figure} ./images/ss27.png
 ---
 width: 800px
@@ -482,10 +518,14 @@ If you have a frictionless datapackage containing your data, you can perform a F
 Please note that you need access to the [CFDE FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Repo](#fair-repo) to access these scripts.
 
 ```bash
+git clone https://github.com/nih-cfde/FAIR.git
+cd Demos/FAIRAssessment/c2m2
 
 # see script help for more options
+python3 assess.py --help
 
 # perform a complete assessment with your frictionless datapackage
+python3 assess.py --offline-package=/your/datapackage.json --output-file=output.jsonl
 ```
 
 Please note that this script tests a number of metric (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric)s including validating terms against ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact), probing links to see if they are available and more, and as such may take some time to run on large amounts of data.
@@ -521,8 +561,48 @@ While there are several ways one can go about making an assessment, one way is t
 
 
 ```python
+rubric = {
+  '@id': 25, # ID in FAIRshake
+  'name': 'NIH CFDE Interoperability',
+  'description': 'This rubric identifies aspects of the metadata models which promote interoperable dataset querying and filtering',
+  'metrics': {},
+}
 
+def metric(schema):
+  ''' A python decorator for registering a metric for the rubric. Usage:
+  @metric({
+    '@id': unique_id,
+    'metric': 'metadata'
+  })
+  def _(asset):
+    yield { 'value': 1.0, 'comment': 'Success' }
+  '''
+  global rubric
+  def wrapper(func):
+    rubric['metrics'][schema['@id']] = dict(schema, func=func)
+  setattr(wrapper, '__name__', schema['name'])
+  return wrapper
 
+def assess(rubric, doc):
+  ''' How to use use this rubric for assessing a document. Usage:
+  assess(rubric, { "your": "metadata" })
+  '''
+  assessment = {
+    '@type': 'Assessment',
+    'target': doc,
+    'rubric': rubric['@id'],
+    'answers': []
+  }
+  # print(assessment)
+  for metric in rubric['metrics'].values():
+    # print('Checking {}...'.format(metric['name']))
+    for answer in metric['func'](doc):
+      # print(' => {}'.format(answer))
+      assessment['answers'].append({
+        'metric': { k: v for k, v in metric.items() if k != 'func' },
+        'answer': answer,
+      })
+  return assessment
 ```
 
 
@@ -531,6 +611,22 @@ With these functions setup, all we have left is to define the metric (URL_TO_INS
 
 
 ```python
+@metric({
+  '@id': 107, # ID in FAIRshake
+  'name': 'DATS',
+  'description': 'The metadata properly conforms with the DATS metadata specification',
+  'principle': 'Findable',
+})
+def _(doc):
+  from jsonschema import Draft4Validator
+  errors = list(Draft4Validator({'$ref': 'http://w3id.org/dats/schema/dataset_schema.json'}).iter_errors(doc))
+  yield {
+    'value': max(1 - (len(errors) / 100), 0),
+    'comment': 'DATS JSON-Schema Validation results in {} error(s)\n{}'.format(
+      len(errors) if errors else 'no',
+      '\n'.join(map(str, errors))
+    ).strip(),
+  }
 
 # ... additional metrics ...
 ```
@@ -541,6 +637,40 @@ With this added metric (URL_TO_INSERT_TERM https://fairsharing.org/search?record
 
 
 ```python
+@metric({
+  '@id': 16, # ID in FAIRshake
+  'name': 'Landing Page',
+  'description': 'A landing page exists and is accessible',
+  'principle': 'Findable',
+})
+def _(doc):
+  landingPages = set(
+    node['access']['landingPage']
+    for node in jsonld_frame(doc, {
+      '@type': 'DatasetDistribution',
+      'access': {
+        'landingPage': {},
+      }
+    })['@graph']
+    if node['access'] and node['access']['landingPage']
+  )
+  if landingPages:
+    for landingPage in landingPages:
+      if requests.get(landingPage).status_code < 400:
+        yield {
+          'value': 1,
+          'comment': 'Landing page found {} and seems to be accessible'.format(landingPage)
+        }
+      else:
+        yield {
+          'value': 0.75,
+          'comment': 'Landing page found {} but seems to report a problem'.format(landingPage)
+        }
+  else:
+    yield {
+      'value': 0,
+      'comment': 'Could not identify any landing pages'
+    }
 
 ```
 
@@ -564,7 +694,12 @@ It is useful for reproducibility purposes but also for reusability purposes for 
 # assumption: DATS objects are generated line by line
 # usage: assess.py < input_dats.txt > output_assessments.txt
 
+import sys, json
+from fairshake_assessments.core import assess_many_async
+from fairshake_assessments.rubrics.rubric_36_nih_cfde import rubric_36_nih_cfde
 
+for assessment in assess_many_async(map(json.loads, sys.stdin)):
+  print(json.dumps(assessment))
 ```
 
 
@@ -583,8 +718,24 @@ The [fairshake-assessments](https://github.com(URL_TO_INSERT_RECORD https://gith
 # usage: API_KEY='' register.py < assessments.jsonl
 # see https://fairshake.cloud/accounts/api_access/ for an API_KEY
 
+import sys
+import json
+from fairshake_assessments.core import (
+  get_fairshake_client,
+  find_or_create_fairshake_digital_object,
+  publish_fairshake_assessment,
+)
 
+project = 87 # project id on fairshake
 
+fairshake = get_fairshake_client(api_key=os.environ['API_KEY'])
+for assessment in map(json.loads, sys.stdin):
+  target = find_or_create_fairshake_digital_object(fairshake=fairshake, **assessment['target'])
+  publish_fairshake_assessment(
+    fairshake=fairshake,
+    project=project,
+    **assessment
+  )
 ```
 
 
@@ -598,6 +749,7 @@ The rubric we used for the CFDE is available from [here](https://fairshake.cloud
 <!-- <div><img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true" width="1000px" style="padding:1px;border:thin solid black;"/></div> -->
 
 ````{dropdown}
+:open:
 ```{figure} https://github.com/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/04/images/ss5.png?raw=true
 ---
 width: 1000px
@@ -636,7 +788,13 @@ awareness about standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fair
 <!-- ### <a name="fair-repo"></a><a name="fair-repo-report"></a><a name="fair-repo-assessments"></a>FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Repo -->
 
 ````{dropdown} **Supplementary Information**
+The CFDE FAIR repository is currently private given that it contains details about DCCs that have not yet been verified.
+Please submit a request to <https://www.nih-cfde.org/contact/> if you need access to the repository.
 
+If you have access to the repository, you can access information in it about:
+- [scripts](https://github.com/nih-cfde/FAIR) to convert several DCC's publicly facing metadata into C2M2 compatible frictionless data packages organized by DCC name
+- [scripts](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment) to automatically assess C2M2 compatible frictionless data packages against the C2M2 rubric on FAIRshake
+- [reports](https://github.com/nih-cfde/FAIR/tree/master/Demos/FAIRAssessment/report) showing the satisfaction of the converted DCC metadata with the C2M2 rubric over time (FAIR assessments over time)
 ````
 
 
@@ -644,6 +802,7 @@ awareness about standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fair
 ## Authors
 
 ````{authors_fairplus}
+Daniel: Writing - Original Draft, Code
 ````
 
 
@@ -651,4 +810,5 @@ awareness about standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fair
 ## License
 
 ````{license_fairplus}
+CC0-1.0
 ````

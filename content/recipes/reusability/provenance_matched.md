@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB036
+:identifier_link: 'https://w3id.org/faircookbook/FCB036'
+:difficulty_level: 3
+:recipe_type: background_information
+:reading_time_minutes: 20
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Introducing Provenance Information
 ```` 
 
 
@@ -48,6 +58,7 @@ The following sections provides further insights into these efforts.
 This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)(URL_TO_INSERT_RECORD http://www.w3.org/TR/prov-dm/) specifications {footcite}`provdm`.
 
 ````{dropdown}
+:open:
 ```{figure} prov-dm-overview.png
 ---
 width: 800px
@@ -69,6 +80,7 @@ serialization, e.g. JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(
 
 
 ````{dropdown}
+:open:
 ```{figure} prov-o-overview.svg
 ---
 width: 800px
@@ -84,14 +96,63 @@ Below is an example of provenance informat (URL_TO_INSERT_TERM https://fairshari
 using turtle representation.
 
 ````bash
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix :     <http://example.org#> .
 
+:bar_chart
+   a prov:Entity;
+   prov:wasGeneratedBy  :illustrationActivity;
+   prov:wasDerivedFrom  :aggregatedByRegions;
+   prov:wasAttributedTo :derek;
+.
 
+:derek
+   a foaf:Person, prov:Agent;
+   foaf:givenName       "Derek";
+   foaf:mbox            <mailto:derek@example.org>;
+   prov:actedOnBehalfOf :natonal_newspaper_inc;
+.
 
+:national_newspaper_inc 
+   a foaf:Organization, prov:Agent;
+   foaf:name "National Newspaper, Inc.";
+.
 
+:illustrationActivity 
+   a prov:Activity; 
+   prov:used              :aggregatedByRegions;
+   prov:wasAssociatedWith :derek;
+   prov:wasInformedBy     :aggregationActivity;
+.
 
+:aggregatedByRegions
+   a prov:Entity;
+   prov:wasGeneratedBy  :aggregationActivity;
+   prov:wasAttributedTo :derek;
+.
 
+:aggregationActivity
+   a prov:Activity;
+   prov:startedAtTime    "2011-07-14T01:01:01Z"^^xsd:dateTime;
+   prov:wasAssociatedWith :derek;
+   prov:used              :crimeData;
+   prov:used              :nationalRegionsList;
+   prov:endedAtTime      "2011-07-14T02:02:02Z"^^xsd:dateTime;
+.
 
+:crimeData
+   a prov:Entity;
+   prov:wasAttributedTo :government;
+.
+:government a foaf:Organization, prov:Agent .
 
+:nationalRegionsList 
+   a prov:Entity;
+   prov:wasAttributedTo :civil_action_group;
+.
+:civil_action_group a foaf:Organization, prov:Agent .
 
 ````
 
@@ -116,15 +177,45 @@ CamFlow support 2 output format (URL_TO_INSERT_TERM https://fairsharing.org/sear
 - W3C PRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/pro)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://proconsortium.org/)(URL_TO_INSERT_RECORD https://w3id.org/ro/)V-JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)
 
 ```bash
+"ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
+    "cf:id": "194334",
+    "prov:type": "fifo",
+    "cf:boot_id": 2725894734,
+    "cf:machine_id": 340646718,
+    "cf:version": 0,
+    "cf:date": "2017:01:03T16:43:30",
+    "cf:jiffies": "4297436711",
+    "cf:uid": 1000,
+    "cf:gid": 1000,
+    "cf:mode": "0x1180",
+    "cf:secctx": "unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023",
+    "cf:ino": 51964,
+    "cf:uuid": "32b7218a-01a0-c7c9-17b1-666f200b8912",
+    "prov:label": "[fifo] 0"
+}
 
 ```
 
 
 Example of a write edge in W3C PRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/pro)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://proconsortium.org/)(URL_TO_INSERT_RECORD https://w3id.org/ro/)V format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format):
 ```bash
+"QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
+    "cf:id": "13",
+    "prov:type": "write",
+    "cf:boot_id": 2725894734,
+    "cf:machine_id": 340646718,
+    "cf:date": "2017:01:03T16:43:30",
+    "cf:jiffies": "4297436711",
+    "prov:label": "write",
+    "cf:allowed": "true",
+    "prov:activity": "AQAAAAAAAEAf9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=",
+    "prov:entity": "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAQAAAAAAAAA=",
+    "cf:offset": "0"
+}
 ```
 
 ```{note}
+CamFlow also concerns itself with a informatics system audit and as obvious from its design, is meanly focused on the security of Linux based systems. The CamFlow framework is highly configurable and allows `profiles` to be defined. This is a very low level solution and its use remains the confines to information security specialists.
 ```
 
 While this tool is probably of limited use to Life Sciences and bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ics applications, we mention it for two reasons:
@@ -165,21 +256,44 @@ Such documents are generated and consumed by a feasibility demonstrator tool suc
 
 
 ```bash
+prefix id <urn:uuid:>
+prefix provenance <arcp://uuid,73eab018-7b36-4f84-a845-aca8073bd46c/metadata/provenance/>
 
+agent(id:a606d227-bf10-4479-8d11-823bb932bbac, 
+    [prov:type='wfprov:WorkflowEngine', prov:type='prov:SoftwareAgent', 
+     prov:label="cwltool 1.0.20180817162414"])
 
+activity(id:73eab018-7b36-4f84-a845-aca8073bd46c, 2018-08-21T15:20:35.059920, -, 
+    [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+wasStartedBy(id:73eab018-7b36-4f84-a845-aca8073bd46c, -, id:a606d227-bf10-4479-8d11-823bb932bbac, 2018-08-21T15:20:35.060038)
 
+activity(id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, -, 
+     [prov:type='wfprov:ProcessRun', prov:label="Run of workflow/packed.cwl#main/compile"])
+wasStartedBy(id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, id:73eab018-7b36-4f84-a845-aca8073bd46c, 2018-08-21T15:20:35.163189)
 
+activity(id:e79fc8dc-6e40-4236-b22c-41fee22947a9, -, -, 
+     [prov:has_provenance='provenance:workflow_compile.e79fc8dc-6e40-4236-b22c-41fee22947a9.cwlprov.provn',
+      prov:has_provenance='provenance:workflow_compile.e79fc8dc-6e40-4236-b22c-41fee22947a9.cwlprov.ttl'
+])
 
 ```
 
 
 
 ````{note}
+Specific recipes about FAIR workflows are available in a specific chapter of the book.
 ````
 
 ````{note}
+How widely supported are CWLprov documents?
 
+This is very part of academic research, meaning that these specifications demonstrate feasibility and capability. 
+A number of collaborators of the CWLProv group have included such provenance information in their frameworks. 
+Tools such as `Bagit` or specifications such as `Research Objects` recommended CWLProv documents to be included in 
+specific folders of the archives when preparing them.
 
+See the [BagIt profile](https://github.com/common-workflow-language/cwlprov/blob/main/bagit.md) for details on the CWLProv folder structure, and the 
+[Research Object profile](https://github.com/common-workflow-language/cwlprov/blob/main/ro.md) on how to declare the typing of the PROV files.
 
 ````
 
@@ -192,6 +306,7 @@ and provides validation functions to check CWL(URL_TO_INSERT_RECORD http://www.c
 
 
 ```bash
+pip install cwltool
 ```
 
 cwltool is not the only implementation of the CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) specifications, others such as [Arvados](https://arvados.org/) and 
@@ -201,6 +316,7 @@ In case these distinct implementations are also installed on the system, one nee
 will be executed.
 
 ```bash
+pip install cwltool-runner
 ```
 
 For the purpose of this recipe, which is to show how provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion can be generated by a tool such as 
@@ -208,6 +324,7 @@ cwltool {footcite}`cwltool`, users will need to make sure that a workflow is ava
 
 
 ```bash
+cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 ```
 
 #### CWLProv-py
@@ -220,12 +337,14 @@ capturing workflow execution informat (URL_TO_INSERT_TERM https://fairsharing.or
 To install the package, simply run the standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) python install package pip: 
 
 ```python
+pip install cwlprov
 ```
 
 To run 'cwlprov' following installation and using an exemplar CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) file, run the following command:
 
 
 ```python
+cwlprov --quiet --directory ./test/1.cwl validate
 ```
 
 ### Provenance and distributed ledger technology
@@ -246,6 +365,9 @@ availability of means of verification by being able to access independent source
 This allows consistency checks to be performed and therefore provides the means of tempering detection. 
 
 ````{note}
+Transparency does not equate open. Some blockchains are public but others are private, for instance to support domain 
+specific applications ranging from financial services, supply chain or other sensitive area such as healthcare 
+information {footcite}`10.3389/fsufs.2020.563424`.
 ````
 
 - immutability: this is the last tenet of DLT and refers to the fact that once an entry has been to the distributed
@@ -255,6 +377,14 @@ block would result in changing its signature. This can be done but the cost coul
 entail modifying all subsequent blocks in the chain. This arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)itecture ensures the stability or immutability of the ledger.
 
 ````{admonition} Important
+:class: tip
+This notion of immutability assumes that cryptographic hashes using to digital proof the contracts can not be broken.
+The most advanced algorithms somehow guarantee this given the current compute power available. However, it should not be
+taken for granted. A situation where cryptographic methods would be breached by disruptive technology such as breakthrough
+in quantum computing, are referred to as a `cryptographic armageddon` as it would wreak havoc on the entire edifice by
+allowing to rewrite a ledger, thus voiding trust in an instant {footcite}`ncsc_crypto_whitepaper`. 
+Despite such alarmist claims, quantum computing methods could make attempts to tamper with a ledger impossible, 
+thus reinforcing the approach.
 ````   
 
 
@@ -278,11 +408,18 @@ material listed below:
 
 
 ````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
 ```{image} ../../../images/logos/pistoia_logo.png
 :height: 40px
 :align: center
 :name: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)toolkit_logo
 ```
+^^^	
+- [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)	
+---
+:body: p-0
 ```{rdmkit_panel}
 :inline: true
 ```
@@ -312,9 +449,12 @@ material listed below:
 
 ## Authors
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Wei: Review & Editing
 ````
 
     
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````

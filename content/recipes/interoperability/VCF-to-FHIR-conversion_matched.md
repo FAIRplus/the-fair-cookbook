@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB058
+:identifier_link: 'https://w3id.org/faircookbook/FCB058'
+:difficulty_level: 2
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
+:has_executable_code: yeah
+:recipe_name: Expressing Clinical Genetic Information as FHIR JSON
 ```` 
 
 ## Main Objectives
@@ -18,6 +28,7 @@ The main purpose of this recipe is to provide FAIR(URL_TO_INSERT_RECORD https://
 
 
 ````{dropdown} 
+:open:
 ```{figure} vcf2fhir-json-overview.png
 ---
 width: 1200px
@@ -72,6 +83,12 @@ The aptly named `vcf2fhir` library is a python package designed to perform this 
 
 
 ```{warning}
+In its current form, `vcf2fhir` :
+ - supports `simple variants` (SNVs, MNVs, Indels)
+ - **does not** support `structural variants`
+ - This software is not intended for use in production systems
+ - This software is mainly a prototype for evaluation, testing and refinement of the conversion process and the FHIR message payload
+ - This software does not deal with patient reidentification issues, which needs to be carefully considered if dealing with real patient data, and not test data.
 ```
 
 
@@ -96,6 +113,7 @@ Users running a python environment (virtual or otherwise) need to install `cytho
 Both python modules can be installed with a single invokation of the python installation `pip` command as follows:
 
 ```bash
+pip install cython wheel
 ```
 
 
@@ -104,6 +122,7 @@ Both python modules can be installed with a single invokation of the python inst
 Since the `vcf2fhir` is available from [pypi.org](https://pypi.org), we can also install the vcf2fhir binary using `pip`.
 
 ```bash
+pip install vcf2fhir
 ```
 
 
@@ -114,15 +133,19 @@ In order to use the `VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/An
 Not only that, but as we indicated in the introduction, the version of the VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) files should be at least v4.1. Furthermore, they should be such that they contain only `simple variant` informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion and not `structural variants` (a type of genetic variations which aren't currently supported by the `vcf2fhir` library).
 
 ```{admonition} Note
+:class: tip
+*  The following section shows how to download VCF files available from public location, the VCF2FHIR github repository in this instance. 
 ```
 
 Obtaining an exemplar VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41) file from the [vcf2fhir github(URL_TO_INSERT_RECORD https://github.com/) repository](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/elimuinformatics/vcf2fhir) using the `wget` command:
 
 ```bash
+wget -c https://raw.githubusercontent.com/elimuinformatics/vcf2fhir/master/vcf2fhir/test/vcf_example1.vcf
 ```
 
 
 ```bash
+more vcf_example1
 
 ```
 
@@ -131,6 +154,20 @@ will show the following:
 ```
 ##fileformat=VCFv4.1
 #CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  TEST001
+1   15  .   .   G   .   .   .   GT:PS   0/1:.
+1   16  .   A,T G   .   .   .   GT:PS   0/1:.
+1   17  .   A   G   .   27  .   GT:PS   0/1:.
+1   18  .   A   G   .   .   SVTYPE=INV  GT:PS   0/1:.
+1   20  .       G   .   .   .   GT:PS   0/1:.
+1   25  .   A   G   .   .   .   PS  .
+1   26  .   A   G   .   .   .   GT:PS   ./.:.
+1   27  .   A   G   .   .   .   GT:PS   .|.:.
+1   28  .   A   <CGA_CNVWIN>    .   .   .   GT:PS   0/1:.
+chr1    301 .   A   G   .   .   .   GT:PS   0/1:.
+1   400 .   A   G   .   .   .   GT:PS   1/1:.
+1   500 .   A   G   .   PASS    .   GT:PS   0|1:500
+1   600 .   A   G   .   .   .   GT:PS   1|0:500
+1   700 .   A   G   .   .   .   GT:PS   0|1:700
 
 ```
 
@@ -142,7 +179,10 @@ The conversion command can be issued as follows:
 
 
 ```python
+import vcf2fhir
 
+vcf_fhir_converter = vcf2fhir.Converter('vcf_example1.vcf', 'GRCh37')
+vcf_fhir_converter.convert()
 
 ```
 
@@ -164,6 +204,7 @@ More examples to instantiate the converter
 -  Converts all variants in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41). FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains no region-studied observation.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'aabc')
 ```
 
 -  Converts all variants in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41). FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report assign homoplasmic vs. heteroplasmic based on:
@@ -173,48 +214,57 @@ More examples to instantiate the converter
    **Note** : the default value of ratio_ad_dp = 0.99 and the ratio_ad_dp is considered valid only when its value lies between 0 and 1.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'aabc', ratio_ad_dp = 0.89)
 ```
 
 -  Submitting only noncallable region without other regions generates an error.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'babc', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
 -  Converts all variants in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41). FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains one region-studied observation per studied chromosome.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'cabc', region_studied_filename='WGS_b37_region_studied.bed')
 ```
 
 -  Converts all variants in VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41). FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains one region-studied observation per studied chromosome.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'dabc', region_studied_filename='WGS_b37_region_studied.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
 -  Converts all variants in conversion region. FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains no region-studied observation.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'eabc', conv_region_filename='WGS_b37_convert_everything.bed')
 ```
 
 -  Submitting only noncallable region without other regions generates an error.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'fabc', conv_region_filename='WGS_b37_convert_everything.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
 -  Converts all variants in conversion region. FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains one region-studied observation per studied chromosome, intersected with
    conversion region.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'gabc', conv_region_filename='WGS_b37_convert_everything.bed', region_studied_filename='WGS_b37_region_studied.bed')
 ```
 
 -  Converts all variants in conversion region. FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) report contains one region-studied observation per studied chromosome, intersected with
    conversion region.
 
 ```python
+vcf2fhir.Converter('vcftests.vcf','GRCh37', 'habc', conv_region_filename='WGS_b37_convert_everything.bed', region_studied_filename='WGS_b37_region_studied.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
 -  Conversion of a bgzipped(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41)
 
 ```python
+vcf2fhir.Converter('vcf_example4.vcf.gz','GRCh37', 'kabc', has_tabix=True)
 ```
 
 Below is a typical output of the `vcf2fhir` tool: a HL7(URL_TO_INSERT_RECORD http://www.hl7.org/implement/standards/product_brief.cfm?product_id=186) FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) message compliant with the Genomics Report pattern. 
@@ -222,6 +272,128 @@ Note the use of [LOINC](https://fairsharing.org(URL_TO_INSERT_RECORD https://fai
 
 
 ```JSON
+{
+    "resourceType": "DiagnosticReport",
+    "id": "",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+        ]
+    },
+    "contained": [
+        {
+            "resourceType": "Observation",
+            "id": "",
+            "meta": {
+                "profile": [
+                    "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"
+                ]
+            },
+            "status": "final",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                            "code": "laboratory"
+                        }
+                    ]
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "53041-0",
+                        "display": "DNA region of interest panel"
+                    }
+                ]
+            },
+            "subject": {
+                "reference": "Patient/NB6TK328"
+            },
+            "component": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "92822-6",
+                                "display": "Genomic coord system"
+                            }
+                        ]
+                    },
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "LA30102-0",
+                                "display": "1-based character counting"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "48013-7",
+                                "display": "Genomic reference sequence ID"
+                            }
+                        ]
+                    },
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://www.ncbi.nlm.nih.gov/nuccore",
+                                "code": "NC_000001.11"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "51959-5",
+                                "display": "Range(s) of DNA sequence examined"
+                            }
+                        ]
+                    },
+                    "valueRange": {
+                        "high": {
+                            "value": 201113567.0
+                        },
+                        "low": {
+                            "value": 201038512.0
+                        }
+                    }
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "51959-5",
+                                "display": "Range(s) of DNA sequence examined"
+                            }
+                        ]
+                    },
+                    "valueRange": {
+                        "high": {
+                            "value": 201378701.0
+                        },
+                        "low": {
+                            "value": 201358008.0
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}   
 
 ```
 
@@ -241,14 +413,22 @@ To take advantage of this mechanism, users can invoke each of the `vcf2fhir` log
 
 ```python
 
+import logging
 
 # create logger
+logger = logging.getLogger('vcf2fhir.invalidrecord')
+logger.setLevel(logging.DEBUG)
 
 # create console handler and set level to debug
+ch = logging.FileHandler('invalidrecord.log')
+ch.setLevel(logging.DEBUG)
 
 # create formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # add formatter to ch
+ch.setFormatter(formatter)
 # add ch to logger
+logger.addHandler(ch)
 
 ```
 
@@ -300,8 +480,12 @@ The conversion from VCF(URL_TO_INSERT_RECORD http://www.1000genomes.org/wiki/Ana
 
 ## Authors
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Vassilios: Writing - Review & Editing
+Danielle: Writing - Review & Editing
 ````
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````

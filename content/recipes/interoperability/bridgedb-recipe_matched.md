@@ -7,6 +7,16 @@ TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#displ
 -->
 
 ````{panels_fairplus}
+:identifier_text: FCB017
+:identifier_link: 'https://w3id.org/faircookbook/FCB017'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 30
+:intended_audience: principal_investigator, data_manager, data_scientist 
+:maturity_level: 4
+:maturity_indicator: 49
+:has_executable_code: nope
+:recipe_name: Mapping identifiers with BridgeDb
 ```` 
 
 
@@ -26,6 +36,7 @@ The main purpose of this recipe is to:
 This recipe will cover the highlighted topics
 
 ````{dropdown} 
+:open:
 ```{figure} identifier-mapping.md-figure1.mmd.png
 ---
 width: 1000px
@@ -101,11 +112,16 @@ One of the biggest benefits of using BridgeDb(URL_TO_INSERT_RECORD https://bridg
 We start by defining string(URL_TO_INSERT_RECORD https://string-db.org/)s containing the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) to a specific data source, e.g. Ensembl(URL_TO_INSERT_RECORD http://www.ensembl.org/)(URL_TO_INSERT_RECORD http://www.ensembl.org/).
 
 ```python
+url = "https://webservice.bridgedb.org/"
+batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
 If the aim is to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) only to a specific target data source, then one can check whether the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping is supported by invoking the following webservice call:  
 
 ```python
+mapping_available = "{org}/isMappingSupported/{source}/{target}"
+query = url+mapping_available.format(org='Homo sapiens', source='H', target='En')
+requests.get(query).text
 ```
 
 This will return `True` if the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping between the given source and target is supported for the given organism or `False` otherwise.
@@ -113,6 +129,8 @@ This will return `True` if the map(URL_TO_INSERT_RECORD https://www.cog-genomics
 We then load our data into a pandas dataframe and call the requests library using our query.
 
 ```python
+query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
+response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
 The webservice response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb(URL_TO_INSERT_RECORD https://bridgedb.github.io)_script.py` module (see [Code](#Code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
@@ -152,21 +170,27 @@ As one can see, using the BridgeDb(URL_TO_INSERT_RECORD https://bridgedb.github.
 #### BridgeDb via the dedicated R package
 
 ```{note} 
+For this tutorial R v4.0.3, [tidyverse](https://www.tidyverse.org/) v1.3.0, and [BridgeDbR](https://www.bioconductor.org/packages/release/bioc/html/BridgeDbR.html) v2.0.0 were used.
 ```
 
 After having loaded the required R libraries, we read the data and create a new column to include the source of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema).
 
 ```r
+data_df <- read_tsv(filepath, col_names=c('identifier'))
+data_df$source = 'H'
 ``` 
 
 We then load the data for the organism we are map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping from.
 
 ```r
+ location <- getDatabase('Homo sapiens')
+ mapper <- loadDatabase(location)
 ```
 
 And use the library's     dedicated function to map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s:
 
 ```r
+mapping = maps(mapper, data_df, target='En')
 ```
 This will return:
 | identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) | source | target | map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping         |
@@ -190,6 +214,7 @@ As seen earlier when using Python language, we can obtain all possible map(URL_T
 | A1BG       | H      | X      | 51020_at     |
 
 ```{warning} 
+An error message indicating "Error in download.file" may be thrown. This may be caused by the `timeout` variable being set to too small a value. To remediate the issue, try increasing the timeout variable value by calling `options(timeout=300)`.
 ```
 
 <!--
@@ -207,6 +232,7 @@ This is a step that should be done manually. In this case an important decision 
 ### Mapping local identifier to a different global identifier
 
 ```{note} 
+ In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-identifier-mapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
 The TSV(URL_TO_INSERT_RECORD http://www.iana.org/assignments/media-types/text/tab-separated-values) map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping file looks as follows:
@@ -222,6 +248,7 @@ You may notice the `source` identifier (URL_TO_INSERT_TERM https://fairsharing.o
 This is how the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping will work
 
 ````{dropdown} 
+:open:
 ```{figure} bridgedb-recipe.md-figure1.mmd.png
 ---
 name: bridgedb(URL_TO_INSERT_RECORD https://bridgedb.github.io)-recipe-figure1
@@ -237,11 +264,15 @@ As before, we will define variables including the `web-service's URL(URL_TO_INSE
 We then pass the source column to the `post request` as follows
 
 ```python
+source_data = case2.source.to_csv(index=False, header=False)
+query = batch_request.format('', org=org, source=source)
+response2 = requests.post(query, data = source_data)
 ```
 You may notice here that we did not pass a target source, this could be done as specified before. Then, we use `to_df` again and as expected obtain the same dataframe as before.
 To see the equivalences with our local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)s, we can simply join the dataframes, as follows:
 
 ```python
+local_mapping = mappings.join(case2.set_index('source'), on='original')
 ```
 which will return the following table (first 10 rows)
 | original   | source   | map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping      | target   | local   |
@@ -269,6 +300,7 @@ Here, we see a `one-to-one` relation between the identifier (URL_TO_INSERT_TERM 
 
 
 ````{dropdown} 
+:open:
 ```{figure} bridgedb-recipe.md-figure2.mmd.png
 ---
 name: bridgedb(URL_TO_INSERT_RECORD https://bridgedb.github.io)-recipe-figure2
@@ -279,6 +311,7 @@ An example of a map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/for
 ````
 
 ```{note} 
+This many-to-many relationship stems from different *scientific lenses* in the data sources. You can read more about these in {footcite}`batchelor_scientific_nodate`. The core idea is that depending on the domain/application of the data we can consider different entities as unique. While certain proteins could be considered "equal" from a biological perspective they may require differentiation when using a chemical len. This is what then leads to many-to-many relationships.
 ```
 
 #### R Package
@@ -286,10 +319,12 @@ An example of a map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/for
 Here, we will follow the same steps as in the previous case. The only difference is that we need to specify the columns/fields to use when loading the data:
 
 ```r
+data_df <- read_tsv(filepath, col_names=c('local', 'identifier'))
 ``` 
 Then, after computing the map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping, we can join it with the local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)
 
 ```r
+right_join(data_df, mapping)
 ```
 Assuming we did not specify the target data source we obtain the following table (first 10 rows):
 | local | identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) | source | target | map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)ping      |
@@ -365,10 +400,14 @@ These are aspects of informat (URL_TO_INSERT_TERM https://fairsharing.org/search
 ## Authors
 
 ````{authors_fairplus}
+Lucas: Writing - Original Draft
+Philippe: Writing - Review & Editing
+Alasdair: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB019
+:identifier_link: https://w3id.org/faircookbook/FCB019
+:difficulty_level: 2
+:recipe_type: survey_review
+:reading_time_minutes: 15
+:intended_audience: data_curator, data_manager, data_scientist  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Introducing terminologies and ontologies
 ```` 
 
 ## Main objectives
@@ -39,6 +49,11 @@ As one can sense right away, ontologies (URL_TO_INSERT_TERM https://fairsharing.
 
 In order to improve over simple `controlled terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)`, a huge area of research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) has developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) to provide `tools` and `frameworks` supporting the representations of relationships between entities. The field is known as `formal semantics` in knowledge representation circles. One of the most immediately available examples of `entity relationships` found in ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact), and their potential for improving search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)es, is the `is_a` relationship, which aims to cover the Parent/Child relationship that holds between two entities. For instance:
 ```
+-Vertebrate
+--Mammal
+---Dolphin
+--Bird
+---Pigeon
 ```
 In this representation, `classes` are *directly* asserted (placed) under a parent class if and only if the rule `new class is a child of the parent Class` holds. 'Orchid', which in this hierarch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)y, would not be nested under 'Vertebrate'.
 
@@ -160,18 +175,35 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 
 ## References
 ````{dropdown} **References**
+1. RDF. https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/
+2. SKOS. https://www.w3.org/2004/02/skos/
+3. OWL. https://www.w3.org/OWL/
+4. Hermit. http://www.hermit-reasoner.com/
+5. Elk. http://www.cs.ox.ac.uk/isg/tools/ELK/
+6. OBO Foundry. http://obofoundry.org/
+7. CDISC. https://www.cdisc.org/standards
+8. CDISC Controlled Terminology. https://www.cdisc.org/standards/terminology
+9. LOINC. https://loinc.org/
+10. Gene Ontology. http://geneontology.org/
+11. Protégé. https://protege.stanford.edu/
+12. Topbraid composer. https://www.topquadrant.com/products/topbraid-composer/
+13. INCAtools. https://github.com/INCATools
+14. ROBOT. [R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. ROBOT: A tool for automating ontology workflows. BMC Bioinformatics, vol. 20, July 2019.](https://doi.org/10.1186/s12859-019-3002-3)
 ````
 
 
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Alasdair: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````
 
 

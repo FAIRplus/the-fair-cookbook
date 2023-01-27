@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB020
+:identifier_link: 'https://w3id.org/faircookbook/FCB020'
+:difficulty_level: 1
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, terminology_manager, data_scientist, ontologist
+:maturity_level: 3
+:maturity_indicator: 33
+:has_executable_code: nope
+:recipe_name: Selecting terminologies and ontologies
 ```` 
 
 
@@ -15,6 +25,7 @@ The main purpose of this recipe is to provide guidance on how to select the most
 
 
 ````{dropdown} 
+:open:
 ```{figure} selecting-ontologies.md-figure1.mmd.svg
 ---
 width: 1000px
@@ -55,6 +66,7 @@ All available from the [NCBI EVS system](https://evs.nci.nih.gov/), [LOINC](http
  
 
 ```{warning}
+Some resources are only available under restrictive licences, which prevent derivative work, which may limit access and use. Furthermore, some licenses are expensive.  
 ```
 
 ### Observational Health Data
@@ -82,9 +94,14 @@ This refers to datasets and research(URL_TO_INSERT_RECORD https://arch.library.n
 As a consequence of fewer constraints, research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ers are often confronted with a sea of options. This and the next sections aim to provide some guidance when tasked with deciding on which semantic resource to use.
 
 ```{admonition} Tip
+:class: tip
+ **An important consideration** 
+to bear in mind when selecting semantic resources is to assess whether or not `data archival in public repositories will be required`. For instance, submitting to NCBI Gene Expression Omnibus Data archive places no particular constraints on data annotations but if depositing to EMBL-EBI ArrayExpress, then selecting a resource such as the Experimental Factor Ontology ([EFO](https://www.ebi.ac.uk/efo/)) for annotating data could ease deposition.
 ```
 
 ```{admonition} Tip
+:class: tip
+ **[The FAIRsharing registry](https://fairsharing.org)** {footcite}`pmid30940948` is an ELIXIR resource which provides invaluable content as the catalogue offers an overview of the various semantics artefact used by public data repositories.
 ```
 
 ## Selecting Terminologies 
@@ -290,11 +307,22 @@ This would also have to be placed in the context of advances in `Text Mining` an
 The following is an example of how a `defined class` may be created in an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact). The code snippet shows one such class being expressed to create a type by specifying a number of `axioms`. These use `relations` (aka OWL(URL_TO_INSERT_RECORD http://www.w3.org/TR/owl-overview/) Properties), which may be set to 
 
 ```bash
+'B cell, CD19-positive'
+equivalentClass :
+    'lymphocyte of B lineage, CD19-positive' 
+    and ( 'has plasma membrane part' some 'CD19 molecule') 
+    and ( 'in taxon' some Mammalia) 
+    and ( 'capable of' some 'B cell mediated immunity')
 ```
 
 Any class satisfying these patterns may be classified by an OWL(URL_TO_INSERT_RECORD http://www.w3.org/TR/owl-overview/) reasoner as a child of that class. So the following class, with such properties that they all satisfy the requirements of the `defined class` declared above (e.g. "Homo sapiens" is_a type of "Mammalia", etc...), will be classified automatically (i.e. without human intervention) by a reasoner such as ELK or Hermit as a child of 'B cell, CD19-positive' .
 
 ```bash
+'human B cell, CD19-positive'
+Class:
+    ( 'has plasma membrane part' some 'B-lymphocyte antigen CD19 isoform h2')
+    and ( 'in taxon' some 'Homo sapiens') 
+    and ( 'capable of' some 'B cell tolerance induction in mucosal-associated lymphoid tissue')
 
 ```
 
@@ -350,10 +378,15 @@ Hripcsak, George et al. “Observational Health Data Sciences and Informat (URL_
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding Acquisition
+Danielle: Writing - Review & Editing
+Alasdair: Writing - Review & Editing
 ````
 
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

@@ -4,6 +4,16 @@
 +++
 
 ````{panels_fairplus}
+:identifier_text: FCB062
+:identifier_link: 'https://w3id.org/faircookbook/FCB062'
+:difficulty_level: 3
+:recipe_type: hands_on
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist  
+:maturity_level: 2
+:maturity_indicator: 1, 2
+:has_executable_code: nope
+:recipe_name: Making Computational Workflows FAIR
 ```` 
 
 
@@ -31,6 +41,7 @@ ___
 ## Graphical Overview
 
 ````{dropdown}
+:open:
 ```{figure} fair-workflows.png
 ---
 width: 700px
@@ -109,6 +120,7 @@ workflows once to be able to execute them on CWL(URL_TO_INSERT_RECORD http://www
 * CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) user guide is available here: http://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/user_guide/
 
 ````{dropdown} **See a CWL example**
+:open:
 ```bash
 cwlVersion: v1.0
 class: Workflow
@@ -227,11 +239,40 @@ The following block shows how it can be used with a example:
 http://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/user_guide/24_conditional-workflow/index.html
 
 ```bash
+class: Workflow
+cwlVersion: v1.2
+inputs:
+  val: int
 
+steps:
 
+  step1:
+    in:
+      in1: val
+      a_new_var: val
+    run: foo.cwl
+    when: $(inputs.in1 < 1)
+    out: [out1]
 
+  step2:
+    in:
+      in1: val
+      a_new_var: val
+    run: foo.cwl
+    when: $(inputs.a_new_var > 2)
+    out: [out1]
 
+outputs:
+  out1:
+    type: string
+    outputSource:
+      - step1/out1
+      - step2/out1
+    pickValue: first_non_null
 
+requirements:
+  InlineJavascriptRequirement: {}
+  MultipleInputFeatureRequirement: {}
 ```
 
 
@@ -244,18 +285,61 @@ The blocks of code below shows how this is done with 2 examples.
 
 ```yaml
 #!/usr/bin/env cwl-runner
+cwlVersion: v1.0
+class: CommandLineTool
 
+label: An example tool demonstrating metadata.
+doc: Note that this is an example and the metadata is not necessarily consistent.
 
+hints:
+  ResourceRequirement:
+    coresMin: 4
 
+inputs:
+  aligned_sequences:
+    type: File
+    label: Aligned sequences in BAM format
+    format: edam:format_2572
+    inputBinding:
+      position: 1
 
+baseCommand: [ wc, -l ]
 
+stdout: output.txt
 
+outputs:
+  report:
+    type: stdout
+    format: edam:format_1964
+    label: A text file that contains a line count
 
+s:author:
+  - class: s:Person
+    s:identifier: https://orcid.org/0000-0002-6130-1021
+    s:email: mailto:dyuen@oicr.on.ca
+    s:name: Denis Yuen
 
+s:contributor:
+  - class: s:Person
+    s:identifier: http://orcid.org/0000-0002-7681-6415
+    s:email: mailto:briandoconnor@gmail.com
+    s:name: Brian O'Connor
 
+s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
+s:codeRepository: https://github.com/common-workflow-language/common-workflow-language
+s:dateCreated: "2016-12-13"
+s:license: https://spdx.org/licenses/Apache-2.0 
 
+s:keywords: edam:topic_0091 , edam:topic_0622
+s:programmingLanguage: C
 
+$namespaces:
+ s: https://schema.org/
+ edam: http://edamontology.org/
 
+$schemas:
+ - https://schema.org/version/latest/schemaorg-current-http.rdf
+ - http://edamontology.org/EDAM_1.18.owl
 ```
 
 
@@ -335,6 +419,7 @@ s:about: |
 which is presented below.
 
 ````{dropdown}
+:open:
 ```{figure} workflowhub-eu-1.png
 ---
 width: 700px
@@ -346,6 +431,7 @@ The european workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu) website 1.
 ````
 
 ````{dropdown}
+:open:
 ```{figure} ./workflowhub-eu-2.png
 ---
 width: 700px
@@ -372,6 +458,7 @@ A tool developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/format
 framework, meaning that CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
 
 ````{dropdown}
+:open:
 ```{figure} workflow-cwl-airflow.png
 ---
 width: 700px
@@ -403,6 +490,7 @@ reproducibility and unambiguous description of workflow key descriptors.
 
 
 ````{dropdown}
+:open:
 ```{figure} ./workflow-bco-cloud-tools.png
 ---
 width: 700px
@@ -418,6 +506,7 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
 * a BioCompute Object is serialized as a JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) document. A typical BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) looks like this:
 
 ````{dropdown}
+:open:
 ```json
 {
     "object_id": "urn:uuid:dc308d7c-7949-446a-9c39-511b8ab40caf",
@@ -1519,6 +1608,60 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
 * a BioCompute Object can be integrated with HL7(URL_TO_INSERT_RECORD http://www.hl7.org/implement/standards/product_brief.cfm?product_id=186) FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) as a Provenance Resource.
 
 ```json
+{
+  "resourceType": "Provenance",
+  "id": "example-biocompute-object",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Generated Narrative with Details</b>\n\t\t\t</p><p>\n\t\t\t\t<b>id</b>: example-biocompute-object</p><p>\n\t\t\t\t<b>target</b>: <a href=\"http://build.fhir.org/sequence-example.html\">MolecularSequence/example</a>\n\t\t\t</p><p>\n\t\t\t\t<b>period</b>: 2017-6-6 --&gt; (ongoing)</p><p>\n\t\t\t\t<b>recorded</b>: 2016-6-9 8:12:14</p><p>\n\t\t\t\t<b>reason</b>: antiviral resistance detection (Details: [not stated] code null = 'null', stated as\n         'antiviral resistance detection')</p>\n\t\t\t<h3>Agents</h3>\n\t\t\t<table>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>-</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>Role</b>\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>Who</b>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>*</td>\n\t\t\t\t\t<td>Author (Details: http://hl7.org/fhir/provenance-participant-role code author = 'Author',\n             stated as 'null')</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<a href=\"http://build.fhir.org/practitioner-example.html\">Practitioner/example</a>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t\t<h3>Entities</h3>\n\t\t\t<table>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>-</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>Role</b>\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<b>Reference</b>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>*</td>\n\t\t\t\t\t<td>source</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<a href=\"https://hive.biochemistry.gwu.edu/cgi-bin/prd/htscsrs/servlet.cgi?pageid=bcoexample_1\">Biocompute example</a>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t</div>"
+  },
+  "target": [
+    {
+      "reference": "MolecularSequence/example"
+    }
+  ],
+  "occurredPeriod": {
+    "start": "2017-06-06"
+  },
+  "recorded": "2016-06-09T08:12:14+10:00",
+  "activity": {
+    "text": "antiviral resistance detection"
+  },
+  "agent": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "AUT"
+          }
+        ]
+      },
+      "who": {
+        "reference": "Practitioner/example"
+      }
+    }
+  ],
+  "entity": [
+    {
+      "role": "source",
+      "what": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "https://hive.biochemistry.gwu.edu",
+                "code": "biocompute",
+                "display": "obj.1001"
+              }
+            ]
+          },
+          "value": "https://hive.biochemistry.gwu.edu/cgi-bin/prd/htscsrs/servlet.cgi?pageid=bcoexample_1"
+        }
+      }
+    }
+  ]
+}
 ```
 
 * a BioCompute Object may allow referencing a CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow thus increasing interoperability.
@@ -1536,6 +1679,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
 
 
 ````{dropdown}
+:open:
 ```{figure} ./workflow-sb-biocompute-app.png
 ---
 width: 700px
@@ -1600,9 +1744,12 @@ or to decide whether to perform new ones.
 
 ## Authors
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
+Susanna: Writing - Review & Editing, Funding acquisition
 ````
 
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````

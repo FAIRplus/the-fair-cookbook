@@ -2,6 +2,16 @@
 # Identifier resolution services
 
 ````{panels_fairplus}
+:identifier_text: FCB046
+:identifier_link: 'https://w3id.org/faircookbook/FCB046'
+:difficulty_level: 2
+:recipe_type: background_information
+:reading_time_minutes: 15
+:intended_audience: principal_investigator, data_manager, data_scientist, funder 
+:maturity_level: 1
+:maturity_indicator: 6
+:has_executable_code: nope
+:recipe_name: Introducing identifier resolution services
 ```` 
 
 ## Main Objective
@@ -21,6 +31,8 @@ This relates to the following FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/
 
 
 ```{admonition} Tip
+:class: tip
+ **`URI resolution` is fundamentally about directing requests to the relevant identified entity.** 
 ```
 
 The standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
@@ -33,6 +45,8 @@ When a user retrieves a PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rf
 When an author needs to move a page, they can update the PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT_RECORD http://purlz.org) to point to the new location.
 
 ```{admonition} Tip
+:class: tip
+The practice of **indirection** comes handy as it ensures invariant url address for resources which are known to change, owing to version changes for instance or owing to change in ownership. 
 ```
 
 We can see this practice in action with the reliance on purl.org url for identifying OBO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) Foundry(URL_TO_INSERT_RECORD http://www.obofoundry.org/) resources. For instance, the following url [`http://purl.obolibrary.org/obo/stato.owl`](http://purl.obolibrary.org/obo/stato.owl) is a redirect to the latest release of the file, which is [https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl](https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl).
@@ -124,9 +138,11 @@ The PURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)(URL_TO_INSERT
 ## Authors
 
 ````{authors_fairplus}
+Philippe: Writing - Original Draft
 ````
 
 ## License
 
 ````{license_fairplus}
+CC-BY-4.0
 ````

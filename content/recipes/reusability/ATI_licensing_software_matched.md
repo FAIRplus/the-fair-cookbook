@@ -3,14 +3,28 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB033
+:identifier_link: 'https://w3id.org/faircookbook/FCB033'
+:difficulty_level: 3
+:recipe_type: guidance
+:reading_time_minutes: 15
+:intended_audience: everyone  
+:maturity_level: 0
+:maturity_indicator: 0
+:has_executable_code: nope
+:recipe_name: Licensing Software
 ```` 
 
 
 ````{note} 
+<!-- 
+<a href="https://the-turing-way.netlify.app/welcome"><img src="../../../_images/turing-way-logo.jpg" alt="ati" width="60px"></a> -->
 ```{image} images/turing-way-logo.jpg 
 :width: 60px
 :align: right
 ```
+[The sections about licensing are original content from The Turing Way](https://the-turing-way.netlify.app/welcome) and are included in the FAIRCookbook for convenience. Please cite keeping this in mind.
+> The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [http://doi.org/10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)
 ````
 
 A software license governs the extent of use or redistribution of software, with or without software documentation.
@@ -189,11 +203,16 @@ They may also require that the recipient of the combined work can re-link the mo
 
 
 ````{panels}
+:header: bg-primary pa_dark
 ```{image} ../../../images/logos/TTW.svg
 :height: 40px
 :align: center
 :name: Turing-Way-logo
 ```
+^^^
+[The Turing Way Book of Data Sciences: Software Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-software.html)
+---
+:body: p-0
 ```{rdmkit_panel}
 :inline: true
 ```

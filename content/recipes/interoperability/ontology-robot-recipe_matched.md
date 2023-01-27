@@ -3,6 +3,16 @@
 
 
 ````{panels_fairplus}
+:identifier_text: FCB023
+:identifier_link: 'https://w3id.org/faircookbook/FCB023'
+:difficulty_level: 4
+:recipe_type: hands_on
+:reading_time_minutes: 60
+:intended_audience: terminology_manager, data_manager, data_scientist, ontologist
+:maturity_level: 3
+:maturity_indicator: 33
+:has_executable_code: yeah
+:recipe_name: Building an application ontology with ROBOT
 ```` 
 
 ## Main Objectives
@@ -19,6 +29,7 @@ Thus, it may borrow terms from a number of reference ontologies (URL_TO_INSERT_T
 
 
 ````{dropdown} 
+:open:
 ```{figure} ontology-robot-recipe.md-figure1.mmd.png
 ---
 name: ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)-robot-recipe-figure1
@@ -158,6 +169,7 @@ Besides, the fact that is always possible to manually identify the set of seeds 
 
 
 ````{dropdown} 
+:open:
 ```{figure} ontology-robot-recipe.md-figure2.mmd.png
 ---
 name: ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)-robot-recipe-figure2
@@ -182,14 +194,66 @@ The following sample script uses the `Zooma web service` to get a list of seed t
 #Python3
 #zooma-annotator-script.py file
 
+def get_annotations(propertyType, propertyValues, filters = ""):
+    """
+    Get Zooma annotations for the values of a given property of a given type.
+    """
+    
+    import requests
+    
+    annotations = []
+    no_annotations = []
 
+    for value in propertyValues:
+        ploads = {'propertyValue': value,
+                  'propertyType': propertyType,
+                  'filter': filters}
+        r = requests.get('http://www.ebi.ac.uk/spot/zooma/v2/api/services/annotate',
+                         params=ploads)
+            
+        import json
+        data = json.loads(r.text)
+        
+        if len(data) == 0:
+            no_annotations.append(value)
+        
+        for item in data:
+            annotations.append((f"{item['semanticTags'][0]} "
+                                f"# {value}"
+                                f"-Confidence:{item['confidence']}"))
 
+    return annotations, no_annotations
 
+if __name__ == "__main__":
+    propertyType = 'gender'
+    propertyValues = ['male', 'female', 'unknown']
 
+    annotations, no_annotations = get_annotations(propertyType, propertyValues)
 
+    from pprint import pprint
+    pprint(annotations)
+    pprint(no_annotations)
 ```
 Running the above script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
 ```python
+['https://purl.obolibrary.org/obo/PATO_0000384 # male-Confidence:HIGH',
+ 'https://purl.obolibrary.org/obo/PATO_0000383 # female-Confidence:HIGH',
+ 'https://www.orpha.net/ORDO/Orphanet_288 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003850 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003952 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0009471 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000203 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003863 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000616 # unknown-Confidence:MEDIUM',
+ 'https://purl.obolibrary.org/obo/HP_0000952 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003853 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_1001331 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0003769 # unknown-Confidence:MEDIUM',
+ 'https://purl.obolibrary.org/obo/HP_0000132 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0000408 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0008549 # unknown-Confidence:MEDIUM',
+ 'https://www.ebi.ac.uk/efo/EFO_0001642 # unknown-Confidence:MEDIUM']
+[]
 ```
 #### Seed term extraction with NCBO Annotator
 
@@ -198,14 +262,53 @@ The following sample script uses the NCBO(URL_TO_INSERT_RECORD http://cbo.biocom
 #Python3
 #ncbo-annotator-script.py file
 
+def get_annotations(propertyValues, ontologies = ''):
+    """
+    Get NCBO Annotations for the values of a given property.
+    """
+        
+    import requests
+    
+    annotations = []
+    no_annotations = []
+    
+    for value in propertyValues:
+        ploads = {'apikey': '8b5b7825-538d-40e0-9e9e-5ab9274a9aeb',
+                  'text': value,
+                  'ontologies': ontologies,
+                  'longest_only': 'true',
+                  'exclude_numbers': 'false',
+                  'whole_word_only': 'true',
+                  'exclude_synonyms': 'false'}
+        r = requests.get('https://data.bioontology.org/annotator', params=ploads)
+        
+        import json
+        data = json.loads(r.text)
+        
+        if len(data) == 0:
+            no_annotations.append(value)
+        
+        for item in data:
+            annotations.append(f"{item['annotatedClass']['@id']} # {value}")
 
+    return annotations, no_annotations
 
+if __name__ == "__main__":
+    propertyType = 'gender'
+    propertyValues = ['male', 'female', 'unknown']
 
+    annotations, no_annotations = get_annotations(propertyType, propertyValues)
 
+    from pprint import pprint
+    pprint(annotations)
+    pprint(no_annotations)
 ```
 Running the above script to get the seeds for the terms `male`, `female`, and `unknown` generates the following results:
 
 ```python
+['http://purl.obolibrary.org/obo/UBERON_0003101 # male',
+ 'http://purl.obolibrary.org/obo/UBERON_0003100 # female']
+['unknown']
 ```
 
 #### Step 2.2.3 Seed term extraction with SPARQL 
@@ -213,11 +316,32 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SP(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/SP)ARQL(URL_TO_INSERT_RECORD http://www.w3.org/TR/sparql11-overview/) query`. Here, we generate a subset of `UBERO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://open.med.harvard.edu/wiki/display/eaglei/Ontology)(URL_TO_INSERT_RECORD https://w3id.org/ro/)N(URL_TO_INSERT_RECORD http://uberon.org/)` terms which have a cross-reference to either `FMA(URL_TO_INSERT_RECORD http://si.washington.edu/projects/fma)(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/) (for human anatomy)` or `MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/) (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
 ```bash
+PREFIX scdo: <http://scdontology.h3abionet.org/ontology/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
+SELECT ?uri WHERE {
 
+{
+ {
+  ?uri oboInOwl:hasDbXref ?xref .
+ }
+UNION
+ {
+  ?axiom a owl:Axiom;
+  	owl:annotatedSource ?uri;
+        oboInOwl:hasDbXref ?xref .
+ }
+}
 
+?uri a owl:Class
 
+FILTER isLiteral(?xref)
+FILTER regex( ?xref, "^FMA|^MA:", "i") 
 
+}
 ```
 
 
@@ -230,6 +354,7 @@ Module extractions from ontologies (URL_TO_INSERT_TERM https://fairsharing.org/s
 We recommend starting each (re)build of the application ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) with the latest versions of the source ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) unless there is a good reason not to update to the latest version. Ideally, this should be done automatically, for example through a shell script that CURL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)s all ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) from their source URI(URL_TO_INSERT_RECORD https://www.rfc-editor.org/rfc/rfc3986)s, e.g.
 
 ```shell
+curl -L http://purl.obolibrary.org/obo/uberon.owl > uberon.owl
 ```
 
 #### Step 3.2 Choose ontology extraction algorithms
@@ -242,6 +367,11 @@ We recommend starting each (re)build of the application ontology (URL_TO_INSERT_
 Using `robot` tool provided by the `OBO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) foundry(URL_TO_INSERT_RECORD http://www.obofoundry.org/)`, the creation of a module can be done with one command:
 
 ```bash
+robot extract --method <some_selection> \
+    --input <some_input.owl> \
+    --term-file <list_of_classes_of_interest_in_ontology.txt> \
+    --intermediates <choose_from_option> \
+    --output ./ontology_modules/extracted_module.owl
 ```
 The `robot` extract command takes several arguments:
 
@@ -259,7 +389,9 @@ The `robot` extract command takes several arguments:
 The above query, saved under `select_anatomy_subset.sparql` can be used to generate a dynamic seed list, then do a `BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)T` extraction: 
 
 ```shell
+robot query --input uberon.owl --query select_anatomy_subset.sparql uberon_seed_list.txt
 
+robot extract --method BOT --input uberon.owl --term-file uberon_seed_list.txt -o uberon_subset.owl
 ```
 
 #### Step 3.4 Assess extracted modules
@@ -277,6 +409,10 @@ After the _Domain Expert_ and the _Use Case/Scenario Owner_ specify the main ent
 A `RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)BO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)T` command using a template to build an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) is shown below:
 
 ```bash
+robot template --template template.csv \
+    --prefix "r4: https://fairplus-project.eu/ontologies/R4/" \
+    --ontology-iri "https://fairplus-project.eu/ontologies/R4/" \
+    --output ./templates/umbrella.owl
 ```
 
 And a template sample is presented following:
@@ -292,7 +428,10 @@ And a template sample is presented following:
 
 
 ```{admonition} Tip
+:class: tip
 
+⚡ The generated ontology can be visualized by using the [Protégé tool](https://protege.stanford.edu/) or local deployment of OLS. 
+The {ref}`fcb-infra-localols` option is recommended by this recipe, given that `Protégé` may crash when loading medium or large size ontologies.
 ```
     
 ### Step 5: Merge ontology modules and umbrella ontology
@@ -302,6 +441,12 @@ Merging the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordTy
 The `merge` RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)BO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)T command allows combining two or more separate input ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) modules into a single ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact). Following, the `RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)BO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)T` command merging the umbrella ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) and the modules is shown:
 
 ```bash
+java -jar robot.jar merge \
+    --input ./ontology_modules/iao_mireot_robot_module_1.owl \
+    --input ./ontology_modules/obi_mireot_robot_module_2.owl \
+    --input ./ontology_modules/duo_mireot_robot_module_3.owl \
+    --input ./templates/umbrella.owl \
+    --output ./results/r4_app_ontology.owl
 ```
 
 ### Step 6: Post-merge modifications
@@ -311,6 +456,11 @@ The `merge` RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(UR
 Commands below infer superclasses and superclasses and reduce duplicated axioms merged term:
 
 ```bash
+robot materialize \
+--reasoner ELK  \
+--input merged_owl  \
+reduce \
+--output materialized.owl 
 ```
 
 The ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) materialization uses `OWL(URL_TO_INSERT_RECORD http://www.w3.org/TR/owl-overview/) reasoners`. `RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)BO(URL_TO_INSERT_RECORD http://www.obofoundry.org/)(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)T` provides [several ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) reasoners](http://robot.obolibrary.org/reason). 
@@ -318,6 +468,7 @@ The ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=termi
 It is also possible to identify issues in the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) with some `quality control SP(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/SP)ARQL(URL_TO_INSERT_RECORD http://www.w3.org/TR/sparql11-overview/) queries`. 
 
 ```bash
+robot report --input edit.owl --output report.tsv
 ```
 
 
@@ -328,12 +479,30 @@ Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminolo
 The annotation can be added either line-by-line or provided in a turtle (.ttl) file. 
 ```bash
 #ANNOTATE
+robot annotate --input materialized.owl \
+  --ontology-iri "https://github.com/ontodev/robot/examples/annotated.owl" \
+  --version-iri "https://github.com/ontodev/robot/examples/annotated-1.owl" \
+  --annotation rdfs:comment "Comment" \
+  --annotation rdfs:label "Label" \
+  --annotation-file annotations.ttl \
+  --output results/annotated.owl
 
 ```
 
 Below is an example annotation file.
 
 ```bash
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix example: <https://github.com/ontodev/robot/examples/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+example:annotated.owl
+  rdf:type owl:Ontology ;
+  rdfs:comment "Comment from annotations.ttl file." .
+  dcterms:title "Example title"
+  dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/>
+  owl:versionIRI <https://github.com/ontodev/robot/examples/annotated-1.owl>
 ```
 
 #### Step 6.3: Convert
@@ -342,6 +511,10 @@ Besides `OWL(URL_TO_INSERT_RECORD http://www.w3.org/TR/owl-overview/) format (UR
 
 ```bash
 #CONVERT:
+robot convert \
+--input  annotated.owl\
+--format obo \
+--output results/annotated.obo
 ```
 
 ### Step 7: Assess coverage of the ontology scope
@@ -353,6 +526,9 @@ The final step of the ontology (URL_TO_INSERT_TERM https://fairsharing.org/searc
 The query command runs SP(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/SP)ARQL(URL_TO_INSERT_RECORD http://www.w3.org/TR/sparql11-overview/) `ASK`, `SELECT`, and `CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NS(URL_TO_INSERT_RECORD https://github.com/enpadasi/Ontology-for-Nutritional-Studies)TR(URL_TO_INSERT_RECORD http://code.google.com/p/onstr/)UCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. A pattern example of this command is shown as follows.
 
 ```bash
+robot query --input <input_ontology_file> \
+    --queries <query_file> \
+    --output-dir <path_to_results> results/
 ```
 
 
@@ -385,6 +561,8 @@ It is therefore also critical to understand the benefits of contributing to exis
 ``` -->
 
 
+<!-- - R.C. Jackson, J.P. Balhoff, E. Douglass, N.L. Harris, C.J. Mungall, and J.A. Overton. [_ROBOT: A tool for automating ontology workflows_](https://link.springer.com/epdf/10.1186/s12859-019-3002-3?author_access_token=bB8BLjFWrdh42vR6DjT-nG_BpE1tBhCbnbw3BuzI2RPCZ2BK7EeexaCNYfT-cCz8Q_mrZomT2_svoQf12CW661Sagzw6JGF9DhJq3Q3fTPdMGFMtais7MRgx8-kDhp6uC9g2qcVh5FumTsveV22XVQ%3D%3D). BMC Bioinformatics, vol. 20, July 2019
+- Arp, Robert, Barry Smith, and Andrew D. Spear. _Building ontologies with basic formal ontology_. Mit Press, 2015. -->
 
 
 ## Supplementary material

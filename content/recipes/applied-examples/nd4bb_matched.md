@@ -7,14 +7,29 @@ TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#displ
 -->
 
 ````{panels_fairplus}
+:identifier_text: FCB043
+:identifier_link: https://w3id.org/faircookbook/FCB043
+:difficulty_level: 4
+:recipe_type: applied_example
+:recipe_name: ND4BB - chemical activities datasets
+:reading_time_minutes: 20
+:intended_audience: data_manager, data_curator
+:maturity_level: 2
+:maturity_indicator: 1, 2
+:has_executable_code: nope
 ```` 
 
 ````{admonition} Editor's summary
 
+The authors of this recipe start with data spread over well structured web pages. 
 
+They use a [KNIME](https://www.knime.com/) workflow to extract the data into an Excel spreadsheet. 
 
+The authors encounter inconsistencies in the web pages, and fix them. 
 
+In a separate step, the collected strings were sent through two different ontology annotation APIs. The results are compared.
 
+This is one of the first recipes within the FAIRplus project, and served as a pilot to develop a structured FAIRification process.
 ````
 
 ## Ingredients
@@ -52,6 +67,7 @@ To get a good understanding of the AMR dataset, the AMR metadata shall be extrac
 {numref}`nd4bb-figure1` is an example of the simplified schematic workflow of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification, which includes the extraction, the transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion, the annotation, the licensing and the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) assigning process. Due to time constraint, we focussed on the extraction and annotation of structural metadata. The administrative and the descriptive metadata will be added in the future.
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure1.png
 ---
 width: 650px
@@ -70,6 +86,7 @@ Data are extracted using a [KNIME workflow provided here](https://owncloud.lcsb.
 {numref}`nd4bb-figure2` is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)ion. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) heading level 3 (\<h3\>, shown in the red box in {numref}`nd4bb-figure3`) and compounds as an unordered list (\<ul\>, shown in the yellow box in {numref}`nd4bb-figure3`).
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure2.jpg
 ---
 width: 750px
@@ -81,6 +98,7 @@ Snapshot of AMR compound database (URL_TO_INSERT_TERM https://fairsharing.org/se
 ````
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure3.jpg
 ---
 width: 450px
@@ -97,6 +115,7 @@ We first identified all websites that contain the project (URL_TO_INSERT_TERM ht
 Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) \<td\>…\</td\>, chemical “Oxazolidinones” and “Tetracyclines” use different data structure. Therefore the extracted XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/) document was updated before applying further nodes to the XML(URL_TO_INSERT_RECORD https://www.w3.org/TR/xml/) document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. 
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure4.png
 ---
 width: 650px
@@ -112,6 +131,7 @@ Links to all content in the sub-page are also extracted. {numref}`nd4bb-figure5`
 The complete workflow to extract the data from the compound/charge webpage is depicted in {numref}`nd4bb-figure7`.
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure5.jpg
 ---
 width: 550px
@@ -123,6 +143,7 @@ Example of one ND4BB raw data. Marked in green boxes are a table section with th
 ````
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure7.png
 ---
 width: 550px
@@ -141,6 +162,7 @@ The data were extracted following the following schema to facilitate future data
 One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup). 
 
 ````{dropdown}
+:open:
 ```{figure} nd4bb.md-figure6.png
 ---
 width: 650px
@@ -208,9 +230,11 @@ Overall this dataset has been very useful to start our overall process and team 
 
 ## Authors
 ````{authors_fairplus}
+Manfred: Writing - Original Draft
 ````
 
 
 ## License
 ````{license_fairplus}
+CC-BY-4.0
 ````
