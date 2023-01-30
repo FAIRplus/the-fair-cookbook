@@ -81,7 +81,7 @@ Schematic workflow of the general FAIRification pipeline. Some steps need repeti
 
 ### Data extraction
 
-Data are extracted using a [KNIME workflow provided here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), with which we can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced. 
+Data are extracted using a [KNIME workflow provided here](https://api.hub.knime.com/repository/Users/yojana_gadiya/Public/ND4BB/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf:data?spaceVersion=-1), with which we can visualize the data extraction steps, handle complex data extraction workflows and be easily reproduced. 
 
 {numref}`nd4bb-figure2` is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML heading level 3 (\<h3\>, shown in the red box in {numref}`nd4bb-figure3`) and compounds as an unordered list (\<ul\>, shown in the yellow box in {numref}`nd4bb-figure3`).
 
@@ -157,7 +157,7 @@ Workflow to extract the data from compound/charge webpage.
 
 ### Data transformation
 
-The data were extracted following the following schema to facilitate future data annotation: "PropertyGroup - Property - Value" where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in {numref}`nd4bb-figure6`. For each property, the corresponding values in a controlled vocabulary list are collected into a [spreadsheet](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_NCBOREC_0347.xlsx). Missing values were fixed in this step as well. 
+The data were extracted following the following schema to facilitate future data annotation: "PropertyGroup - Property - Value" where PropertyGroup is the heading of the table, Property is the type of property and Value is the corresponding value of the property which will be not part of the annotation process. If the property is an image, then the “PropertyGroup” is image, “Property” is “2D/3D image”. (See the red box in {numref}`nd4bb-figure6`. For each property, the corresponding values in a controlled vocabulary list are collected into a [spreadsheet](https://zenodo.org/record/7586252#.Y9f_puzMLt0). Missing values were fixed in this step as well. 
 
 One limitation of this schema is that Excel does not explicitly describe the relations between the entities (e.g. Property Group and Property). Therefore predicates between concepts cannot be expressed (e.g. Property hasA PropertyGroup). 
 
@@ -180,7 +180,7 @@ To prepare for the ontology annotation, we first generated lists of different ty
 
 The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map the keyword to its root form to avoid mismatch due to spelling or form variations.
 
-All the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here ([result Excel file for querying ZOOMA](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx), [result Excel file for querying NCBO](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx)). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is [here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf). 
+All the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here ([result Excel file for querying ZOOMA](https://zenodo.org/record/7586252#.Y9f_puzMLt0), [result Excel file for querying NCBO](https://zenodo.org/record/7586252#.Y9f_puzMLt0)). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is [here](https://api.hub.knime.com/repository/Users/yojana_gadiya/Public/ND4BB/20190122_EBI_ZOOMA_requests_V5.knwf:data?spaceVersion=-1). 
 
 Both ZOOMA and NCBO ontology recommenders returned the nearly same number of annotated terms, also the number searched ontologies for the NCBO Recommender (313) was much higher than the number of searched ontologies for the ZOOMA (11) service. For only a few cases did the NCBO Recommender show results (e.g. BAL29880 and MBX2319) where ZOOMA did not find a corresponding ontology. 
 
@@ -198,7 +198,7 @@ The proposed workflow is insufficient to extract adequate and consistent semanti
 
 ## FAIR assessment
 
-We conducted an assessment of the FAIRness of the dataset, with the results stored [here](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260). Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness separately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA FAIR indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%. 
+We conducted an assessment of the FAIRness of the dataset, with the results stored [here](https://zenodo.org/record/7586252#.Y9f_puzMLt0). Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness separately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA FAIR indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%. 
 
 
 ## Possible next steps
@@ -219,7 +219,7 @@ The AMR dataset was provided as a first example as it was immediately available.
 
 As a result of our work on the AMR dataset, we identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map to) and other details included in our report.
 
-We also identified key FAIRification steps in the proposed process, some of which are non-obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. 
+We also identified key FAIRification steps in the proposed process, some of which are non-obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. All KNIME workflows mentioned in this recipe can be found [here](https://hub.knime.com/-/spaces/-/latest/~kWtm8A9mkrfEaN5R/).
 
 Overall this dataset has been very useful to start our overall process and team activities.
 
