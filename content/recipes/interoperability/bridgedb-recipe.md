@@ -153,7 +153,7 @@ query = batch_request.format('?dataSource=En', org='Homo sapiens', source='H')
 response = requests.post(query, data=data.to_csv(index=False, header=False))
 ```
 
-The webservice response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module (see [Code](#Code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
+The webservice response is now stored in the `response` variable. We can then simply pass this variable to the `to_df` method provided in the `bridgedb_script.py` module (see [Code](#code)). This method will extract the response in text form and turn it into a pandas Dataframe with conveniently named columns and structured data.
 
 The output table will contain the:
 * Original identifier
