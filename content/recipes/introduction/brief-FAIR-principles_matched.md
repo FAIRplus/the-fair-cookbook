@@ -13,7 +13,7 @@
 :maturity_level: 2 
 :maturity_indicator: 1, 2
 :has_executable_code: nope
-:recipe_name: Introducing the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)
+:recipe_name: Introducing the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Principles (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) 
 ```` -->
 
 ## Introduction
@@ -59,7 +59,7 @@ doi: 10.1038/sdata.2016.18
 >
 >F3. metadata **`clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes`**
 >
->F4. (meta)data are registered or **`indexed in a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able resource`**
+>F4. (meta)data are registered or **`indexed in a search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) able resource`**
 ````
 
 ````{dropdown} **Accessibility**
@@ -84,7 +84,7 @@ doi: 10.1038/sdata.2016.18
 
 >I1. (meta)data use a **`formal, accessible, shared, and broadly applicable language for knowledge representation`**.
 >
->I2. (meta)data use **`vocabularies that follow FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles`**
+>I2. (meta)data use **`vocabularies that follow FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles`**
 >
 >I3. (meta)data include **`qualified references to other (meta)data`**
 ````
@@ -122,7 +122,7 @@ doi: 10.1038/sdata.2016.18
 >
 >F3. metadata clearly and explicitly include the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes
 >
->F4. (meta)data are registered or **indexed in a search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)able resource**
+>F4. (meta)data are registered or **indexed in a search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) able resource**
 ```
 
 ```{tabbed} A.
@@ -142,7 +142,7 @@ doi: 10.1038/sdata.2016.18
 
 >I1. (meta)data use a **formal, accessible, shared, and broadly applicable language for knowledge representation**.
 >
->I2. (meta)data use **vocabularies that follow FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles**
+>I2. (meta)data use **vocabularies that follow FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles**
 >
 >I3. (meta)data include **qualified references** to other (meta)data
 ```
@@ -165,7 +165,7 @@ doi: 10.1038/sdata.2016.18
 
 ## The FAIR principles and FAIRplus
 
-The principles will be the organizing principle for the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059). While the book(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) itself can be search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) in
+The principles will be the organizing principle for the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) plus Cookbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) . While the book (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  itself can be search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  in
 various ways and its content exposed through a number of angles, personas and facets, 
 the main `Table of Content` organizes a number of atomic recipes around of the principles and their associated sub themes. 
 
@@ -176,15 +176,15 @@ the main `Table of Content` organizes a number of atomic recipes around of the p
  
 ## Conclusions
 
-This section should be seen as a refresher for anyone unclear about the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/). 
+This section should be seen as a refresher for anyone unclear about the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) . 
 Now that key background informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion has been provided, shining a light on a number of ethical issues driving 
-both the development and implementation of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) in the context of Life Science data
-as well as learning about the overall FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ification process represent a natural progression 
-in the content of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Cookbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059).
+both the development and implementation of the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  in the context of Life Science data
+as well as learning about the overall FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) ification process represent a natural progression 
+in the content of the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Cookbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) .
 
 ### What to read next?
-* [The ethical values of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)](./FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)plus-values)
-* [Assessing FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness](../assessing-fairness)
+* [The ethical values of FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) ](./FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) plus-values)
+* [Assessing FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) ness](../assessing-fairness)
 
 ````{rdmkit_panel}
 ````
@@ -197,8 +197,8 @@ in the content of the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-pri
 <!-- ```{bibliography} ./fair.bib
   :style: alpha
 ``` -->
-1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
-2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 
+1. Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
+2. Wilkinson, M.D., Dumontier, M., Jan Aalbersberg, I. et al. Addendum: The FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Guiding Principles for scientific data management and stewardship. Sci Data 6, 6 (2019). https://doi.org/10.1038/s41597-019-0009-6 
 
 ````
 

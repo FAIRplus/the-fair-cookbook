@@ -19,7 +19,7 @@
 
 The main purpose of this recipe is:
 
-> To embed `Schema.org(URL_TO_INSERT_RECORD http://schema.org/)(URL_TO_INSERT_RECORD http://schema.org/)` markup in a web page that publishes multiple datasets in a single page.
+> To embed `Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ` markup in a web page that publishes multiple datasets in a single page.
 
 
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
@@ -47,9 +47,9 @@ The main purpose of this recipe is:
 ---
 width: 500px
 name: 
-alt: The process of annotating a data catalog webpage with bioschema markup for Search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Engine discovery
+alt: The process of annotating a data catalog webpage with bioschema markup for Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine discovery
 ---
-The process of annotating a data catalog webpage with bioschema markup for Search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Engine discovery.
+The process of annotating a data catalog webpage with bioschema markup for Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine discovery.
 ```
 ````
 
@@ -58,60 +58,60 @@ The process of annotating a data catalog webpage with bioschema markup for Searc
 
 ## Method
 
-We will outline the steps for marking up a page in your site that is about multiple datasets. The resulting markup will be compliant with both [Google's Dataset markup guidelines](https://developers.google.com/search/docs/data-types/dataset#publication) and the [Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) DataCatalog Profile(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01)](https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/DataCatalog). 
+We will outline the steps for marking up a page in your site that is about multiple datasets. The resulting markup will be compliant with both [Google's Dataset markup guidelines](https://developers.google.com/search/docs/data-types/dataset#publication) and the [Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  DataCatalog Profile (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2037b2) ](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/DataCatalog). 
 
-We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/) as an example for this recipe which makes three datasets available within its markup.
+We will use [FAIRsharing](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /) as an example for this recipe which makes three datasets available within its markup.
 
-1. Identify the page in your site about a specific dataset, e.g. https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/
+1. Identify the page in your site about a specific dataset, e.g. https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /
 
-2. Open the  [Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
+2. Open the  [Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select `DataCatalog` from the Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Profile dropdown
+   1.  Select `DataCatalog` from the Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Profile dropdown
 
-   2.  Enter the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) of the page in URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) box, e.g. `https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/`
+   2.  Enter the URL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9d38e2)  of the page in URL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9d38e2)  box, e.g. `https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /`
 
    3.  Click on the `Show Form` button
    
    ````{dropdown} 
    :open:
-   ```{figure} Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org)Generator.png
+   ```{figure} Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) Generator.png
    ---
-   name: bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)-generator-start-screen-1
-   alt: Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator start screen.
+   name: bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) -generator-start-screen-1
+   alt: Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator start screen.
    
    ---
-   Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator start screen.
+   Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator start screen.
    ```
    ````
 
 3. Complete the profile form with the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion relevant for your page. Once completed, click on the `Generate Markup`  button
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
-   - Where possible you should link to other resources. The Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a `url` and no other properties.
+   - Where possible you should link to other resources. The Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a `url` and no other properties.
      - If there are separate pages for your datasets then you should link to them using an `@id` link
      - Otherwise, you can include the markup within the `DataCatalog` markup
-   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) `, this defaults to `PropertyValue` but `Text` or `URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) ` will be more appropriate in most cases
-   - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
+   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) `, this defaults to `PropertyValue` but `Text` or `URL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9d38e2)  ` will be more appropriate in most cases
+   - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
    ````{dropdown} 
    :open:
-   ```{figure} Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org)GeneratorDataCatalogForm.png
+   ```{figure} Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) GeneratorDataCatalogForm.png
    ---
    height: 550px
-   name: Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator DataCatalog profile form
-   alt: Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator DataCatalog profile form
+   name: Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator DataCatalog profile form
+   alt: Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator DataCatalog profile form
    ---
-   Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Generator DataCatalog profile form.
+   Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Generator DataCatalog profile form.
    ```   
    ````
 
-4. You will now see the generated markup in `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . You can click on the `Microdata` and `RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)a(URL_TO_INSERT_RECORD https://www.w3.org/TR/rdfa-primer/)` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s. However, we recommend the use of `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`. For our FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org).org example, we get the following markup
+4. You will now see the generated markup in `JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) ` format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . You can click on the `Microdata` and `RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9) a (URL_TO_INSERT_RECORD http://127.0.0.1:8080/663) ` tabs to see the same content rendered in the different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s. However, we recommend the use of `JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) `. For our FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5) .org example, we get the following markup
 
    ```
    <script type="application/ld+json" >
    {
-     "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
-     "@id": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/",
+     "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
+     "@id": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /",
      "@type": "DataCatalog",
      "alternateName": [
        "BioSharing.org"
@@ -124,12 +124,12 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
      ],
      "dataset": [
        {
-         "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
          "@type": "Dataset",
-         "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Dataset(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/Dataset/)/0.3-RELEASE-2019_06_14",
-         "description": "A manually curated registry of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s, split into three types - Terminology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Artifacts (ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , e.g. Gene Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) (URL_TO_INSERT_RECORD http://www.geneontology.org)), Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s (conceptual schema, format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, data model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, e.g. FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)A(URL_TO_INSERT_RECORD http://blast.ncbi.nlm.nih.gov/blastcgihelp.shtml)), and Reporting Guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline)  (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s (e.g. the ARRIVE(URL_TO_INSERT_RECORD http://www.nc3rs.org.uk/arrive-guidelines) guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s for in vivo animal testing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html)). These are linked to the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s that implement them and the funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  that recommend or endorse their use.",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Dataset (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.20sbr9) /0.3-RELEASE-2019_06_14",
+         "description": "A manually curated registry of standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s, split into three types - Terminology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Artifacts (ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , e.g. Gene Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6xq0ee) ), Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s (conceptual schema, format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, data model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, e.g. FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) A (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rz4vfg) ), and Reporting Guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline)  (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s (e.g. the ARRIVE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t58zhj)  guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s for in vivo animal testing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr) ). These are linked to the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s that implement them and the funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  that recommend or endorse their use.",
          "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
-           "https://www.fairsharing.org(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/bsg-sXXXXXX"
+           "https://www.fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /bsg-sXXXXXX"
          ],
          "keywords": [
            "Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s",
@@ -140,30 +140,30 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
            "Reporting Guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline)  (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s"
          ],
          "name": "Metadata Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) ",
-         "url": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/standards"
+         "url": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /standards"
        },
        {
-         "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
          "@type": "Dataset",
-         "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Dataset(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/Dataset/)/0.3-RELEASE-2019_06_14",
-         "description": "A manually curated registry of database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s/data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) , conforming to the BioDBcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk) standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  (from the Life Sciences). These are linked to the standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s that they use and the funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  that recommend or endorse their use.",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Dataset (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.20sbr9) /0.3-RELEASE-2019_06_14",
+         "description": "A manually curated registry of database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s/data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) , conforming to the BioDBcore (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL)  standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  (from the Life Sciences). These are linked to the standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s that they use and the funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  that recommend or endorse their use.",
          "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
-           "https://www.fairsharing.org(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/bsg-dXXXXXX"
+           "https://www.fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /bsg-dXXXXXX"
          ],
          "keywords": [
            "Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ",
            "Data repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) "
          ],
          "name": "Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ",
-         "url": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/databases"
+         "url": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /databases"
        },
        {
-         "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
          "@type": "Dataset",
-         "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Dataset(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/Dataset/)/0.3-RELEASE-2019_06_14",
-         "description": "A manually curated registry of data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  from research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder) s, journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher) s, societies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society) , and other organisations. These are linked to the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s and standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s that they recommend for use",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Dataset (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.20sbr9) /0.3-RELEASE-2019_06_14",
+         "description": "A manually curated registry of data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  from research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder) s, journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher) s, societies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society) , and other organisations. These are linked to the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s and standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s that they recommend for use",
          "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
-           "https://www.fairsharing.org(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/bsg-pXXXXXX"
+           "https://www.fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /bsg-pXXXXXX"
          ],
          "keywords": [
            "Data policy (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy) ",
@@ -172,11 +172,11 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
            "society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society) "
          ],
          "name": "Data Policy (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy) ",
-         "url": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/policies"
+         "url": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /policies"
        }
      ],
-     "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/DataCatalog/0.3-RELEASE-2019_07_01(URL_TO_INSERT_RECORD https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01)",
-     "description": "A manually curated, informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ive and educational resource on data and metadata standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s, inter-related to database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s/data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  and funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  from across disciplines. FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org) is an ELIXIR-UK node resource and has an active role in the RDA(URL_TO_INSERT_RECORD https://researchdata.edu.au/) and Force11 data initiatives.",
+     "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/DataCatalog/0.3-RELEASE-2019_07_01 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2037b2) ",
+     "description": "A manually curated, informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ive and educational resource on data and metadata standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s, inter-related to database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s/data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  and funder (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=funder)  and journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  publisher (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal_publisher)  data policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  from across disciplines. FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  is an ELIXIR-UK node resource and has an active role in the RDA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2g5kcb)  and Force11 data initiatives.",
      "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": [
        "https://identifiers.org/MIR:00000364"
      ],
@@ -190,17 +190,17 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
        "@id": "https://creativecommons.org/licenses/by-sa/4.0/",
        "@type": "CreativeWork"
      },
-     "name": "FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org).org",
+     "name": "FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5) .org",
      "provider": [
        {
-         "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
          "@type": "Organization",
-         "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Organization/0.2-DRAFT-2019_07_19",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
          "description": "",
-         "name": "FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org).org Registry"
+         "name": "FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5) .org Registry"
        }
      ],
-     "url": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/"
+     "url": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /"
    }
    </script >
    ```
@@ -214,11 +214,11 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
    ```
    "provider": [
        {
-         "@context": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ",
          "@type": "Organization",
-         "dct:conformsTo": "https://bioschemas.org(URL_TO_INSERT_RECORD https://bioschemas.org)/profiles/Organization/0.2-DRAFT-2019_07_19",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
          "description": "",
-         "name": "FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org).org Registry"
+         "name": "FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5) .org Registry"
        }
      ],
    ```
@@ -229,20 +229,20 @@ We will use [FAIRsharing](https://fairsharing.org(URL_TO_INSERT_RECORD https://f
    "provider": [
        {
          "@type": "Organization",
-         "@id": "https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/communities"
+         "@id": "https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /communities"
        }
      ],
    ```
    
-   You can test that your JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) is valid syntax, and visualise your markup using the [JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) Playground](https://json-ld.org/playground/).
+   You can test that your JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb)  is valid syntax, and visualise your markup using the [JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb)  Playground](https://json-ld.org/playground/).
 
-7. Once you are happy with your markup, include the `JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/)`, script tags and all, at the bottom of your HTML(URL_TO_INSERT_RECORD https://www.w3.org/TR/html53/) page template. 
+7. Once you are happy with your markup, include the `JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) `, script tags and all, at the bottom of your HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL)  page template. 
 
    Make sure that this is before the closing `</html>` tag.
    
    Your site should now include DataCatalog markup. 
    
-   Once you have deployed this on your web server, you can test it with the [Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)(URL_TO_INSERT_RECORD https://bioschemas.org) profiles<sup>[1](#bioschemas(URL_TO_INSERT_RECORD https://bioschemas.org)-validator)</sup>.
+   Once you have deployed this on your web server, you can test it with the [Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  profiles<sup>[1](#bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) -validator)</sup>.
 
 ---
 

@@ -27,7 +27,7 @@ We will cover the following points:
 3. ETL
 4. data loading
 5. data indexing
-6. facet oriented search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ing
+6. facet oriented search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) ing
 7. minting of stable, persistent and resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s
 
 ```{tabbed} Table of Data Standards
@@ -63,7 +63,7 @@ For **role.Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairshari
 without intense curation, but good potential for data discovery. Works should rely on approved data standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s.
 
 For **role.lab scientists**, the key is to have a minimal burden when having to *action.deposit* a dataset to an 
-institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) al arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ive or simply *action.register* to dataset to the **data catalogue**. 
+institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) al arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) ive or simply *action.register* to dataset to the **data catalogue**. 
 
 
 ---
@@ -71,35 +71,35 @@ institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=instit
 
 ### What is a Data Catalogue?
 
-A **Data Catalogue** is a resource meant to allow fast identification of **Data set**. In keeping with the fam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliar notion 
+A **Data Catalogue** is a resource meant to allow fast identification of **Data set**. In keeping with the fam (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.d0886a) iliar notion 
 of catalogue, (be it that of an exhibition or that of brand products), the notion of **data catalogue** needs to be
 understood as the compendium of **short descriptive metadata elements** about an actual set of data. The 
 **Data Index or Data Catalogue** ***does not*** store the datasets themselves but provides informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
 about where the datasets can be obtained from. Therefore, **Data Catalogues** are often used to index the content of
-'**Data Repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ** and ** Data Arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ives**, which provide hosting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) solutions for the actual datasets, which are often
+'**Data Repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ** and ** Data Arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) ives**, which provide hosting (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  solutions for the actual datasets, which are often
 organized (but not always)' around specific **data types** or **data production modalities** 
-(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence arch(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/)ives and so on.)
+(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) ives and so on.)
  
 
 ### What are the standards supporting establishing a data catalogue?
 
 **Data Catalogues** have been identified as critical infrastructure and therefore a number of model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  exist to support their implementation.
-1. DATS(URL_TO_INSERT_RECORD https://github.com/biocaddie/WG3-MetadataSpecifications):
-The Data Article Tag Suite model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) <!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document --> has been developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) during the 
-NIH(URL_TO_INSERT_RECORD http://sweetgum.nybg.org/science/ih/)-BD2K project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s and underpins the [datamed(URL_TO_INSERT_RECORD https://datamed.org) catalogue](https://datamed.org(URL_TO_INSERT_RECORD https://datamed.org)/), the aim of which was to produce a 
-prototype of a [**Pubmed(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/pubmed/) for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
+1. DATS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.e20vsd) :
+The Data Article Tag Suite model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) <!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO add a link to corresponding document --> has been developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  during the 
+NIH (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.41718d) -BD2K project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s and underpins the [datamed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.v5q4zc)  catalogue](https://datamed.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.v5q4zc) /), the aim of which was to produce a 
+prototype of a [**Pubmed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a5sv8m)  for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
 
-2. DC(URL_TO_INSERT_RECORD http://dublincore.org/documents/dces/)(URL_TO_INSERT_RECORD https://doi.org/10.25504/FAIRsharing.3nx7t)AT(URL_TO_INSERT_RECORD https://www.w3.org/TR/vocab-dcat/)(URL_TO_INSERT_RECORD http://cat.aii.caas.cn/):
-In the world of semantic web technologies, The W3C DC(URL_TO_INSERT_RECORD http://dublincore.org/documents/dces/)(URL_TO_INSERT_RECORD https://doi.org/10.25504/FAIRsharing.3nx7t)AT(URL_TO_INSERT_RECORD https://www.w3.org/TR/vocab-dcat/)(URL_TO_INSERT_RECORD http://cat.aii.caas.cn/) specifications<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO add a link to corresponding document -->
-(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF(URL_TO_INSERT_RECORD http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)**.
-3. Schema.org(URL_TO_INSERT_RECORD http://schema.org/)(URL_TO_INSERT_RECORD http://schema.org/):
-The vocabulary developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by the consortium of search(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) engines has defined a metadata profile for [**Dataset**](https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/Dataset),
-[**Data Catalogue**](https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/DataCatalog)
+2. DC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3547) AT (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3a96ae)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.h4j3qm) :
+In the world of semantic web technologies, The W3C DC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3547) AT (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3a96ae)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.h4j3qm)  specifications<!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO add a link to corresponding document -->
+(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9) **.
+3. Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) :
+The vocabulary developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  by the consortium of search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engines has defined a metadata profile for [**Dataset**](https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /Dataset),
+[**Data Catalogue**](https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /DataCatalog)
 
 
 ### How are Data Catalogue populated?
 
-A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  or harvesting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-LD(URL_TO_INSERT_RECORD https://json-ld.org/spec/latest/json-ld/) files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
+A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  or harvesting (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb)  files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
 
 ### What are examples of Data Catalogues?
 
@@ -109,8 +109,8 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 * Open source solutions:
 
-    * [NIH(URL_TO_INSERT_RECORD http://sweetgum.nybg.org/science/ih/) DataMed(URL_TO_INSERT_RECORD https://datamed.org)(URL_TO_INSERT_RECORD https://datamed.org)](https://datamed.org(URL_TO_INSERT_RECORD https://datamed.org)/)
-    * [EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L-EBI OMICS-DI](https://www.omicsdi.org/)
+    * [NIH (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.41718d)  DataMed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.v5q4zc)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.v5q4zc) ](https://datamed.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.v5q4zc) /)
+    * [EMB (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a1rp4c) L-EBI OMICS-DI](https://www.omicsdi.org/)
     * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
 
 
@@ -126,10 +126,10 @@ This recipe introduced the general concept of data catalogue and why they consti
 We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes
 
 * {ref}`fcb-infra-imi-cat-deploy`
-<!-- * TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO Deploying the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)PO(URL_TO_INSERT_RECORD http://plantontology.org/)(URL_TO_INSERT_RECORD https://bioportal.bioontology.org/ontologies/RPO)RT data catalogue {ref}` TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO fcb-infra-fairport-deploy` --> 
-<!-- * TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO Deploying the GA4GH(URL_TO_INSERT_RECORD https://github.com/ga4gh/schemas) Beacon(URL_TO_INSERT_RECORD http://docs.genomebeacons.org) endpoint {ref}` TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO fcb-infra-beacon(URL_TO_INSERT_RECORD http://docs.genomebeacons.org)(URL_TO_INSERT_RECORD http://docs.genomebeacons.org)-deploy`     -->
+<!-- * TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO Deploying the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) PO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3ngg40)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.x9s8e) RT data catalogue {ref}` TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO fcb-infra-fairport-deploy` --> 
+<!-- * TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO Deploying the GA4GH (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2tpx4v)  Beacon (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6fba91)  endpoint {ref}` TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO fcb-infra-beacon (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6fba91)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6fba91) -deploy`     -->
 
-For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) such
+For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  such
 interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`
@@ -145,7 +145,7 @@ interoperability and reusability, see the following:
 
 ## Authors
 
-<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO seems unlikely that all authors did review, but no-one the original draft. Clarify -->
+<!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO seems unlikely that all authors did review, but no-one the original draft. Clarify -->
 ````{authors_fairplus}
 Philippe: Writing - Review & Editing
 Susanna: Writing - Review & Editing, Funding acquisition

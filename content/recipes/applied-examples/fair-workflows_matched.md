@@ -26,10 +26,10 @@ The main purpose of this recipe is:
 > Provide guidance on resources available to help developers and data scientists make the various workflows used for daily tasks
 > (for extract-load-transform, quality control, deployment or analytical workflow) available in open format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  and reusable.
 > 
-> Provide guidance for regulator(URL_TO_INSERT_RECORD http://www.bioinformatics.org/regulator)y submissions for nucleic acid sequence analysis using the BioCompute Object (BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco))
+> Provide guidance for regulator (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ey49c6) y submissions for nucleic acid sequence analysis using the BioCompute Object (BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy) )
 > specification.
 > 
-> Remind the active nature of the field and the fast evolving environment and platforms developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) for these
+> Remind the active nature of the field and the fast evolving environment and platforms developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  for these
 > tasks.
 > 
 > Provide an example using the Apache Airflow framework to illustrate the process.
@@ -46,9 +46,9 @@ ___
 ---
 width: 700px
 name: fair-workflows
-alt: FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) workflows
+alt: FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  workflows
 ---
-FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) workflows
+FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  workflows
 ```
 ````
 
@@ -57,28 +57,28 @@ FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) workflows
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_2428)  | [Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org) (CWL)](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.8y5ayx)  | [report](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_2048)  |
-| [text annotation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3778)  | [EDAM](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.a6r7zs)  | [annotated text](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_3779)  |
+| [validation](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /operation_2428)  | [Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  (CWL)](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.8y5ayx)  | [report](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_2048)  |
+| [text annotation](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /operation_3778)  | [EDAM](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.a6r7zs)  | [annotated text](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_3779)  |
 
 
 ## Table of Data Standards
 
 | Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
-| [CWL](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.8y5ayx) | [EDAM](https://fairsharing.org(URL_TO_INSERT_RECORD https://fairsharing.org/)(URL_TO_INSERT_RECORD https://fairsharing.org)(URL_TO_INSERT_RECORD https://fairsharing.org/)/FAIRsharing.a6r7zs)  |   |
-|[Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute Object - IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/)](https://opensource.ieee.org/2791-object/ieee-2791-schema/)|||
+| [CWL](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.8y5ayx) | [EDAM](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.a6r7zs)  |   |
+|[Bioc (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) ompute Object - IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E 2791-2020 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.bbd7df) ](https://opensource.ieee.org/2791-object/ieee-2791-schema/)|||
 
 
 ## Tools:
 
-|Name | URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630)| type |
+|Name | URL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9d38e2) | type |
 |:--|:--|:--|
 |Apache Airflow| [https://airflow.apache.org/](https://airflow.apache.org/) |workflow engine|
 |Galaxy| [https://galaxy.aws.biochemistry.gwu.edu/root/login?redirect=%2F](https://galaxy.aws.biochemistry.gwu.edu/root/login?redirect=%2F) |workflow engine|
 |Hive| [https://hive.aws.biochemistry.gwu.edu/dna.cgi?cmd=main](https://hive.aws.biochemistry.gwu.edu/dna.cgi?cmd=main) |workflow engine|
 |BioCompute Platform| [https://portal.aws.biochemistry.gwu.edu/sign-in](https://portal.aws.biochemistry.gwu.edu/sign-in) |workflow engine|
-|SevenBridges(URL_TO_INSERT_RECORD https://bridges.monash.edu/)(URL_TO_INSERT_RECORD https://bridges.monash.edu/) BioCompute App| [https://sbg.github.io/biocompute/](https://sbg.github.io/biocompute/) |workflow engine|
-|CWL(URL_TO_INSERT_RECORD http://www.commonwl.org)-Airflow| [https://barski-lab.github.io/cwl-airflow/](https://barski-lab.github.io/cwl-airflow/) |adapter|
+|SevenBridges (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  BioCompute App| [https://sbg.github.io/biocompute/](https://sbg.github.io/biocompute/) |workflow engine|
+|CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) -Airflow| [https://barski-lab.github.io/cwl-airflow/](https://barski-lab.github.io/cwl-airflow/) |adapter|
 
 
 
@@ -99,25 +99,25 @@ Hence, a community of experts has dedicated efforts to define open specification
 as well as supporting tools, such as converters.
 
 Using an example based on Next Generation Sequencing (NGS) application, the present content will show the reader how to  
-make workflow more interoperable and reusable thanks to the use of existing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html), off-the-shelf tools. 
+make workflow more interoperable and reusable thanks to the use of existing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr) , off-the-shelf tools. 
 
 
 
 ### 1. CWL: Common Workflow Language - A brief overview
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org), short for Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org), is an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by a consortium of experts, including workflow 
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) , short for Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) , is an open standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  by a consortium of experts, including workflow 
 engine developers, data scientists, data analysts and bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) icians.
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) specifications are available from: https://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/v1.2/Workflow.html
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  specifications are available from: https://www.commonwl.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) /v1.2/Workflow.html
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) use YAML syntax to describe workflow steps, tools, input, output and parameters.
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  use YAML syntax to describe workflow steps, tools, input, output and parameters.
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) is meant to provide for platform-independent workflow description, meaning that people should ideally describe 
-workflows once to be able to execute them on CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) aware workflow engines.
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  is meant to provide for platform-independent workflow description, meaning that people should ideally describe 
+workflows once to be able to execute them on CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  aware workflow engines.
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) is currently implemented by an increasing number of platforms, which are listed here
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  is currently implemented by an increasing number of platforms, which are listed here
 
-* CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) user guide is available here: http://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/user_guide/
+* CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  user guide is available here: http://www.commonwl.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) /user_guide/
 
 ````{dropdown} **See a CWL example**
 :open:
@@ -138,38 +138,38 @@ inputs:
 
   indices_folder:
     type: Directory
-    label: "BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE indices folder"
-    doc: "Path to BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE generated indices folder"
+    label: "BO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) WTIE indices folder"
+    doc: "Path to BO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) WTIE generated indices folder"
 
   annotation_file:
     type: File
     label: "Annotation file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3475"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_3475"
     doc: "Tab-separated input annotation file"
 
   genome_size:
-    type: string(URL_TO_INSERT_RECORD https://string-db.org/)
+    type: string (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9b7wvk) 
     label: "Effective genome size"
-    doc: "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2 effective genome size: hs, mm, ce, dm or number, for example 2.7e9"
+    doc: "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2 effective genome size: hs, mm, ce, dm or number, for example 2.7e9"
 
   chrom_length:
     type: File
     label: "Chromosome length file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_2330"
     doc: "Chromosome length file"
 
   control_file:
     type: File?
     default: null
-    label: "Control BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2572"
-    doc: "Control BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file file for MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2 peak calling"
+    label: "Control BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_2572"
+    doc: "Control BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file file for MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2 peak calling"
 
   fastq_file:
     type: File
-    label: "FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q input file"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_1930"
-    doc: "Reads data in a FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , received after single end sequencing"
+    label: "FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q input file"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_1930"
+    doc: "Reads data in a FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , received after single end sequencing"
 
 ...
 
@@ -177,7 +177,7 @@ inputs:
     type: boolean?
     default: false
     label: "Remove duplicates"
-    doc: "Calls samtools rmdup to remove duplicates from sortesd BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file"
+    doc: "Calls samtools rmdup to remove duplicates from sortesd BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file"
 
   threads:
     type: int?
@@ -189,23 +189,23 @@ outputs:
 
   bigwig:
     type: File
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_3006"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_3006"
     label: "BigWig file"
     doc: "Generated BigWig file"
     outputSource: bam_to_bigwig/bigwig_file
 
   fastx_statistics:
     type: File
-    label: "FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q statistics"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
-    doc: "fastx_quality_stats generated FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file quality statistics file"
+    label: "FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q statistics"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_2330"
+    doc: "fastx_quality_stats generated FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q file quality statistics file"
     outputSource: fastx_quality_stats/statistics_file
 
   bowtie_log:
     type: File
-    label: "BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE alignment log"
-    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/format_2330"
-    doc: "BO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059)WTIE generated alignment log"
+    label: "BO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) WTIE alignment log"
+    format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) : "http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_2330"
+    doc: "BO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) WTIE generated alignment log"
     outputSource: bowtie_aligner/log_file
 
 
@@ -232,11 +232,11 @@ steps:
 When describing a protocol, it is often desirable to what to do if a specific situation arises. 
 Computational workflows are no different, and it is in fact quite frequent to have the need to define specific sets of
 steps if a threshold or condition is met. 
-Therefore, the Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org) contains a dedicated keyword **when** to represent
+Therefore, the Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  contains a dedicated keyword **when** to represent
 such situations.
 The following block shows how it can be used with a example:
 
-http://www.commonwl.org(URL_TO_INSERT_RECORD http://www.commonwl.org)/user_guide/24_conditional-workflow/index.html
+http://www.commonwl.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) /user_guide/24_conditional-workflow/index.html
 
 ```bash
 class: Workflow
@@ -279,7 +279,7 @@ requirements:
 
 ### 3. Semantic Markup of CWL workflows
 
-CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) documents can be annotated with [Schema.org(URL_TO_INSERT_RECORD http://schema.org/)](https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/) or [EDAM(URL_TO_INSERT_RECORD http://edamontology.org) vocabulary](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/) elements to support findability.
+CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  documents can be annotated with [Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ](https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /) or [EDAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs)  vocabulary](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /) elements to support findability.
 
 The blocks of code below shows how this is done with 2 examples.
 
@@ -346,19 +346,19 @@ $schemas:
 ````{dropdown} **View another example
 ```bash
 $namespaces:
-  s: http://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/
+  s: http://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /
 
 $schemas:
-- http://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/docs/schema_org_rdfa.html
+- http://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /docs/schema_org_rdfa.html
 
 s:name: "biowardrobe_chipseq_se"
 s:downloadUrl: https://raw.githubusercontent.com/Barski-lab/ga4gh_challenge/master/biowardrobe_chipseq_se.cwl
-s:codeRepository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) : https://github.com(URL_TO_INSERT_RECORD https://github.com/)/Barski-lab/ga4gh_challenge
+s:codeRepository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) : https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /Barski-lab/ga4gh_challenge
 s:license: http://www.apache.org/licenses/LICENSE-2.0
 
 s:isPartOf:
   class: s:CreativeWork
-  s:name: Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org)
+  s:name: Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) 
   s:url: http://commonwl.org/
 
 s:creator:
@@ -378,27 +378,27 @@ s:creator:
     s:legalName: "Allergy and Immunology"
     s:department:
     - class: s:Organization
-      s:legalName: "Barski Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Lab"
+      s:legalName: "Barski Research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Lab"
       s:member:
       - class: s:Person
         s:name: Michael Kotliar
         s:email: mailto:misha.kotliar@gmail.com
         s:sameAs:
-        - id: http://orcid.org(URL_TO_INSERT_RECORD http://orcid.org/)/0000-0002-6486-3898
+        - id: http://orcid.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.nx58jg) /0000-0002-6486-3898
 
 doc: |
-  The workflow is used to run CHIP-Seq basic analysis with single-end input FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file.
-  In outputs it returns coordinate sorted BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file alongside with index BAI file, quality
-  statistics of the input FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file, reads coverage in a form of bigWig file, peaks calling
+  The workflow is used to run CHIP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/4600) -Seq basic analysis with single-end input FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q file.
+  In outputs it returns coordinate sorted BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file alongside with index BAI file, quality
+  statistics of the input FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q file, reads coverage in a form of bigWig file, peaks calling
   data in a form of narrowPeak or broadPeak files.
 
 s:about: |
-  The workflow is a CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) version of a Python pipeline from BioWardrobe (Kartashov and Barski, 2015).
-  It starts by extracting input FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)Q file (in case it was compressed). Next step runs BowTie
-  (Langmead et al., 2009) to perform alignment to a reference genome, resulting in an unsorted SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools) file.
-  The SAM(URL_TO_INSERT_RECORD https://github.com/samtools/samtools) file is then sorted and indexed with samtools (Li et al., 2009) to obtain a BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file and a BAI index.
-  Next MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2 (Zhang et al., 2008) is used to call peaks and to estimate fragment size. In the last few steps,
-  the coverage by estimated fragments is calculated from the BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html) file and is reported in bigWig format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . The pipeline
+  The workflow is a CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  version of a Python pipeline from BioWardrobe (Kartashov and Barski, 2015).
+  It starts by extracting input FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) Q file (in case it was compressed). Next step runs BowTie
+  (Langmead et al., 2009) to perform alignment to a reference genome, resulting in an unsorted SAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.k97xzh)  file.
+  The SAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.k97xzh)  file is then sorted and indexed with samtools (Li et al., 2009) to obtain a BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file and a BAI index.
+  Next MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2 (Zhang et al., 2008) is used to call peaks and to estimate fragment size. In the last few steps,
+  the coverage by estimated fragments is calculated from the BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec)  file and is reported in bigWig format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . The pipeline
   also reports statistics, such as read quality, peak number and base frequency, and other troubleshooting informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion
   using tools such as fastx-toolkit and bamtools.
 ```
@@ -413,9 +413,9 @@ s:about: |
 
 * A number of repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  exist and may be used to deposit workflows.
 
-* One may use a generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as Zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)(URL_TO_INSERT_RECORD https://www.zenodo.org) to do so (see recipe {ref}`fcb-find-zenodo(URL_TO_INSERT_RECORD https://www.zenodo.org)`).
+* One may use a generic repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as Zenodo (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wy4egf)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wy4egf)  to do so (see recipe {ref}`fcb-find-zenodo (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wy4egf) `).
 
-* Preferably, one should use a **specialized repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ** such as [Workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu](https://workflowhub.eu(URL_TO_INSERT_RECORD https://workflowhub.eu)/),
+* Preferably, one should use a **specialized repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ** such as [Workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) .eu](https://workflowhub.eu (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) /),
 which is presented below.
 
 ````{dropdown}
@@ -423,10 +423,10 @@ which is presented below.
 ```{figure} workflowhub-eu-1.png
 ---
 width: 700px
-name: workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu website 1
-alt: workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu website 1
+name: workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) .eu website 1
+alt: workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) .eu website 1
 ---
-The european workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu) website 1.
+The european workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72)  website 1.
 ```
 ````
 
@@ -435,10 +435,10 @@ The european workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu) website 1.
 ```{figure} ./workflowhub-eu-2.png
 ---
 width: 700px
-name: workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu website 2
-alt: workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu).eu website 2
+name: workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) .eu website 2
+alt: workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) .eu website 2
 ---
-The european workflowhub(URL_TO_INSERT_RECORD https://workflowhub.eu) website 2.
+The european workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72)  website 2.
 ```
 ````
 
@@ -449,27 +449,27 @@ quote the project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=
 It has established itself in industry settings and has broad uptake.
 
 Apache Airflow represents workflows as **Directed Acyclic Graph** (or DAGs) and Airflow allows the serialization of these
-as JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) documents.
+as JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9)  documents.
 
 The main thing about Apache Airflow is that code is used to generate the workflows. 
 For more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
 
-A tool developed(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped) by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) support to the Apache Airflow 
-framework, meaning that CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
+A tool developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  support to the Apache Airflow 
+framework, meaning that CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
 
 ````{dropdown}
 :open:
 ```{figure} workflow-cwl-airflow.png
 ---
 width: 700px
-name: CWL(URL_TO_INSERT_RECORD http://www.commonwl.org)-Airflow component
-alt: CWL(URL_TO_INSERT_RECORD http://www.commonwl.org)-Airflow component
+name: CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) -Airflow component
+alt: CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) -Airflow component
 ---
-the CWL(URL_TO_INSERT_RECORD http://www.commonwl.org)-Airflow component.
+the CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) -Airflow component.
 ```
 ````
 
-A key step in this linkage is the conversion of a CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow into an Apache Airflow DAG, which can 
+A key step in this linkage is the conversion of a CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  expressed workflow into an Apache Airflow DAG, which can 
 then be subsequently executed.
 
 With this example, we aim to bring awareness about the value of having platform independent expression of workflows.
@@ -479,11 +479,11 @@ With this example, we aim to bring awareness about the value of having platform 
 
 If computational analyses on sequence data are performed in the context of clinical trials, for instance to demonstrate
 the transcriptomics response to a drug or to show to safety of a compound in populations of distinct genetic background
-using genotyping informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, it is a regulator(URL_TO_INSERT_RECORD http://www.bioinformatics.org/regulator)y requirements of the US FDA to submit the computational workflows 
+using genotyping informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, it is a regulator (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ey49c6) y requirements of the US FDA to submit the computational workflows 
 if seeking approval.
 The availability of such informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion in this context is a prerequisite for FDA auditors to examine the data.
 
-The IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/) specifications, also known as BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) for BioCompute Object is a specification to do this.
+The IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E 2791-2020 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.bbd7df)  specifications, also known as BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  for BioCompute Object is a specification to do this.
 
 This has been made possible thanks to the fast-track submission of a new data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  specifically tailored to ensure
 reproducibility and unambiguous description of workflow key descriptors.
@@ -494,26 +494,26 @@ reproducibility and unambiguous description of workflow key descriptors.
 ```{figure} ./workflow-bco-cloud-tools.png
 ---
 width: 700px
-name: Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) specifications
-alt: Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) specifications
+name: Cloud based tools supported BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  specifications
+alt: Cloud based tools supported BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  specifications
 ---
-Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) specifications
+Cloud based tools supported BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  specifications
 ```
 ````
 
 #### What are the main features of a BioCompute Object?
 
-* a BioCompute Object is serialized as a JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) document. A typical BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) looks like this:
+* a BioCompute Object is serialized as a JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9)  document. A typical BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  looks like this:
 
 ````{dropdown}
 :open:
 ```json
 {
     "object_id": "urn:uuid:dc308d7c-7949-446a-9c39-511b8ab40caf",
-    "spec_version": "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ieee/ieee-2791-schema/",
+    "spec_version": "https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /ieee/ieee-2791-schema/",
     "etag": "f8b213e62dfc7d05934ffdb7a36e4661f13b9cd04ad2de3ff3da6e933c4aebc8",
     "provenance_domain": {
-        "name": "nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq: ChIP-seq peak-calling, QC and differential analysis pipeline",
+        "name": "nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq: ChIP-seq peak-calling, QC and differential analysis pipeline",
         "version": "1.2.1",
         "created": "2020-07-29T17:33:46+01:00",
         "modified": "2020-09-10T13:11:58+01:00",
@@ -522,7 +522,7 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
             {"contribution": ["authoredBy"], "name": "Chuan Wang" },
             {"contribution": ["authoredBy"], "name": "Phil Ewels" },
             {"contribution": ["authoredBy"], "name": "Alexander Peltzer" },
-            {"contribution": ["authoredBy"], "name": "Tiago Chedraoui Silva(URL_TO_INSERT_RECORD https://www.arb-silva.de)" },
+            {"contribution": ["authoredBy"], "name": "Tiago Chedraoui Silva (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5vtYGG) " },
             {"contribution": ["authoredBy"], "name": "Drew Behrens" },
             {"contribution": ["authoredBy"], "name": "Maxime Garcia" },
             {"contribution": ["authoredBy"], "name": "mashehu" },
@@ -531,13 +531,13 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
             {"contribution": ["authoredBy"], "name": "Winni Kretzschmar" },
             {"contribution": ["createdBy"],
               "name": "Stian Soiland-Reyes",
-              "orcid": "https://orcid.org(URL_TO_INSERT_RECORD http://orcid.org/)/0000-0001-9842-9718"
+              "orcid": "https://orcid.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.nx58jg) /0000-0001-9842-9718"
             }   
         ],
-        "license": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/chipseq/blob/1.2.1/LICENSE"
+        "license": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
     },
     "usability_domain": [
-        "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data.",
+        "nfcore (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data.",
         "For use with multiple replicates, the group identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  should be identical when you have multiple replicates from the same experimental group, just increment the replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  appropriately. The first replicate value for any given experimental group must be 1.",
         "Both the group and replicate identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s should be the same when you have re-sequenced the same sample more than once e.g. to increase sequencing depth. The pipeline will perform the alignments in parallel, and subsequently merge them before further analysis. "
     ],
@@ -549,30 +549,30 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
         "pipeline_steps": [
             {"step_number": 1, "name": "CHECK_DESIGN", "description": "", "input_list": [], "output_list": []},
             {"step_number": 2, "name": "output_documentation", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 3, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)KE_GENE_BED(URL_TO_INSERT_RECORD http://genome.ucsc.edu/FAQ/FAQformat.html#format1)", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 3, "name": "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) KE_GENE_BED (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.mwmbpq) ", "description": "", "input_list": [], "output_list": []},
             {"step_number": 5, "name": "get_software_versions", "description": "", "input_list": [], "output_list": []},
             {"step_number": 6, "name": "BWA_INDEX", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 7, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)KE_GENO(URL_TO_INSERT_RECORD https://github.com/monarch-initiative/GENO-ontology/)ME(URL_TO_INSERT_RECORD https://openmicroscopy.org)_FILTER", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 8, "name": "FAST(URL_TO_INSERT_RECORD https://www.oclc.org/research/themes/data-science/fast.html)QC", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 9, "name": "TRIMG(URL_TO_INSERT_RECORD https://doi.org/10.25504/FAIRsharing.ae956n)A(URL_TO_INSERT_RECORD https://ccg.epfl.ch/mga/)LORE", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 7, "name": "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) KE_GENO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kpbna7) ME (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3502) _FILTER", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 8, "name": "FAST (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p5df9c) QC", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 9, "name": "TRIMG (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3558) A (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9997ek) LORE", "description": "", "input_list": [], "output_list": []},
             {"step_number": 10, "name": "BWA_MEM", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 11, "name": "SO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)RT_BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html)", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 12, "name": "MERGED_BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html)", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 11, "name": "SO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) RT_BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec) ", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 12, "name": "MERGED_BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec) ", "description": "", "input_list": [], "output_list": []},
             {"step_number": 13, "name": "PRESEQ", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 14, "name": "MERGED_BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html)_FILTER", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 15, "name": "MERGED_BAM(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bam.html)_REMO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/EMO)(URL_TO_INSERT_RECORD http://mged.sourceforge.net/ontologies/MGEDontology.php)VE_ORPHAN", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 16, "name": "PHANTO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)MP(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)(URL_TO_INSERT_RECORD https://microbialphenotypes.org)E(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKQUALTO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)OLS(URL_TO_INSERT_RECORD https://www.ebi.ac.uk/ols/index)", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 17, "name": "BIGWIG(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/wiggle.html)", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 18, "name": "PICARD(URL_TO_INSERT_RECORD http://arpcard.mcmaster.ca)_METRIC (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) S", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 14, "name": "MERGED_BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec) _FILTER", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 15, "name": "MERGED_BAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hza1ec) _REMO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a5e1jd)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.qs4x5m) VE_ORPHAN", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 16, "name": "PHANTO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) MP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kg1x4z)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cc3f2x) E (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b403jy) AKQUALTO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) OLS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.Mkl9RR) ", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 17, "name": "BIGWIG (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2nrf9f) ", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 18, "name": "PICARD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9dbmwg) _METRIC (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=metric) S", "description": "", "input_list": [], "output_list": []},
             {"step_number": 19, "name": "PLOTFINGERPRINT", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 20, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 21, "name": "PLOTPRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/pro)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://proconsortium.org/)(URL_TO_INSERT_RECORD https://w3id.org/ro/)F(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF)ILE", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 22, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2_ANN(URL_TO_INSERT_RECORD http://braininfo.org/Nnont.aspx)OTATE", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 23, "name": "CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NS(URL_TO_INSERT_RECORD https://github.com/enpadasi/Ontology-for-Nutritional-Studies)ENSUS_PE(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKS", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 24, "name": "CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NS(URL_TO_INSERT_RECORD https://github.com/enpadasi/Ontology-for-Nutritional-Studies)ENSUS_PE(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKS_CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)UNTS", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 25, "name": "CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NS(URL_TO_INSERT_RECORD https://github.com/enpadasi/Ontology-for-Nutritional-Studies)ENSUS_PE(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKS_ANN(URL_TO_INSERT_RECORD http://braininfo.org/Nnont.aspx)OTATE", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 26, "name": "MA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)C(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)S2_QC", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 27, "name": "CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NS(URL_TO_INSERT_RECORD https://github.com/enpadasi/Ontology-for-Nutritional-Studies)ENSUS_PE(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/PE)AKS_DESEQ2", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 20, "name": "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 21, "name": "PLOTPRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) F (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s) ILE", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 22, "name": "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2_ANN (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.gVJjIW) OTATE", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 23, "name": "CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rfec93) ENSUS_PE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b403jy) AKS", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 24, "name": "CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rfec93) ENSUS_PE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b403jy) AKS_CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) UNTS", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 25, "name": "CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rfec93) ENSUS_PE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b403jy) AKS_ANN (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.gVJjIW) OTATE", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 26, "name": "MA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) S2_QC", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 27, "name": "CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rfec93) ENSUS_PE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b403jy) AKS_DESEQ2", "description": "", "input_list": [], "output_list": []},
             {"step_number": 28, "name": "MULTIQC", "description": "", "input_list": [], "output_list": []},
             {"step_number": 29, "name": "IGV", "description": "", "input_list": [], "output_list": []},
             {"step_number": 30, "name": "but", "description": "", "input_list": [], "output_list": []},
@@ -607,7 +607,7 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
 {"name": "r-ggplot2", "version": "3.3.2", "uri": {"uri": "https://anaconda.org/conda-forge/r-ggplot2"} },
 {"name": "r-tidyr", "version": "1.1.0", "uri": {"uri": "https://anaconda.org/conda-forge/r-tidyr"} },
 {"name": "r-scales", "version": "1.1.1", "uri": {"uri": "https://anaconda.org/conda-forge/r-scales"} },
-{"name": "r-pheatmap(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map)", "version": "1.0.12", "uri": {"uri": "https://anaconda.org/conda-forge/r-pheatmap"} },
+{"name": "r-pheatmap (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.53edcc) ", "version": "1.0.12", "uri": {"uri": "https://anaconda.org/conda-forge/r-pheatmap"} },
 {"name": "r-lattice", "version": "0.20_41", "uri": {"uri": "https://anaconda.org/conda-forge/r-lattice"} },
 {"name": "r-upsetr", "version": "1.4.0", "uri": {"uri": "https://anaconda.org/conda-forge/r-upsetr"} },
 {"name": "r-xfun", "version": "0.15", "uri": {"uri": "https://anaconda.org/conda-forge/r-xfun"} },
@@ -623,7 +623,7 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
 {"name": "bamtools", "version": "2.5.1", "uri": {"uri": "https://bioconda.github.io/recipes/bamtools/README.html"} },
 {"name": "pysam", "version": "0.15.3", "uri": {"uri": "https://bioconda.github.io/recipes/pysam/README.html"} },
 {"name": "bedtools", "version": "2.29.2", "uri": {"uri": "https://bioconda.github.io/recipes/bedtools/README.html"} },
-{"name": "ucsc-bedgraph(URL_TO_INSERT_RECORD http://genome.ucsc.edu/goldenPath/help/bedgraph.html)tobigwig", "version": "357", "uri": {"uri": "https://bioconda.github.io/recipes/ucsc-bedgraphtobigwig/README.html"} },
+{"name": "ucsc-bedgraph (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.vttygv) tobigwig", "version": "357", "uri": {"uri": "https://bioconda.github.io/recipes/ucsc-bedgraphtobigwig/README.html"} },
 {"name": "deeptools", "version": "3.4.3", "uri": {"uri": "https://bioconda.github.io/recipes/deeptools/README.html"} },
 {"name": "macs2", "version": "2.2.7.1", "uri": {"uri": "https://bioconda.github.io/recipes/macs2/README.html"} },
 {"name": "homer", "version": "4.11", "uri": {"uri": "https://bioconda.github.io/recipes/homer/README.html"} },
@@ -631,18 +631,18 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
 {"name": "phantompeakqualtools", "version": "1.2.2", "uri": {"uri": "https://bioconda.github.io/recipes/phantompeakqualtools/README.html"} },
 {"name": "preseq", "version": "2.0.3", "uri": {"uri": "https://bioconda.github.io/recipes/preseq/README.html"} },
 {"name": "multiqc", "version": "1.9", "uri": {"uri": "https://bioconda.github.io/recipes/multiqc/README.html"} },
-{"name": "bioconductor(URL_TO_INSERT_RECORD https://bioconductor.org)-biocparallel", "version": "1.20.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-biocparallel/README.html"} },
-{"name": "bioconductor(URL_TO_INSERT_RECORD https://bioconductor.org)-deseq2", "version": "1.26.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-deseq2/README.html"} },
-{"name": "bioconductor(URL_TO_INSERT_RECORD https://bioconductor.org)-vsn", "version": "3.54.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-vsn/README.html"} }          
+{"name": "bioconductor (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) -biocparallel", "version": "1.20.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-biocparallel/README.html"} },
+{"name": "bioconductor (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) -deseq2", "version": "1.26.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-deseq2/README.html"} },
+{"name": "bioconductor (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) -vsn", "version": "3.54.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-vsn/README.html"} }          
         ],
         "external_data_endpoints": [
           {"name": "Experiment design file for minimal test dataset",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/chipseq/design.csv"
           },
-          {"name": "iGenomes R64-1-1 Ensembl(URL_TO_INSERT_RECORD http://www.ensembl.org/)(URL_TO_INSERT_RECORD http://www.ensembl.org/) (Fasta sequence)",
+          {"name": "iGenomes R64-1-1 Ensembl (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.fx0mw7)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.fx0mw7)  (Fasta sequence)",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/atacseq/reference/genome.fa"
           },
-          {"name": "iGenomes R64-1-1 Ensembl(URL_TO_INSERT_RECORD http://www.ensembl.org/)(URL_TO_INSERT_RECORD http://www.ensembl.org/) (GTF(URL_TO_INSERT_RECORD http://mblab.wustl.edu/GTF22.html) Genes)",
+          {"name": "iGenomes R64-1-1 Ensembl (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.fx0mw7)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.fx0mw7)  (GTF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.sggb1n)  Genes)",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/atacseq/reference/genes.gtf"
           }                    
         ],
@@ -655,18 +655,18 @@ Cloud based tools supported BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-
 }
 ```
 ````
-source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/blob/main/data/chipseq_20200910.json
+source: https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/chipseq_20200910.json
 
 
-* a BioCompute Object can be packaged as an RO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)-Crate(URL_TO_INSERT_RECORD https://w3id.org/ro/crate). 
+* a BioCompute Object can be packaged as an RO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) -Crate (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wUoZKE) . 
 
 ````{dropdown} View an RO-Crate json denoting a BCO
 ```json
 {
   "@context": [
-    "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ro(URL_TO_INSERT_RECORD https://w3id.org/ro/)/crate(URL_TO_INSERT_RECORD https://w3id.org/ro/crate)/1.0/context",
+    "https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /ro (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) /crate (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wUoZKE) /1.0/context",
     {
-      "@vocab": "https://schema.org(URL_TO_INSERT_RECORD http://schema.org/)/"
+      "@vocab": "https://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) /"
     }
   ],
   "@graph": [
@@ -678,7 +678,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       },
       "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": "ro-crate-metadata.json",
       "conformsTo": {
-        "@id": "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ro(URL_TO_INSERT_RECORD https://w3id.org/ro/)/crate(URL_TO_INSERT_RECORD https://w3id.org/ro/crate)/1.0"
+        "@id": "https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /ro (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) /crate (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wUoZKE) /1.0"
       },
       "license": {
         "@id": "https://creativecommons.org/licenses/by-sa/3.0"
@@ -688,18 +688,18 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     {
       "@type": "Dataset",
       "author": {
-        "@id": "https://orcid.org(URL_TO_INSERT_RECORD http://orcid.org/)/0000-0001-9842-9718"
+        "@id": "https://orcid.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.nx58jg) /0000-0001-9842-9718"
       },
       "citation": {
         "@id": "https://doi.org/10.5281/zenodo.3966161"
       },
       "contactPoint": {
-        "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/issues"
+        "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues"
       },
       "datePublished": "2020-09-09T23:00:00.000Z",
       "description": "Workflow run of a ChIP-seq peak-calling, QC and differential analysis pipeline",
       "distribution": {
-        "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+        "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
       },
       "hasPart": [
         {
@@ -721,7 +721,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       "license": {
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
-      "name": "Workflow run of nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq",
+      "name": "Workflow run of nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq",
       "publisher": {
         "@id": "https://biocomputeobject.org/"
       },
@@ -743,7 +743,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     {
       "@type": "File",
       "conformsTo": {
-        "@id": "https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/ieee/ieee-2791-schema/"
+        "@id": "https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /ieee/ieee-2791-schema/"
       },
       "dateModified": "2020-09-10T13:50:02.378Z",
       "identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ": {
@@ -753,7 +753,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
       "name": "chipseq_20200910.json",
-      "description": "IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791 description",
+      "description": "IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E 2791 description",
       "@reverse": {
         "hasPart": [
           {
@@ -765,7 +765,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "Organization",
-      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E 2791-2020(URL_TO_INSERT_RECORD https://standards.ieee.org/ieee/2791/7337/) Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) , and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  is maintained by an IEE(URL_TO_INSERT_RECORD https://earthexplorer.usgs.gov/)E GitLab(URL_TO_INSERT_RECORD https://about.gitlab.com/)(URL_TO_INSERT_RECORD https://about.gitlab.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . ",
+      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E 2791-2020 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.bbd7df)  Standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) , and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  is maintained by an IEE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.0b711a) E GitLab (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.530e61)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.530e61)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . ",
       "name": "BioCompute Objects",
       "@reverse": {
         "publisher": [
@@ -778,7 +778,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "ScholarlyArticle",
-      "name": "nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq: nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq v1.2.1 - Platinum(URL_TO_INSERT_RECORD http://structure.bioc.cam.ac.uk/platinum) Mole",
+      "name": "nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq: nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq v1.2.1 - Platinum (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.51r558)  Mole",
       "@reverse": {
         "citation": [
           {
@@ -802,11 +802,11 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/chipseq/blob/1.2.1/LICENSE"
+      "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
     },
     {
       "@type": "CreativeWork",
-      "description": "\nMIT License\n\nCopyright (c) 2018 nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)F(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF)T(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/geo/info/soft2.html)WARE IS PRO(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/pro)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://proconsortium.org/)(URL_TO_INSERT_RECORD https://w3id.org/ro/)VIDED \"AS IS\", WITHOUT WARRANTY OF(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF) ANY KIND, EXPRESS OR\nIMP(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)LIED, INCL(URL_TO_INSERT_RECORD https://github.com/obophenotype/cell-ontology)UDING BUT NOT LIMITED(URL_TO_INSERT_RECORD http://ted.bti.cornell.edu) TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab) THE WARRANTIES OF(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF) MERCHANTABIL(URL_TO_INSERT_RECORD https://www.brainimagelibrary.org/)ITY,\nFITNESS FO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/FO)R A PARTICULAR PURPO(URL_TO_INSERT_RECORD http://plantontology.org/)(URL_TO_INSERT_RECORD https://bioportal.bioontology.org/ontologies/RPO)SE AND NONINFR(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/fr)INGEMENT. IN NO EVENT SHALL THE\nAUTHORS(URL_TO_INSERT_RECORD http://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=RS:0000457) OR CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)PYRIGHT HOLDERS(URL_TO_INSERT_RECORD http://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=RS:0000457) BE LIABLE FO(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/FO)R ANY CL(URL_TO_INSERT_RECORD https://github.com/obophenotype/cell-ontology)AIM(URL_TO_INSERT_RECORD https://wiki.nci.nih.gov/display/AIM/Annotation+and+Image+Markup+-+AIM), DAMA(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/gxd/ma_ontology/)GES OR OTHER\nLIABIL(URL_TO_INSERT_RECORD https://www.brainimagelibrary.org/)ITY, WHETHER IN AN AC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)TION OF(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF) CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NTR(URL_TO_INSERT_RECORD https://www.trialregister.nl/)AC(URL_TO_INSERT_RECORD https://ac.tdwg.org/introduction/)T, TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)RT OR OTHERWISE, ARIS(URL_TO_INSERT_RECORD https://web.archive.org/web/20170707033254/http://www.researcherid.com/resources/html/help_upload.htm)ING FR(URL_TO_INSERT_RECORD http://www.sparontologies.net/ontologies/fr)O(URL_TO_INSERT_RECORD https://github.com/oborel/obo-relations/)(URL_TO_INSERT_RECORD https://github.com/albytrav/RadiomicsOntologyIBSI)(URL_TO_INSERT_RECORD https://w3id.org/ro/)M,\nOUT OF(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF) OR IN CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)NN(URL_TO_INSERT_RECORD http://braininfo.org/Nnont.aspx)ECTION WITH THE SO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)F(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF)T(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/geo/info/soft2.html)WARE OR THE USE OR OTHER DEALINGS IN THE\nSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)F(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/OF)T(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/geo/info/soft2.html)WARE.",
+      "description": "\nMIT License\n\nCopyright (c) 2018 nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) \n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) F (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s) T (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3gxr9b) WARE IS PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) VIDED \"AS IS\", WITHOUT WARRANTY OF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s)  ANY KIND, EXPRESS OR\nIMP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kg1x4z) LIED, INCL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.j9y503) UDING BUT NOT LIMITED (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.dn2c0s)  TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r)  THE WARRANTIES OF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s)  MERCHANTABIL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.88520c) ITY,\nFITNESS FO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ca63ce) R A PARTICULAR PURPO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3ngg40)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.x9s8e) SE AND NONINFR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.e7e609) INGEMENT. IN NO EVENT SHALL THE\nAUTHORS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.vajn3f)  OR CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) PYRIGHT HOLDERS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.vajn3f)  BE LIABLE FO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ca63ce) R ANY CL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.j9y503) AIM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3nz5cb) , DAMA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.pdwqcr) GES OR OTHER\nLIABIL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.88520c) ITY, WHETHER IN AN AC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) TION OF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s)  CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NTR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/2932) AC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78) T, TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) RT OR OTHERWISE, ARIS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.efb730) ING FR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.e7e609) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) M,\nOUT OF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s)  OR IN CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) NN (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.gVJjIW) ECTION WITH THE SO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) F (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s) T (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3gxr9b) WARE OR THE USE OR OTHER DEALINGS IN THE\nSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) F (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.t6y94s) T (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3gxr9b) WARE.",
       "name": "MIT License",
       "@reverse": {
         "license": [
@@ -815,15 +815,15 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/test-datasets/blob/atacseq/LICENSE"
+      "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nf-core/test-datasets/blob/atacseq/LICENSE"
     },
     {
       "@type": "DataDownload",
-      "path": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/archive/main.zip",
+      "path": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip",
       "license": {
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
-      "name": "GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) download of biocompute-objects/bco-ro-example-chipseq",
+      "name": "GitHub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  download of biocompute-objects/bco-ro-example-chipseq",
       "@reverse": {
         "distribution": [
           {
@@ -831,12 +831,12 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+      "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
     },
     {
       "@type": "ContactPoint",
-      "name": " bco-ro-example-chipseq GitHub(URL_TO_INSERT_RECORD https://github.com/)(URL_TO_INSERT_RECORD https://github.com/) issue tracker",
-      "url": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/issues",
+      "name": " bco-ro-example-chipseq GitHub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  issue tracker",
+      "url": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues",
       "@reverse": {
         "contactPoint": [
           {
@@ -844,7 +844,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/issues"
+      "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues"
     },
     {
       "@type": "Person",
@@ -859,7 +859,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "https://orcid.org(URL_TO_INSERT_RECORD http://orcid.org/)/0000-0001-9842-9718"
+      "@id": "https://orcid.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.nx58jg) /0000-0001-9842-9718"
     },
     {
       "@type": [
@@ -874,7 +874,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           "@id": "#bfb876e7-e767-4209-ad66-e1e1379c249f"
         },
         {
-          "@id": "#0164006f-bd5(URL_TO_INSERT_RECORD https://github.com/openssbd/BDML-BD5)8-4ebc-9a50-b8bd4ac3025c"
+          "@id": "#0164006f-bd5 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/454) 8-4ebc-9a50-b8bd4ac3025c"
         },
         {
           "@id": "#556c747c-376a-4a85-82a1-9b99520d24fd"
@@ -904,11 +904,11 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
       "citation": {
         "@id": "https://doi.org/10.5281/zenodo.3966161"
       },
-      "description": "nfcore(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data",
+      "description": "nfcore (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq is a bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data",
       "license": {
-        "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/chipseq/blob/1.2.1/LICENSE"
+        "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
       },
-      "name": "nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/chipseq",
+      "name": "nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) /chipseq",
       "@reverse": {
         "hasPart": [
           {
@@ -945,13 +945,13 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     {
       "@type": "Dataset",
       "author": {
-        "@id": "https://orcid.org(URL_TO_INSERT_RECORD http://orcid.org/)/0000-0001-9842-9718"
+        "@id": "https://orcid.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.nx58jg) /0000-0001-9842-9718"
       },
       "creator": {
         "@id": "#db65dfb7-4867-400e-a12f-a1652d46a333"
       },
       "dateModified": "2020-09-10T13:20:49.143Z",
-      "description": "Nextflow outputs from examplar run of nf-core(URL_TO_INSERT_RECORD http://purl.uniprot.org/core/)(URL_TO_INSERT_RECORD https://core.ac.uk)/ pipeline workflow.",
+      "description": "Nextflow outputs from examplar run of nf-core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) / pipeline workflow.",
       "hasPart": [
         {
           "@id": "results/bwa/"
@@ -976,7 +976,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
         }
       ],
       "license": {
-        "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nf-core/test-datasets/blob/atacseq/LICENSE"
+        "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nf-core/test-datasets/blob/atacseq/LICENSE"
       },
       "name": "results",
       "@reverse": {
@@ -1427,7 +1427,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
           }
         ]
       },
-      "@id": "#0164006f-bd5(URL_TO_INSERT_RECORD https://github.com/openssbd/BDML-BD5)8-4ebc-9a50-b8bd4ac3025c"
+      "@id": "#0164006f-bd5 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/454) 8-4ebc-9a50-b8bd4ac3025c"
     },
     {
       "@type": "CreativeWork",
@@ -1442,7 +1442,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
             "@id": "chipseq_20200910.json"
           },
           {
-            "@id": "https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+            "@id": "https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
           }
         ]
       },
@@ -1498,7 +1498,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
     },
     {
       "@type": "Person",
-      "name": "Tiago Chedraoui Silva(URL_TO_INSERT_RECORD https://www.arb-silva.de)",
+      "name": "Tiago Chedraoui Silva (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5vtYGG) ",
       "@reverse": {
         "author": [
           {
@@ -1603,9 +1603,9 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
 }
 ```
 ````
-source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-objects/bco-ro-example-chipseq/blob/main/data/ro-crate-metadata.json
+source: https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/ro-crate-metadata.json
 
-* a BioCompute Object can be integrated with HL7(URL_TO_INSERT_RECORD http://www.hl7.org/implement/standards/product_brief.cfm?product_id=186) FHIR(URL_TO_INSERT_RECORD https://www.hl7.org/fhir/index.html) as a Provenance Resource.
+* a BioCompute Object can be integrated with HL7 (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.25k4yp)  as a Provenance Resource.
 
 ```json
 {
@@ -1664,7 +1664,7 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
 }
 ```
 
-* a BioCompute Object may allow referencing a CWL(URL_TO_INSERT_RECORD http://www.commonwl.org) expressed workflow thus increasing interoperability.
+* a BioCompute Object may allow referencing a CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  expressed workflow thus increasing interoperability.
 
 
 #### Several tools currently support the BCO format:
@@ -1683,10 +1683,10 @@ source: https://github.com(URL_TO_INSERT_RECORD https://github.com/)/biocompute-
 ```{figure} ./workflow-sb-biocompute-app.png
 ---
 width: 700px
-name: Seven Bridges(URL_TO_INSERT_RECORD https://bridges.monash.edu/)(URL_TO_INSERT_RECORD https://bridges.monash.edu/) Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute app
-alt: Seven Bridges(URL_TO_INSERT_RECORD https://bridges.monash.edu/)(URL_TO_INSERT_RECORD https://bridges.monash.edu/) Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute app
+name: Seven Bridges (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  Bioc (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) ompute app
+alt: Seven Bridges (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  Bioc (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) ompute app
 ---
-Seven Bridges(URL_TO_INSERT_RECORD https://bridges.monash.edu/)(URL_TO_INSERT_RECORD https://bridges.monash.edu/) Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute app.
+Seven Bridges (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ac95d5)  Bioc (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) ompute app.
 ```
 ````
 
@@ -1728,17 +1728,17 @@ or to decide whether to perform new ones.
 ````
 
 <!--
-[1]. Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org), v1.0. Specification, Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org) working group. https://w3id.org(URL_TO_INSERT_RECORD https://w3id.org/)/cwl/v1.0/ doi:10.6084/m9.figshare(URL_TO_INSERT_RECORD http://figshare.com/)(URL_TO_INSERT_RECORD http://figshare.com/).3115156.v2
+[1]. Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) , v1.0. Specification, Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  working group. https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /cwl/v1.0/ doi:10.6084/m9.figshare (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.drtwnh)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.drtwnh) .3115156.v2
 
 [2]. [Apache airflow](https://airflow.apache.org/)
 
-[3]. Michael Kotliar, Andrey V Kartashov, Artem Barski, CWL(URL_TO_INSERT_RECORD http://www.commonwl.org)-Airflow: a lightweight pipeline manager supporting Common Workflow Language(URL_TO_INSERT_RECORD http://www.commonwl.org), GigaScience, Volume 8, Issue 7, July 2019, giz084, https://doi.org/10.1093/gigascience/giz084
+[3]. Michael Kotliar, Andrey V Kartashov, Artem Barski, CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) -Airflow: a lightweight pipeline manager supporting Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) , GigaScience, Volume 8, Issue 7, July 2019, giz084, https://doi.org/10.1093/gigascience/giz084
 
-[4]. https://workflowhub.eu(URL_TO_INSERT_RECORD https://workflowhub.eu)
+[4]. https://workflowhub.eu (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) 
 
-[5].  Simonyan V, Goecks J, Mazumder R. Bioc(URL_TO_INSERT_RECORD https://bioconductor.org)ompute Objects—A Step towards Evaluation and Validation of Biomedical Scientific Computations. PDA journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  of pharmaceutical science and technology. 2017;71(2):136-146. doi:10.5731/pdajpst.2016.006734.
+[5].  Simonyan V, Goecks J, Mazumder R. Bioc (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.81ettx) ompute Objects—A Step towards Evaluation and Validation of Biomedical Scientific Computations. PDA journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  of pharmaceutical science and technology. 2017;71(2):136-146. doi:10.5731/pdajpst.2016.006734.
 
-[6].BC(URL_TO_INSERT_RECORD https://neuroviisas.med.uni-rostock.de/connectome/index.php)O(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)(URL_TO_INSERT_RECORD https://github.com/BiodiversityOntologies/bco) App: tools for generating BioCompute Objects from next-generation sequencing workflows and computations.   https://doi.org/10.12688/f1000research.25902.1
+[6].BC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hD7sXQ) O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8ktkqy)  App: tools for generating BioCompute Objects from next-generation sequencing workflows and computations.   https://doi.org/10.12688/f1000research.25902.1
 -->
 
 

@@ -49,13 +49,13 @@ not existent
 
 ## FAIRification Objectives, Inputs and Outputs
 
-CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)MMENT: the concepts in this recipe did not map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) to any terms from the EDAM(URL_TO_INSERT_RECORD http://edamontology.org) ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) MMENT: the concepts in this recipe did not map (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.53edcc)  to any terms from the EDAM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs)  ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
 
 ---
 
 ## Table of Data Standards
 
-CO(URL_TO_INSERT_RECORD http://www.cropontology.org/)(URL_TO_INSERT_RECORD https://codeocean.com)MMENT: the concepts in this recipe did not map(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#map) to any terms from the FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)sharing(URL_TO_INSERT_RECORD https://www.FAIRsharing.org)(URL_TO_INSERT_RECORD https://www.FAIRsharing.org).org database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) .-->
+CO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.thskvr) MMENT: the concepts in this recipe did not map (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.53edcc)  to any terms from the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2abjs5) .org database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) .-->
 
 
 ## Requirements
@@ -201,7 +201,7 @@ or
 bash: sha512sum * > sha512sum.txt
 ```
 
-Windows: CertUtil -hashfile FILENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena)ME MD5
+Windows: CertUtil -hashfile FILENA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.dj8nt8) ME MD5
 
 Recipient compares checksums:
 
@@ -215,7 +215,7 @@ bash: sha512sum -c sha512sum.txt *
 ```
 
 
-The sender can use the sender organization’s HP(URL_TO_INSERT_RECORD https://hpo.jax.org/)C(URL_TO_INSERT_RECORD http://www.pathwaycommons.org) node to:
+The sender can use the sender organization’s HP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kbtt7f) C (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5y3gdd)  node to:
 - (1)	set up a shell which runs in the background.
 - (2)	launch the FTP session in the same local network as the server and directory of files to be transferred.
 - (3)	Transfer the files via the filesystem on both the local and remote system.
@@ -252,7 +252,7 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-* [Wikiped(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#ped)ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [Wikiped (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
 * [Example of customization for a specific institution (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)

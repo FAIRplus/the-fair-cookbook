@@ -55,15 +55,15 @@ To make some sense of this variety, we can categorize them as follows.
     </thead>
     <tbody>
         <tr>
-        <td>GPL<sup>1</sup> CDD(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml)(URL_TO_INSERT_RECORD https://www.publicsafety.gc.ca/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx)L<sup>2</sup></td>
-        <td>LGPL<sup>3</sup> MP(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)L<sup>4</sup></td>
+        <td>GPL<sup>1</sup> CDD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ea287c) L<sup>2</sup></td>
+        <td>LGPL<sup>3</sup> MP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kg1x4z) L<sup>4</sup></td>
         <td>BSD<sup>5</sup> MIT<sup>6</sup> Apache</td>
-            <td>Research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) Only: No&nbsp;copying, No&nbsp;modification</td>
+            <td>Research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Only: No&nbsp;copying, No&nbsp;modification</td>
         </tr>
     </tbody>
     <caption>
       <div class="footnote">
-        <sup>1</sup>GPL: GNU General Public License <sup>2</sup>CDD(URL_TO_INSERT_RECORD https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml)(URL_TO_INSERT_RECORD https://www.publicsafety.gc.ca/cnt/rsrcs/cndn-dsstr-dtbs/index-en.aspx)L: Common Development and Distribution License <sup>3</sup>LGPL: GNU Lesser General Public License <sup>4</sup> MP(URL_TO_INSERT_RECORD http://www.informatics.jax.org/vocab/mp_ontology)L: Mozilla Public License <sup>5</sup> BSD: Berkeley Software Distribution <sup>6</sup> MIT: Massachusetts Institute of Technology
+        <sup>1</sup>GPL: GNU General Public License <sup>2</sup>CDD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ea287c) L: Common Development and Distribution License <sup>3</sup>LGPL: GNU Lesser General Public License <sup>4</sup> MP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.kg1x4z) L: Mozilla Public License <sup>5</sup> BSD: Berkeley Software Distribution <sup>6</sup> MIT: Massachusetts Institute of Technology
       </div>
       Licenses can either be Free or Proprietary, with Free Licenses further classified as Copyleft or Permissive.
     </caption>
@@ -91,7 +91,7 @@ There are two other, similar definitions in use; the Open Source Institute's [Op
 The free software definition above, by Richard Stallman, is the most straightforward and concise, and in practice, the categories they define are almost identical.
 
 Software that is not free is proprietary.
-Software that you are not allowed to copy or modify falls into this category, as does software with usage restrictions, for example, "For research(URL_TO_INSERT_RECORD https://arch.library.northwestern.edu/) use only" or "For non-commercial use only".
+Software that you are not allowed to copy or modify falls into this category, as does software with usage restrictions, for example, "For research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  use only" or "For non-commercial use only".
 
 There are some confusingly-named subcategories of proprietary software.
 _Freeware_ is software that can be copied without paying anyone, but comes without source and cannot be modified.
@@ -101,15 +101,15 @@ Neither of these is free in the above sense.
 (rr-licensing-software-derivative)=
 ## Derivative Software
 
-Within the category of free software, there are several subcategories, which are disting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html)uished by what is allowed when making derivative software.
+Within the category of free software, there are several subcategories, which are disting (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr) uished by what is allowed when making derivative software.
 There are two basic ways of making a derivative work of a program or library: modifying it (forking), or combining it with other software (for example using a library in your program).
 Of course, you can modify and then combine as well.
 
 Modifying a program leads to a new program that is derived from the original. 
-This is similar to deriving the new edition of a textbook(URL_TO_INSERT_RECORD http://bioportal.bioontology.org/ontologies/3059) from the original.
+This is similar to deriving the new edition of a textbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  from the original.
 Both the original and modified versions are works under copyright law, and both of them may be licensed.
 
-As an example of combining software, imagine a program A that uses two preexisting(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) libraries B and C.
+As an example of combining software, imagine a program A that uses two preexisting (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  libraries B and C.
 The complete program A will consist of library B, library C, and some code D that connects the libraries together and perhaps adds additional functionality.
 Each of these four items is a work of authorship with a license. 
 Program A can sometimes be referred to as the "Combined work", "Work as a whole" or "Larger work".
