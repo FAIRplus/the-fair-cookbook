@@ -18,7 +18,7 @@
 
 ## Main objectives
 
-This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as NCBI SRA(URL_TO_INSERT_RECORD http://www.ncbi.nlm.nih.gov/sra) and EMB(URL_TO_INSERT_RECORD http://www.Metabase.net)L ENA(URL_TO_INSERT_RECORD http://www.ebi.ac.uk/ena), it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) compliance.
+This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  such as NCBI SRA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.g7t2hv)  and EMB (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a1rp4c) L ENA (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.dj8nt8) , it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  compliance.
 
 
 ## Graphical overview
@@ -43,7 +43,7 @@ Aspera Data Transfer Process.
 * Pay attention to the conditions.
 * Sign up if you are the appropriate person for this download/upload. 
 * Typically, Aspera sites are locked down and need a username and password.
-* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary fam(URL_TO_INSERT_RECORD https://www.cog-genomics.org/plink2/formats#fam)iliarity with the data, and rules should be in place how to distribute the downloaded data further.
+* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary fam (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.d0886a) iliarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data
 * A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.
@@ -91,7 +91,7 @@ ascp version 3.9.6.176292
 
 * Observe the  download/upload speed e.g. 100Mbs and then you can estimate the finish time.
 * Have some automated monitoring on the download process to  notify you if it  stops/finishes.  Even an hourly `du -sh` from a cron job.
-* Also typically you are pulling down many directories and files. On completion, it may be worth doing a recursive file listing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html) to a file e.g. `ls -ltR > file_listing(URL_TO_INSERT_RECORD http://sms.cbi.cnptia.embrapa.br/SMS/index_s.html).txt` to give you and your "customers" a simple file catalogue.
+* Also typically you are pulling down many directories and files. On completion, it may be worth doing a recursive file listing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  to a file e.g. `ls -ltR > file_listing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr) .txt` to give you and your "customers" a simple file catalogue.
 
 ### Considerations for uploading
 
@@ -99,7 +99,7 @@ ascp version 3.9.6.176292
   * Be aware of geographical zoning and which areas to upload to.
   * Prepare data for ease of transfer, for instance, organize data in directories or consider data compression prior to transfer (note that this transfers a computational burden of decompression).
 
-<!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO (needed - no real example yet)
+<!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO (needed - no real example yet)
 * Example command line for uploading
   * 
   -->
@@ -108,13 +108,13 @@ ascp version 3.9.6.176292
 ## Conclusion
 
 * Aspera is commercial software
-* Is this still okay as part of FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.
+* Is this still okay as part of FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.
 
 
 ### What to read next?
 
 - {ref}`fcb-sftp` 
-- <!-- TO(URL_TO_INSERT_RECORD http://browser.planteome.org/amigo/term/TO:0000387#display-lineage-tab)DO (which recipe would that reference to? why is FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) evaluation needed here?) --> FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/) Evaluation
+- <!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO (which recipe would that reference to? why is FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  evaluation needed here?) --> FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Evaluation
 ````{rdmkit_panel}
 ````
 

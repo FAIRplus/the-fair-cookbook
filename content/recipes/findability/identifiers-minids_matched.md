@@ -31,7 +31,7 @@ To create a **persistent**, **globally unique** and **resolvable identifier (URL
 
 
 
-<!-- <div><img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
+<!-- <div><img src="https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nih-cfde/the-fair-cookbook/blob/master/content/recipes/08/2/images/minid-mermaid.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" /></div>
  -->
 
 ````{dropdown} 
@@ -54,7 +54,7 @@ An overview of the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [service invokation](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org(URL_TO_INSERT_RECORD http://edamontology.org)/data_0976)  |
+| [service invokation](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /operation_3763)  | [file](http://purl.obolibrary.org/obo/STATO_0000002)  | [guid](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_0976)  |
 
 ---
 
@@ -72,7 +72,7 @@ pip3 install --pre minid
 ### building from source:
 
 use the dev branch to obtain to source
-[minid github(URL_TO_INSERT_RECORD https://github.com/) repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com(URL_TO_INSERT_RECORD https://github.com/)/fair-research/minid)
+[minid github (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /fair-research/minid)
 
 ---
 
@@ -98,7 +98,7 @@ $ touch minid-config.cfg
 
  <!--  <div><img src="./images/globus/globus-account-create.png" width="900px" style="padding:1px;border:thin solid black;"/></div>   -->
 <!-- <div>
-  <img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
+  <img src="https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-create.png?raw=true" alt="drawing" style="border:1px solid black;" width="650"  align="top" />
 </div> 
  -->
   <!-- ![](/images/B5UbkpF.png) -->
@@ -140,7 +140,7 @@ Creating a Globus account.
 <img src="./images/globus/globus-account-login.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <!-- <div>
-  <img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
+  <img src="https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login.png?raw=true" alt="drawing" style="border:1px solid black;" width="750"  align="top" />
 </div>  -->
 
 ````{dropdown} 
@@ -163,7 +163,7 @@ Globus account login.
 <img src="./images/globus/globus-account-allow.png" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <!-- <div>
-<img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+<img src="https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-allow.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div> -->
 
 ````{dropdown} 
@@ -186,7 +186,7 @@ Globus account allow.
 <img src="./images/globus/globus-account-login-success.png" width="650px" style="padding:1px;border:thin solid black;"/>
 </div>  -->
 <!-- <div>
-<img src="https://github.com(URL_TO_INSERT_RECORD https://github.com/)/nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
+<img src="https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /nih-cfde/the-fair-cookbook/blob/dev/content/recipes/08/2/images/globus/globus-account-login-success.png?raw=true" width="900px" style="padding:1px;border:thin solid black;"/>
 </div>
  -->
 
@@ -216,7 +216,7 @@ Globus account login success.
 ## Usage
 
 
-The CL(URL_TO_INSERT_RECORD https://github.com/obophenotype/cell-ontology)I supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
+The CL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.j9y503) I supports the following simple operations (Note: the `--test` flag creates names in a test namespace that is removed periodically; remove that flag to create production minids.):
 
 * Check a known minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
 
@@ -261,9 +261,9 @@ Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid
 ### file manifest format
 
 
-Minids can only be assigned to a single file. In order to assign a minid to a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of files, we recommend using a `BDBag <https://github.com(URL_TO_INSERT_RECORD https://github.com/)/ini-bdds/bdbag>`_ or the minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
+Minids can only be assigned to a single file. In order to assign a minid to a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of files, we recommend using a `BDBag <https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /ini-bdds/bdbag>`_ or the minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
 
-The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is a JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259)-based format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  that enumerates a list of files as JSO(URL_TO_INSERT_RECORD http://www.sequenceontology.org/)N(URL_TO_INSERT_RECORD http://dx.doi.org/10.17487/RFC8259) objects that have the following attributes:
+The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is a JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -based format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  that enumerates a list of files as JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9)  objects that have the following attributes:
 
 
 * length: The length of the file in bytes.
@@ -278,7 +278,7 @@ The minid file manifest format (URL_TO_INSERT_TERM https://fairsharing.org/searc
 
   * sha512:\<sha512 hex value\>
 
-* url: the URL(URL_TO_INSERT_RECORD https://tools.ietf.org/html/rfc1630) to the file.
+* url: the URL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9d38e2)  to the file.
 
 The manifest may be used to create a minid for a collection (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=collection)  of files or alternatively as input to the minid batch-register command.
 
@@ -314,7 +314,7 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 ````
 
 
-<!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIR(URL_TO_INSERT_RECORD https://www.go-fair.org/fair-principles/)ness. PLoS ONE(URL_TO_INSERT_RECORD https://www.strobe-nut.ugent.be/content/strobe-nut-ontology) 14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
+<!-- 1. Madduri R, Chard K, D’Arcy M, Jung SC, Rodriguez A, Sulakhe D, et al. (2019) Reproducible big data science: A case study in continuous FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) ness. PLoS ONE (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.USxx0K)  14(4): e0213013. https://doi.org/10.1371/journal.pone.0213013
 
 2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
