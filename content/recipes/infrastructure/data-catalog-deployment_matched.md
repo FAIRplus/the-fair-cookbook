@@ -19,15 +19,15 @@
 
 ## Main Objectives
 
-This recipe is a step-by-step guide on how to deploy the IMI Data Catalog (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.de533c) ue in Docker. 
+This recipe is a step-by-step guide on how to deploy the IMI Data Catalog (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.de533c) ue in Docker. 
 
 ## Introduction
 
 For a more general introduction to data catalogues, their elements and data model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, 
 see the [data catalogue recipe](https://www.TODO.uldatacatalog.ul). 
-This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalog (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.de533c) ue
-developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host 
-dataset-level metadata for a wide range of IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s. Datasets are FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) ified and search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) able by a range facets. 
+This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalog (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.de533c) ue
+developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host 
+dataset-level metadata for a wide range of IMI project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s. Datasets are FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) ified and search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) able by a range facets. 
 The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, 
 together with informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion on any access restrictions.
 
@@ -39,7 +39,7 @@ The following need to be installed on the machine the deployment is run on:
 
 
 ## Ingredients
-- [IMI data catalogue code](https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /FAIRplus/imi-data-catalogue) 
+- [IMI data catalogue code](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/imi-data-catalogue) 
 
 Check out the code to your local machine by running the following command in a terminal:
 
@@ -59,7 +59,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 **(local)** and **(web container)** indicate context of execution.
 
-* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
+* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
 
 ```bash
 $ cd docker/nginx/
@@ -71,7 +71,7 @@ $ ./generate_keys.sh
 This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
 
 ```{warning}
-⚡ However, be aware that skipping this would cause the HTTPS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cd2f9e)  connection to be unsafe!
+⚡ However, be aware that skipping this would cause the HTTPS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cd2f9e)  connection to be unsafe!
 ```
 
 ````
@@ -83,7 +83,7 @@ $ cd ../..
 $ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
-* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
+* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
 in **Python**, use the following to generate this key:
 
 ```python
@@ -107,14 +107,14 @@ os.urandom(24)
 ```
 
 
-* In a new terminal, to create `Solr` core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) s, do:
+* In a new terminal, to create `Solr` core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) s, do:
 
 ```bash
 (local) $ docker-compose exec solr solr create_core -c datacatalog
 (local) $ docker-compose exec solr solr create_core -c datacatalog_test
 ```
 
-* Then, still in the second terminal, put Solr data into the core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) s:  
+* Then, still in the second terminal, put Solr data into the core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) s:  
 
 ```bash
 (local) $ docker-compose exec web /bin/bash
@@ -150,8 +150,8 @@ If you wanted to delete Solr data, you'd need to run:
 $ docker-compose down --volumes
 ```
 
-This will remove any persisted data - you must redo **solr create_core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) ** (see step 4 in the previous section) to 
-recreate the Solr core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) s.
+This will remove any persisted data - you must redo **solr create_core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) ** (see step 4 in the previous section) to 
+recreate the Solr core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) s.
 
 ### Modifying the datasets
 
@@ -201,19 +201,19 @@ Then, simply use:
 ## Manual deployment
 
 If you'd rather not to use Docker and compile and run the data catalogue manually instead, please follow the
-instructions in the [README file](https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /FAIRplus/imi-data-catalogue/blob/master/README.md)
+instructions in the [README file](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/imi-data-catalogue/blob/master/README.md)
 
 ---
     
 ## Conclusion
 
-This recipe provides a step-by-step guide to deploying the **IMI data catalogue** developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  at [University of Luxembourg](https://wwwen.uni.lu/lcsb),
+This recipe provides a step-by-step guide to deploying the **IMI data catalogue** developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  at [University of Luxembourg](https://wwwen.uni.lu/lcsb),
 as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
 ### What to read next?
 
 * {ref}`fcb-infra-build-catalog`
-* How to deploy the FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) PO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3ngg40)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.x9s8e) RT data catalogue?<!-- TO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.w69t6r) DO add a link to corresponding document --> (*in preparation*)
+* How to deploy the FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) PO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3ngg40)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.x9s8e) RT data catalogue?<!-- TO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.w69t6r) DO add a link to corresponding document --> (*in preparation*)
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`
 * {ref}`fcb-interop-txmetadata`

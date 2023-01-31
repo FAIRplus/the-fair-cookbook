@@ -34,7 +34,7 @@ should any distortion be identified in downstream analysis, to trace back to pos
 
 **"Provenance is informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about entities, activities, and people involved in producing a piece of data or thing, 
 which can be used to form assessments about its quality, reliability or trustworthiness"**. 
-Provenance has been an active field of academic research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  and several model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s have been developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c)  over the year to cover the domain.
+Provenance has been an active field of academic research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  and several model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s have been developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  over the year to cover the domain.
 The next section will introduce the most known model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s as well as detail how their overlap and what are the differences between these.
 
 **Data provenance** is also referred to as **data lineage** 
@@ -42,7 +42,7 @@ The next section will introduce the most known model (URL_TO_INSERT_TERM https:/
 
 ### OPM Open Provenance Model
 
-Published in 2011, the Open Provenance Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.7c683b) ) {footcite}`MO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.qs4x5m) REAU2011743` was the first formal model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  developed (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c) 
+Published in 2011, the Open Provenance Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.7c683b) ) {footcite}`MO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.qs4x5m) REAU2011743` was the first formal model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c) 
 to cater for the reporting of provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion with several main goals in mind:
 - provide a domain agnostic, formal and actionable definition of provenance
 - enable sharing of provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion between systems, an issue of interoperability
@@ -55,7 +55,7 @@ The following sections provides further insights into these efforts.
 
 
 ### The PROV Data Model
-This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
+This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
 
 ````{dropdown}
 :open:
@@ -71,12 +71,12 @@ Overview of the Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.or
 
 ### PROV vocabulary:
 
-The PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2rm2b3)  Provenance Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  as an OWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.atygwy)  ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .
-The namespace for PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
+The PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.2rm2b3)  Provenance Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  as an OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .
+The namespace for PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
 It is meant to allow expressing provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion as model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ed in the provenance model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
-[W3C PROV-DM](https://www.w3.org/TR/prov-o (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2rm2b3) verview/) with Classes, Properties and relations defined in the W3C 
-Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Web Language (OWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9)  and distributed in any of the official 
-serialization, e.g. JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9) /XML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.b5cc91)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/336) , Turtle (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e194c) .
+[W3C PROV-DM](https://www.w3.org/TR/prov-o (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.2rm2b3) verview/) with Classes, Properties and relations defined in the W3C 
+Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Web Language (OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  and distributed in any of the official 
+serialization, e.g. JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) /XML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.b5cc91)  (URL_TO_INSERT_RECORD https://fairsharing.org/336) , Turtle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e194c) .
 
 
 ````{dropdown}
@@ -92,7 +92,7 @@ Overview of the Provenance Ontology (URL_TO_INSERT_TERM https://fairsharing.org/
 ````
 
 
-Below is an example of provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion represented using the PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.2rm2b3)  ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and serialized as RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9)  statements
+Below is an example of provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion represented using the PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V-O (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.2rm2b3)  ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and serialized as RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  statements
 using turtle representation.
 
 ````bash
@@ -168,13 +168,13 @@ case of computation workflow provenance informat (URL_TO_INSERT_TERM https://fai
 
 ### CamFLow
 
-[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.82t0w2) ) designed to capture data provenance for
+[CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.82t0w2) ) designed to capture data provenance for
 the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion flow.
 
 
 CamFlow support 2 output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s.
 
-- W3C PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V-JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+- W3C PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V-JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 
 ```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
@@ -197,7 +197,7 @@ CamFlow support 2 output format (URL_TO_INSERT_TERM https://fairsharing.org/sear
 ```
 
 
-Example of a write edge in W3C PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) :
+Example of a write edge in W3C PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) :
 ```bash
 "QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "13",
@@ -227,14 +227,14 @@ systems health from a security point of view.
 ### Computational workflows and Provenance information:
 
 
-As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.36c7ea)  and Provenance Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , three key entities are necessary to 
+As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.36c7ea)  and Provenance Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , three key entities are necessary to 
 record and track lineage informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion:
 
 - The Entity the origin of which we are concerned with.
 - The Activity which resulted in the creation of the Entity
 - The Agent which performed the Activity aforementioned.
 
-Because the PRO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cp0ybc) V model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is domain agnostic and very generic, it can be either applied as is, to any situation 
+Because the PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) V model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is domain agnostic and very generic, it can be either applied as is, to any situation 
 or it can also be extended and specialized to suit a particular domain on knowledge.
 To give an example, tracking provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion in the field of bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics shares features with provenance
 tracking as used in manufacturing, but it also has a number of specific features.
@@ -242,17 +242,17 @@ In the field of bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?r
 datasets on high performance computing infrastructure and cloud infrastructure, having the ability to access data 
 lineage matters for a number for reasons, such as:
 
-- audit and trail tasks for regulator (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ey49c6) y compliance, where every step of the data processing needs to be documented for submission.
+- audit and trail tasks for regulator (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ey49c6) y compliance, where every step of the data processing needs to be documented for submission.
 - resource optimization and energy savings (e.g. should a workflow be executed again or not)
 
-It is those features which have been the focus of an extension as part of the work on computational biology workflows with CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) Prov {footcite}`10.1093/gigascience/giz095`, and which we will now cover.
+It is those features which have been the focus of an extension as part of the work on computational biology workflows with CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) Prov {footcite}`10.1093/gigascience/giz095`, and which we will now cover.
 
 #### Example of CWLProv document
 
-The infobox below shows an example of CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) Prov RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9)  document which details how provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the execution 
-of CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  coded workflow may be represented.
-This document is take from the [CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) Prov github (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /common-workflow-language/cwlprov/blob/main/prov.md).
-Such documents are generated and consumed by a feasibility demonstrator tool such as [CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) tool]()
+The infobox below shows an example of CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) Prov RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  document which details how provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the execution 
+of CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  coded workflow may be represented.
+This document is take from the [CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) Prov github (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /common-workflow-language/cwlprov/blob/main/prov.md).
+Such documents are generated and consumed by a feasibility demonstrator tool such as [CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) tool]()
 
 
 ```bash
@@ -300,19 +300,19 @@ See the [BagIt profile](https://github.com/common-workflow-language/cwlprov/blob
 #### CWLtool: a component to manage workflow information and generate CWLProv information
 
 
-'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
-[Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) ](https://www.commonwl.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx) /), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  specifications
-and provides validation functions to check CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  documents.
+'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
+[Common Workflow Language (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) ](https://www.commonwl.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx) /), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  specifications
+and provides validation functions to check CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  documents.
 
 
 ```bash
 pip install cwltool
 ```
 
-cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
+cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
 [Toil](https://toil.ucsc-cgl.org/) exist. 
 In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as
-'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  implementation
+'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  implementation
 will be executed.
 
 ```bash
@@ -329,10 +329,10 @@ cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 
 #### CWLProv-py
 
-This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
-informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion when available from Research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Objects {footcite}`cwlprov-py`. 
-It is a standalone python package, which provides a command line interface (CL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.j9y503) I) to read, inspect research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  objects 
-capturing workflow execution informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion using the CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  syntax.
+This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
+informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion when available from Research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  Objects {footcite}`cwlprov-py`. 
+It is a standalone python package, which provides a command line interface (CL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.j9y503) I) to read, inspect research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  objects 
+capturing workflow execution informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion using the CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  syntax.
 
 To install the package, simply run the standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  python install package pip: 
 
@@ -340,7 +340,7 @@ To install the package, simply run the standard (URL_TO_INSERT_TERM https://fair
 pip install cwlprov
 ```
 
-To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8y5ayx)  file, run the following command:
+To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8y5ayx)  file, run the following command:
 
 
 ```python
@@ -360,7 +360,7 @@ solution to the problem of trust in provenance. To achieve this goal, DLT relies
 - distribution of informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion: in other words, the system is decentralized, meaning that no single entity holds the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) .
 Instead, a multitude of copies of the informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion are available from a myriad of independent nodes. 
 
-- transparency:  this is a consequence of the distributed nature of the arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) itecture. Transparency is understood as the
+- transparency:  this is a consequence of the distributed nature of the arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture. Transparency is understood as the
 availability of means of verification by being able to access independent sources of the reference informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. 
 This allows consistency checks to be performed and therefore provides the means of tempering detection. 
 
@@ -374,7 +374,7 @@ information {footcite}`10.3389/fsufs.2020.563424`.
 ledger, it is digitally signed and synchronized in the network by adding a new element (the block) to the blockchain.
 Each of the new is digitally signed via some cryptographic algorithm (e.g. Blake2). Any attempt to modify a particular
 block would result in changing its signature. This can be done but the cost could be prohibitively high as it would 
-entail modifying all subsequent blocks in the chain. This arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) itecture ensures the stability or immutability of the ledger.
+entail modifying all subsequent blocks in the chain. This arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture ensures the stability or immutability of the ledger.
 
 ````{admonition} Important
 :class: tip
@@ -391,7 +391,7 @@ thus reinforcing the approach.
 
 ## Conclusion
 
-With this FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  Cookbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  content, we have introduced the notion of Provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, providing a brief historical 
+With this FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  content, we have introduced the notion of Provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, providing a brief historical 
 review of the domain model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  and given a few examples of tools implementing provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion tracking.
 
 For a more in depth exploration of provenance informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion, we encourage our readers to follow up with more detailed 
@@ -400,11 +400,11 @@ material listed below:
 
 ### What to read next?
 
-* [Generating ISA based metadata and packaging it as a research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  object programmatically](https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /faircookbook/FCB___)
-* [Making workflow informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  and depositing to Workflowhub (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.07cf72) ](https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /faircookbook/FCB___)
+* [Generating ISA based metadata and packaging it as a research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  object programmatically](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB___)
+* [Making workflow informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  and depositing to Workflowhub (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.07cf72) ](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB___)
 * [How to meet community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s for annotation](fcb-interop-txmetadata) {ref}`fcb-interop-txmetadata`
-* [FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
-* [Minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s](https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /faircookbook/FCB008)
+* [FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
+* [Minid identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB008)
 
 
 ````{panels}
@@ -414,7 +414,7 @@ material listed below:
 ```{image} ../../../images/logos/pistoia_logo.png
 :height: 40px
 :align: center
-:name: FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) toolkit_logo
+:name: FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) toolkit_logo
 ```
 ^^^	
 - [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)	
@@ -433,7 +433,7 @@ material listed below:
 > :name: Turing-Way-logo
 > ```
 > ^^^
-> [The Turing Way Book (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  of Data Sciences](https://the-turing-way.netlify.app/welcome.html/)
+> [The Turing Way Book (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  of Data Sciences](https://the-turing-way.netlify.app/welcome.html/)
 > ---
 -->
 
