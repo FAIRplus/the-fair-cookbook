@@ -23,16 +23,16 @@
 
 The main purpose of this recipe is:
 
-> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) . 
+> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) . 
 > This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. We also introduce semantics elements, such as controlled vocabularies, to make metadata machine actionable.
 
 ---
 ## Introduction
 
-Upon reading the [FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdl (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.vm4688) e is to grasp the notion of 'metadata'.
+Upon reading the [FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdl (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.vm4688) e is to grasp the notion of 'metadata'.
 Below are a number of commonly found definitions of metadata:
 
-* The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidata (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6s749p) Metadata`.
+* The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidata (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6s749p) Metadata`.
 
 * The formal definition **"set of agreed-upon descriptors to denote an entity"**, which indicates that a social contract is needed to ensure we all mean the same thing when adding a descriptor.
 
@@ -42,7 +42,7 @@ Below are a number of commonly found definitions of metadata:
 
 The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=society)  which relies on informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion technology.
 
-In the following sections, we will delve further into the possibly controversial typology of metadata {footcite}`NISO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) Metadata`.
+In the following sections, we will delve further into the possibly controversial typology of metadata {footcite}`NISO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) Metadata`.
 
 
 
@@ -50,7 +50,7 @@ In the following sections, we will delve further into the possibly controversial
 ## Graphical Overview 
 
 <!-- ```language
-../datascriptor/node_modules/.bin/mmdc -i ../FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) plus-org/the-fair-cookbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) /content/recipes/introduction/metadata-fair-figure.mmd -o ../FAIR (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.WWI10U) plus-org/the-fair-cookbook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b) /content/recipes/introduction/metadata-fair-figure.png
+../datascriptor/node_modules/.bin/mmdc -i ../FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) plus-org/the-fair-cookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) /content/recipes/introduction/metadata-fair-figure.mmd -o ../FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U) plus-org/the-fair-cookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) /content/recipes/introduction/metadata-fair-figure.png
 ```
  -->
 
@@ -80,7 +80,7 @@ Depending on the domain of knowledge, descriptive metadata complexity can increa
 Taking an example, let's consider the domain of a bibliographic record and look at a BibTex {footcite}`bibtex` record:
 
 ```bash
-@Article{Alter2020DATS (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.e20vsd) ,
+@Article{Alter2020DATS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.e20vsd) ,
    Author="Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. ",
    Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  for discovering data access and use requirements}",
    Journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal) ="Gigascience",

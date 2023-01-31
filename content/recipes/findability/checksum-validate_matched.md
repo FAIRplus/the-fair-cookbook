@@ -70,7 +70,7 @@ Checking the requirements (tests):
     and hit return.
       - You should see as output: 
         ```text
-        md5sum (GNU core (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.xMmOCL) utils) 8.30
+        md5sum (GNU core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) utils) 8.30
         Copyright (C) 2018 Free Software Foundation, Inc.
         License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
         This is free software: you are free to change and redistribute it.
@@ -140,7 +140,7 @@ The output should be something like:
 ...
 ```
 
-This step will take as long as it needs to calculate the checksums of all files on the target system. As a benchmark you can expect 0.01 seconds per MB (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a1rp4c)  of data.
+This step will take as long as it needs to calculate the checksums of all files on the target system. As a benchmark you can expect 0.01 seconds per MB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c)  of data.
 
 
 ### Limitations of this recipe
@@ -148,7 +148,7 @@ This step will take as long as it needs to calculate the checksums of all files 
 This recipe in its current form has the following limitations:
 
   - the above assumes that everything is placed in your home folder. (for a resolution see section "Extendability of this recipe" below.)
-  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CP (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.wP3t2L) U time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a1rp4c)  of data.
+  - the above assumes that you don't have a problem with calculating the checksums sequentially. Depending on your system's resources (especially available CP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.wP3t2L) U time), this calculation of checksums might take a while, however. A common benchmark on a typical laptop is: 0.01 seconds per MB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c)  of data.
   - you should mind the general limitations of checksums, which are however not covered in this recipe.
   - there is a known clash between the output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  of the GNU / Linux tool `md5sum` and the macOS / BSD tool `md5`. Their standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  output format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s are incompatible; combining a macOS-based system with a Linux-based system, either one as source or target, is therefore not straightforward. (hint: the Linux tool has the `--tag` flag which generates macOS-compatible output.) 
   - Windows users may use the included PowerShell function "Get-FileHash"
@@ -158,15 +158,15 @@ This recipe in its current form has the following limitations:
 
 ### Extendability of this recipe
 
-- The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud arch (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c) itecture). However, additional steps would be needed to align the generated checksums to each other (questions: how would they be stored; how would they be brought together in one file to enable effective transport of the file containing the checksum entries).
+- The tool above could be used to calculate checksums in parallel if typical scheduling systems and multiple worker nodes are available sharing the same file system (equivalently, this would be possible in a cloud arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture). However, additional steps would be needed to align the generated checksums to each other (questions: how would they be stored; how would they be brought together in one file to enable effective transport of the file containing the checksum entries).
 - the recipe assumes that everything is placed in your home folder. If this is not the case, replace `~`, the home directory indicator, by the corresponding path, or execute specifically all `md5sum` commands only with relative pathes (by navigating in the corresponding directory, first). The command will be something like `md5sum ./YOUR_PATH_HERE/*.jpg`, then, and will output something like `c691b3d2fc2678839a9c141b6ee1524e  ./YOUR_PATH_HERE/picture1.jpg` then.
 - The procedure above could be combined with a file length indicator (usually the amount of octets = bytes); the file length is usually retrieved much faster than the checksum, and might already indicate the inequality of two files (albeit similar file length does not guarantee content-identity, of course).
 
 
 ## Further reading
 
-- Wikiped (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c) ia article on checksums: <https://en.wikipedia.org/wiki/Checksum>
-- Wikiped (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.31385c) ia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
+- Wikiped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c) ia article on checksums: <https://en.wikipedia.org/wiki/Checksum>
+- Wikiped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c) ia article on the tool `md5sum`: <https://en.wikipedia.org/wiki/Md5sum>
 - Overview of checksum comparison with respect to file transmission: https://en.wikipedia.org/wiki/File:CPT-Hashing-File-Transmission.svg
 
 ````{rdmkit_panel}

@@ -20,12 +20,12 @@
 
 The main purpose of this recipe is:
 
-> to describe what `search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engine optimization` is and show how to implement markup with the [`Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) `](http://schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ) vocabulary, and [`Bioschemas`](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) ) extension, to improve page discovery and visibility by web page indexers.
+> to describe what `search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine optimization` is and show how to implement markup with the [`Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) `](http://schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) ) vocabulary, and [`Bioschemas`](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) ) extension, to improve page discovery and visibility by web page indexers.
 
-There are sub-recipes for embedding search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engine optimization into specific web pages about a specific type or resource:
+There are sub-recipes for embedding search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine optimization into specific web pages about a specific type or resource:
 - [Data catalog](fcb-find-bs-catalog)
 - [Dataset](fcb-find-bs-dataset)
-- [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rtndct) )
+- [Resource specific page](fcb-find-bs-data) (Gene, Molecular Entity, Protein (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.rtndct) )
 
 ---
 
@@ -41,10 +41,10 @@ There are sub-recipes for embedding search (URL_TO_INSERT_RECORD http://127.0.0.
 ```{figure} images/seo-mermaid.png
 ---
 height: 750px
-name: Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine Optimization
-alt: Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine Optimization
+name: Search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  Engine Optimization
+alt: Search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  Engine Optimization
 ---
-Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine Optimization.
+Search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  Engine Optimization.
 ```
 ````
 
@@ -54,25 +54,25 @@ Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  Engine O
 
 ### Finding web pages
 
-Providers of content for the Internet serve documents format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ted or rendered in [`HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL) ` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL)  pages can be styled with [`cascading stylesheets (CSS)`](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and interactivity can be delivered via scripting languages such as [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
+Providers of content for the Internet serve documents format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ted or rendered in [`HTML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.YugnuL) ` format](https://en.wikipedia.org/wiki/HTML). The web pages are hosted on servers, which are accessed via the [`HTTP protocol`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). HTML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.YugnuL)  pages can be styled with [`cascading stylesheets (CSS)`](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and interactivity can be delivered via scripting languages such as [`Javascript`](https://en.wikipedia.org/wiki/JavaScript).
 
-With billions of web pages served, a key issue is finding content. To assist in this task, search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.53edcc) ), or by targeting specific data structures embedded in the web pages themselves.
+With billions of web pages served, a key issue is finding content. To assist in this task, search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engines (e.g. Bing, Google, Yandex, Qwantt) have been built. They work by crawling the web, performing brute force keyword indexing or specific files served by the server (e.g. site map (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.53edcc) ), or by targeting specific data structures embedded in the web pages themselves.
 
 ### What is search engine optimization
 
-Search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  results. As ranking in search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engine optimization` covers any of the practices which aim at improving the position of a web page in a search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  result. 
+Search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine index pages based on their content, as identified by web crawlers. So any misclassification or errors in concept identification can affect where a given pages appears in a search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  results. Various techniques have been therefore been development by website designers, maintainers and engineers to improve ranking in search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  results. As ranking in search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  results significantly impact trafic to a web site and possibly revenues, especially if these are dependent on advertising, `search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine optimization` covers any of the practices which aim at improving the position of a web page in a search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  result. 
 
 
 ### Schema.org Vocabulary
 
-A few years back, a consortium of search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
+A few years back, a consortium of search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engines decided to combine forces to generate a structured vocabulary to identify and annotation entities, so search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine can index those more efficiently, bringing the power of semantics in the picture. The priorities for content addition to this vocabulary are defined by various factors, mostly driven between content advertising and relevance.
 Compared to plain keyword based indexing, annotation with structured vocabulary affords gains such as query expansion or improved content validation.
 
 ### How does Schema.org work in practice:
 
-The principle is actually fairly simple. It relies on embedding machine readable content into the HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL)  file. A variety of options are available (RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9) a (URL_TO_INSERT_RECORD http://127.0.0.1:8080/663) , microformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) ). `JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) ` is widely recommended as the most suitable approach.
+The principle is actually fairly simple. It relies on embedding machine readable content into the HTML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.YugnuL)  file. A variety of options are available (RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) a (URL_TO_INSERT_RECORD https://fairsharing.org/663) , microformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8f9bbb) ). `JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8f9bbb) ` is widely recommended as the most suitable approach.
 
-Below is a regular plain vanilla HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL)  page providing informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about an scientific journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  article.
+Below is a regular plain vanilla HTML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.YugnuL)  page providing informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about an scientific journal (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=journal)  article.
 
 ```HTML
 <!-- A list of the issues for a single volume of a given periodical. -->
@@ -91,7 +91,7 @@ Below is a regular plain vanilla HTML (URL_TO_INSERT_RECORD http://127.0.0.1:808
 </div>
 ```
 
-Now, we are presenting the same informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion augmented with the JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb)  file using Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  `ScholarlyArticle` profile. Note how the file is provided with the HTML (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.YugnuL)  `script` tag
+Now, we are presenting the same informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion augmented with the JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8f9bbb)  file using Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8)  `ScholarlyArticle` profile. Note how the file is provided with the HTML (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.YugnuL)  `script` tag
 
 ```bash
 <script type="application/ld+json">
@@ -139,13 +139,13 @@ Now, we are presenting the same informat (URL_TO_INSERT_TERM https://fairsharing
 ```
 
 
-`JSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8f9bbb) ` is an official serialization of `RDF (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.p77ph9) ` and the document is recognized as a `graph` holding a set of `triples`. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  engines to provide improved search (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  results. 
+`JSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8f9bbb) ` is an official serialization of `RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) ` and the document is recognized as a `graph` holding a set of `triples`. The availability of such semantic statements from a web page are exploited by the indexing algorithms of search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engines to provide improved search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  results. 
 
 
 ### Tools supporting creation and validation of `structured data`
 
 Google has produced an online tool allowing developers to test the annotation they produce before rolling them out to production. 
-The tool is known as the [`Google Structured Data Testing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  Tool`](https://search.google.com/structured-data/testing-tool)
+The tool is known as the [`Google Structured Data Testing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  Tool`](https://search.google.com/structured-data/testing-tool)
 <!-- 
 ![](/images/Ge8gsWL.png =650px)
 
@@ -158,39 +158,39 @@ The tool is known as the [`Google Structured Data Testing (URL_TO_INSERT_RECORD 
 ```{figure} /images/Ge8gsWL.png
 ---
 height: 580px
-name: Google Structured Data Testing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  Tool
-alt: Google Structured Data Testing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  Tool
+name: Google Structured Data Testing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  Tool
+alt: Google Structured Data Testing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  Tool
 ---
-Google Structured Data Testing (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.q7bkqr)  Tool.
+Google Structured Data Testing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  Tool.
 ```
 ````
 
 
 ### Bioschemas: trying to address the coverage gap
 
-`Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion more effectively. This proves to be a good timing for the [`Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  project`](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3531) /). `Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) ` focuses on making Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8)  more relevant for the life sciences community by providing:
+`Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) ` development is mainly driven by commercial applications. The scientific use case was not very high until recently. The Covid-19 pandemic exposed the needs to find datasets and disease related informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion more effectively. This proves to be a good timing for the [`Bioschemas (URL_TO_INSERT_RECORD https://fairsharing.org/3517)  (URL_TO_INSERT_RECORD https://fairsharing.org/3517)  project`](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /), which has been running for a few years with the support of the [`EU-Elixir organization`](https://elixir-europe.org (URL_TO_INSERT_RECORD https://fairsharing.org/3531) /). `Bioschemas (URL_TO_INSERT_RECORD https://fairsharing.org/3517)  (URL_TO_INSERT_RECORD https://fairsharing.org/3517) ` focuses on making Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8)  more relevant for the life sciences community by providing:
 
 1. `types` for life sciences entities such as chemicals, genes, and proteins.
 1. `profiles` that identify the most pertinent properties for marking up a life sciences resources of a specific type to enable it to be more findable.
 
-The [main profiles](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/) currently specified by the `Bioschemas (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) ` organisation are as follows:
+The [main profiles](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/) currently specified by the `Bioschemas (URL_TO_INSERT_RECORD https://fairsharing.org/3517)  (URL_TO_INSERT_RECORD https://fairsharing.org/3517) ` organisation are as follows:
 
-* [Chemical Substance](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/ChemicalSubstance)
-* [DataCatalog](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/DataCatalog)
-* [Dataset](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Dataset (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.20sbr9) )
-* [Gene](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Gene)
-* [Molecular Entity](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/MolecularEntity)
-* [Protein (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.rtndct) ](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Protein)
-* [Sample](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Sample)
-* [Taxon](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3517) /profiles/Taxon)
+* [Chemical Substance](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/ChemicalSubstance)
+* [DataCatalog](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/DataCatalog)
+* [Dataset](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/Dataset (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.20sbr9) )
+* [Gene](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/Gene)
+* [Molecular Entity](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/MolecularEntity)
+* [Protein (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.rtndct) ](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/Protein)
+* [Sample](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/Sample)
+* [Taxon](https://bioschemas.org (URL_TO_INSERT_RECORD https://fairsharing.org/3517) /profiles/Taxon)
 
 ---
 ## FAIRification Objectives, Inputs and Outputs
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /operation_3778)  | [Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.hzdzq8)  | [annotated text](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_3779)  |
-| [validation](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /operation_2428)  | [Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.hzdzq8)  | [report](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_2048)  |
+| [text annotation](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /operation_3778)  | [Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /FAIRsharing.hzdzq8)  | [annotated text](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /data_3779)  |
+| [validation](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /operation_2428)  | [Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /FAIRsharing.hzdzq8)  | [report](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /data_2048)  |
 
 
 
@@ -198,8 +198,8 @@ The [main profiles](https://bioschemas.org (URL_TO_INSERT_RECORD http://127.0.0.
 
 | Data Format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
-|  [JSON-LD](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_3749)  | [Schema.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.hzdzq8) | [RDF](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_2353)  |
-| [JSON-LD](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /format_3749)  | [Bioschemas](https://fairsharing.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3518)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3536)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/3538) /FAIRsharing.20sbr9) | [RDF](http://edamontology.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.a6r7zs) /data_2353)  |
+|  [JSON-LD](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /format_3749)  | [Schema.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /FAIRsharing.hzdzq8) | [RDF](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /data_2353)  |
+| [JSON-LD](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /format_3749)  | [Bioschemas](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /FAIRsharing.20sbr9) | [RDF](http://edamontology.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a6r7zs) /data_2353)  |
 
 
 

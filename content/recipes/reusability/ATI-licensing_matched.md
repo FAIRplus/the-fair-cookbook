@@ -58,7 +58,7 @@ Do not make any important decisions based solely on the contents of this chapter
 
 Without a license, all rights are with the author of the code, and that means nobody else can use, copy, distribute, or modify the work without consent.
 A license gives this consent.
-If you do not have a license for your software, it is effectively unusable by the whole research (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.52b22c)  community.
+If you do not have a license for your software, it is effectively unusable by the whole research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  community.
 
 
 

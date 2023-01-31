@@ -48,21 +48,21 @@ Without a set of competency questions, important variables may easily be forgott
 - Generate a consolidated view on metadata by merging attributes as far as possible
 - Differentiate metadata available for most of the studies from metadata occurring rarely (sparse matrix)
 - Identify gaps in the metadata available for most of the studies comprising data that is considered important but has not been captured in the past
-- Define a MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M to be captured in the future from the metadata that is available for most of the studies and the metadata considered to be important
+- Define a MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M to be captured in the future from the metadata that is available for most of the studies and the metadata considered to be important
 - Identify available community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s regarding minimal sets of metadata
-- Add metadata attributes from those community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s to the MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M, if they are not yet included
-- Assign cardinality to the MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M (identify mandatory metadata and how many times the attributes may be reported. Some metadata might not be mandatory but are still important to capture, if available)
+- Add metadata attributes from those community standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s to the MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M, if they are not yet included
+- Assign cardinality to the MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M (identify mandatory metadata and how many times the attributes may be reported. Some metadata might not be mandatory but are still important to capture, if available)
 - Identify appropriate ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  representing your data and establish an application ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (see recipe 4 of UC3)
-- Assign, as far as possible, ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  to the MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M and the sparse matrix 
+- Assign, as far as possible, ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  to the MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M and the sparse matrix 
 
 ### Step 3: Introduce semantics into the template
 - Identify most important objects to be represented in the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  (e.g. study, sample, treatment, result, etc.)
 - Make sure to have an appropriate naming strategy for the objects (e.g. an NGSstudy is an OMICSstudy is a Study; do not call an NGSstudy a Study; make sure the granularity fits your purposes)
-- Assign MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M and sparse matrix attributes to the respective objects
+- Assign MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M and sparse matrix attributes to the respective objects
 - Identify and introduce relationships among the identified objects (e.g. “an NGSstudy contains samples”, “a result is derived from a sample”) 
 - Identify dependencies to data not represented as objects at this point in time, but, e.g. as termlists
 - Make sure that your model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  can be expanded subsequently to represent those data as objects, as well
-- Integrate the sparse matrix of metadata not contained in the MSO (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.8pbhs0) M in the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
+- Integrate the sparse matrix of metadata not contained in the MSO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.8pbhs0) M in the model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 
 
 ### Step 4:  Reality check
 - Introduce measures allowing to identify errors in reported data according to your model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) 

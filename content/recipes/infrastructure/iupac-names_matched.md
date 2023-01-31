@@ -20,20 +20,20 @@
 
 The main purpose of this recipe is:
 
-> To take an IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  name and generate an InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) Key
+> To take an IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  name and generate an InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) Key
 
 ---
 
 ### Using the OPSIN website
 
-The OPSIN library is an open source tool to parse IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  names into chemical graphs {footcite}`Lowe2011Chemical`.
-OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  names are converted into other representations, including an InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) Key.
-The latter is done by the offical InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) `.
+The OPSIN library is an open source tool to parse IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  names into chemical graphs {footcite}`Lowe2011Chemical`.
+OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  names are converted into other representations, including an InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) Key.
+The latter is done by the offical InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) `.
 
 ### Automating translations with Google Colab
 
-[Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  names.
-In Colab we can use [Bacting](https://github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /egonw/bacting) {footcite}`Willighagen2021`
+[Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  names.
+In Colab we can use [Bacting](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /egonw/bacting) {footcite}`Willighagen2021`
 to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:
 
 ```python
@@ -47,7 +47,7 @@ opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
 opsin = opsin_cls(".")
 ```
 
-After that, we use the manager API to parse the IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  name and generate an InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9)  and InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) Key:
+After that, we use the manager API to parse the IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  name and generate an InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9)  and InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) Key:
 
 ```python
 anInChI = inchi.generate(opsin.parseIUPACName("methane"))
@@ -55,8 +55,8 @@ print(f"InChI: {anInChI.getValue()}")
 print(f"InchIKey: {anInChI.getKey()}")
 ```
 
-The full Jupyter notebook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  can be found [here](https://gist.github.com (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.c55d5e) /egonw/e4c788437a827407457deb764ce8eb93),
-including a button to open the notebook (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.cbz72b)  in Colab.
+The full Jupyter notebook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  can be found [here](https://gist.github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /egonw/e4c788437a827407457deb764ce8eb93),
+including a button to open the notebook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  in Colab.
 
 ### Automating translations with Apache Groovy
 
@@ -80,14 +80,14 @@ println "InchIKey: ${anInChI.getKey()}"
 
 ## Conclusion
 
-Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  names and convert them to
-chemical graph based identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) Key. The InChI (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.ddk9t9) Key identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
+Cheminformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  names and convert them to
+chemical graph based identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) Key. The InChI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ddk9t9) Key identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) 
 can be used to find more informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
-original IUPAC (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.md3e78)  names.
+original IUPAC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.md3e78)  names.
 
 ### What to read next?
 
-* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  map (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.53edcc) ping with BridgeDb (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.5ry74y) ](https://w3id.org (URL_TO_INSERT_RECORD http://127.0.0.1:8080/FAIRsharing.S6BoUk) /faircookbook/FCB017)
+* [Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  map (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.53edcc) ping with BridgeDb (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5ry74y) ](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB017)
 
 ````{rdmkit_panel}
 ````
