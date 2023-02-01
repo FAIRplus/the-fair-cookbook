@@ -19,23 +19,23 @@
 
 * Technical requirements:
   * Hypertext Transfer Protocol (HTTP)
-  * Uniform Resource Locator (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2)  (URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) )
+  * Uniform Resource Locator (URL_TO_INSERT_RECORD_3727 https://fairsharing.org/FAIRsharing.9d38e2)  (URL (URL_TO_INSERT_RECORD_3728 https://fairsharing.org/FAIRsharing.9d38e2) )
   * Domain Name System (DNS)
 * Knowledge requirement:
-    * understanding of [identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s](../findability/identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s.md).
+    * understanding of [identifier (URL_TO_INSERT_TERM_3729 https://fairsharing.org/search?recordType=identifier_schema) s](../findability/identifier (URL_TO_INSERT_TERM_3730 https://fairsharing.org/search?recordType=identifier_schema) s.md).
 
 
     
 
 ## Abstract
 
-With this recipe, we will reinforce the notion and importance of Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) by 
-introducing several public services for minting such identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s. For each service, we will highlight the strengths and weaknesses.
+With this recipe, we will reinforce the notion and importance of Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM_3731 https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) by 
+introducing several public services for minting such identifier (URL_TO_INSERT_TERM_3732 https://fairsharing.org/search?recordType=identifier_schema) s. For each service, we will highlight the strengths and weaknesses.
 
 
 ## Background information
 
-In the ideal linked data world, best practice is to provide a URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2)  which can be accessed via HTTP, more specifically the HTTP GET command.
+In the ideal linked data world, best practice is to provide a URL (URL_TO_INSERT_RECORD_3733 https://fairsharing.org/FAIRsharing.9d38e2)  which can be accessed via HTTP, more specifically the HTTP GET command.
 > (Learn more on HTTP GET here: [https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)) 
 
 To make this work, you have to guarantee that the HTTP GET command is answered.
@@ -44,28 +44,28 @@ To make this work, you have to guarantee that the HTTP GET command is answered.
 
 
 HTTP uses Domain Name System (DNS) to decide which computer (i.e. which [IP address](https://en.wikipedia.org/wiki/IP_address))
-to contact and ask for content regarding the URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2)  you want to resolve.
+to contact and ask for content regarding the URL (URL_TO_INSERT_RECORD_3734 https://fairsharing.org/FAIRsharing.9d38e2)  you want to resolve.
 
-DNS uses the concept of hierarch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) ical domains to resolve URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s. 
+DNS uses the concept of hierarch (URL_TO_INSERT_RECORD_3736 https://fairsharing.org/FAIRsharing.52b22c) ical domains to resolve URL (URL_TO_INSERT_RECORD_3735 https://fairsharing.org/FAIRsharing.9d38e2) s. 
 > (Learn more about subdomains here: [https://en.wikipedia.org/wiki/Subdomain](https://en.wikipedia.org/wiki/Subdomain)) 
 
-For example, you might want to resolve the following URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) :
+For example, you might want to resolve the following URL (URL_TO_INSERT_RECORD_3737 https://fairsharing.org/FAIRsharing.9d38e2) :
 
 http://en.wikipedia.org/wiki/Enzyme_Commission_number
 
 This will make your computer first look up who is responsible for managing "org" (the top-level domain), 
-and ask there who is responsible for managing the domain "wikiped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c) ia.org",
-and finally who is responsible for managing "en.wikiped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c) ia.org". 
+and ask there who is responsible for managing the domain "wikiped (URL_TO_INSERT_RECORD_3738 https://fairsharing.org/FAIRsharing.31385c) ia.org",
+and finally who is responsible for managing "en.wikiped (URL_TO_INSERT_RECORD_3739 https://fairsharing.org/FAIRsharing.31385c) ia.org". 
 All responses might yield different computer systems, i.e. IP addresses. 
 
 This principle can thus be used to delegate authority.
-In an enterprise context, this might be used to delegate authority within hierarch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) y:
+In an enterprise context, this might be used to delegate authority within hierarch (URL_TO_INSERT_RECORD_3740 https://fairsharing.org/FAIRsharing.52b22c) y:
 
 http://my-department.my-enterprise.com/my-resource
 
-can be understood  in the following sense: "my-enterprise" allowed "my-department" to "mint", i.e. generate / provide / resolve, URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s over the internet. 
+can be understood  in the following sense: "my-enterprise" allowed "my-department" to "mint", i.e. generate / provide / resolve, URL (URL_TO_INSERT_RECORD_3741 https://fairsharing.org/FAIRsharing.9d38e2) s over the internet. 
 
-If even more granularity / hierarch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) y is desired, an URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2)  may also look like this:
+If even more granularity / hierarch (URL_TO_INSERT_RECORD_3743 https://fairsharing.org/FAIRsharing.52b22c) y is desired, an URL (URL_TO_INSERT_RECORD_3742 https://fairsharing.org/FAIRsharing.9d38e2)  may also look like this:
 
 http://my-team.my-department.my-enterprise.com/my-resource
 
@@ -89,10 +89,10 @@ which is not accessible from the public internet, to specialized computer system
 
 ## How to realize a GUPRI?
 
-A Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) can be realized by implementing all the above. 
-Some consider a GUPRI to be equivalent with PID (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ncgh1j)  (persistent identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) ) or PURL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2)  (persistent URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) ). 
+A Globally Unique, Persistent, Resolvable Identifier (URL_TO_INSERT_TERM_3744 https://fairsharing.org/search?recordType=identifier_schema)  (GUPRI) can be realized by implementing all the above. 
+Some consider a GUPRI to be equivalent with PID (URL_TO_INSERT_RECORD_3749 https://fairsharing.org/FAIRsharing.ncgh1j)  (persistent identifier (URL_TO_INSERT_TERM_3745 https://fairsharing.org/search?recordType=identifier_schema) ) or PURL (URL_TO_INSERT_RECORD_3746 https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD_3747 https://fairsharing.org/FAIRsharing.9d38e2)  (persistent URL (URL_TO_INSERT_RECORD_3748 https://fairsharing.org/FAIRsharing.9d38e2) ). 
 If intended for public use, your GUPRI must be accessible from the public internet; if intended for closed use, 
-you would probably use specialized DNS rules and domain names to exclude the public from resolving your identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) .
+you would probably use specialized DNS rules and domain names to exclude the public from resolving your identifier (URL_TO_INSERT_TERM_3750 https://fairsharing.org/search?recordType=identifier_schema) .
 
 
 ## Public services for realizing a GUPRI
@@ -104,7 +104,7 @@ You have to rent a domain name. You have to be quite an expert to set the system
 
 So, what are your options? A public service for realizing GUPRIs sounds like it would be a good idea!
 
-In the following recipe you will learn about w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) , purl.org, and the DOI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn)  / handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  system, 
+In the following recipe you will learn about w3id (URL_TO_INSERT_RECORD_3753 https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD_3752 https://fairsharing.org/FAIRsharing.S6BoUk) , purl.org, and the DOI (URL_TO_INSERT_RECORD_3751 https://fairsharing.org/FAIRsharing.hFLKCn)  / handle (URL_TO_INSERT_RECORD_3754 https://fairsharing.org/FAIRsharing.0b7e54)  system, 
 all of which are (or can be accessed as) free-of-cost services. 
 
 
@@ -112,16 +112,16 @@ all of which are (or can be accessed as) free-of-cost services.
 
 Although being the oldest and supposedly easiest-to-use service, purl.org is known by some veterans for having been 
 offline for a long time.
-This was especially bad as a "persistent" identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  should be resolvable at all times. 
-This service is run by the non-profit [Internet Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) ive](https://archive.org).
+This was especially bad as a "persistent" identifier (URL_TO_INSERT_TERM_3755 https://fairsharing.org/search?recordType=identifier_schema)  should be resolvable at all times. 
+This service is run by the non-profit [Internet Arch (URL_TO_INSERT_RECORD_3756 https://fairsharing.org/FAIRsharing.52b22c) ive](https://archive.org).
 
 
-To access the graphical user interface / web frontend, you need to register with arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) ive.org. 
+To access the graphical user interface / web frontend, you need to register with arch (URL_TO_INSERT_RECORD_3757 https://fairsharing.org/FAIRsharing.52b22c) ive.org. 
 The frontend is easy to work with, although it is known for sometimes throwing errors or reacting in unexpected ways. 
 
 Using purl.org, you can add custom redirects, with [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) 
 301, 302, 303, 307, or errors encoded as HTTP status codes 404 and 410. It also allows "partial redirects",
-i.e. it would attach all the string (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9b7wvk)  behind a known part to redirect you 
+i.e. it would attach all the string (URL_TO_INSERT_RECORD_3758 https://fairsharing.org/FAIRsharing.9b7wvk)  behind a known part to redirect you 
 
 ```{note} example
 deposited URL for the partial redirect is `http://example.com/one` and intended to be routed 
@@ -133,10 +133,10 @@ because this URL would not be known to the purl.org server).
 
 
 A typical implementation route goes like this: 
-1.	Register on `arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) ive.org`
+1.	Register on `arch (URL_TO_INSERT_RECORD_3759 https://fairsharing.org/FAIRsharing.52b22c) ive.org`
 2.	Log-in to `purl.org`
-3.	Create your domain, e.g. `purl.org/faircookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) `
-4.	Create your individual redirect, e.g. `purl.org/faircookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) /recipe1` with status 302 redirecting to `http://example.org/faircookbook/recipe/1`
+3.	Create your domain, e.g. `purl.org/faircookbook (URL_TO_INSERT_RECORD_3760 https://fairsharing.org/FAIRsharing.cbz72b) `
+4.	Create your individual redirect, e.g. `purl.org/faircookbook (URL_TO_INSERT_RECORD_3761 https://fairsharing.org/FAIRsharing.cbz72b) /recipe1` with status 302 redirecting to `http://example.org/faircookbook/recipe/1`
 
 ```{note}
 Take home: 
@@ -146,11 +146,11 @@ if multiple users want to manage a common GUPRI space, they have to share the sa
 
 ### w3id.org 
 
-The service `w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) ` emerged when `purl.org` was down {footcite}`w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) `. 
-It is run by multiple stakeholders (see self-description on w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) ) bound by a "social contract". 
+The service `w3id (URL_TO_INSERT_RECORD_3763 https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD_3762 https://fairsharing.org/FAIRsharing.S6BoUk) ` emerged when `purl.org` was down {footcite}`w3id (URL_TO_INSERT_RECORD_3764 https://fairsharing.org/FAIRsharing.S6BoUk) `. 
+It is run by multiple stakeholders (see self-description on w3id (URL_TO_INSERT_RECORD_3766 https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD_3765 https://fairsharing.org/FAIRsharing.S6BoUk) ) bound by a "social contract". 
 
-Management is more difficult than purl.org, because w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk)  does not have a graphical user interface / frontend, 
-but relies on "raw" `.htaccess` files deposited on GitHub (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) .com. 
+Management is more difficult than purl.org, because w3id (URL_TO_INSERT_RECORD_3768 https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD_3767 https://fairsharing.org/FAIRsharing.S6BoUk)  does not have a graphical user interface / frontend, 
+but relies on "raw" `.htaccess` files deposited on GitHub (URL_TO_INSERT_RECORD_3769 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_3770 https://fairsharing.org/FAIRsharing.c55d5e) .com. 
 
 You need to have some knowledge about Apache .htaccess redirect rules though. 
 
@@ -158,16 +158,16 @@ You need to have some knowledge about Apache .htaccess redirect rules though.
 
 A clear advantage is that it gives you more freedom in the implementation.
 
-After making a proposal to change the redirection rules via a GitHub (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  Pull Request, maintainers of the w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk)  team
+After making a proposal to change the redirection rules via a GitHub (URL_TO_INSERT_RECORD_3773 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_3774 https://fairsharing.org/FAIRsharing.c55d5e)  Pull Request, maintainers of the w3id (URL_TO_INSERT_RECORD_3772 https://fairsharing.org/FAIRsharing.S6BoUk) .org (URL_TO_INSERT_RECORD_3771 https://fairsharing.org/FAIRsharing.S6BoUk)  team
 have to (manually!) accept your changes. 
 This is (normally) happening very fast, though (turnaround time < 1 day). 
 If you make changes very often though, you will annoy the maintainers, and you should think about using another service.
 
 A typical implementation route goes like this:
 
-1.	Register to github (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) .com
-2.	Fork the GitHub (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  at https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /perma-id/w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk)  
-3.	Copy e.g. the folder "faircookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) " to your desired path (if you name the folder "faircookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) ", you can resolve everything that goes like http://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) / faircookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  /*)
+1.	Register to github (URL_TO_INSERT_RECORD_3775 https://fairsharing.org/FAIRsharing.c55d5e) .com
+2.	Fork the GitHub (URL_TO_INSERT_RECORD_3778 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_3779 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_3776 https://fairsharing.org/search?recordType=repository)  at https://github.com (URL_TO_INSERT_RECORD_3780 https://fairsharing.org/FAIRsharing.c55d5e) /perma-id/w3id.org (URL_TO_INSERT_RECORD_3777 https://fairsharing.org/FAIRsharing.S6BoUk)  
+3.	Copy e.g. the folder "faircookbook (URL_TO_INSERT_RECORD_3782 https://fairsharing.org/FAIRsharing.cbz72b) " to your desired path (if you name the folder "faircookbook (URL_TO_INSERT_RECORD_3783 https://fairsharing.org/FAIRsharing.cbz72b) ", you can resolve everything that goes like http://w3id.org (URL_TO_INSERT_RECORD_3781 https://fairsharing.org/FAIRsharing.S6BoUk) / faircookbook (URL_TO_INSERT_RECORD_3784 https://fairsharing.org/FAIRsharing.cbz72b)  /*)
 4.	Change the README and .htaccess
 5.	Create a Pull Request
 6.	Wait for acceptance of the Pull Request, and/or answer questions from the maintainers
@@ -184,41 +184,41 @@ of the w3id.org repo act in accordance with your wishes (e.g. don’t allow "out
 
 ### Free services which provide access to the Handle system
 
-The Handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  System (also known as `Handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54) .Net` or `HDL.NET`) is a globally distributed system to resolve "handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54) s" (which are local identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s per se).
-The Handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  System forms also the basis of DOI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn) s (Digital Object Identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn) s). 
-DOI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn) s add a layer of policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  and specifications on top of The Handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  System. 
-Unfortunately, it is quite expensive (approx. 5000 €/$ per year) to join the DOI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn)  system 
-(which would go via a Registration Agency, see here: https://www.doi.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.hFLKCn) /registration_agencies.html
--- well known Registration Agencies are DataCite (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c06f1e)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.yknezb)  and Crossref (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.zVIgGf)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.zVIgGf) ), 
-whereas The Handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54)  System is quite inexpensive (approx. 50 €/$ per year). 
+The Handle (URL_TO_INSERT_RECORD_3786 https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD_3789 https://fairsharing.org/FAIRsharing.0b7e54)  System (also known as `Handle (URL_TO_INSERT_RECORD_3787 https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD_3790 https://fairsharing.org/FAIRsharing.0b7e54) .Net` or `HDL.NET`) is a globally distributed system to resolve "handle (URL_TO_INSERT_RECORD_3788 https://fairsharing.org/FAIRsharing.0b7e54) s" (which are local identifier (URL_TO_INSERT_TERM_3785 https://fairsharing.org/search?recordType=identifier_schema) s per se).
+The Handle (URL_TO_INSERT_RECORD_3794 https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD_3795 https://fairsharing.org/FAIRsharing.0b7e54)  System forms also the basis of DOI (URL_TO_INSERT_RECORD_3793 https://fairsharing.org/FAIRsharing.hFLKCn) s (Digital Object Identifier (URL_TO_INSERT_TERM_3791 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD_3792 https://fairsharing.org/FAIRsharing.hFLKCn) s). 
+DOI (URL_TO_INSERT_RECORD_3797 https://fairsharing.org/FAIRsharing.hFLKCn) s add a layer of policies (URL_TO_INSERT_TERM_3796 https://fairsharing.org/search?fairsharingRegistry=Policy)  and specifications on top of The Handle (URL_TO_INSERT_RECORD_3798 https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD_3799 https://fairsharing.org/FAIRsharing.0b7e54)  System. 
+Unfortunately, it is quite expensive (approx. 5000 €/$ per year) to join the DOI (URL_TO_INSERT_RECORD_3800 https://fairsharing.org/FAIRsharing.hFLKCn)  system 
+(which would go via a Registration Agency, see here: https://www.doi.org (URL_TO_INSERT_RECORD_3801 https://fairsharing.org/FAIRsharing.hFLKCn) /registration_agencies.html
+-- well known Registration Agencies are DataCite (URL_TO_INSERT_RECORD_3804 https://fairsharing.org/FAIRsharing.c06f1e)  (URL_TO_INSERT_RECORD_3805 https://fairsharing.org/FAIRsharing.yknezb)  and Crossref (URL_TO_INSERT_RECORD_3802 https://fairsharing.org/FAIRsharing.zVIgGf)  (URL_TO_INSERT_RECORD_3803 https://fairsharing.org/FAIRsharing.zVIgGf) ), 
+whereas The Handle (URL_TO_INSERT_RECORD_3806 https://fairsharing.org/FAIRsharing.0b7e54)  (URL_TO_INSERT_RECORD_3807 https://fairsharing.org/FAIRsharing.0b7e54)  System is quite inexpensive (approx. 50 €/$ per year). 
 
-There is also a way to get handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54) s for free, which is described here:
+There is also a way to get handle (URL_TO_INSERT_RECORD_3808 https://fairsharing.org/FAIRsharing.0b7e54) s for free, which is described here:
 
 You can reach out to `http://grnet.gr` – e.g. through the subpage `https://epic.grnet.gr/` where there is a Contact form. 
 
-An alternative is http://www.pidconsortium.net (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.83ded0) / (of which grnet is a member).
+An alternative is http://www.pidconsortium.net (URL_TO_INSERT_RECORD_3809 https://fairsharing.org/FAIRsharing.83ded0) / (of which grnet is a member).
 
 The author of this recipe managed to get access to both services for free.
 
 A typical implementation goes like this:
 
 1.	Request an account for hdl.grnet.gr
-2.	Make yourself fam (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.d0886a) iliar with the API (no easy-to-use graphical user interface available as of now) – see http://www.handle.net (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54) /tech_manual/HN_Tech_Manual_9.pdf 
-3.	Make the API call to register a handle (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b7e54) 
+2.	Make yourself fam (URL_TO_INSERT_RECORD_3810 https://fairsharing.org/FAIRsharing.d0886a) iliar with the API (no easy-to-use graphical user interface available as of now) – see http://www.handle.net (URL_TO_INSERT_RECORD_3811 https://fairsharing.org/FAIRsharing.0b7e54) /tech_manual/HN_Tech_Manual_9.pdf 
+3.	Make the API call to register a handle (URL_TO_INSERT_RECORD_3812 https://fairsharing.org/FAIRsharing.0b7e54) 
 
 ---
 
 ## Conclusion
 
-This recipe provided several options for generated globally unique persistent resolvable identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s. 
-Furthermore, our audience can see how we used the w3id (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk)  service to generate the identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s for the recipes and how effective this is.
-One has to bear in mind that the service works well for project (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=project) s like this one where the expected number of objects remains small.
+This recipe provided several options for generated globally unique persistent resolvable identifier (URL_TO_INSERT_TERM_3813 https://fairsharing.org/search?recordType=identifier_schema) s. 
+Furthermore, our audience can see how we used the w3id (URL_TO_INSERT_RECORD_3815 https://fairsharing.org/FAIRsharing.S6BoUk)  service to generate the identifier (URL_TO_INSERT_TERM_3814 https://fairsharing.org/search?recordType=identifier_schema) s for the recipes and how effective this is.
+One has to bear in mind that the service works well for project (URL_TO_INSERT_TERM_3816 https://fairsharing.org/search?recordType=project) s like this one where the expected number of objects remains small.
 However, if scale-up is required and millions of GUPRIs are needed, a different service may be needed.
 
 
 ### What to read next?
 
-- {ref}`fcb-find-identifier (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=identifier_schema) s` 
+- {ref}`fcb-find-identifier (URL_TO_INSERT_TERM_3817 https://fairsharing.org/search?recordType=identifier_schema) s` 
 - {ref}`fcb-find-id-minid` 
 - http://web.mit.edu/handle/www/purl-eval.html
 

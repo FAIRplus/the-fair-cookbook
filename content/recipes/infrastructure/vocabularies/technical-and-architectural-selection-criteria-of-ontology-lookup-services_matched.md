@@ -18,26 +18,26 @@
 
 ## Main Objective
 
-This recipe provides guidance on making a decision about the feasibility of a local deployment of existing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  open source
-ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service software. 
+This recipe provides guidance on making a decision about the feasibility of a local deployment of existing (URL_TO_INSERT_RECORD_4929 https://fairsharing.org/FAIRsharing.q7bkqr)  open source
+ontology (URL_TO_INSERT_TERM_4930 https://fairsharing.org/search?recordType=terminology_artefact)  service software. 
 
-By the expression **"ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) "**, we refer **to any type of application, 
-standalone or Web-based, that enables the use of existing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  to support knowledge formalization and sharing,
-by fostering ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) -based descriptions of knowledge**.
+By the expression **"ontology (URL_TO_INSERT_TERM_4931 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4932 https://fairsharing.org/FAIRsharing.Mkl9RR) "**, we refer **to any type of application, 
+standalone or Web-based, that enables the use of existing (URL_TO_INSERT_RECORD_4934 https://fairsharing.org/FAIRsharing.q7bkqr)  ontologies (URL_TO_INSERT_TERM_4933 https://fairsharing.org/search?recordType=terminology_artefact)  to support knowledge formalization and sharing,
+by fostering ontology (URL_TO_INSERT_TERM_4935 https://fairsharing.org/search?recordType=terminology_artefact) -based descriptions of knowledge**.
 
-Therefore, tools useful to build, edit or maintain ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  
-are not considered as ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) s and thus are out of the scope of this document.
+Therefore, tools useful to build, edit or maintain ontologies (URL_TO_INSERT_TERM_4936 https://fairsharing.org/search?recordType=terminology_artefact)  
+are not considered as ontology (URL_TO_INSERT_TERM_4937 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4938 https://fairsharing.org/FAIRsharing.Mkl9RR) s and thus are out of the scope of this document.
 
 The recipe will:
 
 - define the most common selection criteria to be considered
 - provide general selection recommendations
 - provide recommendations for applying those selection criteria
-- give an overview about the most common open source ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service software
+- give an overview about the most common open source ontology (URL_TO_INSERT_TERM_4939 https://fairsharing.org/search?recordType=terminology_artefact)  service software
 
 ## Software selection criteria
 
-This section presents the minimal criteria to take in account when analyzing alternatives for ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) -based services
+This section presents the minimal criteria to take in account when analyzing alternatives for ontology (URL_TO_INSERT_TERM_4940 https://fairsharing.org/search?recordType=terminology_artefact) -based services
 development and deployment. Additional criteria, including a more detailed analysis of technical features can be found 
 on the resources mentioned in section **Additional resources**.
 
@@ -46,49 +46,49 @@ on the resources mentioned in section **Additional resources**.
 Functionality of a software determines the range of capabilities and functions it can perform. 
 Please note that specific functional selection criteria are beyond the scope of this recipe.
 Because functionality plays a very important role in the overall selection process it was added to show how it relates
-to the technical & arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture selection process.  
-Functional selection criteria are covered by Recipe [FCB004](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB004   ) 
+to the technical & arch (URL_TO_INSERT_RECORD_4941 https://fairsharing.org/FAIRsharing.52b22c) itecture selection process.  
+Functional selection criteria are covered by Recipe [FCB004](https://w3id.org (URL_TO_INSERT_RECORD_4942 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB004   ) 
 
 ### Interfaces
 
-Interfaces allow read or write data from outside the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  either by a human being or application.
+Interfaces allow read or write data from outside the ontology (URL_TO_INSERT_TERM_4943 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4944 https://fairsharing.org/FAIRsharing.Mkl9RR)  either by a human being or application.
 
-For an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  the most important interface features are:
+For an ontology (URL_TO_INSERT_TERM_4945 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4946 https://fairsharing.org/FAIRsharing.Mkl9RR)  the most important interface features are:
 
-- Supported import and export ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s, e.g. OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  for uploading and downloading of ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .
-- Flexible query interface, e.g. to answer very specific ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  questions or to extend functional gaps of the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service.
-Currently, the most prominent query interface is SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint.
-- Application Programming Interface (API) technology, if you want to integrate other applications with the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  
-lookup service it is essential that you can use widely used and supported technical standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s. 
+- Supported import and export ontology (URL_TO_INSERT_TERM_4948 https://fairsharing.org/search?recordType=terminology_artefact)  format (URL_TO_INSERT_TERM_4947 https://fairsharing.org/search?recordType=model_and_format) s, e.g. OWL (URL_TO_INSERT_RECORD_4950 https://fairsharing.org/FAIRsharing.atygwy)  for uploading and downloading of ontologies (URL_TO_INSERT_TERM_4949 https://fairsharing.org/search?recordType=terminology_artefact) .
+- Flexible query interface, e.g. to answer very specific ontology (URL_TO_INSERT_TERM_4951 https://fairsharing.org/search?recordType=terminology_artefact)  questions or to extend functional gaps of the ontology (URL_TO_INSERT_TERM_4952 https://fairsharing.org/search?recordType=terminology_artefact)  service.
+Currently, the most prominent query interface is SP (URL_TO_INSERT_RECORD_4954 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4953 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint.
+- Application Programming Interface (API) technology, if you want to integrate other applications with the ontology (URL_TO_INSERT_TERM_4955 https://fairsharing.org/search?recordType=terminology_artefact)  
+lookup service it is essential that you can use widely used and supported technical standard (URL_TO_INSERT_TERM_4956 https://fairsharing.org/search?fairsharingRegistry=Standard) s. 
 Currently, the most prominent API technology is REST API. 
 
 Please note that this recipe does not focus on specific interface functionality. It looks at interfaces only from an
-arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itectural and technical view. 
+arch (URL_TO_INSERT_RECORD_4957 https://fairsharing.org/FAIRsharing.52b22c) itectural and technical view. 
 
 ## Software Architecture
 
-The software arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture shows the used hardware and software components and their relationship.
+The software arch (URL_TO_INSERT_RECORD_4958 https://fairsharing.org/FAIRsharing.52b22c) itecture shows the used hardware and software components and their relationship.
 
-Regarding ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  selection the most important arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itectural aspects are:
+Regarding ontology (URL_TO_INSERT_TERM_4959 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4960 https://fairsharing.org/FAIRsharing.Mkl9RR)  selection the most important arch (URL_TO_INSERT_RECORD_4961 https://fairsharing.org/FAIRsharing.52b22c) itectural aspects are:
 
-- *Overall arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture complexity*
+- *Overall arch (URL_TO_INSERT_RECORD_4962 https://fairsharing.org/FAIRsharing.52b22c) itecture complexity*
 It gives you an idea whether the complexity is appropriate for solving your requirements.
 If you are trying to solve simple requirements with a very complex solution you might be on the wrong way. 
 - *Used tools and programming languages*
 It gives you an idea what knowledge you will need for supporting the system or extending the functionality. 
 You also get an overview of the impact to the overall complexity of the IT tools and programming languages used in your organization.
 - *Modularity*
-It gives you an idea whether you could replace few of the components by software/hardware preferred as standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  in your company.
+It gives you an idea whether you could replace few of the components by software/hardware preferred as standard (URL_TO_INSERT_TERM_4963 https://fairsharing.org/search?fairsharingRegistry=Standard)  in your company.
 It can give you also a hint, whether you can scale the application by adding more hardware/software resources.
 
 ## Deployment model
 
-The deployment model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  shows where and how the software can be installed and who owns the service.
+The deployment model (URL_TO_INSERT_TERM_4964 https://fairsharing.org/search?recordType=model_and_format)  shows where and how the software can be installed and who owns the service.
 
-Regarding ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  selection the most important deployment aspects are:
+Regarding ontology (URL_TO_INSERT_TERM_4965 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4966 https://fairsharing.org/FAIRsharing.Mkl9RR)  selection the most important deployment aspects are:
 
 - **On premise versus cloud deployment**
-Depending on your organisation policies (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Policy)  and best practices, it might be the case that you want to install and maintain 
+Depending on your organisation policies (URL_TO_INSERT_TERM_4967 https://fairsharing.org/search?fairsharingRegistry=Policy)  and best practices, it might be the case that you want to install and maintain 
 the software on your own infrastructure (***on premise***) or you prefer to buy it as a service on the cloud. 
 - ** **Manual** versus **containerized** versus **virtual image** installation**
     - With a **manual installation**, you have full control over the installation, but you need typically more time. 
@@ -108,70 +108,70 @@ The specific requirements of your organisation for data processing and storage w
 
 ### License model
 
-The license model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  defines the consumer rights and the usage costs.
+The license model (URL_TO_INSERT_TERM_4968 https://fairsharing.org/search?recordType=model_and_format)  defines the consumer rights and the usage costs.
 
-So it is essential that the licence model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) :
+So it is essential that the licence model (URL_TO_INSERT_TERM_4969 https://fairsharing.org/search?recordType=model_and_format) :
 
 - matches with your intended use 
 - produces costs that  are acceptable for your organisation from a price/performance point of view.
 
 ### Database Technology for storing knowledge representation resources
 
-The **terminology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ** is a central component of knowledge management stack as it will store the ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+The **terminology (URL_TO_INSERT_TERM_4971 https://fairsharing.org/search?recordType=terminology_artefact)  database (URL_TO_INSERT_TERM_4970 https://fairsharing.org/search?fairsharingRegistry=Database) ** is a central component of knowledge management stack as it will store the ontologies (URL_TO_INSERT_TERM_4972 https://fairsharing.org/search?recordType=terminology_artefact) . 
 
-The database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  system will typically also have a major impact on performance and scalability, because the bulk of ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) 
-query processing will take place within the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  system.
+The database (URL_TO_INSERT_TERM_4973 https://fairsharing.org/search?fairsharingRegistry=Database)  system will typically also have a major impact on performance and scalability, because the bulk of ontology (URL_TO_INSERT_TERM_4974 https://fairsharing.org/search?recordType=terminology_artefact) 
+query processing will take place within the database (URL_TO_INSERT_TERM_4975 https://fairsharing.org/search?fairsharingRegistry=Database)  system.
 
-An ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  is defined to be **database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  agnostic** if its database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  component:
+An ontology (URL_TO_INSERT_TERM_4978 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4979 https://fairsharing.org/FAIRsharing.Mkl9RR)  is defined to be **database (URL_TO_INSERT_TERM_4976 https://fairsharing.org/search?fairsharingRegistry=Database)  agnostic** if its database (URL_TO_INSERT_TERM_4977 https://fairsharing.org/search?fairsharingRegistry=Database)  component:
 
-- provides interfaces that use standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  communication protocols.
-- provides a configurable access to the database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) . 
-- allows any database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  product supporting a specific standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) s(e.g. SQL, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd) ) to be used
+- provides interfaces that use standard (URL_TO_INSERT_TERM_4980 https://fairsharing.org/search?fairsharingRegistry=Standard)  communication protocols.
+- provides a configurable access to the database (URL_TO_INSERT_TERM_4981 https://fairsharing.org/search?fairsharingRegistry=Database) . 
+- allows any database (URL_TO_INSERT_TERM_4983 https://fairsharing.org/search?fairsharingRegistry=Database)  product supporting a specific standard (URL_TO_INSERT_TERM_4982 https://fairsharing.org/search?fairsharingRegistry=Standard) s(e.g. SQL, SP (URL_TO_INSERT_RECORD_4985 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4984 https://fairsharing.org/FAIRsharing.87ccfd) ) to be used
 
-A database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  agnostic ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  software will give you therefore the maximum freedom to use your defined database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  type standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard) .
+A database (URL_TO_INSERT_TERM_4987 https://fairsharing.org/search?fairsharingRegistry=Database)  agnostic ontology (URL_TO_INSERT_TERM_4989 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_4990 https://fairsharing.org/FAIRsharing.Mkl9RR)  software will give you therefore the maximum freedom to use your defined database (URL_TO_INSERT_TERM_4988 https://fairsharing.org/search?fairsharingRegistry=Database)  type standard (URL_TO_INSERT_TERM_4986 https://fairsharing.org/search?fairsharingRegistry=Standard) .
 
 #### Relational databases:
-- For storing metadata representable in flat taxonomies often Relational Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  Management Systems (RDBMS) are used 
-which represent data in tabular format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
+- For storing metadata representable in flat taxonomies often Relational Database (URL_TO_INSERT_TERM_4991 https://fairsharing.org/search?fairsharingRegistry=Database)  Management Systems (RDBMS) are used 
+which represent data in tabular format (URL_TO_INSERT_TERM_4992 https://fairsharing.org/search?recordType=model_and_format) .
 
 #### Graph databases
-From an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  perspective, state of the art is to use a [**graph database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) **](https://en.wikipedia.org/wiki/Graph_database).
-Two types of graph database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s are currently available:
+From an ontology (URL_TO_INSERT_TERM_4994 https://fairsharing.org/search?recordType=terminology_artefact)  perspective, state of the art is to use a [**graph database (URL_TO_INSERT_TERM_4993 https://fairsharing.org/search?fairsharingRegistry=Database) **](https://en.wikipedia.org/wiki/Graph_database).
+Two types of graph database (URL_TO_INSERT_TERM_4995 https://fairsharing.org/search?fairsharingRegistry=Database) s are currently available:
 
 - **Labeled-Property**
-A **labeled-property graph model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ** is represented by a set of nodes, relationships, properties, and labels. 
+A **labeled-property graph model (URL_TO_INSERT_TERM_4996 https://fairsharing.org/search?recordType=model_and_format) ** is represented by a set of nodes, relationships, properties, and labels. 
 - **Triple store**
-A **triple store database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ** allows to store documents in [RDF](https://www.w3.org/TR/rdf-concepts/#section-data-model) or
-[OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) /RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  format](https://www.w3.org/TR/owl2-rdf-based-semantics/) natively and use the **query from remote** flexibility of
-a [**SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint**](https://www.w3.org/TR/rdf-sparql-query/). 
-Also, [**Shape Constraint Language (SHACL)**](https://www.w3.org/TR/shacl (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.f1449d) /) W3C standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  could help to add quality checks.
+A **triple store database (URL_TO_INSERT_TERM_4997 https://fairsharing.org/search?fairsharingRegistry=Database) ** allows to store documents in [RDF](https://www.w3.org/TR/rdf-concepts/#section-data-model) or
+[OWL (URL_TO_INSERT_RECORD_4998 https://fairsharing.org/FAIRsharing.atygwy) /RDF (URL_TO_INSERT_RECORD_4999 https://fairsharing.org/FAIRsharing.p77ph9)  format](https://www.w3.org/TR/owl2-rdf-based-semantics/) natively and use the **query from remote** flexibility of
+a [**SP (URL_TO_INSERT_RECORD_5001 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5000 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint**](https://www.w3.org/TR/rdf-sparql-query/). 
+Also, [**Shape Constraint Language (SHACL)**](https://www.w3.org/TR/shacl (URL_TO_INSERT_RECORD_5003 https://fairsharing.org/FAIRsharing.f1449d) /) W3C standard (URL_TO_INSERT_TERM_5002 https://fairsharing.org/search?fairsharingRegistry=Standard)  could help to add quality checks.
 
 
 
 ### Ontology language
 
-The following ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  languages are widely used in the pharma research (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  arena to model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) :
+The following ontology (URL_TO_INSERT_TERM_5005 https://fairsharing.org/search?recordType=terminology_artefact)  languages are widely used in the pharma research (URL_TO_INSERT_RECORD_5007 https://fairsharing.org/FAIRsharing.52b22c)  arena to model (URL_TO_INSERT_TERM_5004 https://fairsharing.org/search?recordType=model_and_format)  ontologies (URL_TO_INSERT_TERM_5006 https://fairsharing.org/search?recordType=terminology_artefact) :
 
-- **Simple Knowledge Organization System (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.48e326)  (SKOS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.48e326) )**
-SKOS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.48e326)  is a W3C standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  which provides a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  way to represent knowledge organization systems using the Resource Description Framework (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  (RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) ). 
-Encoding this informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion in RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  allows it to be passed between computer applications in an interoperable way {footcite}`SkosReference2008`
-- **Web Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Language (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  (OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) )** 
-OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  is defined by W3C and has become the de facto standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  for ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ling. 
-Therefore, OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  support is considered as a must for the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) . 
-- **OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) **
-The OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  file format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is a biology-oriented language for building ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , based on the principles of OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) .
-A standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  common map (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.53edcc) ping has been created for lossless round-trip transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ions among both languages. 
+- **Simple Knowledge Organization System (URL_TO_INSERT_RECORD_5008 https://fairsharing.org/FAIRsharing.48e326)  (SKOS (URL_TO_INSERT_RECORD_5009 https://fairsharing.org/FAIRsharing.48e326) )**
+SKOS (URL_TO_INSERT_RECORD_5014 https://fairsharing.org/FAIRsharing.48e326)  is a W3C standard (URL_TO_INSERT_TERM_5010 https://fairsharing.org/search?fairsharingRegistry=Standard)  which provides a standard (URL_TO_INSERT_TERM_5011 https://fairsharing.org/search?fairsharingRegistry=Standard)  way to represent knowledge organization systems using the Resource Description Framework (URL_TO_INSERT_RECORD_5012 https://fairsharing.org/FAIRsharing.p77ph9)  (RDF (URL_TO_INSERT_RECORD_5013 https://fairsharing.org/FAIRsharing.p77ph9) ). 
+Encoding this informat (URL_TO_INSERT_TERM_5015 https://fairsharing.org/search?recordType=model_and_format) ion in RDF (URL_TO_INSERT_RECORD_5016 https://fairsharing.org/FAIRsharing.p77ph9)  allows it to be passed between computer applications in an interoperable way {footcite}`SkosReference2008`
+- **Web Ontology (URL_TO_INSERT_TERM_5017 https://fairsharing.org/search?recordType=terminology_artefact)  Language (URL_TO_INSERT_RECORD_5018 https://fairsharing.org/FAIRsharing.atygwy)  (OWL (URL_TO_INSERT_RECORD_5019 https://fairsharing.org/FAIRsharing.atygwy) )** 
+OWL (URL_TO_INSERT_RECORD_5023 https://fairsharing.org/FAIRsharing.atygwy)  is defined by W3C and has become the de facto standard (URL_TO_INSERT_TERM_5020 https://fairsharing.org/search?fairsharingRegistry=Standard)  for ontology (URL_TO_INSERT_TERM_5022 https://fairsharing.org/search?recordType=terminology_artefact)  model (URL_TO_INSERT_TERM_5021 https://fairsharing.org/search?recordType=model_and_format) ling. 
+Therefore, OWL (URL_TO_INSERT_RECORD_5026 https://fairsharing.org/FAIRsharing.atygwy)  support is considered as a must for the ontology (URL_TO_INSERT_TERM_5024 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_5025 https://fairsharing.org/FAIRsharing.Mkl9RR) . 
+- **OBO (URL_TO_INSERT_RECORD_5027 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_5028 https://fairsharing.org/FAIRsharing.cbz72b) **
+The OBO (URL_TO_INSERT_RECORD_5032 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_5033 https://fairsharing.org/FAIRsharing.cbz72b)  file format (URL_TO_INSERT_TERM_5029 https://fairsharing.org/search?recordType=model_and_format)  is a biology-oriented language for building ontologies (URL_TO_INSERT_TERM_5030 https://fairsharing.org/search?recordType=terminology_artefact) , based on the principles of OWL (URL_TO_INSERT_RECORD_5031 https://fairsharing.org/FAIRsharing.atygwy) .
+A standard (URL_TO_INSERT_TERM_5034 https://fairsharing.org/search?fairsharingRegistry=Standard)  common map (URL_TO_INSERT_RECORD_5036 https://fairsharing.org/FAIRsharing.53edcc) ping has been created for lossless round-trip transformat (URL_TO_INSERT_TERM_5035 https://fairsharing.org/search?recordType=model_and_format) ions among both languages. 
 
 
-Persisting (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  semantics artefacts expressed in various languages and representation frameworks in the same management 
-system isn't straightforward and conversions may be necessary. Even then, transformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ions may lead to informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion loss or 
-difficulty in rendering informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion consistently.
+Persisting (URL_TO_INSERT_RECORD_5037 https://fairsharing.org/FAIRsharing.q7bkqr)  semantics artefacts expressed in various languages and representation frameworks in the same management 
+system isn't straightforward and conversions may be necessary. Even then, transformat (URL_TO_INSERT_TERM_5038 https://fairsharing.org/search?recordType=model_and_format) ions may lead to informat (URL_TO_INSERT_TERM_5039 https://fairsharing.org/search?recordType=model_and_format) ion loss or 
+difficulty in rendering informat (URL_TO_INSERT_TERM_5040 https://fairsharing.org/search?recordType=model_and_format) ion consistently.
 
 
 
 ### Programming language
 
-Programming languages are used to implement the data processing logic and user interface logic of the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) .
+Programming languages are used to implement the data processing logic and user interface logic of the ontology (URL_TO_INSERT_TERM_5041 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_5042 https://fairsharing.org/FAIRsharing.Mkl9RR) .
 
 The used programming languages will impact:
 
@@ -180,7 +180,7 @@ The used programming languages will impact:
 
 ### Support
 
-Important support aspects for a vocabulary service/ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  are: 
+Important support aspects for a vocabulary service/ontology (URL_TO_INSERT_TERM_5043 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_5044 https://fairsharing.org/FAIRsharing.Mkl9RR)  are: 
 
 - Ongoing development of the tool 
 - Frequency of issues and how fast they are solved
@@ -188,34 +188,34 @@ Important support aspects for a vocabulary service/ontology (URL_TO_INSERT_TERM 
 
 ## General selection considerations
 
-Before looking into a concrete ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service, some general thoughts are recommended. Two types of portal tools are available:
+Before looking into a concrete ontology (URL_TO_INSERT_TERM_5045 https://fairsharing.org/search?recordType=terminology_artefact)  service, some general thoughts are recommended. Two types of portal tools are available:
 
 - **Open data portal tool**
-**Open data portals** provide web-based interfaces designed to make it easier to find and access re-usable informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. 
-Some of them also support importing and exporting ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , including a SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint and provide ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup 
-service core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL)  functionality.
-An **Open Portal Tool**` is the underlying software that is used to implement the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  portal functionalities.
-- **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  portal tool**
-A formal definition of an **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Portal** does not exist. In the context of this document, an **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Portal** is
-defined as an Open Data Portal that is specialized to ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  as data and typically provides out of the box more fine
-granular ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  based functions.
-An Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool is the underlying software that is used to implement the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  portal functionalities.
+**Open data portals** provide web-based interfaces designed to make it easier to find and access re-usable informat (URL_TO_INSERT_TERM_5046 https://fairsharing.org/search?recordType=model_and_format) ion. 
+Some of them also support importing and exporting ontologies (URL_TO_INSERT_TERM_5048 https://fairsharing.org/search?recordType=terminology_artefact) , including a SP (URL_TO_INSERT_RECORD_5050 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5049 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint and provide ontology (URL_TO_INSERT_TERM_5047 https://fairsharing.org/search?recordType=terminology_artefact)  lookup 
+service core (URL_TO_INSERT_RECORD_5051 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5052 https://fairsharing.org/FAIRsharing.xMmOCL)  functionality.
+An **Open Portal Tool**` is the underlying software that is used to implement the ontology (URL_TO_INSERT_TERM_5053 https://fairsharing.org/search?recordType=terminology_artefact)  portal functionalities.
+- **Ontology (URL_TO_INSERT_TERM_5054 https://fairsharing.org/search?recordType=terminology_artefact)  portal tool**
+A formal definition of an **Ontology (URL_TO_INSERT_TERM_5055 https://fairsharing.org/search?recordType=terminology_artefact)  Portal** does not exist. In the context of this document, an **Ontology (URL_TO_INSERT_TERM_5056 https://fairsharing.org/search?recordType=terminology_artefact)  Portal** is
+defined as an Open Data Portal that is specialized to ontologies (URL_TO_INSERT_TERM_5057 https://fairsharing.org/search?recordType=terminology_artefact)  as data and typically provides out of the box more fine
+granular ontology (URL_TO_INSERT_TERM_5058 https://fairsharing.org/search?recordType=terminology_artefact)  based functions.
+An Ontology (URL_TO_INSERT_TERM_5059 https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool is the underlying software that is used to implement the ontology (URL_TO_INSERT_TERM_5060 https://fairsharing.org/search?recordType=terminology_artefact)  portal functionalities.
 
-If you have only minimum functional requirements in sharing ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  it might be also an option for you to use an 
+If you have only minimum functional requirements in sharing ontologies (URL_TO_INSERT_TERM_5061 https://fairsharing.org/search?recordType=terminology_artefact)  it might be also an option for you to use an 
 open data portal tool. In this case you could extend the functionality by developing additional web pages using the
-SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint. Having data and metadata in one database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) , such a solution would allow adding functionality that needs 
-to combine ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  with data (e.g. by annotation).
+SP (URL_TO_INSERT_RECORD_5064 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5063 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint. Having data and metadata in one database (URL_TO_INSERT_TERM_5062 https://fairsharing.org/search?fairsharingRegistry=Database) , such a solution would allow adding functionality that needs 
+to combine ontologies (URL_TO_INSERT_TERM_5065 https://fairsharing.org/search?recordType=terminology_artefact)  with data (e.g. by annotation).
 
-If you need **fine granular ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  functionality**, an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  portal tool is recommended.
+If you need **fine granular ontology (URL_TO_INSERT_TERM_5066 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD_5068 https://fairsharing.org/FAIRsharing.Mkl9RR)  functionality**, an ontology (URL_TO_INSERT_TERM_5067 https://fairsharing.org/search?recordType=terminology_artefact)  portal tool is recommended.
 
-An additional option would be to combine an Open data platform tool with an Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  portal tool in parallel. 
-If both tools use a triplestore database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) , this should be possible in principle. The challenge will be that you would
+An additional option would be to combine an Open data platform tool with an Ontology (URL_TO_INSERT_TERM_5069 https://fairsharing.org/search?recordType=terminology_artefact)  portal tool in parallel. 
+If both tools use a triplestore database (URL_TO_INSERT_TERM_5070 https://fairsharing.org/search?fairsharingRegistry=Database) , this should be possible in principle. The challenge will be that you would
 need additional customisation.
 
 ## Choosing an ontology service software
 
-As each organization may have its own preferences and requirements, there is no standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  way to select the best
-suitable ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service software. This section presents a general selection process based on the aforementioned
+As each organization may have its own preferences and requirements, there is no standard (URL_TO_INSERT_TERM_5071 https://fairsharing.org/search?fairsharingRegistry=Standard)  way to select the best
+suitable ontology (URL_TO_INSERT_TERM_5072 https://fairsharing.org/search?recordType=terminology_artefact)  service software. This section presents a general selection process based on the aforementioned
 selection criteria and gives guidance on a set of questions that should be answered in order to filter out tools that
 do not fit to use case at an early stage.
 
@@ -230,8 +230,8 @@ Only if the tool matches on a high level, more efforts should be invested in a f
 tool is still a suitable candidate. 
 - `From Candidates Selection` 
 Once the tool candidates have been identified, a ranking process can start by assigning fulfillment numbers to the
-weighted criteria reflecting the importance for the requesting (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  organization.  Finally, completing the ranking by 
-summing up the total numbers from each atomic ranking criteria will allow to choose the tool, based on the highest score (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL) r. 
+weighted criteria reflecting the importance for the requesting (URL_TO_INSERT_RECORD_5073 https://fairsharing.org/FAIRsharing.q7bkqr)  organization.  Finally, completing the ranking by 
+summing up the total numbers from each atomic ranking criteria will allow to choose the tool, based on the highest score (URL_TO_INSERT_RECORD_5074 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5075 https://fairsharing.org/FAIRsharing.xMmOCL) r. 
 
 Following figure shows the overall process:
 
@@ -242,9 +242,9 @@ Following figure shows the overall process:
 ---
 name: onto-services-figure1
 width: 450px
-alt: Overall Process for Selecting Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services 
+alt: Overall Process for Selecting Ontology (URL_TO_INSERT_TERM_5076 https://fairsharing.org/search?recordType=terminology_artefact)  Services 
 ---
-Overall Process for Selecting Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services 
+Overall Process for Selecting Ontology (URL_TO_INSERT_TERM_5077 https://fairsharing.org/search?recordType=terminology_artefact)  Services 
 ```
 ````
 
@@ -261,9 +261,9 @@ either by the offerings of the tool or by some additional tool customization.
 ```{figure} onto-services-figure2.svg
 ---
 name: onto-services-figure2
-alt: Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services High Level Gap Analysis
+alt: Ontology (URL_TO_INSERT_TERM_5078 https://fairsharing.org/search?recordType=terminology_artefact)  Services High Level Gap Analysis
 ---
-Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services High Level Gap Analysis
+Ontology (URL_TO_INSERT_TERM_5079 https://fairsharing.org/search?recordType=terminology_artefact)  Services High Level Gap Analysis
 ```
 ````
 
@@ -290,9 +290,9 @@ of the scope of this recipe.
 ```{figure} onto-services-figure3.svg
 ---
 name: onto-services-figure3
-alt: Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services  Low Level Gap Analysis
+alt: Ontology (URL_TO_INSERT_TERM_5080 https://fairsharing.org/search?recordType=terminology_artefact)  Services  Low Level Gap Analysis
 ---
-Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Services Low Level Gap Analysis
+Ontology (URL_TO_INSERT_TERM_5081 https://fairsharing.org/search?recordType=terminology_artefact)  Services Low Level Gap Analysis
 ```
 ````
 
@@ -338,13 +338,13 @@ Typical Low Level Interface Questions
 ```{figure} onto-services-figure6.svg
 ---
 name: onto-services-figure6
-alt: Typical Low Level Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture Questions
+alt: Typical Low Level Arch (URL_TO_INSERT_RECORD_5082 https://fairsharing.org/FAIRsharing.52b22c) itecture Questions
 ---
-Typical Low Level Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture Questions
+Typical Low Level Arch (URL_TO_INSERT_RECORD_5083 https://fairsharing.org/FAIRsharing.52b22c) itecture Questions
 ```
 ````
 
-<!-- Figure 6: Typical Low Level Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture Questions -->
+<!-- Figure 6: Typical Low Level Arch (URL_TO_INSERT_RECORD_5084 https://fairsharing.org/FAIRsharing.52b22c) itecture Questions -->
 
 
 ````{dropdown} Costs questions
@@ -408,51 +408,51 @@ alt:  Typical Low Level Support Questions
 
 #### Overview
 
-It is a repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  for biomedical ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  that aims to provide a single point of access to the latest ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  versions. It allows browsing the ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  through the website as well as programmatically via the OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  API. It is part of the ELIXIR interoperability service.
+It is a repository (URL_TO_INSERT_TERM_5085 https://fairsharing.org/search?recordType=repository)  for biomedical ontologies (URL_TO_INSERT_TERM_5087 https://fairsharing.org/search?recordType=terminology_artefact)  that aims to provide a single point of access to the latest ontology (URL_TO_INSERT_TERM_5086 https://fairsharing.org/search?recordType=terminology_artefact)  versions. It allows browsing the ontologies (URL_TO_INSERT_TERM_5088 https://fairsharing.org/search?recordType=terminology_artefact)  through the website as well as programmatically via the OLS (URL_TO_INSERT_RECORD_5089 https://fairsharing.org/FAIRsharing.Mkl9RR)  API. It is part of the ELIXIR interoperability service.
 
 #### Details
 
-1. **Functionality**: `Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool`
-2. **Interface**: REST-style API supported, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint under development.
-3. **Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture**: OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  has been developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  with the Spring Data and Spring Boot framework.
+1. **Functionality**: `Ontology (URL_TO_INSERT_TERM_5090 https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool`
+2. **Interface**: REST-style API supported, SP (URL_TO_INSERT_RECORD_5092 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5091 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint under development.
+3. **Arch (URL_TO_INSERT_RECORD_5094 https://fairsharing.org/FAIRsharing.52b22c) itecture**: OLS (URL_TO_INSERT_RECORD_5093 https://fairsharing.org/FAIRsharing.Mkl9RR)  has been developed (URL_TO_INSERT_RECORD_5095 https://fairsharing.org/FAIRsharing.31385c)  with the Spring Data and Spring Boot framework.
     1. Tomcat is used as a web server.
     2. MongoDB is used for storing configuration yaml files.
-    3. Neo4J node-property graph database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  is used for storing and accessing the ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  is converted to a node-property representation.
-4. **Deployment model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.
+    3. Neo4J node-property graph database (URL_TO_INSERT_TERM_5096 https://fairsharing.org/search?fairsharingRegistry=Database)  is used for storing and accessing the ontologies (URL_TO_INSERT_TERM_5098 https://fairsharing.org/search?recordType=terminology_artefact) . OWL (URL_TO_INSERT_RECORD_5099 https://fairsharing.org/FAIRsharing.atygwy)  format (URL_TO_INSERT_TERM_5097 https://fairsharing.org/search?recordType=model_and_format)  is converted to a node-property representation.
+4. **Deployment model (URL_TO_INSERT_TERM_5100 https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.
 5. **Requirements**:
-    1. Hardware requirements. It requires a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  workstation, 1 GB main memory, and about 100 MB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c)  hard disk.
-    2. Software requirements. It is implemented as a Java Web Application to be deployed to the Tomcat 7.5 Java Application Container. It requires Java 8, Maven 3+ as dependency manager and build environment, MongoDB 2.7.8+ as database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) ; and solr 5.2.1+ as indexing and search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine.
-    3. License model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
-6. **Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the Neo4J graph store, which allows querying using Cypher query language. Reasoning supports two profiles: OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) 2 and EL. Default is EL. The reasoners supported are HermiT and ELK.
-7. **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Language**: Custom translation of OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  and OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  2 languages to the Neo4J graph model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) .
+    1. Hardware requirements. It requires a standard (URL_TO_INSERT_TERM_5101 https://fairsharing.org/search?fairsharingRegistry=Standard)  workstation, 1 GB main memory, and about 100 MB (URL_TO_INSERT_RECORD_5102 https://fairsharing.org/FAIRsharing.a1rp4c)  hard disk.
+    2. Software requirements. It is implemented as a Java Web Application to be deployed to the Tomcat 7.5 Java Application Container. It requires Java 8, Maven 3+ as dependency manager and build environment, MongoDB 2.7.8+ as database (URL_TO_INSERT_TERM_5103 https://fairsharing.org/search?fairsharingRegistry=Database) ; and solr 5.2.1+ as indexing and search (URL_TO_INSERT_RECORD_5104 https://fairsharing.org/FAIRsharing.52b22c)  engine.
+    3. License model (URL_TO_INSERT_TERM_5105 https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
+6. **Database (URL_TO_INSERT_TERM_5106 https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the Neo4J graph store, which allows querying using Cypher query language. Reasoning supports two profiles: OWL (URL_TO_INSERT_RECORD_5107 https://fairsharing.org/FAIRsharing.atygwy) 2 and EL. Default is EL. The reasoners supported are HermiT and ELK.
+7. **Ontology (URL_TO_INSERT_TERM_5109 https://fairsharing.org/search?recordType=terminology_artefact)  Language**: Custom translation of OBO (URL_TO_INSERT_RECORD_5111 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_5112 https://fairsharing.org/FAIRsharing.cbz72b)  and OWL (URL_TO_INSERT_RECORD_5110 https://fairsharing.org/FAIRsharing.atygwy)  2 languages to the Neo4J graph model (URL_TO_INSERT_TERM_5108 https://fairsharing.org/search?recordType=model_and_format) .
 8. **Programming Language**: Java.
 
 ### NCBO Bioportal Virtual Appliance<!-- TODO add a link to corresponding document --> (Ontology Portal Tool)
 
 #### Overview
 
-The National Center for Biomedical Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (NCBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.y2dt83) ).
+The National Center for Biomedical Ontology (URL_TO_INSERT_TERM_5113 https://fairsharing.org/search?recordType=terminology_artefact)  (NCBO (URL_TO_INSERT_RECORD_5114 https://fairsharing.org/FAIRsharing.cbz72b)  (URL_TO_INSERT_RECORD_5115 https://fairsharing.org/FAIRsharing.y2dt83) ).
 
 #### Details
 
-1. **Functionality**: `Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool`
-2. **Interface**: REST-style API supported, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint 
-3. **Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture**: Virtual Appliance defines the framework for the Web Service. The system internally uses the following components
-    1. A set of additional ruby based modules that implement the user interface and additional functionality can be found [here](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /ncbo).
-    2. 4Store triple store database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  is used to store and access ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+1. **Functionality**: `Ontology (URL_TO_INSERT_TERM_5116 https://fairsharing.org/search?recordType=terminology_artefact)  Portal Tool`
+2. **Interface**: REST-style API supported, SP (URL_TO_INSERT_RECORD_5118 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5117 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint 
+3. **Arch (URL_TO_INSERT_RECORD_5119 https://fairsharing.org/FAIRsharing.52b22c) itecture**: Virtual Appliance defines the framework for the Web Service. The system internally uses the following components
+    1. A set of additional ruby based modules that implement the user interface and additional functionality can be found [here](https://github.com (URL_TO_INSERT_RECORD_5120 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo).
+    2. 4Store triple store database (URL_TO_INSERT_TERM_5121 https://fairsharing.org/search?fairsharingRegistry=Database)  is used to store and access ontologies (URL_TO_INSERT_TERM_5122 https://fairsharing.org/search?recordType=terminology_artefact) . 
     3. Solr is used to create indexes out of description text metadata.  
     4. MySQL is used to store additional metadata.
-    5. MGrep is used for annotating text to ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .
-4. **Deployment model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. It is available as virtual VMW (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xfrgsf) are Virtual Appliance or Amazon AWS AMI. 
+    5. MGrep is used for annotating text to ontologies (URL_TO_INSERT_TERM_5123 https://fairsharing.org/search?recordType=terminology_artefact) .
+4. **Deployment model (URL_TO_INSERT_TERM_5124 https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. It is available as virtual VMW (URL_TO_INSERT_RECORD_5125 https://fairsharing.org/FAIRsharing.xfrgsf) are Virtual Appliance or Amazon AWS AMI. 
 5. **Requirements**:
     1. Hardware requirements. 
-        1. Minimum: 2 CP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.wP3t2L) U (2 GHz), 4GB RAM, 20GB hard disk space.
-        2. Recommended for heavier usage: 3 CP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.wP3t2L) U (3 GHz), 8GB RAM (or more depending on the size/number of ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ), 20GB hard disk space (or more depending on number/size of ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) )
+        1. Minimum: 2 CP (URL_TO_INSERT_RECORD_5126 https://fairsharing.org/FAIRsharing.wP3t2L) U (2 GHz), 4GB RAM, 20GB hard disk space.
+        2. Recommended for heavier usage: 3 CP (URL_TO_INSERT_RECORD_5129 https://fairsharing.org/FAIRsharing.wP3t2L) U (3 GHz), 8GB RAM (or more depending on the size/number of ontologies (URL_TO_INSERT_TERM_5127 https://fairsharing.org/search?recordType=terminology_artefact) ), 20GB hard disk space (or more depending on number/size of ontologies (URL_TO_INSERT_TERM_5128 https://fairsharing.org/search?recordType=terminology_artefact) )
     2. Software requirements. All software is already contained in the virtual image
         1. Operating system: CentOS (Linux)
-        2. License model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
-6. **Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the 4Store triple store and MySQL
-7. **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Language**: OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) , OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy) 
+        2. License model (URL_TO_INSERT_TERM_5130 https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
+6. **Database (URL_TO_INSERT_TERM_5131 https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the 4Store triple store and MySQL
+7. **Ontology (URL_TO_INSERT_TERM_5132 https://fairsharing.org/search?recordType=terminology_artefact)  Language**: OBO (URL_TO_INSERT_RECORD_5134 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_5135 https://fairsharing.org/FAIRsharing.cbz72b) , OWL (URL_TO_INSERT_RECORD_5133 https://fairsharing.org/FAIRsharing.atygwy) 
 8. **Programming Language**: Ruby, Java.
 
 ### [Apache Marmotta](https://marmotta.apache.org/) (Open Data Platform Tool)
@@ -463,10 +463,10 @@ It is an Open Data Platform for Linked Data, which provides an open implementati
 a Linked Data Platform that can be used, extended and deployed easily by organizations who want to publish 
 Linked Data or build custom applications on Linked Data {footcite}`apache_marmotta`. 
 It provides:
-> * a) read-write Linked Data server for the **Java EE (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.0b711a)  stack** 
+> * a) read-write Linked Data server for the **Java EE (URL_TO_INSERT_RECORD_5136 https://fairsharing.org/FAIRsharing.0b711a)  stack** 
 > * b) custom triple store built on top of RDBMS, with transactions, versioning and rule-based reasoning support
-> * c) pluggable RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  triple stores based on [**Eclipse RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) 4J**](https://projects.eclipse.org/projects/technology.rdf4j),
-> * d) LDP, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  and LD Path querying
+> * c) pluggable RDF (URL_TO_INSERT_RECORD_5137 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores based on [**Eclipse RDF (URL_TO_INSERT_RECORD_5138 https://fairsharing.org/FAIRsharing.p77ph9) 4J**](https://projects.eclipse.org/projects/technology.rdf4j),
+> * d) LDP, SP (URL_TO_INSERT_RECORD_5140 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5139 https://fairsharing.org/FAIRsharing.87ccfd)  and LD Path querying
 > * e) transparent Linked Data Caching
 > * f) Integrated basic security mechanisms.
 
@@ -477,85 +477,85 @@ This project is now retired and is no longer supported or developed.
 #### Details
 
 1. **Functionality**: `Open (Linked) Data Platform`.
-2. **Interface**: REST-style API, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint supported.
-3. **Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture**, the arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture comprises the following tiers:
+2. **Interface**: REST-style API, SP (URL_TO_INSERT_RECORD_5142 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5141 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint supported.
+3. **Arch (URL_TO_INSERT_RECORD_5143 https://fairsharing.org/FAIRsharing.52b22c) itecture**, the arch (URL_TO_INSERT_RECORD_5144 https://fairsharing.org/FAIRsharing.52b22c) itecture comprises the following tiers:
     1. User Interface Layer. It mostly consists of admin and development interfaces and is not intended for end users.
     2. Web-service Layer. It offers REST web-services to access most of the server functionality.
-    3. Service Layer. It offers CDI (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.yzagph)  services to develop custom Java applications.
-    4. Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format)  Layer. It offers persistence and data access functionality.
-    5. Persistence Layer. It is outside the Apache Marmotta Platform, which can use a number of Open Source database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  systems.
-4. **Deployment Model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.
+    3. Service Layer. It offers CDI (URL_TO_INSERT_RECORD_5145 https://fairsharing.org/FAIRsharing.yzagph)  services to develop custom Java applications.
+    4. Model (URL_TO_INSERT_TERM_5146 https://fairsharing.org/search?recordType=model_and_format)  Layer. It offers persistence and data access functionality.
+    5. Persistence Layer. It is outside the Apache Marmotta Platform, which can use a number of Open Source database (URL_TO_INSERT_TERM_5147 https://fairsharing.org/search?fairsharingRegistry=Database)  systems.
+4. **Deployment Model (URL_TO_INSERT_TERM_5148 https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution. Docker based deployment is supported.
 5. **Requirements**:
-    1. Hardware requirements. It requires a standard (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Standard)  workstation, 1 GB main memory, and about 100 MB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c)  hard disk.
+    1. Hardware requirements. It requires a standard (URL_TO_INSERT_TERM_5149 https://fairsharing.org/search?fairsharingRegistry=Standard)  workstation, 1 GB main memory, and about 100 MB (URL_TO_INSERT_RECORD_5150 https://fairsharing.org/FAIRsharing.a1rp4c)  hard disk.
     2. Software requirements. It is implemented as a Java Web Application that can, in principle, be deployed to any 
    Java Application Container. It has been tested under Jetty 6.x and Tomcat 7.x. It requires Java JDK 6 or higher,
-   Java Application Server (Tomcat 7.x or Jetty 6.x), and a database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  (PostgreSQL, MySQL). If not explicitly configured, 
-   an embedded H2 database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  will be used.
-    3. License model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
-6. **Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the following triple store backends: (a.) KiWi Triple Store, (b.) Sesame Native, and (c.) 
-BigData triple store. The default backend is the KiWi triple store, which stores all data in a relational database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) , and
+   Java Application Server (Tomcat 7.x or Jetty 6.x), and a database (URL_TO_INSERT_TERM_5151 https://fairsharing.org/search?fairsharingRegistry=Database)  (PostgreSQL, MySQL). If not explicitly configured, 
+   an embedded H2 database (URL_TO_INSERT_TERM_5152 https://fairsharing.org/search?fairsharingRegistry=Database)  will be used.
+    3. License model (URL_TO_INSERT_TERM_5153 https://fairsharing.org/search?recordType=model_and_format) . Apache Software Licence (v. 2.0).
+6. **Database (URL_TO_INSERT_TERM_5154 https://fairsharing.org/search?fairsharingRegistry=Database) s**: It supports the following triple store backends: (a.) KiWi Triple Store, (b.) Sesame Native, and (c.) 
+BigData triple store. The default backend is the KiWi triple store, which stores all data in a relational database (URL_TO_INSERT_TERM_5155 https://fairsharing.org/search?fairsharingRegistry=Database) , and
 it is the only option that supports reasoning and versioning.
-7. **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Language**: OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  serialized as RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) /RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.v9n3gk)  triples. 
+7. **Ontology (URL_TO_INSERT_TERM_5156 https://fairsharing.org/search?recordType=terminology_artefact)  Language**: OWL (URL_TO_INSERT_RECORD_5158 https://fairsharing.org/FAIRsharing.atygwy)  serialized as RDF (URL_TO_INSERT_RECORD_5159 https://fairsharing.org/FAIRsharing.p77ph9) /RDF (URL_TO_INSERT_RECORD_5160 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_5157 https://fairsharing.org/FAIRsharing.v9n3gk)  triples. 
 8. **Programming Language**: Java.
 
 ### European Data Portal<!-- TODO add a link to corresponding document --> (Open Data Platform Tool)
 
 #### Overview
 
-[European data portal (URL_TO_INSERT_RECORD https://fairsharing.org/2940) ](https://www.europeandataportal.eu/en (URL_TO_INSERT_RECORD https://fairsharing.org/2940) )  (EDP (URL_TO_INSERT_RECORD https://fairsharing.org/2940) ) is an initiative by 
+[European data portal (URL_TO_INSERT_RECORD_5161 https://fairsharing.org/2940) ](https://www.europeandataportal.eu/en (URL_TO_INSERT_RECORD_5163 https://fairsharing.org/2940) )  (EDP (URL_TO_INSERT_RECORD_5162 https://fairsharing.org/2940) ) is an initiative by 
 the [Publications Office of the European Union](https://op.europa.eu/da/home) and by the [European Commission](https://ec.europa.eu/info/index_en) that aims to increase the impact of open data by making it easy to find and re-use by everyone.
 
 It uses only open source software with extensions that are all available to the public for own use. 
 
-As a core (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.xMmOCL)  component,
-[CKAN open data portal software](https://ckan.org/) with [DC (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3a96ae)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.h4j3qm) -AP](https://op.europa.eu/da/web/eu-vocabularies/dcat-ap)
-RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  extension is used. 
+As a core (URL_TO_INSERT_RECORD_5164 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5165 https://fairsharing.org/FAIRsharing.xMmOCL)  component,
+[CKAN open data portal software](https://ckan.org/) with [DC (URL_TO_INSERT_RECORD_5168 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_5169 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_5166 https://fairsharing.org/FAIRsharing.3a96ae)  (URL_TO_INSERT_RECORD_5167 https://fairsharing.org/FAIRsharing.h4j3qm) -AP](https://op.europa.eu/da/web/eu-vocabularies/dcat-ap)
+RDF (URL_TO_INSERT_RECORD_5170 https://fairsharing.org/FAIRsharing.p77ph9)  extension is used. 
 
-It allows sharing various data format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s e.g. tabular data, RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  data (e.g. ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ) combining
+It allows sharing various data format (URL_TO_INSERT_TERM_5171 https://fairsharing.org/search?recordType=model_and_format) s e.g. tabular data, RDF (URL_TO_INSERT_RECORD_5173 https://fairsharing.org/FAIRsharing.p77ph9)  data (e.g. ontologies (URL_TO_INSERT_TERM_5172 https://fairsharing.org/search?recordType=terminology_artefact) ) combining
 relational and semantic technologies.
 
-The [Triple Store database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  Virtuoso](https://virtuoso.openlinksw.com/) is used 
-for storing ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+The [Triple Store database (URL_TO_INSERT_TERM_5174 https://fairsharing.org/search?fairsharingRegistry=Database)  Virtuoso](https://virtuoso.openlinksw.com/) is used 
+for storing ontologies (URL_TO_INSERT_TERM_5175 https://fairsharing.org/search?recordType=terminology_artefact) . 
 
-For metadata in relational format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) , the [PostgreSQL](https://www.postgresql.org/) database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  is used as part of CKAN.
+For metadata in relational format (URL_TO_INSERT_TERM_5177 https://fairsharing.org/search?recordType=model_and_format) , the [PostgreSQL](https://www.postgresql.org/) database (URL_TO_INSERT_TERM_5176 https://fairsharing.org/search?fairsharingRegistry=Database)  is used as part of CKAN.
 
 #### Details
 
 1. **Functionality**: `Open Data Portal` 
-2. **Interface**: REST-style API, SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  endpoint supported.
-3. **Arch (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) itecture**:
-    1. CKAN manages and provides metadata content (datasets) in a central repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . 
-    2. DR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1sfhp3) UPAL provides the Portal’s Home Page with editorial content (e.g. Portal’s objectives, articles, news, events, tweets, etc.) 
+2. **Interface**: REST-style API, SP (URL_TO_INSERT_RECORD_5179 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5178 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint supported.
+3. **Arch (URL_TO_INSERT_RECORD_5180 https://fairsharing.org/FAIRsharing.52b22c) itecture**:
+    1. CKAN manages and provides metadata content (datasets) in a central repository (URL_TO_INSERT_TERM_5181 https://fairsharing.org/search?recordType=repository) . 
+    2. DR (URL_TO_INSERT_RECORD_5182 https://fairsharing.org/FAIRsharing.1sfhp3) UPAL provides the Portal’s Home Page with editorial content (e.g. Portal’s objectives, articles, news, events, tweets, etc.) 
     and links to an *Adapt Framework* based training platform. 
-    3. The CKAN metadata is replicated into a Virtuoso triple store database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database)  via a CKAN synchronisation extension, in order
-    to ensure that both repositories (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  have the same set of metadata. 
-    4. The SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  Manager component allows the user to enter and run SP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.87ccfd)  queries on the Virtuoso linked data repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . 
-    5. The portal uses the SO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.6bc7h9) LR search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  engine in order to separately search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  for editorial content in DR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1sfhp3) UPAL and for 
-    datasets in the CKAN repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) . 
-    6. The Harvester is a separate component that is able to harvest data from multiple data sources with different format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s and APIs. 
-4. **Deployment model (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution.
+    3. The CKAN metadata is replicated into a Virtuoso triple store database (URL_TO_INSERT_TERM_5183 https://fairsharing.org/search?fairsharingRegistry=Database)  via a CKAN synchronisation extension, in order
+    to ensure that both repositories (URL_TO_INSERT_TERM_5184 https://fairsharing.org/search?recordType=repository)  have the same set of metadata. 
+    4. The SP (URL_TO_INSERT_RECORD_5188 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5186 https://fairsharing.org/FAIRsharing.87ccfd)  Manager component allows the user to enter and run SP (URL_TO_INSERT_RECORD_5189 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_5187 https://fairsharing.org/FAIRsharing.87ccfd)  queries on the Virtuoso linked data repository (URL_TO_INSERT_TERM_5185 https://fairsharing.org/search?recordType=repository) . 
+    5. The portal uses the SO (URL_TO_INSERT_RECORD_5190 https://fairsharing.org/FAIRsharing.6bc7h9) LR search (URL_TO_INSERT_RECORD_5192 https://fairsharing.org/FAIRsharing.52b22c)  engine in order to separately search (URL_TO_INSERT_RECORD_5193 https://fairsharing.org/FAIRsharing.52b22c)  for editorial content in DR (URL_TO_INSERT_RECORD_5191 https://fairsharing.org/FAIRsharing.1sfhp3) UPAL and for 
+    datasets in the CKAN repository (URL_TO_INSERT_TERM_5194 https://fairsharing.org/search?recordType=repository) . 
+    6. The Harvester is a separate component that is able to harvest data from multiple data sources with different format (URL_TO_INSERT_TERM_5195 https://fairsharing.org/search?recordType=model_and_format) s and APIs. 
+4. **Deployment model (URL_TO_INSERT_TERM_5196 https://fairsharing.org/search?recordType=model_and_format) **: It is available both as an on-premises and cloud-based solution.
 5. **Requirements**:
-    1. The setup of the EDP (URL_TO_INSERT_RECORD https://fairsharing.org/2940)  consists of 20 virtual servers per computer room and environment (PRO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) D, TES (URL_TO_INSERT_RECORD https://fairsharing.org/3025) T)
-6. **Database (URL_TO_INSERT_TERM https://fairsharing.org/search?fairsharingRegistry=Database) s**: PostgreSQL RDBMS for CKAN catalogue, Virtuoso for RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9)  data
-7. **Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Language**: RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) , RDF (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.v9n3gk) , OWL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.atygwy)  2
-8. **Programming Language**: Python(CKAN), PHP (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.kbtt7f) (Drupal)
+    1. The setup of the EDP (URL_TO_INSERT_RECORD_5202 https://fairsharing.org/2940)  consists of 20 virtual servers per computer room and environment (PRO (URL_TO_INSERT_RECORD_5197 https://fairsharing.org/FAIRsharing.3e88d6)  (URL_TO_INSERT_RECORD_5198 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_5200 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_5201 https://fairsharing.org/FAIRsharing.4ndncv)  (URL_TO_INSERT_RECORD_5203 https://fairsharing.org/FAIRsharing.cp0ybc) D, TES (URL_TO_INSERT_RECORD_5199 https://fairsharing.org/3025) T)
+6. **Database (URL_TO_INSERT_TERM_5204 https://fairsharing.org/search?fairsharingRegistry=Database) s**: PostgreSQL RDBMS for CKAN catalogue, Virtuoso for RDF (URL_TO_INSERT_RECORD_5205 https://fairsharing.org/FAIRsharing.p77ph9)  data
+7. **Ontology (URL_TO_INSERT_TERM_5206 https://fairsharing.org/search?recordType=terminology_artefact)  Language**: RDF (URL_TO_INSERT_RECORD_5209 https://fairsharing.org/FAIRsharing.p77ph9) , RDF (URL_TO_INSERT_RECORD_5210 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_5207 https://fairsharing.org/FAIRsharing.v9n3gk) , OWL (URL_TO_INSERT_RECORD_5208 https://fairsharing.org/FAIRsharing.atygwy)  2
+8. **Programming Language**: Python(CKAN), PHP (URL_TO_INSERT_RECORD_5211 https://fairsharing.org/FAIRsharing.kbtt7f) (Drupal)
 
 ---
 ## Conclusions
 
-Determining which infrastructure to rely on for service terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  is a complex issue. 
+Determining which infrastructure to rely on for service terminologies (URL_TO_INSERT_TERM_5212 https://fairsharing.org/search?recordType=terminology_artefact)  and ontologies (URL_TO_INSERT_TERM_5213 https://fairsharing.org/search?recordType=terminology_artefact)  is a complex issue. 
 
-This FAIR (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  recipe gave an overview of non-functional criteria to take into consideration when appraising a software solution.
+This FAIR (URL_TO_INSERT_RECORD_5215 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook (URL_TO_INSERT_RECORD_5214 https://fairsharing.org/FAIRsharing.cbz72b)  recipe gave an overview of non-functional criteria to take into consideration when appraising a software solution.
 
 To complement this recipe, reading the following chapter is highly encouraged.
 
 ### What to read next?
 
-* [Key functional requirements to consider when selecting an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service?](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB004)
-* [Deploying EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB005)
-* [Introduction to terminologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB019)
-* [How to select an ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ?](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB020)
-* [How to build an application ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) ?](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB023)
+* [Key functional requirements to consider when selecting an ontology (URL_TO_INSERT_TERM_5216 https://fairsharing.org/search?recordType=terminology_artefact)  service?](https://w3id.org (URL_TO_INSERT_RECORD_5217 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB004)
+* [Deploying EMB (URL_TO_INSERT_RECORD_5221 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI Ontology (URL_TO_INSERT_TERM_5218 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_5219 https://fairsharing.org/FAIRsharing.Mkl9RR) ](https://w3id.org (URL_TO_INSERT_RECORD_5220 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB005)
+* [Introduction to terminologies (URL_TO_INSERT_TERM_5222 https://fairsharing.org/search?recordType=terminology_artefact)  and ontologies (URL_TO_INSERT_TERM_5223 https://fairsharing.org/search?recordType=terminology_artefact) ](https://w3id.org (URL_TO_INSERT_RECORD_5224 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB019)
+* [How to select an ontology (URL_TO_INSERT_TERM_5225 https://fairsharing.org/search?recordType=terminology_artefact) ?](https://w3id.org (URL_TO_INSERT_RECORD_5226 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB020)
+* [How to build an application ontology (URL_TO_INSERT_TERM_5227 https://fairsharing.org/search?recordType=terminology_artefact) ?](https://w3id.org (URL_TO_INSERT_RECORD_5228 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB023)
 
 ````{rdmkit_panel}
 ````

@@ -18,38 +18,38 @@
 
 ## Main Objectives
 
-This recipe is a step-by-step guide on how to deploy the EBI Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ) {footcite}`pmid20460452`, {footcite}`ols_jupp` on local machines. 
-This demonstrates the workflow for deploying open source ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  service software in-house {footcite}`ols-install-guide`. 
+This recipe is a step-by-step guide on how to deploy the EBI Ontology (URL_TO_INSERT_TERM_4733 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4734 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD_4735 https://fairsharing.org/FAIRsharing.Mkl9RR) ) {footcite}`pmid20460452`, {footcite}`ols_jupp` on local machines. 
+This demonstrates the workflow for deploying open source ontology (URL_TO_INSERT_TERM_4736 https://fairsharing.org/search?recordType=terminology_artefact)  service software in-house {footcite}`ols-install-guide`. 
 
 ## Introduction
-With an increasing need for ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  infrastructure to improve the interoperability of informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion-based R&D activities,
-many pharmaceutical companies seek ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  management solutions and ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services. 
-Compared with developing local ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services from scratch, reusing and redeveloping open-source ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services
-save the time and cost. [Recipe FCB003](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB003) identifies public open-source ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services. 
-In this recipe, we use the [Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ](https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ) to demonstrate the workflow of 
-deploying public ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services in-house.
+With an increasing need for ontology (URL_TO_INSERT_TERM_4738 https://fairsharing.org/search?recordType=terminology_artefact)  infrastructure to improve the interoperability of informat (URL_TO_INSERT_TERM_4737 https://fairsharing.org/search?recordType=model_and_format) ion-based R&D activities,
+many pharmaceutical companies seek ontology (URL_TO_INSERT_TERM_4739 https://fairsharing.org/search?recordType=terminology_artefact)  management solutions and ontology (URL_TO_INSERT_TERM_4740 https://fairsharing.org/search?recordType=terminology_artefact)  services. 
+Compared with developing local ontology (URL_TO_INSERT_TERM_4741 https://fairsharing.org/search?recordType=terminology_artefact)  services from scratch, reusing and redeveloping open-source ontology (URL_TO_INSERT_TERM_4742 https://fairsharing.org/search?recordType=terminology_artefact)  services
+save the time and cost. [Recipe FCB003](https://w3id.org (URL_TO_INSERT_RECORD_4744 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB003) identifies public open-source ontology (URL_TO_INSERT_TERM_4743 https://fairsharing.org/search?recordType=terminology_artefact)  services. 
+In this recipe, we use the [Ontology (URL_TO_INSERT_TERM_4745 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4746 https://fairsharing.org/FAIRsharing.Mkl9RR) ](https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD_4747 https://fairsharing.org/FAIRsharing.Mkl9RR) ) to demonstrate the workflow of 
+deploying public ontology (URL_TO_INSERT_TERM_4748 https://fairsharing.org/search?recordType=terminology_artefact)  services in-house.
 
-Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  is an open-source ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  management service developed (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  by [EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI](https://www.ebi.ac.uk/).
+Ontology (URL_TO_INSERT_TERM_4749 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4751 https://fairsharing.org/FAIRsharing.Mkl9RR)  is an open-source ontology (URL_TO_INSERT_TERM_4750 https://fairsharing.org/search?recordType=terminology_artefact)  management service developed (URL_TO_INSERT_RECORD_4752 https://fairsharing.org/FAIRsharing.31385c)  by [EMB (URL_TO_INSERT_RECORD_4753 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI](https://www.ebi.ac.uk/).
 
-It is a repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository)  for biomedical ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , and serves as a single point of access to query, browse and navigate
-different ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+It is a repository (URL_TO_INSERT_TERM_4754 https://fairsharing.org/search?recordType=repository)  for biomedical ontologies (URL_TO_INSERT_TERM_4755 https://fairsharing.org/search?recordType=terminology_artefact) , and serves as a single point of access to query, browse and navigate
+different ontologies (URL_TO_INSERT_TERM_4756 https://fairsharing.org/search?recordType=terminology_artefact) . 
 
-OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  supports the [Open Biological and Biomedical Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b) ) Foundry](http://www.obofoundry.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) /)
-guideline (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=reporting_guideline) s and connects with other ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services. 
+OLS (URL_TO_INSERT_RECORD_4758 https://fairsharing.org/FAIRsharing.Mkl9RR)  supports the [Open Biological and Biomedical Ontology (URL_TO_INSERT_TERM_4757 https://fairsharing.org/search?recordType=terminology_artefact)  (OBO (URL_TO_INSERT_RECORD_4759 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4761 https://fairsharing.org/FAIRsharing.cbz72b) ) Foundry](http://www.obofoundry.org (URL_TO_INSERT_RECORD_4760 https://fairsharing.org/FAIRsharing.847069) /)
+guideline (URL_TO_INSERT_TERM_4763 https://fairsharing.org/search?recordType=reporting_guideline) s and connects with other ontology (URL_TO_INSERT_TERM_4762 https://fairsharing.org/search?recordType=terminology_artefact)  services. 
 
-It provides both web interface and API to search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c)  and browser 
-ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
-[Recipe FCB003](https://w3id.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB003) provides a detailed description of OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) .
+It provides both web interface and API to search (URL_TO_INSERT_RECORD_4764 https://fairsharing.org/FAIRsharing.52b22c)  and browser 
+ontologies (URL_TO_INSERT_TERM_4765 https://fairsharing.org/search?recordType=terminology_artefact) . 
+[Recipe FCB003](https://w3id.org (URL_TO_INSERT_RECORD_4767 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB003) provides a detailed description of OLS (URL_TO_INSERT_RECORD_4766 https://fairsharing.org/FAIRsharing.Mkl9RR) .
 
-A local OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  allows users to protect and control their ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) -related data, and make stable and fast access to ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) 
+A local OLS (URL_TO_INSERT_RECORD_4770 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows users to protect and control their ontology (URL_TO_INSERT_TERM_4768 https://fairsharing.org/search?recordType=terminology_artefact) -related data, and make stable and fast access to ontology (URL_TO_INSERT_TERM_4769 https://fairsharing.org/search?recordType=terminology_artefact) 
 services possible. 
 
-It can serve as the hub of internal ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  eco-system, linking internal vocabulary, 
-terminology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  management and data annotation activities together to improve the interoperability.
+It can serve as the hub of internal ontology (URL_TO_INSERT_TERM_4771 https://fairsharing.org/search?recordType=terminology_artefact)  eco-system, linking internal vocabulary, 
+terminology (URL_TO_INSERT_TERM_4772 https://fairsharing.org/search?recordType=terminology_artefact)  management and data annotation activities together to improve the interoperability.
 
 ## Requirements
-This recipe is intended for bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) icians or developers who want to explore public ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  services. 
-The users are expected to be fam (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.d0886a) iliar with Unix-based OS and basic Bash programming syntax and commands. 
+This recipe is intended for bioinformat (URL_TO_INSERT_TERM_4773 https://fairsharing.org/search?recordType=model_and_format) icians or developers who want to explore public ontologies (URL_TO_INSERT_TERM_4775 https://fairsharing.org/search?recordType=terminology_artefact)  and ontology (URL_TO_INSERT_TERM_4774 https://fairsharing.org/search?recordType=terminology_artefact)  services. 
+The users are expected to be fam (URL_TO_INSERT_RECORD_4776 https://fairsharing.org/FAIRsharing.d0886a) iliar with Unix-based OS and basic Bash programming syntax and commands. 
 The users should also be comfortable with YAML or other data-serialization languages. 
 Knowledge about [Docker](https://www.docker.com/) allows users to further customize their local service.
 
@@ -67,15 +67,15 @@ specific policies regarding tool deployment the use of containerized application
 ```{figure} ols-deploy.svg
 ---
 name: ols-deploy
-alt: Deploying EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) 
+alt: Deploying EMB (URL_TO_INSERT_RECORD_4778 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI OLS (URL_TO_INSERT_RECORD_4777 https://fairsharing.org/FAIRsharing.Mkl9RR) 
 ---
-Deploying EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) 
+Deploying EMB (URL_TO_INSERT_RECORD_4781 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI Ontology (URL_TO_INSERT_TERM_4779 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4780 https://fairsharing.org/FAIRsharing.Mkl9RR) 
 ```
 ````
  
 ## Ingredients
-- [OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker image](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS-docker) 
-- [Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  metadata in OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) ](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /OBOFoundry/purl.obolibrary.org/tree/master/config)
+- [OLS (URL_TO_INSERT_RECORD_4782 https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker image](https://github.com (URL_TO_INSERT_RECORD_4783 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS-docker) 
+- [Ontology (URL_TO_INSERT_TERM_4784 https://fairsharing.org/search?recordType=terminology_artefact)  metadata in OBO (URL_TO_INSERT_RECORD_4786 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4787 https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD_4785 https://fairsharing.org/FAIRsharing.847069) ](https://github.com (URL_TO_INSERT_RECORD_4788 https://fairsharing.org/FAIRsharing.c55d5e) /OBOFoundry/purl.obolibrary.org/tree/master/config)
 
 ## Step-by-step guide
 
@@ -108,15 +108,15 @@ Minor modifications are required to run it on Windows machines.
 
 ### 2. Load ontologies into OLS 
 
-Ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  in both [OBO](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /10.25504/FAIRsharing.aa0eat) and
-[OWL](https://fairsharing.org (URL_TO_INSERT_RECORD https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD https://fairsharing.org/3538) /10.25504/FAIRsharing.atygwy) format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) s can be loaded to OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  by adding ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) 
+Ontologies (URL_TO_INSERT_TERM_4789 https://fairsharing.org/search?recordType=terminology_artefact)  in both [OBO](https://fairsharing.org (URL_TO_INSERT_RECORD_4790 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4791 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4792 https://fairsharing.org/3538) /10.25504/FAIRsharing.aa0eat) and
+[OWL](https://fairsharing.org (URL_TO_INSERT_RECORD_4796 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4797 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4798 https://fairsharing.org/3538) /10.25504/FAIRsharing.atygwy) format (URL_TO_INSERT_TERM_4793 https://fairsharing.org/search?recordType=model_and_format) s can be loaded to OLS (URL_TO_INSERT_RECORD_4795 https://fairsharing.org/FAIRsharing.Mkl9RR)  by adding ontology (URL_TO_INSERT_TERM_4794 https://fairsharing.org/search?recordType=terminology_artefact) 
 metadata to the configuration file, **ols-config.yaml**. 
 
-Three fields, **id**,**url** and **ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) _purl** are mandatory ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  metadata attributes.
+Three fields, **id**,**url** and **ontology (URL_TO_INSERT_TERM_4799 https://fairsharing.org/search?recordType=terminology_artefact) _purl** are mandatory ontology (URL_TO_INSERT_TERM_4800 https://fairsharing.org/search?recordType=terminology_artefact)  metadata attributes.
 
-Other fields are also recommended, especially for self-defined ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) . 
+Other fields are also recommended, especially for self-defined ontologies (URL_TO_INSERT_TERM_4801 https://fairsharing.org/search?recordType=terminology_artefact) . 
 
-Below is an example configuration of the Experimental Factor Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1gr4tz)  (EFO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ca63ce) ) provided
+Below is an example configuration of the Experimental Factor Ontology (URL_TO_INSERT_TERM_4802 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4803 https://fairsharing.org/FAIRsharing.1gr4tz)  (EFO (URL_TO_INSERT_RECORD_4804 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_4805 https://fairsharing.org/FAIRsharing.ca63ce) ) provided
 by [OLS](https://www.ebi.ac.uk/ols/docs/installation-guide). 
 
 ```bash
@@ -144,23 +144,23 @@ reasoner: OWL2 // can be one of OWL2, EL, NONE - deafult is EL
 oboSlims: false // contains OBO style slim annotations
 ```
 
-The location of the target ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  shall be specified in the **ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) _purl** field in the **`ols-config.yaml** file.
+The location of the target ontology (URL_TO_INSERT_TERM_4806 https://fairsharing.org/search?recordType=terminology_artefact)  shall be specified in the **ontology (URL_TO_INSERT_TERM_4807 https://fairsharing.org/search?recordType=terminology_artefact) _purl** field in the **`ols-config.yaml** file.
 
-Ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  from both local files and online resources can be imported. 
+Ontologies (URL_TO_INSERT_TERM_4808 https://fairsharing.org/search?recordType=terminology_artefact)  from both local files and online resources can be imported. 
 
-To add local ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  files need to be first copied to the **OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) -docker** directory. 
+To add local ontologies (URL_TO_INSERT_TERM_4810 https://fairsharing.org/search?recordType=terminology_artefact) , the ontology (URL_TO_INSERT_TERM_4809 https://fairsharing.org/search?recordType=terminology_artefact)  files need to be first copied to the **OLS (URL_TO_INSERT_RECORD_4811 https://fairsharing.org/FAIRsharing.Mkl9RR) -docker** directory. 
 
-By default, the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  file location is specified as **/opt/ols/example.owl**. 
+By default, the ontology (URL_TO_INSERT_TERM_4812 https://fairsharing.org/search?recordType=terminology_artefact)  file location is specified as **/opt/ols/example.owl**. 
 
-For example, **ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) _purl:file:///opt/ols/example.owl**.
+For example, **ontology (URL_TO_INSERT_TERM_4813 https://fairsharing.org/search?recordType=terminology_artefact) _purl:file:///opt/ols/example.owl**.
 
-To add ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  from online resources, ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s are required.
+To add ontologies (URL_TO_INSERT_TERM_4815 https://fairsharing.org/search?recordType=terminology_artefact)  from online resources, ontology (URL_TO_INSERT_TERM_4814 https://fairsharing.org/search?recordType=terminology_artefact)  URL (URL_TO_INSERT_RECORD_4816 https://fairsharing.org/FAIRsharing.9d38e2) s are required.
 
-Most reference ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  use the OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  Permanent URL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s (PURL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s). 
+Most reference ontologies (URL_TO_INSERT_TERM_4817 https://fairsharing.org/search?recordType=terminology_artefact)  use the OBO (URL_TO_INSERT_RECORD_4820 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4823 https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD_4819 https://fairsharing.org/FAIRsharing.847069)  Permanent URL (URL_TO_INSERT_RECORD_4821 https://fairsharing.org/FAIRsharing.9d38e2) s (PURL (URL_TO_INSERT_RECORD_4818 https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD_4822 https://fairsharing.org/FAIRsharing.9d38e2) s). 
 
-The PURL (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9d38e2) s can be found [here](http://www.obofoundry.org (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) /). 
+The PURL (URL_TO_INSERT_RECORD_4824 https://fairsharing.org/FAIRsharing.3e603c)  (URL_TO_INSERT_RECORD_4826 https://fairsharing.org/FAIRsharing.9d38e2) s can be found [here](http://www.obofoundry.org (URL_TO_INSERT_RECORD_4825 https://fairsharing.org/FAIRsharing.847069) /). 
 
-For example, the location of Data Usage Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (DUO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.mjnypw) ) can be specified by adding:
+For example, the location of Data Usage Ontology (URL_TO_INSERT_TERM_4827 https://fairsharing.org/search?recordType=terminology_artefact)  (DUO (URL_TO_INSERT_RECORD_4828 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_4829 https://fairsharing.org/FAIRsharing.mjnypw) ) can be specified by adding:
 
 ```
 ontology_purl: http://purl.obolibrary.org/obo/duo.owl
@@ -168,23 +168,23 @@ ontology_purl: http://purl.obolibrary.org/obo/duo.owl
 
 to the configuration file. 
 
-Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  metadata for the configuration file can be written by users. 
+Ontology (URL_TO_INSERT_TERM_4830 https://fairsharing.org/search?recordType=terminology_artefact)  metadata for the configuration file can be written by users. 
 
-For common public ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  metadata can also be downloaded from either the 
-[EBI OLS](https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ) or the [OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  Foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) ](https://obofoundry.org/) {footcite}`pmid17989687obofoundry2007`,
+For common public ontologies (URL_TO_INSERT_TERM_4832 https://fairsharing.org/search?recordType=terminology_artefact) , the ontology (URL_TO_INSERT_TERM_4831 https://fairsharing.org/search?recordType=terminology_artefact)  metadata can also be downloaded from either the 
+[EBI OLS](https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD_4833 https://fairsharing.org/FAIRsharing.Mkl9RR) ) or the [OBO (URL_TO_INSERT_RECORD_4835 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4836 https://fairsharing.org/FAIRsharing.cbz72b)  Foundry (URL_TO_INSERT_RECORD_4834 https://fairsharing.org/FAIRsharing.847069) ](https://obofoundry.org/) {footcite}`pmid17989687obofoundry2007`,
 {footcite}`pmid34697637obofoundry2021` .
 
 #### 2.1 Get ontology metadata from the EBI OLS
 
-For ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  included in the EBI OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) , the metadata can be downloaded directly using the EBI OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  endpoint,
-**https://www.ebi.ac.uk/ols/api/ols-config\?ids\=<ontologies-short-names-list>**, by providing the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  short names.
+For ontologies (URL_TO_INSERT_TERM_4837 https://fairsharing.org/search?recordType=terminology_artefact)  included in the EBI OLS (URL_TO_INSERT_RECORD_4838 https://fairsharing.org/FAIRsharing.Mkl9RR) , the metadata can be downloaded directly using the EBI OLS (URL_TO_INSERT_RECORD_4839 https://fairsharing.org/FAIRsharing.Mkl9RR)  endpoint,
+**https://www.ebi.ac.uk/ols/api/ols-config\?ids\=<ontologies-short-names-list>**, by providing the ontology (URL_TO_INSERT_TERM_4840 https://fairsharing.org/search?recordType=terminology_artefact)  short names.
 
-Metadata of multiple ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  can be downloaded at the same time.
+Metadata of multiple ontologies (URL_TO_INSERT_TERM_4841 https://fairsharing.org/search?recordType=terminology_artefact)  can be downloaded at the same time.
 
-[Here](https://www.ebi.ac.uk/ols/ontologies) is a list of all the ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  available at OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) , along with their
-respective "short name" and other informat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ion. 
+[Here](https://www.ebi.ac.uk/ols/ontologies) is a list of all the ontologies (URL_TO_INSERT_TERM_4842 https://fairsharing.org/search?recordType=terminology_artefact)  available at OLS (URL_TO_INSERT_RECORD_4843 https://fairsharing.org/FAIRsharing.Mkl9RR) , along with their
+respective "short name" and other informat (URL_TO_INSERT_TERM_4844 https://fairsharing.org/search?recordType=model_and_format) ion. 
 
-For example, the following command downloads the ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  metadata of EFO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ca63ce)  and Adverse Event Reporting Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.rycy2x)  (AERO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.nwgynk)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.rycy2x)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc) ) 
+For example, the following command downloads the ontology (URL_TO_INSERT_TERM_4845 https://fairsharing.org/search?recordType=terminology_artefact)  metadata of EFO (URL_TO_INSERT_RECORD_4850 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_4854 https://fairsharing.org/FAIRsharing.ca63ce)  and Adverse Event Reporting Ontology (URL_TO_INSERT_TERM_4846 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4851 https://fairsharing.org/FAIRsharing.rycy2x)  (AERO (URL_TO_INSERT_RECORD_4847 https://fairsharing.org/FAIRsharing.nwgynk)  (URL_TO_INSERT_RECORD_4848 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_4849 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_4852 https://fairsharing.org/FAIRsharing.rycy2x)  (URL_TO_INSERT_RECORD_4853 https://fairsharing.org/FAIRsharing.cp0ybc) ) 
 and saves it as **ols-config.yaml**:
 
 ```{warning}
@@ -198,7 +198,7 @@ and saves it as **ols-config.yaml**:
 ```shell
 wget -O ols-config.yaml https://www.ebi.ac.uk/ols/api/ols-config\?ids\=aero,efo
 ```
-To avoid losing pre-loaded ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , the metadata of EFO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.ca63ce)  and AERO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.nwgynk)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.rycy2x)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cp0ybc)  can also be appended to the already existing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  **ols-config.yml** using:
+To avoid losing pre-loaded ontologies (URL_TO_INSERT_TERM_4855 https://fairsharing.org/search?recordType=terminology_artefact) , the metadata of EFO (URL_TO_INSERT_RECORD_4860 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_4863 https://fairsharing.org/FAIRsharing.ca63ce)  and AERO (URL_TO_INSERT_RECORD_4856 https://fairsharing.org/FAIRsharing.nwgynk)  (URL_TO_INSERT_RECORD_4857 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_4859 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_4861 https://fairsharing.org/FAIRsharing.rycy2x)  (URL_TO_INSERT_RECORD_4862 https://fairsharing.org/FAIRsharing.cp0ybc)  can also be appended to the already existing (URL_TO_INSERT_RECORD_4858 https://fairsharing.org/FAIRsharing.q7bkqr)  **ols-config.yml** using:
 
 ```shell
 wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.yaml
@@ -208,9 +208,9 @@ wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.
 >:warning: The file needs to be manually edited by removing the header of the new metadata and adding proper indentation.
 ```
 
-For ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  that are in the OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) , the metadata can also be downloaded from the [OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  Foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  GitHub (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=repository) ](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /OBOFoundry/purl.obolibrary.org/tree/master/config).
+For ontologies (URL_TO_INSERT_TERM_4865 https://fairsharing.org/search?recordType=terminology_artefact)  that are in the OBO (URL_TO_INSERT_RECORD_4868 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4870 https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD_4866 https://fairsharing.org/FAIRsharing.847069) , the metadata can also be downloaded from the [OBO (URL_TO_INSERT_RECORD_4869 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4871 https://fairsharing.org/FAIRsharing.cbz72b)  Foundry (URL_TO_INSERT_RECORD_4867 https://fairsharing.org/FAIRsharing.847069)  GitHub (URL_TO_INSERT_RECORD_4872 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_4873 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_4864 https://fairsharing.org/search?recordType=repository) ](https://github.com (URL_TO_INSERT_RECORD_4874 https://fairsharing.org/FAIRsharing.c55d5e) /OBOFoundry/purl.obolibrary.org/tree/master/config).
 
-Additional format (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ting is required for metadata downloaded from the OBO (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.847069) .
+Additional format (URL_TO_INSERT_TERM_4875 https://fairsharing.org/search?recordType=model_and_format) ting is required for metadata downloaded from the OBO (URL_TO_INSERT_RECORD_4877 https://fairsharing.org/FAIRsharing.847069)  (URL_TO_INSERT_RECORD_4878 https://fairsharing.org/FAIRsharing.cbz72b)  foundry (URL_TO_INSERT_RECORD_4876 https://fairsharing.org/FAIRsharing.847069) .
 
 ### 3. Set up OLS in the local environment 
 
@@ -233,28 +233,28 @@ sudo docker build -t ols .
 sudo docker run -d -p 8080:8080 --name=OLS -t ols
 ```
 
-The local OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  service can be accessed at http://localhost:8080/index 
+The local OLS (URL_TO_INSERT_RECORD_4879 https://fairsharing.org/FAIRsharing.Mkl9RR)  service can be accessed at http://localhost:8080/index 
 
 ### 4. Manage ontologies
-OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  allows the addition, update, and removal of ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .
+OLS (URL_TO_INSERT_RECORD_4881 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows the addition, update, and removal of ontologies (URL_TO_INSERT_TERM_4880 https://fairsharing.org/search?recordType=terminology_artefact) .
 
-Such ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  management is achieved through editing the configuration file, **ols-config.yaml**. 
+Such ontology (URL_TO_INSERT_TERM_4882 https://fairsharing.org/search?recordType=terminology_artefact)  management is achieved through editing the configuration file, **ols-config.yaml**. 
 
-The ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  changes can be loaded by rebuilding the image and restarting the service.
+The ontology (URL_TO_INSERT_TERM_4883 https://fairsharing.org/search?recordType=terminology_artefact)  changes can be loaded by rebuilding the image and restarting the service.
 
 #### 4.1 Modify OLS configuration
 
-To add or remove ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) , modify corresponding sections in the configuration file.
+To add or remove ontologies (URL_TO_INSERT_TERM_4884 https://fairsharing.org/search?recordType=terminology_artefact) , modify corresponding sections in the configuration file.
 
-Loaded ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  will be updated to the latest version automatically by rebuilding the Docker image. 
+Loaded ontologies (URL_TO_INSERT_TERM_4885 https://fairsharing.org/search?recordType=terminology_artefact)  will be updated to the latest version automatically by rebuilding the Docker image. 
 
 #### 4.2 Rebuild OLS image and restart OLS 
-Before rebuilding the Docker image, the existing (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.q7bkqr)  container needs to be stopped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  and removed. 
+Before rebuilding the Docker image, the existing (URL_TO_INSERT_RECORD_4886 https://fairsharing.org/FAIRsharing.q7bkqr)  container needs to be stopped (URL_TO_INSERT_RECORD_4887 https://fairsharing.org/FAIRsharing.31385c)  and removed. 
 
-The OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  container can be stopped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  and removed by providing the container name. 
+The OLS (URL_TO_INSERT_RECORD_4888 https://fairsharing.org/FAIRsharing.Mkl9RR)  container can be stopped (URL_TO_INSERT_RECORD_4889 https://fairsharing.org/FAIRsharing.31385c)  and removed by providing the container name. 
 
 According to the parameters presented on the previous Docker creation command block, 
-the name of the OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker container is "OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) ": 
+the name of the OLS (URL_TO_INSERT_RECORD_4890 https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker container is "OLS (URL_TO_INSERT_RECORD_4891 https://fairsharing.org/FAIRsharing.Mkl9RR) ": 
 
 ```{warning}
 By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.
@@ -268,7 +268,7 @@ docker stop OLS
 docker rm OLS
 ```
 
-The Docker container can also be stopped (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.31385c)  and removed using the Docker image ID.
+The Docker container can also be stopped (URL_TO_INSERT_RECORD_4892 https://fairsharing.org/FAIRsharing.31385c)  and removed using the Docker image ID.
 
 The previous Docker image shall also be removed before rebuilding the image.
 
@@ -289,43 +289,43 @@ sudo docker run -d -p 8080:8080 --name=OLS -t ols
 
 ### Troubleshooting
 
-Loading multiple ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  from disk:
+Loading multiple ontologies (URL_TO_INSERT_TERM_4893 https://fairsharing.org/search?recordType=terminology_artefact)  from disk:
     
-If more than one ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  are going to be loaded into OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  from disk, the **Dockerfile** needs modifying before 
+If more than one ontology (URL_TO_INSERT_TERM_4894 https://fairsharing.org/search?recordType=terminology_artefact)  are going to be loaded into OLS (URL_TO_INSERT_RECORD_4895 https://fairsharing.org/FAIRsharing.Mkl9RR)  from disk, the **Dockerfile** needs modifying before 
 building the Docker container again:
 
-* At Line 3 of the configuration file, replace **ENV OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD https://fairsharing.org/3502)  /opt/ols** with **ENV OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD https://fairsharing.org/3502)  /opt/ols/**
+* At Line 3 of the configuration file, replace **ENV OLS (URL_TO_INSERT_RECORD_4898 https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD_4900 https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD_4896 https://fairsharing.org/3502)  /opt/ols** with **ENV OLS (URL_TO_INSERT_RECORD_4899 https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD_4901 https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD_4897 https://fairsharing.org/3502)  /opt/ols/**
 
 * At Line 3 of the configuration file, replace
 
     ```bash
-    && java -Dols.obofoundry.ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}/ols-config.yaml -jar ${OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD https://fairsharing.org/3502) }/ols-config-importer.jar
+    && java -Dols.obofoundry.ontology (URL_TO_INSERT_TERM_4902 https://fairsharing.org/search?recordType=terminology_artefact) .config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}/ols-config.yaml -jar ${OLS (URL_TO_INSERT_RECORD_4904 https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD_4905 https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD_4903 https://fairsharing.org/3502) }/ols-config-importer.jar
     ```
     
     with:
 
     ```bash
-    && java -Dols.obofoundry.ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact) .config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}ols-config.yaml -jar ${OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD https://fairsharing.org/3502) }ols-config-importer.jar
+    && java -Dols.obofoundry.ontology (URL_TO_INSERT_TERM_4906 https://fairsharing.org/search?recordType=terminology_artefact) .config=foo.yaml -Dols.ontology.config=file://${OLS_HOME}ols-config.yaml -jar ${OLS (URL_TO_INSERT_RECORD_4908 https://fairsharing.org/FAIRsharing.Mkl9RR) _HOM (URL_TO_INSERT_RECORD_4909 https://fairsharing.org/FAIRsharing.efv7gw) E (URL_TO_INSERT_RECORD_4907 https://fairsharing.org/3502) }ols-config-importer.jar
     ```
     
 ## Conclusion
-The local OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  provides API endpoints for retrieving, submitting, updating, and querying ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  data, as well as a 
-user interface for search (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.52b22c) ing and browsing ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  and ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  terms.
+The local OLS (URL_TO_INSERT_RECORD_4911 https://fairsharing.org/FAIRsharing.Mkl9RR)  provides API endpoints for retrieving, submitting, updating, and querying ontology (URL_TO_INSERT_TERM_4910 https://fairsharing.org/search?recordType=terminology_artefact)  data, as well as a 
+user interface for search (URL_TO_INSERT_RECORD_4914 https://fairsharing.org/FAIRsharing.52b22c) ing and browsing ontologies (URL_TO_INSERT_TERM_4913 https://fairsharing.org/search?recordType=terminology_artefact)  and ontology (URL_TO_INSERT_TERM_4912 https://fairsharing.org/search?recordType=terminology_artefact)  terms.
 
-For example, all ontologies (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  loaded can be queried through endpoint **http://localhost:8080/api/ontologies**.
+For example, all ontologies (URL_TO_INSERT_TERM_4915 https://fairsharing.org/search?recordType=terminology_artefact)  loaded can be queried through endpoint **http://localhost:8080/api/ontologies**.
 
-A detailed description of OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  functions can be found in the built-in documentation page.
+A detailed description of OLS (URL_TO_INSERT_RECORD_4916 https://fairsharing.org/FAIRsharing.Mkl9RR)  functions can be found in the built-in documentation page.
 
-To customize the local OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  user interface, for example, adding corporate logos, please check the OLS (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  source code
-[here](https://github.com (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS). 
+To customize the local OLS (URL_TO_INSERT_RECORD_4917 https://fairsharing.org/FAIRsharing.Mkl9RR)  user interface, for example, adding corporate logos, please check the OLS (URL_TO_INSERT_RECORD_4918 https://fairsharing.org/FAIRsharing.Mkl9RR)  source code
+[here](https://github.com (URL_TO_INSERT_RECORD_4919 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS). 
 
 ---
 
 <!--
 ## Reference
-* [Documentation < Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  < EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI. Accessed 20 April 2020.](https://www.ebi.ac.uk/ols/docs/installation-guide)
-* [Jupp S. et al. (2015) A new Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR)  at EMB (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI. In: Malone, J. et al. (eds.) Proceedings of SWAT4LS International Conference 2015](https://conferences.ncl.ac.uk/media/sites/conferencewebsites/ukon2016/UKON_2016_paper_9.pdf)
-* [Côté, Richard G., et al. "The Ontology (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD https://fairsharing.org/FAIRsharing.Mkl9RR) , a lightweight cross-platform tool for controlled vocabulary queries." BMC bioinformat (URL_TO_INSERT_TERM https://fairsharing.org/search?recordType=model_and_format) ics 7.1 (2006): 97.](https://link.springer.com/article/10.1186/1471-2105-7-97)
+* [Documentation < Ontology (URL_TO_INSERT_TERM_4920 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4921 https://fairsharing.org/FAIRsharing.Mkl9RR)  < EMB (URL_TO_INSERT_RECORD_4922 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI. Accessed 20 April 2020.](https://www.ebi.ac.uk/ols/docs/installation-guide)
+* [Jupp S. et al. (2015) A new Ontology (URL_TO_INSERT_TERM_4923 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4924 https://fairsharing.org/FAIRsharing.Mkl9RR)  at EMB (URL_TO_INSERT_RECORD_4925 https://fairsharing.org/FAIRsharing.a1rp4c) L-EBI. In: Malone, J. et al. (eds.) Proceedings of SWAT4LS International Conference 2015](https://conferences.ncl.ac.uk/media/sites/conferencewebsites/ukon2016/UKON_2016_paper_9.pdf)
+* [Côté, Richard G., et al. "The Ontology (URL_TO_INSERT_TERM_4927 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4928 https://fairsharing.org/FAIRsharing.Mkl9RR) , a lightweight cross-platform tool for controlled vocabulary queries." BMC bioinformat (URL_TO_INSERT_TERM_4926 https://fairsharing.org/search?recordType=model_and_format) ics 7.1 (2006): 97.](https://link.springer.com/article/10.1186/1471-2105-7-97)
 -->
 
 
