@@ -1,16 +1,16 @@
 # Registering Datasets in Wikidata
 
  ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM_2266 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB060
-:identifier (URL_TO_INSERT_TERM_2267 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_2268 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
+:identifier (URL_TO_INSERT_TERM_1953 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB060
+:identifier (URL_TO_INSERT_TERM_1954 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_1955 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: bioinformat (URL_TO_INSERT_TERM_2269 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
+:intended_audience: bioinformat (URL_TO_INSERT_TERM_1956 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
 :maturity_level: 1
 :maturity_indicator: 5, 8
 :has_executable_code: nope
-:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD_2270 https://fairsharing.org/FAIRsharing.6s749p)  
+:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD_1957 https://fairsharing.org/FAIRsharing.6s749p)  
 ```` 
 
 [comment]: <> ("UCnn.x Registering a dataset in Wikidata.")
@@ -74,7 +74,7 @@ If you have a new dataset and would like to deposit it because it is not listed 
 please check out the [Depositing in Zenodo generic repository](https://w3id.org/faircookbook/FCB009) recipe.
 
 <!--
-TO (URL_TO_INSERT_RECORD_2271 https://fairsharing.org/FAIRsharing.w69t6r) DO: add below statement when that recipe is included too:
+TODO: add below statement when that recipe is included too:
 
 For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds. 
 -->

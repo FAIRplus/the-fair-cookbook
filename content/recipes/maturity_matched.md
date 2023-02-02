@@ -3,8 +3,8 @@
 
 <!--
 ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM_9231 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB081
-:identifier (URL_TO_INSERT_TERM_9232 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_9233 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB081'
+:identifier (URL_TO_INSERT_TERM_8100 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB081
+:identifier (URL_TO_INSERT_TERM_8101 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_8102 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB081'
 :difficulty_level: 3
 :recipe_type: guidance
 :reading_time_minutes: 30
@@ -12,52 +12,52 @@
 :maturity_level: 0
 :maturity_indicator: 0
 :has_executable_code: nope
-:recipe_name: Changing culture with the Dataset Maturity Model (URL_TO_INSERT_TERM_9234 https://fairsharing.org/search?recordType=model_and_format) 
+:recipe_name: Changing culture with the Dataset Maturity Model (URL_TO_INSERT_TERM_8103 https://fairsharing.org/search?recordType=model_and_format) 
 ```` 
 -->
 
 ## Abstract
 
-The present content introduces the FAIR (URL_TO_INSERT_RECORD_9236 https://fairsharing.org/FAIRsharing.WWI10U) plus "Dataset Maturity Model (URL_TO_INSERT_TERM_9235 https://fairsharing.org/search?recordType=model_and_format) ", shows how to use it in the context of a 
-FAIR (URL_TO_INSERT_RECORD_9237 https://fairsharing.org/FAIRsharing.WWI10U) ification process to decide how far to go on a FAIR (URL_TO_INSERT_RECORD_9238 https://fairsharing.org/FAIRsharing.WWI10U)  journey.
-We also show how each FAIR (URL_TO_INSERT_RECORD_9240 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipes has been anchored to the model (URL_TO_INSERT_TERM_9239 https://fairsharing.org/search?recordType=model_and_format) .
-Recipes can therefore be assembled to build a coherent path which should guarantee that datasets handle (URL_TO_INSERT_RECORD_9241 https://fairsharing.org/FAIRsharing.0b7e54) d according 
-to the recommendations can meet data management expectations in terms of FAIR (URL_TO_INSERT_RECORD_9242 https://fairsharing.org/FAIRsharing.WWI10U) ness.
-Therefore, the FAIR (URL_TO_INSERT_RECORD_9243 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM provides a handy tool for data managers to advise on changing the culture of data management 
-but also manage expectations (and costs) when devising a FAIR (URL_TO_INSERT_RECORD_9244 https://fairsharing.org/FAIRsharing.WWI10U) ification program for specific domains and digital objects
+The present content introduces the FAIR (URL_TO_INSERT_RECORD_8105 https://fairsharing.org/FAIRsharing.WWI10U) plus "Dataset Maturity Model (URL_TO_INSERT_TERM_8104 https://fairsharing.org/search?recordType=model_and_format) ", shows how to use it in the context of a 
+FAIR (URL_TO_INSERT_RECORD_8106 https://fairsharing.org/FAIRsharing.WWI10U) ification process to decide how far to go on a FAIR (URL_TO_INSERT_RECORD_8107 https://fairsharing.org/FAIRsharing.WWI10U)  journey.
+We also show how each FAIR (URL_TO_INSERT_RECORD_8109 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipes has been anchored to the model (URL_TO_INSERT_TERM_8108 https://fairsharing.org/search?recordType=model_and_format) .
+Recipes can therefore be assembled to build a coherent path which should guarantee that datasets handle (URL_TO_INSERT_RECORD_8110 https://fairsharing.org/FAIRsharing.0b7e54) d according 
+to the recommendations can meet data management expectations in terms of FAIR (URL_TO_INSERT_RECORD_8111 https://fairsharing.org/FAIRsharing.WWI10U) ness.
+Therefore, the FAIR (URL_TO_INSERT_RECORD_8112 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM provides a handy tool for data managers to advise on changing the culture of data management 
+but also manage expectations (and costs) when devising a FAIR (URL_TO_INSERT_RECORD_8113 https://fairsharing.org/FAIRsharing.WWI10U) ification program for specific domains and digital objects
 living in that space.
 
 ## Background
 
-Maturity model (URL_TO_INSERT_TERM_9245 https://fairsharing.org/search?recordType=model_and_format) s are not new. There are in fact training programs specifically designed for this such as the
-**Capability Maturity Model (URL_TO_INSERT_TERM_9246 https://fairsharing.org/search?recordType=model_and_format)  Integration (CMMI)** {footcite}`cmmi`.
-These model (URL_TO_INSERT_TERM_9247 https://fairsharing.org/search?recordType=model_and_format) s originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
+Maturity model (URL_TO_INSERT_TERM_8114 https://fairsharing.org/search?recordType=model_and_format) s are not new. There are in fact training programs specifically designed for this such as the
+**Capability Maturity Model (URL_TO_INSERT_TERM_8115 https://fairsharing.org/search?recordType=model_and_format)  Integration (CMMI)** {footcite}`cmmi`.
+These model (URL_TO_INSERT_TERM_8116 https://fairsharing.org/search?recordType=model_and_format) s originate from engineering and manufacturing fields, in particular the military and aerospace industries, 
 as means to rate the reliability and degree of development of a particular technology, skill or process,
 in other words, a capability. 
 Notions such as **Technical Readiness Levels**  or TRLs define a scale of 9 levels to rate
 a process from basic idea to production grade technology. 
 
-With the digitization of society (URL_TO_INSERT_TERM_9248 https://fairsharing.org/search?recordType=society)  and the pervasiveness of digital technology, the life sciences, as other fields, are 
+With the digitization of society (URL_TO_INSERT_TERM_8117 https://fairsharing.org/search?recordType=society)  and the pervasiveness of digital technology, the life sciences, as other fields, are 
 wrestling with the challenges of data management as defined in  the *Fourth paradigm: Data-intensive Scientific Discovery*
 {footcite}`hey2009`. 
 Organizations need to decide how to allocate resources to increase the impact of digital artefacts as they are created. 
-Large amounts of literature exist detailing the key ideas for handling data. A resource such as the *DAMA (URL_TO_INSERT_RECORD_9249 https://fairsharing.org/FAIRsharing.pdwqcr)  book* covers in 
-great depths the fundamental operations and challenges associated with data management activities {footcite}`DAMA (URL_TO_INSERT_RECORD_9250 https://fairsharing.org/FAIRsharing.pdwqcr) -DMBOOK`.
+Large amounts of literature exist detailing the key ideas for handling data. A resource such as the *DAMA book* covers in 
+great depths the fundamental operations and challenges associated with data management activities {footcite}`DAMA-DMBOOK`.
 
-More recently, The FAIR (URL_TO_INSERT_RECORD_9252 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_9251 https://fairsharing.org/FAIRsharing.WWI10U)  articulated key requirements and properties data should have {footcite}`pmid26978244`.
+More recently, The FAIR (URL_TO_INSERT_RECORD_8119 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_8118 https://fairsharing.org/FAIRsharing.WWI10U)  articulated key requirements and properties data should have {footcite}`pmid26978244`.
 Following this important work, a number of initiatives have worked at producing domain specific maturity indicators. 
-Among these initiatives, the Research (URL_TO_INSERT_RECORD_9253 https://fairsharing.org/FAIRsharing.52b22c)  Data Alliance Maturity Indicators seem to have gain notoriety
-{footcite}`RDA (URL_TO_INSERT_RECORD_9254 https://fairsharing.org/FAIRsharing.2g5kcb) indicators`.
+Among these initiatives, the Research (URL_TO_INSERT_RECORD_8120 https://fairsharing.org/FAIRsharing.52b22c)  Data Alliance Maturity Indicators seem to have gain notoriety
+{footcite}`RDAindicators`.
 
-Building on these efforts, the FAIR (URL_TO_INSERT_RECORD_9256 https://fairsharing.org/FAIRsharing.WWI10U) plus project (URL_TO_INSERT_TERM_9255 https://fairsharing.org/search?recordType=project)  has developed (URL_TO_INSERT_RECORD_9257 https://fairsharing.org/FAIRsharing.31385c)  a more targeted approach by focusing on the notion of 
+Building on these efforts, the FAIR (URL_TO_INSERT_RECORD_8122 https://fairsharing.org/FAIRsharing.WWI10U) plus project (URL_TO_INSERT_TERM_8121 https://fairsharing.org/search?recordType=project)  has developed (URL_TO_INSERT_RECORD_8123 https://fairsharing.org/FAIRsharing.31385c)  a more targeted approach by focusing on the notion of 
 dataset. 
 
 ## Presentation of the FAIRplus Dataset Maturity Model (DSM)
 
-The FAIR (URL_TO_INSERT_RECORD_9259 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_9258 https://fairsharing.org/search?recordType=model_and_format)  proposes a framework to incorporate key concepts defined by the Capability and
-Maturity Model (URL_TO_INSERT_TERM_9260 https://fairsharing.org/search?recordType=model_and_format) s and apply them to define maturity levels which can used to describe a dataset.
+The FAIR (URL_TO_INSERT_RECORD_8125 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_8124 https://fairsharing.org/search?recordType=model_and_format)  proposes a framework to incorporate key concepts defined by the Capability and
+Maturity Model (URL_TO_INSERT_TERM_8126 https://fairsharing.org/search?recordType=model_and_format) s and apply them to define maturity levels which can used to describe a dataset.
 
-For a comprehensive overview of the FAIR (URL_TO_INSERT_RECORD_9262 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_9261 https://fairsharing.org/search?recordType=model_and_format) , refer to the [dedicated site](https://fairplus.github.io/Data-Maturity/),
+For a comprehensive overview of the FAIR (URL_TO_INSERT_RECORD_8128 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_8127 https://fairsharing.org/search?recordType=model_and_format) , refer to the [dedicated site](https://fairplus.github.io/Data-Maturity/),
 a screenshot of which is presented below.
 
 ````{dropdown} **FAIR DSM**
@@ -66,28 +66,28 @@ a screenshot of which is presented below.
 ```{figure} ../../images/maturity_img_1.png
 ---
 width: 700px
-name: FAIR (URL_TO_INSERT_RECORD_9264 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_9263 https://fairsharing.org/search?recordType=model_and_format) 
-alt:  FAIR (URL_TO_INSERT_RECORD_9266 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_9265 https://fairsharing.org/search?recordType=model_and_format) 
+name: FAIR (URL_TO_INSERT_RECORD_8130 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_8129 https://fairsharing.org/search?recordType=model_and_format) 
+alt:  FAIR (URL_TO_INSERT_RECORD_8132 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_8131 https://fairsharing.org/search?recordType=model_and_format) 
 ---
- FAIR (URL_TO_INSERT_RECORD_9268 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_9267 https://fairsharing.org/search?recordType=model_and_format) 
+ FAIR (URL_TO_INSERT_RECORD_8134 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model (URL_TO_INSERT_TERM_8133 https://fairsharing.org/search?recordType=model_and_format) 
 ```
 ````
 
 
 ## Integrating the FAIRplus Dataset Maturity Model in the FAIRplus Cookbook
 
-Each recipe in the FAIR (URL_TO_INSERT_RECORD_9269 https://fairsharing.org/FAIRsharing.WWI10U) plus Cookbook now incorporates one or more FAIR (URL_TO_INSERT_RECORD_9270 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM indicators.
+Each recipe in the FAIR (URL_TO_INSERT_RECORD_8135 https://fairsharing.org/FAIRsharing.WWI10U) plus Cookbook now incorporates one or more FAIR (URL_TO_INSERT_RECORD_8136 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM indicators.
 
 These can be found in the **Recipe Card**. 
 
 They are there to provide our readership with a pointer to the level of data set maturity they can expect to meet if
 they apply and implement the recipe.
 
-The FAIR (URL_TO_INSERT_RECORD_9271 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
+The FAIR (URL_TO_INSERT_RECORD_8137 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
 of interest. 
 
-Finally, the FAIR (URL_TO_INSERT_RECORD_9274 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook produced specific content available as jupyter notebooks which use the fam (URL_TO_INSERT_RECORD_9273 https://fairsharing.org/FAIRsharing.d0886a) iliar Investigation Study Assay model (URL_TO_INSERT_TERM_9272 https://fairsharing.org/search?recordType=model_and_format)  {footcite}`pmid20679334` 
-and Research (URL_TO_INSERT_RECORD_9275 https://fairsharing.org/FAIRsharing.52b22c)  Objects {footcite}`sefton_peter_2022_5841615` to showcase how users can move through maturity levels and decide for themselves how far they need to go along the scale.
+Finally, the FAIR (URL_TO_INSERT_RECORD_8140 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook produced specific content available as jupyter notebooks which use the fam (URL_TO_INSERT_RECORD_8139 https://fairsharing.org/FAIRsharing.d0886a) iliar Investigation Study Assay model (URL_TO_INSERT_TERM_8138 https://fairsharing.org/search?recordType=model_and_format)  {footcite}`pmid20679334` 
+and Research (URL_TO_INSERT_RECORD_8141 https://fairsharing.org/FAIRsharing.52b22c)  Objects {footcite}`sefton_peter_2022_5841615` to showcase how users can move through maturity levels and decide for themselves how far they need to go along the scale.
 
 
 ````{dropdown} **FAIR DSM**
@@ -96,10 +96,10 @@ and Research (URL_TO_INSERT_RECORD_9275 https://fairsharing.org/FAIRsharing.52b2
 ```{figure} ../../images/maturity_img.png
 ---
 width: 450px
-name: FAIR (URL_TO_INSERT_RECORD_9276 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_9277 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
-alt:  FAIR (URL_TO_INSERT_RECORD_9278 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_9279 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
+name: FAIR (URL_TO_INSERT_RECORD_8142 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_8143 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
+alt:  FAIR (URL_TO_INSERT_RECORD_8144 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_8145 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
 ---
- FAIR (URL_TO_INSERT_RECORD_9280 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_9281 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
+ FAIR (URL_TO_INSERT_RECORD_8146 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD_8147 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
 ```
 ````
 
@@ -109,25 +109,25 @@ alt:  FAIR (URL_TO_INSERT_RECORD_9278 https://fairsharing.org/FAIRsharing.WWI10U
 ## Assessing FAIRplus intervention
 
 
-The FAIR (URL_TO_INSERT_RECORD_9282 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM has subsequently been used to assess the effectiveness of interventions on datasets presented 
-to FAIR (URL_TO_INSERT_RECORD_9283 https://fairsharing.org/FAIRsharing.WWI10U) plus experts.
+The FAIR (URL_TO_INSERT_RECORD_8148 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM has subsequently been used to assess the effectiveness of interventions on datasets presented 
+to FAIR (URL_TO_INSERT_RECORD_8149 https://fairsharing.org/FAIRsharing.WWI10U) plus experts.
 
-Each of the 20 project (URL_TO_INSERT_TERM_9285 https://fairsharing.org/search?recordType=project) s, which have interacted with FAIR (URL_TO_INSERT_RECORD_9286 https://fairsharing.org/FAIRsharing.WWI10U) plus, have been subjected to a standard (URL_TO_INSERT_TERM_9284 https://fairsharing.org/search?fairsharingRegistry=Standard)  protocol looking at
-FAIR (URL_TO_INSERT_RECORD_9287 https://fairsharing.org/FAIRsharing.WWI10U)  maturity before and after intervention, when performing retrospective processing of the data. 
+Each of the 20 project (URL_TO_INSERT_TERM_8151 https://fairsharing.org/search?recordType=project) s, which have interacted with FAIR (URL_TO_INSERT_RECORD_8152 https://fairsharing.org/FAIRsharing.WWI10U) plus, have been subjected to a standard (URL_TO_INSERT_TERM_8150 https://fairsharing.org/search?fairsharingRegistry=Standard)  protocol looking at
+FAIR (URL_TO_INSERT_RECORD_8153 https://fairsharing.org/FAIRsharing.WWI10U)  maturity before and after intervention, when performing retrospective processing of the data. 
 In few instances, the effect of prospective interventions could also be measured. 
 
-FAIR (URL_TO_INSERT_RECORD_9288 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM developed (URL_TO_INSERT_RECORD_9289 https://fairsharing.org/FAIRsharing.31385c)  a dedicated manual assessment template.
+FAIR (URL_TO_INSERT_RECORD_8154 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM developed (URL_TO_INSERT_RECORD_8155 https://fairsharing.org/FAIRsharing.31385c)  a dedicated manual assessment template.
 
 ### Training the assessor
 
-As with any tool, fam (URL_TO_INSERT_RECORD_9290 https://fairsharing.org/FAIRsharing.d0886a) iliarization and training are necessary to ensure that the personnel carrying out the evaluations 
+As with any tool, fam (URL_TO_INSERT_RECORD_8156 https://fairsharing.org/FAIRsharing.d0886a) iliarization and training are necessary to ensure that the personnel carrying out the evaluations 
 can use the framework in a consistent fashion. 
 
 
 ### Performing the assessment
 
-The FAIR (URL_TO_INSERT_RECORD_9291 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM group therefore recruited FAIR (URL_TO_INSERT_RECORD_9292 https://fairsharing.org/FAIRsharing.WWI10U)  experts and over the
-course of a dedicated workshop presented the DSM model (URL_TO_INSERT_TERM_9293 https://fairsharing.org/search?recordType=model_and_format) , proposed exercises and then asked participants to rate several
+The FAIR (URL_TO_INSERT_RECORD_8157 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM group therefore recruited FAIR (URL_TO_INSERT_RECORD_8158 https://fairsharing.org/FAIRsharing.WWI10U)  experts and over the
+course of a dedicated workshop presented the DSM model (URL_TO_INSERT_TERM_8159 https://fairsharing.org/search?recordType=model_and_format) , proposed exercises and then asked participants to rate several
 datasets independently.
 
 The next step consisted in evaluating the inter-rater agreement when using the framework.
@@ -136,10 +136,10 @@ A debriefing of the rating was carried out and was the ideal opportunity to clar
 indicator definitions and therefore reconcile rating discrepancies between the participant.
 Difference in interpretations
 were identified leading in a refinement of the definitions and improvement of the documentation of the
-FAIR (URL_TO_INSERT_RECORD_9295 https://fairsharing.org/FAIRsharing.WWI10U) plus dataset maturity model (URL_TO_INSERT_TERM_9294 https://fairsharing.org/search?recordType=model_and_format) .
+FAIR (URL_TO_INSERT_RECORD_8161 https://fairsharing.org/FAIRsharing.WWI10U) plus dataset maturity model (URL_TO_INSERT_TERM_8160 https://fairsharing.org/search?recordType=model_and_format) .
 It also resulted in streamlining both the training program and the evaluation program.
 
-The following figure shows the effect of a FAIR (URL_TO_INSERT_RECORD_9297 https://fairsharing.org/FAIRsharing.WWI10U) ification process on an IMI eTO (URL_TO_INSERT_RECORD_9296 https://fairsharing.org/FAIRsharing.w69t6r) X dataset.
+The following figure shows the effect of a FAIR (URL_TO_INSERT_RECORD_8162 https://fairsharing.org/FAIRsharing.WWI10U) ification process on an IMI eTOX dataset.
 
 ````{dropdown} **FAIR DSM image 1**
 :open:
@@ -147,10 +147,10 @@ The following figure shows the effect of a FAIR (URL_TO_INSERT_RECORD_9297 https
 ```{figure} ../../images/DSMeval-img1.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD_9298 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
-alt:   FAIR (URL_TO_INSERT_RECORD_9299 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
+name: FAIR (URL_TO_INSERT_RECORD_8163 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
+alt:   FAIR (URL_TO_INSERT_RECORD_8164 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
 ---
-FAIR (URL_TO_INSERT_RECORD_9300 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
+FAIR (URL_TO_INSERT_RECORD_8165 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
 ```
 ````
 
@@ -162,10 +162,10 @@ FAIR (URL_TO_INSERT_RECORD_9300 https://fairsharing.org/FAIRsharing.WWI10U)  DSM
 ```{figure} ../../images/DSMeval-img2.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD_9302 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_9301 https://fairsharing.org/search?recordType=model_and_format) 
-alt:   FAIR (URL_TO_INSERT_RECORD_9304 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_9303 https://fairsharing.org/search?recordType=model_and_format) 
+name: FAIR (URL_TO_INSERT_RECORD_8167 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_8166 https://fairsharing.org/search?recordType=model_and_format) 
+alt:   FAIR (URL_TO_INSERT_RECORD_8169 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_8168 https://fairsharing.org/search?recordType=model_and_format) 
 ---
-FAIR (URL_TO_INSERT_RECORD_9306 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_9305 https://fairsharing.org/search?recordType=model_and_format) 
+FAIR (URL_TO_INSERT_RECORD_8171 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format (URL_TO_INSERT_TERM_8170 https://fairsharing.org/search?recordType=model_and_format) 
 ```
 ````
 
@@ -179,10 +179,10 @@ FAIR (URL_TO_INSERT_RECORD_9306 https://fairsharing.org/FAIRsharing.WWI10U)  DSM
 ```{figure} ../../images/DSMeval-img3.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD_9307 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
-alt:  FAIR (URL_TO_INSERT_RECORD_9308 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
+name: FAIR (URL_TO_INSERT_RECORD_8172 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
+alt:  FAIR (URL_TO_INSERT_RECORD_8173 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
 ---
-FAIR (URL_TO_INSERT_RECORD_9309 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
+FAIR (URL_TO_INSERT_RECORD_8174 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
 ```
 ````
 
@@ -190,12 +190,12 @@ FAIR (URL_TO_INSERT_RECORD_9309 https://fairsharing.org/FAIRsharing.WWI10U)  DSM
 
 ## Conclusions: It is about changing the data management culture!
 
-The FAIR (URL_TO_INSERT_RECORD_9311 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_9310 https://fairsharing.org/search?recordType=model_and_format)  (DSM) developed (URL_TO_INSERT_RECORD_9312 https://fairsharing.org/FAIRsharing.31385c)  by the consortium is proving a valuable tool for Data Managers, 
-Decision Makers and Data Scientist to identify the weak points in their FAIR (URL_TO_INSERT_RECORD_9313 https://fairsharing.org/FAIRsharing.WWI10U) ification strategies or more simply to define
-the level of maturity they are capable of delivery within the constraints of the project (URL_TO_INSERT_TERM_9314 https://fairsharing.org/search?recordType=project)  or research (URL_TO_INSERT_RECORD_9315 https://fairsharing.org/FAIRsharing.52b22c)  program.
-The FAIR (URL_TO_INSERT_RECORD_9317 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM, following a minimal fam (URL_TO_INSERT_RECORD_9316 https://fairsharing.org/FAIRsharing.d0886a) iliarization and training period, provides the means to effective quantity and 
-articulate on FAIR (URL_TO_INSERT_RECORD_9318 https://fairsharing.org/FAIRsharing.WWI10U) ification strategies and choke points. Therefore, by enabling a clearer way for communicating and talking
-about FAIR (URL_TO_INSERT_RECORD_9319 https://fairsharing.org/FAIRsharing.WWI10U) ification process, the FAIR (URL_TO_INSERT_RECORD_9320 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM constitutes an excellent tool to plan and enable changes in the way datasets
+The FAIR (URL_TO_INSERT_RECORD_8176 https://fairsharing.org/FAIRsharing.WWI10U) plus Dataset Maturity Model (URL_TO_INSERT_TERM_8175 https://fairsharing.org/search?recordType=model_and_format)  (DSM) developed (URL_TO_INSERT_RECORD_8177 https://fairsharing.org/FAIRsharing.31385c)  by the consortium is proving a valuable tool for Data Managers, 
+Decision Makers and Data Scientist to identify the weak points in their FAIR (URL_TO_INSERT_RECORD_8178 https://fairsharing.org/FAIRsharing.WWI10U) ification strategies or more simply to define
+the level of maturity they are capable of delivery within the constraints of the project (URL_TO_INSERT_TERM_8179 https://fairsharing.org/search?recordType=project)  or research (URL_TO_INSERT_RECORD_8180 https://fairsharing.org/FAIRsharing.52b22c)  program.
+The FAIR (URL_TO_INSERT_RECORD_8182 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM, following a minimal fam (URL_TO_INSERT_RECORD_8181 https://fairsharing.org/FAIRsharing.d0886a) iliarization and training period, provides the means to effective quantity and 
+articulate on FAIR (URL_TO_INSERT_RECORD_8183 https://fairsharing.org/FAIRsharing.WWI10U) ification strategies and choke points. Therefore, by enabling a clearer way for communicating and talking
+about FAIR (URL_TO_INSERT_RECORD_8184 https://fairsharing.org/FAIRsharing.WWI10U) ification process, the FAIR (URL_TO_INSERT_RECORD_8185 https://fairsharing.org/FAIRsharing.WWI10U) plus DSM constitutes an excellent tool to plan and enable changes in the way datasets
 can be managed
 
 
@@ -204,11 +204,11 @@ can be managed
  
 Moving through maturity levels with ISA by running the following notebooks in the indicated order:
 
-- [improving dataset maturity: the MIAPP (URL_TO_INSERT_RECORD_9324 https://fairsharing.org/FAIRsharing.tghhc4) E (URL_TO_INSERT_RECORD_9322 https://fairsharing.org/FAIRsharing.b403jy)  (URL_TO_INSERT_RECORD_9323 https://fairsharing.org/FAIRsharing.nd9ce9)  use case](https://w3id.org (URL_TO_INSERT_RECORD_9321 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB062) 
-- [create-a-simple-isa-descriptor](https://w3id.org (URL_TO_INSERT_RECORD_9325 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB063)
-- [isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org (URL_TO_INSERT_RECORD_9326 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB064)
-- [isa-json-conversion-to-rdf-linked-data](https://w3id.org (URL_TO_INSERT_RECORD_9327 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB064)
-- [isa-as-ro](https://w3id.org (URL_TO_INSERT_RECORD_9328 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB066)
+- [improving dataset maturity: the MIAPPE (URL_TO_INSERT_RECORD_8187 https://fairsharing.org/FAIRsharing.nd9ce9)  use case](https://w3id.org (URL_TO_INSERT_RECORD_8186 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB062) 
+- [create-a-simple-isa-descriptor](https://w3id.org (URL_TO_INSERT_RECORD_8188 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB063)
+- [isa-api-programmatic-rebuild-of-BII-S-3](https://w3id.org (URL_TO_INSERT_RECORD_8189 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB064)
+- [isa-json-conversion-to-rdf-linked-data](https://w3id.org (URL_TO_INSERT_RECORD_8190 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB064)
+- [isa-as-ro](https://w3id.org (URL_TO_INSERT_RECORD_8191 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB066)
 
 
 ````{panels}
@@ -218,7 +218,7 @@ Moving through maturity levels with ISA by running the following notebooks in th
 ```{image} ../../images/logos/pistoia_logo.png
 :height: 40px
 :align: center
-:name: FAIR (URL_TO_INSERT_RECORD_9329 https://fairsharing.org/FAIRsharing.WWI10U) toolkit_logo
+:name: FAIR (URL_TO_INSERT_RECORD_8192 https://fairsharing.org/FAIRsharing.WWI10U) toolkit_logo
 ```
 ^^^
 [The Pistoia Alliance FAIRtoolkit Data Capability Maturity Model](https://fairtoolkit.pistoiaalliance.org/methods/data-capability-maturity-model/)

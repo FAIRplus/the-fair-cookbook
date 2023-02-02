@@ -22,13 +22,13 @@ The main purpose of this recipe is:
 
 We will cover the following points:
 
-1. metadata model (URL_TO_INSERT_TERM_2927 https://fairsharing.org/search?recordType=model_and_format)  selection
+1. metadata model (URL_TO_INSERT_TERM_2545 https://fairsharing.org/search?recordType=model_and_format)  selection
 2. annotation with controlled vocabularies
 3. ETL
 4. data loading
 5. data indexing
-6. facet oriented search (URL_TO_INSERT_RECORD_2928 https://fairsharing.org/FAIRsharing.52b22c) ing
-7. minting of stable, persistent and resolvable identifier (URL_TO_INSERT_TERM_2929 https://fairsharing.org/search?recordType=identifier_schema) s
+6. facet oriented search (URL_TO_INSERT_RECORD_2546 https://fairsharing.org/FAIRsharing.52b22c) ing
+7. minting of stable, persistent and resolvable identifier (URL_TO_INSERT_TERM_2547 https://fairsharing.org/search?recordType=identifier_schema) s
 
 ```{tabbed} Table of Data Standards
 | Data Formats  | Terminologies | Models  |
@@ -59,11 +59,11 @@ Building and populating a data catalogue
 For **role.Data Scientists**, it is essential to be able to *action.identify* and *action.discover* datasets of potential
 relevance in the context of *action.data integration* and *action.meta-analytical work*.
 
-For **role.Database (URL_TO_INSERT_TERM_2930 https://fairsharing.org/search?fairsharingRegistry=Database)  Managers**, a lightweight solution is needed to support a shallow indexing supported fast ingest 
-without intense curation, but good potential for data discovery. Works should rely on approved data standard (URL_TO_INSERT_TERM_2931 https://fairsharing.org/search?fairsharingRegistry=Standard) s.
+For **role.Database (URL_TO_INSERT_TERM_2548 https://fairsharing.org/search?fairsharingRegistry=Database)  Managers**, a lightweight solution is needed to support a shallow indexing supported fast ingest 
+without intense curation, but good potential for data discovery. Works should rely on approved data standard (URL_TO_INSERT_TERM_2549 https://fairsharing.org/search?fairsharingRegistry=Standard) s.
 
 For **role.lab scientists**, the key is to have a minimal burden when having to *action.deposit* a dataset to an 
-institution (URL_TO_INSERT_TERM_2932 https://fairsharing.org/search?recordType=institution) al arch (URL_TO_INSERT_RECORD_2933 https://fairsharing.org/FAIRsharing.52b22c) ive or simply *action.register* to dataset to the **data catalogue**. 
+institution (URL_TO_INSERT_TERM_2550 https://fairsharing.org/search?recordType=institution) al arch (URL_TO_INSERT_RECORD_2551 https://fairsharing.org/FAIRsharing.52b22c) ive or simply *action.register* to dataset to the **data catalogue**. 
 
 
 ---
@@ -71,35 +71,35 @@ institution (URL_TO_INSERT_TERM_2932 https://fairsharing.org/search?recordType=i
 
 ### What is a Data Catalogue?
 
-A **Data Catalogue** is a resource meant to allow fast identification of **Data set**. In keeping with the fam (URL_TO_INSERT_RECORD_2934 https://fairsharing.org/FAIRsharing.d0886a) iliar notion 
+A **Data Catalogue** is a resource meant to allow fast identification of **Data set**. In keeping with the fam (URL_TO_INSERT_RECORD_2552 https://fairsharing.org/FAIRsharing.d0886a) iliar notion 
 of catalogue, (be it that of an exhibition or that of brand products), the notion of **data catalogue** needs to be
 understood as the compendium of **short descriptive metadata elements** about an actual set of data. The 
-**Data Index or Data Catalogue** ***does not*** store the datasets themselves but provides informat (URL_TO_INSERT_TERM_2935 https://fairsharing.org/search?recordType=model_and_format) ion
+**Data Index or Data Catalogue** ***does not*** store the datasets themselves but provides informat (URL_TO_INSERT_TERM_2553 https://fairsharing.org/search?recordType=model_and_format) ion
 about where the datasets can be obtained from. Therefore, **Data Catalogues** are often used to index the content of
-'**Data Repositories (URL_TO_INSERT_TERM_2936 https://fairsharing.org/search?recordType=repository) ** and ** Data Arch (URL_TO_INSERT_RECORD_2937 https://fairsharing.org/FAIRsharing.52b22c) ives**, which provide hosting solutions for the actual datasets, which are often
+'**Data Repositories (URL_TO_INSERT_TERM_2554 https://fairsharing.org/search?recordType=repository) ** and ** Data Arch (URL_TO_INSERT_RECORD_2555 https://fairsharing.org/FAIRsharing.52b22c) ives**, which provide hosting solutions for the actual datasets, which are often
 organized (but not always)' around specific **data types** or **data production modalities** 
-(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence arch (URL_TO_INSERT_RECORD_2938 https://fairsharing.org/FAIRsharing.52b22c) ives and so on.)
+(e.g. NMR Imaging, Confocal microscopy imaging, Nucleic Acid sequence arch (URL_TO_INSERT_RECORD_2556 https://fairsharing.org/FAIRsharing.52b22c) ives and so on.)
  
 
 ### What are the standards supporting establishing a data catalogue?
 
-**Data Catalogues** have been identified as critical infrastructure and therefore a number of model (URL_TO_INSERT_TERM_2939 https://fairsharing.org/search?recordType=model_and_format)  exist to support their implementation.
-1. DATS (URL_TO_INSERT_RECORD_2940 https://fairsharing.org/FAIRsharing.e20vsd) :
+**Data Catalogues** have been identified as critical infrastructure and therefore a number of model (URL_TO_INSERT_TERM_2557 https://fairsharing.org/search?recordType=model_and_format)  exist to support their implementation.
+1. DATS (URL_TO_INSERT_RECORD_2558 https://fairsharing.org/FAIRsharing.e20vsd) :
 The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the 
-NIH (URL_TO_INSERT_RECORD_2942 https://fairsharing.org/FAIRsharing.41718d) -BD2K project (URL_TO_INSERT_TERM_2941 https://fairsharing.org/search?recordType=project) s and underpins the [datamed (URL_TO_INSERT_RECORD_2943 https://fairsharing.org/FAIRsharing.v5q4zc)  catalogue](https://datamed.org (URL_TO_INSERT_RECORD_2944 https://fairsharing.org/FAIRsharing.v5q4zc) /), the aim of which was to produce a 
-prototype of a [**Pubmed (URL_TO_INSERT_RECORD_2945 https://fairsharing.org/FAIRsharing.a5sv8m)  for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
+NIH-BD2K project (URL_TO_INSERT_TERM_2559 https://fairsharing.org/search?recordType=project) s and underpins the [datamed (URL_TO_INSERT_RECORD_2560 https://fairsharing.org/FAIRsharing.v5q4zc)  catalogue](https://datamed.org (URL_TO_INSERT_RECORD_2561 https://fairsharing.org/FAIRsharing.v5q4zc) /), the aim of which was to produce a 
+prototype of a [**Pubmed (URL_TO_INSERT_RECORD_2562 https://fairsharing.org/FAIRsharing.a5sv8m)  for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
 
-2. DC (URL_TO_INSERT_RECORD_2947 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_2948 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_2946 https://fairsharing.org/FAIRsharing.h4j3qm) :
+2. DC (URL_TO_INSERT_RECORD_2564 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_2565 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_2563 https://fairsharing.org/FAIRsharing.h4j3qm) :
 In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document -->
-(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF (URL_TO_INSERT_RECORD_2949 https://fairsharing.org/FAIRsharing.p77ph9) **.
-3. Schema.org (URL_TO_INSERT_RECORD_2950 https://fairsharing.org/FAIRsharing.hzdzq8) :
-The vocabulary developed (URL_TO_INSERT_RECORD_2952 https://fairsharing.org/FAIRsharing.31385c)  by the consortium of search (URL_TO_INSERT_RECORD_2951 https://fairsharing.org/FAIRsharing.52b22c)  engines has defined a metadata profile for [**Dataset**](https://schema.org (URL_TO_INSERT_RECORD_2953 https://fairsharing.org/FAIRsharing.hzdzq8) /Dataset),
-[**Data Catalogue**](https://schema.org (URL_TO_INSERT_RECORD_2954 https://fairsharing.org/FAIRsharing.hzdzq8) /DataCatalog)
+(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF**.
+3. Schema.org (URL_TO_INSERT_RECORD_2566 https://fairsharing.org/FAIRsharing.hzdzq8) :
+The vocabulary developed (URL_TO_INSERT_RECORD_2568 https://fairsharing.org/FAIRsharing.31385c)  by the consortium of search (URL_TO_INSERT_RECORD_2567 https://fairsharing.org/FAIRsharing.52b22c)  engines has defined a metadata profile for [**Dataset**](https://schema.org (URL_TO_INSERT_RECORD_2569 https://fairsharing.org/FAIRsharing.hzdzq8) /Dataset),
+[**Data Catalogue**](https://schema.org (URL_TO_INSERT_RECORD_2570 https://fairsharing.org/FAIRsharing.hzdzq8) /DataCatalog)
 
 
 ### How are Data Catalogue populated?
 
-A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories (URL_TO_INSERT_TERM_2955 https://fairsharing.org/search?recordType=repository)  or harvesting JSO (URL_TO_INSERT_RECORD_2957 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_2956 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_2958 https://fairsharing.org/FAIRsharing.8f9bbb)  files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
+A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories (URL_TO_INSERT_TERM_2571 https://fairsharing.org/search?recordType=repository)  or harvesting JSON (URL_TO_INSERT_RECORD_2572 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_2573 https://fairsharing.org/FAIRsharing.8f9bbb)  files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
 
 ### What are examples of Data Catalogues?
 
@@ -109,7 +109,7 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 * Open source solutions:
 
-    * [NIH (URL_TO_INSERT_RECORD_2959 https://fairsharing.org/FAIRsharing.41718d)  DataMed (URL_TO_INSERT_RECORD_2960 https://fairsharing.org/FAIRsharing.v5q4zc) ](https://datamed.org (URL_TO_INSERT_RECORD_2961 https://fairsharing.org/FAIRsharing.v5q4zc) /)
+    * [NIH DataMed (URL_TO_INSERT_RECORD_2574 https://fairsharing.org/FAIRsharing.v5q4zc) ](https://datamed.org (URL_TO_INSERT_RECORD_2575 https://fairsharing.org/FAIRsharing.v5q4zc) /)
     * [EMBL-EBI OMICS-DI](https://www.omicsdi.org/)
     * [Bayer AG Colid](https://bayer-group.github.io/COLID-Documentation/)
 
@@ -129,7 +129,7 @@ We encourage the readers to either delve deeper into the specific of data catalo
 <!-- * TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy` --> 
 <!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
-For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR (URL_TO_INSERT_RECORD_2962 https://fairsharing.org/FAIRsharing.WWI10U)  such
+For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR (URL_TO_INSERT_RECORD_2576 https://fairsharing.org/FAIRsharing.WWI10U)  such
 interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`
