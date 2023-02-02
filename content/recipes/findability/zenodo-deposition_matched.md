@@ -1,4 +1,4 @@
-(fcb-find-zenodo (URL_TO_INSERT_RECORD_2249 https://fairsharing.org/FAIRsharing.wy4egf) )=
+(fcb-find-zenodo (URL_TO_INSERT_RECORD_2040 https://fairsharing.org/FAIRsharing.wy4egf) )=
 # Depositing to generic repositories - Zenodo use case
 
 
@@ -19,7 +19,7 @@
 
 The main purpose of this recipe is:
 
-> To show how to take advantage of CERN Zenodo (URL_TO_INSERT_RECORD_2253 https://fairsharing.org/FAIRsharing.wy4egf)  repository (URL_TO_INSERT_TERM_2251 https://fairsharing.org/search?recordType=repository)  to document the existence of datasets, thus increasing its findability. This is of particular relevant for IMI project (URL_TO_INSERT_TERM_2252 https://fairsharing.org/search?recordType=project) s since Zenodo (URL_TO_INSERT_RECORD_2254 https://fairsharing.org/FAIRsharing.wy4egf)  is aimed to support the European Commission (EC) nascent Open Data policy (URL_TO_INSERT_TERM_2250 https://fairsharing.org/search?fairsharingRegistry=Policy)  and is commissioned by the EC.
+> To show how to take advantage of CERN Zenodo (URL_TO_INSERT_RECORD_2044 https://fairsharing.org/FAIRsharing.wy4egf)  repository (URL_TO_INSERT_TERM_2042 https://fairsharing.org/search?recordType=repository)  to document the existence of datasets, thus increasing its findability. This is of particular relevant for IMI project (URL_TO_INSERT_TERM_2043 https://fairsharing.org/search?recordType=project) s since Zenodo (URL_TO_INSERT_RECORD_2045 https://fairsharing.org/FAIRsharing.wy4egf)  is aimed to support the European Commission (EC) nascent Open Data policy (URL_TO_INSERT_TERM_2041 https://fairsharing.org/search?fairsharingRegistry=Policy)  and is commissioned by the EC.
 
 
 ```{tabbed} FAIRification Objectives, Inputs and Outputs
@@ -49,9 +49,9 @@ The main purpose of this recipe is:
 ---
 width: 500px
 name: 
-alt: The process of depositing to CERN Zenodo (URL_TO_INSERT_RECORD_2255 https://fairsharing.org/FAIRsharing.wy4egf) 
+alt: The process of depositing to CERN Zenodo (URL_TO_INSERT_RECORD_2046 https://fairsharing.org/FAIRsharing.wy4egf) 
 ---
-The Zenodo (URL_TO_INSERT_RECORD_2256 https://fairsharing.org/FAIRsharing.wy4egf)  homepage.
+The Zenodo (URL_TO_INSERT_RECORD_2047 https://fairsharing.org/FAIRsharing.wy4egf)  homepage.
 ```
 ````
 ---
@@ -61,30 +61,30 @@ The Zenodo (URL_TO_INSERT_RECORD_2256 https://fairsharing.org/FAIRsharing.wy4egf
 
 ### What is Zenodo?
 
-Zenodo (URL_TO_INSERT_RECORD_2261 https://fairsharing.org/FAIRsharing.wy4egf)  is a repository (URL_TO_INSERT_TERM_2258 https://fairsharing.org/search?recordType=repository)  developed (URL_TO_INSERT_RECORD_2263 https://fairsharing.org/FAIRsharing.31385c)  by [CERN](https://home.cern/) under the [OpenAire](https://www.openaire.eu/) program, the focus of which is on **open data**. It was commissioned by the EC to support their nascent Open Data policy (URL_TO_INSERT_TERM_2257 https://fairsharing.org/search?fairsharingRegistry=Policy)  by providing a catch-all repository (URL_TO_INSERT_TERM_2259 https://fairsharing.org/search?recordType=repository)  for EC funded research (URL_TO_INSERT_RECORD_2262 https://fairsharing.org/FAIRsharing.52b22c) . This of particular relevance for all project (URL_TO_INSERT_TERM_2260 https://fairsharing.org/search?recordType=project) s funded under the `Innovative Medicine Initiative (IMI)`.
+Zenodo (URL_TO_INSERT_RECORD_2052 https://fairsharing.org/FAIRsharing.wy4egf)  is a repository (URL_TO_INSERT_TERM_2049 https://fairsharing.org/search?recordType=repository)  developed (URL_TO_INSERT_RECORD_2054 https://fairsharing.org/FAIRsharing.31385c)  by [CERN](https://home.cern/) under the [OpenAire](https://www.openaire.eu/) program, the focus of which is on **open data**. It was commissioned by the EC to support their nascent Open Data policy (URL_TO_INSERT_TERM_2048 https://fairsharing.org/search?fairsharingRegistry=Policy)  by providing a catch-all repository (URL_TO_INSERT_TERM_2050 https://fairsharing.org/search?recordType=repository)  for EC funded research (URL_TO_INSERT_RECORD_2053 https://fairsharing.org/FAIRsharing.52b22c) . This of particular relevance for all project (URL_TO_INSERT_TERM_2051 https://fairsharing.org/search?recordType=project) s funded under the `Innovative Medicine Initiative (IMI)`.
 
 ### Why use Zenodo?
 
-To cite `Zenodo (URL_TO_INSERT_RECORD_2265 https://fairsharing.org/FAIRsharing.wy4egf) 's documentation`, here are a few reasons why using the repository (URL_TO_INSERT_TERM_2264 https://fairsharing.org/search?recordType=repository)  services provides a `low entry barrier` to making data findable:
-* Safe — your research (URL_TO_INSERT_RECORD_2266 https://fairsharing.org/FAIRsharing.52b22c)  is stored safely for the future in CERN’s Data Centre for as long as CERN exists.
+To cite `Zenodo (URL_TO_INSERT_RECORD_2056 https://fairsharing.org/FAIRsharing.wy4egf) 's documentation`, here are a few reasons why using the repository (URL_TO_INSERT_TERM_2055 https://fairsharing.org/search?recordType=repository)  services provides a `low entry barrier` to making data findable:
+* Safe — your research (URL_TO_INSERT_RECORD_2057 https://fairsharing.org/FAIRsharing.52b22c)  is stored safely for the future in CERN’s Data Centre for as long as CERN exists.
 * Trusted — built and operated by CERN and OpenAIRE to ensure that everyone can join in Open Science.
-* Citeab (URL_TO_INSERT_RECORD_2269 https://fairsharing.org/FAIRsharing.d404th) le — every upload is assigned a Digital Object Identifier (URL_TO_INSERT_TERM_2267 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD_2268 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI), to make them citable and trackable.
-* No waiting time — Uploads are made available online as soon as you hit publish, and your DOI (URL_TO_INSERT_RECORD_2270 https://fairsharing.org/FAIRsharing.hFLKCn)  is registered within seconds.
+* Citeab (URL_TO_INSERT_RECORD_2060 https://fairsharing.org/FAIRsharing.d404th) le — every upload is assigned a Digital Object Identifier (URL_TO_INSERT_TERM_2058 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD_2059 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI), to make them citable and trackable.
+* No waiting time — Uploads are made available online as soon as you hit publish, and your DOI (URL_TO_INSERT_RECORD_2061 https://fairsharing.org/FAIRsharing.hFLKCn)  is registered within seconds.
 * Open or closed — Share e.g. anonymized clinical trial data with only medical professionals via our restricted access mode.
 * Versioning — Easily update your dataset with our versioning feature.
-* GitHub (URL_TO_INSERT_RECORD_2273 https://fairsharing.org/FAIRsharing.c55d5e)  integration — Easily preserve your GitHub (URL_TO_INSERT_RECORD_2274 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_2271 https://fairsharing.org/search?recordType=repository)  in Zenodo (URL_TO_INSERT_RECORD_2272 https://fairsharing.org/FAIRsharing.wy4egf) .
-* Usage statisics — All uploads display standard (URL_TO_INSERT_TERM_2275 https://fairsharing.org/search?fairsharingRegistry=Standard) s compliant usage statistics.
+* GitHub (URL_TO_INSERT_RECORD_2064 https://fairsharing.org/FAIRsharing.c55d5e)  integration — Easily preserve your GitHub (URL_TO_INSERT_RECORD_2065 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_2062 https://fairsharing.org/search?recordType=repository)  in Zenodo (URL_TO_INSERT_RECORD_2063 https://fairsharing.org/FAIRsharing.wy4egf) .
+* Usage statisics — All uploads display standard (URL_TO_INSERT_TERM_2066 https://fairsharing.org/search?fairsharingRegistry=Standard) s compliant usage statistics.
 
 
 ## 1. How to use Zenodo Deposition Web Interface?
 
-This section guides users through the key steps to perform to organize a deposition to Zenodo (URL_TO_INSERT_RECORD_2277 https://fairsharing.org/FAIRsharing.wy4egf)  using the user interface web component provided by the repository (URL_TO_INSERT_TERM_2276 https://fairsharing.org/search?recordType=repository) .
+This section guides users through the key steps to perform to organize a deposition to Zenodo (URL_TO_INSERT_RECORD_2068 https://fairsharing.org/FAIRsharing.wy4egf)  using the user interface web component provided by the repository (URL_TO_INSERT_TERM_2067 https://fairsharing.org/search?recordType=repository) .
 
 ---
 
 ### Zenodo Compatible Data Collection - Login-in
 
-* Login via ORCID (URL_TO_INSERT_RECORD_2279 https://fairsharing.org/FAIRsharing.nx58jg)  or Github (URL_TO_INSERT_RECORD_2278 https://fairsharing.org/FAIRsharing.c55d5e)  credentials
+* Login via ORCID (URL_TO_INSERT_RECORD_2070 https://fairsharing.org/FAIRsharing.nx58jg)  or Github (URL_TO_INSERT_RECORD_2069 https://fairsharing.org/FAIRsharing.c55d5e)  credentials
 
 ```{admonition} Tip
 :class: tip
@@ -104,14 +104,14 @@ This section guides users through the key steps to perform to organize a deposit
 ```{figure} /images/TYpr8jM.png
 ---
 height: 600px
-name: Uploading files to Zenodo (URL_TO_INSERT_RECORD_2280 https://fairsharing.org/FAIRsharing.wy4egf) 
-alt: Uploading files to Zenodo (URL_TO_INSERT_RECORD_2281 https://fairsharing.org/FAIRsharing.wy4egf) 
+name: Uploading files to Zenodo (URL_TO_INSERT_RECORD_2071 https://fairsharing.org/FAIRsharing.wy4egf) 
+alt: Uploading files to Zenodo (URL_TO_INSERT_RECORD_2072 https://fairsharing.org/FAIRsharing.wy4egf) 
 ---
-Uploading files to Zenodo (URL_TO_INSERT_RECORD_2283 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2282 https://fairsharing.org/search?recordType=repository) .
+Uploading files to Zenodo (URL_TO_INSERT_RECORD_2074 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2073 https://fairsharing.org/search?recordType=repository) .
 ```
 ````
 
-Files can be dragged and dropped (URL_TO_INSERT_RECORD_2284 https://fairsharing.org/FAIRsharing.31385c) , with the following limitations:
+Files can be dragged and dropped (URL_TO_INSERT_RECORD_2075 https://fairsharing.org/FAIRsharing.31385c) , with the following limitations:
 * 5GB max each, 
 * 50 GB total / dataset
 
@@ -126,14 +126,14 @@ Failing to do so will result in a failure to proceed with the submission and an 
 ```{figure} /images/LwMorlw.png
 ---
 height: 600px
-name: Starting the file upload to Zenodo (URL_TO_INSERT_RECORD_2285 https://fairsharing.org/FAIRsharing.wy4egf) 
-alt: Starting the file upload  to Zenodo (URL_TO_INSERT_RECORD_2286 https://fairsharing.org/FAIRsharing.wy4egf) 
+name: Starting the file upload to Zenodo (URL_TO_INSERT_RECORD_2076 https://fairsharing.org/FAIRsharing.wy4egf) 
+alt: Starting the file upload  to Zenodo (URL_TO_INSERT_RECORD_2077 https://fairsharing.org/FAIRsharing.wy4egf) 
 ---
-Starting the file upload to Zenodo (URL_TO_INSERT_RECORD_2288 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2287 https://fairsharing.org/search?recordType=repository) .
+Starting the file upload to Zenodo (URL_TO_INSERT_RECORD_2079 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2078 https://fairsharing.org/search?recordType=repository) .
 ```
 ````
 
-The next key step is to select the `upload type`. In this instance, the `Dataset` is selected. This matters as it provide strong typing which is relied on by `search (URL_TO_INSERT_RECORD_2289 https://fairsharing.org/FAIRsharing.52b22c)  engine` and therefore impacts `findability`.
+The next key step is to select the `upload type`. In this instance, the `Dataset` is selected. This matters as it provide strong typing which is relied on by `search (URL_TO_INSERT_RECORD_2080 https://fairsharing.org/FAIRsharing.52b22c)  engine` and therefore impacts `findability`.
 
 
 <!-- <img src="/images/OYyz4dT.png" alt="drawing" style="width:500px;" border="1px solid black" align="top" /> -->
@@ -143,10 +143,10 @@ The next key step is to select the `upload type`. In this instance, the `Dataset
 ```{figure} /images/OYyz4dT.png
 ---
 height: 150px
-name: Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2290 https://fairsharing.org/FAIRsharing.wy4egf) 
-alt: Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2291 https://fairsharing.org/FAIRsharing.wy4egf) 
+name: Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2081 https://fairsharing.org/FAIRsharing.wy4egf) 
+alt: Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2082 https://fairsharing.org/FAIRsharing.wy4egf) 
 ---
-Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2293 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2292 https://fairsharing.org/search?recordType=repository) .
+Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2084 https://fairsharing.org/FAIRsharing.wy4egf)  Repository (URL_TO_INSERT_TERM_2083 https://fairsharing.org/search?recordType=repository) .
 ```
 ````
 
@@ -156,7 +156,7 @@ Selecting the upload type to Zenodo (URL_TO_INSERT_RECORD_2293 https://fairshari
 ### Zenodo Compatible Data Collection - Providing Metadata
 
 * Basic metadata such as. `title`, `description`, at minima should be provided.
-* Authors should be identified, ideally using their `orcid`, so linking can be performed. This affects authors citation and impact evaluation. For IMI FAIR (URL_TO_INSERT_RECORD_2295 https://fairsharing.org/FAIRsharing.WWI10U) plus participants, since all have now such an identifier (URL_TO_INSERT_TERM_2294 https://fairsharing.org/search?recordType=identifier_schema) , the link should be made systematically.
+* Authors should be identified, ideally using their `orcid`, so linking can be performed. This affects authors citation and impact evaluation. For IMI FAIR (URL_TO_INSERT_RECORD_2086 https://fairsharing.org/FAIRsharing.WWI10U) plus participants, since all have now such an identifier (URL_TO_INSERT_TERM_2085 https://fairsharing.org/search?recordType=identifier_schema) , the link should be made systematically.
 
 <!-- <img src="/images/WmlqBjL.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -172,11 +172,11 @@ Basic metadata to report .
 ```
 ````
 
-* **Reserve a Digital Object Identifier (URL_TO_INSERT_TERM_2297 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD_2298 https://fairsharing.org/FAIRsharing.hFLKCn) **: This is a service provided natively by the Zenodo (URL_TO_INSERT_RECORD_2299 https://fairsharing.org/FAIRsharing.wy4egf)  service, by virtue of its integration with Datacite services. This is quite an important point as it means the Zenodo (URL_TO_INSERT_RECORD_2300 https://fairsharing.org/FAIRsharing.wy4egf)  submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated informat (URL_TO_INSERT_TERM_2296 https://fairsharing.org/search?recordType=model_and_format) ion **can not be changed without creating a new version of the arch (URL_TO_INSERT_RECORD_2301 https://fairsharing.org/FAIRsharing.52b22c) ive and therefore minting a new doi**
+* **Reserve a Digital Object Identifier (URL_TO_INSERT_TERM_2088 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD_2089 https://fairsharing.org/FAIRsharing.hFLKCn) **: This is a service provided natively by the Zenodo (URL_TO_INSERT_RECORD_2090 https://fairsharing.org/FAIRsharing.wy4egf)  service, by virtue of its integration with Datacite services. This is quite an important point as it means the Zenodo (URL_TO_INSERT_RECORD_2091 https://fairsharing.org/FAIRsharing.wy4egf)  submission can be cited. However, remember to carefully review all the data entered in the form as once a doi has been minted, the associated informat (URL_TO_INSERT_TERM_2087 https://fairsharing.org/search?recordType=model_and_format) ion **can not be changed without creating a new version of the arch (URL_TO_INSERT_RECORD_2092 https://fairsharing.org/FAIRsharing.52b22c) ive and therefore minting a new doi**
  
 
 
-* 'Keywords' can be added to tag the submission. These are free text and no controlled terminology (URL_TO_INSERT_TERM_2302 https://fairsharing.org/search?recordType=terminology_artefact)  can be used in the interface at the moment.
+* 'Keywords' can be added to tag the submission. These are free text and no controlled terminology (URL_TO_INSERT_TERM_2093 https://fairsharing.org/search?recordType=terminology_artefact)  can be used in the interface at the moment.
 
 <!-- <img src="/images/9Bp91gX.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -185,10 +185,10 @@ Basic metadata to report .
 ```{figure} /images/9Bp91gX.png
 ---
 height: 600px
-name: Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2303 https://fairsharing.org/FAIRsharing.wy4egf)  deposition
-alt:  Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2304 https://fairsharing.org/FAIRsharing.wy4egf)  deposition
+name: Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2094 https://fairsharing.org/FAIRsharing.wy4egf)  deposition
+alt:  Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2095 https://fairsharing.org/FAIRsharing.wy4egf)  deposition
 ---
-Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2305 https://fairsharing.org/FAIRsharing.wy4egf)  deposition .
+Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2096 https://fairsharing.org/FAIRsharing.wy4egf)  deposition .
 ```
 ````
 
@@ -197,7 +197,7 @@ Setting keywords associated with the Zenodo (URL_TO_INSERT_RECORD_2305 https://f
 
 ###  Zenodo Compatible Data Collection - Access and License information
 
-* Zenodo (URL_TO_INSERT_RECORD_2307 https://fairsharing.org/FAIRsharing.wy4egf)  provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Informat (URL_TO_INSERT_TERM_2306 https://fairsharing.org/search?recordType=model_and_format) ion`, as well as `Embargo Duration` if applicable.
+* Zenodo (URL_TO_INSERT_RECORD_2098 https://fairsharing.org/FAIRsharing.wy4egf)  provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Informat (URL_TO_INSERT_TERM_2097 https://fairsharing.org/search?recordType=model_and_format) ion`, as well as `Embargo Duration` if applicable.
 * As indicated above, it is possible to `set an Embargo Period`, if the option `embargoed access` is selected under the `Access right` section.
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
@@ -216,10 +216,10 @@ Choosing a License is essential.
 
 
 
-  * Zenodo (URL_TO_INSERT_RECORD_2310 https://fairsharing.org/FAIRsharing.wy4egf)  places no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guideline (URL_TO_INSERT_TERM_2309 https://fairsharing.org/search?recordType=reporting_guideline) s or local institution (URL_TO_INSERT_TERM_2308 https://fairsharing.org/search?recordType=institution) al requirements for guidance.
+  * Zenodo (URL_TO_INSERT_RECORD_2101 https://fairsharing.org/FAIRsharing.wy4egf)  places no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guideline (URL_TO_INSERT_TERM_2100 https://fairsharing.org/search?recordType=reporting_guideline) s or local institution (URL_TO_INSERT_TERM_2099 https://fairsharing.org/search?recordType=institution) al requirements for guidance.
 
 
-* Setting Access Conditions/License, Data Controler Contact Informat (URL_TO_INSERT_TERM_2311 https://fairsharing.org/search?recordType=model_and_format) ion, Embargo Duration if applicable
+* Setting Access Conditions/License, Data Controler Contact Informat (URL_TO_INSERT_TERM_2102 https://fairsharing.org/search?recordType=model_and_format) ion, Embargo Duration if applicable
 
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
@@ -235,7 +235,7 @@ Setting access conditions.
 ```
 ````
 
-* Start typing to display more licenses available from Zenodo (URL_TO_INSERT_RECORD_2312 https://fairsharing.org/FAIRsharing.wy4egf) 
+* Start typing to display more licenses available from Zenodo (URL_TO_INSERT_RECORD_2103 https://fairsharing.org/FAIRsharing.wy4egf) 
 
 <!-- <img src="/images/249GhMg.png" alt="drawing" style="width:550px;" border="1px solid black" align="top"/> -->
 
@@ -256,7 +256,7 @@ Autocompletion prompts available licenses.
 ---
 ### Zenodo Compatible Data Collection - Funding Information
 
-Since the Zenodo (URL_TO_INSERT_RECORD_2315 https://fairsharing.org/FAIRsharing.wy4egf)  mission is to collect EC funded data, the repository (URL_TO_INSERT_TERM_2313 https://fairsharing.org/search?recordType=repository)  provides the means to lookup `Grant Informat (URL_TO_INSERT_TERM_2314 https://fairsharing.org/search?recordType=model_and_format) ion`:
+Since the Zenodo (URL_TO_INSERT_RECORD_2106 https://fairsharing.org/FAIRsharing.wy4egf)  mission is to collect EC funded data, the repository (URL_TO_INSERT_TERM_2104 https://fairsharing.org/search?recordType=repository)  provides the means to lookup `Grant Informat (URL_TO_INSERT_TERM_2105 https://fairsharing.org/search?recordType=model_and_format) ion`:
 
 <!-- <img src="/images/STjyFbT.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -265,22 +265,22 @@ Since the Zenodo (URL_TO_INSERT_RECORD_2315 https://fairsharing.org/FAIRsharing.
 ```{figure} /images/STjyFbT.png
 ---
 height: 200px
-name: Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2316 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
-alt:  Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2317 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
+name: Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2107 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
+alt:  Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2108 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
 ---
-Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2318 https://fairsharing.org/FAIRsharing.wy4egf)  Submission.
+Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2109 https://fairsharing.org/FAIRsharing.wy4egf)  Submission.
 ```
 ````
 
 
-  * Zenodo (URL_TO_INSERT_RECORD_2320 https://fairsharing.org/FAIRsharing.wy4egf) : openAIRE connected repository (URL_TO_INSERT_TERM_2319 https://fairsharing.org/search?recordType=repository) 
+  * Zenodo (URL_TO_INSERT_RECORD_2111 https://fairsharing.org/FAIRsharing.wy4egf) : openAIRE connected repository (URL_TO_INSERT_TERM_2110 https://fairsharing.org/search?recordType=repository) 
 
   * Connected to funding agencies
 
 ---
 ### Zenodo Compatible Data Collection - Miscellaneous Information
 
-* Miscellaneous Informat (URL_TO_INSERT_TERM_2321 https://fairsharing.org/search?recordType=model_and_format) ion:
+* Miscellaneous Informat (URL_TO_INSERT_TERM_2112 https://fairsharing.org/search?recordType=model_and_format) ion:
 
 <!-- <img src="/images/uhGZN5t.png" alt="drawing" style="width:700px;" border="1px solid black" align="top" /> -->
 
@@ -289,10 +289,10 @@ Linking Funding to Zenodo (URL_TO_INSERT_RECORD_2318 https://fairsharing.org/FAI
 ```{figure} /images/uhGZN5t.png
 ---
 height: 500px
-name: Miscellaneous Informat (URL_TO_INSERT_TERM_2322 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2323 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
-alt:  Miscellaneous Informat (URL_TO_INSERT_TERM_2324 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2325 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
+name: Miscellaneous Informat (URL_TO_INSERT_TERM_2113 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2114 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
+alt:  Miscellaneous Informat (URL_TO_INSERT_TERM_2115 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2116 https://fairsharing.org/FAIRsharing.wy4egf)  Submission
 ---
-Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2327 https://fairsharing.org/FAIRsharing.wy4egf)  Submission.
+Miscellaneous Informat (URL_TO_INSERT_TERM_2117 https://fairsharing.org/search?recordType=model_and_format) ion about the Zenodo (URL_TO_INSERT_RECORD_2118 https://fairsharing.org/FAIRsharing.wy4egf)  Submission.
 ```
 ````
 
@@ -301,7 +301,7 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
 
   * References:
 
-  * Journal (URL_TO_INSERT_TERM_2328 https://fairsharing.org/search?recordType=journal) , Conference, Book, and so on.
+  * Journal (URL_TO_INSERT_TERM_2119 https://fairsharing.org/search?recordType=journal) , Conference, Book, and so on.
 
 
 
@@ -311,27 +311,27 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
 
 * First, it is necessary to obtain an api key:
 
-    `ACCESS_TOKEN` = "<enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI (URL_TO_INSERT_RECORD_2329 https://fairsharing.org/FAIRsharing.hFLKCn)   >"
+    `ACCESS_TOKEN` = "<enter-your_writeonly_token_for_testing or your_deposit_token if you want to get a DOI (URL_TO_INSERT_RECORD_2120 https://fairsharing.org/FAIRsharing.hFLKCn)   >"
 
-* Then, the following code invoking the Zenodo (URL_TO_INSERT_RECORD_2330 https://fairsharing.org/FAIRsharing.wy4egf)  REST endpoint will allow deposition:
+* Then, the following code invoking the Zenodo (URL_TO_INSERT_RECORD_2121 https://fairsharing.org/FAIRsharing.wy4egf)  REST endpoint will allow deposition:
 
     ```python
     import requests
     import json
 
-    zenodo (URL_TO_INSERT_RECORD_2331 https://fairsharing.org/FAIRsharing.wy4egf) _baseurl = "https://zenodo.org/api/"
+    zenodo (URL_TO_INSERT_RECORD_2122 https://fairsharing.org/FAIRsharing.wy4egf) _baseurl = "https://zenodo.org/api/"
     headers = {"Content-Type": "application/json"}
 
-    AC (URL_TO_INSERT_RECORD_2332 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN = "<YOUR_TOKEN_GOES_HERE>"
+    AC (URL_TO_INSERT_RECORD_2123 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN = "<YOUR_TOKEN_GOES_HERE>"
     # testing the connection
-    r = requests.get("https://zenodo.org/api/deposit/depositions", params={"access_token": AC (URL_TO_INSERT_RECORD_2333 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN})
+    r = requests.get("https://zenodo.org/api/deposit/depositions", params={"access_token": AC (URL_TO_INSERT_RECORD_2124 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN})
 
-    # creating an empty submission to get an zenodo (URL_TO_INSERT_RECORD_2334 https://fairsharing.org/FAIRsharing.wy4egf)  record id:
-    r = requests.post('https://zenodo.org/api/deposit/depositions', params={'access_token': AC (URL_TO_INSERT_RECORD_2335 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, json={},
+    # creating an empty submission to get an zenodo (URL_TO_INSERT_RECORD_2125 https://fairsharing.org/FAIRsharing.wy4egf)  record id:
+    r = requests.post('https://zenodo.org/api/deposit/depositions', params={'access_token': AC (URL_TO_INSERT_RECORD_2126 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, json={},
                       headers=headers)
     r.status_code
 
-    # obtain the zenodo (URL_TO_INSERT_RECORD_2336 https://fairsharing.org/FAIRsharing.wy4egf)  metadata payload as json containing the id
+    # obtain the zenodo (URL_TO_INSERT_RECORD_2127 https://fairsharing.org/FAIRsharing.wy4egf)  metadata payload as json containing the id
     r.json()
     ```
 
@@ -348,34 +348,34 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
     data = {'filename': 'rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json'}
     files = {'file': open('../data/processed/rose-data/rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-datapackage.json', 'rb')}
     r = requests.post('https://zenodo.org/api/deposit/depositions/%s/files' % deposition_id,
-                       params={'access_token': AC (URL_TO_INSERT_RECORD_2337 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, data=data,
+                       params={'access_token': AC (URL_TO_INSERT_RECORD_2128 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, data=data,
                        files=files)
     r.status_code
     ```
 
 
-* Forming the augmented data payload for a dataset corresponding to the JSON (URL_TO_INSERT_RECORD_2338 https://fairsharing.org/FAIRsharing.5bbab9)  data package (URL_TO_INSERT_RECORD_2339 https://fairsharing.org/FAIRsharing.3b861d)  for the matrix
+* Forming the augmented data payload for a dataset corresponding to the JSON (URL_TO_INSERT_RECORD_2129 https://fairsharing.org/FAIRsharing.5bbab9)  data package (URL_TO_INSERT_RECORD_2130 https://fairsharing.org/FAIRsharing.3b861d)  for the matrix
 
     ```python
 
     metadata = {
          "metadata": {
-             "title": "Frictionless Tabular data package (URL_TO_INSERT_RECORD_2340 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2341 https://fairsharing.org/FAIRsharing.3b861d)  for GC-MS data from Rose Genome article published\
+             "title": "Frictionless Tabular data package (URL_TO_INSERT_RECORD_2131 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2132 https://fairsharing.org/FAIRsharing.3b861d)  for GC-MS data from Rose Genome article published\
               in Nature genetics, June, 2018",
              "upload_type": "dataset",
-             "description": "This dataset, in the form of a Frictionless Tabular Data Package (URL_TO_INSERT_RECORD_2342 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2343 https://fairsharing.org/FAIRsharing.3b861d)  \
-             (https://frictionlessdata.io/specs/tabular-data-package (URL_TO_INSERT_RECORD_2344 https://fairsharing.org/FAIRsharing.082881) /), \
-              holds the measurements of 61 known metabolites (all annotated with resolvable CHEBI identifier (URL_TO_INSERT_TERM_2345 https://fairsharing.org/search?recordType=identifier_schema) s and InChi), \
+             "description": "This dataset, in the form of a Frictionless Tabular Data Package (URL_TO_INSERT_RECORD_2133 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2134 https://fairsharing.org/FAIRsharing.3b861d)  \
+             (https://frictionlessdata.io/specs/tabular-data-package/), \
+              holds the measurements of 61 known metabolites (all annotated with resolvable CHEBI identifier (URL_TO_INSERT_TERM_2135 https://fairsharing.org/search?recordType=identifier_schema) s and InChi), \
               measured by gas chromatography mass-spectrometry (GC-MS) in 6 different Rose cultivars (all annotated with \
-              resolvable NCBITaxId) and 3 organism parts (all annotated with resolvable Plant Ontology (URL_TO_INSERT_TERM_2346 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_2348 https://fairsharing.org/FAIRsharing.3ngg40)  identifier (URL_TO_INSERT_TERM_2347 https://fairsharing.org/search?recordType=identifier_schema) s).\
+              resolvable NCBITaxId) and 3 organism parts (all annotated with resolvable Plant Ontology (URL_TO_INSERT_TERM_2136 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_2138 https://fairsharing.org/FAIRsharing.3ngg40)  identifier (URL_TO_INSERT_TERM_2137 https://fairsharing.org/search?recordType=identifier_schema) s).\
               The data was extracted from a supplementary material table, available from \
               https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-018-0110-3/MediaObjects/41588_2018_110_MOESM3_ESM.zip \
               and published alongside the Nature Genetics manuscript identified by the following doi: \
               https://doi.org/10.1038/s41588-018-0110-3, published in June 2018. \
               This dataset is used to demonstrate how to make data Findable, Accessible, Discoverable and Interoperable" \
-              "(FAIR (URL_TO_INSERT_RECORD_2351 https://fairsharing.org/FAIRsharing.WWI10U) ) and how Tabular Data Package (URL_TO_INSERT_RECORD_2349 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2350 https://fairsharing.org/FAIRsharing.3b861d)  representations can be easily mobilized for re-analysis and data science. \
-              It is associated to the following project (URL_TO_INSERT_TERM_2352 https://fairsharing.org/search?recordType=project)  available from github (URL_TO_INSERT_RECORD_2353 https://fairsharing.org/FAIRsharing.c55d5e)  at: \
-              'https://github.com (URL_TO_INSERT_RECORD_2355 https://fairsharing.org/FAIRsharing.c55d5e) /proccaserra/rose2018ng-notebook' with all necessary informat (URL_TO_INSERT_TERM_2354 https://fairsharing.org/search?recordType=model_and_format) ion and Jupyter notebooks.",
+              "(FAIR (URL_TO_INSERT_RECORD_2141 https://fairsharing.org/FAIRsharing.WWI10U) ) and how Tabular Data Package (URL_TO_INSERT_RECORD_2139 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2140 https://fairsharing.org/FAIRsharing.3b861d)  representations can be easily mobilized for re-analysis and data science. \
+              It is associated to the following project (URL_TO_INSERT_TERM_2142 https://fairsharing.org/search?recordType=project)  available from github (URL_TO_INSERT_RECORD_2143 https://fairsharing.org/FAIRsharing.c55d5e)  at: \
+              'https://github.com (URL_TO_INSERT_RECORD_2145 https://fairsharing.org/FAIRsharing.c55d5e) /proccaserra/rose2018ng-notebook' with all necessary informat (URL_TO_INSERT_TERM_2144 https://fairsharing.org/search?recordType=model_and_format) ion and Jupyter notebooks.",
              "creators": [
                           {
                             "affiliation": "University of Oxford",
@@ -390,14 +390,14 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
                         ],
              "access_right": "open",
              "keywords": [
-                 "FAIR (URL_TO_INSERT_RECORD_2356 https://fairsharing.org/FAIRsharing.WWI10U)  data",
+                 "FAIR (URL_TO_INSERT_RECORD_2146 https://fairsharing.org/FAIRsharing.WWI10U)  data",
                  "Design of Experiment",
                  "Rose scent",
                  "targeted metabolite profiling",
                  "gas chromatography mass spectrometry",
-                 "Tabular Data Package (URL_TO_INSERT_RECORD_2357 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2358 https://fairsharing.org/FAIRsharing.3b861d) ",
-                 "STATO (URL_TO_INSERT_RECORD_2360 https://fairsharing.org/FAIRsharing.na5xp)  ontology (URL_TO_INSERT_TERM_2359 https://fairsharing.org/search?recordType=terminology_artefact) ",
-                 "ISA format (URL_TO_INSERT_TERM_2361 https://fairsharing.org/search?recordType=model_and_format) ",
+                 "Tabular Data Package (URL_TO_INSERT_RECORD_2147 https://fairsharing.org/FAIRsharing.082881)  (URL_TO_INSERT_RECORD_2148 https://fairsharing.org/FAIRsharing.3b861d) ",
+                 "STATO (URL_TO_INSERT_RECORD_2150 https://fairsharing.org/FAIRsharing.na5xp)  ontology (URL_TO_INSERT_TERM_2149 https://fairsharing.org/search?recordType=terminology_artefact) ",
+                 "ISA format (URL_TO_INSERT_TERM_2151 https://fairsharing.org/search?recordType=model_and_format) ",
                  "interoperability"],
              "language": "eng",
              "license": {
@@ -405,23 +405,23 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
                         },
              "publication_date": "2019-03-13",
              "references": ["https://doi.org/10.1038/s41588-018-0110-3"],
-             "related_identifier (URL_TO_INSERT_TERM_2362 https://fairsharing.org/search?recordType=identifier_schema) s": [
+             "related_identifier (URL_TO_INSERT_TERM_2152 https://fairsharing.org/search?recordType=identifier_schema) s": [
               {
                 "relation": "cites",
-                "identifier (URL_TO_INSERT_TERM_2363 https://fairsharing.org/search?recordType=identifier_schema) ": "10.1038/s41588-018-0110-3"
+                "identifier (URL_TO_INSERT_TERM_2153 https://fairsharing.org/search?recordType=identifier_schema) ": "10.1038/s41588-018-0110-3"
               },
               {
                 "relation": "cites",
-                "identifier (URL_TO_INSERT_TERM_2364 https://fairsharing.org/search?recordType=identifier_schema) ": "10.5281/zenodo (URL_TO_INSERT_RECORD_2365 https://fairsharing.org/FAIRsharing.wy4egf) .2598799"
+                "identifier (URL_TO_INSERT_TERM_2154 https://fairsharing.org/search?recordType=identifier_schema) ": "10.5281/zenodo (URL_TO_INSERT_RECORD_2155 https://fairsharing.org/FAIRsharing.wy4egf) .2598799"
               },
               {
                 "relation": "isNewVersionOf",
-                "identifier (URL_TO_INSERT_TERM_2366 https://fairsharing.org/search?recordType=identifier_schema) ": "10.5281/zenodo (URL_TO_INSERT_RECORD_2367 https://fairsharing.org/FAIRsharing.wy4egf) .2557893"
+                "identifier (URL_TO_INSERT_TERM_2156 https://fairsharing.org/search?recordType=identifier_schema) ": "10.5281/zenodo (URL_TO_INSERT_RECORD_2157 https://fairsharing.org/FAIRsharing.wy4egf) .2557893"
               }
             ],
              "grants": [{"links":{"self":"https://zenodo.org/api/grants/10.13039/501100000780::654241"},"acronym": "PhenoMenAl",
             "program": "H2020",
-            "funder (URL_TO_INSERT_TERM_2368 https://fairsharing.org/search?recordType=funder) ": {
+            "funder (URL_TO_INSERT_TERM_2158 https://fairsharing.org/search?recordType=funder) ": {
               "doi": "10.13039/501100000780",
               "acronyms": [
                 "EC"
@@ -436,7 +436,7 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
         }
 
     r = requests.put("https://zenodo.org/api/deposit/depositions/%s" % deposition_id,
-                      params={"access_token": AC (URL_TO_INSERT_RECORD_2369 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, data=json.dumps(metadata),
+                      params={"access_token": AC (URL_TO_INSERT_RECORD_2159 https://fairsharing.org/FAIRsharing.md3e78) CESS_TOKEN}, data=json.dumps(metadata),
                      headers=headers)
 
     r.status_code
@@ -444,7 +444,7 @@ Miscellaneous Informat (URL_TO_INSERT_TERM_2326 https://fairsharing.org/search?r
 
 ### Finalize request and post
 
-* Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI (URL_TO_INSERT_RECORD_2370 https://fairsharing.org/FAIRsharing.hFLKCn) .
+* Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI (URL_TO_INSERT_RECORD_2160 https://fairsharing.org/FAIRsharing.hFLKCn) .
 
 ```python
 data_2 = {'filename': 'rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv'}
@@ -458,17 +458,17 @@ r.status_code
 
 ## Conclusions
 
-> Relying on CERN Zenodo (URL_TO_INSERT_RECORD_2372 https://fairsharing.org/FAIRsharing.wy4egf)  repository (URL_TO_INSERT_TERM_2371 https://fairsharing.org/search?recordType=repository)  using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver **dataset findability** for assets generated by publicly funded resources. 
+> Relying on CERN Zenodo (URL_TO_INSERT_RECORD_2162 https://fairsharing.org/FAIRsharing.wy4egf)  repository (URL_TO_INSERT_TERM_2161 https://fairsharing.org/search?recordType=repository)  using any of the submission mechanisms (either web component or API) is one the simplest yet highly effective ways to deliver **dataset findability** for assets generated by publicly funded resources. 
 > The integration with ORCID<!-- TODO add a link to corresponding document --> makes it very easy to obtain an account on CERN's service. 
 > The integration with Datacite<!-- TODO add a link to corresponding document --> means that submitters can reserve and obtain Digital Object Identifiers (DOI) very simply. These can then be cited and used as references to the datasets.
 > The integration with Crossref<!-- TODO add a link to corresponding document --> means that funding information case be easily looked up, thus reducing data entry burden in most conditions but especially for EU funded projects such as IMI.
-> Licensing informat (URL_TO_INSERT_TERM_2373 https://fairsharing.org/search?recordType=model_and_format) ion can also be easily supplied.
+> Licensing informat (URL_TO_INSERT_TERM_2163 https://fairsharing.org/search?recordType=model_and_format) ion can also be easily supplied.
 > Data access and embargo dates can be reserved.
-> Findability via search (URL_TO_INSERT_RECORD_2377 https://fairsharing.org/FAIRsharing.52b22c)  engines is enhanced as Zenodo (URL_TO_INSERT_RECORD_2376 https://fairsharing.org/FAIRsharing.wy4egf)  supports content negotiation, serving [schema.org (URL_TO_INSERT_RECORD_2378 https://fairsharing.org/FAIRsharing.hzdzq8) ](https://schema.org (URL_TO_INSERT_RECORD_2379 https://fairsharing.org/FAIRsharing.hzdzq8) ) based JSON (URL_TO_INSERT_RECORD_2374 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_2375 https://fairsharing.org/FAIRsharing.8f9bbb)  documents.
+> Findability via search (URL_TO_INSERT_RECORD_2167 https://fairsharing.org/FAIRsharing.52b22c)  engines is enhanced as Zenodo (URL_TO_INSERT_RECORD_2166 https://fairsharing.org/FAIRsharing.wy4egf)  supports content negotiation, serving [schema.org](https://schema.org) based JSON (URL_TO_INSERT_RECORD_2164 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_2165 https://fairsharing.org/FAIRsharing.8f9bbb)  documents.
 > Users should however be reminded of the following limitations of the service:
     > - Absence of constraints on the nature of the datafiles being uploaded.
     > - No domain specific awareness and domain specific metadata.
-    > - Absence of connection with specialized repositories (URL_TO_INSERT_TERM_2380 https://fairsharing.org/search?recordType=repository) .
+    > - Absence of connection with specialized repositories (URL_TO_INSERT_TERM_2168 https://fairsharing.org/search?recordType=repository) .
     > - Size limitation for a given datasets.
     
     
