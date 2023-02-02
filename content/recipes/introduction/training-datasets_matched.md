@@ -18,26 +18,26 @@
 
 ## Main Objectives
 
-> This recipe aims to provide example clinical datasets to allow users to get fam (URL_TO_INSERT_RECORD_10420 https://fairsharing.org/FAIRsharing.d0886a) iliar with the process of handling clinical datasets
+> This recipe aims to provide example clinical datasets to allow users to get fam (URL_TO_INSERT_RECORD_9615 https://fairsharing.org/FAIRsharing.d0886a) iliar with the process of handling clinical datasets
 and develop related computational tools while minimizing the challenges of accessing real-world human data.
 
-The FAIR (URL_TO_INSERT_RECORD_10422 https://fairsharing.org/FAIRsharing.WWI10U)  cookbook (URL_TO_INSERT_RECORD_10421 https://fairsharing.org/FAIRsharing.cbz72b)  aims to provide hands-on, practical advice on how to deliver FAIR (URL_TO_INSERT_RECORD_10423 https://fairsharing.org/FAIRsharing.WWI10U)  data through interactions with
-Innovative Medicine Initiative(IMI) project (URL_TO_INSERT_TERM_10424 https://fairsharing.org/search?recordType=project) s. These research (URL_TO_INSERT_RECORD_10427 https://fairsharing.org/FAIRsharing.52b22c)  project (URL_TO_INSERT_TERM_10425 https://fairsharing.org/search?recordType=project) s, by nature, often involve patient-centric informat (URL_TO_INSERT_TERM_10426 https://fairsharing.org/search?recordType=model_and_format) ion. 
-But dealing with real-world data and human-centric informat (URL_TO_INSERT_TERM_10428 https://fairsharing.org/search?recordType=model_and_format) ion, clinical data, in particular, is challenging. 
-It most often mandates interacting with Data Access Committees (DAC (URL_TO_INSERT_RECORD_10429 https://fairsharing.org/FAIRsharing.md3e78) s), and undergoes a vetting process, 
+The FAIR (URL_TO_INSERT_RECORD_9616 https://fairsharing.org/FAIRsharing.WWI10U)  cookbook aims to provide hands-on, practical advice on how to deliver FAIR (URL_TO_INSERT_RECORD_9617 https://fairsharing.org/FAIRsharing.WWI10U)  data through interactions with
+Innovative Medicine Initiative(IMI) project (URL_TO_INSERT_TERM_9618 https://fairsharing.org/search?recordType=project) s. These research (URL_TO_INSERT_RECORD_9621 https://fairsharing.org/FAIRsharing.52b22c)  project (URL_TO_INSERT_TERM_9619 https://fairsharing.org/search?recordType=project) s, by nature, often involve patient-centric informat (URL_TO_INSERT_TERM_9620 https://fairsharing.org/search?recordType=model_and_format) ion. 
+But dealing with real-world data and human-centric informat (URL_TO_INSERT_TERM_9622 https://fairsharing.org/search?recordType=model_and_format) ion, clinical data, in particular, is challenging. 
+It most often mandates interacting with Data Access Committees (DAC (URL_TO_INSERT_RECORD_9623 https://fairsharing.org/FAIRsharing.md3e78) s), and undergoes a vetting process, 
 which can be lengthy and convoluted. This can become a hindrance if the focus of the work is to deliver training on 
 the computational methods available to deal with such data rather than data custody-related tasks,
 however important these are. 
 
 This recipe aims to provide a list of relevant resources belonging to the realm of clinical data so readers can, with minimal hassle :
-- fam (URL_TO_INSERT_RECORD_10430 https://fairsharing.org/FAIRsharing.d0886a) iliarize with clinical data types, such as Electronic Health Records(EHR).
-- fam (URL_TO_INSERT_RECORD_10431 https://fairsharing.org/FAIRsharing.d0886a) iliarize with the procedures to gain access to sensitive data.
+- fam (URL_TO_INSERT_RECORD_9624 https://fairsharing.org/FAIRsharing.d0886a) iliarize with clinical data types, such as Electronic Health Records(EHR).
+- fam (URL_TO_INSERT_RECORD_9625 https://fairsharing.org/FAIRsharing.d0886a) iliarize with the procedures to gain access to sensitive data.
 - obtain datasets with which to work and hone computational skills.
 
 The recipe will cover two types of datasets:
-- `real datasets`, such as the Medical Informat (URL_TO_INSERT_TERM_10432 https://fairsharing.org/search?recordType=model_and_format) ion Mart for Intensive Care III (URL_TO_INSERT_RECORD_10433 https://fairsharing.org/FAIRsharing.pqnhpj) (MIM (URL_TO_INSERT_RECORD_10435 https://fairsharing.org/FAIRsharing.azq2t6) IC-III (URL_TO_INSERT_RECORD_10434 https://fairsharing.org/FAIRsharing.pqnhpj) ) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
+- `real datasets`, such as the Medical Informat (URL_TO_INSERT_TERM_9626 https://fairsharing.org/search?recordType=model_and_format) ion Mart for Intensive Care III (URL_TO_INSERT_RECORD_9627 https://fairsharing.org/FAIRsharing.pqnhpj) (MIM (URL_TO_INSERT_RECORD_9629 https://fairsharing.org/FAIRsharing.azq2t6) IC-III (URL_TO_INSERT_RECORD_9628 https://fairsharing.org/FAIRsharing.pqnhpj) ) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
 for which data access requests must be made but which are made available to computational scientists
-for research (URL_TO_INSERT_RECORD_10436 https://fairsharing.org/FAIRsharing.52b22c)  purposes.
+for research (URL_TO_INSERT_RECORD_9630 https://fairsharing.org/FAIRsharing.52b22c)  purposes.
 - `synthetic datasets`, which are available without restrictions since produced by computational methods 
 and are independent of any real patient. While handy, this type of data may come with a number of limitations prospective 
 users need to be aware of.
@@ -110,11 +110,11 @@ This synthetic dataset corresponds to 1000 person composite dataset:
 
 http://www.ltscomputingllc.com/wp-content/uploads/2018/08/synpuf1k_omop_cdm_5.2.2.zip
 
-For more informat (URL_TO_INSERT_TERM_10438 https://fairsharing.org/search?recordType=model_and_format) ion about the OMO (URL_TO_INSERT_RECORD_10440 https://fairsharing.org/FAIRsharing.qs4x5m) P (URL_TO_INSERT_RECORD_10439 https://fairsharing.org/FAIRsharing.mct09a)  Common Data Model (URL_TO_INSERT_TERM_10437 https://fairsharing.org/search?recordType=model_and_format) , refer to the following:
+For more informat (URL_TO_INSERT_TERM_9632 https://fairsharing.org/search?recordType=model_and_format) ion about the OMOP (URL_TO_INSERT_RECORD_9633 https://fairsharing.org/FAIRsharing.mct09a)  Common Data Model (URL_TO_INSERT_TERM_9631 https://fairsharing.org/search?recordType=model_and_format) , refer to the following:
 
-CDM 5.2.2 DDL for the OHD (URL_TO_INSERT_RECORD_10441 https://fairsharing.org/FAIRsharing.bg7bb6) SI supported DBMSs is available health-related
+CDM 5.2.2 DDL for the OHD (URL_TO_INSERT_RECORD_9634 https://fairsharing.org/FAIRsharing.bg7bb6) SI supported DBMSs is available health-related
 
-https://github.com (URL_TO_INSERT_RECORD_10442 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/CommonDataModel/tree/v5.2.2
+https://github.com (URL_TO_INSERT_RECORD_9635 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/CommonDataModel/tree/v5.2.2
 ````
 
 `````
@@ -177,15 +177,15 @@ This content provides you with a set of resources to kick start your exploration
 Remember to understand the data stewardship requirements that go along with handling real clinical data but also the limitations associated with some synthetic datasets.
 
 <!-- 
-TO (URL_TO_INSERT_RECORD_10443 https://fairsharing.org/FAIRsharing.w69t6r) DO : fill in the links to what-should-I-read-next recipes 
+TODO : fill in the links to what-should-I-read-next recipes 
 
 ### What to read next?
-* How to request data access and deal with data access committees? < TO (URL_TO_INSERT_RECORD_10444 https://fairsharing.org/FAIRsharing.w69t6r) DO add a link to corresponding document >
-* How to do NER on EHR with NLP?< TO (URL_TO_INSERT_RECORD_10445 https://fairsharing.org/FAIRsharing.w69t6r) DO add a link to corresponding document >
-* How to deal with unstructured text?< TO (URL_TO_INSERT_RECORD_10446 https://fairsharing.org/FAIRsharing.w69t6r) DO add a link to corresponding document >
+* How to request data access and deal with data access committees? < TODO add a link to corresponding document >
+* How to do NER on EHR with NLP?< TODO add a link to corresponding document >
+* How to deal with unstructured text?< TODO add a link to corresponding document >
 --->
 
-<!-- {download}`bibliography-identifier (URL_TO_INSERT_TERM_10447 https://fairsharing.org/search?recordType=identifier_schema) -map (URL_TO_INSERT_RECORD_10449 https://fairsharing.org/FAIRsharing.53edcc) ping.bib <./bibref/bibliography-identifier (URL_TO_INSERT_TERM_10448 https://fairsharing.org/search?recordType=identifier_schema) -map (URL_TO_INSERT_RECORD_10450 https://fairsharing.org/FAIRsharing.53edcc) ping.bib>` -->
+<!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 
 ## References
 
@@ -193,7 +193,7 @@ TO (URL_TO_INSERT_RECORD_10443 https://fairsharing.org/FAIRsharing.w69t6r) DO : 
 ```{footbibliography}
 ```
 ````
-<!-- Johnson, A., Pollard, T., Shen, L. et al. MIM (URL_TO_INSERT_RECORD_10453 https://fairsharing.org/FAIRsharing.azq2t6) IC-III (URL_TO_INSERT_RECORD_10452 https://fairsharing.org/FAIRsharing.pqnhpj) , a freely accessible critical care database (URL_TO_INSERT_TERM_10451 https://fairsharing.org/search?fairsharingRegistry=Database) . Sci Data 3, 160035 (2016). https://doi.org/10.1038/sdata.2016.35
+<!-- Johnson, A., Pollard, T., Shen, L. et al. MIMIC-III, a freely accessible critical care database. Sci Data 3, 160035 (2016). https://doi.org/10.1038/sdata.2016.35
 
 https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Presentation.pdf
 

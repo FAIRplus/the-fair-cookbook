@@ -20,18 +20,18 @@
 
 Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of 
 ways to share files, all with various degrees of ease and usability.
-The particular informat (URL_TO_INSERT_TERM_14 https://fairsharing.org/search?recordType=model_and_format) ion security risk management (ISRM) protocols at the sending and receiving institution (URL_TO_INSERT_TERM_13 https://fairsharing.org/search?recordType=institution) s need to 
+The particular informat (URL_TO_INSERT_TERM_7 https://fairsharing.org/search?recordType=model_and_format) ion security risk management (ISRM) protocols at the sending and receiving institution (URL_TO_INSERT_TERM_6 https://fairsharing.org/search?recordType=institution) s need to 
 be considered when one chooses and optimizes file-transfer solutions.
 One common method for transferring files is SFTP or scp (Secure Copy).
 
 
 
 ## Background info
-- SFTP: Secure or SSH File Transfer protocol is a standard (URL_TO_INSERT_TERM_15 https://fairsharing.org/search?fairsharingRegistry=Standard)  way to transfer files securely using a remote server.
+- SFTP: Secure or SSH File Transfer protocol is a standard (URL_TO_INSERT_TERM_8 https://fairsharing.org/search?fairsharingRegistry=Standard)  way to transfer files securely using a remote server.
 SFTP is not to be confused with FTP or FTPS. While FTP does not use encryption at all and therefore can be considered
 insecure, FTPS adds a layer of encryption on top of FTP but it still comes with a number of drawbacks from the FTP 
 protocol, e.g. requiring a range of open ports. SFTP uses an entirely different protocol based on SSH (secure shell) 
-and uses strong encryption for authentication informat (URL_TO_INSERT_TERM_16 https://fairsharing.org/search?recordType=model_and_format) ion as well as the data transferred.
+and uses strong encryption for authentication informat (URL_TO_INSERT_TERM_9 https://fairsharing.org/search?recordType=model_and_format) ion as well as the data transferred.
 In order to upload and download files, the client needs to communicate with the server over port 22 
 (which is the default port for SFTP) and the network configurations on the sender as well as the recipient side
 need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on
@@ -49,13 +49,13 @@ not existent
 
 ## FAIRification Objectives, Inputs and Outputs
 
-CO (URL_TO_INSERT_RECORD_20 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_21 https://fairsharing.org/FAIRsharing.thskvr) MMENT: the concepts in this recipe did not map (URL_TO_INSERT_RECORD_18 https://fairsharing.org/FAIRsharing.53edcc)  to any terms from the EDAM (URL_TO_INSERT_RECORD_19 https://fairsharing.org/FAIRsharing.a6r7zs)  ontology (URL_TO_INSERT_TERM_17 https://fairsharing.org/search?recordType=terminology_artefact) . 
+COMMENT: the concepts in this recipe did not map to any terms from the EDAM ontology. 
 
 ---
 
 ## Table of Data Standards
 
-CO (URL_TO_INSERT_RECORD_24 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_25 https://fairsharing.org/FAIRsharing.thskvr) MMENT: the concepts in this recipe did not map (URL_TO_INSERT_RECORD_23 https://fairsharing.org/FAIRsharing.53edcc)  to any terms from the FAIR (URL_TO_INSERT_RECORD_28 https://fairsharing.org/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD_26 https://fairsharing.org/FAIRsharing.2abjs5)  (URL_TO_INSERT_RECORD_27 https://fairsharing.org/FAIRsharing.2abjs5) .org database (URL_TO_INSERT_TERM_22 https://fairsharing.org/search?fairsharingRegistry=Database) .-->
+COMMENT: the concepts in this recipe did not map to any terms from the FAIRsharing.org database.-->
 
 
 ## Requirements
@@ -65,7 +65,7 @@ For client (receiver/sender):
 -	(optional) Basic programming skills to automate upload or download process
 
 For server (system administrator):
--	Compliance with company IT-security policies (URL_TO_INSERT_TERM_29 https://fairsharing.org/search?fairsharingRegistry=Policy) 
+-	Compliance with company IT-security policies (URL_TO_INSERT_TERM_10 https://fairsharing.org/search?fairsharingRegistry=Policy) 
 -	Understanding firewall configurations
 -	Ability to use terminal (bash)
 
@@ -201,7 +201,7 @@ or
 bash: sha512sum * > sha512sum.txt
 ```
 
-Windows: CertUtil -hashfile FILENA (URL_TO_INSERT_RECORD_30 https://fairsharing.org/FAIRsharing.dj8nt8) ME MD5
+Windows: CertUtil -hashfile FILENA (URL_TO_INSERT_RECORD_11 https://fairsharing.org/FAIRsharing.dj8nt8) ME MD5
 
 Recipient compares checksums:
 
@@ -215,15 +215,15 @@ bash: sha512sum -c sha512sum.txt *
 ```
 
 
-The sender can use the sender organization’s HP (URL_TO_INSERT_RECORD_31 https://fairsharing.org/FAIRsharing.kbtt7f) C (URL_TO_INSERT_RECORD_32 https://fairsharing.org/FAIRsharing.5y3gdd)  node to:
+The sender can use the sender organization’s HP (URL_TO_INSERT_RECORD_12 https://fairsharing.org/FAIRsharing.kbtt7f) C (URL_TO_INSERT_RECORD_13 https://fairsharing.org/FAIRsharing.5y3gdd)  node to:
 - (1)	set up a shell which runs in the background.
 - (2)	launch the FTP session in the same local network as the server and directory of files to be transferred.
 - (3)	Transfer the files via the filesystem on both the local and remote system.
 
-For example, an IMI collaboration project (URL_TO_INSERT_TERM_33 https://fairsharing.org/search?recordType=project)  requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
+For example, an IMI collaboration project (URL_TO_INSERT_TERM_14 https://fairsharing.org/search?recordType=project)  requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
 The process involves:
   i.  copying the files over to a secure FTP server
-  ii. the receiving institution (URL_TO_INSERT_TERM_34 https://fairsharing.org/search?recordType=institution)  copies to their server, 
+  ii. the receiving institution (URL_TO_INSERT_TERM_15 https://fairsharing.org/search?recordType=institution)  copies to their server, 
   iii. then the sender deletes the files on the FTP server.
 
 > **Pros and cons:**
@@ -244,7 +244,7 @@ This common process is described in a number of publically available resources, 
 
 ## Conclusion
 
-This content is a simple guideline (URL_TO_INSERT_TERM_35 https://fairsharing.org/search?recordType=reporting_guideline)  for using a well known secure file transfer protocol.
+This content is a simple guideline (URL_TO_INSERT_TERM_16 https://fairsharing.org/search?recordType=reporting_guideline)  for using a well known secure file transfer protocol.
 
 More modern solutions and tools exist for fast transfer or mounting of remote drive.
 
@@ -252,9 +252,9 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-* [Wikiped (URL_TO_INSERT_RECORD_36 https://fairsharing.org/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [Wikiped (URL_TO_INSERT_RECORD_17 https://fairsharing.org/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
-* [Example of customization for a specific institution (URL_TO_INSERT_TERM_37 https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+* [Example of customization for a specific institution (URL_TO_INSERT_TERM_18 https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
 * {ref}`fcb-access-aspera`
 * [Rclone](https://rclone.org)
