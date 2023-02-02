@@ -17,9 +17,9 @@
 
 ## Main Objectives
 
-The purpose of this recipe is to show how to create a metadata collection (URL_TO_INSERT_TERM_4421 https://fairsharing.org/search?recordType=collection)  form complying with a community minimal informat (URL_TO_INSERT_TERM_4422 https://fairsharing.org/search?recordType=model_and_format) ion checklist (MIUViG (URL_TO_INSERT_RECORD_4423 https://fairsharing.org/FAIRsharing.bd9566) ), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
-In addition, the recipe includes the conversion of sample metadata to an RDF (URL_TO_INSERT_RECORD_4424 https://fairsharing.org/FAIRsharing.p77ph9) /Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
-Finally, use queries expressed in SP (URL_TO_INSERT_RECORD_4426 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4425 https://fairsharing.org/FAIRsharing.87ccfd)  are shown to demonstrate potential data integration scenarios.
+The purpose of this recipe is to show how to create a metadata collection (URL_TO_INSERT_TERM_4006 https://fairsharing.org/search?recordType=collection)  form complying with a community minimal informat (URL_TO_INSERT_TERM_4007 https://fairsharing.org/search?recordType=model_and_format) ion checklist (MIUViG (URL_TO_INSERT_RECORD_4008 https://fairsharing.org/FAIRsharing.bd9566) ), in the context of Covid-19 strain sequencing assays carried on patient collected samples.
+In addition, the recipe includes the conversion of sample metadata to an RDF (URL_TO_INSERT_RECORD_4009 https://fairsharing.org/FAIRsharing.p77ph9) /Linked Data graph and checks its structure for conformance to requirement using the ShapeExpression specifications.
+Finally, use queries expressed in SP (URL_TO_INSERT_RECORD_4011 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4010 https://fairsharing.org/FAIRsharing.87ccfd)  are shown to demonstrate potential data integration scenarios.
 
 
 ## Graphical Overview
@@ -47,33 +47,33 @@ Building a community compliant metadata profile.
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_4428 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_4429 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_4427 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Format (URL_TO_INSERT_TERM_4013 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_4014 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_4012 https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
-| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org (URL_TO_INSERT_RECORD_4430 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4432 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4434 https://fairsharing.org/3538) /FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org (URL_TO_INSERT_RECORD_4431 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4433 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4435 https://fairsharing.org/3538) /bsg-s000518/) |
+| [YAML](https://yaml.org)  | [EFO](https://fairsharing.org/FAIRsharing.1gr4tz)  |  [MIxS](https://fairsharing.org/bsg-s000518/) |
 | [RDF](https://www.w3.org/TR/rdf11-concepts/)|[SIO](https://fairsharing.org/FAIRsharing.dpkb5f)|MIUVIG<!-- TODO add a link to corresponding document -->|
-| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org (URL_TO_INSERT_RECORD_4438 https://fairsharing.org/FAIRsharing.hzdzq8) ](https://fairsharing.org (URL_TO_INSERT_RECORD_4436 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4437 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4439 https://fairsharing.org/3538) /FAIRsharing.hzdzq8)||
-| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org (URL_TO_INSERT_RECORD_4440 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4441 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4442 https://fairsharing.org/3538) /FAIRsharing.a6r7zs)||
-| |[OBO foundry](https://fairsharing.org (URL_TO_INSERT_RECORD_4443 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4444 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4445 https://fairsharing.org/3538) /biodbcore-001083/)||
-| |[Wikidata](https://fairsharing.org (URL_TO_INSERT_RECORD_4446 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD_4447 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD_4448 https://fairsharing.org/3538) /FAIRsharing.PB6595)||
+| [SPARQL 1.1](https://www.w3.org/TR/sparql11-query/)|[schema.org](https://fairsharing.org/FAIRsharing.hzdzq8)||
+| [Shape Expression Syntax (SHEX)](https://shex.io/shex-semantics/)|[EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)||
+| |[OBO foundry](https://fairsharing.org/biodbcore-001083/)||
+| |[Wikidata](https://fairsharing.org/FAIRsharing.PB6595)||
 
 ## Tools
 | Tool Name| capability|
 |:--|:--|
-| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org (URL_TO_INSERT_RECORD_4450 https://fairsharing.org/FAIRsharing.8y5ayx) /draft-3/SchemaSalad.html)  | conversion from  YAML to RDF (URL_TO_INSERT_RECORD_4449 https://fairsharing.org/FAIRsharing.p77ph9)  |
+| [Semantic Annotation for Linked Arvado Data (SALAD)](https://www.commonwl.org/draft-3/SchemaSalad.html)  | conversion from  YAML to RDF (URL_TO_INSERT_RECORD_4015 https://fairsharing.org/FAIRsharing.p77ph9)  |
 |[WESO shExVisualize](http://rdfshape.weso.es/shExVisualize) | Shape expression syntax visualization |
-| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF (URL_TO_INSERT_RECORD_4451 https://fairsharing.org/FAIRsharing.p77ph9)  triple store |
+| [Virtuoso](https://virtuoso.openlinksw.com/) | RDF (URL_TO_INSERT_RECORD_4016 https://fairsharing.org/FAIRsharing.p77ph9)  triple store |
 
 
 
 ## Introduction
 
->:informat (URL_TO_INSERT_TERM_4452 https://fairsharing.org/search?recordType=model_and_format) ion_source: 
-This recipe is adapted from work carried during the Elixir Covid-19 biohackathon, by the ontology (URL_TO_INSERT_TERM_4453 https://fairsharing.org/search?recordType=terminology_artefact)  and workflow tracks and presented [here](http://covid19.genenetwork.org/) and detailed in the [following manuscript](https://github.com (URL_TO_INSERT_RECORD_4455 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/paper/paper.md) while all the code and associated material is hosted on this [github (URL_TO_INSERT_RECORD_4454 https://fairsharing.org/FAIRsharing.c55d5e)  repository](https://github.com (URL_TO_INSERT_RECORD_4456 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource).
+>:informat (URL_TO_INSERT_TERM_4017 https://fairsharing.org/search?recordType=model_and_format) ion_source: 
+This recipe is adapted from work carried during the Elixir Covid-19 biohackathon, by the ontology (URL_TO_INSERT_TERM_4018 https://fairsharing.org/search?recordType=terminology_artefact)  and workflow tracks and presented [here](http://covid19.genenetwork.org/) and detailed in the [following manuscript](https://github.com/arvados/bh20-seq-resource/blob/master/paper/paper.md) while all the code and associated material is hosted on this [github (URL_TO_INSERT_RECORD_4019 https://fairsharing.org/FAIRsharing.c55d5e)  repository](https://github.com/arvados/bh20-seq-resource).
 
 
->:informat (URL_TO_INSERT_TERM_4457 https://fairsharing.org/search?recordType=model_and_format) ion_source: 
+>:informat (URL_TO_INSERT_TERM_4020 https://fairsharing.org/search?recordType=model_and_format) ion_source: 
 [Robert Hoendorf](https:// "title"), [Jose Emilio Labra Gayo](https:// "title"),[Thomas Liener](https:// "title"), [Nuria Queralt Rosinach](https:// "title")
-, [Tazro  Ohta](https:// "title"), [Philippe Rocca-Serra](https:// "title"), [Claus Weilland](https:// "title"), [Piotr Prins](https:// "title"),  [Danielle Welter](https:// "title"). Thomas Liener  and Danielle Welter acted as coordinator between the ontology (URL_TO_INSERT_TERM_4458 https://fairsharing.org/search?recordType=terminology_artefact)  track and the workflow track led by Piotr Prins. 
+, [Tazro  Ohta](https:// "title"), [Philippe Rocca-Serra](https:// "title"), [Claus Weilland](https:// "title"), [Piotr Prins](https:// "title"),  [Danielle Welter](https:// "title"). Thomas Liener  and Danielle Welter acted as coordinator between the ontology (URL_TO_INSERT_TERM_4021 https://fairsharing.org/search?recordType=terminology_artefact)  track and the workflow track led by Piotr Prins. 
 
 
 
@@ -83,9 +83,9 @@ Therefore, 6 essential steps were performed:
 > * Listing essential sample attributes
 > * Performing a semantic anchoring of these attributes
 > * Defining a formal representation capturing those requirements
-> * Expressing instance data in RDF (URL_TO_INSERT_RECORD_4460 https://fairsharing.org/FAIRsharing.p77ph9) /linked data format (URL_TO_INSERT_TERM_4459 https://fairsharing.org/search?recordType=model_and_format) 
-> * Validating RDF (URL_TO_INSERT_RECORD_4461 https://fairsharing.org/FAIRsharing.p77ph9)  instance data against requirements using a Shape Expression(SHEX)
-> * Testing query cases by formulating SP (URL_TO_INSERT_RECORD_4463 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4462 https://fairsharing.org/FAIRsharing.87ccfd)  queries
+> * Expressing instance data in RDF (URL_TO_INSERT_RECORD_4023 https://fairsharing.org/FAIRsharing.p77ph9) /linked data format (URL_TO_INSERT_TERM_4022 https://fairsharing.org/search?recordType=model_and_format) 
+> * Validating RDF (URL_TO_INSERT_RECORD_4024 https://fairsharing.org/FAIRsharing.p77ph9)  instance data against requirements using a Shape Expression(SHEX)
+> * Testing query cases by formulating SP (URL_TO_INSERT_RECORD_4026 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4025 https://fairsharing.org/FAIRsharing.87ccfd)  queries
 
 
 The following sections detail each of these steps
@@ -119,17 +119,17 @@ Defining the metadata fields-1
 ````
 
 
-<br>Based on the [Genome Standards Consortium](https://gensc.org (URL_TO_INSERT_RECORD_4469 https://fairsharing.org/3528) /) metadata requirement profile for uncultivated viral sample, also known as the [Minimum Informat (URL_TO_INSERT_TERM_4465 https://fairsharing.org/search?recordType=model_and_format) ion About an Uncultivated Virus Genome (URL_TO_INSERT_RECORD_4466 https://fairsharing.org/FAIRsharing.bd9566)  (MIUViG (URL_TO_INSERT_RECORD_4467 https://fairsharing.org/FAIRsharing.bd9566) )](https://github.com (URL_TO_INSERT_RECORD_4470 https://fairsharing.org/FAIRsharing.c55d5e) /GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx), the first step is to anchor the tags defined by GSC (URL_TO_INSERT_RECORD_4468 https://fairsharing.org/3528)  and approved by the those **International Nucleotide Sequence Database (URL_TO_INSERT_TERM_4464 https://fairsharing.org/search?fairsharingRegistry=Database)  Collaboration** ([INSDC](http://www.insdc.org/)) tags to one (or more) semantic framework(s).
+<br>Based on the [Genome Standards Consortium](https://gensc.org/) metadata requirement profile for uncultivated viral sample, also known as the [Minimum Informat (URL_TO_INSERT_TERM_4028 https://fairsharing.org/search?recordType=model_and_format) ion About an Uncultivated Virus Genome (URL_TO_INSERT_RECORD_4029 https://fairsharing.org/FAIRsharing.bd9566)  (MIUViG (URL_TO_INSERT_RECORD_4030 https://fairsharing.org/FAIRsharing.bd9566) )](https://github.com/GenomicsStandardsConsortium/mixs/blob/master/UViGs_MIxS.xlsx), the first step is to anchor the tags defined by GSC (URL_TO_INSERT_RECORD_4031 https://fairsharing.org/3528)  and approved by the those **International Nucleotide Sequence Database (URL_TO_INSERT_TERM_4027 https://fairsharing.org/search?fairsharingRegistry=Database)  Collaboration** ([INSDC](http://www.insdc.org/)) tags to one (or more) semantic framework(s).
 
 
 
 ## Semantic anchoring of metadata element:
 
-Several distinct to the following resources map (URL_TO_INSERT_RECORD_4471 https://fairsharing.org/FAIRsharing.53edcc) pings have been made by the developers :
+Several distinct to the following resources map (URL_TO_INSERT_RECORD_4032 https://fairsharing.org/FAIRsharing.53edcc) pings have been made by the developers :
     
 - [OBO Foundry](https://obofoundry.org)
-- [Wikidata](https://wikidata.org (URL_TO_INSERT_RECORD_4472 https://fairsharing.org/FAIRsharing.6s749p) )
-- [schema.org (URL_TO_INSERT_RECORD_4473 https://fairsharing.org/FAIRsharing.hzdzq8) ](https://schema.org (URL_TO_INSERT_RECORD_4474 https://fairsharing.org/FAIRsharing.hzdzq8) )
+- [Wikidata](https://wikidata.org)
+- [schema.org](https://schema.org)
 
 <!-- ![](/images/Ro92a7D.png) -->
 <!-- <div><img src="/images/Ro92a7D.png" width="800" style="border:1px solid black"/></div> -->
@@ -150,7 +150,7 @@ Semantic anchoring of metadata element
 
 <br>
 
-However, for the final implementation, only the OBO (URL_TO_INSERT_RECORD_4475 https://fairsharing.org/FAIRsharing.847069)  related map (URL_TO_INSERT_RECORD_4476 https://fairsharing.org/FAIRsharing.53edcc) pings have been used as show in the following figure.
+However, for the final implementation, only the OBO (URL_TO_INSERT_RECORD_4033 https://fairsharing.org/FAIRsharing.847069)  related map (URL_TO_INSERT_RECORD_4034 https://fairsharing.org/FAIRsharing.53edcc) pings have been used as show in the following figure.
 
 
 <!-- <div><img src="/images/Lc7FcPs.png" width="800" style="border:1px solid black"/></div> -->
@@ -177,15 +177,15 @@ Semantic anchoring of metadata element - final
 
 ## 1. metadata schema definition using SALAD schema language:
 
-Quoting the project (URL_TO_INSERT_TERM_4477 https://fairsharing.org/search?recordType=project) 's documentation, "*[the Semantic Annotations for Linked Avro Data (SALAD)](https://github.com (URL_TO_INSERT_RECORD_4484 https://fairsharing.org/FAIRsharing.c55d5e) /common-workflow-language/schema_salad) is a schema language for describing JSON (URL_TO_INSERT_RECORD_4483 https://fairsharing.org/FAIRsharing.5bbab9)  or YAML structured linked data documents. `SALAD schema` describes rules for preprocessing, structural validation, and hyperlink checking for documents described by a Salad schema. Salad supports rich data model (URL_TO_INSERT_TERM_4478 https://fairsharing.org/search?recordType=model_and_format) ing with inheritance, template specialization, object identifier (URL_TO_INSERT_TERM_4481 https://fairsharing.org/search?recordType=identifier_schema) s, object references, documentation generation, code generation, and transformat (URL_TO_INSERT_TERM_4480 https://fairsharing.org/search?recordType=model_and_format) ion to RDF (URL_TO_INSERT_RECORD_4482 https://fairsharing.org/FAIRsharing.p77ph9) . SALAD provides a bridge between document and record oriented data model (URL_TO_INSERT_TERM_4479 https://fairsharing.org/search?recordType=model_and_format) ing and the Semantic Web."*
+Quoting the project (URL_TO_INSERT_TERM_4035 https://fairsharing.org/search?recordType=project) 's documentation, "*[the Semantic Annotations for Linked Avro Data (SALAD)](https://github.com/common-workflow-language/schema_salad) is a schema language for describing JSON (URL_TO_INSERT_RECORD_4041 https://fairsharing.org/FAIRsharing.5bbab9)  or YAML structured linked data documents. `SALAD schema` describes rules for preprocessing, structural validation, and hyperlink checking for documents described by a Salad schema. Salad supports rich data model (URL_TO_INSERT_TERM_4036 https://fairsharing.org/search?recordType=model_and_format) ing with inheritance, template specialization, object identifier (URL_TO_INSERT_TERM_4039 https://fairsharing.org/search?recordType=identifier_schema) s, object references, documentation generation, code generation, and transformat (URL_TO_INSERT_TERM_4038 https://fairsharing.org/search?recordType=model_and_format) ion to RDF (URL_TO_INSERT_RECORD_4040 https://fairsharing.org/FAIRsharing.p77ph9) . SALAD provides a bridge between document and record oriented data model (URL_TO_INSERT_TERM_4037 https://fairsharing.org/search?recordType=model_and_format) ing and the Semantic Web."*
 
-The SALAD schema is used extensively by the [Common Workflow Language(CWL)](https://github.com (URL_TO_INSERT_RECORD_4485 https://fairsharing.org/FAIRsharing.c55d5e) /common-workflow-language) for defining and specifying computational workflows. 
-But in this example, we are using the SALAD schema to capture the annotation requirements in a [YAML](https://yaml.org) document, while also embedding the semantics constraints, which can then be used to  to build a web form (see below) but also support conversion to RDF (URL_TO_INSERT_RECORD_4486 https://fairsharing.org/FAIRsharing.p77ph9) /LinkedData.
+The SALAD schema is used extensively by the [Common Workflow Language(CWL)](https://github.com/common-workflow-language) for defining and specifying computational workflows. 
+But in this example, we are using the SALAD schema to capture the annotation requirements in a [YAML](https://yaml.org) document, while also embedding the semantics constraints, which can then be used to  to build a web form (see below) but also support conversion to RDF (URL_TO_INSERT_RECORD_4042 https://fairsharing.org/FAIRsharing.p77ph9) /LinkedData.
 
- > :warning: This YAML document must be a UTF-8 text encoded, JSON (URL_TO_INSERT_RECORD_4487 https://fairsharing.org/FAIRsharing.5bbab9) -compatible subset of YAML in order to be processed by the SALAD schema processor.
+ > :warning: This YAML document must be a UTF-8 text encoded, JSON (URL_TO_INSERT_RECORD_4043 https://fairsharing.org/FAIRsharing.5bbab9) -compatible subset of YAML in order to be processed by the SALAD schema processor.
 
 
-Below is a partial view of the YAML defined metadata  form, showing how `host` informat (URL_TO_INSERT_TERM_4488 https://fairsharing.org/search?recordType=model_and_format) ion requirements have been defined:
+Below is a partial view of the YAML defined metadata  form, showing how `host` informat (URL_TO_INSERT_TERM_4044 https://fairsharing.org/search?recordType=model_and_format) ion requirements have been defined:
 
 
 ```bash
@@ -248,7 +248,7 @@ $graph:
           _id: http://www.ebi.ac.uk/efo/EFO_0000727
 ```
 
-`source`: https://github.com (URL_TO_INSERT_RECORD_4489 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml
+`source`: https://github.com (URL_TO_INSERT_RECORD_4045 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-schema.yml
 
 
 ### The corresponding metadata acquisition web form:
@@ -290,7 +290,7 @@ The corresponding metadata acquisition web form
 ## 2. Exemplar instance data:
 
 
-When users submit informat (URL_TO_INSERT_TERM_4490 https://fairsharing.org/search?recordType=model_and_format) ion via the form (or by other programatic means), an instance YAML file is generated, which looks like this:
+When users submit informat (URL_TO_INSERT_TERM_4046 https://fairsharing.org/search?recordType=model_and_format) ion via the form (or by other programatic means), an instance YAML file is generated, which looks like this:
 
 
 ```bash
@@ -343,21 +343,21 @@ submitter:
 
 ```
 
-`source`: https://github.com (URL_TO_INSERT_RECORD_4491 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml
+`source`: https://github.com (URL_TO_INSERT_RECORD_4047 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/example/maximum_metadata_example.yaml
 
 ## 3. Conversion from YAML to RDF:
 
-Using the schema SALAD python package, the YAML instance file can be easily converted to RDF (URL_TO_INSERT_RECORD_4492 https://fairsharing.org/FAIRsharing.p77ph9)  as shown in the code snippet below:
+Using the schema SALAD python package, the YAML instance file can be easily converted to RDF (URL_TO_INSERT_RECORD_4048 https://fairsharing.org/FAIRsharing.p77ph9)  as shown in the code snippet below:
 
 ```bash
 $ pip install schema_salad
 ```
-Get JSON (URL_TO_INSERT_RECORD_4493 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_4494 https://fairsharing.org/FAIRsharing.8f9bbb)  context::
+Get JSON (URL_TO_INSERT_RECORD_4049 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_4050 https://fairsharing.org/FAIRsharing.8f9bbb)  context::
 ```bash
 $ schema-salad-tool --print-jsonld-context myschema.yml mydocument.yml
 ```
 
-Convert a document to JSON (URL_TO_INSERT_RECORD_4495 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_4496 https://fairsharing.org/FAIRsharing.8f9bbb) ::
+Convert a document to JSON (URL_TO_INSERT_RECORD_4051 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD_4052 https://fairsharing.org/FAIRsharing.8f9bbb) ::
 ```bash
 $ schema-salad-tool --print-pre myschema.yml mydocument.yml > mydocument.jsonld
 
@@ -368,9 +368,9 @@ $ schema-salad-tool --print-pre myschema.yml mydocument.yml > mydocument.jsonld
 
 ### 4.1 What is ShEx?
 
-ShEx stands for `Shape Expression` and is a syntax for validating and describing RDF (URL_TO_INSERT_RECORD_4499 https://fairsharing.org/FAIRsharing.p77ph9)  graphs. ShEx expressions can be used both to describe RDF (URL_TO_INSERT_RECORD_4500 https://fairsharing.org/FAIRsharing.p77ph9)  and check the conformance of RDF (URL_TO_INSERT_RECORD_4501 https://fairsharing.org/FAIRsharing.p77ph9)  data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard (URL_TO_INSERT_TERM_4497 https://fairsharing.org/search?fairsharingRegistry=Standard)  nor is it on the W3C Standard (URL_TO_INSERT_TERM_4498 https://fairsharing.org/search?fairsharingRegistry=Standard) s Track.
+ShEx stands for `Shape Expression` and is a syntax for validating and describing RDF (URL_TO_INSERT_RECORD_4055 https://fairsharing.org/FAIRsharing.p77ph9)  graphs. ShEx expressions can be used both to describe RDF (URL_TO_INSERT_RECORD_4056 https://fairsharing.org/FAIRsharing.p77ph9)  and check the conformance of RDF (URL_TO_INSERT_RECORD_4057 https://fairsharing.org/FAIRsharing.p77ph9)  data. The ShEx language  specification was published by the W3C Shape Expressions Community Group but it is not a W3C Standard (URL_TO_INSERT_TERM_4053 https://fairsharing.org/search?fairsharingRegistry=Standard)  nor is it on the W3C Standard (URL_TO_INSERT_TERM_4054 https://fairsharing.org/search?fairsharingRegistry=Standard) s Track.
 
-It should be noted that the current W3C Technical Recommendations for RDF (URL_TO_INSERT_RECORD_4502 https://fairsharing.org/FAIRsharing.p77ph9)  shape validation is the [SHACL specification](https://www.w3.org/TR/shacl (URL_TO_INSERT_RECORD_4503 https://fairsharing.org/FAIRsharing.f1449d) /).
+It should be noted that the current W3C Technical Recommendations for RDF (URL_TO_INSERT_RECORD_4058 https://fairsharing.org/FAIRsharing.p77ph9)  shape validation is the [SHACL specification](https://www.w3.org/TR/shacl/).
 
 ShEx was selected owing to its simplicity, ease of use and availability of experts.
 
@@ -378,7 +378,7 @@ ShEx was selected owing to its simplicity, ease of use and availability of exper
 ### 4.2 Why is this needed?
 
 
-While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF (URL_TO_INSERT_RECORD_4504 https://fairsharing.org/FAIRsharing.p77ph9)  which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert ([Dr Jose Emilio Labra Gayo - (Oviedo Uni)](http://di002.edv.uniovi.es/~labra/), the following [Shape Expression syntax](https://shex.io/shex-semantics/) profile was developed (URL_TO_INSERT_RECORD_4507 https://fairsharing.org/FAIRsharing.31385c)  and used to validate the RDF (URL_TO_INSERT_RECORD_4505 https://fairsharing.org/FAIRsharing.p77ph9)  before persistence to the SP (URL_TO_INSERT_RECORD_4508 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4506 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint.
+While defining a SALAD schema using YAML allows to list key entities and their attributes, it does not allow to check constraints. This has to be done on the RDF (URL_TO_INSERT_RECORD_4059 https://fairsharing.org/FAIRsharing.p77ph9)  which needs to be checks for compliancee against a set of constraints which can be expressed using ShEx. Working with a ShEx expert ([Dr Jose Emilio Labra Gayo - (Oviedo Uni)](http://di002.edv.uniovi.es/~labra/), the following [Shape Expression syntax](https://shex.io/shex-semantics/) profile was developed (URL_TO_INSERT_RECORD_4062 https://fairsharing.org/FAIRsharing.31385c)  and used to validate the RDF (URL_TO_INSERT_RECORD_4060 https://fairsharing.org/FAIRsharing.p77ph9)  before persistence to the SP (URL_TO_INSERT_RECORD_4063 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4061 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint.
 
 
 ```bash
@@ -452,9 +452,9 @@ PREFIX wikidata: <http://www.wikidata.org/entity/>
 }
 ```
 
-`source:` https://github.com (URL_TO_INSERT_RECORD_4509 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf
+`source:` https://github.com (URL_TO_INSERT_RECORD_4064 https://fairsharing.org/FAIRsharing.c55d5e) /arvados/bh20-seq-resource/blob/master/bh20sequploader/bh20seq-shex.rdf
 
-Using the [WESO](http://www.weso.es/) developed (URL_TO_INSERT_RECORD_4510 https://fairsharing.org/FAIRsharing.31385c)  [RDF shape viewer](http://rdfshape.weso.es/),  Shape Expression can be rendered graphical. In the example below a [schema.org (URL_TO_INSERT_RECORD_4511 https://fairsharing.org/FAIRsharing.hzdzq8) ](https://schema.org (URL_TO_INSERT_RECORD_4512 https://fairsharing.org/FAIRsharing.hzdzq8) ) base shex expression in presented.
+Using the [WESO](http://www.weso.es/) developed (URL_TO_INSERT_RECORD_4065 https://fairsharing.org/FAIRsharing.31385c)  [RDF shape viewer](http://rdfshape.weso.es/),  Shape Expression can be rendered graphical. In the example below a [schema.org](https://schema.org) base shex expression in presented.
 
 <!-- <div><img src="/images/z2rriQu.png" link="http://rdfshape.weso.es/shExVisualize?activeSchemaTab=%23schemaTextArea&schema=PREFIX%20%3A%20%3Chttp%3A%2F%2Fwhatever%2F%3E%0APREFIX%20MainSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23MainSchema%2F%3E%0APREFIX%20hostSchema%3A%20%3Chttp%3A%2F%2Fbiohackathon.org%2Fbh20-seq-schema%23hostSchema%2F%3E%0APREFIX%20xsd%3A%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20efo%3A%20%20%20%3Chttp%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2F%3E%0Aprefix%20my%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20ex%3A%20%3Chttp%3A%2F%2Fexample.org%2F%3E%0Aprefix%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0Aprefix%20geo%3A%20%3Chttp%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23%3E%0Aprefix%20sdo%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0A%0A%3ASubmissionShape%20%7B%0A%20%20MainSchema%3Ahost%20%20%20%20%20%20%20%40%3AHost%20%3B%20%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Asample%20%20%20%20%20%40%3ASample%20%3B%0A%20%20MainSchema%3Asubmitter%20%20%40%3ASubmitter%20%3B%0A%20%20MainSchema%3Atechnology%20%40%3ATechnology%20%3B%0A%7D%0A%20%20%0A%3ASubmitter%20%7B%0A%20%20%09sdo%3AinfectiousAgentClass%20xsd%3Astring%3B%0A%20%20%09sdo%3AinfectiousAgent%20xsd%3Astring%0A%7D%20%0A%20%20%0A%3AHost%20%7B%0A%20a%20%5B%20sdo%3APerson%20%20%0A%20%20%20%20%20sdo%3APatient%20%0A%20%20%20%20%20sdo%3AAnimal%20%20%20%23not%20defined%20yet%20in%20sdo%0A%20%5D%3B%20%0A%20sdo%3Aidentifier%20IRI%2B%3B%0A%20sdo%3Aname%20xsd%3Astring%3B%0A%20sdo%3Agender%20%5B%22female%22%20%22male%22%20%22other%22%20%22NA%22%5D%3B%0A%20sdo%3Aage%20xsd%3Ainteger%3B%0A%20sdo%3Aunit%20IRI%2B%3B%0A%20sdo%3AhealthCondition%20IRI%2B%3B%0A%20sdo%3Adrug%20%40%3ADrug%20%2B%3B%0A%20sdo%3AprimaryPrevention%20%40%3APrimaryPrevention%20%3B%0A%20sdo%3Acomment%20xsd%3Astring%20%2B%0A%7D%20%20%0A%20%0A%3ADrug%20IRI%0A%0A%3APrimaryPrevention%20%7B%0A%7D%0A%0A%3ASample%20%7B%0A%20%20%09sdo%3AdateCreated%20xsd%3ADate%3B%0A%20%20%09sdo%3AfromLocation%20IRI%2B%3B%0A%20%20%09sdo%3AfromLocation%20%40geo%3AGeoLocation%3B%20%23to%20defined%20or%20fetch%20from%20existing%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Asender%20IRI%0A%7D%20%0A%0A%3ASubmitter%20%7B%0A%20%20%09rdf%3Atype%20%5B%20sdo%3APerson%20%5D%3B%0A%20%20%09sdo%3Aidentifier%20IRI%3B%0A%20%20%09sdo%3Afullname%20xsd%3Astring%3B%0A%20%20%09sdo%3Arolename%20xsd%3Astring%3B%0A%20%20%7D%20%0A%0A%3ATechnology%20%7B%0A%20%20%09sdo%3AmeasurementTechnique%20IRI%2B%20%3B%0A%20%20%09sdo%3AmedicalDevice%20IRI%2B%3B%0A%7D%20%0A%0Ageo%3AGeoLocation%20%7B%7D&schemaEmbedded=false&schemaEngine=ShEx&schemaFormat=ShExC&schemaFormatTextArea=ShExC" width="800" style="border:1px solid black"></div>
  -->
@@ -482,15 +482,15 @@ http://covid19.genenetwork.org/blog?id=using-covid-19-pubseq-part1
 
 ### 5.1. The SPARQL endpoint
 
-The following endpoint during the Elixir Covid-19 Biohackthon and metadata informat (URL_TO_INSERT_TERM_4513 https://fairsharing.org/search?recordType=model_and_format) ion converted from the YAML definition to RDF (URL_TO_INSERT_RECORD_4515 https://fairsharing.org/FAIRsharing.p77ph9)  turtle format (URL_TO_INSERT_TERM_4514 https://fairsharing.org/search?recordType=model_and_format)  was loaded in the following SP (URL_TO_INSERT_RECORD_4517 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4516 https://fairsharing.org/FAIRsharing.87ccfd)  Endpoint.
+The following endpoint during the Elixir Covid-19 Biohackthon and metadata informat (URL_TO_INSERT_TERM_4066 https://fairsharing.org/search?recordType=model_and_format) ion converted from the YAML definition to RDF (URL_TO_INSERT_RECORD_4068 https://fairsharing.org/FAIRsharing.p77ph9)  turtle format (URL_TO_INSERT_TERM_4067 https://fairsharing.org/search?recordType=model_and_format)  was loaded in the following SP (URL_TO_INSERT_RECORD_4070 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_4069 https://fairsharing.org/FAIRsharing.87ccfd)  Endpoint.
 
 http://sparql.genenetwork.org/sparql/
 
-The collection (URL_TO_INSERT_TERM_4518 https://fairsharing.org/search?recordType=collection)  of metadata in rdf format (URL_TO_INSERT_TERM_4519 https://fairsharing.org/search?recordType=model_and_format)  is available for download: https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl
+The collection (URL_TO_INSERT_TERM_4071 https://fairsharing.org/search?recordType=collection)  of metadata in rdf format (URL_TO_INSERT_TERM_4072 https://fairsharing.org/search?recordType=model_and_format)  is available for download: https://collections.lugli.arvadosapi.com/c=lugli-4zz18-z513nlpqm03hpca/mergedmetadata.ttl
 
 ### 5.2. Exploring the metadata described the FASTQ sequence files
 
-Limiting search (URL_TO_INSERT_RECORD_4520 https://fairsharing.org/FAIRsharing.52b22c)  to metadata add http://covid-19.genenetwork.org/graph/metadata.ttl in the top input box. Now you can find a predicate for submitter that looks like http://biohackathon.org/bh20-seq-schema#MainSchema/submitter.
+Limiting search (URL_TO_INSERT_RECORD_4073 https://fairsharing.org/FAIRsharing.52b22c)  to metadata add http://covid-19.genenetwork.org/graph/metadata.ttl in the top input box. Now you can find a predicate for submitter that looks like http://biohackathon.org/bh20-seq-schema#MainSchema/submitter.
 
 
 ```bash
@@ -507,12 +507,12 @@ select distinct ?sample ?p ?o
 
 ## Conclusions
 
-In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF (URL_TO_INSERT_RECORD_4522 https://fairsharing.org/FAIRsharing.p77ph9)  and Shape Express standard (URL_TO_INSERT_TERM_4521 https://fairsharing.org/search?fairsharingRegistry=Standard) . 
+In this recipe, we have presented how to implement a minimal medata profile and validate data entry with a specific technology stack: namely using RDF (URL_TO_INSERT_RECORD_4075 https://fairsharing.org/FAIRsharing.p77ph9)  and Shape Express standard (URL_TO_INSERT_TERM_4074 https://fairsharing.org/search?fairsharingRegistry=Standard) . 
 Other approaches are possible and we provide details in a dedicated recipe where JSON schema<!-- TODO add a link to corresponding document --> and JSON-LD<!-- TODO add a link to corresponding document --> technologies are used. 
-This recipe tackles an important aspect of the FAIR (URL_TO_INSERT_RECORD_4524 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_4523 https://fairsharing.org/FAIRsharing.WWI10U) , shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
-The recipe therefore provides a piece of the jigsaw to establish a FAIR (URL_TO_INSERT_RECORD_4525 https://fairsharing.org/FAIRsharing.WWI10U)  datasets.
-There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF (URL_TO_INSERT_RECORD_4527 https://fairsharing.org/FAIRsharing.p77ph9)  graph  could be assigned a persistent identifier (URL_TO_INSERT_TERM_4526 https://fairsharing.org/search?recordType=identifier_schema) s (PID).
-Another improvement could be a better integration with repositories (URL_TO_INSERT_TERM_4528 https://fairsharing.org/search?recordType=repository)  such FAIR (URL_TO_INSERT_RECORD_4530 https://fairsharing.org/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD_4529 https://fairsharing.org/FAIRsharing.2abjs5)  or the main sequence data submission systems such as INSDC deposition pipelines.
+This recipe tackles an important aspect of the FAIR (URL_TO_INSERT_RECORD_4077 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_4076 https://fairsharing.org/FAIRsharing.WWI10U) , shining the light on the need to provide sufficient descriptive metadata to associate with an assay data file to allow its correct interpretation.
+The recipe therefore provides a piece of the jigsaw to establish a FAIR (URL_TO_INSERT_RECORD_4078 https://fairsharing.org/FAIRsharing.WWI10U)  datasets.
+There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF (URL_TO_INSERT_RECORD_4080 https://fairsharing.org/FAIRsharing.p77ph9)  graph  could be assigned a persistent identifier (URL_TO_INSERT_TERM_4079 https://fairsharing.org/search?recordType=identifier_schema) s (PID).
+Another improvement could be a better integration with repositories (URL_TO_INSERT_TERM_4081 https://fairsharing.org/search?recordType=repository)  such FAIR (URL_TO_INSERT_RECORD_4083 https://fairsharing.org/FAIRsharing.WWI10U) sharing (URL_TO_INSERT_RECORD_4082 https://fairsharing.org/FAIRsharing.2abjs5)  or the main sequence data submission systems such as INSDC deposition pipelines.
 
 ### What to read next?
 

@@ -16,7 +16,7 @@
 ```` 
 
 ## Main objective
-This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL (URL_TO_INSERT_RECORD_4140 https://fairsharing.org/FAIRsharing.m3jtpg)  submission criteria, focusing on data format (URL_TO_INSERT_TERM_4139 https://fairsharing.org/search?recordType=model_and_format) s, structures, and vocabularies. 
+This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL (URL_TO_INSERT_RECORD_3752 https://fairsharing.org/FAIRsharing.m3jtpg)  submission criteria, focusing on data format (URL_TO_INSERT_TERM_3751 https://fairsharing.org/search?recordType=model_and_format) s, structures, and vocabularies. 
 This recipe is meant to address the Findability and Interoperability of such type of data.
 
 ## Graphical overview of the Recipe FAIRification Objectives
@@ -34,17 +34,17 @@ This recipe is meant to address the Findability and Interoperability of such typ
 
 
 ## Introduction
-Bioactivity data, as stored in public arch (URL_TO_INSERT_RECORD_4144 https://fairsharing.org/FAIRsharing.52b22c) ives such as the European repository (URL_TO_INSERT_TERM_4141 https://fairsharing.org/search?recordType=repository)  [CHEMBL](https://www.ebi.ac.uk/chembl (URL_TO_INSERT_RECORD_4143 https://fairsharing.org/FAIRsharing.m3jtpg) /) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov (URL_TO_INSERT_RECORD_4146 https://fairsharing.org/FAIRsharing.qt3w7z) /) in together with chemical data and omics data, can be used to search (URL_TO_INSERT_RECORD_4145 https://fairsharing.org/FAIRsharing.52b22c)  for new `hits`(compounds with desired property in drug screening), for example by using cell line informat (URL_TO_INSERT_TERM_4142 https://fairsharing.org/search?recordType=model_and_format) ion, compound ID as input to queries over such resources.
+Bioactivity data, as stored in public arch (URL_TO_INSERT_RECORD_3755 https://fairsharing.org/FAIRsharing.52b22c) ives such as the European repository (URL_TO_INSERT_TERM_3753 https://fairsharing.org/search?recordType=repository)  [CHEMBL](https://www.ebi.ac.uk/chembl/) or its US counterpart [PubChem](https://pubchem.ncbi.nlm.nih.gov/) in together with chemical data and omics data, can be used to search (URL_TO_INSERT_RECORD_3756 https://fairsharing.org/FAIRsharing.52b22c)  for new `hits`(compounds with desired property in drug screening), for example by using cell line informat (URL_TO_INSERT_TERM_3754 https://fairsharing.org/search?recordType=model_and_format) ion, compound ID as input to queries over such resources.
 
-Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study informat (URL_TO_INSERT_TERM_4147 https://fairsharing.org/search?recordType=model_and_format) ion.
+Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study informat (URL_TO_INSERT_TERM_3757 https://fairsharing.org/search?recordType=model_and_format) ion.
 
-The FAIR (URL_TO_INSERT_RECORD_4149 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_4148 https://fairsharing.org/FAIRsharing.WWI10U)  for data management can guide the improvements of pharmacokinetic properties of compounds and the identification of drug targets by enhancing the reporting of `bioactivity data`.
+The FAIR (URL_TO_INSERT_RECORD_3759 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_3758 https://fairsharing.org/FAIRsharing.WWI10U)  for data management can guide the improvements of pharmacokinetic properties of compounds and the identification of drug targets by enhancing the reporting of `bioactivity data`.
 
-Among the FAIR (URL_TO_INSERT_RECORD_4153 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_4152 https://fairsharing.org/FAIRsharing.WWI10U) , the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standard (URL_TO_INSERT_TERM_4150 https://fairsharing.org/search?fairsharingRegistry=Standard) s`  (R1.3. (meta)data meet domain-relevant community standard (URL_TO_INSERT_TERM_4151 https://fairsharing.org/search?fairsharingRegistry=Standard) s) are essential.
+Among the FAIR (URL_TO_INSERT_RECORD_3763 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_3762 https://fairsharing.org/FAIRsharing.WWI10U) , the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standard (URL_TO_INSERT_TERM_3760 https://fairsharing.org/search?fairsharingRegistry=Standard) s`  (R1.3. (meta)data meet domain-relevant community standard (URL_TO_INSERT_TERM_3761 https://fairsharing.org/search?fairsharingRegistry=Standard) s) are essential.
 
-In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, format (URL_TO_INSERT_TERM_4154 https://fairsharing.org/search?recordType=model_and_format) s and vocabularies for the reuse of such datasets. 
+In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, format (URL_TO_INSERT_TERM_3764 https://fairsharing.org/search?recordType=model_and_format) s and vocabularies for the reuse of such datasets. 
 
-On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https://fairsharing.org/FAIRsharing.52b22c) ives, such as [ChEMBL](https://www.ebi.ac.uk/chembl (URL_TO_INSERT_RECORD_4155 https://fairsharing.org/FAIRsharing.m3jtpg) /), [PubChem](https://pubchem.ncbi.nlm.nih.gov (URL_TO_INSERT_RECORD_4158 https://fairsharing.org/FAIRsharing.qt3w7z) /), and [ECBD](https://ecbd.eu (URL_TO_INSERT_RECORD_4156 https://fairsharing.org/3717) /) also have their own requirements for data submission.
+On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_3765 https://fairsharing.org/FAIRsharing.52b22c) ives, such as [ChEMBL](https://www.ebi.ac.uk/chembl/), [PubChem](https://pubchem.ncbi.nlm.nih.gov/), and [ECBD](https://ecbd.eu/) also have their own requirements for data submission.
 
 
 ### Data content
@@ -59,7 +59,7 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
    </td>
   </tr>
   <tr>
-   <td>Chemistry (URL_TO_INSERT_RECORD_4159 https://fairsharing.org/3524)  (SDF)
+   <td>Chemistry (URL_TO_INSERT_RECORD_3766 https://fairsharing.org/3524)  (SDF)
    </td>
    <td>Structure ID
    </td>
@@ -70,7 +70,7 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
 
 <li>SMILE
 
-<li>InChI (URL_TO_INSERT_RECORD_4160 https://fairsharing.org/FAIRsharing.ddk9t9) 
+<li>InChI (URL_TO_INSERT_RECORD_3767 https://fairsharing.org/FAIRsharing.ddk9t9) 
 
 <li>CID
 </li>
@@ -80,7 +80,7 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
   <tr>
    <td>Target 
    </td>
-   <td>Protein (URL_TO_INSERT_RECORD_4161 https://fairsharing.org/FAIRsharing.rtndct) /GENE ID
+   <td>Protein (URL_TO_INSERT_RECORD_3768 https://fairsharing.org/FAIRsharing.rtndct) /GENE ID
    </td>
    <td>PN_ or SwissProt ID
    </td>
@@ -90,7 +90,7 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
    </td>
    <td>Typology
    </td>
-   <td>Binding, FR (URL_TO_INSERT_RECORD_4162 https://fairsharing.org/FAIRsharing.e7e609) ET, SP (URL_TO_INSERT_RECORD_4163 https://fairsharing.org/FAIRsharing.s63y3p) R, Inhibition, phenotypic cellular
+   <td>Binding, FR (URL_TO_INSERT_RECORD_3769 https://fairsharing.org/FAIRsharing.e7e609) ET, SP (URL_TO_INSERT_RECORD_3770 https://fairsharing.org/FAIRsharing.s63y3p) R, Inhibition, phenotypic cellular
    </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
    <td>
 <ul>
 <li>OMETIFF
-<li>Matrix Format (URL_TO_INSERT_TERM_4164 https://fairsharing.org/search?recordType=model_and_format) -Zarr
+<li>Matrix Format (URL_TO_INSERT_TERM_3771 https://fairsharing.org/search?recordType=model_and_format) -Zarr
 </li>
 </ul>
    </td>
@@ -126,17 +126,17 @@ On the other hand, public bioactivity data arch (URL_TO_INSERT_RECORD_4157 https
 
 ### Minimum metadata 
 
-A **minimum metadata set** represents a collection (URL_TO_INSERT_TERM_4165 https://fairsharing.org/search?recordType=collection)  of metadata items that should ideally be systematically supplied to support interpretation by humans or machines within a specific domain, for instance bioactivity experimental data. The minimum metadata set includes three parts: 
+A **minimum metadata set** represents a collection (URL_TO_INSERT_TERM_3772 https://fairsharing.org/search?recordType=collection)  of metadata items that should ideally be systematically supplied to support interpretation by humans or machines within a specific domain, for instance bioactivity experimental data. The minimum metadata set includes three parts: 
 
-1. Assay and project (URL_TO_INSERT_TERM_4166 https://fairsharing.org/search?recordType=project)  bibliographic references (mainly links to literature and protocol or summary)
-    - Project (URL_TO_INSERT_TERM_4167 https://fairsharing.org/search?recordType=project)  level metadata
+1. Assay and project (URL_TO_INSERT_TERM_3773 https://fairsharing.org/search?recordType=project)  bibliographic references (mainly links to literature and protocol or summary)
+    - Project (URL_TO_INSERT_TERM_3774 https://fairsharing.org/search?recordType=project)  level metadata
     - Common sample-level metadata, such as species, tissue, cell type and so on.
 2. Chemical compounds reference, including chemical structures
 3. Assay results 
 
 ![](https://i.imgur.com/aU2KYV1.png)
 
-For ChEMBL (URL_TO_INSERT_RECORD_4169 https://fairsharing.org/FAIRsharing.m3jtpg)  submission, molecular structures and assay description as depicted in the scheme above are suggested as essential metadata. This is a subset of the following [schema](https://www.ebi.ac.uk/chembl (URL_TO_INSERT_RECORD_4170 https://fairsharing.org/FAIRsharing.m3jtpg) /db_schema). In case mutated cell lines and/or mutated target proteins have been used in the assay, additional desirable metadata should be added in the proper group. MIABE (URL_TO_INSERT_RECORD_4168 https://fairsharing.org/FAIRsharing.dt7hn8)  also lists detailed bioassay description requirements.
+For ChEMBL (URL_TO_INSERT_RECORD_3776 https://fairsharing.org/FAIRsharing.m3jtpg)  submission, molecular structures and assay description as depicted in the scheme above are suggested as essential metadata. This is a subset of the following [schema](https://www.ebi.ac.uk/chembl/db_schema). In case mutated cell lines and/or mutated target proteins have been used in the assay, additional desirable metadata should be added in the proper group. MIABE (URL_TO_INSERT_RECORD_3775 https://fairsharing.org/FAIRsharing.dt7hn8)  also lists detailed bioassay description requirements.
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
@@ -152,38 +152,38 @@ Besides metadata, the diagram below also shows how to prepare numeric assay data
 
 ### Data vocabularies
 
-[A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL (URL_TO_INSERT_RECORD_4172 https://fairsharing.org/FAIRsharing.m3jtpg)  format (URL_TO_INSERT_TERM_4171 https://fairsharing.org/search?recordType=model_and_format) ting.  
+[A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL (URL_TO_INSERT_RECORD_3778 https://fairsharing.org/FAIRsharing.m3jtpg)  format (URL_TO_INSERT_TERM_3777 https://fairsharing.org/search?recordType=model_and_format) ting.  
 
-* **Chemical informat (URL_TO_INSERT_TERM_4173 https://fairsharing.org/search?recordType=model_and_format) ion ontology (URL_TO_INSERT_TERM_4174 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4175 https://fairsharing.org/FAIRsharing.sjhvyy)  (CHEMINF (URL_TO_INSERT_RECORD_4176 https://fairsharing.org/FAIRsharing.sjhvyy) )** [http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) 
+* **Chemical informat (URL_TO_INSERT_TERM_3779 https://fairsharing.org/search?recordType=model_and_format) ion ontology (URL_TO_INSERT_TERM_3780 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_3781 https://fairsharing.org/FAIRsharing.sjhvyy)  (CHEMINF (URL_TO_INSERT_RECORD_3782 https://fairsharing.org/FAIRsharing.sjhvyy) )** [http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) 
 
-    CHEMINF (URL_TO_INSERT_RECORD_4179 https://fairsharing.org/FAIRsharing.sjhvyy)  covers informat (URL_TO_INSERT_TERM_4177 https://fairsharing.org/search?recordType=model_and_format) ion about chemical entities and defines descriptors commonly used in cheminformat (URL_TO_INSERT_TERM_4178 https://fairsharing.org/search?recordType=model_and_format) ics software applications and to denote algorithms used to generate those chemicals.
+    CHEMINF (URL_TO_INSERT_RECORD_3785 https://fairsharing.org/FAIRsharing.sjhvyy)  covers informat (URL_TO_INSERT_TERM_3783 https://fairsharing.org/search?recordType=model_and_format) ion about chemical entities and defines descriptors commonly used in cheminformat (URL_TO_INSERT_TERM_3784 https://fairsharing.org/search?recordType=model_and_format) ics software applications and to denote algorithms used to generate those chemicals.
 
-* **BioAssay Ontology (URL_TO_INSERT_TERM_4180 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4181 https://fairsharing.org/FAIRsharing.mye76w) **(BAO)
+* **BioAssay Ontology (URL_TO_INSERT_TERM_3786 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_3787 https://fairsharing.org/FAIRsharing.mye76w) **(BAO)
 
-    [http://www.bioassayontology.org (URL_TO_INSERT_RECORD_4182 https://fairsharing.org/FAIRsharing.farr39)  (URL_TO_INSERT_RECORD_4184 https://fairsharing.org/FAIRsharing.mye76w) /bao/bao_complete.owl](http://www.bioassayontology.org (URL_TO_INSERT_RECORD_4183 https://fairsharing.org/FAIRsharing.farr39)  (URL_TO_INSERT_RECORD_4185 https://fairsharing.org/FAIRsharing.mye76w) /bao/bao_complete.owl) 
+    [http://www.bioassayontology.org/bao/bao_complete.owl](http://www.bioassayontology.org/bao/bao_complete.owl) 
 
-    The BioAssay Ontology (URL_TO_INSERT_TERM_4186 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4187 https://fairsharing.org/FAIRsharing.mye76w)  (BAO) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO (URL_TO_INSERT_RECORD_4188 https://fairsharing.org/FAIRsharing.mye76w)  is an extensible, knowledge-based, highly expressive description of biological assays {footcite}`pmid21702939` making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
+    The BioAssay Ontology (URL_TO_INSERT_TERM_3788 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_3789 https://fairsharing.org/FAIRsharing.mye76w)  (BAO) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO (URL_TO_INSERT_RECORD_3790 https://fairsharing.org/FAIRsharing.mye76w)  is an extensible, knowledge-based, highly expressive description of biological assays {footcite}`pmid21702939` making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
 
-* **Ontology (URL_TO_INSERT_TERM_4189 https://fairsharing.org/search?recordType=terminology_artefact)  of units of Measure (OM)**
+* **Ontology (URL_TO_INSERT_TERM_3791 https://fairsharing.org/search?recordType=terminology_artefact)  of units of Measure (OM)**
  [http://www.ontology-of-units-of-measure.org/resource/om-2](http://www.ontology-of-units-of-measure.org/resource/om-2) 
- The OM ontology (URL_TO_INSERT_TERM_4190 https://fairsharing.org/search?recordType=terminology_artefact)  provides classes, instances, and properties that represent the different concepts used for defining and using measures and units.
- It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry (URL_TO_INSERT_RECORD_4192 https://fairsharing.org/3524)  and related informat (URL_TO_INSERT_TERM_4191 https://fairsharing.org/search?recordType=model_and_format) ion.
-It can be easily map (URL_TO_INSERT_RECORD_4193 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_4195 https://fairsharing.org/FAIRsharing.31385c)  to other resources such as [Unit Ontology](https://www.ebi.ac.uk/ols/ontologies/om), with tools such as [OXO](https://www.ebi.ac.uk/spot/oxo (URL_TO_INSERT_RECORD_4194 https://fairsharing.org/FAIRsharing.0c6fea) /)
+ The OM ontology (URL_TO_INSERT_TERM_3792 https://fairsharing.org/search?recordType=terminology_artefact)  provides classes, instances, and properties that represent the different concepts used for defining and using measures and units.
+ It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry (URL_TO_INSERT_RECORD_3794 https://fairsharing.org/3524)  and related informat (URL_TO_INSERT_TERM_3793 https://fairsharing.org/search?recordType=model_and_format) ion.
+It can be easily map (URL_TO_INSERT_RECORD_3795 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_3796 https://fairsharing.org/FAIRsharing.31385c)  to other resources such as [Unit Ontology](https://www.ebi.ac.uk/ols/ontologies/om), with tools such as [OXO](https://www.ebi.ac.uk/spot/oxo/)
 
-More informat (URL_TO_INSERT_TERM_4196 https://fairsharing.org/search?recordType=model_and_format) ion on annotating data with ontologies (URL_TO_INSERT_TERM_4197 https://fairsharing.org/search?recordType=terminology_artefact)  using tools like [Zooma](https://www.ebi.ac.uk/spot/zooma/), can be found in Section 7.7.3.3. of [this recipe](https://w3id.org (URL_TO_INSERT_RECORD_4198 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB023)
+More informat (URL_TO_INSERT_TERM_3797 https://fairsharing.org/search?recordType=model_and_format) ion on annotating data with ontologies (URL_TO_INSERT_TERM_3798 https://fairsharing.org/search?recordType=terminology_artefact)  using tools like [Zooma](https://www.ebi.ac.uk/spot/zooma/), can be found in Section 7.7.3.3. of [this recipe](https://w3id.org/faircookbook/FCB023)
 
 ### Exemplar Bioactivity datasets
 
-[SARS CoV2 phenotypic assay from Caco2 cell line](https://www.ebi.ac.uk/chembl (URL_TO_INSERT_RECORD_4199 https://fairsharing.org/FAIRsharing.m3jtpg) /assay_report_card/CHEMBL4303806/)
+[SARS CoV2 phenotypic assay from Caco2 cell line](https://www.ebi.ac.uk/chembl/assay_report_card/CHEMBL4303806/)
 
-The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects-results/project-factsheets/care) dataset with compounds tested on the Caco-2 cell line. The dataset can be downloaded and, besides structural informat (URL_TO_INSERT_TERM_4200 https://fairsharing.org/search?recordType=model_and_format) ion, it will contain readout numbers for activity (e.g. either `percentage of cellular cytopathic inhibition at a given concentration` or corresponding extracted `dose-response IC50 `(Half-maximal inhibitory concentration)).
+The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects-results/project-factsheets/care) dataset with compounds tested on the Caco-2 cell line. The dataset can be downloaded and, besides structural informat (URL_TO_INSERT_TERM_3799 https://fairsharing.org/search?recordType=model_and_format) ion, it will contain readout numbers for activity (e.g. either `percentage of cellular cytopathic inhibition at a given concentration` or corresponding extracted `dose-response IC50 `(Half-maximal inhibitory concentration)).
 
-> Recommendations above are based on ChEMBL (URL_TO_INSERT_RECORD_4203 https://fairsharing.org/FAIRsharing.m3jtpg)  ontology (URL_TO_INSERT_TERM_4201 https://fairsharing.org/search?recordType=terminology_artefact)  requirements. The US counterpart to ChEMBL (URL_TO_INSERT_RECORD_4204 https://fairsharing.org/FAIRsharing.m3jtpg) , the  PubChem (URL_TO_INSERT_RECORD_4205 https://fairsharing.org/FAIRsharing.qt3w7z)  data bank have different ontology (URL_TO_INSERT_TERM_4202 https://fairsharing.org/search?recordType=terminology_artefact)  requirements for upload but provide a wizard-based upload process described in [this blog](https://pubchemblog.ncbi.nlm.nih.gov/tag/pubchem-upload/)
+> Recommendations above are based on ChEMBL (URL_TO_INSERT_RECORD_3802 https://fairsharing.org/FAIRsharing.m3jtpg)  ontology (URL_TO_INSERT_TERM_3800 https://fairsharing.org/search?recordType=terminology_artefact)  requirements. The US counterpart to ChEMBL (URL_TO_INSERT_RECORD_3803 https://fairsharing.org/FAIRsharing.m3jtpg) , the  PubChem (URL_TO_INSERT_RECORD_3804 https://fairsharing.org/FAIRsharing.qt3w7z)  data bank have different ontology (URL_TO_INSERT_TERM_3801 https://fairsharing.org/search?recordType=terminology_artefact)  requirements for upload but provide a wizard-based upload process described in [this blog](https://pubchemblog.ncbi.nlm.nih.gov/tag/pubchem-upload/)
 
 ## Glossary
 |Term|Definition|
 |--|--|
-|Experiment|Bioc (URL_TO_INSERT_RECORD_4206 https://fairsharing.org/FAIRsharing.81ettx) hamical Assay, Cellular Activity Assay, Cellular Toxicity Assay|
+|Experiment|Bioc (URL_TO_INSERT_RECORD_3805 https://fairsharing.org/FAIRsharing.81ettx) hamical Assay, Cellular Activity Assay, Cellular Toxicity Assay|
 |Readout|Quantitive measurements of a biophysical event followed by assay (e.g. change in fluorescence)|
 |EC50|Half maximal Effective Concentration|
 |IC50|Half maximal Inhibition Concentration|
@@ -191,7 +191,7 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 |CC50|Half maximal Cytotoxic Concentration|
 
 ### What to read next?
-- [InChI and SMILES identifiers for chemical structures](https://w3id.org (URL_TO_INSERT_RECORD_4207 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB007)
+- [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
 - [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)
 
 
