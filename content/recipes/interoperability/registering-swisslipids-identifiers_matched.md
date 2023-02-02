@@ -1,16 +1,16 @@
 # Registering SwissLipids identifiers in Wikidata
 
  ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM_7808 https://fairsharing.org/search?recordType=identifier_schema) _text: FCBxxx
-:identifier (URL_TO_INSERT_TERM_7809 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_7810 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCBxxx'
+:identifier (URL_TO_INSERT_TERM_7446 https://fairsharing.org/search?recordType=identifier_schema) _text: FCBxxx
+:identifier (URL_TO_INSERT_TERM_7447 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_7448 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCBxxx'
 :difficulty_level: 5
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: bioinformat (URL_TO_INSERT_TERM_7811 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
+:intended_audience: bioinformat (URL_TO_INSERT_TERM_7449 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
 :maturity_level: 1
 :maturity_indicator: 8
 :has_executable_code: nope
-:recipe_name: Registering SwissLipids (URL_TO_INSERT_RECORD_7815 https://fairsharing.org/FAIRsharing.pxr7x2)  (URL_TO_INSERT_RECORD_7816 https://fairsharing.org/FAIRsharing.pxr7x2)  identifier (URL_TO_INSERT_TERM_7812 https://fairsharing.org/search?recordType=identifier_schema) s in Wikidata (URL_TO_INSERT_RECORD_7813 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_7814 https://fairsharing.org/FAIRsharing.6s749p) 
+:recipe_name: Registering SwissLipids (URL_TO_INSERT_RECORD_7452 https://fairsharing.org/FAIRsharing.pxr7x2)  identifier (URL_TO_INSERT_TERM_7450 https://fairsharing.org/search?recordType=identifier_schema) s in Wikidata (URL_TO_INSERT_RECORD_7451 https://fairsharing.org/FAIRsharing.6s749p) 
 ```` 
 
 ## Main Objectives
@@ -75,7 +75,7 @@ With the licensing issue resolved, the following practical steps were taken:
 For this step, use `csvtool` (`apt get install csvtool`):
 
 ```shell
-csvtool -t TAB col 1,11 swisslipids (URL_TO_INSERT_RECORD_7817 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv
+csvtool -t TAB col 1,11 swisslipids (URL_TO_INSERT_RECORD_7453 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv
 ```
 
 The output needs some further clean up, like removing lines without InChIKeys or "none" and "-" as value.
@@ -83,15 +83,15 @@ Also, the "InChIKey=" prefix is removed in preparation for the next step.
 The full used code is:
 
 ```shell
-csvtool -t TAB col 1,11 swisslipids (URL_TO_INSERT_RECORD_7819 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv  | sed 's/InChI (URL_TO_INSERT_RECORD_7818 https://fairsharing.org/FAIRsharing.ddk9t9) Key=//' | grep -v "none" | grep -v ",-$" | grep -v ",$" | tee swisslipids (URL_TO_INSERT_RECORD_7820 https://fairsharing.org/FAIRsharing.pxr7x2) _ids.tsv
+csvtool -t TAB col 1,11 swisslipids (URL_TO_INSERT_RECORD_7455 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv  | sed 's/InChI (URL_TO_INSERT_RECORD_7454 https://fairsharing.org/FAIRsharing.ddk9t9) Key=//' | grep -v "none" | grep -v ",-$" | grep -v ",$" | tee swisslipids (URL_TO_INSERT_RECORD_7456 https://fairsharing.org/FAIRsharing.pxr7x2) _ids.tsv
 ```
 
 This results in almost 600k tuples:
 
 ```shell
 $ wc -l swiss*tsv
-   592412 swisslipids (URL_TO_INSERT_RECORD_7821 https://fairsharing.org/FAIRsharing.pxr7x2) _ids.tsv
-   777957 swisslipids (URL_TO_INSERT_RECORD_7822 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv
+   592412 swisslipids (URL_TO_INSERT_RECORD_7457 https://fairsharing.org/FAIRsharing.pxr7x2) _ids.tsv
+   777957 swisslipids (URL_TO_INSERT_RECORD_7458 https://fairsharing.org/FAIRsharing.pxr7x2) .tsv
 ```
 
 ### Step 3: creating a ShEx model
@@ -114,15 +114,15 @@ QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifie
 but Bacting can also be using in Python, see [https://github.com/cthoyt/pybacting](https://github.com/cthoyt/pybacting).
 
 ```{note}
-This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Dr [Jerven Bolleman](https://orcid.org (URL_TO_INSERT_RECORD_7823 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0002-7449-1266)
-who indicated that the [RDF4J](https://rdf4j.org/) backing this SP (URL_TO_INSERT_RECORD_7827 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_7826 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint will automatically batch the query against Wikidata (URL_TO_INSERT_RECORD_7824 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_7825 https://fairsharing.org/FAIRsharing.6s749p) , overcoming
-limitations of the Wikidata (URL_TO_INSERT_RECORD_7828 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_7829 https://fairsharing.org/FAIRsharing.6s749p)  Query Service:
+This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Dr [Jerven Bolleman](https://orcid.org (URL_TO_INSERT_RECORD_7459 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0002-7449-1266)
+who indicated that the [RDF4J](https://rdf4j.org/) backing this SP (URL_TO_INSERT_RECORD_7462 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_7461 https://fairsharing.org/FAIRsharing.87ccfd)  endpoint will automatically batch the query against Wikidata (URL_TO_INSERT_RECORD_7460 https://fairsharing.org/FAIRsharing.6s749p) , overcoming
+limitations of the Wikidata (URL_TO_INSERT_RECORD_7463 https://fairsharing.org/FAIRsharing.6s749p)  Query Service:
 ```
 
 ```sparql
-PREFIX wdt: <http://www.wikidata.org (URL_TO_INSERT_RECORD_7830 https://fairsharing.org/FAIRsharing.6s749p) /prop/direct/>
+PREFIX wdt: <http://www.wikidata.org (URL_TO_INSERT_RECORD_7464 https://fairsharing.org/FAIRsharing.6s749p) /prop/direct/>
 SELECT ?wd ?key ?value WHERE {
-  SERVICE <https://query.wikidata.org (URL_TO_INSERT_RECORD_7831 https://fairsharing.org/FAIRsharing.6s749p) /sparql> {
+  SERVICE <https://query.wikidata.org (URL_TO_INSERT_RECORD_7465 https://fairsharing.org/FAIRsharing.6s749p) /sparql> {
     SELECT (substr(str(?compound),32) as ?wd) ?key ?value WHERE {
       ?compound wdt:P235 ?key .
       OPTIONAL { ?compound wdt:P8691 ?value . }
@@ -134,16 +134,16 @@ SELECT ?wd ?key ?value WHERE {
 This creates a file that looks like:
 
 ```shell
-Q76738581       P8691   "SLM:000163948" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7832 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76865359       P8691   "SLM:000163954" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7833 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76865370       P8691   "SLM:000163964" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7834 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76866423       P8691   "SLM:000163966" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7835 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76865004       P8691   "SLM:000163968" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7836 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76733356       P8691   "SLM:000164019" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7837 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76733312       P8691   "SLM:000164023" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7838 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76737210       P8691   "SLM:000164026" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7839 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76736881       P8691   "SLM:000164032" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7840 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
-Q76735022       P8691   "SLM:000164034" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7841 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76738581       P8691   "SLM:000163948" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7466 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865359       P8691   "SLM:000163954" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7467 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865370       P8691   "SLM:000163964" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7468 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76866423       P8691   "SLM:000163966" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7469 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865004       P8691   "SLM:000163968" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7470 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76733356       P8691   "SLM:000164019" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7471 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76733312       P8691   "SLM:000164023" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7472 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76737210       P8691   "SLM:000164026" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7473 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76736881       P8691   "SLM:000164032" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7474 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76735022       P8691   "SLM:000164034" S248    Q41165322       S854    "https://www.swisslipids.org/# (URL_TO_INSERT_RECORD_7475 https://fairsharing.org/FAIRsharing.pxr7x2) /downloads"       S813    +2021-11-06T00:00:00Z/11
 ```
 
 This resulted in about 17.5 thousand mappings. These are based on exact InChIKey match. 

@@ -32,7 +32,7 @@ A software license governs the extent of use or redistribution of software, with
 There are many software licenses in existence.
 Many of those allow the licensee to do very little, but some give you more freedom to use and re-use the licensed software.
 
-The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project (URL_TO_INSERT_TERM_9759 https://fairsharing.org/search?recordType=project) .
+The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project (URL_TO_INSERT_TERM_9354 https://fairsharing.org/search?recordType=project) .
 
 To make some sense of this variety, we can categorize them as follows.
 
@@ -55,15 +55,15 @@ To make some sense of this variety, we can categorize them as follows.
     </thead>
     <tbody>
         <tr>
-        <td>GPL<sup>1</sup> CDD (URL_TO_INSERT_RECORD_9760 https://fairsharing.org/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD_9761 https://fairsharing.org/FAIRsharing.ea287c) L<sup>2</sup></td>
-        <td>LGPL<sup>3</sup> MP (URL_TO_INSERT_RECORD_9762 https://fairsharing.org/FAIRsharing.kg1x4z) L<sup>4</sup></td>
+        <td>GPL<sup>1</sup> CDD (URL_TO_INSERT_RECORD_9355 https://fairsharing.org/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD_9356 https://fairsharing.org/FAIRsharing.ea287c) L<sup>2</sup></td>
+        <td>LGPL<sup>3</sup> MP (URL_TO_INSERT_RECORD_9357 https://fairsharing.org/FAIRsharing.kg1x4z) L<sup>4</sup></td>
         <td>BSD<sup>5</sup> MIT<sup>6</sup> Apache</td>
-            <td>Research (URL_TO_INSERT_RECORD_9763 https://fairsharing.org/FAIRsharing.52b22c)  Only: No&nbsp;copying, No&nbsp;modification</td>
+            <td>Research (URL_TO_INSERT_RECORD_9358 https://fairsharing.org/FAIRsharing.52b22c)  Only: No&nbsp;copying, No&nbsp;modification</td>
         </tr>
     </tbody>
     <caption>
       <div class="footnote">
-        <sup>1</sup>GPL: GNU General Public License <sup>2</sup>CDD (URL_TO_INSERT_RECORD_9765 https://fairsharing.org/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD_9766 https://fairsharing.org/FAIRsharing.ea287c) L: Common Development and Distribution License <sup>3</sup>LGPL: GNU Lesser General Public License <sup>4</sup> MP (URL_TO_INSERT_RECORD_9764 https://fairsharing.org/FAIRsharing.kg1x4z) L: Mozilla Public License <sup>5</sup> BSD: Berkeley Software Distribution <sup>6</sup> MIT: Massachusetts Institute of Technology
+        <sup>1</sup>GPL: GNU General Public License <sup>2</sup>CDD (URL_TO_INSERT_RECORD_9360 https://fairsharing.org/FAIRsharing.b9st5p)  (URL_TO_INSERT_RECORD_9361 https://fairsharing.org/FAIRsharing.ea287c) L: Common Development and Distribution License <sup>3</sup>LGPL: GNU Lesser General Public License <sup>4</sup> MP (URL_TO_INSERT_RECORD_9359 https://fairsharing.org/FAIRsharing.kg1x4z) L: Mozilla Public License <sup>5</sup> BSD: Berkeley Software Distribution <sup>6</sup> MIT: Massachusetts Institute of Technology
       </div>
       Licenses can either be Free or Proprietary, with Free Licenses further classified as Copyleft or Permissive.
     </caption>
@@ -87,11 +87,11 @@ These four freedoms together effectively neutralize copyright; *Freedoms 0* and 
 
 Note that it is perfectly acceptable to sell copies of free software, warranty, or development services; this is about the freedom to do things with the software, not about its price.
 
-There are two other, similar definitions in use; the Open Source Institute's [Open Source Definition](https://opensource.org/osd-annotated) and the [Debian Free Software Guideline (URL_TO_INSERT_TERM_9767 https://fairsharing.org/search?recordType=reporting_guideline) s](https://www.debian.org/social_contract#guidelines).
+There are two other, similar definitions in use; the Open Source Institute's [Open Source Definition](https://opensource.org/osd-annotated) and the [Debian Free Software Guideline (URL_TO_INSERT_TERM_9362 https://fairsharing.org/search?recordType=reporting_guideline) s](https://www.debian.org/social_contract#guidelines).
 The free software definition above, by Richard Stallman, is the most straightforward and concise, and in practice, the categories they define are almost identical.
 
 Software that is not free is proprietary.
-Software that you are not allowed to copy or modify falls into this category, as does software with usage restrictions, for example, "For research (URL_TO_INSERT_RECORD_9768 https://fairsharing.org/FAIRsharing.52b22c)  use only" or "For non-commercial use only".
+Software that you are not allowed to copy or modify falls into this category, as does software with usage restrictions, for example, "For research (URL_TO_INSERT_RECORD_9363 https://fairsharing.org/FAIRsharing.52b22c)  use only" or "For non-commercial use only".
 
 There are some confusingly-named subcategories of proprietary software.
 _Freeware_ is software that can be copied without paying anyone, but comes without source and cannot be modified.
