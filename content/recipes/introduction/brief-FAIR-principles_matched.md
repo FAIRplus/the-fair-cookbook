@@ -18,7 +18,7 @@
 
 ## Introduction
 
-The goal of this section is to go over each of the principles for FAIR (URL_TO_INSERT_RECORD_7352 https://fairsharing.org/FAIRsharing.WWI10U)  data management as described by Wilkinson and coworkers in their Nature Springer Scientific Data (URL_TO_INSERT_RECORD_7351 https://fairsharing.org/FAIRsharing.w4k4nr)  manuscript published in 2016
+The goal of this section is to go over each of the principles for FAIR (URL_TO_INSERT_RECORD_7038 https://fairsharing.org/FAIRsharing.WWI10U)  data management as described by Wilkinson and coworkers in their Nature Springer Scientific Data (URL_TO_INSERT_RECORD_7037 https://fairsharing.org/FAIRsharing.w4k4nr)  manuscript published in 2016
 <!-- {cite}`Wilkinson2016FAIR,Wilkinson2019Evaluation`. -->
 Owing to the success of the principles, now endorsed by funding agencies (IMI, Wellcome Trust to name only two), but also by the G20 and by industry leaders, it is essential to remind the reader about those.
 
@@ -33,10 +33,10 @@ Owing to the success of the principles, now endorsed by funding agencies (IMI, W
 ```{figure} https://i.imgur.com/RxkoNed.png
 ---
 height: 650px
-name: the FAIR (URL_TO_INSERT_RECORD_7354 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7353 https://fairsharing.org/FAIRsharing.WWI10U) 
-alt: the cover page for the FAIR (URL_TO_INSERT_RECORD_7356 https://fairsharing.org/FAIRsharing.WWI10U)  principle article as published in Scientific Data (URL_TO_INSERT_RECORD_7355 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18
+name: the FAIR (URL_TO_INSERT_RECORD_7040 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7039 https://fairsharing.org/FAIRsharing.WWI10U) 
+alt: the cover page for the FAIR (URL_TO_INSERT_RECORD_7042 https://fairsharing.org/FAIRsharing.WWI10U)  principle article as published in Scientific Data (URL_TO_INSERT_RECORD_7041 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18
 ---
-_The FAIR (URL_TO_INSERT_RECORD_7359 https://fairsharing.org/FAIRsharing.WWI10U)  Principles (URL_TO_INSERT_RECORD_7358 https://fairsharing.org/FAIRsharing.WWI10U) _ the cover pages for the FAIR (URL_TO_INSERT_RECORD_7360 https://fairsharing.org/FAIRsharing.WWI10U)  principle articles as published in Scientific Data (URL_TO_INSERT_RECORD_7357 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18.
+_The FAIR (URL_TO_INSERT_RECORD_7045 https://fairsharing.org/FAIRsharing.WWI10U)  Principles (URL_TO_INSERT_RECORD_7044 https://fairsharing.org/FAIRsharing.WWI10U) _ the cover pages for the FAIR (URL_TO_INSERT_RECORD_7046 https://fairsharing.org/FAIRsharing.WWI10U)  principle articles as published in Scientific Data (URL_TO_INSERT_RECORD_7043 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18.
 ```
 
 ````
@@ -116,19 +116,19 @@ doi: 10.1038/sdata.2016.18
 
 > To be Findable:
 
->F1. (meta)data are assigned a **globally unique and persistent identifier (URL_TO_INSERT_TERM_7361 https://fairsharing.org/search?recordType=identifier_schema) **
+>F1. (meta)data are assigned a **globally unique and persistent identifier (URL_TO_INSERT_TERM_7047 https://fairsharing.org/search?recordType=identifier_schema) **
 >
 >F2. data are described with **rich metadata** (defined by R1 below)
 >
->F3. metadata clearly and explicitly include the identifier (URL_TO_INSERT_TERM_7362 https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes
+>F3. metadata clearly and explicitly include the identifier (URL_TO_INSERT_TERM_7048 https://fairsharing.org/search?recordType=identifier_schema)  of the data it describes
 >
->F4. (meta)data are registered or **indexed in a search (URL_TO_INSERT_RECORD_7363 https://fairsharing.org/FAIRsharing.52b22c) able resource**
+>F4. (meta)data are registered or **indexed in a search (URL_TO_INSERT_RECORD_7049 https://fairsharing.org/FAIRsharing.52b22c) able resource**
 ```
 
 ```{tabbed} A.
 > To be Accessible:
 
->A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM_7365 https://fairsharing.org/search?recordType=identifier_schema)  using **a standard (URL_TO_INSERT_TERM_7364 https://fairsharing.org/search?fairsharingRegistry=Standard) ized communications protocol**
+>A1. (meta)data are retrievable by their identifier (URL_TO_INSERT_TERM_7051 https://fairsharing.org/search?recordType=identifier_schema)  using **a standard (URL_TO_INSERT_TERM_7050 https://fairsharing.org/search?fairsharingRegistry=Standard) ized communications protocol**
 >
 >A1.1 the protocol is **open, free, and universally implementable**
 >
@@ -142,7 +142,7 @@ doi: 10.1038/sdata.2016.18
 
 >I1. (meta)data use a **formal, accessible, shared, and broadly applicable language for knowledge representation**.
 >
->I2. (meta)data use **vocabularies that follow FAIR (URL_TO_INSERT_RECORD_7366 https://fairsharing.org/FAIRsharing.WWI10U)  principles**
+>I2. (meta)data use **vocabularies that follow FAIR (URL_TO_INSERT_RECORD_7052 https://fairsharing.org/FAIRsharing.WWI10U)  principles**
 >
 >I3. (meta)data include **qualified references** to other (meta)data
 ```
@@ -156,7 +156,7 @@ doi: 10.1038/sdata.2016.18
 >
 >R1.2. (meta)data are associated with **detailed provenance**
 >
->R1.3. (meta)data meet domain-relevant **community standard (URL_TO_INSERT_TERM_7367 https://fairsharing.org/search?fairsharingRegistry=Standard) s**
+>R1.3. (meta)data meet domain-relevant **community standard (URL_TO_INSERT_TERM_7053 https://fairsharing.org/search?fairsharingRegistry=Standard) s**
 ```
 ```` -->
 
@@ -165,7 +165,7 @@ doi: 10.1038/sdata.2016.18
 
 ## The FAIR principles and FAIRplus
 
-The principles will be the organizing principle for the FAIR (URL_TO_INSERT_RECORD_7368 https://fairsharing.org/FAIRsharing.WWI10U) plus Cookbook. While the book itself can be search (URL_TO_INSERT_RECORD_7369 https://fairsharing.org/FAIRsharing.52b22c)  in
+The principles will be the organizing principle for the FAIR (URL_TO_INSERT_RECORD_7054 https://fairsharing.org/FAIRsharing.WWI10U) plus Cookbook. While the book itself can be search (URL_TO_INSERT_RECORD_7055 https://fairsharing.org/FAIRsharing.52b22c)  in
 various ways and its content exposed through a number of angles, personas and facets, 
 the main `Table of Content` organizes a number of atomic recipes around of the principles and their associated sub themes. 
 
@@ -176,15 +176,15 @@ the main `Table of Content` organizes a number of atomic recipes around of the p
  
 ## Conclusions
 
-This section should be seen as a refresher for anyone unclear about the FAIR (URL_TO_INSERT_RECORD_7371 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7370 https://fairsharing.org/FAIRsharing.WWI10U) . 
-Now that key background informat (URL_TO_INSERT_TERM_7372 https://fairsharing.org/search?recordType=model_and_format) ion has been provided, shining a light on a number of ethical issues driving 
-both the development and implementation of the FAIR (URL_TO_INSERT_RECORD_7374 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7373 https://fairsharing.org/FAIRsharing.WWI10U)  in the context of Life Science data
-as well as learning about the overall FAIR (URL_TO_INSERT_RECORD_7375 https://fairsharing.org/FAIRsharing.WWI10U) ification process represent a natural progression 
-in the content of the FAIR (URL_TO_INSERT_RECORD_7376 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook.
+This section should be seen as a refresher for anyone unclear about the FAIR (URL_TO_INSERT_RECORD_7057 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7056 https://fairsharing.org/FAIRsharing.WWI10U) . 
+Now that key background informat (URL_TO_INSERT_TERM_7058 https://fairsharing.org/search?recordType=model_and_format) ion has been provided, shining a light on a number of ethical issues driving 
+both the development and implementation of the FAIR (URL_TO_INSERT_RECORD_7060 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_7059 https://fairsharing.org/FAIRsharing.WWI10U)  in the context of Life Science data
+as well as learning about the overall FAIR (URL_TO_INSERT_RECORD_7061 https://fairsharing.org/FAIRsharing.WWI10U) ification process represent a natural progression 
+in the content of the FAIR (URL_TO_INSERT_RECORD_7062 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook.
 
 ### What to read next?
-* [The ethical values of FAIR (URL_TO_INSERT_RECORD_7377 https://fairsharing.org/FAIRsharing.WWI10U) ](./FAIR (URL_TO_INSERT_RECORD_7378 https://fairsharing.org/FAIRsharing.WWI10U) plus-values)
-* [Assessing FAIR (URL_TO_INSERT_RECORD_7379 https://fairsharing.org/FAIRsharing.WWI10U) ness](../assessing-fairness)
+* [The ethical values of FAIR](./FAIR (URL_TO_INSERT_RECORD_7063 https://fairsharing.org/FAIRsharing.WWI10U) plus-values)
+* [Assessing FAIRness](../assessing-fairness)
 
 ````{rdmkit_panel}
 ````
