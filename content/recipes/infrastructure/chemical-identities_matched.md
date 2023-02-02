@@ -20,8 +20,8 @@
 
 The main purpose of this recipe is:
 
-> To take an SDF (URL_TO_INSERT_RECORD_3303 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
-> InChI (URL_TO_INSERT_RECORD_3305 https://fairsharing.org/FAIRsharing.ddk9t9) s, InChI (URL_TO_INSERT_RECORD_3306 https://fairsharing.org/FAIRsharing.ddk9t9) Keys, and SMILES (URL_TO_INSERT_RECORD_3304 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD_3307 https://fairsharing.org/FAIRsharing.ew26v7)  file.
+> To take an SDF (URL_TO_INSERT_RECORD_3047 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
+> InChI (URL_TO_INSERT_RECORD_3049 https://fairsharing.org/FAIRsharing.ddk9t9) s, InChI (URL_TO_INSERT_RECORD_3050 https://fairsharing.org/FAIRsharing.ddk9t9) Keys, and SMILES (URL_TO_INSERT_RECORD_3048 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD_3051 https://fairsharing.org/FAIRsharing.ew26v7)  file.
 
 ---
 
@@ -42,16 +42,16 @@ The main purpose of this recipe is:
 ## Creating InChI and SMILES identifiers for chemical structures
 
 To run the below scripts, you need a [Groovy](https://groovy.apache.org/download.html) installation.
-The Groovy scripts use version 2.7.1 of the [Chemistry (URL_TO_INSERT_RECORD_3308 https://fairsharing.org/3524)  (URL_TO_INSERT_RECORD_3309 https://fairsharing.org/3524)  Development Kit](https://cdk.github.io/)
+The Groovy scripts use version 2.7.1 of the [Chemistry (URL_TO_INSERT_RECORD_3052 https://fairsharing.org/3524)  (URL_TO_INSERT_RECORD_3053 https://fairsharing.org/3524)  Development Kit](https://cdk.github.io/)
 (see {footcite}`Willighagen2017`). This library and its use in Groovy is further explain in
-the book (URL_TO_INSERT_RECORD_3313 https://fairsharing.org/FAIRsharing.cbz72b)  [Groovy Cheminformat (URL_TO_INSERT_TERM_3310 https://fairsharing.org/search?recordType=model_and_format) ics with the Chemistry (URL_TO_INSERT_RECORD_3311 https://fairsharing.org/3524)  (URL_TO_INSERT_RECORD_3312 https://fairsharing.org/3524)  Development Kit](https://egonw.github.io/cdkbook/).
-Check this git repository (URL_TO_INSERT_TERM_3314 https://fairsharing.org/search?recordType=repository)  for more detailed use instructions and where to find the tools:
-[https://github.com (URL_TO_INSERT_RECORD_3315 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/fairplus-sdf](https://github.com (URL_TO_INSERT_RECORD_3316 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/fairplus-sdf)
+the book [Groovy Cheminformat (URL_TO_INSERT_TERM_3054 https://fairsharing.org/search?recordType=model_and_format) ics with the Chemistry (URL_TO_INSERT_RECORD_3055 https://fairsharing.org/3524)  (URL_TO_INSERT_RECORD_3056 https://fairsharing.org/3524)  Development Kit](https://egonw.github.io/cdkbook/).
+Check this git repository (URL_TO_INSERT_TERM_3057 https://fairsharing.org/search?recordType=repository)  for more detailed use instructions and where to find the tools:
+[https://github.com (URL_TO_INSERT_RECORD_3058 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/fairplus-sdf](https://github.com (URL_TO_INSERT_RECORD_3059 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/fairplus-sdf)
 
 ### Record validation
 
-When generating InChI (URL_TO_INSERT_RECORD_3317 https://fairsharing.org/FAIRsharing.ddk9t9) s, the InChI (URL_TO_INSERT_RECORD_3318 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD_3319 https://fairsharing.org/FAIRsharing.ddk9t9) `) may return several success states reflecting issues with
-the compound record in the SDF (URL_TO_INSERT_RECORD_3323 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERRO (URL_TO_INSERT_RECORD_3321 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_3322 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_3324 https://fairsharing.org/FAIRsharing.cp0ybc) R (URL_TO_INSERT_RECORD_3320 https://fairsharing.org/FAIRsharing.1jKfji) . This first script reports such issues:
+When generating InChI (URL_TO_INSERT_RECORD_3060 https://fairsharing.org/FAIRsharing.ddk9t9) s, the InChI (URL_TO_INSERT_RECORD_3061 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD_3062 https://fairsharing.org/FAIRsharing.ddk9t9) `) may return several success states reflecting issues with
+the compound record in the SDF (URL_TO_INSERT_RECORD_3066 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERRO (URL_TO_INSERT_RECORD_3064 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_3065 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_3067 https://fairsharing.org/FAIRsharing.cp0ybc) R (URL_TO_INSERT_RECORD_3063 https://fairsharing.org/FAIRsharing.1jKfji) . This first script reports such issues:
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
@@ -67,17 +67,17 @@ Compound52      Proton(s) added/removed WARNING
 
 ### Calculate InChls
 
-Similarly, InChI (URL_TO_INSERT_RECORD_3325 https://fairsharing.org/FAIRsharing.ddk9t9) Keys can be generated:
+Similarly, InChI (URL_TO_INSERT_RECORD_3068 https://fairsharing.org/FAIRsharing.ddk9t9) Keys can be generated:
 
 ```bash
 groovy inchikeys.groovy -f foo.sdf
 ```
 
-When the success state is ERRO (URL_TO_INSERT_RECORD_3327 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_3328 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_3329 https://fairsharing.org/FAIRsharing.cp0ybc) R (URL_TO_INSERT_RECORD_3326 https://fairsharing.org/FAIRsharing.1jKfji) , nothing is outputted.
+When the success state is ERRO (URL_TO_INSERT_RECORD_3070 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD_3071 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD_3072 https://fairsharing.org/FAIRsharing.cp0ybc) R (URL_TO_INSERT_RECORD_3069 https://fairsharing.org/FAIRsharing.1jKfji) , nothing is outputted.
 
 ### Calculate SMILES strings
 
-The last script calculates a SMILES (URL_TO_INSERT_RECORD_3330 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD_3331 https://fairsharing.org/FAIRsharing.ew26v7)  file:
+The last script calculates a SMILES (URL_TO_INSERT_RECORD_3073 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD_3074 https://fairsharing.org/FAIRsharing.ew26v7)  file:
 
 ```bash
 groovy smiles.groovy -f foo.sdf
@@ -85,13 +85,13 @@ groovy smiles.groovy -f foo.sdf
 
 ## Conclusion
 
-This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD_3332 https://fairsharing.org/FAIRsharing.ew26v7)  file,
-and convert them to SMILES (URL_TO_INSERT_RECORD_3333 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD_3334 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChI (URL_TO_INSERT_RECORD_3335 https://fairsharing.org/FAIRsharing.ddk9t9) Key. The latter can then be used
-with BridgeDb (URL_TO_INSERT_RECORD_3338 https://fairsharing.org/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD_3339 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID map (URL_TO_INSERT_RECORD_3340 https://fairsharing.org/FAIRsharing.53edcc) ping database (URL_TO_INSERT_TERM_3336 https://fairsharing.org/search?fairsharingRegistry=Database) s to get additional identifier (URL_TO_INSERT_TERM_3337 https://fairsharing.org/search?recordType=identifier_schema) s.
+This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD_3075 https://fairsharing.org/FAIRsharing.ew26v7)  file,
+and convert them to SMILES (URL_TO_INSERT_RECORD_3076 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD_3077 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChI (URL_TO_INSERT_RECORD_3078 https://fairsharing.org/FAIRsharing.ddk9t9) Key. The latter can then be used
+with BridgeDb (URL_TO_INSERT_RECORD_3081 https://fairsharing.org/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD_3082 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID map (URL_TO_INSERT_RECORD_3083 https://fairsharing.org/FAIRsharing.53edcc) ping database (URL_TO_INSERT_TERM_3079 https://fairsharing.org/search?fairsharingRegistry=Database) s to get additional identifier (URL_TO_INSERT_TERM_3080 https://fairsharing.org/search?recordType=identifier_schema) s.
 
 ### What to read next?
 
-* [Identifier (URL_TO_INSERT_TERM_3341 https://fairsharing.org/search?recordType=identifier_schema)  map (URL_TO_INSERT_RECORD_3345 https://fairsharing.org/FAIRsharing.53edcc) ping with BridgeDb (URL_TO_INSERT_RECORD_3343 https://fairsharing.org/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD_3344 https://fairsharing.org/FAIRsharing.5ry74y) ](https://w3id.org (URL_TO_INSERT_RECORD_3342 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB017)
+* [Identifier (URL_TO_INSERT_TERM_3084 https://fairsharing.org/search?recordType=identifier_schema)  map (URL_TO_INSERT_RECORD_3088 https://fairsharing.org/FAIRsharing.53edcc) ping with BridgeDb (URL_TO_INSERT_RECORD_3086 https://fairsharing.org/FAIRsharing.5ry74y)  (URL_TO_INSERT_RECORD_3087 https://fairsharing.org/FAIRsharing.5ry74y) ](https://w3id.org (URL_TO_INSERT_RECORD_3085 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB017)
 
 ````{rdmkit_panel}
 ````

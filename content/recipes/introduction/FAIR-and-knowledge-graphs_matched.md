@@ -20,39 +20,39 @@
 
 In the following sections, we will cover the following topics:
 
-1. the relation between FAIR (URL_TO_INSERT_RECORD_9203 https://fairsharing.org/FAIRsharing.WWI10U)  and KGs.
+1. the relation between FAIR (URL_TO_INSERT_RECORD_8475 https://fairsharing.org/FAIRsharing.WWI10U)  and KGs.
 2. the typology of knowledge graphs (KG).
 3. the different technologies supporting them.
 4. the methods to generate knowledge graphs.
-5. the impact of graph-based representations on what it means to deliver FAIR (URL_TO_INSERT_RECORD_9204 https://fairsharing.org/FAIRsharing.WWI10U)  data and services.
+5. the impact of graph-based representations on what it means to deliver FAIR (URL_TO_INSERT_RECORD_8476 https://fairsharing.org/FAIRsharing.WWI10U)  data and services.
 <!-- 6. the impact for Pharma industry and EFPIA more broadly -->
 
 
 
 ## FAIR and Knowledge Graphs
 
-FAIR (URL_TO_INSERT_RECORD_9205 https://fairsharing.org/FAIRsharing.WWI10U)  is chiefly about three things: metadata, metadata and metadata. 
+FAIR (URL_TO_INSERT_RECORD_8477 https://fairsharing.org/FAIRsharing.WWI10U)  is chiefly about three things: metadata, metadata and metadata. 
 
 Not only that, but metadata which should be **active**, that is usable by software agents without the need of human intervention,
 thanks to the resolvable links found in the electronic documents and the associated semantics available to the agent.
-The goal is to speed up data handling by ensuring enough informat (URL_TO_INSERT_TERM_9206 https://fairsharing.org/search?recordType=model_and_format) ion is provided to machines.
+The goal is to speed up data handling by ensuring enough informat (URL_TO_INSERT_TERM_8478 https://fairsharing.org/search?recordType=model_and_format) ion is provided to machines.
 
 In this context, the availability of semantic web technologies completely aligns with the key requirements defined by 
-the FAIR (URL_TO_INSERT_RECORD_9208 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_9207 https://fairsharing.org/FAIRsharing.WWI10U) . 
-Thus, providing metadata about a dataset in the form of Linked Data Graph is a significant path towards making data FAIR (URL_TO_INSERT_RECORD_9209 https://fairsharing.org/FAIRsharing.WWI10U) .
+the FAIR (URL_TO_INSERT_RECORD_8480 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_8479 https://fairsharing.org/FAIRsharing.WWI10U) . 
+Thus, providing metadata about a dataset in the form of Linked Data Graph is a significant path towards making data FAIR (URL_TO_INSERT_RECORD_8481 https://fairsharing.org/FAIRsharing.WWI10U) .
 Furthermore, the availability of knowledge representation in a graph data structure, or knowledge graphs, 
-provides contextual informat (URL_TO_INSERT_TERM_9210 https://fairsharing.org/search?recordType=model_and_format) ion about the dataset and shows the relationship between data and curated domain knowledge,
+provides contextual informat (URL_TO_INSERT_TERM_8482 https://fairsharing.org/search?recordType=model_and_format) ion about the dataset and shows the relationship between data and curated domain knowledge,
 which is particularly useful for machine learning and artificial intelligence approach. 
 
-> But `FAIR (URL_TO_INSERT_RECORD_9211 https://fairsharing.org/FAIRsharing.WWI10U)  data` and `knowledge graphs` are not equivalent. Not all FAIR (URL_TO_INSERT_RECORD_9212 https://fairsharing.org/FAIRsharing.WWI10U)  data is a knowledge graph and not all knowledge graphs are FAIR (URL_TO_INSERT_RECORD_9213 https://fairsharing.org/FAIRsharing.WWI10U) .
+> But `FAIR (URL_TO_INSERT_RECORD_8483 https://fairsharing.org/FAIRsharing.WWI10U)  data` and `knowledge graphs` are not equivalent. Not all FAIR (URL_TO_INSERT_RECORD_8484 https://fairsharing.org/FAIRsharing.WWI10U)  data is a knowledge graph and not all knowledge graphs are FAIR (URL_TO_INSERT_RECORD_8485 https://fairsharing.org/FAIRsharing.WWI10U) .
 
 ## What are knowledge graph and graph databases?
 
-Knowledge Graph (KG) and graph database (URL_TO_INSERT_TERM_9214 https://fairsharing.org/search?fairsharingRegistry=Database) s constitute a new approach to representation, storage and querying of data.
+Knowledge Graph (KG) and graph database (URL_TO_INSERT_TERM_8486 https://fairsharing.org/search?fairsharingRegistry=Database) s constitute a new approach to representation, storage and querying of data.
 
-To understand the notion of `knowledge graphs`, we need to remind ourselves about some elements of informat (URL_TO_INSERT_TERM_9216 https://fairsharing.org/search?recordType=model_and_format) ion theory, data structure, and data storage, as well as some geometric (URL_TO_INSERT_TERM_9215 https://fairsharing.org/search?recordType=metric)  interpretation of relationship between entities, which is often what turns data into knowledge.
+To understand the notion of `knowledge graphs`, we need to remind ourselves about some elements of informat (URL_TO_INSERT_TERM_8488 https://fairsharing.org/search?recordType=model_and_format) ion theory, data structure, and data storage, as well as some geometric (URL_TO_INSERT_TERM_8487 https://fairsharing.org/search?recordType=metric)  interpretation of relationship between entities, which is often what turns data into knowledge.
 
-Informat (URL_TO_INSERT_TERM_9220 https://fairsharing.org/search?recordType=model_and_format) ion, in digital forms, relies on formal representations and an array of methods to store and retrieve informat (URL_TO_INSERT_TERM_9221 https://fairsharing.org/search?recordType=model_and_format) ion. Up until the last 10 years, Relational DataBase (URL_TO_INSERT_TERM_9217 https://fairsharing.org/search?fairsharingRegistry=Database)  Management Systems (RDBMS) have been provided the backbone of informat (URL_TO_INSERT_TERM_9222 https://fairsharing.org/search?recordType=model_and_format) ion storage solutions, and still do so today. However, advances in both theoretical informat (URL_TO_INSERT_TERM_9223 https://fairsharing.org/search?recordType=model_and_format) ion representation model (URL_TO_INSERT_TERM_9218 https://fairsharing.org/search?recordType=model_and_format) s and technical solutions led to the development of so-called `NO-SQL` solutions (for 'Not-only Structured Query language'), supporting the onset of **graph-based representations of informat (URL_TO_INSERT_TERM_9224 https://fairsharing.org/search?recordType=model_and_format) ion**, in contrast to **relational-model (URL_TO_INSERT_TERM_9219 https://fairsharing.org/search?recordType=model_and_format)  based representation**. Knowledge graphs are knowledge bases which use graph-based data structure or topology to represent entities and the relationships between them.
+Informat (URL_TO_INSERT_TERM_8492 https://fairsharing.org/search?recordType=model_and_format) ion, in digital forms, relies on formal representations and an array of methods to store and retrieve informat (URL_TO_INSERT_TERM_8493 https://fairsharing.org/search?recordType=model_and_format) ion. Up until the last 10 years, Relational DataBase (URL_TO_INSERT_TERM_8489 https://fairsharing.org/search?fairsharingRegistry=Database)  Management Systems (RDBMS) have been provided the backbone of informat (URL_TO_INSERT_TERM_8494 https://fairsharing.org/search?recordType=model_and_format) ion storage solutions, and still do so today. However, advances in both theoretical informat (URL_TO_INSERT_TERM_8495 https://fairsharing.org/search?recordType=model_and_format) ion representation model (URL_TO_INSERT_TERM_8490 https://fairsharing.org/search?recordType=model_and_format) s and technical solutions led to the development of so-called `NO-SQL` solutions (for 'Not-only Structured Query language'), supporting the onset of **graph-based representations of informat (URL_TO_INSERT_TERM_8496 https://fairsharing.org/search?recordType=model_and_format) ion**, in contrast to **relational-model (URL_TO_INSERT_TERM_8491 https://fairsharing.org/search?recordType=model_and_format)  based representation**. Knowledge graphs are knowledge bases which use graph-based data structure or topology to represent entities and the relationships between them.
 
 ```{admonition} **So how does graph theory come to meet knowledge representation?**
 
@@ -72,28 +72,28 @@ The following sections intend to provide a compact review and guide newcomers th
 ```
 ### Relational Databases and Graph Databases
 
-Until fairly recently, the storage of informat (URL_TO_INSERT_TERM_9225 https://fairsharing.org/search?recordType=model_and_format) ion mainly relied on RDBMS, 
-which have been to work-horse of database (URL_TO_INSERT_TERM_9226 https://fairsharing.org/search?fairsharingRegistry=Database)  building. With relational database (URL_TO_INSERT_TERM_9227 https://fairsharing.org/search?fairsharingRegistry=Database)  approach, informat (URL_TO_INSERT_TERM_9231 https://fairsharing.org/search?recordType=model_and_format) ion is model (URL_TO_INSERT_TERM_9228 https://fairsharing.org/search?recordType=model_and_format) led according to an `Entity Relationship Model (URL_TO_INSERT_TERM_9229 https://fairsharing.org/search?recordType=model_and_format)  (ER model (URL_TO_INSERT_TERM_9230 https://fairsharing.org/search?recordType=model_and_format) /ER diagram)`, the development of which undergoes a series of formal steps. 
+Until fairly recently, the storage of informat (URL_TO_INSERT_TERM_8497 https://fairsharing.org/search?recordType=model_and_format) ion mainly relied on RDBMS, 
+which have been to work-horse of database (URL_TO_INSERT_TERM_8498 https://fairsharing.org/search?fairsharingRegistry=Database)  building. With relational database (URL_TO_INSERT_TERM_8499 https://fairsharing.org/search?fairsharingRegistry=Database)  approach, informat (URL_TO_INSERT_TERM_8503 https://fairsharing.org/search?recordType=model_and_format) ion is model (URL_TO_INSERT_TERM_8500 https://fairsharing.org/search?recordType=model_and_format) led according to an `Entity Relationship Model (URL_TO_INSERT_TERM_8501 https://fairsharing.org/search?recordType=model_and_format)  (ER model (URL_TO_INSERT_TERM_8502 https://fairsharing.org/search?recordType=model_and_format) /ER diagram)`, the development of which undergoes a series of formal steps. 
 
 One of these steps involves a process known as `schema normalization` to ensure that key entities and their attributes can be stored in `tables` in the most parsimonious way. This step is necessary to ensure query performance and optimization. 
 
-Relational database (URL_TO_INSERT_TERM_9232 https://fairsharing.org/search?fairsharingRegistry=Database)  approaches track and store relations between entities using what is known as `linking tables`. When interrogating a database (URL_TO_INSERT_TERM_9233 https://fairsharing.org/search?fairsharingRegistry=Database)  operating under this paradigm (e.g. MySQL, PostgreSQL, Oracle DB, to name a few), the database (URL_TO_INSERT_TERM_9234 https://fairsharing.org/search?fairsharingRegistry=Database)  engine needs to run `JOIN` operations, a type of SQL queries hitting the table of entities and any linking table holding the informat (URL_TO_INSERT_TERM_9235 https://fairsharing.org/search?recordType=model_and_format) ion about the relations between entities. 
+Relational database (URL_TO_INSERT_TERM_8504 https://fairsharing.org/search?fairsharingRegistry=Database)  approaches track and store relations between entities using what is known as `linking tables`. When interrogating a database (URL_TO_INSERT_TERM_8505 https://fairsharing.org/search?fairsharingRegistry=Database)  operating under this paradigm (e.g. MySQL, PostgreSQL, Oracle DB, to name a few), the database (URL_TO_INSERT_TERM_8506 https://fairsharing.org/search?fairsharingRegistry=Database)  engine needs to run `JOIN` operations, a type of SQL queries hitting the table of entities and any linking table holding the informat (URL_TO_INSERT_TERM_8507 https://fairsharing.org/search?recordType=model_and_format) ion about the relations between entities. 
 
-While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or complexity of the underlying model (URL_TO_INSERT_TERM_9236 https://fairsharing.org/search?recordType=model_and_format)  increases, this form of informat (URL_TO_INSERT_TERM_9237 https://fairsharing.org/search?recordType=model_and_format) ion storage may suffer from performance issue in certain situations.
+While sophisticated optimization methods exist to ensure query performance does not suffer as both data volume grows or complexity of the underlying model (URL_TO_INSERT_TERM_8508 https://fairsharing.org/search?recordType=model_and_format)  increases, this form of informat (URL_TO_INSERT_TERM_8509 https://fairsharing.org/search?recordType=model_and_format) ion storage may suffer from performance issue in certain situations.
 
-An added criticism often leveled to RDBMS based database (URL_TO_INSERT_TERM_9238 https://fairsharing.org/search?fairsharingRegistry=Database)  is the rigidity, which manifests itself in the difficulty and complexity of changing the underlying model (URL_TO_INSERT_TERM_9239 https://fairsharing.org/search?recordType=model_and_format) , leading to potentially complex migration tasks. 
+An added criticism often leveled to RDBMS based database (URL_TO_INSERT_TERM_8510 https://fairsharing.org/search?fairsharingRegistry=Database)  is the rigidity, which manifests itself in the difficulty and complexity of changing the underlying model (URL_TO_INSERT_TERM_8511 https://fairsharing.org/search?recordType=model_and_format) , leading to potentially complex migration tasks. 
 This can become a limitation when knowledge representation in a particular domain requires frequent changes for whatever reason.
 
-So it is in this context that the advent of `graph (oriented) database (URL_TO_INSERT_TERM_9240 https://fairsharing.org/search?fairsharingRegistry=Database) s` (sometimes referred to as NoSQL database (URL_TO_INSERT_TERM_9241 https://fairsharing.org/search?fairsharingRegistry=Database) , for 'Not Only SQL database (URL_TO_INSERT_TERM_9242 https://fairsharing.org/search?fairsharingRegistry=Database) '), came about, with a new paradigm and bold claims. 
+So it is in this context that the advent of `graph (oriented) database (URL_TO_INSERT_TERM_8512 https://fairsharing.org/search?fairsharingRegistry=Database) s` (sometimes referred to as NoSQL database (URL_TO_INSERT_TERM_8513 https://fairsharing.org/search?fairsharingRegistry=Database) , for 'Not Only SQL database (URL_TO_INSERT_TERM_8514 https://fairsharing.org/search?fairsharingRegistry=Database) '), came about, with a new paradigm and bold claims. 
 Over the last 20 years, the idea of storing knowledge as a graph `G=(v for vertex, e for edge)`,
 even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that a transition,
 in some sectors of the industry, is taking place.
 
-KGs and graph database (URL_TO_INSERT_TERM_9243 https://fairsharing.org/search?fairsharingRegistry=Database) s claim to be capable of offering new insights with better performance, 
+KGs and graph database (URL_TO_INSERT_TERM_8515 https://fairsharing.org/search?fairsharingRegistry=Database) s claim to be capable of offering new insights with better performance, 
 owning to the optimization of their query engine for fast traversals. 
 With description logics (DL), knowledge graphs represent knowledge to allow "intelligent" machines and algorithms to reason over and work with.
 Hence, for some domain specific representations and tasks, `Knowledge Graphs` (KG)
-and graph database (URL_TO_INSERT_TERM_9244 https://fairsharing.org/search?fairsharingRegistry=Database) s are seen as more suited than RDBMS storage.
+and graph database (URL_TO_INSERT_TERM_8516 https://fairsharing.org/search?fairsharingRegistry=Database) s are seen as more suited than RDBMS storage.
 
 These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions. 
 It also means that KG are becoming mainstream.
@@ -125,7 +125,7 @@ Here, we need to introduce the notion of representing statements as a predicate 
 `<subject><predicate><object>`, such as: `'P53 protein' 'interacts_with' 'DNA'`.
 
 This statement can be formally expressed using a dedicated syntax called [RDF](https://www.w3.org/TR/rdf11-concepts/), 
-standing for "Resource Description Framework (URL_TO_INSERT_RECORD_9246 https://fairsharing.org/FAIRsharing.p77ph9) ", one of the World Wide Web Consortium (W3C) standard (URL_TO_INSERT_TERM_9245 https://fairsharing.org/search?fairsharingRegistry=Standard) s supporting the vision of a **Semantic Web** as 
+standing for "Resource Description Framework (URL_TO_INSERT_RECORD_8518 https://fairsharing.org/FAIRsharing.p77ph9) ", one of the World Wide Web Consortium (W3C) standard (URL_TO_INSERT_TERM_8517 https://fairsharing.org/search?fairsharingRegistry=Standard) s supporting the vision of a **Semantic Web** as 
 outlined by Sir Tim Berners-Lee and colleagues {footcite}`bernerslee2001semantic`.
 In this instance, because the relation `'interacts_with'` is directional, we are creating the simplest form of directed graph,
 by establishing an `edge` between two `nodes`.
@@ -143,13 +143,13 @@ the RDF graph then becomes a `Linked Data Graph`, since each entity is no longer
 using Wikidata identifiers can be expressed as: 
 
 ````markdown
-"@wdt": "https://www.wikidata.org (URL_TO_INSERT_RECORD_9247 https://fairsharing.org/FAIRsharing.6s749p) /wiki/"
-[wdt:Q283350](https://www.wikidata.org (URL_TO_INSERT_RECORD_9248 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q283350) [wdt:Property:P129](https://www.wikidata.org (URL_TO_INSERT_RECORD_9249 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Property:P129) 
-[wdt:Q7430](https://www.wikidata.org (URL_TO_INSERT_RECORD_9250 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q7430)
+"@wdt": "https://www.wikidata.org (URL_TO_INSERT_RECORD_8519 https://fairsharing.org/FAIRsharing.6s749p) /wiki/"
+[wdt:Q283350](https://www.wikidata.org (URL_TO_INSERT_RECORD_8520 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q283350) [wdt:Property:P129](https://www.wikidata.org (URL_TO_INSERT_RECORD_8521 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Property:P129) 
+[wdt:Q7430](https://www.wikidata.org (URL_TO_INSERT_RECORD_8522 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q7430)
 ````
 ``````
 
-The `RDF (URL_TO_INSERT_RECORD_9251 https://fairsharing.org/FAIRsharing.p77ph9)  syntax` allows the expression of `RDF (URL_TO_INSERT_RECORD_9252 https://fairsharing.org/FAIRsharing.p77ph9)  statements`, which can be built and grouped (URL_TO_INSERT_RECORD_9254 https://fairsharing.org/FAIRsharing.31385c)  in an `RDF (URL_TO_INSERT_RECORD_9253 https://fairsharing.org/FAIRsharing.p77ph9)  graph`.
+The `RDF (URL_TO_INSERT_RECORD_8523 https://fairsharing.org/FAIRsharing.p77ph9)  syntax` allows the expression of `RDF (URL_TO_INSERT_RECORD_8524 https://fairsharing.org/FAIRsharing.p77ph9)  statements`, which can be built and grouped (URL_TO_INSERT_RECORD_8526 https://fairsharing.org/FAIRsharing.31385c)  in an `RDF (URL_TO_INSERT_RECORD_8525 https://fairsharing.org/FAIRsharing.p77ph9)  graph`.
 
 So let’s go back to the statement about the gene product of the P53 gene. 
 The formal and structured representation of a fact about that gene is now a well established technique.
@@ -162,10 +162,10 @@ for computational work.
 
 ##### ii. Persisting RDF graphs: RDF triple Stores
 
-RDF (URL_TO_INSERT_RECORD_9257 https://fairsharing.org/FAIRsharing.p77ph9)  graph objects can be persisted in specialized database (URL_TO_INSERT_TERM_9255 https://fairsharing.org/search?fairsharingRegistry=Database) s, `RDF (URL_TO_INSERT_RECORD_9258 https://fairsharing.org/FAIRsharing.p77ph9)  graph database (URL_TO_INSERT_TERM_9256 https://fairsharing.org/search?fairsharingRegistry=Database) s` also known as `RDF (URL_TO_INSERT_RECORD_9259 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores`. 
+RDF (URL_TO_INSERT_RECORD_8529 https://fairsharing.org/FAIRsharing.p77ph9)  graph objects can be persisted in specialized database (URL_TO_INSERT_TERM_8527 https://fairsharing.org/search?fairsharingRegistry=Database) s, `RDF (URL_TO_INSERT_RECORD_8530 https://fairsharing.org/FAIRsharing.p77ph9)  graph database (URL_TO_INSERT_TERM_8528 https://fairsharing.org/search?fairsharingRegistry=Database) s` also known as `RDF (URL_TO_INSERT_RECORD_8531 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores`. 
 Some of the most performant and successful solutions are:
 - [Allegrograph](https://allegrograph.com/products/allegrograph/)
-- [Blazegraph](https://github.com (URL_TO_INSERT_RECORD_9260 https://fairsharing.org/FAIRsharing.c55d5e) /blazegraph)
+- [Blazegraph](https://github.com (URL_TO_INSERT_RECORD_8532 https://fairsharing.org/FAIRsharing.c55d5e) /blazegraph)
 - [GraphDB](https://www.ontotext.com/products/graphdb)
 - [Stardog](https://www.stardog.com/)
 - [Virtuoso](https://virtuoso.openlinksw.com)
@@ -173,25 +173,25 @@ Some of the most performant and successful solutions are:
 
 ##### iii. Validating and controlling the quality of the RDF data being loaded - 
 
-To validate and control the quality of the fast emerging RDF (URL_TO_INSERT_RECORD_9261 https://fairsharing.org/FAIRsharing.p77ph9)  triples.
+To validate and control the quality of the fast emerging RDF (URL_TO_INSERT_RECORD_8533 https://fairsharing.org/FAIRsharing.p77ph9)  triples.
 The W3C has produced a specification detailing a constraint language which allows data managers to control the so-called
-`shape` of the RDF (URL_TO_INSERT_RECORD_9262 https://fairsharing.org/FAIRsharing.p77ph9)  graph coming in. The W3C SHAC (URL_TO_INSERT_RECORD_9266 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_9263 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_9264 https://fairsharing.org/FAIRsharing.f1449d)  SHApe Constraint Language, known as [SHACL](https://www.w3.org/TR/shacl (URL_TO_INSERT_RECORD_9265 https://fairsharing.org/FAIRsharing.f1449d) /) (pronounced `shackle`),
-allow to express a set of conditions to validate RDF (URL_TO_INSERT_RECORD_9267 https://fairsharing.org/FAIRsharing.p77ph9)  graphs/RDF (URL_TO_INSERT_RECORD_9268 https://fairsharing.org/FAIRsharing.p77ph9)  statements. SHAC (URL_TO_INSERT_RECORD_9272 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_9270 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_9271 https://fairsharing.org/FAIRsharing.f1449d)  expressions are RDF (URL_TO_INSERT_RECORD_9269 https://fairsharing.org/FAIRsharing.p77ph9)  statements 
-and the constraint profiles can be stored in an RDF (URL_TO_INSERT_RECORD_9273 https://fairsharing.org/FAIRsharing.p77ph9)  triple store. 
-SHAC (URL_TO_INSERT_RECORD_9276 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_9274 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_9275 https://fairsharing.org/FAIRsharing.f1449d)  specifications are implemented in the [TopQuadrant TopBraid Composer tool](https://www.topquadrant.com/products/topbraid-composer/).
+`shape` of the RDF (URL_TO_INSERT_RECORD_8534 https://fairsharing.org/FAIRsharing.p77ph9)  graph coming in. The W3C SHAC (URL_TO_INSERT_RECORD_8538 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_8535 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_8536 https://fairsharing.org/FAIRsharing.f1449d)  SHApe Constraint Language, known as [SHACL](https://www.w3.org/TR/shacl (URL_TO_INSERT_RECORD_8537 https://fairsharing.org/FAIRsharing.f1449d) /) (pronounced `shackle`),
+allow to express a set of conditions to validate RDF (URL_TO_INSERT_RECORD_8539 https://fairsharing.org/FAIRsharing.p77ph9)  graphs/RDF (URL_TO_INSERT_RECORD_8540 https://fairsharing.org/FAIRsharing.p77ph9)  statements. SHAC (URL_TO_INSERT_RECORD_8544 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_8542 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_8543 https://fairsharing.org/FAIRsharing.f1449d)  expressions are RDF (URL_TO_INSERT_RECORD_8541 https://fairsharing.org/FAIRsharing.p77ph9)  statements 
+and the constraint profiles can be stored in an RDF (URL_TO_INSERT_RECORD_8545 https://fairsharing.org/FAIRsharing.p77ph9)  triple store. 
+SHAC (URL_TO_INSERT_RECORD_8548 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_8546 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_8547 https://fairsharing.org/FAIRsharing.f1449d)  specifications are implemented in the [TopQuadrant TopBraid Composer tool](https://www.topquadrant.com/products/topbraid-composer/).
 
 A competing specification, know as [SHEX](https://shex.io/) for `Shape Expression`, provides a similar functionality,
 but isn't a W3C approved specifications, even though SHEX is proving quite popular and with a strong following.
 
 ##### iv. Querying an RDF graph - the W3C SPARQL Query Language
 
-RDF (URL_TO_INSERT_RECORD_9277 https://fairsharing.org/FAIRsharing.p77ph9)  graphs stored in RDF (URL_TO_INSERT_RECORD_9278 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores can be queried using a dedicated query language defined by a W3C specification known as 
-[SP (URL_TO_INSERT_RECORD_9280 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9279 https://fairsharing.org/FAIRsharing.87ccfd)  1.1](https://www.w3.org/TR/sparql11-query/).
-SP (URL_TO_INSERT_RECORD_9283 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9281 https://fairsharing.org/FAIRsharing.87ccfd)  stands for `SP (URL_TO_INSERT_RECORD_9284 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9282 https://fairsharing.org/FAIRsharing.87ccfd)  Query Language`, (pronounced `sparkle`) {footcite}`sparql`. 
-The results of a SP (URL_TO_INSERT_RECORD_9289 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9288 https://fairsharing.org/FAIRsharing.87ccfd)  query are a `result set` or `RDF (URL_TO_INSERT_RECORD_9286 https://fairsharing.org/FAIRsharing.p77ph9)  graph` and is therefore **a collection (URL_TO_INSERT_TERM_9285 https://fairsharing.org/search?recordType=collection)  of RDF (URL_TO_INSERT_RECORD_9287 https://fairsharing.org/FAIRsharing.p77ph9)  triples**.
+RDF (URL_TO_INSERT_RECORD_8549 https://fairsharing.org/FAIRsharing.p77ph9)  graphs stored in RDF (URL_TO_INSERT_RECORD_8550 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores can be queried using a dedicated query language defined by a W3C specification known as 
+[SP (URL_TO_INSERT_RECORD_8552 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8551 https://fairsharing.org/FAIRsharing.87ccfd)  1.1](https://www.w3.org/TR/sparql11-query/).
+SP (URL_TO_INSERT_RECORD_8555 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8553 https://fairsharing.org/FAIRsharing.87ccfd)  stands for `SP (URL_TO_INSERT_RECORD_8556 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8554 https://fairsharing.org/FAIRsharing.87ccfd)  Query Language`, (pronounced `sparkle`) {footcite}`sparql`. 
+The results of a SP (URL_TO_INSERT_RECORD_8561 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8560 https://fairsharing.org/FAIRsharing.87ccfd)  query are a `result set` or `RDF (URL_TO_INSERT_RECORD_8558 https://fairsharing.org/FAIRsharing.p77ph9)  graph` and is therefore **a collection (URL_TO_INSERT_TERM_8557 https://fairsharing.org/search?recordType=collection)  of RDF (URL_TO_INSERT_RECORD_8559 https://fairsharing.org/FAIRsharing.p77ph9)  triples**.
 
-An impressive feature of the SP (URL_TO_INSERT_RECORD_9291 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9290 https://fairsharing.org/FAIRsharing.87ccfd)  query language is its ability to perform `mashups` by performing federated queries
-over a number of 'SERVICES', i.e. RDF (URL_TO_INSERT_RECORD_9292 https://fairsharing.org/FAIRsharing.p77ph9)  triple store endpoints and return an RDF (URL_TO_INSERT_RECORD_9293 https://fairsharing.org/FAIRsharing.p77ph9)  graph which contains triples assembled
+An impressive feature of the SP (URL_TO_INSERT_RECORD_8563 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8562 https://fairsharing.org/FAIRsharing.87ccfd)  query language is its ability to perform `mashups` by performing federated queries
+over a number of 'SERVICES', i.e. RDF (URL_TO_INSERT_RECORD_8564 https://fairsharing.org/FAIRsharing.p77ph9)  triple store endpoints and return an RDF (URL_TO_INSERT_RECORD_8565 https://fairsharing.org/FAIRsharing.p77ph9)  graph which contains triples assembled
 from a number of resources.
 
 We still need to introduce several key concepts to provide a fuller picture of knowledge graph, how they are generated
@@ -202,10 +202,10 @@ and why they matter.
 ```{figure} ../../../images/wikidata-sparql.jpg
 ---
 width: 1000px
-name: wikidata (URL_TO_INSERT_RECORD_9294 https://fairsharing.org/FAIRsharing.6s749p)  sparql
-alt: wikidata (URL_TO_INSERT_RECORD_9295 https://fairsharing.org/FAIRsharing.6s749p)  sparql
+name: wikidata (URL_TO_INSERT_RECORD_8566 https://fairsharing.org/FAIRsharing.6s749p)  sparql
+alt: wikidata (URL_TO_INSERT_RECORD_8567 https://fairsharing.org/FAIRsharing.6s749p)  sparql
 ---
-A SP (URL_TO_INSERT_RECORD_9300 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9299 https://fairsharing.org/FAIRsharing.87ccfd)  query over Wikidata (URL_TO_INSERT_RECORD_9297 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_9298 https://fairsharing.org/FAIRsharing.6s749p)  RDF (URL_TO_INSERT_RECORD_9296 https://fairsharing.org/FAIRsharing.p77ph9)  endpoint
+A SP (URL_TO_INSERT_RECORD_8572 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8571 https://fairsharing.org/FAIRsharing.87ccfd)  query over Wikidata (URL_TO_INSERT_RECORD_8569 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_8570 https://fairsharing.org/FAIRsharing.6s749p)  RDF (URL_TO_INSERT_RECORD_8568 https://fairsharing.org/FAIRsharing.p77ph9)  endpoint
 ```
 ````
 
@@ -215,27 +215,27 @@ A SP (URL_TO_INSERT_RECORD_9300 https://fairsharing.org/FAIRsharing.s63y3p) ARQL
 ```{figure} ../../../images/wikidata-sparql-celllines.jpg
 ---
 width: 1000px
-name: wikidata (URL_TO_INSERT_RECORD_9301 https://fairsharing.org/FAIRsharing.6s749p)  sparql endpoint
-alt: wikidata (URL_TO_INSERT_RECORD_9302 https://fairsharing.org/FAIRsharing.6s749p)  sparql endpoint
+name: wikidata (URL_TO_INSERT_RECORD_8573 https://fairsharing.org/FAIRsharing.6s749p)  sparql endpoint
+alt: wikidata (URL_TO_INSERT_RECORD_8574 https://fairsharing.org/FAIRsharing.6s749p)  sparql endpoint
 ---
-A SP (URL_TO_INSERT_RECORD_9308 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9307 https://fairsharing.org/FAIRsharing.87ccfd)  query over Wikidata (URL_TO_INSERT_RECORD_9304 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_9305 https://fairsharing.org/FAIRsharing.6s749p)  RDF (URL_TO_INSERT_RECORD_9303 https://fairsharing.org/FAIRsharing.p77ph9)  endpoint: Cell lines with names that could also be URL (URL_TO_INSERT_RECORD_9306 https://fairsharing.org/FAIRsharing.9d38e2) s (Internet of Cell Lines)
+A SP (URL_TO_INSERT_RECORD_8580 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8579 https://fairsharing.org/FAIRsharing.87ccfd)  query over Wikidata (URL_TO_INSERT_RECORD_8576 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_8577 https://fairsharing.org/FAIRsharing.6s749p)  RDF (URL_TO_INSERT_RECORD_8575 https://fairsharing.org/FAIRsharing.p77ph9)  endpoint: Cell lines with names that could also be URL (URL_TO_INSERT_RECORD_8578 https://fairsharing.org/FAIRsharing.9d38e2) s (Internet of Cell Lines)
 ```
 ````
 
-Wikidata (URL_TO_INSERT_RECORD_9309 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_9310 https://fairsharing.org/FAIRsharing.6s749p)  provides a list of SP (URL_TO_INSERT_RECORD_9312 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9311 https://fairsharing.org/FAIRsharing.87ccfd)  query examples,
-see [here](https://www.wikidata.org (URL_TO_INSERT_RECORD_9313 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_\(Internet_of_Cell_Lines\)).
+Wikidata (URL_TO_INSERT_RECORD_8581 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_8582 https://fairsharing.org/FAIRsharing.6s749p)  provides a list of SP (URL_TO_INSERT_RECORD_8584 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8583 https://fairsharing.org/FAIRsharing.87ccfd)  query examples,
+see [here](https://www.wikidata.org (URL_TO_INSERT_RECORD_8585 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Wikidata:SPARQL_query_service/queries/examples#Cell_lines_with_names_that_could_also_be_URLs_\(Internet_of_Cell_Lines\)).
 
 
 ### 2. Property graphs
     
-Like `RDF (URL_TO_INSERT_RECORD_9314 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`, `property graphs(PG)` are also used to build `knowledge graphs`.
-However, unlike `RDF (URL_TO_INSERT_RECORD_9315 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`, `property graphs` allows the vertices (aka the `edge`) to carry *annotations*,
+Like `RDF (URL_TO_INSERT_RECORD_8586 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`, `property graphs(PG)` are also used to build `knowledge graphs`.
+However, unlike `RDF (URL_TO_INSERT_RECORD_8587 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`, `property graphs` allows the vertices (aka the `edge`) to carry *annotations*,
 which can be queried. These `annotations` are called `properties` hence the denomination `Property graphs`,
 also referred to as **`Labeled Property Graphs`** or **`LPG`**.
 
-`Property graphs` have inherent interesting (URL_TO_INSERT_RECORD_9317 https://fairsharing.org/FAIRsharing.q7bkqr)  properties which set them aside from `RDF (URL_TO_INSERT_RECORD_9316 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`.
+`Property graphs` have inherent interesting properties which set them aside from `RDF (URL_TO_INSERT_RECORD_8588 https://fairsharing.org/FAIRsharing.p77ph9)  graphs`.
 For instance, in PG/LPG, both `nodes` and `edges` have:
-- `(1..1) identifier (URL_TO_INSERT_TERM_9318 https://fairsharing.org/search?recordType=identifier_schema) `        
+- `(1..1) identifier (URL_TO_INSERT_TERM_8589 https://fairsharing.org/search?recordType=identifier_schema) `        
 - `(1..n) annotations`, in the form of sets of `{key:value}` pairs    
 
 In addition, `edges` have a `Type`. 
@@ -257,15 +257,15 @@ salient points and also, limitations.
 
 The Apache foundation released in 2009 the [Apache Tinkerpop framework](http://tinkerpop.apache.org/) as an open source
 initiative, licensed under Apache License 2.0 terms.
-* [Apache Tinkerpop](http://tinkerpop.apache.org/) is a **vendor agnostic graph database (URL_TO_INSERT_TERM_9319 https://fairsharing.org/search?fairsharingRegistry=Database)  storage framework** using on `property graphs` as 
-underlying data structure.  As a framework, Tinkerpop is developed (URL_TO_INSERT_RECORD_9320 https://fairsharing.org/FAIRsharing.31385c)  as an abstract layer, meant to ensure vendor 
-neutrality, allowing developers to decide about arch (URL_TO_INSERT_RECORD_9322 https://fairsharing.org/FAIRsharing.52b22c) itecture choices and tests while coding against a standard (URL_TO_INSERT_TERM_9321 https://fairsharing.org/search?fairsharingRegistry=Standard) ized
+* [Apache Tinkerpop](http://tinkerpop.apache.org/) is a **vendor agnostic graph database (URL_TO_INSERT_TERM_8590 https://fairsharing.org/search?fairsharingRegistry=Database)  storage framework** using on `property graphs` as 
+underlying data structure.  As a framework, Tinkerpop is developed (URL_TO_INSERT_RECORD_8591 https://fairsharing.org/FAIRsharing.31385c)  as an abstract layer, meant to ensure vendor 
+neutrality, allowing developers to decide about arch (URL_TO_INSERT_RECORD_8593 https://fairsharing.org/FAIRsharing.52b22c) itecture choices and tests while coding against a standard (URL_TO_INSERT_TERM_8592 https://fairsharing.org/search?fairsharingRegistry=Standard) ized
 interface.
 * [Apache Gremlin](https://tinkerpop.apache.org/docs/3.6.0/tutorials/gremlins-anatomy/) is the **query language** powering Tinkerpop and its interactions with the underlying data stored
 as property graphs. Gremlin is a `graph traversal language` optimized for speed and fast access. 
 Defined by Marko Rodrigues, Gremlin language specifications are detailed in the following publication 
 {footcite}`10.1145/2815072.2815073` and is supported by libraries available in the most popular programming
-language. Extensive documentation and training is available from the dedicated Apache project (URL_TO_INSERT_TERM_9323 https://fairsharing.org/search?recordType=project)  pages, 
+language. Extensive documentation and training is available from the dedicated Apache project (URL_TO_INSERT_TERM_8594 https://fairsharing.org/search?recordType=project)  pages, 
 including a set of [`recipes`](https://tinkerpop.apache.org/docs/current/recipes/) to make the most of the 
 Gremlin language.
 
@@ -304,19 +304,19 @@ g.V(1).out('knows').has('age', gt(30)).values('name')
 #### 2.2 Neo4j property graph database and Cypher Query Language
 
 [Neo4j](https://neo4j.com) is a commercial offering for building knowledge graphs relying on property graphs. 
-Backing the approach, the team developed (URL_TO_INSERT_RECORD_9324 https://fairsharing.org/FAIRsharing.31385c)  a dedicated query language for `Labeled property graphs`. 
+Backing the approach, the team developed (URL_TO_INSERT_RECORD_8595 https://fairsharing.org/FAIRsharing.31385c)  a dedicated query language for `Labeled property graphs`. 
 This language is known as `CYPHER`.
 
-Neo4j database (URL_TO_INSERT_TERM_9325 https://fairsharing.org/search?fairsharingRegistry=Database) s have shown promises in biology and bioinformat (URL_TO_INSERT_TERM_9326 https://fairsharing.org/search?recordType=model_and_format) ics for its ability to allow for fast graph traversals, 
-which matches the requirements of cell biologists, model (URL_TO_INSERT_TERM_9327 https://fairsharing.org/search?recordType=model_and_format) ers, and computational scientists who need to explore a growing
-ensembl (URL_TO_INSERT_RECORD_9328 https://fairsharing.org/FAIRsharing.fx0mw7) e of molecular pathways, that is to say graphs of interactions and reactions.
-An illustration of that natural fit is the uptake of the Neo4j technology by a project (URL_TO_INSERT_TERM_9329 https://fairsharing.org/search?recordType=project)  such as ` Disease Map (URL_TO_INSERT_RECORD_9330 https://fairsharing.org/FAIRsharing.53edcc) s`, 
-Reactome (URL_TO_INSERT_RECORD_9331 https://fairsharing.org/FAIRsharing.tf6kj8)  {footcite}`pmid29377902` and KnetMiner (URL_TO_INSERT_RECORD_9332 https://fairsharing.org/FAIRsharing.826b4a)  (URL_TO_INSERT_RECORD_9333 https://fairsharing.org/FAIRsharing.826b4a) s {footcite}`pmid30085931`.
+Neo4j database (URL_TO_INSERT_TERM_8596 https://fairsharing.org/search?fairsharingRegistry=Database) s have shown promises in biology and bioinformat (URL_TO_INSERT_TERM_8597 https://fairsharing.org/search?recordType=model_and_format) ics for its ability to allow for fast graph traversals, 
+which matches the requirements of cell biologists, model (URL_TO_INSERT_TERM_8598 https://fairsharing.org/search?recordType=model_and_format) ers, and computational scientists who need to explore a growing
+ensembl (URL_TO_INSERT_RECORD_8599 https://fairsharing.org/FAIRsharing.fx0mw7) e of molecular pathways, that is to say graphs of interactions and reactions.
+An illustration of that natural fit is the uptake of the Neo4j technology by a project (URL_TO_INSERT_TERM_8600 https://fairsharing.org/search?recordType=project)  such as ` Disease Map (URL_TO_INSERT_RECORD_8601 https://fairsharing.org/FAIRsharing.53edcc) s`, 
+Reactome (URL_TO_INSERT_RECORD_8602 https://fairsharing.org/FAIRsharing.tf6kj8)  {footcite}`pmid29377902` and KnetMiner (URL_TO_INSERT_RECORD_8603 https://fairsharing.org/FAIRsharing.826b4a)  (URL_TO_INSERT_RECORD_8604 https://fairsharing.org/FAIRsharing.826b4a) s {footcite}`pmid30085931`.
 
-* The [Reactome (URL_TO_INSERT_RECORD_9334 https://fairsharing.org/FAIRsharing.tf6kj8)  database](https://reactome.org (URL_TO_INSERT_RECORD_9335 https://fairsharing.org/FAIRsharing.tf6kj8) /) builds on Neo4j to allow navigation of reactions and pathways.
+* The [Reactome (URL_TO_INSERT_RECORD_8605 https://fairsharing.org/FAIRsharing.tf6kj8)  database](https://reactome.org (URL_TO_INSERT_RECORD_8606 https://fairsharing.org/FAIRsharing.tf6kj8) /) builds on Neo4j to allow navigation of reactions and pathways.
 
-A complete tutorial to query Reactome (URL_TO_INSERT_RECORD_9336 https://fairsharing.org/FAIRsharing.tf6kj8)  using the `Cypher language` to interrogate the underlying Neo4j store is
-available [here](https://reactome.org (URL_TO_INSERT_RECORD_9337 https://fairsharing.org/FAIRsharing.tf6kj8) /dev/graph-database/extract-participating-molecules).
+A complete tutorial to query Reactome (URL_TO_INSERT_RECORD_8607 https://fairsharing.org/FAIRsharing.tf6kj8)  using the `Cypher language` to interrogate the underlying Neo4j store is
+available [here](https://reactome.org (URL_TO_INSERT_RECORD_8608 https://fairsharing.org/FAIRsharing.tf6kj8) /dev/graph-database/extract-participating-molecules).
 
 ```bash
 //All reactions for the pathway with stable identifier R-HSA-198933
@@ -330,17 +330,17 @@ RETURN p.stId AS Pathway, rle.stId AS Reaction, rle.displayName AS ReactionName
 ```{figure} ../../../images/pcbi.1005968.g001.jpg
 ---
 width: 600px
-name: reactome (URL_TO_INSERT_RECORD_9338 https://fairsharing.org/FAIRsharing.tf6kj8)  cypher query
-alt: reactome (URL_TO_INSERT_RECORD_9339 https://fairsharing.org/FAIRsharing.tf6kj8)  cypher query
+name: reactome (URL_TO_INSERT_RECORD_8609 https://fairsharing.org/FAIRsharing.tf6kj8)  cypher query
+alt: reactome (URL_TO_INSERT_RECORD_8610 https://fairsharing.org/FAIRsharing.tf6kj8)  cypher query
 ---
-CYPHER query example on Reactome (URL_TO_INSERT_RECORD_9341 https://fairsharing.org/FAIRsharing.tf6kj8) : Comparison with SQL. From Fabregat et al,2018. 10.1371/journal (URL_TO_INSERT_TERM_9340 https://fairsharing.org/search?recordType=journal) .pcbi.1005968
+CYPHER query example on Reactome (URL_TO_INSERT_RECORD_8612 https://fairsharing.org/FAIRsharing.tf6kj8) : Comparison with SQL. From Fabregat et al,2018. 10.1371/journal (URL_TO_INSERT_TERM_8611 https://fairsharing.org/search?recordType=journal) .pcbi.1005968
 ```
 ````
 
-* The [PDB (URL_TO_INSERT_RECORD_9345 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_9342 https://fairsharing.org/FAIRsharing.26ek1v) -KB (URL_TO_INSERT_RECORD_9347 https://fairsharing.org/FAIRsharing.sFzdV7) ](PDB (URL_TO_INSERT_RECORD_9346 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_9343 https://fairsharing.org/FAIRsharing.26ek1v) -KG https://www.ebi.ac.uk/pdbe (URL_TO_INSERT_RECORD_9344 https://fairsharing.org/FAIRsharing.26ek1v) /pdbe-kb/graph-download) is another relevant resources in the fields of
-bioinformat (URL_TO_INSERT_TERM_9349 https://fairsharing.org/search?recordType=model_and_format) ics which is available as a Neo4j graph database (URL_TO_INSERT_TERM_9348 https://fairsharing.org/search?fairsharingRegistry=Database) . PDB (URL_TO_INSERT_RECORD_9352 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_9350 https://fairsharing.org/FAIRsharing.26ek1v) -KB (URL_TO_INSERT_RECORD_9354 https://fairsharing.org/FAIRsharing.sFzdV7)  is a community-driven resource managed by the PDB (URL_TO_INSERT_RECORD_9353 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_9351 https://fairsharing.org/FAIRsharing.26ek1v) 
-team, collating functional annotations and predictions for structure data in the PDB (URL_TO_INSERT_RECORD_9355 https://fairsharing.org/FAIRsharing.9y4cqw)  arch (URL_TO_INSERT_RECORD_9356 https://fairsharing.org/FAIRsharing.52b22c) ive, the content of which is distributed
-under CC-BY-4 license. PDFe-KB can be downloaded [here](PDB (URL_TO_INSERT_RECORD_9359 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_9357 https://fairsharing.org/FAIRsharing.26ek1v) -KG https://www.ebi.ac.uk/pdbe (URL_TO_INSERT_RECORD_9358 https://fairsharing.org/FAIRsharing.26ek1v) /pdbe-kb/graph-download).
+* The [PDB (URL_TO_INSERT_RECORD_8616 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_8613 https://fairsharing.org/FAIRsharing.26ek1v) -KB (URL_TO_INSERT_RECORD_8618 https://fairsharing.org/FAIRsharing.sFzdV7) ](PDB (URL_TO_INSERT_RECORD_8617 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_8614 https://fairsharing.org/FAIRsharing.26ek1v) -KG https://www.ebi.ac.uk/pdbe (URL_TO_INSERT_RECORD_8615 https://fairsharing.org/FAIRsharing.26ek1v) /pdbe-kb/graph-download) is another relevant resources in the fields of
+bioinformat (URL_TO_INSERT_TERM_8620 https://fairsharing.org/search?recordType=model_and_format) ics which is available as a Neo4j graph database (URL_TO_INSERT_TERM_8619 https://fairsharing.org/search?fairsharingRegistry=Database) . PDB (URL_TO_INSERT_RECORD_8623 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_8621 https://fairsharing.org/FAIRsharing.26ek1v) -KB (URL_TO_INSERT_RECORD_8625 https://fairsharing.org/FAIRsharing.sFzdV7)  is a community-driven resource managed by the PDB (URL_TO_INSERT_RECORD_8624 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_8622 https://fairsharing.org/FAIRsharing.26ek1v) 
+team, collating functional annotations and predictions for structure data in the PDB (URL_TO_INSERT_RECORD_8626 https://fairsharing.org/FAIRsharing.9y4cqw)  arch (URL_TO_INSERT_RECORD_8627 https://fairsharing.org/FAIRsharing.52b22c) ive, the content of which is distributed
+under CC-BY-4 license. PDFe-KB can be downloaded [here](PDB (URL_TO_INSERT_RECORD_8630 https://fairsharing.org/FAIRsharing.9y4cqw) e (URL_TO_INSERT_RECORD_8628 https://fairsharing.org/FAIRsharing.26ek1v) -KG https://www.ebi.ac.uk/pdbe (URL_TO_INSERT_RECORD_8629 https://fairsharing.org/FAIRsharing.26ek1v) /pdbe-kb/graph-download).
 
 
 
@@ -350,7 +350,7 @@ validity of the approach taken by the group of computer scientists who built the
 deliver one of the most successful solution for property graph based knowledge representation and querying making 
 full use of Neo4j representation and infrastructure capabilities.
 
-Neo4J open-sourced the Cypher query language and made it available via GitHub (URL_TO_INSERT_RECORD_9361 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_9362 https://fairsharing.org/FAIRsharing.c55d5e)  as part of the [open-cypher](https://github.com (URL_TO_INSERT_RECORD_9363 https://fairsharing.org/FAIRsharing.c55d5e) /opencypher) project (URL_TO_INSERT_TERM_9360 https://fairsharing.org/search?recordType=project) 
+Neo4J open-sourced the Cypher query language and made it available via GitHub (URL_TO_INSERT_RECORD_8632 https://fairsharing.org/FAIRsharing.c55d5e)  (URL_TO_INSERT_RECORD_8633 https://fairsharing.org/FAIRsharing.c55d5e)  as part of the [open-cypher](https://github.com (URL_TO_INSERT_RECORD_8634 https://fairsharing.org/FAIRsharing.c55d5e) /opencypher) project (URL_TO_INSERT_TERM_8631 https://fairsharing.org/search?recordType=project) 
  
  
 A [large body of documentation and training material is available](https://neo4j.com/developer/cypher/), 
@@ -365,54 +365,54 @@ quote the landing page of the organization.
 > It matters because [GraphQL specification](https://graphql.org/) allows building robust Application Programming 
 > Interface and make it easier to build full stack applications from scratch while offering great flexibility in 
 > interfacing with the data. 
-> But the main idea here is that the `GraphQL` way of representing data is a natural fit to database (URL_TO_INSERT_TERM_9364 https://fairsharing.org/search?fairsharingRegistry=Database)  systems
-> which are natively `graph database (URL_TO_INSERT_TERM_9365 https://fairsharing.org/search?fairsharingRegistry=Database) s`, such as Neo4j.
+> But the main idea here is that the `GraphQL` way of representing data is a natural fit to database (URL_TO_INSERT_TERM_8635 https://fairsharing.org/search?fairsharingRegistry=Database)  systems
+> which are natively `graph database (URL_TO_INSERT_TERM_8636 https://fairsharing.org/search?fairsharingRegistry=Database) s`, such as Neo4j.
 > 
 
 ### 3. RDF graphs or Labeled Property graphs, which has the upper hand?
 
 Sometimes, nothing beats a diagram to drive forward the strengths and the weaknesses of technical stacks.
-In the diagram presented in figure 4, which provides an overview of the specifications and standard (URL_TO_INSERT_TERM_9366 https://fairsharing.org/search?fairsharingRegistry=Standard) s available to support the
+In the diagram presented in figure 4, which provides an overview of the specifications and standard (URL_TO_INSERT_TERM_8637 https://fairsharing.org/search?fairsharingRegistry=Standard) s available to support the
 knowledge graph, two things strike the keen reader:
 
-1. RDF (URL_TO_INSERT_RECORD_9368 https://fairsharing.org/FAIRsharing.p77ph9)  graphs technology is backed by a large number of W3C standard (URL_TO_INSERT_TERM_9367 https://fairsharing.org/search?fairsharingRegistry=Standard) s for the **semantic web**.
-    >- W3C RDF (URL_TO_INSERT_RECORD_9369 https://fairsharing.org/FAIRsharing.p77ph9) 
-    >- WC3 RDF (URL_TO_INSERT_RECORD_9371 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_9370 https://fairsharing.org/FAIRsharing.v9n3gk) 
-    >- W3C OWL (URL_TO_INSERT_RECORD_9372 https://fairsharing.org/FAIRsharing.atygwy) 
-    >- W3C SHAC (URL_TO_INSERT_RECORD_9375 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_9373 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_9374 https://fairsharing.org/FAIRsharing.f1449d) 
-    >- W3C SP (URL_TO_INSERT_RECORD_9377 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_9376 https://fairsharing.org/FAIRsharing.87ccfd)  1.1
+1. RDF (URL_TO_INSERT_RECORD_8639 https://fairsharing.org/FAIRsharing.p77ph9)  graphs technology is backed by a large number of W3C standard (URL_TO_INSERT_TERM_8638 https://fairsharing.org/search?fairsharingRegistry=Standard) s for the **semantic web**.
+    >- W3C RDF (URL_TO_INSERT_RECORD_8640 https://fairsharing.org/FAIRsharing.p77ph9) 
+    >- WC3 RDF (URL_TO_INSERT_RECORD_8642 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_8641 https://fairsharing.org/FAIRsharing.v9n3gk) 
+    >- W3C OWL (URL_TO_INSERT_RECORD_8643 https://fairsharing.org/FAIRsharing.atygwy) 
+    >- W3C SHAC (URL_TO_INSERT_RECORD_8646 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_8644 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_8645 https://fairsharing.org/FAIRsharing.f1449d) 
+    >- W3C SP (URL_TO_INSERT_RECORD_8648 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_8647 https://fairsharing.org/FAIRsharing.87ccfd)  1.1
 
 2. Content Validation
-    >- RDF (URL_TO_INSERT_RECORD_9378 https://fairsharing.org/FAIRsharing.p77ph9)  graphs content can be validated (i.e. checked) with 2 equally functional `constraint` languages,
-    SHEX and SHAC (URL_TO_INSERT_RECORD_9381 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_9379 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_9380 https://fairsharing.org/FAIRsharing.f1449d) . 
-    Using these languages, the "shape" of the RDF (URL_TO_INSERT_RECORD_9382 https://fairsharing.org/FAIRsharing.p77ph9)  graph can be controlled.
+    >- RDF (URL_TO_INSERT_RECORD_8649 https://fairsharing.org/FAIRsharing.p77ph9)  graphs content can be validated (i.e. checked) with 2 equally functional `constraint` languages,
+    SHEX and SHAC (URL_TO_INSERT_RECORD_8652 https://fairsharing.org/FAIRsharing.md3e78) L (URL_TO_INSERT_RECORD_8650 https://fairsharing.org/FAIRsharing.j9y503)  (URL_TO_INSERT_RECORD_8651 https://fairsharing.org/FAIRsharing.f1449d) . 
+    Using these languages, the "shape" of the RDF (URL_TO_INSERT_RECORD_8653 https://fairsharing.org/FAIRsharing.p77ph9)  graph can be controlled.
     >- With property graphs, until the introduction of an adapter in the Neo4j library, this task proved hard to achieve.
-    This becomes a drawback as it means a property graph database (URL_TO_INSERT_TERM_9383 https://fairsharing.org/search?fairsharingRegistry=Database)  may become `contaminated` with incorrect data.
+    This becomes a drawback as it means a property graph database (URL_TO_INSERT_TERM_8654 https://fairsharing.org/search?fairsharingRegistry=Database)  may become `contaminated` with incorrect data.
 
-Besides this point, two additional features can give RDF (URL_TO_INSERT_RECORD_9384 https://fairsharing.org/FAIRsharing.p77ph9)  graphs the edge (no pun intended!) over labeled property graphs
+Besides this point, two additional features can give RDF (URL_TO_INSERT_RECORD_8655 https://fairsharing.org/FAIRsharing.p77ph9)  graphs the edge (no pun intended!) over labeled property graphs
 (even if it also depends on the use cases and ultimate goal):
 
 3. IRI support and Linked data
-    >- the RDF (URL_TO_INSERT_RECORD_9385 https://fairsharing.org/FAIRsharing.p77ph9)  specification by construction allows the use of IRI to uniquely identify nodes
-    and have globally unique resolvable identifier (URL_TO_INSERT_TERM_9386 https://fairsharing.org/search?recordType=identifier_schema) s for resources.
+    >- the RDF (URL_TO_INSERT_RECORD_8656 https://fairsharing.org/FAIRsharing.p77ph9)  specification by construction allows the use of IRI to uniquely identify nodes
+    and have globally unique resolvable identifier (URL_TO_INSERT_TERM_8657 https://fairsharing.org/search?recordType=identifier_schema) s for resources.
 
 4. Native semantics and the possibility of inference
-    >- Backed by RDF (URL_TO_INSERT_RECORD_9389 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_9387 https://fairsharing.org/FAIRsharing.v9n3gk)  and OWL (URL_TO_INSERT_RECORD_9388 https://fairsharing.org/FAIRsharing.atygwy)  semantics, RDF (URL_TO_INSERT_RECORD_9390 https://fairsharing.org/FAIRsharing.p77ph9)  graphs are built on a technology stack developed (URL_TO_INSERT_RECORD_9391 https://fairsharing.org/FAIRsharing.31385c)  to deliver the
+    >- Backed by RDF (URL_TO_INSERT_RECORD_8660 https://fairsharing.org/FAIRsharing.p77ph9) S (URL_TO_INSERT_RECORD_8658 https://fairsharing.org/FAIRsharing.v9n3gk)  and OWL (URL_TO_INSERT_RECORD_8659 https://fairsharing.org/FAIRsharing.atygwy)  semantics, RDF (URL_TO_INSERT_RECORD_8661 https://fairsharing.org/FAIRsharing.p77ph9)  graphs are built on a technology stack developed (URL_TO_INSERT_RECORD_8662 https://fairsharing.org/FAIRsharing.31385c)  to deliver the
     `the semantic web` as envisioned by Sir Tim Berners-Lee. Tools known as *reasoners* , use first order logic to
     perform type and instance classification but also generate `entailments`, which correspond to new statements 
-    resulting from inference made from the explicit assertions in the underlying ontologies (URL_TO_INSERT_TERM_9392 https://fairsharing.org/search?recordType=terminology_artefact)  or graph.
+    resulting from inference made from the explicit assertions in the underlying ontologies (URL_TO_INSERT_TERM_8663 https://fairsharing.org/search?recordType=terminology_artefact)  or graph.
  
 Worth of notice, comparisons between the two approaches do exist. For instance, Alocci and colleagues ran a comparison
-of between RDF (URL_TO_INSERT_RECORD_9393 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores and Property graph in the context of Glycan substructure and their assessment can serve as
+of between RDF (URL_TO_INSERT_RECORD_8664 https://fairsharing.org/FAIRsharing.p77ph9)  triple stores and Property graph in the context of Glycan substructure and their assessment can serve as
 basis for deciding to go for on or the other {footcite}`pmid26656740`.
 
 
 ### 4. Towards a unified standard for querying LPG: GQL specifications
 
 What now? 
-In the previous 2 sections, we have highlighted 2 of the most successful project (URL_TO_INSERT_TERM_9394 https://fairsharing.org/search?recordType=project) s leveraging the power of 
-Property Graphs as data structure for storing informat (URL_TO_INSERT_TERM_9395 https://fairsharing.org/search?recordType=model_and_format) ion and building knowledge graphs. 
-However, none of these implementations are officially an approved W3C standard (URL_TO_INSERT_TERM_9396 https://fairsharing.org/search?fairsharingRegistry=Standard) s. While it does not really matter
+In the previous 2 sections, we have highlighted 2 of the most successful project (URL_TO_INSERT_TERM_8665 https://fairsharing.org/search?recordType=project) s leveraging the power of 
+Property Graphs as data structure for storing informat (URL_TO_INSERT_TERM_8666 https://fairsharing.org/search?recordType=model_and_format) ion and building knowledge graphs. 
+However, none of these implementations are officially an approved W3C standard (URL_TO_INSERT_TERM_8667 https://fairsharing.org/search?fairsharingRegistry=Standard) s. While it does not really matter
 at this stage, it was realized that such fragmentation was hurting and in 2019, the `open Graph Query Language` (oGQL) 
 working group released an initial specification.
 
@@ -420,57 +420,57 @@ working group released an initial specification.
 
 ## Conclusion
 
-Knowledge graphs are a powerful and flexible way to represent informat (URL_TO_INSERT_TERM_9397 https://fairsharing.org/search?recordType=model_and_format) ion. 
+Knowledge graphs are a powerful and flexible way to represent informat (URL_TO_INSERT_TERM_8668 https://fairsharing.org/search?recordType=model_and_format) ion. 
 Their properties and features lend themselves to data driven approaches and make them a data structure of choice for 
 certain types of artificial intelligence and machine learning applications. 
 As with all technical solutions, it is no panacea, no silver bullet.
 They however are a technology which can greatly enhance certain tasks and are of particular relevance for representing
-metadata, data about the data  in a FAIR (URL_TO_INSERT_RECORD_9398 https://fairsharing.org/FAIRsharing.WWI10U)  way.
+metadata, data about the data  in a FAIR (URL_TO_INSERT_RECORD_8669 https://fairsharing.org/FAIRsharing.WWI10U)  way.
 
 
 ### What to read next:
 
 > Having read about what knowledge graphs are and their typology, the next key thing is to learn about how are knowledge graphs generated.
-> This is when we need to introduce the notion of semantic model (URL_TO_INSERT_TERM_9399 https://fairsharing.org/search?recordType=model_and_format) s and ontologies (URL_TO_INSERT_TERM_9400 https://fairsharing.org/search?recordType=terminology_artefact)  and when knowledge engineers step in.
+> This is when we need to introduce the notion of semantic model (URL_TO_INSERT_TERM_8670 https://fairsharing.org/search?recordType=model_and_format) s and ontologies (URL_TO_INSERT_TERM_8671 https://fairsharing.org/search?recordType=terminology_artefact)  and when knowledge engineers step in.
 >
-> The main concerns are to 1) provide foundational domain model (URL_TO_INSERT_TERM_9401 https://fairsharing.org/search?recordType=model_and_format) s as well as 2) instantiations of data under these model (URL_TO_INSERT_TERM_9402 https://fairsharing.org/search?recordType=model_and_format) s. 
+> The main concerns are to 1) provide foundational domain model (URL_TO_INSERT_TERM_8672 https://fairsharing.org/search?recordType=model_and_format) s as well as 2) instantiations of data under these model (URL_TO_INSERT_TERM_8673 https://fairsharing.org/search?recordType=model_and_format) s. 
 > To take a simple example, let's consider converting natural text into a data structure which can be easily manipulated by software agents.
 >
 > ```bash
 > `P53 gene transcript` `binds to` `DNA`.
 > ```
 > In order to do this, several steps are necessary and some requires specific resources to be available. 
-> One step is known as 'Name Entity Recognition' (NER), which as the name says aims to cast string (URL_TO_INSERT_RECORD_9403 https://fairsharing.org/FAIRsharing.9b7wvk) s into specific bins such 'noun', 'verb', 'qualifier', etc.
-> Another step, following the NER step would be the anchoring of these entities to a semantic framework and this step is known as 'semantic mark-up' or sometimes 'map (URL_TO_INSERT_RECORD_9405 https://fairsharing.org/FAIRsharing.53edcc) ping to ontologies (URL_TO_INSERT_TERM_9404 https://fairsharing.org/search?recordType=terminology_artefact) '.
+> One step is known as 'Name Entity Recognition' (NER), which as the name says aims to cast string (URL_TO_INSERT_RECORD_8674 https://fairsharing.org/FAIRsharing.9b7wvk) s into specific bins such 'noun', 'verb', 'qualifier', etc.
+> Another step, following the NER step would be the anchoring of these entities to a semantic framework and this step is known as 'semantic mark-up' or sometimes 'map (URL_TO_INSERT_RECORD_8676 https://fairsharing.org/FAIRsharing.53edcc) ping to ontologies (URL_TO_INSERT_TERM_8675 https://fairsharing.org/search?recordType=terminology_artefact) '.
 >
-> Ontologies (URL_TO_INSERT_TERM_9406 https://fairsharing.org/search?recordType=terminology_artefact)  are the resources which provide this layer of semantics which make it possible to integrate data in
-> knowledge graphs. Ontologies (URL_TO_INSERT_TERM_9407 https://fairsharing.org/search?recordType=terminology_artefact)  are **formal resources developed (URL_TO_INSERT_RECORD_9408 https://fairsharing.org/FAIRsharing.31385c)  by experts in a domain**.
-> Ontologies (URL_TO_INSERT_TERM_9409 https://fairsharing.org/search?recordType=terminology_artefact)  also rely on RDF (URL_TO_INSERT_RECORD_9410 https://fairsharing.org/FAIRsharing.p77ph9)  language for their representation but their purpose is different.
+> Ontologies (URL_TO_INSERT_TERM_8677 https://fairsharing.org/search?recordType=terminology_artefact)  are the resources which provide this layer of semantics which make it possible to integrate data in
+> knowledge graphs. Ontologies (URL_TO_INSERT_TERM_8678 https://fairsharing.org/search?recordType=terminology_artefact)  are **formal resources developed (URL_TO_INSERT_RECORD_8679 https://fairsharing.org/FAIRsharing.31385c)  by experts in a domain**.
+> Ontologies (URL_TO_INSERT_TERM_8680 https://fairsharing.org/search?recordType=terminology_artefact)  also rely on RDF (URL_TO_INSERT_RECORD_8681 https://fairsharing.org/FAIRsharing.p77ph9)  language for their representation but their purpose is different.
 > 
-> These ontologies (URL_TO_INSERT_TERM_9411 https://fairsharing.org/search?recordType=terminology_artefact)  set the rules and constraints grounded in first order logic to define a type.
+> These ontologies (URL_TO_INSERT_TERM_8682 https://fairsharing.org/search?recordType=terminology_artefact)  set the rules and constraints grounded in first order logic to define a type.
 > 
-> The representation is neat and tidy but one can not help noticing that all the string (URL_TO_INSERT_RECORD_9412 https://fairsharing.org/FAIRsharing.9b7wvk) s are stored as free text.
+> The representation is neat and tidy but one can not help noticing that all the string (URL_TO_INSERT_RECORD_8683 https://fairsharing.org/FAIRsharing.9b7wvk) s are stored as free text.
 > A problem arises when trying to accumulate knowledge from different sources.
-> One needs to add a layer of semantics to `type` each of the element of an RDF (URL_TO_INSERT_RECORD_9413 https://fairsharing.org/FAIRsharing.p77ph9)  statement.
+> One needs to add a layer of semantics to `type` each of the element of an RDF (URL_TO_INSERT_RECORD_8684 https://fairsharing.org/FAIRsharing.p77ph9)  statement.
 > 
 >```bash
 >@prefix go: <go:>
 >@prefix uniprot: <uniprot:>
 >@prefix chebi: <chebi:>
-> P53 gene transcript a RDF (URL_TO_INSERT_RECORD_9414 https://fairsharing.org/FAIRsharing.p77ph9) :type go:Transcript;
-> DNA a RDF (URL_TO_INSERT_RECORD_9415 https://fairsharing.org/FAIRsharing.p77ph9) :type chebi:molecularEntity
+> P53 gene transcript a RDF (URL_TO_INSERT_RECORD_8685 https://fairsharing.org/FAIRsharing.p77ph9) :type go:Transcript;
+> DNA a RDF (URL_TO_INSERT_RECORD_8686 https://fairsharing.org/FAIRsharing.p77ph9) :type chebi:molecularEntity
 > binds_to
 >```
 >
->This taster is really meant to encourage our readers to dive into the following contents, which range from how to build controlled terminology (URL_TO_INSERT_TERM_9416 https://fairsharing.org/search?recordType=terminology_artefact) , 
->how to select ontologies (URL_TO_INSERT_TERM_9417 https://fairsharing.org/search?recordType=terminology_artefact)  or how to perform NER.
+>This taster is really meant to encourage our readers to dive into the following contents, which range from how to build controlled terminology (URL_TO_INSERT_TERM_8687 https://fairsharing.org/search?recordType=terminology_artefact) , 
+>how to select ontologies (URL_TO_INSERT_TERM_8688 https://fairsharing.org/search?recordType=terminology_artefact)  or how to perform NER.
 > Check out those content and  recipes!
 >
 >- Constructing knowledge graphs and their biomedical applications {footcite}`pmid32637040`, a review by Nicholson & Greene
->- {ref}`fcb-introduction-terminologies (URL_TO_INSERT_TERM_9418 https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM_9419 https://fairsharing.org/search?recordType=terminology_artefact) `
-<!-- >- {ref}`fcb-skos-terminology (URL_TO_INSERT_TERM_9420 https://fairsharing.org/search?recordType=terminology_artefact) `
+>- {ref}`fcb-introduction-terminologies (URL_TO_INSERT_TERM_8689 https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM_8690 https://fairsharing.org/search?recordType=terminology_artefact) `
+<!-- >- {ref}`fcb-skos-terminology`
 >- {ref}`fcb-ner`
->- {ref}`fcb-ontologies (URL_TO_INSERT_TERM_9421 https://fairsharing.org/search?recordType=terminology_artefact) `
+>- {ref}`fcb-ontologies`
 -->
 >- {ref}`fcb-interop-covid-metadata`
 >- {ref}`fcb-interop-etl`
@@ -499,15 +499,15 @@ metadata, data about the data  in a FAIR (URL_TO_INSERT_RECORD_9398 https://fair
 
 [5]. https://www.futurelearn.com/courses/linked-data
 
-[6]. https://www.ncbi.nlm.nih.gov/pmc (URL_TO_INSERT_RECORD_9422 https://fairsharing.org/FAIRsharing.wpt5mp) /articles/PMC7327409/ (Constructing knowledge graphs and their biomedical applications)
+[6]. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327409/ (Constructing knowledge graphs and their biomedical applications)
 
 [7]. https://douroucouli.wordpress.com/2019/03/14/biological-knowledge-graph-modeling-design-patterns/
 
-[8]. wikidata (URL_TO_INSERT_RECORD_9423 https://fairsharing.org/FAIRsharing.6s749p) 
+[8]. wikidata
 
-[9]. monarch (URL_TO_INSERT_RECORD_9424 https://fairsharing.org/FAIRsharing.52b22c)  knowledge graph
+[9]. monarch knowledge graph
 
-[10]. NCAT (URL_TO_INSERT_RECORD_9425 https://fairsharing.org/FAIRsharing.3a96ae) S biomedical data translator
+[10]. NCATS biomedical data translator
 
 [11]. Google graph
 

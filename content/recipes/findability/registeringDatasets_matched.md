@@ -1,16 +1,16 @@
 # Registering Datasets in Wikidata
 
  ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM_2574 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB060
-:identifier (URL_TO_INSERT_TERM_2575 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_2576 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
+:identifier (URL_TO_INSERT_TERM_2346 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB060
+:identifier (URL_TO_INSERT_TERM_2347 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD_2348 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: bioinformat (URL_TO_INSERT_TERM_2577 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
+:intended_audience: bioinformat (URL_TO_INSERT_TERM_2349 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
 :maturity_level: 1
 :maturity_indicator: 5, 8
 :has_executable_code: nope
-:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD_2578 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_2579 https://fairsharing.org/FAIRsharing.6s749p)  
+:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD_2350 https://fairsharing.org/FAIRsharing.6s749p)  (URL_TO_INSERT_RECORD_2351 https://fairsharing.org/FAIRsharing.6s749p)  
 ```` 
 
 [comment]: <> ("UCnn.x Registering a dataset in Wikidata.")
@@ -74,7 +74,7 @@ If you have a new dataset and would like to deposit it because it is not listed 
 please check out the [Depositing in Zenodo generic repository](https://w3id.org/faircookbook/FCB009) recipe.
 
 <!--
-TODO: add below statement when that recipe is included too:
+TO (URL_TO_INSERT_RECORD_2352 https://fairsharing.org/FAIRsharing.w69t6r) DO: add below statement when that recipe is included too:
 
 For details related to finding datasets and determining the correct licenses, please refer to Finding Compounds. 
 -->
