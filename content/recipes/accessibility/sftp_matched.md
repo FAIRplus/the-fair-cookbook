@@ -201,7 +201,7 @@ or
 bash: sha512sum * > sha512sum.txt
 ```
 
-Windows: CertUtil -hashfile FILENA (URL_TO_INSERT_RECORD_11 https://fairsharing.org/FAIRsharing.dj8nt8) ME MD5
+Windows: CertUtil -hashfile FILENAME MD5
 
 Recipient compares checksums:
 
@@ -215,15 +215,15 @@ bash: sha512sum -c sha512sum.txt *
 ```
 
 
-The sender can use the sender organization’s HP (URL_TO_INSERT_RECORD_12 https://fairsharing.org/FAIRsharing.kbtt7f) C (URL_TO_INSERT_RECORD_13 https://fairsharing.org/FAIRsharing.5y3gdd)  node to:
+The sender can use the sender organization’s HP (URL_TO_INSERT_RECORD_11 https://fairsharing.org/FAIRsharing.kbtt7f) C node to:
 - (1)	set up a shell which runs in the background.
 - (2)	launch the FTP session in the same local network as the server and directory of files to be transferred.
 - (3)	Transfer the files via the filesystem on both the local and remote system.
 
-For example, an IMI collaboration project (URL_TO_INSERT_TERM_14 https://fairsharing.org/search?recordType=project)  requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
+For example, an IMI collaboration project (URL_TO_INSERT_TERM_12 https://fairsharing.org/search?recordType=project)  requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
 The process involves:
   i.  copying the files over to a secure FTP server
-  ii. the receiving institution (URL_TO_INSERT_TERM_15 https://fairsharing.org/search?recordType=institution)  copies to their server, 
+  ii. the receiving institution (URL_TO_INSERT_TERM_13 https://fairsharing.org/search?recordType=institution)  copies to their server, 
   iii. then the sender deletes the files on the FTP server.
 
 > **Pros and cons:**
@@ -244,7 +244,7 @@ This common process is described in a number of publically available resources, 
 
 ## Conclusion
 
-This content is a simple guideline (URL_TO_INSERT_TERM_16 https://fairsharing.org/search?recordType=reporting_guideline)  for using a well known secure file transfer protocol.
+This content is a simple guideline (URL_TO_INSERT_TERM_14 https://fairsharing.org/search?recordType=reporting_guideline)  for using a well known secure file transfer protocol.
 
 More modern solutions and tools exist for fast transfer or mounting of remote drive.
 
@@ -252,9 +252,9 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-* [Wikiped (URL_TO_INSERT_RECORD_17 https://fairsharing.org/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [Wikiped (URL_TO_INSERT_RECORD_15 https://fairsharing.org/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
-* [Example of customization for a specific institution (URL_TO_INSERT_TERM_18 https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+* [Example of customization for a specific institution (URL_TO_INSERT_TERM_16 https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
 * {ref}`fcb-access-aspera`
 * [Rclone](https://rclone.org)
