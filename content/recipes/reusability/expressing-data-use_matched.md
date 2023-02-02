@@ -19,10 +19,10 @@
 
 The purpose of this content is to provide guidance on how to describe **permitted use of data** and identify the **resources** that exist to do so.
 
-The aim is also to document equivalent representations and how bridges (URL_TO_INSERT_RECORD_9769 https://fairsharing.org/FAIRsharing.ac95d5)  can be built between the distinct but equivalent implementations.
+The aim is also to document equivalent representations and how bridges (URL_TO_INSERT_RECORD_9364 https://fairsharing.org/FAIRsharing.ac95d5)  can be built between the distinct but equivalent implementations.
 
-Finally, the content aims to highlight key use-cases which require coverage, how to code such informat (URL_TO_INSERT_TERM_9770 https://fairsharing.org/search?recordType=model_and_format) ion, documenting 
-implementation patterns in the context of **data cataloguing efforts**, for instance by expressing **Data Access Policies (URL_TO_INSERT_TERM_9771 https://fairsharing.org/search?fairsharingRegistry=Policy) **.
+Finally, the content aims to highlight key use-cases which require coverage, how to code such informat (URL_TO_INSERT_TERM_9365 https://fairsharing.org/search?recordType=model_and_format) ion, documenting 
+implementation patterns in the context of **data cataloguing efforts**, for instance by expressing **Data Access Policies (URL_TO_INSERT_TERM_9366 https://fairsharing.org/search?fairsharingRegistry=Policy) **.
 
 
 ## Graphical Overview
@@ -34,7 +34,7 @@ implementation patterns in the context of **data cataloguing efforts**, for inst
 ---
 width: 850px
 name: expressing-data-use-figure1
-alt: Dealing with Policies (URL_TO_INSERT_TERM_9772 https://fairsharing.org/search?fairsharingRegistry=Policy)  and Data Use
+alt: Dealing with Policies (URL_TO_INSERT_TERM_9367 https://fairsharing.org/search?fairsharingRegistry=Policy)  and Data Use
 ---
 Data Use
 ```
@@ -48,20 +48,20 @@ Data Use
 
 ### Standards
 
- Data Format (URL_TO_INSERT_TERM_9774 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_9775 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_9773 https://fairsharing.org/search?recordType=model_and_format) s  |
+ Data Format (URL_TO_INSERT_TERM_9369 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_9370 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_9368 https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | JSON-LD<!-- TODO add a link to corresponding document --> | <!-- TODO add a link to corresponding document -->  |   |
-| [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DC (URL_TO_INSERT_RECORD_9778 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9779 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_9776 https://fairsharing.org/FAIRsharing.h4j3qm)  v2](https://www.w3.org/TR/vocab-dcat (URL_TO_INSERT_RECORD_9777 https://fairsharing.org/FAIRsharing.h4j3qm) -2/)  |   |
+| [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DC (URL_TO_INSERT_RECORD_9373 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9374 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_9371 https://fairsharing.org/FAIRsharing.h4j3qm)  v2](https://www.w3.org/TR/vocab-dcat (URL_TO_INSERT_RECORD_9372 https://fairsharing.org/FAIRsharing.h4j3qm) -2/)  |   |
 | [ISO-3066](https://www.iso.org/iso-3166-country-codes.html)  | [ODRL](https://www.w3.org/TR/odrl-vocab/)  |   |
 | EGA XML<!-- TODO add a link to corresponding document -->   | [DUO](http://www.obofoundry.org/ontology/duo.html)  |   |
-| [Data Article Tag Suite (DATS)](https://datatagsuite.github.io/schema/)  | [MONDO](http://www.obofoundry.org (URL_TO_INSERT_RECORD_9780 https://fairsharing.org/FAIRsharing.847069) /ontology/mondo.html)  |   |
+| [Data Article Tag Suite (DATS)](https://datatagsuite.github.io/schema/)  | [MONDO](http://www.obofoundry.org (URL_TO_INSERT_RECORD_9375 https://fairsharing.org/FAIRsharing.847069) /ontology/mondo.html)  |   |
 
 
 
 
 ### Implementation
 
-DUO (URL_TO_INSERT_RECORD_9781 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9782 https://fairsharing.org/FAIRsharing.mjnypw) S:
+DUO (URL_TO_INSERT_RECORD_9376 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9377 https://fairsharing.org/FAIRsharing.mjnypw) S:
 https://duos.broadinstitute.org/
 
 ---
@@ -69,21 +69,21 @@ https://duos.broadinstitute.org/
 ## Introduction
 
 The preservation of patient privacy and the compliance with patient consent are essential considerations when managing
-sensitive informat (URL_TO_INSERT_TERM_9783 https://fairsharing.org/search?recordType=model_and_format) ion such as clinical and patient data.
-Consent forms, as signed by patients, define the acceptable usage of data derived from a patient for research (URL_TO_INSERT_RECORD_9784 https://fairsharing.org/FAIRsharing.52b22c)  applications.
-All major research (URL_TO_INSERT_RECORD_9785 https://fairsharing.org/FAIRsharing.52b22c)  organizations, at national and international levels, enforce strict rules for the management of such data.
+sensitive informat (URL_TO_INSERT_TERM_9378 https://fairsharing.org/search?recordType=model_and_format) ion such as clinical and patient data.
+Consent forms, as signed by patients, define the acceptable usage of data derived from a patient for research (URL_TO_INSERT_RECORD_9379 https://fairsharing.org/FAIRsharing.52b22c)  applications.
+All major research (URL_TO_INSERT_RECORD_9380 https://fairsharing.org/FAIRsharing.52b22c)  organizations, at national and international levels, enforce strict rules for the management of such data.
 Sensitive data cannot be accessed without undergoing a vetting process involving a **data access request** to a **data access committee**,
 which will decide, whether or not, to grant requesters access to the data.
 
-This is a time-consuming process in the absence of machine-readable version of data access/ data management policies (URL_TO_INSERT_TERM_9786 https://fairsharing.org/search?fairsharingRegistry=Policy) .
-In turns, it can prove detrimental to research (URL_TO_INSERT_RECORD_9787 https://fairsharing.org/FAIRsharing.52b22c) .
+This is a time-consuming process in the absence of machine-readable version of data access/ data management policies (URL_TO_INSERT_TERM_9381 https://fairsharing.org/search?fairsharingRegistry=Policy) .
+In turns, it can prove detrimental to research (URL_TO_INSERT_RECORD_9382 https://fairsharing.org/FAIRsharing.52b22c) .
 Therefore, efforts to enable the provision of concise, efficient and **machine processable** summary of key permissions and prohibitions have been made. 
 Several resources are now available for the coding and exchange of **machine-actionable**, **legally binding** and
-**explicit** informat (URL_TO_INSERT_TERM_9788 https://fairsharing.org/search?recordType=model_and_format) ion related to allowed and consented data usage.
+**explicit** informat (URL_TO_INSERT_TERM_9383 https://fairsharing.org/search?recordType=model_and_format) ion related to allowed and consented data usage.
 
-The following sections detail how the international sequence data arch (URL_TO_INSERT_RECORD_9790 https://fairsharing.org/FAIRsharing.52b22c) ives (US NCBI dbGAP, SRA (URL_TO_INSERT_RECORD_9791 https://fairsharing.org/FAIRsharing.g7t2hv)  and EU EMBL_EBI EGA (URL_TO_INSERT_RECORD_9789 https://fairsharing.org/FAIRsharing.mya1ff) )
-are encoding **Data Use Informat (URL_TO_INSERT_TERM_9792 https://fairsharing.org/search?recordType=model_and_format) ion**  but also how ODR (URL_TO_INSERT_RECORD_9793 https://fairsharing.org/FAIRsharing.1sfhp3) L, a W3C specification, 
-can be used to represent equivalent informat (URL_TO_INSERT_TERM_9794 https://fairsharing.org/search?recordType=model_and_format) ion in a format (URL_TO_INSERT_TERM_9795 https://fairsharing.org/search?recordType=model_and_format)  compatible with the data cataloguing efforts relying on W3C DC (URL_TO_INSERT_RECORD_9797 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9798 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_9796 https://fairsharing.org/FAIRsharing.h4j3qm)  specifications.
+The following sections detail how the international sequence data arch (URL_TO_INSERT_RECORD_9385 https://fairsharing.org/FAIRsharing.52b22c) ives (US NCBI dbGAP, SRA (URL_TO_INSERT_RECORD_9386 https://fairsharing.org/FAIRsharing.g7t2hv)  and EU EMBL_EBI EGA (URL_TO_INSERT_RECORD_9384 https://fairsharing.org/FAIRsharing.mya1ff) )
+are encoding **Data Use Informat (URL_TO_INSERT_TERM_9387 https://fairsharing.org/search?recordType=model_and_format) ion**  but also how ODR (URL_TO_INSERT_RECORD_9388 https://fairsharing.org/FAIRsharing.1sfhp3) L, a W3C specification, 
+can be used to represent equivalent informat (URL_TO_INSERT_TERM_9389 https://fairsharing.org/search?recordType=model_and_format) ion in a format (URL_TO_INSERT_TERM_9390 https://fairsharing.org/search?recordType=model_and_format)  compatible with the data cataloguing efforts relying on W3C DC (URL_TO_INSERT_RECORD_9392 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9393 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_9391 https://fairsharing.org/FAIRsharing.h4j3qm)  specifications.
 
 
 
@@ -91,12 +91,12 @@ can be used to represent equivalent informat (URL_TO_INSERT_TERM_9794 https://fa
 ### SRA & EGA XML schema for Policy, Dataset and Controller
 
 Next Generation Sequencing (NGS) techniques allow routine production of full genome data from patients.
-This data is highly sensitive and data repositories (URL_TO_INSERT_TERM_9799 https://fairsharing.org/search?recordType=repository)  specialized in storing such informat (URL_TO_INSERT_TERM_9800 https://fairsharing.org/search?recordType=model_and_format) ion have developed (URL_TO_INSERT_RECORD_9801 https://fairsharing.org/FAIRsharing.31385c)  procedures 
-and representation model (URL_TO_INSERT_TERM_9802 https://fairsharing.org/search?recordType=model_and_format) s for defining the conditions of use.
+This data is highly sensitive and data repositories (URL_TO_INSERT_TERM_9394 https://fairsharing.org/search?recordType=repository)  specialized in storing such informat (URL_TO_INSERT_TERM_9395 https://fairsharing.org/search?recordType=model_and_format) ion have developed (URL_TO_INSERT_RECORD_9396 https://fairsharing.org/FAIRsharing.31385c)  procedures 
+and representation model (URL_TO_INSERT_TERM_9397 https://fairsharing.org/search?recordType=model_and_format) s for defining the conditions of use.
 
-We summarize here the key objects used by the European Genome Arch (URL_TO_INSERT_RECORD_9806 https://fairsharing.org/FAIRsharing.52b22c) ive, in compliance with INSD (URL_TO_INSERT_RECORD_9804 https://fairsharing.org/FAIRsharing.mKDii0) C (URL_TO_INSERT_RECORD_9805 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9807 https://fairsharing.org/3547)  and GA4GH guideline (URL_TO_INSERT_TERM_9803 https://fairsharing.org/search?recordType=reporting_guideline) s.
+We summarize here the key objects used by the European Genome Arch (URL_TO_INSERT_RECORD_9401 https://fairsharing.org/FAIRsharing.52b22c) ive, in compliance with INSD (URL_TO_INSERT_RECORD_9399 https://fairsharing.org/FAIRsharing.mKDii0) C (URL_TO_INSERT_RECORD_9400 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_9402 https://fairsharing.org/3547)  and GA4GH guideline (URL_TO_INSERT_TERM_9398 https://fairsharing.org/search?recordType=reporting_guideline) s.
 
-https://ega-archive.org (URL_TO_INSERT_RECORD_9808 https://fairsharing.org/FAIRsharing.mya1ff) /data-use-conditions
+https://ega-archive.org (URL_TO_INSERT_RECORD_9403 https://fairsharing.org/FAIRsharing.mya1ff) /data-use-conditions
 
 ````{dropdown}
 :open:
@@ -104,9 +104,9 @@ https://ega-archive.org (URL_TO_INSERT_RECORD_9808 https://fairsharing.org/FAIRs
 ---
 width: 700px
 name: expressing-data-use-figure2
-alt: Data Use Ontology (URL_TO_INSERT_TERM_9809 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 1
+alt: Data Use Ontology (URL_TO_INSERT_TERM_9404 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 1
 ---
-Data Use Ontology (URL_TO_INSERT_TERM_9810 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 1
+Data Use Ontology (URL_TO_INSERT_TERM_9405 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 1
 ```
 ````
 
@@ -116,9 +116,9 @@ Data Use Ontology (URL_TO_INSERT_TERM_9810 https://fairsharing.org/search?record
 ---
 width: 700px
 name: expressing-data-use-figure3
-alt: Data Use Ontology (URL_TO_INSERT_TERM_9811 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 2
+alt: Data Use Ontology (URL_TO_INSERT_TERM_9406 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 2
 ---
-Data Use Ontology (URL_TO_INSERT_TERM_9812 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 2
+Data Use Ontology (URL_TO_INSERT_TERM_9407 https://fairsharing.org/search?recordType=terminology_artefact)  Overview Part 2
 ```
 ````
 
@@ -126,13 +126,13 @@ Data Use Ontology (URL_TO_INSERT_TERM_9812 https://fairsharing.org/search?record
 ````{panels}
 :column: col-8
 :card: border-2
-DUO (URL_TO_INSERT_RECORD_9813 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9815 https://fairsharing.org/FAIRsharing.mjnypw)  in OLS (URL_TO_INSERT_RECORD_9814 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+DUO (URL_TO_INSERT_RECORD_9408 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9410 https://fairsharing.org/FAIRsharing.mjnypw)  in OLS (URL_TO_INSERT_RECORD_9409 https://fairsharing.org/FAIRsharing.Mkl9RR) 
 ^^^
 ```{figure} duo-ols-view-1.png
 width: 400px
 ```
 ---
-DUO (URL_TO_INSERT_RECORD_9816 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9818 https://fairsharing.org/FAIRsharing.mjnypw)  in OLS (URL_TO_INSERT_RECORD_9817 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+DUO (URL_TO_INSERT_RECORD_9411 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9413 https://fairsharing.org/FAIRsharing.mjnypw)  in OLS (URL_TO_INSERT_RECORD_9412 https://fairsharing.org/FAIRsharing.Mkl9RR) 
 ^^^
 ```{figure} duo-ols-view-2.png
 width: 400px
@@ -149,18 +149,18 @@ The information presented below has been sourced from the ENA GitHub repo.
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<DAC (URL_TO_INSERT_RECORD_9819 https://fairsharing.org/FAIRsharing.md3e78) _SET>
-    <DAC (URL_TO_INSERT_RECORD_9822 https://fairsharing.org/FAIRsharing.md3e78)  alias="DAC (URL_TO_INSERT_RECORD_9823 https://fairsharing.org/FAIRsharing.md3e78) -2011-08-11T11:45:28Z-1873" accession="EGA (URL_TO_INSERT_RECORD_9820 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9824 https://fairsharing.org/FAIRsharing.md3e78) 00000000001" center_name="EBI" broker_name="EGA (URL_TO_INSERT_RECORD_9821 https://fairsharing.org/FAIRsharing.mya1ff) ">
-        <IDENTIFIER (URL_TO_INSERT_TERM_9825 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9826 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9827 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_9831 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9828 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9830 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9833 https://fairsharing.org/FAIRsharing.md3e78) 00000000001</PRIMA (URL_TO_INSERT_RECORD_9832 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9829 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9834 https://fairsharing.org/FAIRsharing.md3e78) -2011-08-11T11:45:28Z-1873</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_9835 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9836 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9837 https://fairsharing.org/FAIRsharing.vajn3f) >
-        <TITLE>EGA (URL_TO_INSERT_RECORD_9838 https://fairsharing.org/FAIRsharing.mya1ff)  DAC (URL_TO_INSERT_RECORD_9839 https://fairsharing.org/FAIRsharing.md3e78)  TITLE</TITLE>
-        <CO (URL_TO_INSERT_RECORD_9840 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9841 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9842 https://fairsharing.org/FAIRsharing.md3e78) TS>
-            <CO (URL_TO_INSERT_RECORD_9843 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9844 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9845 https://fairsharing.org/FAIRsharing.md3e78) T name="Joe Bloggs" email="joe@noname.com" organisation="EBI"/>
-        </CO (URL_TO_INSERT_RECORD_9846 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9847 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9848 https://fairsharing.org/FAIRsharing.md3e78) TS>
-    </DAC (URL_TO_INSERT_RECORD_9849 https://fairsharing.org/FAIRsharing.md3e78) >
-</DAC (URL_TO_INSERT_RECORD_9850 https://fairsharing.org/FAIRsharing.md3e78) _SET>
+<DAC (URL_TO_INSERT_RECORD_9414 https://fairsharing.org/FAIRsharing.md3e78) _SET>
+    <DAC (URL_TO_INSERT_RECORD_9417 https://fairsharing.org/FAIRsharing.md3e78)  alias="DAC (URL_TO_INSERT_RECORD_9418 https://fairsharing.org/FAIRsharing.md3e78) -2011-08-11T11:45:28Z-1873" accession="EGA (URL_TO_INSERT_RECORD_9415 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9419 https://fairsharing.org/FAIRsharing.md3e78) 00000000001" center_name="EBI" broker_name="EGA (URL_TO_INSERT_RECORD_9416 https://fairsharing.org/FAIRsharing.mya1ff) ">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9420 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9421 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9422 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9426 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9423 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9425 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9428 https://fairsharing.org/FAIRsharing.md3e78) 00000000001</PRIMA (URL_TO_INSERT_RECORD_9427 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9424 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9429 https://fairsharing.org/FAIRsharing.md3e78) -2011-08-11T11:45:28Z-1873</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9430 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9431 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9432 https://fairsharing.org/FAIRsharing.vajn3f) >
+        <TITLE>EGA (URL_TO_INSERT_RECORD_9433 https://fairsharing.org/FAIRsharing.mya1ff)  DAC (URL_TO_INSERT_RECORD_9434 https://fairsharing.org/FAIRsharing.md3e78)  TITLE</TITLE>
+        <CO (URL_TO_INSERT_RECORD_9435 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9436 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9437 https://fairsharing.org/FAIRsharing.md3e78) TS>
+            <CO (URL_TO_INSERT_RECORD_9438 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9439 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9440 https://fairsharing.org/FAIRsharing.md3e78) T name="Joe Bloggs" email="joe@noname.com" organisation="EBI"/>
+        </CO (URL_TO_INSERT_RECORD_9441 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_9442 https://fairsharing.org/FAIRsharing.thskvr) NTAC (URL_TO_INSERT_RECORD_9443 https://fairsharing.org/FAIRsharing.md3e78) TS>
+    </DAC (URL_TO_INSERT_RECORD_9444 https://fairsharing.org/FAIRsharing.md3e78) >
+</DAC (URL_TO_INSERT_RECORD_9445 https://fairsharing.org/FAIRsharing.md3e78) _SET>
 ```
 
 
@@ -172,54 +172,54 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml
 
 ```{note}
-in the following example, the text of the policy (URL_TO_INSERT_TERM_9851 https://fairsharing.org/search?fairsharingRegistry=Policy)  is present in the XML (URL_TO_INSERT_RECORD_9852 https://fairsharing.org/FAIRsharing.b5cc91)  representation
+in the following example, the text of the policy (URL_TO_INSERT_TERM_9446 https://fairsharing.org/search?fairsharingRegistry=Policy)  is present in the XML (URL_TO_INSERT_RECORD_9447 https://fairsharing.org/FAIRsharing.b5cc91)  representation
 ```
 
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<PO (URL_TO_INSERT_RECORD_9854 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9853 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
-    <PO (URL_TO_INSERT_RECORD_9857 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9855 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9856 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9858 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
-        <IDENTIFIER (URL_TO_INSERT_TERM_9859 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9860 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9861 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_9865 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9862 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9864 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9866 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9863 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9867 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_9868 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9869 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9870 https://fairsharing.org/FAIRsharing.vajn3f) >
+<PO (URL_TO_INSERT_RECORD_9449 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9448 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    <PO (URL_TO_INSERT_RECORD_9452 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9450 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9451 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9453 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9454 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9455 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9456 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9460 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9457 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9459 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9461 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9458 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9462 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9463 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9464 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9465 https://fairsharing.org/FAIRsharing.vajn3f) >
         <TITLE/>
-        <DAC (URL_TO_INSERT_RECORD_9872 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9871 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9873 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_9874 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9875 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9876 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_9880 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9877 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9879 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9882 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9881 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9878 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9883 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_9884 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9885 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9886 https://fairsharing.org/FAIRsharing.vajn3f) >
-        </DAC (URL_TO_INSERT_RECORD_9887 https://fairsharing.org/FAIRsharing.md3e78) _REF>
-        <PO (URL_TO_INSERT_RECORD_9889 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9888 https://fairsharing.org/search?fairsharingRegistry=Policy) _TEXT>https://www.sanger.ac.uk/datasharing/</POLICY_TEXT>
-    </PO (URL_TO_INSERT_RECORD_9891 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9890 https://fairsharing.org/search?fairsharingRegistry=Policy) >
-</PO (URL_TO_INSERT_RECORD_9893 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9892 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+        <DAC (URL_TO_INSERT_RECORD_9467 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9466 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9468 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9469 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9470 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9471 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9475 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9472 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9474 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9477 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9476 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9473 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9478 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIER (URL_TO_INSERT_TERM_9479 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9480 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9481 https://fairsharing.org/FAIRsharing.vajn3f) >
+        </DAC (URL_TO_INSERT_RECORD_9482 https://fairsharing.org/FAIRsharing.md3e78) _REF>
+        <PO (URL_TO_INSERT_RECORD_9484 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9483 https://fairsharing.org/search?fairsharingRegistry=Policy) _TEXT>https://www.sanger.ac.uk/datasharing/</POLICY_TEXT>
+    </PO (URL_TO_INSERT_RECORD_9486 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9485 https://fairsharing.org/search?fairsharingRegistry=Policy) >
+</PO (URL_TO_INSERT_RECORD_9488 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9487 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
 ```
 
 
 ```{note}
-In the following example, the file address (url) to the policy (URL_TO_INSERT_TERM_9894 https://fairsharing.org/search?fairsharingRegistry=Policy)  is included in the XML (URL_TO_INSERT_RECORD_9895 https://fairsharing.org/FAIRsharing.b5cc91)  representation.
-Ideally, the url provided should be a globally unique persistent identifier (URL_TO_INSERT_TERM_9896 https://fairsharing.org/search?recordType=identifier_schema)  so one can be sure to obtain at least the metadata about the document.
+In the following example, the file address (url) to the policy (URL_TO_INSERT_TERM_9489 https://fairsharing.org/search?fairsharingRegistry=Policy)  is included in the XML (URL_TO_INSERT_RECORD_9490 https://fairsharing.org/FAIRsharing.b5cc91)  representation.
+Ideally, the url provided should be a globally unique persistent identifier (URL_TO_INSERT_TERM_9491 https://fairsharing.org/search?recordType=identifier_schema)  so one can be sure to obtain at least the metadata about the document.
 ```
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<PO (URL_TO_INSERT_RECORD_9898 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9897 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
-    <PO (URL_TO_INSERT_RECORD_9901 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9899 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9900 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9902 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
-        <IDENTIFIER (URL_TO_INSERT_TERM_9903 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9904 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9905 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_9909 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9906 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9908 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9910 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9907 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9911 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_9912 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9913 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9914 https://fairsharing.org/FAIRsharing.vajn3f) >
+<PO (URL_TO_INSERT_RECORD_9493 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9492 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    <PO (URL_TO_INSERT_RECORD_9496 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9494 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9495 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9497 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9498 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9499 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9500 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9504 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9501 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9503 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9505 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9502 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9506 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9507 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9508 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9509 https://fairsharing.org/FAIRsharing.vajn3f) >
         <TITLE/>
-        <DAC (URL_TO_INSERT_RECORD_9916 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9915 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9917 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_9918 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9919 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9920 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_9924 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9921 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9923 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9926 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9925 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9922 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9927 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_9928 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9929 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9930 https://fairsharing.org/FAIRsharing.vajn3f) >
-        </DAC (URL_TO_INSERT_RECORD_9931 https://fairsharing.org/FAIRsharing.md3e78) _REF>
-        <PO (URL_TO_INSERT_RECORD_9933 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9932 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
-    </PO (URL_TO_INSERT_RECORD_9935 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9934 https://fairsharing.org/search?fairsharingRegistry=Policy) >
-</PO (URL_TO_INSERT_RECORD_9937 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9936 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+        <DAC (URL_TO_INSERT_RECORD_9511 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9510 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9512 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9513 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9514 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9515 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9519 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9516 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9518 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9521 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9520 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9517 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9522 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIER (URL_TO_INSERT_TERM_9523 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9524 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9525 https://fairsharing.org/FAIRsharing.vajn3f) >
+        </DAC (URL_TO_INSERT_RECORD_9526 https://fairsharing.org/FAIRsharing.md3e78) _REF>
+        <PO (URL_TO_INSERT_RECORD_9528 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9527 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+    </PO (URL_TO_INSERT_RECORD_9530 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9529 https://fairsharing.org/search?fairsharingRegistry=Policy) >
+</PO (URL_TO_INSERT_RECORD_9532 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9531 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
 ```
 
 
@@ -227,31 +227,31 @@ Ideally, the url provided should be a globally unique persistent identifier (URL
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<PO (URL_TO_INSERT_RECORD_9939 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9938 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
-    <PO (URL_TO_INSERT_RECORD_9942 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9940 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9941 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9943 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
-        <IDENTIFIER (URL_TO_INSERT_TERM_9944 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9945 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9946 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_9950 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9947 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9949 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9951 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9948 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9952 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_9953 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9954 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9955 https://fairsharing.org/FAIRsharing.vajn3f) >
+<PO (URL_TO_INSERT_RECORD_9534 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9533 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    <PO (URL_TO_INSERT_RECORD_9537 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9535 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9536 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9538 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9539 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9540 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9541 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9545 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9542 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9544 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9546 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9543 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9547 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9548 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9549 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9550 https://fairsharing.org/FAIRsharing.vajn3f) >
         <TITLE/>
-        <DAC (URL_TO_INSERT_RECORD_9957 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9956 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9958 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_9959 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9960 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9961 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_9965 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9962 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9964 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9967 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9966 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9963 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9968 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_9969 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9970 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9971 https://fairsharing.org/FAIRsharing.vajn3f) >
-        </DAC (URL_TO_INSERT_RECORD_9972 https://fairsharing.org/FAIRsharing.md3e78) _REF>
-        <PO (URL_TO_INSERT_RECORD_9974 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9973 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+        <DAC (URL_TO_INSERT_RECORD_9552 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9551 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9553 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9554 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9555 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9556 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9560 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9557 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9559 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9562 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9561 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9558 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9563 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIER (URL_TO_INSERT_TERM_9564 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9565 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9566 https://fairsharing.org/FAIRsharing.vajn3f) >
+        </DAC (URL_TO_INSERT_RECORD_9567 https://fairsharing.org/FAIRsharing.md3e78) _REF>
+        <PO (URL_TO_INSERT_RECORD_9569 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9568 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
         <DATA_USES>
                    	<!-- no restriction -->
    			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000004</DATA_USE>
 
 			<DATA_USES>
-			   <DATA_USE ontology (URL_TO_INSERT_TERM_9975 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_9976 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9977 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000004" version="17-07-2016"/>
+			   <DATA_USE ontology (URL_TO_INSERT_TERM_9570 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_9571 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9572 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000004" version="17-07-2016"/>
 			</DATA_USES>
 
         </DATA_USES>
-    </PO (URL_TO_INSERT_RECORD_9979 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9978 https://fairsharing.org/search?fairsharingRegistry=Policy) >
-</PO (URL_TO_INSERT_RECORD_9981 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9980 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    </PO (URL_TO_INSERT_RECORD_9574 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9573 https://fairsharing.org/search?fairsharingRegistry=Policy) >
+</PO (URL_TO_INSERT_RECORD_9576 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9575 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
 ```
 
 
@@ -263,20 +263,20 @@ Indicating disease specific restriction on research with DUO and ontologies cove
 
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<PO (URL_TO_INSERT_RECORD_9983 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9982 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
-    <PO (URL_TO_INSERT_RECORD_9986 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9984 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9985 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9987 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
-        <IDENTIFIER (URL_TO_INSERT_TERM_9988 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9989 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9990 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_9994 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9991 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9993 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9995 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9992 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9996 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_9997 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9998 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9999 https://fairsharing.org/FAIRsharing.vajn3f) >
+<PO (URL_TO_INSERT_RECORD_9578 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9577 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    <PO (URL_TO_INSERT_RECORD_9581 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9579 https://fairsharing.org/search?fairsharingRegistry=Policy)  center_name="EBI" alias="Policy (URL_TO_INSERT_TERM_9580 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868" accession="EGA (URL_TO_INSERT_RECORD_9582 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" broker_name="EBI">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9583 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9584 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9585 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9589 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9586 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9588 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001</PRIMA (URL_TO_INSERT_RECORD_9590 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9587 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="SC">Policy (URL_TO_INSERT_TERM_9591 https://fairsharing.org/search?fairsharingRegistry=Policy) -2011-08-26T12:23:53Z-1868</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9592 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9593 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9594 https://fairsharing.org/FAIRsharing.vajn3f) >
         <TITLE/>
-        <DAC (URL_TO_INSERT_RECORD_10001 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_10000 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_10002 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_10003 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10004 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10005 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_10009 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10006 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10008 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_10011 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_10010 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10007 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_10012 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_10013 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10014 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10015 https://fairsharing.org/FAIRsharing.vajn3f) >
-        </DAC (URL_TO_INSERT_RECORD_10016 https://fairsharing.org/FAIRsharing.md3e78) _REF>
-        <PO (URL_TO_INSERT_RECORD_10018 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10017 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
+        <DAC (URL_TO_INSERT_RECORD_9596 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9595 https://fairsharing.org/FAIRsharing.mya1ff) P00001000001" refname="DAC (URL_TO_INSERT_RECORD_9597 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9598 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9599 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9600 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9604 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9601 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9603 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9606 https://fairsharing.org/FAIRsharing.md3e78) 00001000001</PRIMA (URL_TO_INSERT_RECORD_9605 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9602 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+                <SUBMITTER_ID namespace="EBI">DAC (URL_TO_INSERT_RECORD_9607 https://fairsharing.org/FAIRsharing.md3e78) _-2011-08-26T12:23:49Z-1868</SUBMITTER_ID>
+            </IDENTIFIER (URL_TO_INSERT_TERM_9608 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9609 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9610 https://fairsharing.org/FAIRsharing.vajn3f) >
+        </DAC (URL_TO_INSERT_RECORD_9611 https://fairsharing.org/FAIRsharing.md3e78) _REF>
+        <PO (URL_TO_INSERT_RECORD_9613 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9612 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>https://www.sanger.ac.uk/datasharing/</POLICY_FILE>
         <DATA_USES>
            	<!-- ethics approval required -->
    			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000021</DATA_USE>
@@ -287,48 +287,48 @@ Indicating disease specific restriction on research with DUO and ontologies cove
    			<!-- disease specific research -->
    			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000007</DATA_USE>
         </DATA_USES>
-    </PO (URL_TO_INSERT_RECORD_10020 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10019 https://fairsharing.org/search?fairsharingRegistry=Policy) >
-</PO (URL_TO_INSERT_RECORD_10022 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10021 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+    </PO (URL_TO_INSERT_RECORD_9615 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9614 https://fairsharing.org/search?fairsharingRegistry=Policy) >
+</PO (URL_TO_INSERT_RECORD_9617 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9616 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
 ```
 
 
 ```{note}
-When using the consent code DUO (URL_TO_INSERT_RECORD_10026 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_10028 https://fairsharing.org/FAIRsharing.mjnypw) _0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifier (URL_TO_INSERT_TERM_10024 https://fairsharing.org/search?recordType=identifier_schema) s from well established disease terminologies (URL_TO_INSERT_TERM_10023 https://fairsharing.org/search?recordType=terminology_artefact)  such as MONDO (URL_TO_INSERT_RECORD_10029 https://fairsharing.org/FAIRsharing.b2979t) , DOI (URL_TO_INSERT_RECORD_10027 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_10030 https://fairsharing.org/FAIRsharing.8b6wfq) , SNOME (URL_TO_INSERT_RECORD_10025 https://fairsharing.org/3502) D-CT.
-For instance, if data reuse is restricted to research (URL_TO_INSERT_RECORD_10034 https://fairsharing.org/FAIRsharing.52b22c)  into `juvenile idiopathic arthritis`, the code should be displayed as DUO (URL_TO_INSERT_RECORD_10031 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_10032 https://fairsharing.org/FAIRsharing.mjnypw) _0000007; MONDO (URL_TO_INSERT_RECORD_10033 https://fairsharing.org/FAIRsharing.b2979t) :0011429
+When using the consent code DUO (URL_TO_INSERT_RECORD_9621 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9623 https://fairsharing.org/FAIRsharing.mjnypw) _0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifier (URL_TO_INSERT_TERM_9619 https://fairsharing.org/search?recordType=identifier_schema) s from well established disease terminologies (URL_TO_INSERT_TERM_9618 https://fairsharing.org/search?recordType=terminology_artefact)  such as MONDO (URL_TO_INSERT_RECORD_9624 https://fairsharing.org/FAIRsharing.b2979t) , DOI (URL_TO_INSERT_RECORD_9622 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_9625 https://fairsharing.org/FAIRsharing.8b6wfq) , SNOME (URL_TO_INSERT_RECORD_9620 https://fairsharing.org/3502) D-CT.
+For instance, if data reuse is restricted to research (URL_TO_INSERT_RECORD_9629 https://fairsharing.org/FAIRsharing.52b22c)  into `juvenile idiopathic arthritis`, the code should be displayed as DUO (URL_TO_INSERT_RECORD_9626 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9627 https://fairsharing.org/FAIRsharing.mjnypw) _0000007; MONDO (URL_TO_INSERT_RECORD_9628 https://fairsharing.org/FAIRsharing.b2979t) :0011429
 ```
 
 
 
 ```XML
-<PO (URL_TO_INSERT_RECORD_10036 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10035 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
-  <PO (URL_TO_INSERT_RECORD_10039 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10037 https://fairsharing.org/search?fairsharingRegistry=Policy)  alias="ena-PO (URL_TO_INSERT_RECORD_10040 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10038 https://fairsharing.org/search?fairsharingRegistry=Policy) -BABRAHAM-23-03-2017-09:47:38:853-62" center_name="BABRAHAM" accession="EGA (URL_TO_INSERT_RECORD_10041 https://fairsharing.org/FAIRsharing.mya1ff) P00001000615" broker_name="EGA (URL_TO_INSERT_RECORD_10042 https://fairsharing.org/FAIRsharing.mya1ff) ">  
-    <IDENTIFIER (URL_TO_INSERT_TERM_10043 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10044 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10045 https://fairsharing.org/FAIRsharing.vajn3f) > 
-      <PRIMA (URL_TO_INSERT_RECORD_10049 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10046 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10048 https://fairsharing.org/FAIRsharing.mya1ff) P00001000615</PRIMA (URL_TO_INSERT_RECORD_10050 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10047 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-      <SUBMITTER_ID namespace="BABRAHAM">ena-PO (URL_TO_INSERT_RECORD_10052 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10051 https://fairsharing.org/search?fairsharingRegistry=Policy) -BABRAHAM-23-03-2017-09:47:38:853-62</SUBMITTER_ID>
-    </IDENTIFIER (URL_TO_INSERT_TERM_10053 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10054 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10055 https://fairsharing.org/FAIRsharing.vajn3f) >
-    <TITLE>Data Access Agreement for PC (URL_TO_INSERT_RECORD_10056 https://fairsharing.org/FAIRsharing.5y3gdd) HiC, RNA-Seq, ChIP-Seq</TITLE>
-    <DAC (URL_TO_INSERT_RECORD_10058 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_10057 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_10059 https://fairsharing.org/FAIRsharing.md3e78) 00001000523">
-      <IDENTIFIER (URL_TO_INSERT_TERM_10060 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10061 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10062 https://fairsharing.org/FAIRsharing.vajn3f) >
-        <PRIMA (URL_TO_INSERT_RECORD_10066 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10063 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10065 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_10068 https://fairsharing.org/FAIRsharing.md3e78) 00001000523</PRIMA (URL_TO_INSERT_RECORD_10067 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10064 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-      </IDENTIFIER (URL_TO_INSERT_TERM_10069 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10070 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10071 https://fairsharing.org/FAIRsharing.vajn3f) >
-    </DAC (URL_TO_INSERT_RECORD_10072 https://fairsharing.org/FAIRsharing.md3e78) _REF>
-    <PO (URL_TO_INSERT_RECORD_10074 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10073 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx</POLICY_FILE>
+<PO (URL_TO_INSERT_RECORD_9631 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9630 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+  <PO (URL_TO_INSERT_RECORD_9634 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9632 https://fairsharing.org/search?fairsharingRegistry=Policy)  alias="ena-PO (URL_TO_INSERT_RECORD_9635 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9633 https://fairsharing.org/search?fairsharingRegistry=Policy) -BABRAHAM-23-03-2017-09:47:38:853-62" center_name="BABRAHAM" accession="EGA (URL_TO_INSERT_RECORD_9636 https://fairsharing.org/FAIRsharing.mya1ff) P00001000615" broker_name="EGA (URL_TO_INSERT_RECORD_9637 https://fairsharing.org/FAIRsharing.mya1ff) ">  
+    <IDENTIFIER (URL_TO_INSERT_TERM_9638 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9639 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9640 https://fairsharing.org/FAIRsharing.vajn3f) > 
+      <PRIMA (URL_TO_INSERT_RECORD_9644 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9641 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9643 https://fairsharing.org/FAIRsharing.mya1ff) P00001000615</PRIMA (URL_TO_INSERT_RECORD_9645 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9642 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+      <SUBMITTER_ID namespace="BABRAHAM">ena-PO (URL_TO_INSERT_RECORD_9647 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9646 https://fairsharing.org/search?fairsharingRegistry=Policy) -BABRAHAM-23-03-2017-09:47:38:853-62</SUBMITTER_ID>
+    </IDENTIFIER (URL_TO_INSERT_TERM_9648 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9649 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9650 https://fairsharing.org/FAIRsharing.vajn3f) >
+    <TITLE>Data Access Agreement for PC (URL_TO_INSERT_RECORD_9651 https://fairsharing.org/FAIRsharing.5y3gdd) HiC, RNA-Seq, ChIP-Seq</TITLE>
+    <DAC (URL_TO_INSERT_RECORD_9653 https://fairsharing.org/FAIRsharing.md3e78) _REF accession="EGA (URL_TO_INSERT_RECORD_9652 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9654 https://fairsharing.org/FAIRsharing.md3e78) 00001000523">
+      <IDENTIFIER (URL_TO_INSERT_TERM_9655 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9656 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9657 https://fairsharing.org/FAIRsharing.vajn3f) >
+        <PRIMA (URL_TO_INSERT_RECORD_9661 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9658 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9660 https://fairsharing.org/FAIRsharing.mya1ff) C (URL_TO_INSERT_RECORD_9663 https://fairsharing.org/FAIRsharing.md3e78) 00001000523</PRIMA (URL_TO_INSERT_RECORD_9662 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9659 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+      </IDENTIFIER (URL_TO_INSERT_TERM_9664 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9665 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9666 https://fairsharing.org/FAIRsharing.vajn3f) >
+    </DAC (URL_TO_INSERT_RECORD_9667 https://fairsharing.org/FAIRsharing.md3e78) _REF>
+    <PO (URL_TO_INSERT_RECORD_9669 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9668 https://fairsharing.org/search?fairsharingRegistry=Policy) _FILE>ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx</POLICY_FILE>
     <DATA_USES>
-      <DATA_USE ontology (URL_TO_INSERT_TERM_10075 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_10076 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_10077 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000007" version="17-07-2016">
+      <DATA_USE ontology (URL_TO_INSERT_TERM_9670 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_9671 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9672 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000007" version="17-07-2016">
       	<!-- disease specific research -->
-        <MODIF (URL_TO_INSERT_RECORD_10078 https://fairsharing.org/FAIRsharing.esxaaq) IER>
-           <DB>EFO (URL_TO_INSERT_RECORD_10079 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_10080 https://fairsharing.org/FAIRsharing.ca63ce) </DB>
+        <MODIF (URL_TO_INSERT_RECORD_9673 https://fairsharing.org/FAIRsharing.esxaaq) IER>
+           <DB>EFO (URL_TO_INSERT_RECORD_9674 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_9675 https://fairsharing.org/FAIRsharing.ca63ce) </DB>
            <ID>0001645</ID>
-        </MODIF (URL_TO_INSERT_RECORD_10081 https://fairsharing.org/FAIRsharing.esxaaq) IER> 
-        <MODIF (URL_TO_INSERT_RECORD_10082 https://fairsharing.org/FAIRsharing.esxaaq) IER>
-           <DB>EFO (URL_TO_INSERT_RECORD_10083 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_10084 https://fairsharing.org/FAIRsharing.ca63ce) </DB>
+        </MODIF (URL_TO_INSERT_RECORD_9676 https://fairsharing.org/FAIRsharing.esxaaq) IER> 
+        <MODIF (URL_TO_INSERT_RECORD_9677 https://fairsharing.org/FAIRsharing.esxaaq) IER>
+           <DB>EFO (URL_TO_INSERT_RECORD_9678 https://fairsharing.org/FAIRsharing.1gr4tz)  (URL_TO_INSERT_RECORD_9679 https://fairsharing.org/FAIRsharing.ca63ce) </DB>
            <ID>0001655</ID>
-        </MODIF (URL_TO_INSERT_RECORD_10085 https://fairsharing.org/FAIRsharing.esxaaq) IER>
+        </MODIF (URL_TO_INSERT_RECORD_9680 https://fairsharing.org/FAIRsharing.esxaaq) IER>
        </DATA_USE>
-       <DATA_USE ontology (URL_TO_INSERT_TERM_10086 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_10087 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_10088 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000014" version="17-07-2016"/>
+       <DATA_USE ontology (URL_TO_INSERT_TERM_9681 https://fairsharing.org/search?recordType=terminology_artefact) ="DUO (URL_TO_INSERT_RECORD_9682 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9683 https://fairsharing.org/FAIRsharing.mjnypw) " code="0000014" version="17-07-2016"/>
        </DATA_USES>
-   </PO (URL_TO_INSERT_RECORD_10090 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10089 https://fairsharing.org/search?fairsharingRegistry=Policy) >
-</PO (URL_TO_INSERT_RECORD_10092 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10091 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
+   </PO (URL_TO_INSERT_RECORD_9685 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9684 https://fairsharing.org/search?fairsharingRegistry=Policy) >
+</PO (URL_TO_INSERT_RECORD_9687 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9686 https://fairsharing.org/search?fairsharingRegistry=Policy) _SET>
 ```
 
 
@@ -339,24 +339,24 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 
 ```XML
 <DATASETS>
-    <DATASET alias="EGA (URL_TO_INSERT_RECORD_10093 https://fairsharing.org/FAIRsharing.mya1ff) S000000001-sc-20110919" center_name="SC" broker_name="EGA (URL_TO_INSERT_RECORD_10094 https://fairsharing.org/FAIRsharing.mya1ff) " accession="EGA (URL_TO_INSERT_RECORD_10095 https://fairsharing.org/FAIRsharing.mya1ff) D00001000039">
-        <IDENTIFIER (URL_TO_INSERT_TERM_10096 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10097 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10098 https://fairsharing.org/FAIRsharing.vajn3f) >
-            <PRIMA (URL_TO_INSERT_RECORD_10102 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10099 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10101 https://fairsharing.org/FAIRsharing.mya1ff) D00001000039</PRIMA (URL_TO_INSERT_RECORD_10103 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10100 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-            <SUBMITTER_ID namespace="SC">EGA (URL_TO_INSERT_RECORD_10104 https://fairsharing.org/FAIRsharing.mya1ff) S000000001-sc-20110919</SUBMITTER_ID>
-        </IDENTIFIER (URL_TO_INSERT_TERM_10105 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10106 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10107 https://fairsharing.org/FAIRsharing.vajn3f) >
+    <DATASET alias="EGA (URL_TO_INSERT_RECORD_9688 https://fairsharing.org/FAIRsharing.mya1ff) S000000001-sc-20110919" center_name="SC" broker_name="EGA (URL_TO_INSERT_RECORD_9689 https://fairsharing.org/FAIRsharing.mya1ff) " accession="EGA (URL_TO_INSERT_RECORD_9690 https://fairsharing.org/FAIRsharing.mya1ff) D00001000039">
+        <IDENTIFIER (URL_TO_INSERT_TERM_9691 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9692 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9693 https://fairsharing.org/FAIRsharing.vajn3f) >
+            <PRIMA (URL_TO_INSERT_RECORD_9697 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9694 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9696 https://fairsharing.org/FAIRsharing.mya1ff) D00001000039</PRIMA (URL_TO_INSERT_RECORD_9698 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9695 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+            <SUBMITTER_ID namespace="SC">EGA (URL_TO_INSERT_RECORD_9699 https://fairsharing.org/FAIRsharing.mya1ff) S000000001-sc-20110919</SUBMITTER_ID>
+        </IDENTIFIER (URL_TO_INSERT_TERM_9700 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9701 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9702 https://fairsharing.org/FAIRsharing.vajn3f) >
         <TITLE>Platelet collagen defect</TITLE>
-        <RUN_REF accession="EGA (URL_TO_INSERT_RECORD_10108 https://fairsharing.org/FAIRsharing.mya1ff) R0000000001" refname="RUN_1" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_10109 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10110 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10111 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_10115 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10112 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10114 https://fairsharing.org/FAIRsharing.mya1ff) R0000000001</PRIMA (URL_TO_INSERT_RECORD_10116 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10113 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+        <RUN_REF accession="EGA (URL_TO_INSERT_RECORD_9703 https://fairsharing.org/FAIRsharing.mya1ff) R0000000001" refname="RUN_1" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9704 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9705 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9706 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9710 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9707 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9709 https://fairsharing.org/FAIRsharing.mya1ff) R0000000001</PRIMA (URL_TO_INSERT_RECORD_9711 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9708 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
                 <SUBMITTER_ID namespace="EBI">RUN_1</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_10117 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10118 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10119 https://fairsharing.org/FAIRsharing.vajn3f) >
+            </IDENTIFIER (URL_TO_INSERT_TERM_9712 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9713 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9714 https://fairsharing.org/FAIRsharing.vajn3f) >
         </RUN_REF>
-        <PO (URL_TO_INSERT_RECORD_10122 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10120 https://fairsharing.org/search?fairsharingRegistry=Policy) _REF accession="EGA (URL_TO_INSERT_RECORD_10123 https://fairsharing.org/FAIRsharing.mya1ff) P00000001" refname="Policy (URL_TO_INSERT_TERM_10121 https://fairsharing.org/search?fairsharingRegistry=Policy) _-2011-08-17T15:05:39Z-1888" refcenter="EBI">
-            <IDENTIFIER (URL_TO_INSERT_TERM_10124 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10125 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10126 https://fairsharing.org/FAIRsharing.vajn3f) >
-                <PRIMA (URL_TO_INSERT_RECORD_10130 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10127 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_10129 https://fairsharing.org/FAIRsharing.mya1ff) P00001000024</PRIMA (URL_TO_INSERT_RECORD_10131 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_10128 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
-                <SUBMITTER_ID namespace="EBI">Policy (URL_TO_INSERT_TERM_10132 https://fairsharing.org/search?fairsharingRegistry=Policy) _-2011-08-17T15:05:39Z-1888</SUBMITTER_ID>
-            </IDENTIFIER (URL_TO_INSERT_TERM_10133 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_10134 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_10135 https://fairsharing.org/FAIRsharing.vajn3f) >
-        </PO (URL_TO_INSERT_RECORD_10137 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_10136 https://fairsharing.org/search?fairsharingRegistry=Policy) _REF>
+        <PO (URL_TO_INSERT_RECORD_9717 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9715 https://fairsharing.org/search?fairsharingRegistry=Policy) _REF accession="EGA (URL_TO_INSERT_RECORD_9718 https://fairsharing.org/FAIRsharing.mya1ff) P00000001" refname="Policy (URL_TO_INSERT_TERM_9716 https://fairsharing.org/search?fairsharingRegistry=Policy) _-2011-08-17T15:05:39Z-1888" refcenter="EBI">
+            <IDENTIFIER (URL_TO_INSERT_TERM_9719 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9720 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9721 https://fairsharing.org/FAIRsharing.vajn3f) >
+                <PRIMA (URL_TO_INSERT_RECORD_9725 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9722 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>EGA (URL_TO_INSERT_RECORD_9724 https://fairsharing.org/FAIRsharing.mya1ff) P00001000024</PRIMA (URL_TO_INSERT_RECORD_9726 https://fairsharing.org/FAIRsharing.pdwqcr) R (URL_TO_INSERT_RECORD_9723 https://fairsharing.org/FAIRsharing.SnTbUa) Y_ID>
+                <SUBMITTER_ID namespace="EBI">Policy (URL_TO_INSERT_TERM_9727 https://fairsharing.org/search?fairsharingRegistry=Policy) _-2011-08-17T15:05:39Z-1888</SUBMITTER_ID>
+            </IDENTIFIER (URL_TO_INSERT_TERM_9728 https://fairsharing.org/search?recordType=identifier_schema) S (URL_TO_INSERT_RECORD_9729 https://fairsharing.org/FAIRsharing.cbc5c8)  (URL_TO_INSERT_RECORD_9730 https://fairsharing.org/FAIRsharing.vajn3f) >
+        </PO (URL_TO_INSERT_RECORD_9732 https://fairsharing.org/FAIRsharing.3ngg40) LICY (URL_TO_INSERT_TERM_9731 https://fairsharing.org/search?fairsharingRegistry=Policy) _REF>
     </DATASET>
 </DATASETS>
 ```
@@ -409,15 +409,15 @@ The ODRL Vocabulary and Expression complements the ODRL information model, which
 
 
 ```{warning}
-In 2015, the dedicated working group produced the following JSO (URL_TO_INSERT_RECORD_10139 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_10138 https://fairsharing.org/FAIRsharing.5bbab9)  schema implementation guidance
+In 2015, the dedicated working group produced the following JSO (URL_TO_INSERT_RECORD_9734 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_9733 https://fairsharing.org/FAIRsharing.5bbab9)  schema implementation guidance
 https://www.w3.org/community/odrl/json/2.1/#section-Schema
 
-We base our representations on this specification {footcite}`ODR (URL_TO_INSERT_RECORD_10142 https://fairsharing.org/FAIRsharing.1sfhp3) LJSO (URL_TO_INSERT_RECORD_10141 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_10140 https://fairsharing.org/FAIRsharing.5bbab9) `. 
+We base our representations on this specification {footcite}`ODR (URL_TO_INSERT_RECORD_9737 https://fairsharing.org/FAIRsharing.1sfhp3) LJSO (URL_TO_INSERT_RECORD_9736 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_9735 https://fairsharing.org/FAIRsharing.5bbab9) `. 
 
 We are aware of a possible misalignment between the specifications of the Working Group (from 2015) and the latest
 specifications as to whether to use the keys "name" or "leftOperand" (https://www.w3.org/TR/odrl-model/#constraint-rule, 2018).
-In the following representations, we use the key "name" to validate against the 2015 JSO (URL_TO_INSERT_RECORD_10144 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_10143 https://fairsharing.org/FAIRsharing.5bbab9) -schema
- https://www.w3.org/community/odrl/json/2.1/#section-Schema / https://github.com (URL_TO_INSERT_RECORD_10145 https://fairsharing.org/FAIRsharing.c55d5e) /iptc/rightsml-dev/blob/master/licensed/ODRL21.json
+In the following representations, we use the key "name" to validate against the 2015 JSO (URL_TO_INSERT_RECORD_9739 https://fairsharing.org/FAIRsharing.6bc7h9) N (URL_TO_INSERT_RECORD_9738 https://fairsharing.org/FAIRsharing.5bbab9) -schema
+ https://www.w3.org/community/odrl/json/2.1/#section-Schema / https://github.com (URL_TO_INSERT_RECORD_9740 https://fairsharing.org/FAIRsharing.c55d5e) /iptc/rightsml-dev/blob/master/licensed/ODRL21.json
 
 ```
 
@@ -429,8 +429,8 @@ The ODRL model defines several subclasses for the **Policy** entity, namely  **A
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10146 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Agreement",
-    "policy (URL_TO_INSERT_TERM_10147 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:5531",
+    "policy (URL_TO_INSERT_TERM_9741 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Agreement",
+    "policy (URL_TO_INSERT_TERM_9742 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:5531",
     "inheritallowed": true,
     "permissions": [{
         "target": "http://example.com/report:2321",
@@ -440,8 +440,8 @@ The ODRL model defines several subclasses for the **Policy** entity, namely  **A
     }]
 }
 {
-    "policy (URL_TO_INSERT_TERM_10148 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Agreement",
-    "policy (URL_TO_INSERT_TERM_10149 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:9999",
+    "policy (URL_TO_INSERT_TERM_9743 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Agreement",
+    "policy (URL_TO_INSERT_TERM_9744 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:9999",
     "inheritfrom": "http://example.com/policy:5531",
     "permissions": [{
         "target": "http://example.com/report:2333",
@@ -462,8 +462,8 @@ situation where SecondaryUse of the data is allowed on the condition that work i
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10150 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10151 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
+    "policy (URL_TO_INSERT_TERM_9745 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9746 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
         "target": "https://fairplus.github.io/examples/dataset_00001",
@@ -482,7 +482,7 @@ situation where SecondaryUse of the data is allowed on the condition that work i
 
 ```{note}
 :class: tip
-The main limitation of the representation is that it provides no informat (URL_TO_INSERT_TERM_10152 https://fairsharing.org/search?recordType=model_and_format) ion about which diseases are vetted for research (URL_TO_INSERT_RECORD_10153 https://fairsharing.org/FAIRsharing.52b22c) .
+The main limitation of the representation is that it provides no informat (URL_TO_INSERT_TERM_9747 https://fairsharing.org/search?recordType=model_and_format) ion about which diseases are vetted for research (URL_TO_INSERT_RECORD_9748 https://fairsharing.org/FAIRsharing.52b22c) .
 ```
 
 The following representation is more sophisticated and includes 3 types of restrictions:
@@ -499,8 +499,8 @@ Let's proceed stepwise.
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10154 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10155 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
+    "policy (URL_TO_INSERT_TERM_9749 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9750 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
             "target": "https://fairplus.github.io/examples/dataset_00001",
@@ -544,11 +544,11 @@ vs
 
 
 ```{note}
-While DUO (URL_TO_INSERT_RECORD_10157 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_10158 https://fairsharing.org/FAIRsharing.mjnypw)  is unique in its coverage of data uses, various disease ontologies (URL_TO_INSERT_TERM_10156 https://fairsharing.org/search?recordType=terminology_artefact)  exist and may be used to specify the
-specific focus research (URL_TO_INSERT_RECORD_10159 https://fairsharing.org/FAIRsharing.52b22c)  should have.
-For instance, SNOME (URL_TO_INSERT_RECORD_10161 https://fairsharing.org/3502) D-CT, Disease Ontology (URL_TO_INSERT_TERM_10160 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_10162 https://fairsharing.org/FAIRsharing.8b6wfq)  could also be used.
-It is worth noting that extensive cross referencing exists between resources such as DOI (URL_TO_INSERT_RECORD_10163 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_10165 https://fairsharing.org/FAIRsharing.8b6wfq) , MONDO (URL_TO_INSERT_RECORD_10164 https://fairsharing.org/FAIRsharing.b2979t)  and
-SNOME (URL_TO_INSERT_RECORD_10166 https://fairsharing.org/3502) D-CT but this is something to consider when implementing brokering systems.
+While DUO (URL_TO_INSERT_RECORD_9752 https://fairsharing.org/FAIRsharing.5dnjs2)  (URL_TO_INSERT_RECORD_9753 https://fairsharing.org/FAIRsharing.mjnypw)  is unique in its coverage of data uses, various disease ontologies (URL_TO_INSERT_TERM_9751 https://fairsharing.org/search?recordType=terminology_artefact)  exist and may be used to specify the
+specific focus research (URL_TO_INSERT_RECORD_9754 https://fairsharing.org/FAIRsharing.52b22c)  should have.
+For instance, SNOME (URL_TO_INSERT_RECORD_9756 https://fairsharing.org/3502) D-CT, Disease Ontology (URL_TO_INSERT_TERM_9755 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_9757 https://fairsharing.org/FAIRsharing.8b6wfq)  could also be used.
+It is worth noting that extensive cross referencing exists between resources such as DOI (URL_TO_INSERT_RECORD_9758 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_9760 https://fairsharing.org/FAIRsharing.8b6wfq) , MONDO (URL_TO_INSERT_RECORD_9759 https://fairsharing.org/FAIRsharing.b2979t)  and
+SNOME (URL_TO_INSERT_RECORD_9761 https://fairsharing.org/3502) D-CT but this is something to consider when implementing brokering systems.
 ```
 
 
@@ -564,8 +564,8 @@ encoded using the **ISO-3166 code**.
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10167 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10168 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
+    "policy (URL_TO_INSERT_TERM_9762 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9763 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
             "target": "https://fairplus.github.io/examples/dataset_00001",
@@ -606,8 +606,8 @@ Duration and time related value should be represented using **ISO-8601 standard*
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10169 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10170 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
+    "policy (URL_TO_INSERT_TERM_9764 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9765 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://fairplus.github.io/examples/policy_122334",
     "permissions": [
         {
             "target": "https://fairplus.github.io/examples/dataset_00001",
@@ -655,18 +655,18 @@ Duration and time related value should be represented using **ISO-8601 standard*
 
 ```{warning} 
 
-This ODR (URL_TO_INSERT_RECORD_10172 https://fairsharing.org/FAIRsharing.1sfhp3) L representation is **not vetted, nor endorsed by GA4GH or EGA (URL_TO_INSERT_RECORD_10171 https://fairsharing.org/FAIRsharing.mya1ff) **.
-This example is currently meant to present an example of how to use ODR (URL_TO_INSERT_RECORD_10175 https://fairsharing.org/FAIRsharing.1sfhp3) L to represent some of the informat (URL_TO_INSERT_TERM_10173 https://fairsharing.org/search?recordType=model_and_format) ion represented in EGA (URL_TO_INSERT_RECORD_10174 https://fairsharing.org/FAIRsharing.mya1ff) .
+This ODR (URL_TO_INSERT_RECORD_9767 https://fairsharing.org/FAIRsharing.1sfhp3) L representation is **not vetted, nor endorsed by GA4GH or EGA (URL_TO_INSERT_RECORD_9766 https://fairsharing.org/FAIRsharing.mya1ff) **.
+This example is currently meant to present an example of how to use ODR (URL_TO_INSERT_RECORD_9770 https://fairsharing.org/FAIRsharing.1sfhp3) L to represent some of the informat (URL_TO_INSERT_TERM_9768 https://fairsharing.org/search?recordType=model_and_format) ion represented in EGA (URL_TO_INSERT_RECORD_9769 https://fairsharing.org/FAIRsharing.mya1ff) .
 
 ```
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10176 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10177 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://ega-archive.org (URL_TO_INSERT_RECORD_10178 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAP0000000XYZ",
+    "policy (URL_TO_INSERT_TERM_9771 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9772 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "https://ega-archive.org (URL_TO_INSERT_RECORD_9773 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAP0000000XYZ",
     "permissions": [
         {
-            "target": "https://ega-archive.org (URL_TO_INSERT_RECORD_10179 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
+            "target": "https://ega-archive.org (URL_TO_INSERT_RECORD_9774 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
             "action": [{
                 "rdf:value": { "@id": "odrl:secondaryUse" },
                 "refinement": {
@@ -679,7 +679,7 @@ This example is currently meant to present an example of how to use ODR (URL_TO_
                   }
                 }
             }],
-            "assigner": "https://ega-archive.org (URL_TO_INSERT_RECORD_10180 https://fairsharing.org/FAIRsharing.mya1ff) /",
+            "assigner": "https://ega-archive.org (URL_TO_INSERT_RECORD_9775 https://fairsharing.org/FAIRsharing.mya1ff) /",
             "constraints":[{
                     "name": "http://www.w3.org/ns/odrl/2/purpose",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -693,7 +693,7 @@ This example is currently meant to present an example of how to use ODR (URL_TO_
             ],
             "duties": [{
                 "action": "http://www.w3.org/ns/odrl/2/delete",
-                "target": "https://ega-archive.org (URL_TO_INSERT_RECORD_10181 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
+                "target": "https://ega-archive.org (URL_TO_INSERT_RECORD_9776 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
                 "constraints": [{
                     "name": "http://www.w3.org/ns/odrl/2/dateTime",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -714,8 +714,8 @@ Complex prohibitions can be expressed using **constraints** and **refinement** e
 
 ```json
 {
-    "policy (URL_TO_INSERT_TERM_10182 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
-    "policy (URL_TO_INSERT_TERM_10183 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:0099",
+    "policy (URL_TO_INSERT_TERM_9777 https://fairsharing.org/search?fairsharingRegistry=Policy) type": "http://www.w3.org/ns/odrl/2/Policy",
+    "policy (URL_TO_INSERT_TERM_9778 https://fairsharing.org/search?fairsharingRegistry=Policy) id": "http://example.com/policy:0099",
     "permissions": [{
         "target": "http://example.com/asset:9898",
         "action": "http://www.w3.org/ns/odrl/2/reproduce"
@@ -740,8 +740,8 @@ Complex prohibitions can be expressed using **constraints** and **refinement** e
 @prefix dct: <http://purl.org/dc/elements/1.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<#daa-policy (URL_TO_INSERT_TERM_10184 https://fairsharing.org/search?fairsharingRegistry=Policy) -1>
- a odrl:Policy (URL_TO_INSERT_TERM_10185 https://fairsharing.org/search?fairsharingRegistry=Policy)  .
+<#daa-policy (URL_TO_INSERT_TERM_9779 https://fairsharing.org/search?fairsharingRegistry=Policy) -1>
+ a odrl:Policy (URL_TO_INSERT_TERM_9780 https://fairsharing.org/search?fairsharingRegistry=Policy)  .
 
 <#dataset-001>
   a dcat:Dataset ;
@@ -754,7 +754,7 @@ Complex prohibitions can be expressed using **constraints** and **refinement** e
   dct:publisher "imi-consortium-XYZ";
   dct:language <http://id.loc.gov/vocabulary/iso639-1/en>  ;
   dcat:distribution _:dataset-001-csv ;
-  odrl:hasPolicy (URL_TO_INSERT_TERM_10186 https://fairsharing.org/search?fairsharingRegistry=Policy)  <#daa-policy (URL_TO_INSERT_TERM_10187 https://fairsharing.org/search?fairsharingRegistry=Policy) -1>;
+  odrl:hasPolicy (URL_TO_INSERT_TERM_9781 https://fairsharing.org/search?fairsharingRegistry=Policy)  <#daa-policy (URL_TO_INSERT_TERM_9782 https://fairsharing.org/search?fairsharingRegistry=Policy) -1>;
   .
 
 ```
