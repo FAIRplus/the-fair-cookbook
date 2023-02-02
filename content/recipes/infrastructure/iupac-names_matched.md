@@ -20,20 +20,20 @@
 
 The main purpose of this recipe is:
 
-> To take an IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_2998 https://fairsharing.org/FAIRsharing.ddk9t9) Key
+> To take an IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_2860 https://fairsharing.org/FAIRsharing.ddk9t9) Key
 
 ---
 
 ### Using the OPSIN website
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
-OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChI (URL_TO_INSERT_RECORD_2999 https://fairsharing.org/FAIRsharing.ddk9t9) Key.
-The latter is done by the offical InChI (URL_TO_INSERT_RECORD_3000 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD_3001 https://fairsharing.org/FAIRsharing.ddk9t9) `.
+OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChI (URL_TO_INSERT_RECORD_2861 https://fairsharing.org/FAIRsharing.ddk9t9) Key.
+The latter is done by the offical InChI (URL_TO_INSERT_RECORD_2862 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD_2863 https://fairsharing.org/FAIRsharing.ddk9t9) `.
 
 ### Automating translations with Google Colab
 
 [Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC names.
-In Colab we can use [Bacting](https://github.com (URL_TO_INSERT_RECORD_3002 https://fairsharing.org/FAIRsharing.c55d5e) /egonw/bacting) {footcite}`Willighagen2021`
+In Colab we can use [Bacting](https://github.com (URL_TO_INSERT_RECORD_2864 https://fairsharing.org/FAIRsharing.c55d5e) /egonw/bacting) {footcite}`Willighagen2021`
 to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:
 
 ```python
@@ -47,7 +47,7 @@ opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
 opsin = opsin_cls(".")
 ```
 
-After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_3003 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChI (URL_TO_INSERT_RECORD_3004 https://fairsharing.org/FAIRsharing.ddk9t9) Key:
+After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_2865 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChI (URL_TO_INSERT_RECORD_2866 https://fairsharing.org/FAIRsharing.ddk9t9) Key:
 
 ```python
 anInChI = inchi.generate(opsin.parseIUPACName("methane"))
@@ -55,7 +55,7 @@ print(f"InChI: {anInChI.getValue()}")
 print(f"InchIKey: {anInChI.getKey()}")
 ```
 
-The full Jupyter notebook can be found [here](https://gist.github.com (URL_TO_INSERT_RECORD_3005 https://fairsharing.org/FAIRsharing.c55d5e) /egonw/e4c788437a827407457deb764ce8eb93),
+The full Jupyter notebook can be found [here](https://gist.github.com (URL_TO_INSERT_RECORD_2867 https://fairsharing.org/FAIRsharing.c55d5e) /egonw/e4c788437a827407457deb764ce8eb93),
 including a button to open the notebook in Colab.
 
 ### Automating translations with Apache Groovy
@@ -80,14 +80,14 @@ println "InchIKey: ${anInChI.getKey()}"
 
 ## Conclusion
 
-Cheminformat (URL_TO_INSERT_TERM_3006 https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC names and convert them to
-chemical graph based identifier (URL_TO_INSERT_TERM_3007 https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI (URL_TO_INSERT_RECORD_3009 https://fairsharing.org/FAIRsharing.ddk9t9) Key. The InChI (URL_TO_INSERT_RECORD_3010 https://fairsharing.org/FAIRsharing.ddk9t9) Key identifier (URL_TO_INSERT_TERM_3008 https://fairsharing.org/search?recordType=identifier_schema) 
-can be used to find more informat (URL_TO_INSERT_TERM_3011 https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
+Cheminformat (URL_TO_INSERT_TERM_2868 https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC names and convert them to
+chemical graph based identifier (URL_TO_INSERT_TERM_2869 https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI (URL_TO_INSERT_RECORD_2871 https://fairsharing.org/FAIRsharing.ddk9t9) Key. The InChI (URL_TO_INSERT_RECORD_2872 https://fairsharing.org/FAIRsharing.ddk9t9) Key identifier (URL_TO_INSERT_TERM_2870 https://fairsharing.org/search?recordType=identifier_schema) 
+can be used to find more informat (URL_TO_INSERT_TERM_2873 https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
 original IUPAC names.
 
 ### What to read next?
 
-* [Identifier (URL_TO_INSERT_TERM_3012 https://fairsharing.org/search?recordType=identifier_schema)  map (URL_TO_INSERT_RECORD_3015 https://fairsharing.org/FAIRsharing.53edcc) ping with BridgeDb (URL_TO_INSERT_RECORD_3014 https://fairsharing.org/FAIRsharing.5ry74y) ](https://w3id.org (URL_TO_INSERT_RECORD_3013 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB017)
+* [Identifier mapping with BridgeDb](https://w3id.org (URL_TO_INSERT_RECORD_2874 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB017)
 
 ````{rdmkit_panel}
 ````

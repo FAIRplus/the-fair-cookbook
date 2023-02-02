@@ -23,16 +23,16 @@
 
 The main purpose of this recipe is:
 
-> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD_7707 https://fairsharing.org/FAIRsharing.WWI10U) . 
+> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD_7372 https://fairsharing.org/FAIRsharing.WWI10U) . 
 > This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. We also introduce semantics elements, such as controlled vocabularies, to make metadata machine actionable.
 
 ---
 ## Introduction
 
-Upon reading the [FAIR (URL_TO_INSERT_RECORD_7708 https://fairsharing.org/FAIRsharing.WWI10U)  principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD_7709 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdl (URL_TO_INSERT_RECORD_7710 https://fairsharing.org/FAIRsharing.vm4688) e is to grasp the notion of 'metadata'.
+Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD_7373 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdl (URL_TO_INSERT_RECORD_7374 https://fairsharing.org/FAIRsharing.vm4688) e is to grasp the notion of 'metadata'.
 Below are a number of commonly found definitions of metadata:
 
-* The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidata (URL_TO_INSERT_RECORD_7711 https://fairsharing.org/FAIRsharing.6s749p) Metadata`.
+* The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidata (URL_TO_INSERT_RECORD_7375 https://fairsharing.org/FAIRsharing.6s749p) Metadata`.
 
 * The formal definition **"set of agreed-upon descriptors to denote an entity"**, which indicates that a social contract is needed to ensure we all mean the same thing when adding a descriptor.
 
@@ -40,7 +40,7 @@ Below are a number of commonly found definitions of metadata:
 
 * The fractal definition  **"your metadata is my data"**, which conveys the notion that `quantity has a quality all of its own` when it comes to metadata, and by accumulating enough metadata, however small, statistical handling may reveal patterns and provide insights. This in fact can have unforeseen and possibly untoward consequences, such as loss of privacy and risks of reidentification of supposedly anonymized data.
 
-The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM_7712 https://fairsharing.org/search?recordType=society)  which relies on informat (URL_TO_INSERT_TERM_7713 https://fairsharing.org/search?recordType=model_and_format) ion technology.
+The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM_7376 https://fairsharing.org/search?recordType=society)  which relies on informat (URL_TO_INSERT_TERM_7377 https://fairsharing.org/search?recordType=model_and_format) ion technology.
 
 In the following sections, we will delve further into the possibly controversial typology of metadata {footcite}`NISOMetadata`.
 
@@ -80,10 +80,10 @@ Depending on the domain of knowledge, descriptive metadata complexity can increa
 Taking an example, let's consider the domain of a bibliographic record and look at a BibTex {footcite}`bibtex` record:
 
 ```bash
-@Article{Alter2020DATS (URL_TO_INSERT_RECORD_7714 https://fairsharing.org/FAIRsharing.e20vsd) ,
+@Article{Alter2020DATS (URL_TO_INSERT_RECORD_7378 https://fairsharing.org/FAIRsharing.e20vsd) ,
    Author="Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. ",
-   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM_7715 https://fairsharing.org/search?recordType=model_and_format)  for discovering data access and use requirements}",
-   Journal (URL_TO_INSERT_TERM_7716 https://fairsharing.org/search?recordType=journal) ="Gigascience",
+   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM_7379 https://fairsharing.org/search?recordType=model_and_format)  for discovering data access and use requirements}",
+   Journal (URL_TO_INSERT_TERM_7380 https://fairsharing.org/search?recordType=journal) ="Gigascience",
    Year="2020",
    Volume="9",
    Number="2",
@@ -131,7 +131,7 @@ It can range from quantitative metrics such as the variance or standard error of
 
 
 ````{note}
-This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic model (URL_TO_INSERT_TERM_7717 https://fairsharing.org/search?recordType=model_and_format) s and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
+This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic model (URL_TO_INSERT_TERM_7381 https://fairsharing.org/search?recordType=model_and_format) s and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
 ````
 
 

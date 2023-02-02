@@ -252,9 +252,9 @@ For example [Rclone](https://rclone.org) is one such tool, allowing interaction 
 
 ### What to read next?
 
-* [Wikiped (URL_TO_INSERT_RECORD_15 https://fairsharing.org/FAIRsharing.31385c) ia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+* [Wikipedia article on SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 * [The Geek Stuff, FTP and SFTP Beginners guide with 10 examples](https://www.thegeekstuff.com/2010/06/ftp-sftp-tutorial/)
-* [Example of customization for a specific institution (URL_TO_INSERT_TERM_16 https://fairsharing.org/search?recordType=institution) : University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
+* [Example of customization for a specific institution: University of Luxembourg File Transfer](https://hpc.uni.lu/users/docs/filetransfer.html)
 * [Setting up an SFTP server on CentOS](https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/)
 * {ref}`fcb-access-aspera`
 * [Rclone](https://rclone.org)

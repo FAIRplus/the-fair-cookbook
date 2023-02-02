@@ -19,7 +19,7 @@
 
 The main purpose of this recipe is to:
 
-> - provide a FAST (URL_TO_INSERT_RECORD_5041 https://fairsharing.org/FAIRsharing.p5df9c) Q file validation solution
+> - provide a FAST (URL_TO_INSERT_RECORD_4806 https://fairsharing.org/FAIRsharing.p5df9c) Q file validation solution
 > - propose a general file validation workflow. 
 
 ## Graphical Overview
@@ -30,10 +30,10 @@ The main purpose of this recipe is to:
 ```{figure} fastq-validation.png
 ---
 width: 350px
-name: Validating FAST (URL_TO_INSERT_RECORD_5044 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_5042 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_5043 https://fairsharing.org/search?recordType=model_and_format) 
-alt: Validating FAST (URL_TO_INSERT_RECORD_5047 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_5045 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_5046 https://fairsharing.org/search?recordType=model_and_format) 
+name: Validating FAST (URL_TO_INSERT_RECORD_4809 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_4807 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_4808 https://fairsharing.org/search?recordType=model_and_format) 
+alt: Validating FAST (URL_TO_INSERT_RECORD_4812 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_4810 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_4811 https://fairsharing.org/search?recordType=model_and_format) 
 ---
-Validating FAST (URL_TO_INSERT_RECORD_5050 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_5048 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_5049 https://fairsharing.org/search?recordType=model_and_format) .
+Validating FAST (URL_TO_INSERT_RECORD_4815 https://fairsharing.org/FAIRsharing.p5df9c) Q open standard (URL_TO_INSERT_TERM_4813 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_4814 https://fairsharing.org/search?recordType=model_and_format) .
 ```
 ````
 
@@ -41,13 +41,13 @@ Validating FAST (URL_TO_INSERT_RECORD_5050 https://fairsharing.org/FAIRsharing.p
 
 ## User Stories
 
-The table below lists common file validation use cases. This recipe provides solutions with FAST (URL_TO_INSERT_RECORD_5051 https://fairsharing.org/FAIRsharing.p5df9c) Q files {footcite}`Cock2010` as an example.
+The table below lists common file validation use cases. This recipe provides solutions with FAST (URL_TO_INSERT_RECORD_4816 https://fairsharing.org/FAIRsharing.p5df9c) Q files {footcite}`Cock2010` as an example.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
-|Data owner| Validate my sequencing files before depositing to public arch (URL_TO_INSERT_RECORD_5052 https://fairsharing.org/FAIRsharing.52b22c) ives| Reduce the risk of submitting invalid files or submission rejection|
+|Data owner| Validate my sequencing files before depositing to public arch (URL_TO_INSERT_RECORD_4817 https://fairsharing.org/FAIRsharing.52b22c) ives| Reduce the risk of submitting invalid files or submission rejection|
 |Data consumer| Validate files before running analysis|Avoid wasting time and resource processing corrupted files|
-|Data consumer| Integrate file format (URL_TO_INSERT_TERM_5053 https://fairsharing.org/search?recordType=model_and_format)  validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
+|Data consumer| Integrate file format (URL_TO_INSERT_TERM_4818 https://fairsharing.org/search?recordType=model_and_format)  validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
 |Data librarian| Check files downloaded from unknown sources before deposition| Ensure the file is usable in the future.|
 
 
@@ -57,24 +57,24 @@ The table below lists common file validation use cases. This recipe provides sol
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Format (URL_TO_INSERT_TERM_5054 https://fairsharing.org/search?recordType=model_and_format)  validation](http://edamontology.org (URL_TO_INSERT_RECORD_5056 https://fairsharing.org/FAIRsharing.a6r7zs) /operation_0336)  | [FAST (URL_TO_INSERT_RECORD_5055 https://fairsharing.org/FAIRsharing.p5df9c) Q file](http://edamontology.org (URL_TO_INSERT_RECORD_5057 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182)  | Validation results  |
+| [Format validation](http://edamontology.org (URL_TO_INSERT_RECORD_4820 https://fairsharing.org/FAIRsharing.a6r7zs) /operation_0336)  | [FAST (URL_TO_INSERT_RECORD_4819 https://fairsharing.org/FAIRsharing.p5df9c) Q file](http://edamontology.org (URL_TO_INSERT_RECORD_4821 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182)  | Validation results  |
 
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_5059 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_5060 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_5058 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Format (URL_TO_INSERT_TERM_4823 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_4824 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_4822 https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
-| [FASTQ](http://edamontology.org (URL_TO_INSERT_RECORD_5061 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182)  | |
-| [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org (URL_TO_INSERT_RECORD_5062 https://fairsharing.org/FAIRsharing.a6r7zs) %2Fformat_4006)| |
+| [FASTQ](http://edamontology.org (URL_TO_INSERT_RECORD_4825 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182)  | |
+| [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org (URL_TO_INSERT_RECORD_4826 https://fairsharing.org/FAIRsharing.a6r7zs) %2Fformat_4006)| |
 ---
 
-[FASTQ](http://edamontology.org (URL_TO_INSERT_RECORD_5070 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182) is the _de facto_ sequencing file format (URL_TO_INSERT_TERM_5063 https://fairsharing.org/search?recordType=model_and_format)  and one of the most common file format (URL_TO_INSERT_TERM_5064 https://fairsharing.org/search?recordType=model_and_format) s in bioinformat (URL_TO_INSERT_TERM_5065 https://fairsharing.org/search?recordType=model_and_format) ics analysis {footcite}`ENAfastq`, {footcite}`NCBIformat (URL_TO_INSERT_TERM_5066 https://fairsharing.org/search?recordType=model_and_format) s`. Research (URL_TO_INSERT_RECORD_5071 https://fairsharing.org/FAIRsharing.52b22c) ers receive FAST (URL_TO_INSERT_RECORD_5068 https://fairsharing.org/FAIRsharing.p5df9c) Q files from various sources. These files are used intensively in automated bioinformat (URL_TO_INSERT_TERM_5067 https://fairsharing.org/search?recordType=model_and_format) ics analysis pipelines. Therefore, it is important to validate FAST (URL_TO_INSERT_RECORD_5069 https://fairsharing.org/FAIRsharing.p5df9c) Q files to improve the data reusability and build error-proof data analysis processes.
+[FASTQ](http://edamontology.org (URL_TO_INSERT_RECORD_4834 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2182) is the _de facto_ sequencing file format (URL_TO_INSERT_TERM_4827 https://fairsharing.org/search?recordType=model_and_format)  and one of the most common file format (URL_TO_INSERT_TERM_4828 https://fairsharing.org/search?recordType=model_and_format) s in bioinformat (URL_TO_INSERT_TERM_4829 https://fairsharing.org/search?recordType=model_and_format) ics analysis {footcite}`ENAfastq`, {footcite}`NCBIformat (URL_TO_INSERT_TERM_4830 https://fairsharing.org/search?recordType=model_and_format) s`. Research (URL_TO_INSERT_RECORD_4835 https://fairsharing.org/FAIRsharing.52b22c) ers receive FAST (URL_TO_INSERT_RECORD_4832 https://fairsharing.org/FAIRsharing.p5df9c) Q files from various sources. These files are used intensively in automated bioinformat (URL_TO_INSERT_TERM_4831 https://fairsharing.org/search?recordType=model_and_format) ics analysis pipelines. Therefore, it is important to validate FAST (URL_TO_INSERT_RECORD_4833 https://fairsharing.org/FAIRsharing.p5df9c) Q files to improve the data reusability and build error-proof data analysis processes.
 
-FAST (URL_TO_INSERT_RECORD_5073 https://fairsharing.org/FAIRsharing.p5df9c) Q validators detect truncated reads, base calls and quality score (URL_TO_INSERT_RECORD_5072 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5076 https://fairsharing.org/FAIRsharing.xMmOCL)  mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FAST (URL_TO_INSERT_RECORD_5074 https://fairsharing.org/FAIRsharing.p5df9c) Q variants automatically and handle (URL_TO_INSERT_RECORD_5077 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FAST (URL_TO_INSERT_RECORD_5075 https://fairsharing.org/FAIRsharing.p5df9c) Q files. 
+FAST (URL_TO_INSERT_RECORD_4837 https://fairsharing.org/FAIRsharing.p5df9c) Q validators detect truncated reads, base calls and quality score (URL_TO_INSERT_RECORD_4836 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_4840 https://fairsharing.org/FAIRsharing.xMmOCL)  mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FAST (URL_TO_INSERT_RECORD_4838 https://fairsharing.org/FAIRsharing.p5df9c) Q variants automatically and handle (URL_TO_INSERT_RECORD_4841 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FAST (URL_TO_INSERT_RECORD_4839 https://fairsharing.org/FAIRsharing.p5df9c) Q files. 
 
-[FASTQ-utils](https://github.com (URL_TO_INSERT_RECORD_5081 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils) is an open-source software to validate and process FAST (URL_TO_INSERT_RECORD_5080 https://fairsharing.org/FAIRsharing.p5df9c) Q files. It has been applied in the [European Nucleotide Archive (URL_TO_INSERT_RECORD_5078 https://fairsharing.org/FAIRsharing.dj8nt8) (ENA)](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_5079 https://fairsharing.org/FAIRsharing.dj8nt8) ), and several research (URL_TO_INSERT_RECORD_5082 https://fairsharing.org/FAIRsharing.52b22c)  initiatives. 
+[FASTQ-utils](https://github.com (URL_TO_INSERT_RECORD_4845 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils) is an open-source software to validate and process FAST (URL_TO_INSERT_RECORD_4844 https://fairsharing.org/FAIRsharing.p5df9c) Q files. It has been applied in the [European Nucleotide Arch (URL_TO_INSERT_RECORD_4846 https://fairsharing.org/FAIRsharing.52b22c) ive (URL_TO_INSERT_RECORD_4842 https://fairsharing.org/FAIRsharing.dj8nt8) (ENA)](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_4843 https://fairsharing.org/FAIRsharing.dj8nt8) ), and several research (URL_TO_INSERT_RECORD_4847 https://fairsharing.org/FAIRsharing.52b22c)  initiatives. 
 
-This recipe provides an example of validating FAST (URL_TO_INSERT_RECORD_5083 https://fairsharing.org/FAIRsharing.p5df9c) Q files with _FAST (URL_TO_INSERT_RECORD_5084 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils_ on MacOS and Linux machines.
+This recipe provides an example of validating FAST (URL_TO_INSERT_RECORD_4848 https://fairsharing.org/FAIRsharing.p5df9c) Q files with _FAST (URL_TO_INSERT_RECORD_4849 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils_ on MacOS and Linux machines.
 
 ```{warning}
 ⚠️ Quality control is out of the scope of file format validation.
@@ -89,10 +89,10 @@ This recipe provides an example of validating FAST (URL_TO_INSERT_RECORD_5083 ht
 ```{figure} /images/jOYK2ZM.jpg
 ---
 width: 800px
-name: FAST (URL_TO_INSERT_RECORD_5085 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library
-alt: FAST (URL_TO_INSERT_RECORD_5086 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library
+name: FAST (URL_TO_INSERT_RECORD_4850 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library
+alt: FAST (URL_TO_INSERT_RECORD_4851 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library
 ---
-the FAST (URL_TO_INSERT_RECORD_5087 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library.
+the FAST (URL_TO_INSERT_RECORD_4852 https://fairsharing.org/FAIRsharing.p5df9c) Qutils library.
 ```
 ````
 
@@ -103,12 +103,12 @@ The users are expected to be comfortable with Unix-based OS and basic Bash progr
 |Software|Description|Version|
 |--|--|--|
 |[conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)|Package manager for installing validators |4.8.3
-|[FASTQ-utils](https://github.com (URL_TO_INSERT_RECORD_5089 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils)| FAST (URL_TO_INSERT_RECORD_5088 https://fairsharing.org/FAIRsharing.p5df9c) Q validator|0.23.0
+|[FASTQ-utils](https://github.com (URL_TO_INSERT_RECORD_4854 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils)| FAST (URL_TO_INSERT_RECORD_4853 https://fairsharing.org/FAIRsharing.p5df9c) Q validator|0.23.0
 |[wget](https://www.gnu.org/software/wget/)|File downloader|1.19.4|
 
 ### Step 1: Install fastq-utils
 
-The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com (URL_TO_INSERT_RECORD_5090 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils) {footcite}`nuno_fonseca_2020_3936692`.
+The command below installs _fastq-utils_ via Conda. It is also possible to install _fastq-utils_ from [the source code](https://github.com (URL_TO_INSERT_RECORD_4855 https://fairsharing.org/FAIRsharing.c55d5e) /nunofonseca/fastq_utils) {footcite}`nuno_fonseca_2020_3936692`.
 
 ```shell
 conda install -c bioconda fastq_utils
@@ -123,16 +123,16 @@ conda install -c bioconda fastq_utils
 ```
 
 
-In this step, we download example FAST (URL_TO_INSERT_RECORD_5092 https://fairsharing.org/FAIRsharing.p5df9c) Q files from ENA (URL_TO_INSERT_RECORD_5091 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
+In this step, we download example FAST (URL_TO_INSERT_RECORD_4857 https://fairsharing.org/FAIRsharing.p5df9c) Q files from ENA (URL_TO_INSERT_RECORD_4856 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
 
-__Example 1: Get single read FAST (URL_TO_INSERT_RECORD_5093 https://fairsharing.org/FAIRsharing.p5df9c) Q file__
+__Example 1: Get single read FAST (URL_TO_INSERT_RECORD_4858 https://fairsharing.org/FAIRsharing.p5df9c) Q file__
 
-The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD_5094 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_5095 https://fairsharing.org/FAIRsharing.dj8nt8) /browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
+The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD_4859 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_4860 https://fairsharing.org/FAIRsharing.dj8nt8) /browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 
 ```shell
 wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
 ```
-Users can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of this FAST (URL_TO_INSERT_RECORD_5096 https://fairsharing.org/FAIRsharing.p5df9c) Q file.
+Users can inspect the _fastq.gz_ file using `gzip -cd SRR12132977.fastq.gz | head -8`. Below is the header of this FAST (URL_TO_INSERT_RECORD_4861 https://fairsharing.org/FAIRsharing.p5df9c) Q file.
 ```
 @SRR12132977.1 1/1
 AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACAAACTAAAATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAG
@@ -143,9 +143,9 @@ AACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTG
 +
 A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB@AAC>>9BBBB;;;@@?;><::;99<9<;A;>><@@A:=:>@@@>A@>:>===>:=<<>>;;;>=BCAA?>=A>>>:==>;998<=;===@@@<>>9>>>?;??==:=>>>>:>>;;;;;;;<;;
 ```
-__Example 2: Get paired-read FAST (URL_TO_INSERT_RECORD_5097 https://fairsharing.org/FAIRsharing.p5df9c) Q files__
+__Example 2: Get paired-read FAST (URL_TO_INSERT_RECORD_4862 https://fairsharing.org/FAIRsharing.p5df9c) Q files__
 
-The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD_5098 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_5099 https://fairsharing.org/FAIRsharing.dj8nt8) /data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
+The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD_4863 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD_4864 https://fairsharing.org/FAIRsharing.dj8nt8) /data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
 
 ```shell
 wget -c \
@@ -184,7 +184,7 @@ The command below validates the single read file in _Example 1_.
 ```shell
 fastq_info -r SRR12132977.fastq.gz
 ```
-Below are the validation results. _fastq-utils_ returns the number of reads, read length details, and encoding info. Field `Quality encoding` indicates the fastq file variant. FAST (URL_TO_INSERT_RECORD_5100 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils returns `OK` for a valid fastq file. Otherwise, it will return the validation details in the Error message.
+Below are the validation results. _fastq-utils_ returns the number of reads, read length details, and encoding info. Field `Quality encoding` indicates the fastq file variant. FAST (URL_TO_INSERT_RECORD_4865 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils returns `OK` for a valid fastq file. Otherwise, it will return the validation details in the Error message.
 
 ```
 Skipping check for duplicated read names
@@ -232,53 +232,53 @@ _fastq_util_ also provides additional arguments to tune the validation:
 `-q`: not to fail if the encoding can't be decided.
 
 #### Error messages for invalid files
-FAST (URL_TO_INSERT_RECORD_5101 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils returns an error message with the location of invalid lines and type of errors if the files are invalid. Below are examples of error messages.
+FAST (URL_TO_INSERT_RECORD_4866 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils returns an error message with the location of invalid lines and type of errors if the files are invalid. Below are examples of error messages.
 
 - Invalid file example 1, duplicated reads
     > ERROR: Error in file SRR11542244_2.fastq: line 16: duplicated sequence SRR11542244.5 5/
 
 - Invalid file example 2, wrong base call encoding
-    > ERROR: Error in file SRR11542244_2.fastq: line 5: invalid character 'e' (hex. code:'65'), expected AC (URL_TO_INSERT_RECORD_5102 https://fairsharing.org/FAIRsharing.md3e78) GTacgt0123nN.
+    > ERROR: Error in file SRR11542244_2.fastq: line 5: invalid character 'e' (hex. code:'65'), expected AC (URL_TO_INSERT_RECORD_4867 https://fairsharing.org/FAIRsharing.md3e78) GTacgt0123nN.
 
 ### FASTA-utils feature summary
 
 The table lists technical considerations when selecting the validator, including basic validation function, performance, interface, etc. It also provides a detailed summary of _fastq-utils_ features.  
 
 
-|Aspects|Validation content |Description|FAST (URL_TO_INSERT_RECORD_5103 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils|
+|Aspects|Validation content |Description|FAST (URL_TO_INSERT_RECORD_4868 https://fairsharing.org/FAIRsharing.p5df9c) Q-utils|
 |--|--|--|--|
-|Basic validation|4-line format (URL_TO_INSERT_TERM_5104 https://fairsharing.org/search?recordType=model_and_format) |Check if the FAST (URL_TO_INSERT_RECORD_5105 https://fairsharing.org/FAIRsharing.p5df9c) Q file is a 4-line file|☑️|
-| |Character encoding| Check if the base calls and quality score (URL_TO_INSERT_RECORD_5106 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5107 https://fairsharing.org/FAIRsharing.xMmOCL)  encoding are correct.  |☑️| 
-||Read length| Check if the length of the base calls are the same as that of the quality score (URL_TO_INSERT_RECORD_5108 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_5109 https://fairsharing.org/FAIRsharing.xMmOCL) s|☑️|
+|Basic validation|4-line format (URL_TO_INSERT_TERM_4869 https://fairsharing.org/search?recordType=model_and_format) |Check if the FAST (URL_TO_INSERT_RECORD_4870 https://fairsharing.org/FAIRsharing.p5df9c) Q file is a 4-line file|☑️|
+| |Character encoding| Check if the base calls and quality score (URL_TO_INSERT_RECORD_4871 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_4872 https://fairsharing.org/FAIRsharing.xMmOCL)  encoding are correct.  |☑️| 
+||Read length| Check if the length of the base calls are the same as that of the quality score (URL_TO_INSERT_RECORD_4873 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_4874 https://fairsharing.org/FAIRsharing.xMmOCL) s|☑️|
 ||File truncation|Check if the file is truncated or not|☑️|
 |Paired-end reads validation| Deinterleaved paired reads| Validate when the forward and reverse reads are in two files.|☑️|
 | |Interleaved _"8-line"_ files|Validate when the forward and reverse reads are listed together as an 8-line file|☑️|
 |Compressed file validation| gzip| Validate compressed fastq files, with extension `fastq.gz`|☑️|
-|FAST (URL_TO_INSERT_RECORD_5111 https://fairsharing.org/FAIRsharing.p5df9c) Q variants* validation| fastq-illumina|Validate the _fastq-illumina_ format (URL_TO_INSERT_TERM_5110 https://fairsharing.org/search?recordType=model_and_format) |☑️|
-| |fastq-sanger|Validate the _fastq-sanger_ format (URL_TO_INSERT_TERM_5112 https://fairsharing.org/search?recordType=model_and_format) |☑️||
-| |fastq-solexa|Validate the _fastq-solexa_ format (URL_TO_INSERT_TERM_5113 https://fairsharing.org/search?recordType=model_and_format) |☑️|
+|FAST (URL_TO_INSERT_RECORD_4876 https://fairsharing.org/FAIRsharing.p5df9c) Q variants* validation| fastq-illumina|Validate the _fastq-illumina_ format (URL_TO_INSERT_TERM_4875 https://fairsharing.org/search?recordType=model_and_format) |☑️|
+| |fastq-sanger|Validate the _fastq-sanger_ format (URL_TO_INSERT_TERM_4877 https://fairsharing.org/search?recordType=model_and_format) |☑️||
+| |fastq-solexa|Validate the _fastq-solexa_ format (URL_TO_INSERT_TERM_4878 https://fairsharing.org/search?recordType=model_and_format) |☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
-|Arch (URL_TO_INSERT_RECORD_5115 https://fairsharing.org/FAIRsharing.52b22c) ieve compatiablity|ENA|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD_5114 https://fairsharing.org/FAIRsharing.dj8nt8)  arch (URL_TO_INSERT_RECORD_5116 https://fairsharing.org/FAIRsharing.52b22c) ive.|☑️|
-||ArrayExpress (URL_TO_INSERT_RECORD_5117 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
-||SRA|File validated can be submitted to the SRA (URL_TO_INSERT_RECORD_5119 https://fairsharing.org/FAIRsharing.g7t2hv)  arch (URL_TO_INSERT_RECORD_5118 https://fairsharing.org/FAIRsharing.52b22c) ive.|☑️|
+|Arch (URL_TO_INSERT_RECORD_4880 https://fairsharing.org/FAIRsharing.52b22c) ieve compatiablity|ENA|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD_4879 https://fairsharing.org/FAIRsharing.dj8nt8)  arch (URL_TO_INSERT_RECORD_4881 https://fairsharing.org/FAIRsharing.52b22c) ive.|☑️|
+||ArrayExpress (URL_TO_INSERT_RECORD_4882 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
+||SRA|File validated can be submitted to the SRA (URL_TO_INSERT_RECORD_4884 https://fairsharing.org/FAIRsharing.g7t2hv)  arch (URL_TO_INSERT_RECORD_4883 https://fairsharing.org/FAIRsharing.52b22c) ive.|☑️|
 |Interface|Command line interface|Can be used in shell and intergerated in pipe commands|☑️|
 |License|Licensed||☑️[GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)|
 | |Commercial use|Can be used for commercial purpose|☑️|
 |Code|Open source|Source code available on public platforms|☑️|
 
-_*See details in the [FAST (URL_TO_INSERT_RECORD_5120 https://fairsharing.org/FAIRsharing.p5df9c) Q specification recipe]( TO (URL_TO_INSERT_RECORD_5121 https://fairsharing.org/FAIRsharing.w69t6r) DO include link)._
+_*See details in the [FASTQ specification recipe]( TO (URL_TO_INSERT_RECORD_4885 https://fairsharing.org/FAIRsharing.w69t6r) DO include link)._
  
 ## Conclusion
 
-In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FAST (URL_TO_INSERT_RECORD_5123 https://fairsharing.org/FAIRsharing.p5df9c) Q validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file format (URL_TO_INSERT_TERM_5122 https://fairsharing.org/search?recordType=model_and_format) s and other use cases.
+In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FAST (URL_TO_INSERT_RECORD_4887 https://fairsharing.org/FAIRsharing.p5df9c) Q validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file format (URL_TO_INSERT_TERM_4886 https://fairsharing.org/search?recordType=model_and_format) s and other use cases.
 
 
 ### What to read next?
 
-- 🐙[From proprietary format (URL_TO_INSERT_TERM_5125 https://fairsharing.org/search?recordType=model_and_format)  to open standard (URL_TO_INSERT_TERM_5124 https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM_5126 https://fairsharing.org/search?recordType=model_and_format) : an exemplar](https://github.com (URL_TO_INSERT_RECORD_5127 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
-- 🐙[FAST (URL_TO_INSERT_RECORD_5128 https://fairsharing.org/FAIRsharing.p5df9c) Q file specification recipe](TODO include link to recipe https://www.TBD.org )
-- 🐙[FAST (URL_TO_INSERT_RECORD_5129 https://fairsharing.org/FAIRsharing.p5df9c) Q file validator in Biopython](TODO include link to recipe https://www.TBD.org)
+- 🐙[From proprietary format to open standard format: an exemplar](https://github.com (URL_TO_INSERT_RECORD_4888 https://fairsharing.org/FAIRsharing.c55d5e) /FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 
+- 🐙[FASTQ file specification recipe](TODO include link to recipe https://www.TBD.org )
+- 🐙[FASTQ file validator in Biopython](TODO include link to recipe https://www.TBD.org)
 
 ````{rdmkit_panel}
 ````
