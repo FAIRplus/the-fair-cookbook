@@ -22,7 +22,7 @@ Remember you can also provide a recipe in the form on Jupyter Notebook. Simply, 
 
 We also provide a few tips and tricks that you can use to ease integration with the book, as well as a [recipe template](https://github.com/FAIRplus/the-fair-cookbook/blob/migrating/content/recipes/help/recipe-template.md)
 
-You can always contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
+You can always contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org).
 
 Thank you in advance for your input, you are awesome!
 
