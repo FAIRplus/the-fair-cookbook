@@ -510,6 +510,13 @@
         `
     })
     Vue.component('contributecards', {
+        data() {
+            return {
+                total: 0,
+                executables: 0,
+                authors: 0
+            }
+        },
         computed: {
             styles() {
                 let styles = ''
@@ -517,6 +524,21 @@
                 this.$vuetify.breakpoint.lgAndUp ? styles += ' padding: 0 255px; ' : styles += 'padding: 0 10px;'
                 return styles
             },
+        },
+        methods: {
+            async getData() {
+                const response = await fetch('https://faircookbook.elixir-europe.org/_static/recipes.json');
+                const data = await response.json();
+                console.log(Object.keys(data))
+                this.total = Object.keys(data).length
+                Object.entries(data).forEach(([key, value]) => {
+                    if (value.executable === "Yes") this.executables += 1
+                })
+                console.log(this.total, this.executables)
+            }
+        },
+        async mounted() {
+            await this.getData()
         },
         template: `
             <v-col
@@ -538,7 +560,7 @@
                             rounded="circle" color="white"
                         >
                             <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
-                                71
+                               {{ '{{ total }}' }}
                             </span>
                             <span class="primary--text">Recipes</span>
                         </v-card>
@@ -551,7 +573,7 @@
                             :class="$vuetify.breakpoint.mdAndUp ? 'text-h5' : 'text-h6'"
                         >
                             <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
-                                91
+                                97
                             </span>
                             <span class="primary--text">Authors</span>
                         </v-card>
@@ -565,7 +587,7 @@
                             rounded="circle" color="white"
                         >
                            <span class=" secondary--text" :class="$vuetify.breakpoint.mdAndUp ? 'text-h1' : 'text-h2'">
-                               18
+                               {{ '{{ executables }}' }}
                            </span>
 
                            <span class="primary--text">Executable</span>
