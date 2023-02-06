@@ -18,3 +18,6 @@ docker.sh
 extract-warnings.sh
 #
 .idea
+bin
+node_modules
+jupyter_execute
