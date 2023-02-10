@@ -22,17 +22,17 @@
 | Ingredient | Type| Comment|
 |:-----| :----|:-----|
 |[HTTP1.1 protocol](https://tools.ietf.org/html/rfc2616)| data communication protocol | |
-|[guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)| policy (URL_TO_INSERT_TERM_1029 https://fairsharing.org/search?fairsharingRegistry=Policy) | |
+|[guidance on persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers)| policy (URL_TO_INSERT_TERM_773 https://fairsharing.org/search?fairsharingRegistry=Policy) | |
 |[Persistent Uniform Resource Locators - PURL](https://archive.org/services/purl/)|redirection service| |
-|[Archival Resource Key](https://n2t.net/e/ark_ids.html)| identifier (URL_TO_INSERT_TERM_1030 https://fairsharing.org/search?recordType=identifier_schema)  minting service; identifier (URL_TO_INSERT_TERM_1031 https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
-|[Handle system](http://www.rfc-editor.org/rfc/rfc3650.txt)|identifier minting service; identifier (URL_TO_INSERT_TERM_1032 https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
-|[DOI](https://doi.org/)| identifier (URL_TO_INSERT_TERM_1033 https://fairsharing.org/search?recordType=identifier_schema)  minting service| based on Handle (URL_TO_INSERT_RECORD_1034 https://fairsharing.org/FAIRsharing.0b7e54)  system |
+|[Archival Resource Key](https://n2t.net/e/ark_ids.html)| identifier (URL_TO_INSERT_TERM_774 https://fairsharing.org/search?recordType=identifier_schema)  minting service; identifier (URL_TO_INSERT_TERM_775 https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
+|[Handle system](http://www.rfc-editor.org/rfc/rfc3650.txt)|identifier minting service; identifier (URL_TO_INSERT_TERM_776 https://fairsharing.org/search?recordType=identifier_schema)  resolution service| |
+|[DOI](https://doi.org/)| identifier (URL_TO_INSERT_TERM_777 https://fairsharing.org/search?recordType=identifier_schema)  minting service| based on Handle (URL_TO_INSERT_RECORD-NAME_778 https://fairsharing.org/FAIRsharing.0b7e54)  system |
 |[identifiers.org](https://identifiers.org/)|identifier resolution service||
 |[EZID resolution service](https://ezid.cdlib.org/)|identifier resolution service||
 |[name2things rsolution service](http://n2t.net/)|identifier resolution service||
 |[FAIREvaluator](https://W3id.org/AmIFAIR)|FAIR assessment||
-|[FAIRShake](https://fairshake.cloud/)| FAIR (URL_TO_INSERT_RECORD_1035 https://fairsharing.org/FAIRsharing.WWI10U)  assessment||
-|[RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)| model (URL_TO_INSERT_TERM_1036 https://fairsharing.org/search?recordType=model_and_format)  | |
+|[FAIRShake](https://fairshake.cloud/)| FAIR (URL_TO_INSERT_RECORD-ABBREV_779 https://fairsharing.org/FAIRsharing.WWI10U)  assessment||
+|[RDF/Linked Data](https://www.w3.org/standards/semanticweb/data)| model (URL_TO_INSERT_TERM_780 https://fairsharing.org/search?recordType=model_and_format)  | |
 
 
 
@@ -49,14 +49,14 @@
 
 ## Objectives
 
-- Perform an automatic assessment of a dataset against the FAIR (URL_TO_INSERT_RECORD_1038 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD_1037 https://fairsharing.org/FAIRsharing.WWI10U)  {footcite}`pmid26978244` expressed as nanopublications using the [FAIREvaluator](https://w3id.org/AmIFAIR) {footcite}`pmid31541130`.
-- Obtain human and machine-readable reports highlighting strengths and weaknesses with respect to FAIR (URL_TO_INSERT_RECORD_1039 https://fairsharing.org/FAIRsharing.WWI10U) .
+- Perform an automatic assessment of a dataset against the FAIR (URL_TO_INSERT_RECORD-ABBREV_782 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_781 https://fairsharing.org/FAIRsharing.WWI10U)  {footcite}`pmid26978244` expressed as nanopublications using the [FAIREvaluator](https://w3id.org/AmIFAIR) {footcite}`pmid31541130`.
+- Obtain human and machine-readable reports highlighting strengths and weaknesses with respect to FAIR (URL_TO_INSERT_RECORD-ABBREV_783 https://fairsharing.org/FAIRsharing.WWI10U) .
 
 ## Step by Step Process
 
 ### Loading FAIREvaluator web application 
      
-Navigate the FAIR (URL_TO_INSERT_RECORD_1040 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator tool, which can be accessed via the following 2 addresses:
+Navigate the FAIREvaluator tool, which can be accessed via the following 2 addresses:
 
 - [https://w3id.org/AmIFAIR](https://w3id.org/AmIFAIR)
 
@@ -69,8 +69,8 @@ Navigate the FAIR (URL_TO_INSERT_RECORD_1040 https://fairsharing.org/FAIRsharing
 ```{figure} ./assets/fair-eval-img1.png
 ---
 width: 800px
-name: the FAIR (URL_TO_INSERT_RECORD_1041 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator Home page
-alt: the FAIR (URL_TO_INSERT_RECORD_1042 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator Home page
+name: the FAIREvaluator Home page
+alt: the FAIREvaluator Home page
 ---
 the [FAIREvaluator](https://w3id.org/AmIFAIR) Home page
 ```
@@ -80,8 +80,8 @@ the [FAIREvaluator](https://w3id.org/AmIFAIR) Home page
 
 ### Understanding the FAIR indicators
 
-In order the run the FAIR (URL_TO_INSERT_RECORD_1044 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator, it is important to understand to notion of FAIR (URL_TO_INSERT_RECORD_1045 https://fairsharing.org/FAIRsharing.WWI10U)  indicators (formerly referred to as FAIR (URL_TO_INSERT_RECORD_1046 https://fairsharing.org/FAIRsharing.WWI10U)  metric (URL_TO_INSERT_TERM_1043 https://fairsharing.org/search?recordType=metric) s).
-One may browse the list of currently community defined indicators from the `Collection (URL_TO_INSERT_TERM_1047 https://fairsharing.org/search?recordType=collection) s` page 
+In order the run the FAIREvaluator, it is important to understand to notion of FAIR (URL_TO_INSERT_RECORD-ABBREV_785 https://fairsharing.org/FAIRsharing.WWI10U)  indicators (formerly referred to as FAIR (URL_TO_INSERT_RECORD-ABBREV_786 https://fairsharing.org/FAIRsharing.WWI10U)  metric (URL_TO_INSERT_TERM_784 https://fairsharing.org/search?recordType=metric) s).
+One may browse the list of currently community defined indicators from the `Collection (URL_TO_INSERT_TERM_787 https://fairsharing.org/search?recordType=collection) s` page 
 
 <!-- ![Select a 'FAIR Maturity Indicator - Collections'](./assets/fair-eval-img2.png)  -->
 
@@ -90,21 +90,21 @@ One may browse the list of currently community defined indicators from the `Coll
 ```{figure} ./assets/fair-eval-img2.png
 ---
 width: 800px
-name: Select a 'FAIR (URL_TO_INSERT_RECORD_1049 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_1048 https://fairsharing.org/search?recordType=collection) s'
-alt: Select a 'FAIR (URL_TO_INSERT_RECORD_1051 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_1050 https://fairsharing.org/search?recordType=collection) s'
+name: Select a 'FAIR (URL_TO_INSERT_RECORD-ABBREV_789 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_788 https://fairsharing.org/search?recordType=collection) s'
+alt: Select a 'FAIR (URL_TO_INSERT_RECORD-ABBREV_791 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_790 https://fairsharing.org/search?recordType=collection) s'
 ---
-Select a 'FAIR (URL_TO_INSERT_RECORD_1053 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_1052 https://fairsharing.org/search?recordType=collection) s'
+Select a 'FAIR (URL_TO_INSERT_RECORD-ABBREV_793 https://fairsharing.org/FAIRsharing.WWI10U)  Maturity Indicator - Collection (URL_TO_INSERT_TERM_792 https://fairsharing.org/search?recordType=collection) s'
 ```
 ````    
 
 ### Preparing the input information
 
-To run an evaluation, the FAIR (URL_TO_INSERT_RECORD_1054 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator needs to following 5 inputs from users:
+To run an evaluation, the FAIREvaluator needs to following 5 inputs from users:
 
-1. a collection (URL_TO_INSERT_TERM_1055 https://fairsharing.org/search?recordType=collection)  of FAIR (URL_TO_INSERT_RECORD_1056 https://fairsharing.org/FAIRsharing.WWI10U)  indicators, selected from the list described above.
-2. a globally unique, persistent, resolvable identifier (URL_TO_INSERT_TERM_1057 https://fairsharing.org/search?recordType=identifier_schema)  for the resource to be evaluated.
-3. a title for the evaluation. Enforce a naming convention to make future search (URL_TO_INSERT_RECORD_1058 https://fairsharing.org/FAIRsharing.52b22c) es easier as these evaluations are saved.
-4. a person identifier (URL_TO_INSERT_TERM_1059 https://fairsharing.org/search?recordType=identifier_schema)  in the form of an ORCID (URL_TO_INSERT_RECORD_1060 https://fairsharing.org/FAIRsharing.nx58jg) .
+1. a collection (URL_TO_INSERT_TERM_794 https://fairsharing.org/search?recordType=collection)  of FAIR (URL_TO_INSERT_RECORD-ABBREV_795 https://fairsharing.org/FAIRsharing.WWI10U)  indicators, selected from the list described above.
+2. a globally unique, persistent, resolvable identifier (URL_TO_INSERT_TERM_796 https://fairsharing.org/search?recordType=identifier_schema)  for the resource to be evaluated.
+3. a title for the evaluation. Enforce a naming convention to make future searches easier as these evaluations are saved.
+4. a person identifier (URL_TO_INSERT_TERM_797 https://fairsharing.org/search?recordType=identifier_schema)  in the form of an ORCID (URL_TO_INSERT_RECORD-ABBREV_798 https://fairsharing.org/FAIRsharing.nx58jg) .
 
 <!-- ![Running the FAIREvaluator - part 1: setting the input](./assets/fair-eval-img4.png) -->
 
@@ -113,10 +113,10 @@ To run an evaluation, the FAIR (URL_TO_INSERT_RECORD_1054 https://fairsharing.or
 ```{figure} ./assets/fair-eval-img4.png
 ---
 width: 800px
-name: Running the FAIR (URL_TO_INSERT_RECORD_1061 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 1 - setting the input
-alt: Running the FAIR (URL_TO_INSERT_RECORD_1062 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 1 - setting the input
+name: Running the FAIREvaluator - part 1 - setting the input
+alt: Running the FAIREvaluator - part 1 - setting the input
 ---
-Running the FAIR (URL_TO_INSERT_RECORD_1063 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 1: setting the input
+Running the FAIREvaluator - part 1: setting the input
 ```
 ````
 
@@ -132,17 +132,17 @@ Hit the 'Run Evaluation' button from 'https://fairsharing.github.io/FAIR-Evaluat
 ```{figure} ./assets/fair-eval-img5.png
 ---
 width: 800px
-name: Running the FAIR (URL_TO_INSERT_RECORD_1064 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 2 - execution
-alt: Running the FAIR (URL_TO_INSERT_RECORD_1065 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 2 - execution
+name: Running the FAIREvaluator - part 2 - execution
+alt: Running the FAIREvaluator - part 2 - execution
 ---
-Running the FAIR (URL_TO_INSERT_RECORD_1066 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator - part 2: execution
+Running the FAIREvaluator - part 2: execution
 ```
 ````
 
      
 ### Analysing the FAIREvaluator report
 
-Following execution of the FAIR (URL_TO_INSERT_RECORD_1067 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator, a detail report is generated.
+Following execution of the FAIREvaluator, a detail report is generated.
 
 <!-- ![FAIREvaluator report - overall report ](./assets/fair-eval-img6.png) -->
 
@@ -151,10 +151,10 @@ Following execution of the FAIR (URL_TO_INSERT_RECORD_1067 https://fairsharing.o
 ```{figure} ./assets/fair-eval-img6.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD_1068 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator report - overall report
-alt: FAIR (URL_TO_INSERT_RECORD_1069 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator report - overall report
+name: FAIREvaluator report - overall report
+alt: FAIREvaluator report - overall report
 ---
-FAIR (URL_TO_INSERT_RECORD_1070 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator report - overall report
+FAIREvaluator report - overall report
 ```
 ````
 
@@ -167,20 +167,20 @@ Time to dig into the details and figure out the reasons why some indicators are 
 ```{figure} ./assets/fair-eval-img7.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD_1071 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator error report 
-alt: FAIR (URL_TO_INSERT_RECORD_1072 https://fairsharing.org/FAIRsharing.WWI10U) Evaluator error report
+name: FAIREvaluator error report 
+alt: FAIREvaluator error report
 ---
-apparently a problem with identifier (URL_TO_INSERT_TERM_1073 https://fairsharing.org/search?recordType=identifier_schema)  persistence if using DOI (URL_TO_INSERT_RECORD_1074 https://fairsharing.org/FAIRsharing.hFLKCn) , which are URN rather than URL (URL_TO_INSERT_RECORD_1075 https://fairsharing.org/FAIRsharing.9d38e2)  *sensu stricto*
+apparently a problem with identifier (URL_TO_INSERT_TERM_799 https://fairsharing.org/search?recordType=identifier_schema)  persistence if using DOI (URL_TO_INSERT_RECORD-ABBREV_800 https://fairsharing.org/FAIRsharing.hFLKCn) , which are URN rather than URL (URL_TO_INSERT_RECORD-ABBREV_801 https://fairsharing.org/FAIRsharing.9d38e2)  *sensu stricto*
 ```
 ````
 
 ## Conclusion
 
-Using software tools to assess FAIR (URL_TO_INSERT_RECORD_1076 https://fairsharing.org/FAIRsharing.WWI10U)  maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
+Using software tools to assess FAIR (URL_TO_INSERT_RECORD-ABBREV_802 https://fairsharing.org/FAIRsharing.WWI10U)  maturity constitutes an essential activity to ensure processes and capabilities actually deliver and claims can be checked.
 Furthermore, only automation is able to cope with the scale and volumes of assets to evaluate.
-The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR (URL_TO_INSERT_RECORD_1077 https://fairsharing.org/FAIRsharing.WWI10U)  indicators themselves).
+The software-based evaluations are repeatable, reproducible and free of bias (other than those that may be related to definitions of the FAIR (URL_TO_INSERT_RECORD-ABBREV_803 https://fairsharing.org/FAIRsharing.WWI10U)  indicators themselves).
 These are also more demanding in terms of technical implementation and knowledge.
-Services such as the FAIR (URL_TO_INSERT_RECORD_1078 https://fairsharing.org/FAIRsharing.WWI10U) evaluator are essential to gauge improvements of data management services and for helping developers build FAIR (URL_TO_INSERT_RECORD_1079 https://fairsharing.org/FAIRsharing.WWI10U)  services and data.
+Services such as the FAIRevaluator are essential to gauge improvements of data management services and for helping developers build FAIR (URL_TO_INSERT_RECORD-ABBREV_804 https://fairsharing.org/FAIRsharing.WWI10U)  services and data.
 
 
 

@@ -41,34 +41,34 @@ The following steps are intended as a starting point to guide the generation of 
 
 ### Step 1: Define competency questions
 - What are the questions you would like to address with the template?
-Without a set of competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model (URL_TO_INSERT_TERM_4296 https://fairsharing.org/search?recordType=model_and_format)  opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.
+Without a set of competency questions, important variables may easily be forgotten. It is equally possible to collect too much metadata, making the resulting metadata model (URL_TO_INSERT_TERM_3431 https://fairsharing.org/search?recordType=model_and_format)  opaque and difficult to navigate. Competency questions serve as a guide to identify the most relevant experimental factors.
 
 ### Step 2: Define a Minimal Set Of Metadata (MSOM) according to these questions
 - Compile metadata from different sources
 - Generate a consolidated view on metadata by merging attributes as far as possible
 - Differentiate metadata available for most of the studies from metadata occurring rarely (sparse matrix)
 - Identify gaps in the metadata available for most of the studies comprising data that is considered important but has not been captured in the past
-- Define a MSO (URL_TO_INSERT_RECORD_4297 https://fairsharing.org/FAIRsharing.8pbhs0) M to be captured in the future from the metadata that is available for most of the studies and the metadata considered to be important
-- Identify available community standard (URL_TO_INSERT_TERM_4298 https://fairsharing.org/search?fairsharingRegistry=Standard) s regarding minimal sets of metadata
-- Add metadata attributes from those community standard (URL_TO_INSERT_TERM_4299 https://fairsharing.org/search?fairsharingRegistry=Standard) s to the MSO (URL_TO_INSERT_RECORD_4300 https://fairsharing.org/FAIRsharing.8pbhs0) M, if they are not yet included
-- Assign cardinality to the MSO (URL_TO_INSERT_RECORD_4301 https://fairsharing.org/FAIRsharing.8pbhs0) M (identify mandatory metadata and how many times the attributes may be reported. Some metadata might not be mandatory but are still important to capture, if available)
-- Identify appropriate ontologies (URL_TO_INSERT_TERM_4303 https://fairsharing.org/search?recordType=terminology_artefact)  representing your data and establish an application ontology (URL_TO_INSERT_TERM_4302 https://fairsharing.org/search?recordType=terminology_artefact)  (see recipe 4 of UC3)
-- Assign, as far as possible, ontologies (URL_TO_INSERT_TERM_4304 https://fairsharing.org/search?recordType=terminology_artefact)  to the MSO (URL_TO_INSERT_RECORD_4305 https://fairsharing.org/FAIRsharing.8pbhs0) M and the sparse matrix 
+- Define a MSOM to be captured in the future from the metadata that is available for most of the studies and the metadata considered to be important
+- Identify available community standard (URL_TO_INSERT_TERM_3432 https://fairsharing.org/search?fairsharingRegistry=Standard) s regarding minimal sets of metadata
+- Add metadata attributes from those community standard (URL_TO_INSERT_TERM_3433 https://fairsharing.org/search?fairsharingRegistry=Standard) s to the MSOM, if they are not yet included
+- Assign cardinality to the MSOM (identify mandatory metadata and how many times the attributes may be reported. Some metadata might not be mandatory but are still important to capture, if available)
+- Identify appropriate ontologies (URL_TO_INSERT_TERM_3435 https://fairsharing.org/search?recordType=terminology_artefact)  representing your data and establish an application ontology (URL_TO_INSERT_TERM_3434 https://fairsharing.org/search?recordType=terminology_artefact)  (see recipe 4 of UC3)
+- Assign, as far as possible, ontologies (URL_TO_INSERT_TERM_3436 https://fairsharing.org/search?recordType=terminology_artefact)  to the MSOM and the sparse matrix 
 
 ### Step 3: Introduce semantics into the template
-- Identify most important objects to be represented in the model (URL_TO_INSERT_TERM_4306 https://fairsharing.org/search?recordType=model_and_format)  (e.g. study, sample, treatment, result, etc.)
+- Identify most important objects to be represented in the model (URL_TO_INSERT_TERM_3437 https://fairsharing.org/search?recordType=model_and_format)  (e.g. study, sample, treatment, result, etc.)
 - Make sure to have an appropriate naming strategy for the objects (e.g. an NGSstudy is an OMICSstudy is a Study; do not call an NGSstudy a Study; make sure the granularity fits your purposes)
-- Assign MSO (URL_TO_INSERT_RECORD_4307 https://fairsharing.org/FAIRsharing.8pbhs0) M and sparse matrix attributes to the respective objects
+- Assign MSOM and sparse matrix attributes to the respective objects
 - Identify and introduce relationships among the identified objects (e.g. “an NGSstudy contains samples”, “a result is derived from a sample”) 
 - Identify dependencies to data not represented as objects at this point in time, but, e.g. as termlists
-- Make sure that your model (URL_TO_INSERT_TERM_4308 https://fairsharing.org/search?recordType=model_and_format)  can be expanded subsequently to represent those data as objects, as well
-- Integrate the sparse matrix of metadata not contained in the MSO (URL_TO_INSERT_RECORD_4310 https://fairsharing.org/FAIRsharing.8pbhs0) M in the model (URL_TO_INSERT_TERM_4309 https://fairsharing.org/search?recordType=model_and_format) 
+- Make sure that your model (URL_TO_INSERT_TERM_3438 https://fairsharing.org/search?recordType=model_and_format)  can be expanded subsequently to represent those data as objects, as well
+- Integrate the sparse matrix of metadata not contained in the MSOM in the model (URL_TO_INSERT_TERM_3439 https://fairsharing.org/search?recordType=model_and_format) 
 
 ### Step 4:  Reality check
-- Introduce measures allowing to identify errors in reported data according to your model (URL_TO_INSERT_TERM_4311 https://fairsharing.org/search?recordType=model_and_format) 
-- Expose your model (URL_TO_INSERT_TERM_4312 https://fairsharing.org/search?recordType=model_and_format)  to actual data delivered by independent colleagues and capture the errors and gaps that occurred
-- Identify errors and gaps that are related to the model (URL_TO_INSERT_TERM_4313 https://fairsharing.org/search?recordType=model_and_format)  and not occurring due to errors in the data
-- Adjust the model (URL_TO_INSERT_TERM_4314 https://fairsharing.org/search?recordType=model_and_format)  according to these errors and gaps
+- Introduce measures allowing to identify errors in reported data according to your model (URL_TO_INSERT_TERM_3440 https://fairsharing.org/search?recordType=model_and_format) 
+- Expose your model (URL_TO_INSERT_TERM_3441 https://fairsharing.org/search?recordType=model_and_format)  to actual data delivered by independent colleagues and capture the errors and gaps that occurred
+- Identify errors and gaps that are related to the model (URL_TO_INSERT_TERM_3442 https://fairsharing.org/search?recordType=model_and_format)  and not occurring due to errors in the data
+- Adjust the model (URL_TO_INSERT_TERM_3443 https://fairsharing.org/search?recordType=model_and_format)  according to these errors and gaps
 - Re-iterate the reality check until no more severe errors and gaps are occurring that are relevant for the previously defined competency questions
 
 

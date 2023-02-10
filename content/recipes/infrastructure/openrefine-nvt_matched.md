@@ -18,24 +18,24 @@
 
 ## Introduction
 
-FAIR (URL_TO_INSERT_RECORD_2619 https://fairsharing.org/FAIRsharing.WWI10U) ification is a multi-step process that can be performed via different workflows and at different levels of completeness.
+FAIRification is a multi-step process that can be performed via different workflows and at different levels of completeness.
 
-Here, we focus on “fully FAIR (URL_TO_INSERT_RECORD_2620 https://fairsharing.org/FAIRsharing.WWI10U) ifying” data “*a posteriori*”. 
+Here, we focus on “fully FAIRifying” data “*a posteriori*”. 
 
-That is to express the content of the informat (URL_TO_INSERT_TERM_2621 https://fairsharing.org/search?recordType=model_and_format) ion (entities, attributes, relations, values) via ontologies (URL_TO_INSERT_TERM_2622 https://fairsharing.org/search?recordType=terminology_artefact)  
-(when applicable) and, in particular, through URI (URL_TO_INSERT_RECORD_2623 https://fairsharing.org/FAIRsharing.d261e1) s.
+That is to express the content of the informat (URL_TO_INSERT_TERM_2015 https://fairsharing.org/search?recordType=model_and_format) ion (entities, attributes, relations, values) via ontologies (URL_TO_INSERT_TERM_2016 https://fairsharing.org/search?recordType=terminology_artefact)  
+(when applicable) and, in particular, through URIs.
 
-The processed informat (URL_TO_INSERT_TERM_2624 https://fairsharing.org/search?recordType=model_and_format) ion results in an RDF (URL_TO_INSERT_RECORD_2625 https://fairsharing.org/FAIRsharing.p77ph9) /Linked Data graph, that can be seen as a specific implementation
+The processed informat (URL_TO_INSERT_TERM_2017 https://fairsharing.org/search?recordType=model_and_format) ion results in an RDF (URL_TO_INSERT_RECORD-ABBREV_2018 https://fairsharing.org/FAIRsharing.p77ph9) /Linked Data graph, that can be seen as a specific implementation
 of a Knowledge Graph (KG in short).
-By virtue of using coherent URI (URL_TO_INSERT_RECORD_2626 https://fairsharing.org/FAIRsharing.d261e1) s, different datasets are automatically (logically) merged when represented as a graph.
+By virtue of using coherent URIs, different datasets are automatically (logically) merged when represented as a graph.
 
 For simplicity, we focus here on "input" data that is represented as tables.
 
-Two fundamental steps are needed to perform such transformat (URL_TO_INSERT_TERM_2627 https://fairsharing.org/search?recordType=model_and_format) ion:
+Two fundamental steps are needed to perform such transformat (URL_TO_INSERT_TERM_2019 https://fairsharing.org/search?recordType=model_and_format) ion:
 
 * **Reconcile entities**. 
 
-That is assigning the same URI (URL_TO_INSERT_RECORD_2628 https://fairsharing.org/FAIRsharing.d261e1) s to the same entities, even when these are referred to by different names.
+That is assigning the same URIs to the same entities, even when these are referred to by different names.
 
 ```{note}
 In practice, we could have different but related URIs.
@@ -43,30 +43,30 @@ It remains that in this step, we should go beyond names (labels) and use **coher
 to the entities names refer to.
 ```
 
-* **Map (URL_TO_INSERT_RECORD_2630 https://fairsharing.org/FAIRsharing.53edcc)  the structure of the data to an ontology (URL_TO_INSERT_TERM_2629 https://fairsharing.org/search?recordType=terminology_artefact) **.
+* **Map (URL_TO_INSERT_RECORD-NAME_2021 https://fairsharing.org/FAIRsharing.53edcc)  the structure of the data to an ontology (URL_TO_INSERT_TERM_2020 https://fairsharing.org/search?recordType=terminology_artefact) **.
 
-This is akin to reconciling properties (referred by a name, e.g.: a column name) to relations, attributes, and classes in an ontology (URL_TO_INSERT_TERM_2631 https://fairsharing.org/search?recordType=terminology_artefact) .
-Except for simple cases, such map (URL_TO_INSERT_RECORD_2633 https://fairsharing.org/FAIRsharing.53edcc) pings go beyond simple names to URI (URL_TO_INSERT_RECORD_2632 https://fairsharing.org/FAIRsharing.d261e1)  relations and generally include **small graph patterns**.
+This is akin to reconciling properties (referred by a name, e.g.: a column name) to relations, attributes, and classes in an ontology (URL_TO_INSERT_TERM_2022 https://fairsharing.org/search?recordType=terminology_artefact) .
+Except for simple cases, such mappings go beyond simple names to URI (URL_TO_INSERT_RECORD-ABBREV_2023 https://fairsharing.org/FAIRsharing.d261e1)  relations and generally include **small graph patterns**.
 
 ```{note}
 As for many data cleansing exercises, we may need extra steps that are not specific to the transformation to a KG, 
 but often necessary. For instance, split an "address" in "Country", "Street", "City").
 ```
 
-We mentioned that we assume here that source data is represented as one or more CSV (URL_TO_INSERT_RECORD_2634 https://fairsharing.org/FAIRsharing.1943d4)  files.
+We mentioned that we assume here that source data is represented as one or more CSV (URL_TO_INSERT_RECORD-ABBREV_2024 https://fairsharing.org/FAIRsharing.1943d4)  files.
 There are some considerations to be taken if files are in multiple tables (as extra attention can be paid to "linking keys") or
-in complex data structures such as XML (URL_TO_INSERT_RECORD_2635 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD_2636 https://fairsharing.org/FAIRsharing.5bbab9)  etc.
-Tabular data covers a prominent use case for data FAIR (URL_TO_INSERT_RECORD_2637 https://fairsharing.org/FAIRsharing.WWI10U) ification and is a building block for complex conversions.
+in complex data structures such as XML (URL_TO_INSERT_RECORD-ABBREV_2026 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_2025 https://fairsharing.org/FAIRsharing.5bbab9)  etc.
+Tabular data covers a prominent use case for data FAIRification and is a building block for complex conversions.
 
-We focus here on data (rather than metadata), though the distinction between the two vanishes when informat (URL_TO_INSERT_TERM_2638 https://fairsharing.org/search?recordType=model_and_format) ion is 
+We focus here on data (rather than metadata), though the distinction between the two vanishes when informat (URL_TO_INSERT_TERM_2027 https://fairsharing.org/search?recordType=model_and_format) ion is 
 expressed as a KG.
 
 
 ### Reconciliation
 
-An essential element of FAIR (URL_TO_INSERT_RECORD_2640 https://fairsharing.org/FAIRsharing.WWI10U) ification is **the ability to identify entities via ontology (URL_TO_INSERT_TERM_2639 https://fairsharing.org/search?recordType=terminology_artefact)  terms**.
+An essential element of FAIRification is **the ability to identify entities via ontology (URL_TO_INSERT_TERM_2028 https://fairsharing.org/search?recordType=terminology_artefact)  terms**.
 In general by "reconciliation", we mean the **capability to identify an entity (via an ID from a knowledge base) given one 
-or more references** and eventually additional informat (URL_TO_INSERT_TERM_2641 https://fairsharing.org/search?recordType=model_and_format) ion.
+or more references** and eventually additional informat (URL_TO_INSERT_TERM_2029 https://fairsharing.org/search?recordType=model_and_format) ion.
 
 
 #### Ingredients for reconciliation
@@ -85,8 +85,8 @@ attributes or context for the name.
 OpenRefine is a Desktop tool to cleanse data that proposes a simple workflow for data reconciliation {footcite}`openrefine`. 
 In particular, users can load data as a table, and for a column, they can call a “reconciliation service”:
 this will suggest what are the types of entity in a column (e.g.: drugs, treatments) and the user can then ask to
-reconcile to entities of one or more of these types. OpenRefine will then present candidates URI (URL_TO_INSERT_RECORD_2642 https://fairsharing.org/FAIRsharing.d261e1) s, together with a preview 
-(when URI (URL_TO_INSERT_RECORD_2643 https://fairsharing.org/FAIRsharing.d261e1) s are resolvable) and confidence so that the user can control the proper reconciliation.
+reconcile to entities of one or more of these types. OpenRefine will then present candidates URIs, together with a preview 
+(when URIs are resolvable) and confidence so that the user can control the proper reconciliation.
 
 
 ````{dropdown}
@@ -106,7 +106,7 @@ OpenRefine: [https://docs.openrefine.org/manual/reconciling](https://docs.openre
 In practice, OpenRefine presents an interface for QA and curation on a set of reconciliation proposals. 
 Such proposals are provided by reconciliation services: systems that implement a set of OpenRefine compatible APIs.
 
-There are publicly available reconciliation services, but it is also possible to implement *ad-hoc* services (e.g.: on top of an MDM (URL_TO_INSERT_RECORD_2644 https://fairsharing.org/FAIRsharing.wnk2eq)  system).
+There are publicly available reconciliation services, but it is also possible to implement *ad-hoc* services (e.g.: on top of an MDM (URL_TO_INSERT_RECORD-ABBREV_2030 https://fairsharing.org/FAIRsharing.wnk2eq)  system).
 Via a plugin called **grefine-rdf-extension** [https://github.com/fadmaa/grefine-rdf-extension](https://github.com/fadmaa/grefine-rdf-extension) 
 
 It is also possible to use a generic triple-store as a reconciliation service.
@@ -122,9 +122,9 @@ The triple-store should also be accessible on the network where OpenRefine is ru
 
 #### Reconciliation toward wikidata
 
-One of the best developed (URL_TO_INSERT_RECORD_2646 https://fairsharing.org/FAIRsharing.31385c)  systems supporting reconciliation APIs is Wikidata (URL_TO_INSERT_RECORD_2645 https://fairsharing.org/FAIRsharing.6s749p)  (https://wikidata.reconci.link).
-By specifying the URI (URL_TO_INSERT_RECORD_2647 https://fairsharing.org/FAIRsharing.d261e1) : [https://wikidata.reconci.link/en/api](https://wikidata.reconci.link/en/api) as a reconciliation
-service, OpenRefine will help users to normalise entity references to Wikidata (URL_TO_INSERT_RECORD_2649 https://fairsharing.org/FAIRsharing.6s749p)  URI (URL_TO_INSERT_RECORD_2648 https://fairsharing.org/FAIRsharing.d261e1) s.
+One of the best developed systems supporting reconciliation APIs is Wikidata (URL_TO_INSERT_RECORD-NAME_2031 https://fairsharing.org/FAIRsharing.6s749p)  (https://wikidata.reconci.link).
+By specifying the URI (URL_TO_INSERT_RECORD-ABBREV_2032 https://fairsharing.org/FAIRsharing.d261e1) : [https://wikidata.reconci.link/en/api](https://wikidata.reconci.link/en/api) as a reconciliation
+service, OpenRefine will help users to normalise entity references to Wikidata (URL_TO_INSERT_RECORD-NAME_2033 https://fairsharing.org/FAIRsharing.6s749p)  URIs.
 
 
 ````{dropdown}
@@ -133,9 +133,9 @@ service, OpenRefine will help users to normalise entity references to Wikidata (
 ---
 width: 800px
 name: openrefine-wiki.reconci
-alt: Wikidata (URL_TO_INSERT_RECORD_2650 https://fairsharing.org/FAIRsharing.6s749p)  Reconcile for OpenRefine
+alt: Wikidata (URL_TO_INSERT_RECORD-NAME_2034 https://fairsharing.org/FAIRsharing.6s749p)  Reconcile for OpenRefine
 ---
-Wikidata (URL_TO_INSERT_RECORD_2651 https://fairsharing.org/FAIRsharing.6s749p)  Reconcile for OpenRefine
+Wikidata (URL_TO_INSERT_RECORD-NAME_2035 https://fairsharing.org/FAIRsharing.6s749p)  Reconcile for OpenRefine
 ```
 ````
 
@@ -158,7 +158,7 @@ The reconciliation is column specific.
 
 ### Reconciliation toward private knowledge bases
 
-OpenRefine can also be used for internal data (e.g.: MDM (URL_TO_INSERT_RECORD_2652 https://fairsharing.org/FAIRsharing.wnk2eq)  systems), by providing “internal” reconciliation services.
+OpenRefine can also be used for internal data (e.g.: MDM (URL_TO_INSERT_RECORD-ABBREV_2036 https://fairsharing.org/FAIRsharing.wnk2eq)  systems), by providing “internal” reconciliation services.
 
 This can be done in several ways:
 
@@ -166,9 +166,9 @@ This can be done in several ways:
 #### Wikidata as a local instance
 
 One way of providing reconciliation services for OpenRefine on internal data is to leverage the Wikibase system 
-(the system at the basis of Wikidata (URL_TO_INSERT_RECORD_2653 https://fairsharing.org/FAIRsharing.6s749p) ). 
+(the system at the basis of Wikidata (URL_TO_INSERT_RECORD-NAME_2037 https://fairsharing.org/FAIRsharing.6s749p) ). 
 
-We could implement a local “empty” version of Wikidata (URL_TO_INSERT_RECORD_2655 https://fairsharing.org/FAIRsharing.6s749p) , and populate it with internal data (represented using the Wikidata (URL_TO_INSERT_RECORD_2656 https://fairsharing.org/FAIRsharing.6s749p)  format (URL_TO_INSERT_TERM_2654 https://fairsharing.org/search?recordType=model_and_format) ).
+We could implement a local “empty” version of Wikidata (URL_TO_INSERT_RECORD-NAME_2039 https://fairsharing.org/FAIRsharing.6s749p) , and populate it with internal data (represented using the Wikidata (URL_TO_INSERT_RECORD-NAME_2040 https://fairsharing.org/FAIRsharing.6s749p)  format (URL_TO_INSERT_TERM_2038 https://fairsharing.org/search?recordType=model_and_format) ).
 
 Dedicated deployment scripts can help in installing and administering an empty Wikibase system. 
 These scripts are available from [https://github.com/FAIRplus/WikiDraftWorks](https://github.com/FAIRplus/WikiDraftWorks)
@@ -189,12 +189,12 @@ WikiDraftWorks
 
 #### Reconciling toward a triplestore
 
-When reference data and ontology (URL_TO_INSERT_TERM_2657 https://fairsharing.org/search?recordType=terminology_artefact)  exist in a triplestore, a simpler way to support OpenRefine is via 
+When reference data and ontology (URL_TO_INSERT_TERM_2041 https://fairsharing.org/search?recordType=terminology_artefact)  exist in a triplestore, a simpler way to support OpenRefine is via 
 its [grefine RDF extension plugin](https://github.com/fadmaa/grefine-rdf-extension). 
 This allows to specify any triplestore as a reconciliation service, provided it contains suitable content
 (e.g.: instances with labels and their categorisation in classes).
-This extension graphical user interface (GUI) for exporting data of Google Refine project (URL_TO_INSERT_TERM_2658 https://fairsharing.org/search?recordType=project) s in RDF (URL_TO_INSERT_RECORD_2660 https://fairsharing.org/FAIRsharing.p77ph9)  format (URL_TO_INSERT_TERM_2659 https://fairsharing.org/search?recordType=model_and_format) . 
-The export is based on map (URL_TO_INSERT_RECORD_2661 https://fairsharing.org/FAIRsharing.53edcc) ping the data to a template graph using the GUI.
+This extension graphical user interface (GUI) for exporting data of Google Refine project (URL_TO_INSERT_TERM_2042 https://fairsharing.org/search?recordType=project) s in RDF (URL_TO_INSERT_RECORD-ABBREV_2044 https://fairsharing.org/FAIRsharing.p77ph9)  format (URL_TO_INSERT_TERM_2043 https://fairsharing.org/search?recordType=model_and_format) . 
+The export is based on mapping the data to a template graph using the GUI.
 
 The [RDF transform extension](https://github.com/AtesComp/rdf-transform) now replaces 'grefine' 
 
@@ -208,7 +208,7 @@ as the plugin works over SPARQL, it has fewer capabilities in terms of ranking o
 
 One limitation of the above approach is that OpenRefine does not support authentication.
 Any services or triple stores it reconciles to need to be accessible on the same network where the OpenRefine client is working. 
-In an enterprise setting, this is a serious limitation, as data is protected by access policies (URL_TO_INSERT_TERM_2662 https://fairsharing.org/search?fairsharingRegistry=Policy) .
+In an enterprise setting, this is a serious limitation, as data is protected by access policies (URL_TO_INSERT_TERM_2045 https://fairsharing.org/search?fairsharingRegistry=Policy) .
 
 A possible workaround is an OpenRefine extension that implements authentication (tested with AllegroGraph based reconciliation services).
 
@@ -217,7 +217,7 @@ A possible workaround is an OpenRefine extension that implements authentication 
 
 #### Implementing reconciliation APIs
 
-Finally, it is possible to implement reconciliation APIs on top of proprietary systems (e.g.: MDM (URL_TO_INSERT_RECORD_2663 https://fairsharing.org/FAIRsharing.wnk2eq) ):
+Finally, it is possible to implement reconciliation APIs on top of proprietary systems (e.g.: MDM (URL_TO_INSERT_RECORD-ABBREV_2046 https://fairsharing.org/FAIRsharing.wnk2eq) ):
 [https://reconciliation-api.github.io/specs/latest/](https://reconciliation-api.github.io/specs/latest/)
 
 In this case, more complex reconciliation logic can be implemented. 
@@ -287,7 +287,7 @@ We focus here only on some FAIRification related capabilities.
 
 #### Mapping the structure of data to an ontology {#mapping-the-structure-of-data-to-an-ontology}
 
-The other essential step when transforming a dataset to a KG is map (URL_TO_INSERT_RECORD_2664 https://fairsharing.org/FAIRsharing.53edcc) ping its structure to a graph. 
+The other essential step when transforming a dataset to a KG is mapping its structure to a graph. 
 Let’s introduce this notion via a very simple example.
 
 
@@ -318,9 +318,9 @@ After reconciliation, we could imagine this data to look like:
    </td>
   </tr>
   <tr>
-   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD_2665 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q937
+   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2047 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q937
    </td>
-   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD_2666 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q88665
+   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2048 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q88665
    </td>
   </tr>
 </table>
@@ -328,7 +328,7 @@ After reconciliation, we could imagine this data to look like:
 
 [PUT CORRECT URIs ABOVE]
 
-To express the above as a graph, we need to make the structure or this table explicit, referring to an ontology (URL_TO_INSERT_TERM_2667 https://fairsharing.org/search?recordType=terminology_artefact) , example, for people and relations.
+To express the above as a graph, we need to make the structure or this table explicit, referring to an ontology (URL_TO_INSERT_TERM_2049 https://fairsharing.org/search?recordType=terminology_artefact) , example, for people and relations.
 
 ```{admonition} Tip
 :class: tip
@@ -343,24 +343,24 @@ Important point to bear in mind when using Wikidata.
 
 ```
 
-Note that first we could map (URL_TO_INSERT_RECORD_2668 https://fairsharing.org/FAIRsharing.53edcc) :
+Note that first we could map (URL_TO_INSERT_RECORD-NAME_2050 https://fairsharing.org/FAIRsharing.53edcc) :
 
 
 <table>
   <tr>
-   <td>Person => <a href="http://www.wikidata.org (URL_TO_INSERT_RECORD_2669 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5">http://www.wikidata.org (URL_TO_INSERT_RECORD_2670 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5</a> (Human, the type of the entity in the column)
+   <td>Person => <a href="http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2051 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5">http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2052 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5</a> (Human, the type of the entity in the column)
    </td>
    <td>Father =>
 <p>
-<a href="http://www.wikidata.org (URL_TO_INSERT_RECORD_2671 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5">http://www.wikidata.org (URL_TO_INSERT_RECORD_2672 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5</a> (Human, the type of the entity in the column)
+<a href="http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2053 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5">http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2054 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q5</a> (Human, the type of the entity in the column)
 <p>
-=> <a href="http://www.wikidata.org (URL_TO_INSERT_RECORD_2673 https://fairsharing.org/FAIRsharing.6s749p) /entity/P22">http://www.wikidata.org (URL_TO_INSERT_RECORD_2674 https://fairsharing.org/FAIRsharing.6s749p) /entity/P22</a> (father, the relation to the other entity)
+=> <a href="http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2055 https://fairsharing.org/FAIRsharing.6s749p) /entity/P22">http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2056 https://fairsharing.org/FAIRsharing.6s749p) /entity/P22</a> (father, the relation to the other entity)
    </td>
   </tr>
   <tr>
-   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD_2675 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q937
+   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2057 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q937
    </td>
-   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD_2676 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q88665
+   <td>http://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_2058 https://fairsharing.org/FAIRsharing.6s749p) /entity/Q88665
    </td>
   </tr>
 </table>
@@ -397,7 +397,7 @@ Check documentation about the wikidata model to understand the various identifie
 
 #### Mapping in OpenRefine
 
-The RDF (URL_TO_INSERT_RECORD_2677 https://fairsharing.org/FAIRsharing.p77ph9)  plugin in OpenRefine allows to map (URL_TO_INSERT_RECORD_2678 https://fairsharing.org/FAIRsharing.53edcc)  a table in OpenRefine to a graph pattern where the content of other columns can be added.
+The RDF (URL_TO_INSERT_RECORD-ABBREV_2059 https://fairsharing.org/FAIRsharing.p77ph9)  plugin in OpenRefine allows to map (URL_TO_INSERT_RECORD-NAME_2060 https://fairsharing.org/FAIRsharing.53edcc)  a table in OpenRefine to a graph pattern where the content of other columns can be added.
 
 [BRIEF SCREENSHOT FROM THE WEB]
 
@@ -410,16 +410,16 @@ The RDF (URL_TO_INSERT_RECORD_2677 https://fairsharing.org/FAIRsharing.p77ph9)  
 ```{figure} ../../../images/rdf-align-openrefine.png
 ---
 width: 800px
-name: RDF (URL_TO_INSERT_RECORD_2679 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in OpenRefine
-alt: RDF (URL_TO_INSERT_RECORD_2680 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in OpenRefine
+name: RDF (URL_TO_INSERT_RECORD-ABBREV_2061 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in OpenRefine
+alt: RDF (URL_TO_INSERT_RECORD-ABBREV_2062 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in OpenRefine
 ---
-RDF schema alignment in OpenRefine
+RDF (URL_TO_INSERT_RECORD-ABBREV_2063 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in OpenRefine
 ```
 ````
 
 
 
-The system assists the users in defining how the table should look like in RDF (URL_TO_INSERT_RECORD_2681 https://fairsharing.org/FAIRsharing.p77ph9) , fundamentally providing a template editor.
+The system assists the users in defining how the table should look like in RDF (URL_TO_INSERT_RECORD-ABBREV_2064 https://fairsharing.org/FAIRsharing.p77ph9) , fundamentally providing a template editor.
 
 [MAYBE ADD RUN EXAMPLE FROM THE SIMPLE TABLE ABOVE HERE].
 
@@ -429,34 +429,34 @@ The system assists the users in defining how the table should look like in RDF (
 #### Mapping in Karma 
 
 Karma ([https://usc-isi-i2.github.io/karma/](https://usc-isi-i2.github.io/karma/)) is a Desktop tool specifically
-designed to map (URL_TO_INSERT_RECORD_2683 https://fairsharing.org/FAIRsharing.53edcc)  data to RDF (URL_TO_INSERT_RECORD_2682 https://fairsharing.org/FAIRsharing.p77ph9) . 
-It covers different input format (URL_TO_INSERT_TERM_2684 https://fairsharing.org/search?recordType=model_and_format) s (e.g.: JSON (URL_TO_INSERT_RECORD_2685 https://fairsharing.org/FAIRsharing.5bbab9)  and hierarch (URL_TO_INSERT_RECORD_2686 https://fairsharing.org/FAIRsharing.52b22c) ical content).
+designed to map (URL_TO_INSERT_RECORD-NAME_2066 https://fairsharing.org/FAIRsharing.53edcc)  data to RDF (URL_TO_INSERT_RECORD-ABBREV_2065 https://fairsharing.org/FAIRsharing.p77ph9) . 
+It covers different input format (URL_TO_INSERT_TERM_2067 https://fairsharing.org/search?recordType=model_and_format) s (e.g.: JSON (URL_TO_INSERT_RECORD-ABBREV_2068 https://fairsharing.org/FAIRsharing.5bbab9)  and hierarchical content).
 In terms of functionality, it is different from OpenRefine in some fundamental ways:
 
 
-* **Use of ontologies (URL_TO_INSERT_TERM_2687 https://fairsharing.org/search?recordType=terminology_artefact) **. When map (URL_TO_INSERT_RECORD_2690 https://fairsharing.org/FAIRsharing.53edcc) ping a dataset to RDF (URL_TO_INSERT_RECORD_2689 https://fairsharing.org/FAIRsharing.p77ph9) , one can create the required classes and properties URI (URL_TO_INSERT_RECORD_2688 https://fairsharing.org/FAIRsharing.d261e1) s “while doing the map (URL_TO_INSERT_RECORD_2691 https://fairsharing.org/FAIRsharing.53edcc) ping”.
-Karma requires the full ontology (URL_TO_INSERT_TERM_2692 https://fairsharing.org/search?recordType=terminology_artefact)  to map (URL_TO_INSERT_RECORD_2693 https://fairsharing.org/FAIRsharing.53edcc)  to to be present a-priori.
-* **Map (URL_TO_INSERT_RECORD_2695 https://fairsharing.org/FAIRsharing.53edcc) ping suggestions**. Thanks to knowing the target ontology (URL_TO_INSERT_TERM_2694 https://fairsharing.org/search?recordType=terminology_artefact) , Karma can learn from previous map (URL_TO_INSERT_RECORD_2696 https://fairsharing.org/FAIRsharing.53edcc) pings and provide increasingly accurate suggestions.
+* **Use of ontologies (URL_TO_INSERT_TERM_2069 https://fairsharing.org/search?recordType=terminology_artefact) **. When mapping a dataset to RDF (URL_TO_INSERT_RECORD-ABBREV_2070 https://fairsharing.org/FAIRsharing.p77ph9) , one can create the required classes and properties URIs “while doing the mapping”.
+Karma requires the full ontology (URL_TO_INSERT_TERM_2071 https://fairsharing.org/search?recordType=terminology_artefact)  to map (URL_TO_INSERT_RECORD-NAME_2072 https://fairsharing.org/FAIRsharing.53edcc)  to to be present a-priori.
+* **Mapping suggestions**. Thanks to knowing the target ontology (URL_TO_INSERT_TERM_2073 https://fairsharing.org/search?recordType=terminology_artefact) , Karma can learn from previous mappings and provide increasingly accurate suggestions.
 * **User interface**. Karma allows to paint the graph pattern over the table, while OpenRefine has a more crude text-based interface.
 * **Data reconciliation**. This is very limited in Karma (limited to three entity types only!).
-* **Generic data transformat (URL_TO_INSERT_TERM_2697 https://fairsharing.org/search?recordType=model_and_format) ion**. Both tools can apply simple data transformat (URL_TO_INSERT_TERM_2698 https://fairsharing.org/search?recordType=model_and_format) ions (e.g.: via javascript function).  
+* **Generic data transformat (URL_TO_INSERT_TERM_2074 https://fairsharing.org/search?recordType=model_and_format) ion**. Both tools can apply simple data transformat (URL_TO_INSERT_TERM_2075 https://fairsharing.org/search?recordType=model_and_format) ions (e.g.: via javascript function).  
 However, OpenRefine is far more complete in these functionalities.
 * **Batch processing**. Karma is an editor that saves a specification file that can then be invoked via the 
 web interface but also via command line and eventually in a high performance spark environment. 
-OpenRefine batch capabilities are very limited (In the latest version, OpenRefine is also implementing a spark arch (URL_TO_INSERT_RECORD_2699 https://fairsharing.org/FAIRsharing.52b22c) itecture, albeit locally on the Desktop machine).
-Karma expresses map (URL_TO_INSERT_RECORD_2700 https://fairsharing.org/FAIRsharing.53edcc) pings in the KARMA language, that is an extension of [R2RML](https://www.w3.org/TR/r2rml/).
+OpenRefine batch capabilities are very limited (In the latest version, OpenRefine is also implementing a spark architecture, albeit locally on the Desktop machine).
+Karma expresses mappings in the KARMA language, that is an extension of [R2RML](https://www.w3.org/TR/r2rml/).
 
-An example of a map (URL_TO_INSERT_RECORD_2701 https://fairsharing.org/FAIRsharing.53edcc) ping session in Karma:
+An example of a mapping session in Karma:
 
 ````{dropdown}
 :open:
 ```{figure} ../../../images/rdf-align-karma.png
 ---
 width: 800px
-name: RDF (URL_TO_INSERT_RECORD_2702 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in Karma
-alt: RDF (URL_TO_INSERT_RECORD_2703 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in Karma
+name: RDF (URL_TO_INSERT_RECORD-ABBREV_2076 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in Karma
+alt: RDF (URL_TO_INSERT_RECORD-ABBREV_2077 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in Karma
 ---
-RDF schema alignment in Karma
+RDF (URL_TO_INSERT_RECORD-ABBREV_2078 https://fairsharing.org/FAIRsharing.p77ph9)  schema alignment in Karma
 ```
 ````
 
@@ -469,7 +469,7 @@ RDF schema alignment in Karma
 
 #### R2RML 
 
-When source data exists in a relational structure, a map (URL_TO_INSERT_RECORD_2706 https://fairsharing.org/FAIRsharing.53edcc) ping to a graph can be expressed via the standard (URL_TO_INSERT_TERM_2704 https://fairsharing.org/search?fairsharingRegistry=Standard)  language R2R (URL_TO_INSERT_RECORD_2705 https://fairsharing.org/FAIRsharing.ZEbjok) ML (https://www.w3.org/TR/r2rml/).
+When source data exists in a relational structure, a mapping to a graph can be expressed via the standard (URL_TO_INSERT_TERM_2079 https://fairsharing.org/search?fairsharingRegistry=Standard)  language R2RML (https://www.w3.org/TR/r2rml/).
 
 
 ### Notes on the FAIRification (as a KG) workflow
@@ -477,13 +477,13 @@ When source data exists in a relational structure, a map (URL_TO_INSERT_RECORD_2
 
 #### What comes first 
 
-Reconciliation and map (URL_TO_INSERT_RECORD_2707 https://fairsharing.org/FAIRsharing.53edcc) ping to a graph are to a degree two independent steps.
-The Typical OpenRefine workflow would first do reconciliation and then map (URL_TO_INSERT_RECORD_2708 https://fairsharing.org/FAIRsharing.53edcc) ping. 
-In general, it makes sense to follow these steps in this order: when map (URL_TO_INSERT_RECORD_2709 https://fairsharing.org/FAIRsharing.53edcc) ping to a graph, one could take specific 
-actions depending on whether an identifier (URL_TO_INSERT_TERM_2710 https://fairsharing.org/search?recordType=identifier_schema)  was found or not. 
+Reconciliation and mapping to a graph are to a degree two independent steps.
+The Typical OpenRefine workflow would first do reconciliation and then mapping. 
+In general, it makes sense to follow these steps in this order: when mapping to a graph, one could take specific 
+actions depending on whether an identifier (URL_TO_INSERT_TERM_2080 https://fairsharing.org/search?recordType=identifier_schema)  was found or not. 
 And predictive approaches could be made more precise.
 
-It is however possible to map (URL_TO_INSERT_RECORD_2711 https://fairsharing.org/FAIRsharing.53edcc)  data to a graph without performing any reconciliation step (in general the resulting graph will not be fully FAIR (URL_TO_INSERT_RECORD_2712 https://fairsharing.org/FAIRsharing.WWI10U) ).
+It is however possible to map (URL_TO_INSERT_RECORD-NAME_2081 https://fairsharing.org/FAIRsharing.53edcc)  data to a graph without performing any reconciliation step (in general the resulting graph will not be fully FAIR (URL_TO_INSERT_RECORD-ABBREV_2082 https://fairsharing.org/FAIRsharing.WWI10U) ).
 
 
 #### QA and staging 
@@ -492,26 +492,26 @@ OpenRefine is an interactive tool and the user explicitly needs to select which 
 select among a few presented. 
 In general automated reconciliation processes will provide suggestions with a confidence level. 
 It is important to design systems where a QA can be put in place.
-One approach could be to have staging area where map (URL_TO_INSERT_RECORD_2713 https://fairsharing.org/FAIRsharing.53edcc) pings are reviewed, and only approved ones can be merged in an overall KG.
+One approach could be to have staging area where mappings are reviewed, and only approved ones can be merged in an overall KG.
 
 
 ### Working on the graph
 
 A useful set of tools for KG manipulation is the KGTK: [https://kgtk.readthedocs.io/en/latest/](https://kgtk.readthedocs.io/en/latest/)
 
-This provides Import/Export between different format (URL_TO_INSERT_TERM_2714 https://fairsharing.org/search?recordType=model_and_format) s, operators (e.g.: as joins, sub-setting) and useful analytical functions.
+This provides Import/Export between different format (URL_TO_INSERT_TERM_2083 https://fairsharing.org/search?recordType=model_and_format) s, operators (e.g.: as joins, sub-setting) and useful analytical functions.
 
 [NOTE: NVS ENGAGED IN A PROJECT FOR KGTK EXTENSION]
 
 
 ### Closed loop FAIRification [very draft, but we did have some architectures here]
 
-We can use OpenRefine to `FAIR (URL_TO_INSERT_RECORD_2717 https://fairsharing.org/FAIRsharing.WWI10U) ify` data using a KG as a source of “reference informat (URL_TO_INSERT_TERM_2715 https://fairsharing.org/search?recordType=model_and_format) ion” or ontologies (URL_TO_INSERT_TERM_2716 https://fairsharing.org/search?recordType=terminology_artefact) . 
+We can use OpenRefine to `FAIRify` data using a KG as a source of “reference informat (URL_TO_INSERT_TERM_2084 https://fairsharing.org/search?recordType=model_and_format) ion” or ontologies (URL_TO_INSERT_TERM_2085 https://fairsharing.org/search?recordType=terminology_artefact) . 
 At the same time we can export data via OpenRefine into a KG.
 
 We therefore have a system that can be used to generate a KG that improves the performance of the system itself.
 
-A particular aspect of (automated) FAIR (URL_TO_INSERT_RECORD_2718 https://fairsharing.org/FAIRsharing.WWI10U) ification would then be to have systems able to automatically link data to an overall knowledge graph.
+A particular aspect of (automated) FAIRification would then be to have systems able to automatically link data to an overall knowledge graph.
 
 [[https://github.com/usc-isi-i2/table-linker](https://github.com/usc-isi-i2/table-linker)]
 
@@ -521,11 +521,11 @@ A particular aspect of (automated) FAIR (URL_TO_INSERT_RECORD_2718 https://fairs
 
 #### RelFinder 
 
-Once we have informat (URL_TO_INSERT_TERM_2719 https://fairsharing.org/search?recordType=model_and_format) ion as a KG, it is useful to have tools to explore it.
+Once we have informat (URL_TO_INSERT_TERM_2086 https://fairsharing.org/search?recordType=model_and_format) ion as a KG, it is useful to have tools to explore it.
 One such simple tool is [RelFinder](http://www.visualdataweb.org/relfinder.php) ).
 
 The tool can be pointed to a triplestore and allows discovering connections between two or more entities.
-Its capabilities are very limited, and it does not perform an exhaustive search (URL_TO_INSERT_RECORD_2720 https://fairsharing.org/FAIRsharing.52b22c) , and being implemented in Flash, it is now obsolete.
+Its capabilities are very limited, and it does not perform an exhaustive search, and being implemented in Flash, it is now obsolete.
 However, it is a useful tool to demonstrate why a KG is useful.
 
 An implementation on a more modern technology stack is available at [https://github.com/FAIRplus/RelFinderNG](https://github.com/FAIRplus/RelFinderNG),
@@ -535,8 +535,8 @@ https://graphdb.ontotext.com/documentation/free/devhub/custom-graph-views.html
 
 ## Conclusion:
 
-This content provides a basic overview of reconciliation tools for dealing with relative lightweight processes to convert tabular data to an RDF (URL_TO_INSERT_RECORD_2721 https://fairsharing.org/FAIRsharing.p77ph9)  Linked Data graph.
-It complements content related to ETL to RDF (URL_TO_INSERT_RECORD_2722 https://fairsharing.org/FAIRsharing.p77ph9) .
+This content provides a basic overview of reconciliation tools for dealing with relative lightweight processes to convert tabular data to an RDF (URL_TO_INSERT_RECORD-ABBREV_2087 https://fairsharing.org/FAIRsharing.p77ph9)  Linked Data graph.
+It complements content related to ETL to RDF (URL_TO_INSERT_RECORD-ABBREV_2088 https://fairsharing.org/FAIRsharing.p77ph9) .
 While a lot of material already exists about using OpenRefine for performing such tasks, the value added by the recipe 
 rests on the setting up of a Wikibase instance to provide the reconciliation reference.
 

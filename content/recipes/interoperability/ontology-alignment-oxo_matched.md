@@ -21,15 +21,15 @@
 
 ## Main Objectives
 
-Different ontology (URL_TO_INSERT_TERM_4768 https://fairsharing.org/search?recordType=terminology_artefact)  terms can describe the same concept, which makes it difficult for data integration.
-`Ontology (URL_TO_INSERT_TERM_4769 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4771 https://fairsharing.org/FAIRsharing.53edcc) ping`, or ontology (URL_TO_INSERT_TERM_4770 https://fairsharing.org/search?recordType=terminology_artefact)  alignment, is the process of determining correspondences between equivalent
-concepts in alternative ontologies (URL_TO_INSERT_TERM_4772 https://fairsharing.org/search?recordType=terminology_artefact)  and distinct vocabularies. 
+Different ontology (URL_TO_INSERT_TERM_3769 https://fairsharing.org/search?recordType=terminology_artefact)  terms can describe the same concept, which makes it difficult for data integration.
+`Ontology (URL_TO_INSERT_TERM_3770 https://fairsharing.org/search?recordType=terminology_artefact)  mapping`, or ontology (URL_TO_INSERT_TERM_3771 https://fairsharing.org/search?recordType=terminology_artefact)  alignment, is the process of determining correspondences between equivalent
+concepts in alternative ontologies (URL_TO_INSERT_TERM_3772 https://fairsharing.org/search?recordType=terminology_artefact)  and distinct vocabularies. 
 
-OxO map (URL_TO_INSERT_RECORD_4775 https://fairsharing.org/FAIRsharing.53edcc) s terms in different ontologies (URL_TO_INSERT_TERM_4774 https://fairsharing.org/search?recordType=terminology_artefact) , vocabularies and coding standard (URL_TO_INSERT_TERM_4773 https://fairsharing.org/search?fairsharingRegistry=Standard) s using evidence collected mainly 
-from the Ontology (URL_TO_INSERT_TERM_4776 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD_4777 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS), Unified Medical Language System (UMLS), but also from other sources. 
+OxO (URL_TO_INSERT_RECORD-ABBREV_3775 https://fairsharing.org/FAIRsharing.0c6fea)  maps terms in different ontologies (URL_TO_INSERT_TERM_3774 https://fairsharing.org/search?recordType=terminology_artefact) , vocabularies and coding standard (URL_TO_INSERT_TERM_3773 https://fairsharing.org/search?fairsharingRegistry=Standard) s using evidence collected mainly 
+from the Ontology (URL_TO_INSERT_TERM_3776 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Service (URL_TO_INSERT_RECORD-NAME_3777 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD-ABBREV_3778 https://fairsharing.org/FAIRsharing.Mkl9RR) ), Unified Medical Language System (UMLS), but also from other sources. 
 
 This recipe shows how to use the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/) service
-to map (URL_TO_INSERT_RECORD_4779 https://fairsharing.org/FAIRsharing.53edcc)  ontology (URL_TO_INSERT_TERM_4778 https://fairsharing.org/search?recordType=terminology_artefact)  terms between source and target vocabularies {footcite}`oxo` .
+to map (URL_TO_INSERT_RECORD-NAME_3780 https://fairsharing.org/FAIRsharing.53edcc)  ontology (URL_TO_INSERT_TERM_3779 https://fairsharing.org/search?recordType=terminology_artefact)  terms between source and target vocabularies {footcite}`oxo` .
 
 ## Graphical Overview
 
@@ -39,21 +39,21 @@ to map (URL_TO_INSERT_RECORD_4779 https://fairsharing.org/FAIRsharing.53edcc)  o
 ```{figure} ontology-align-oxo.mmd.svg
 ---
 height: 550px
-name: Aligning Ontologies (URL_TO_INSERT_TERM_4780 https://fairsharing.org/search?recordType=terminology_artefact) 
-alt: An overview of the ontology (URL_TO_INSERT_TERM_4781 https://fairsharing.org/search?recordType=terminology_artefact)  alignment process
+name: Aligning Ontologies (URL_TO_INSERT_TERM_3781 https://fairsharing.org/search?recordType=terminology_artefact) 
+alt: An overview of the ontology (URL_TO_INSERT_TERM_3782 https://fairsharing.org/search?recordType=terminology_artefact)  alignment process
 ---
-An overview of the ontology (URL_TO_INSERT_TERM_4782 https://fairsharing.org/search?recordType=terminology_artefact)  alignment process
+An overview of the ontology (URL_TO_INSERT_TERM_3783 https://fairsharing.org/search?recordType=terminology_artefact)  alignment process
 ```
 ````
 
 
 ## Requirements
 * recipe dependency:
-   * {ref}`fcb-introduction-terminologies (URL_TO_INSERT_TERM_4783 https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM_4784 https://fairsharing.org/search?recordType=terminology_artefact) `
-   * {ref}`fcb-selecting-ontologies (URL_TO_INSERT_TERM_4785 https://fairsharing.org/search?recordType=terminology_artefact) `
+   * {ref}`fcb-introduction-terminologies (URL_TO_INSERT_TERM_3784 https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM_3785 https://fairsharing.org/search?recordType=terminology_artefact) `
+   * {ref}`fcb-selecting-ontologies (URL_TO_INSERT_TERM_3786 https://fairsharing.org/search?recordType=terminology_artefact) `
 * knowledge requirements:
-   * Fam (URL_TO_INSERT_RECORD_4786 https://fairsharing.org/FAIRsharing.d0886a) iliar with metadata curation
-   * Fam (URL_TO_INSERT_RECORD_4788 https://fairsharing.org/FAIRsharing.d0886a) iliar with ontology (URL_TO_INSERT_TERM_4787 https://fairsharing.org/search?recordType=terminology_artefact)  and other vocabularies
+   * Familiar with metadata curation
+   * Familiar with ontology (URL_TO_INSERT_TERM_3787 https://fairsharing.org/search?recordType=terminology_artefact)  and other vocabularies
 * technical requirements:
     * Experience with API or Bash scripts allows users to try the automated solutions.
 
@@ -63,12 +63,12 @@ An overview of the ontology (URL_TO_INSERT_TERM_4782 https://fairsharing.org/sea
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [ID mapping](http://edamontology.org/operation_3282)  | [Ontology (URL_TO_INSERT_TERM_4789 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  | [Ontology (URL_TO_INSERT_TERM_4790 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  |
-| [Annotation](http://edamontology.org/operation_0226)  | [Ontology (URL_TO_INSERT_TERM_4791 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  | [Ontology (URL_TO_INSERT_TERM_4792 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  |
+| [ID mapping](http://edamontology.org/operation_3282)  | [Ontology (URL_TO_INSERT_TERM_3788 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  | [Ontology (URL_TO_INSERT_TERM_3789 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  |
+| [Annotation](http://edamontology.org/operation_0226)  | [Ontology (URL_TO_INSERT_TERM_3790 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  | [Ontology (URL_TO_INSERT_TERM_3791 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966)  |
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_4794 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_4795 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_4793 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Format (URL_TO_INSERT_TERM_3793 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_3794 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_3792 https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 |  | [Mondo Disease ontology](https://www.ebi.ac.uk/ols/ontologies/mondo)  | |
 | | [Human Disease ontology](https://www.ebi.ac.uk/ols/ontologies/doid)  |  |
@@ -77,18 +77,18 @@ An overview of the ontology (URL_TO_INSERT_TERM_4782 https://fairsharing.org/sea
 
 ## Using EMBL-EBI OXO
 
-Ontology (URL_TO_INSERT_TERM_4796 https://fairsharing.org/search?recordType=terminology_artefact)  cross Ontology (URL_TO_INSERT_TERM_4797 https://fairsharing.org/search?recordType=terminology_artefact)  or OxO (URL_TO_INSERT_RECORD_4798 https://fairsharing.org/FAIRsharing.0c6fea)  service is available from a web interface or a programmatic interface. The following sections show both.
+Ontology (URL_TO_INSERT_TERM_3795 https://fairsharing.org/search?recordType=terminology_artefact)  cross Ontology (URL_TO_INSERT_TERM_3796 https://fairsharing.org/search?recordType=terminology_artefact)  or OxO (URL_TO_INSERT_RECORD-ABBREV_3797 https://fairsharing.org/FAIRsharing.0c6fea)  service is available from a web interface or a programmatic interface. The following sections show both.
 
 ### OXO Web Interface:
 
 #### Step 1: Identify source vocabulary and target vocabulary
 
-For pathology data annotation, vocabularies, such as [MeSH](https://meshb.nlm.nih.gov/search), [NCI thesaurus (URL_TO_INSERT_RECORD_4802 https://fairsharing.org/FAIRsharing.4cvwxa) ](https://www.ebi.ac.uk/ols/ontologies/ncit), [ICD-10](https://www.who.int/standards/classifications/classification-of-diseases), [UMLS](https://www.nlm.nih.gov/research/umls/index.html), [Human Disease Ontology (URL_TO_INSERT_TERM_4799 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4806 https://fairsharing.org/FAIRsharing.8b6wfq) (DOID (URL_TO_INSERT_RECORD_4808 https://fairsharing.org/FAIRsharing.8b6wfq) )](https://www.ebi.ac.uk/ols/ontologies/doid), and [MONDO (URL_TO_INSERT_RECORD_4804 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD_4807 https://fairsharing.org/FAIRsharing.8b6wfq) ](https://www.ebi.ac.uk/ols/ontologies/mondo), are widely used. In this example, we use **MeSH and DOI (URL_TO_INSERT_RECORD_4801 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_4809 https://fairsharing.org/FAIRsharing.8b6wfq) ** as `source vocabularies` and **MONDO (URL_TO_INSERT_RECORD_4805 https://fairsharing.org/FAIRsharing.b2979t) ** as the `target vocabulary` to demonstrate the ontology (URL_TO_INSERT_TERM_4800 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4803 https://fairsharing.org/FAIRsharing.53edcc) ping workflow. 
+For pathology data annotation, vocabularies, such as [MeSH](https://meshb.nlm.nih.gov/search), [NCI thesaurus (URL_TO_INSERT_RECORD-NAME_3802 https://fairsharing.org/FAIRsharing.4cvwxa) ](https://www.ebi.ac.uk/ols/ontologies/ncit), [ICD-10](https://www.who.int/standards/classifications/classification-of-diseases), [UMLS](https://www.nlm.nih.gov/research/umls/index.html), [Human Disease Ontology (URL_TO_INSERT_TERM_3798 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD-NAME_3803 https://fairsharing.org/FAIRsharing.8b6wfq) (DOI (URL_TO_INSERT_RECORD-ABBREV_3805 https://fairsharing.org/FAIRsharing.8b6wfq) D)](https://www.ebi.ac.uk/ols/ontologies/doid), and [MONDO (URL_TO_INSERT_RECORD-ABBREV_3800 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD-NAME_3804 https://fairsharing.org/FAIRsharing.8b6wfq) ](https://www.ebi.ac.uk/ols/ontologies/mondo), are widely used. In this example, we use **MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_3806 https://fairsharing.org/FAIRsharing.8b6wfq) ** as `source vocabularies` and **MONDO (URL_TO_INSERT_RECORD-ABBREV_3801 https://fairsharing.org/FAIRsharing.b2979t) ** as the `target vocabulary` to demonstrate the ontology (URL_TO_INSERT_TERM_3799 https://fairsharing.org/search?recordType=terminology_artefact)  mapping workflow. 
 
-Obviously, a target vocabulary needs to be selected before map (URL_TO_INSERT_RECORD_4812 https://fairsharing.org/FAIRsharing.53edcc) ping. A variety of factors can influence the selection of a terminology (URL_TO_INSERT_TERM_4811 https://fairsharing.org/search?recordType=terminology_artefact)  resource for a specific purpose or curation context. For more informat (URL_TO_INSERT_TERM_4810 https://fairsharing.org/search?recordType=model_and_format) ion about this topic, more detailed guidance on how to select vocabularies can be found [here](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html). 
+Obviously, a target vocabulary needs to be selected before mapping. A variety of factors can influence the selection of a terminology (URL_TO_INSERT_TERM_3808 https://fairsharing.org/search?recordType=terminology_artefact)  resource for a specific purpose or curation context. For more informat (URL_TO_INSERT_TERM_3807 https://fairsharing.org/search?recordType=model_and_format) ion about this topic, more detailed guidance on how to select vocabularies can be found [here](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html). 
 
 
-OxO allows users to explore the map (URL_TO_INSERT_RECORD_4815 https://fairsharing.org/FAIRsharing.53edcc) ping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO (URL_TO_INSERT_RECORD_4818 https://fairsharing.org/FAIRsharing.b2979t)  are linked to terms in other ontologies (URL_TO_INSERT_TERM_4813 https://fairsharing.org/search?recordType=terminology_artefact) . MONDO (URL_TO_INSERT_RECORD_4819 https://fairsharing.org/FAIRsharing.b2979t)  has over 16,000 map (URL_TO_INSERT_RECORD_4816 https://fairsharing.org/FAIRsharing.53edcc) pings to terms in UMLS. It is also map (URL_TO_INSERT_RECORD_4817 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_4821 https://fairsharing.org/FAIRsharing.31385c)  to terms in DOI (URL_TO_INSERT_RECORD_4814 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_4820 https://fairsharing.org/FAIRsharing.8b6wfq) , Ophanet, OMIM (URL_TO_INSERT_RECORD_4822 https://fairsharing.org/FAIRsharing.9qkaz9) , MeSH, etc.
+OxO (URL_TO_INSERT_RECORD-ABBREV_3812 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore the mapping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO (URL_TO_INSERT_RECORD-ABBREV_3810 https://fairsharing.org/FAIRsharing.b2979t)  are linked to terms in other ontologies (URL_TO_INSERT_TERM_3809 https://fairsharing.org/search?recordType=terminology_artefact) . MONDO (URL_TO_INSERT_RECORD-ABBREV_3811 https://fairsharing.org/FAIRsharing.b2979t)  has over 16,000 mappings to terms in UMLS. It is also mapped to terms in DOID (URL_TO_INSERT_RECORD-ABBREV_3813 https://fairsharing.org/FAIRsharing.8b6wfq) , Ophanet, OMIM (URL_TO_INSERT_RECORD-ABBREV_3814 https://fairsharing.org/FAIRsharing.9qkaz9) , MeSH, etc.
 
 
 ````{dropdown} 
@@ -96,32 +96,32 @@ OxO allows users to explore the map (URL_TO_INSERT_RECORD_4815 https://fairshari
 ```{figure} ../../../images/bi5WoIf.png
 ---
 width: 600px
-name: OxO (URL_TO_INSERT_RECORD_4823 https://fairsharing.org/FAIRsharing.0c6fea)  summary result overview
-alt: OxO (URL_TO_INSERT_RECORD_4824 https://fairsharing.org/FAIRsharing.0c6fea)  summary result overview
+name: OxO (URL_TO_INSERT_RECORD-ABBREV_3815 https://fairsharing.org/FAIRsharing.0c6fea)  summary result overview
+alt: OxO (URL_TO_INSERT_RECORD-ABBREV_3816 https://fairsharing.org/FAIRsharing.0c6fea)  summary result overview
 ---
-OxO summary result overview.
+OxO (URL_TO_INSERT_RECORD-ABBREV_3817 https://fairsharing.org/FAIRsharing.0c6fea)  summary result overview.
 ```
 ````
 
 ### Step 2: Provide the source vocabulary term ID
 
-OxO takes ontology (URL_TO_INSERT_TERM_4825 https://fairsharing.org/search?recordType=terminology_artefact)  term IDs as inputs for ontology (URL_TO_INSERT_TERM_4826 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4828 https://fairsharing.org/FAIRsharing.53edcc) ping, which assumes the (meta)data has been annotated. If the data is not annotated, please check the ontology (URL_TO_INSERT_TERM_4827 https://fairsharing.org/search?recordType=terminology_artefact)  annotation recipe first. 
+OxO (URL_TO_INSERT_RECORD-ABBREV_3821 https://fairsharing.org/FAIRsharing.0c6fea)  takes ontology (URL_TO_INSERT_TERM_3818 https://fairsharing.org/search?recordType=terminology_artefact)  term IDs as inputs for ontology (URL_TO_INSERT_TERM_3819 https://fairsharing.org/search?recordType=terminology_artefact)  mapping, which assumes the (meta)data has been annotated. If the data is not annotated, please check the ontology (URL_TO_INSERT_TERM_3820 https://fairsharing.org/search?recordType=terminology_artefact)  annotation recipe first. 
 
 In this example, we use terms for ***type 2 diabetes*** from 2 distinct sources. The corresponding term IDs are listed in the table below.
 
-|Text|Corresponding term in MeSH| Corresponding term in DOI (URL_TO_INSERT_RECORD_4829 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_4830 https://fairsharing.org/FAIRsharing.8b6wfq) |
+|Text|Corresponding term in MeSH| Corresponding term in DOID (URL_TO_INSERT_RECORD-ABBREV_3822 https://fairsharing.org/FAIRsharing.8b6wfq) |
 |--|--|--|
 |type 2 diabetes|[MeSH:D003924](https://www.ncbi.nlm.nih.gov/mesh/68003924)|[DOID:9352](https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FDOID_9352)
 
 ### Step 3: Perform mapping
 
-Figure 2 shows how to map (URL_TO_INSERT_RECORD_4833 https://fairsharing.org/FAIRsharing.53edcc)  the MeSH and DOI (URL_TO_INSERT_RECORD_4832 https://fairsharing.org/FAIRsharing.hFLKCn) D (URL_TO_INSERT_RECORD_4836 https://fairsharing.org/FAIRsharing.8b6wfq)  terms to the MONDO (URL_TO_INSERT_RECORD_4834 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_TERM_4831 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4835 https://fairsharing.org/FAIRsharing.8b6wfq) . Users are expected to:
-- specify the target ontology (URL_TO_INSERT_TERM_4837 https://fairsharing.org/search?recordType=terminology_artefact) 
+Figure 2 shows how to map (URL_TO_INSERT_RECORD-NAME_3827 https://fairsharing.org/FAIRsharing.53edcc)  the MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_3826 https://fairsharing.org/FAIRsharing.8b6wfq)  terms to the MONDO (URL_TO_INSERT_RECORD-ABBREV_3824 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_TERM_3823 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD-NAME_3825 https://fairsharing.org/FAIRsharing.8b6wfq) . Users are expected to:
+- specify the target ontology (URL_TO_INSERT_TERM_3828 https://fairsharing.org/search?recordType=terminology_artefact) 
 - provide a list of source term IDs
-- indicate the expected map (URL_TO_INSERT_RECORD_4838 https://fairsharing.org/FAIRsharing.53edcc) ping distance.
+- indicate the expected mapping distance.
 
-In this example, we set the `map (URL_TO_INSERT_RECORD_4839 https://fairsharing.org/FAIRsharing.53edcc) ping distance` to 1, which uses high confidence map (URL_TO_INSERT_RECORD_4840 https://fairsharing.org/FAIRsharing.53edcc) ping evidence only.
-Having greater map (URL_TO_INSERT_RECORD_4841 https://fairsharing.org/FAIRsharing.53edcc) ping distance returns more map (URL_TO_INSERT_RECORD_4842 https://fairsharing.org/FAIRsharing.53edcc) pings but decreases the map (URL_TO_INSERT_RECORD_4843 https://fairsharing.org/FAIRsharing.53edcc) ping confidence. 
+In this example, we set the `mapping distance` to 1, which uses high confidence mapping evidence only.
+Having greater mapping distance returns more mappings but decreases the mapping confidence. 
 
 
 ````{dropdown} 
@@ -129,14 +129,14 @@ Having greater map (URL_TO_INSERT_RECORD_4841 https://fairsharing.org/FAIRsharin
 ```{figure} ../../../images/1EepmN9.png
 ---
 width: 600px
-name: OxO (URL_TO_INSERT_RECORD_4845 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4844 https://fairsharing.org/FAIRsharing.53edcc) ping with direct user inputs.
-alt: OxO (URL_TO_INSERT_RECORD_4847 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4846 https://fairsharing.org/FAIRsharing.53edcc) ping with direct user inputs
+name: OxO (URL_TO_INSERT_RECORD-ABBREV_3829 https://fairsharing.org/FAIRsharing.0c6fea)  mapping with direct user inputs.
+alt: OxO (URL_TO_INSERT_RECORD-ABBREV_3830 https://fairsharing.org/FAIRsharing.0c6fea)  mapping with direct user inputs
 ---
-OxO map (URL_TO_INSERT_RECORD_4848 https://fairsharing.org/FAIRsharing.53edcc) ping with direct user inputs
+OxO (URL_TO_INSERT_RECORD-ABBREV_3831 https://fairsharing.org/FAIRsharing.0c6fea)  mapping with direct user inputs
 ```
 ````
 
-Figure 3 shows the corresponding map (URL_TO_INSERT_RECORD_4849 https://fairsharing.org/FAIRsharing.53edcc) ping results. Both terms have been map (URL_TO_INSERT_RECORD_4850 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_4852 https://fairsharing.org/FAIRsharing.31385c)  to 'MONDO (URL_TO_INSERT_RECORD_4851 https://fairsharing.org/FAIRsharing.b2979t) :0005148'. The results can be downloaded as flat-table(tsv) files.
+Figure 3 shows the corresponding mapping results. Both terms have been mapped to 'MONDO (URL_TO_INSERT_RECORD-ABBREV_3832 https://fairsharing.org/FAIRsharing.b2979t) :0005148'. The results can be downloaded as flat-table(tsv) files.
 
 
 ````{dropdown} 
@@ -144,35 +144,35 @@ Figure 3 shows the corresponding map (URL_TO_INSERT_RECORD_4849 https://fairshar
 ```{figure} ../../../images/l1z8OgL.png
 ---
 width: 600px
-name: OxO (URL_TO_INSERT_RECORD_4854 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4853 https://fairsharing.org/FAIRsharing.53edcc) ping results tabular view
-alt: OxO (URL_TO_INSERT_RECORD_4856 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4855 https://fairsharing.org/FAIRsharing.53edcc) ping results tabular view
+name: OxO (URL_TO_INSERT_RECORD-ABBREV_3833 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results tabular view
+alt: OxO (URL_TO_INSERT_RECORD-ABBREV_3834 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results tabular view
 ---
-OxO map (URL_TO_INSERT_RECORD_4857 https://fairsharing.org/FAIRsharing.53edcc) ping results tabular view.
+OxO (URL_TO_INSERT_RECORD-ABBREV_3835 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results tabular view.
 ```
 ````
 
 ### Step 4: Review mapping results
 
-To ensure the quality of the map (URL_TO_INSERT_RECORD_4859 https://fairsharing.org/FAIRsharing.53edcc) ping, users are recommended to review the map (URL_TO_INSERT_RECORD_4860 https://fairsharing.org/FAIRsharing.53edcc) ping results, especially when the map (URL_TO_INSERT_RECORD_4861 https://fairsharing.org/FAIRsharing.53edcc) ping distance increases. OxO (URL_TO_INSERT_RECORD_4862 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more informat (URL_TO_INSERT_TERM_4858 https://fairsharing.org/search?recordType=model_and_format) ion about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
+To ensure the quality of the mapping, users are recommended to review the mapping results, especially when the mapping distance increases. OxO (URL_TO_INSERT_RECORD-ABBREV_3837 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more informat (URL_TO_INSERT_TERM_3836 https://fairsharing.org/search?recordType=model_and_format) ion about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
 
 ````{dropdown} 
 :open:
 ```{figure} ../../../images/937iuPV.png
 ---
 width: 600px
-name: OxO (URL_TO_INSERT_RECORD_4865 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4863 https://fairsharing.org/FAIRsharing.53edcc) ping results review - MONDO (URL_TO_INSERT_RECORD_4864 https://fairsharing.org/FAIRsharing.b2979t)  example
-alt: OxO (URL_TO_INSERT_RECORD_4868 https://fairsharing.org/FAIRsharing.0c6fea)  map (URL_TO_INSERT_RECORD_4866 https://fairsharing.org/FAIRsharing.53edcc) ping results review - MONDO (URL_TO_INSERT_RECORD_4867 https://fairsharing.org/FAIRsharing.b2979t)  example
+name: OxO (URL_TO_INSERT_RECORD-ABBREV_3839 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results review - MONDO (URL_TO_INSERT_RECORD-ABBREV_3838 https://fairsharing.org/FAIRsharing.b2979t)  example
+alt: OxO (URL_TO_INSERT_RECORD-ABBREV_3841 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results review - MONDO (URL_TO_INSERT_RECORD-ABBREV_3840 https://fairsharing.org/FAIRsharing.b2979t)  example
 ---
-OxO map (URL_TO_INSERT_RECORD_4869 https://fairsharing.org/FAIRsharing.53edcc) ping results review - MONDO (URL_TO_INSERT_RECORD_4870 https://fairsharing.org/FAIRsharing.b2979t)  example.
+OxO (URL_TO_INSERT_RECORD-ABBREV_3843 https://fairsharing.org/FAIRsharing.0c6fea)  mapping results review - MONDO (URL_TO_INSERT_RECORD-ABBREV_3842 https://fairsharing.org/FAIRsharing.b2979t)  example.
 ```
 ````
 
 ## Using OxO service programmatically
 
-Besides the graphical user interface offered by OxO (URL_TO_INSERT_RECORD_4871 https://fairsharing.org/FAIRsharing.0c6fea)  at EMBL-EBI, a REST style API is also available.
-It is therefore possible to invoke the map (URL_TO_INSERT_RECORD_4872 https://fairsharing.org/FAIRsharing.53edcc) ping service from the command line. See the [OxO API documentation](https://www.ebi.ac.uk/spot/oxo/docs/api) page.
+Besides the graphical user interface offered by OxO (URL_TO_INSERT_RECORD-ABBREV_3844 https://fairsharing.org/FAIRsharing.0c6fea)  at EMBL-EBI, a REST style API is also available.
+It is therefore possible to invoke the mapping service from the command line. See the [OxO API documentation](https://www.ebi.ac.uk/spot/oxo/docs/api) page.
 
-In the following code snippet, an API request invoked via `curl` performed the same map (URL_TO_INSERT_RECORD_4873 https://fairsharing.org/FAIRsharing.53edcc) ping presented in the section above, at step 3:
+In the following code snippet, an API request invoked via `curl` performed the same mapping presented in the section above, at step 3:
 
 ```bash
 curl 'https://www.ebi.ac.uk/spot/oxo/api/search' -i 
@@ -218,27 +218,27 @@ The corresponding results are as follows:
 
 ### Common questions about OxO
 
-1. What about incorrect map (URL_TO_INSERT_RECORD_4874 https://fairsharing.org/FAIRsharing.53edcc) pings?
+1. What about incorrect mappings?
 
-    OxO (URL_TO_INSERT_RECORD_4879 https://fairsharing.org/FAIRsharing.0c6fea)  imports term map (URL_TO_INSERT_RECORD_4878 https://fairsharing.org/FAIRsharing.53edcc) ping informat (URL_TO_INSERT_TERM_4876 https://fairsharing.org/search?recordType=model_and_format) ion from ontologies (URL_TO_INSERT_TERM_4877 https://fairsharing.org/search?recordType=terminology_artefact)  and other curated database (URL_TO_INSERT_TERM_4875 https://fairsharing.org/search?fairsharingRegistry=Database) s. 
-    **It doesn't validate the map (URL_TO_INSERT_RECORD_4880 https://fairsharing.org/FAIRsharing.53edcc) ping evidence**.
-    Users are recommended to check the map (URL_TO_INSERT_RECORD_4881 https://fairsharing.org/FAIRsharing.53edcc) ping results manually, especially when the map (URL_TO_INSERT_RECORD_4882 https://fairsharing.org/FAIRsharing.53edcc) ping distance is above 1.
+    OxO (URL_TO_INSERT_RECORD-ABBREV_3848 https://fairsharing.org/FAIRsharing.0c6fea)  imports term mapping informat (URL_TO_INSERT_TERM_3846 https://fairsharing.org/search?recordType=model_and_format) ion from ontologies (URL_TO_INSERT_TERM_3847 https://fairsharing.org/search?recordType=terminology_artefact)  and other curated database (URL_TO_INSERT_TERM_3845 https://fairsharing.org/search?fairsharingRegistry=Database) s. 
+    **It doesn't validate the mapping evidence**.
+    Users are recommended to check the mapping results manually, especially when the mapping distance is above 1.
     
-2. Why is no map (URL_TO_INSERT_RECORD_4883 https://fairsharing.org/FAIRsharing.53edcc) ping found?
+2. Why is no mapping found?
 
-    OxO (URL_TO_INSERT_RECORD_4889 https://fairsharing.org/FAIRsharing.0c6fea)  relies on the ontology (URL_TO_INSERT_TERM_4885 https://fairsharing.org/search?recordType=terminology_artefact)  and other curated database (URL_TO_INSERT_TERM_4884 https://fairsharing.org/search?fairsharingRegistry=Database) s to improve the map (URL_TO_INSERT_RECORD_4887 https://fairsharing.org/FAIRsharing.53edcc) ping coverage. Some terms describing the same concept might not be aligned in OxO (URL_TO_INSERT_RECORD_4890 https://fairsharing.org/FAIRsharing.0c6fea) . In this case, users are recommended to identify possible map (URL_TO_INSERT_RECORD_4888 https://fairsharing.org/FAIRsharing.53edcc) pings by search (URL_TO_INSERT_RECORD_4891 https://fairsharing.org/FAIRsharing.52b22c) ing in OLS (URL_TO_INSERT_RECORD_4886 https://fairsharing.org/FAIRsharing.Mkl9RR) . 
+    OxO (URL_TO_INSERT_RECORD-ABBREV_3852 https://fairsharing.org/FAIRsharing.0c6fea)  relies on the ontology (URL_TO_INSERT_TERM_3850 https://fairsharing.org/search?recordType=terminology_artefact)  and other curated database (URL_TO_INSERT_TERM_3849 https://fairsharing.org/search?fairsharingRegistry=Database) s to improve the mapping coverage. Some terms describing the same concept might not be aligned in OxO (URL_TO_INSERT_RECORD-ABBREV_3853 https://fairsharing.org/FAIRsharing.0c6fea) . In this case, users are recommended to identify possible mappings by searching in OLS (URL_TO_INSERT_RECORD-ABBREV_3851 https://fairsharing.org/FAIRsharing.Mkl9RR) . 
     
-    To help the ontology (URL_TO_INSERT_TERM_4892 https://fairsharing.org/search?recordType=terminology_artefact)  community improve the map (URL_TO_INSERT_RECORD_4894 https://fairsharing.org/FAIRsharing.53edcc) ping, users can also submit an update request in corresponding ontologies (URL_TO_INSERT_TERM_4893 https://fairsharing.org/search?recordType=terminology_artefact) . The guidance can be found here {ref}`fcb-interop-ontorequest`
+    To help the ontology (URL_TO_INSERT_TERM_3854 https://fairsharing.org/search?recordType=terminology_artefact)  community improve the mapping, users can also submit an update request in corresponding ontologies (URL_TO_INSERT_TERM_3855 https://fairsharing.org/search?recordType=terminology_artefact) . The guidance can be found here {ref}`fcb-interop-ontorequest`
     
-3. Ontology (URL_TO_INSERT_TERM_4896 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4897 https://fairsharing.org/FAIRsharing.53edcc) ping service for internal database (URL_TO_INSERT_TERM_4895 https://fairsharing.org/search?fairsharingRegistry=Database) s
+3. Ontology (URL_TO_INSERT_TERM_3857 https://fairsharing.org/search?recordType=terminology_artefact)  mapping service for internal database (URL_TO_INSERT_TERM_3856 https://fairsharing.org/search?fairsharingRegistry=Database) s
 
-    OxO (URL_TO_INSERT_RECORD_4898 https://fairsharing.org/FAIRsharing.0c6fea)  has been dockerized for local deployment and licensed under [Apache License 2.0](https://github.com/EBISPOT/OXO/blob/master/LICENSE). The source code can be found [here](https://github.com/EBISPOT/OXO).
+    OxO (URL_TO_INSERT_RECORD-ABBREV_3858 https://fairsharing.org/FAIRsharing.0c6fea)  has been dockerized for local deployment and licensed under [Apache License 2.0](https://github.com/EBISPOT/OXO/blob/master/LICENSE). The source code can be found [here](https://github.com/EBISPOT/OXO).
 
 
 ## Conclusion
 
-This recipe presented OxO (URL_TO_INSERT_RECORD_4903 https://fairsharing.org/FAIRsharing.0c6fea) , EMBL-EBI tool for performing ontology (URL_TO_INSERT_TERM_4899 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4901 https://fairsharing.org/FAIRsharing.53edcc) ping as an example to demonstrate the ontology (URL_TO_INSERT_TERM_4900 https://fairsharing.org/search?recordType=terminology_artefact)  map (URL_TO_INSERT_RECORD_4902 https://fairsharing.org/FAIRsharing.53edcc) ping workflow.
-In the context of a FAIR (URL_TO_INSERT_RECORD_4905 https://fairsharing.org/FAIRsharing.WWI10U) ification workflow, a tool such as OxO (URL_TO_INSERT_RECORD_4904 https://fairsharing.org/FAIRsharing.0c6fea)  comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
+This recipe presented OxO (URL_TO_INSERT_RECORD-ABBREV_3861 https://fairsharing.org/FAIRsharing.0c6fea) , EMBL-EBI tool for performing ontology (URL_TO_INSERT_TERM_3859 https://fairsharing.org/search?recordType=terminology_artefact)  mapping as an example to demonstrate the ontology (URL_TO_INSERT_TERM_3860 https://fairsharing.org/search?recordType=terminology_artefact)  mapping workflow.
+In the context of a FAIRification workflow, a tool such as OxO (URL_TO_INSERT_RECORD-ABBREV_3862 https://fairsharing.org/FAIRsharing.0c6fea)  comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
 ### What to read next?
 

@@ -17,23 +17,23 @@
 
 ## Main Objective
 
-Terms could be missing from public ontologies (URL_TO_INSERT_TERM_4906 https://fairsharing.org/search?recordType=terminology_artefact)  of choice. Where needed, new terms can be requested for these ontologies (URL_TO_INSERT_TERM_4907 https://fairsharing.org/search?recordType=terminology_artefact) . The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies (URL_TO_INSERT_TERM_4908 https://fairsharing.org/search?recordType=terminology_artefact) .
+Terms could be missing from public ontologies (URL_TO_INSERT_TERM_3863 https://fairsharing.org/search?recordType=terminology_artefact)  of choice. Where needed, new terms can be requested for these ontologies (URL_TO_INSERT_TERM_3864 https://fairsharing.org/search?recordType=terminology_artefact) . The objective of this recipe is to provide a general guidline on how to request new terms, as well as to give some examples for specific ontologies (URL_TO_INSERT_TERM_3865 https://fairsharing.org/search?recordType=terminology_artefact) .
 
-Requesting new terms in public (biomedical) ontologies (URL_TO_INSERT_TERM_4911 https://fairsharing.org/search?recordType=terminology_artefact)  might be a structured, streamlined process or completely undocumented, depending on the actual ontology (URL_TO_INSERT_TERM_4909 https://fairsharing.org/search?recordType=terminology_artefact) . Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the target ontology (URL_TO_INSERT_TERM_4910 https://fairsharing.org/search?recordType=terminology_artefact) .
+Requesting new terms in public (biomedical) ontologies (URL_TO_INSERT_TERM_3868 https://fairsharing.org/search?recordType=terminology_artefact)  might be a structured, streamlined process or completely undocumented, depending on the actual ontology (URL_TO_INSERT_TERM_3866 https://fairsharing.org/search?recordType=terminology_artefact) . Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the target ontology (URL_TO_INSERT_TERM_3867 https://fairsharing.org/search?recordType=terminology_artefact) .
 
-Some ontologies (URL_TO_INSERT_TERM_4914 https://fairsharing.org/search?recordType=terminology_artefact) , often large project (URL_TO_INSERT_TERM_4912 https://fairsharing.org/search?recordType=project) s organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies (URL_TO_INSERT_TERM_4915 https://fairsharing.org/search?recordType=terminology_artefact)  rely on [GitHub](https://github.com) as a publicly accessible ticketing system for reporting issues on the ontology (URL_TO_INSERT_TERM_4913 https://fairsharing.org/search?recordType=terminology_artefact)  and also for requesting new terms. They might provide explicit guideline (URL_TO_INSERT_TERM_4917 https://fairsharing.org/search?recordType=reporting_guideline) s on how to create an issue for a new term request, or they rely on GitHub (URL_TO_INSERT_RECORD_4919 https://fairsharing.org/FAIRsharing.c55d5e)  issues without guideline (URL_TO_INSERT_TERM_4918 https://fairsharing.org/search?recordType=reporting_guideline) s. And there are also ontologies (URL_TO_INSERT_TERM_4916 https://fairsharing.org/search?recordType=terminology_artefact)  relying on email for requesting new terms. These different request processes can be summarized as follows:
+Some ontologies (URL_TO_INSERT_TERM_3871 https://fairsharing.org/search?recordType=terminology_artefact) , often large project (URL_TO_INSERT_TERM_3869 https://fairsharing.org/search?recordType=project) s organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies (URL_TO_INSERT_TERM_3872 https://fairsharing.org/search?recordType=terminology_artefact)  rely on [GitHub](https://github.com) as a publicly accessible ticketing system for reporting issues on the ontology (URL_TO_INSERT_TERM_3870 https://fairsharing.org/search?recordType=terminology_artefact)  and also for requesting new terms. They might provide explicit guideline (URL_TO_INSERT_TERM_3874 https://fairsharing.org/search?recordType=reporting_guideline) s on how to create an issue for a new term request, or they rely on GitHub (URL_TO_INSERT_RECORD-NAME_3876 https://fairsharing.org/FAIRsharing.c55d5e)  issues without guideline (URL_TO_INSERT_TERM_3875 https://fairsharing.org/search?recordType=reporting_guideline) s. And there are also ontologies (URL_TO_INSERT_TERM_3873 https://fairsharing.org/search?recordType=terminology_artefact)  relying on email for requesting new terms. These different request processes can be summarized as follows:
 * Formal request process
-* Request via GitHub (URL_TO_INSERT_RECORD_4921 https://fairsharing.org/FAIRsharing.c55d5e)  with explicit guideline (URL_TO_INSERT_TERM_4920 https://fairsharing.org/search?recordType=reporting_guideline) s
-* Request via GitHub (URL_TO_INSERT_RECORD_4923 https://fairsharing.org/FAIRsharing.c55d5e)  without guideline (URL_TO_INSERT_TERM_4922 https://fairsharing.org/search?recordType=reporting_guideline) s
+* Request via GitHub (URL_TO_INSERT_RECORD-NAME_3878 https://fairsharing.org/FAIRsharing.c55d5e)  with explicit guideline (URL_TO_INSERT_TERM_3877 https://fairsharing.org/search?recordType=reporting_guideline) s
+* Request via GitHub (URL_TO_INSERT_RECORD-NAME_3880 https://fairsharing.org/FAIRsharing.c55d5e)  without guideline (URL_TO_INSERT_TERM_3879 https://fairsharing.org/search?recordType=reporting_guideline) s
 * Request via email
 
-In most ontologies (URL_TO_INSERT_TERM_4924 https://fairsharing.org/search?recordType=terminology_artefact) , everybody can request new terms. However, in some ontologies (URL_TO_INSERT_TERM_4925 https://fairsharing.org/search?recordType=terminology_artefact)  only members have access to the request process. In case of a request process organized via GitHub (URL_TO_INSERT_RECORD_4926 https://fairsharing.org/FAIRsharing.c55d5e) , a free [GitHub account](https://github.com/join) is required.
+In most ontologies (URL_TO_INSERT_TERM_3881 https://fairsharing.org/search?recordType=terminology_artefact) , everybody can request new terms. However, in some ontologies (URL_TO_INSERT_TERM_3882 https://fairsharing.org/search?recordType=terminology_artefact)  only members have access to the request process. In case of a request process organized via GitHub (URL_TO_INSERT_RECORD-NAME_3883 https://fairsharing.org/FAIRsharing.c55d5e) , a free [GitHub account](https://github.com/join) is required.
 
 
 ## Ingredients
 * List of new terms
-* Target ontology (URL_TO_INSERT_TERM_4927 https://fairsharing.org/search?recordType=terminology_artefact) 
-    * E.g. SNOMED CT, MedDRA (URL_TO_INSERT_RECORD_4939 https://fairsharing.org/FAIRsharing.ad3137) , OBI (URL_TO_INSERT_RECORD_4932 https://fairsharing.org/FAIRsharing.284e1z) , EFO (URL_TO_INSERT_RECORD_4937 https://fairsharing.org/FAIRsharing.1gr4tz) , BAO (URL_TO_INSERT_RECORD_4934 https://fairsharing.org/FAIRsharing.mye76w) , CL (URL_TO_INSERT_RECORD_4931 https://fairsharing.org/FAIRsharing.j9y503) , RxNorm (URL_TO_INSERT_RECORD_4936 https://fairsharing.org/FAIRsharing.36pf8q) , BT (URL_TO_INSERT_RECORD_4938 https://fairsharing.org/FAIRsharing.6s2sfz) O (URL_TO_INSERT_RECORD_4928 https://fairsharing.org/FAIRsharing.1414v8)  - BRENDA (URL_TO_INSERT_RECORD_4930 https://fairsharing.org/FAIRsharing.etp533) , DC (URL_TO_INSERT_RECORD_4933 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_4935 https://fairsharing.org/3547) AT (URL_TO_INSERT_RECORD_4929 https://fairsharing.org/FAIRsharing.h4j3qm)  2
+* Target ontology (URL_TO_INSERT_TERM_3884 https://fairsharing.org/search?recordType=terminology_artefact) 
+    * E.g. SNOMED CT, MedDRA (URL_TO_INSERT_RECORD-ABBREV_3893 https://fairsharing.org/FAIRsharing.ad3137) , OBI (URL_TO_INSERT_RECORD-ABBREV_3889 https://fairsharing.org/FAIRsharing.284e1z) , EFO (URL_TO_INSERT_RECORD-ABBREV_3892 https://fairsharing.org/FAIRsharing.1gr4tz) , BAO (URL_TO_INSERT_RECORD-ABBREV_3890 https://fairsharing.org/FAIRsharing.mye76w) , CL (URL_TO_INSERT_RECORD-ABBREV_3888 https://fairsharing.org/FAIRsharing.j9y503) , RxNorm (URL_TO_INSERT_RECORD-NAME_3891 https://fairsharing.org/FAIRsharing.36pf8q) , BTO (URL_TO_INSERT_RECORD-ABBREV_3886 https://fairsharing.org/FAIRsharing.1414v8)  - BRENDA (URL_TO_INSERT_RECORD-ABBREV_3887 https://fairsharing.org/FAIRsharing.etp533) , DCAT (URL_TO_INSERT_RECORD-ABBREV_3885 https://fairsharing.org/FAIRsharing.h4j3qm)  2
     
 ## Graphical Overview
 
@@ -43,10 +43,10 @@ In most ontologies (URL_TO_INSERT_TERM_4924 https://fairsharing.org/search?recor
 ```{figure} onto-new-term.png
 ---
 width: 650px
-name: Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_4940 https://fairsharing.org/search?recordType=terminology_artefact) 
-alt: Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_4941 https://fairsharing.org/search?recordType=terminology_artefact) 
+name: Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_3894 https://fairsharing.org/search?recordType=terminology_artefact) 
+alt: Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_3895 https://fairsharing.org/search?recordType=terminology_artefact) 
 ---
-Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_4942 https://fairsharing.org/search?recordType=terminology_artefact) .
+Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_3896 https://fairsharing.org/search?recordType=terminology_artefact) .
 ```
 ````
 
@@ -54,102 +54,102 @@ Process for requesting an new term to a terminology (URL_TO_INSERT_TERM_4942 htt
 ## FAIRification Objectives, Inputs and Outputs
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [text annotation](http://edamontology.org/operation_3778)  | new term(s), [ontology](http://edamontology.org/data_0582) | [ontology (URL_TO_INSERT_TERM_4943 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966), [annotated text](http://edamontology.org/data_3779)  |
+| [text annotation](http://edamontology.org/operation_3778)  | new term(s), [ontology](http://edamontology.org/data_0582) | [ontology (URL_TO_INSERT_TERM_3897 https://fairsharing.org/search?recordType=terminology_artefact)  term](http://edamontology.org/data_0966), [annotated text](http://edamontology.org/data_3779)  |
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_4944 https://fairsharing.org/search?recordType=model_and_format) s  | Ontologies (URL_TO_INSERT_TERM_4945 https://fairsharing.org/search?recordType=terminology_artefact)  |
+| Data Format (URL_TO_INSERT_TERM_3898 https://fairsharing.org/search?recordType=model_and_format) s  | Ontologies (URL_TO_INSERT_TERM_3899 https://fairsharing.org/search?recordType=terminology_artefact)  |
 | :------------- | :------------- |
-| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology (URL_TO_INSERT_RECORD_4946 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)|
-| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology (URL_TO_INSERT_RECORD_4947 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)  |
-| Release Format (URL_TO_INSERT_TERM_4948 https://fairsharing.org/search?recordType=model_and_format)  2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
-| Rich Release Format (URL_TO_INSERT_TERM_4949 https://fairsharing.org/search?recordType=model_and_format)  |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
+| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology (URL_TO_INSERT_RECORD-NAME_3900 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)|
+| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology (URL_TO_INSERT_RECORD-NAME_3901 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)  |
+| Release Format (URL_TO_INSERT_TERM_3902 https://fairsharing.org/search?recordType=model_and_format)  2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
+| Rich Release Format (URL_TO_INSERT_TERM_3903 https://fairsharing.org/search?recordType=model_and_format)  |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
 ## Step-by-Step process
 
 **Step 1**
-Identify and describe relevant terms not included in public ontology (URL_TO_INSERT_TERM_4950 https://fairsharing.org/search?recordType=terminology_artefact)  of choice.
+Identify and describe relevant terms not included in public ontology (URL_TO_INSERT_TERM_3904 https://fairsharing.org/search?recordType=terminology_artefact)  of choice.
 
 **Step 2**
-Identify request process of the public ontology (URL_TO_INSERT_TERM_4951 https://fairsharing.org/search?recordType=terminology_artefact)  (i.e. formal request process, GitHub (URL_TO_INSERT_RECORD_4954 https://fairsharing.org/FAIRsharing.c55d5e)  request with guideline (URL_TO_INSERT_TERM_4952 https://fairsharing.org/search?recordType=reporting_guideline) s, GitHub (URL_TO_INSERT_RECORD_4955 https://fairsharing.org/FAIRsharing.c55d5e)  request without guideline (URL_TO_INSERT_TERM_4953 https://fairsharing.org/search?recordType=reporting_guideline) s, email request).
+Identify request process of the public ontology (URL_TO_INSERT_TERM_3905 https://fairsharing.org/search?recordType=terminology_artefact)  (i.e. formal request process, GitHub (URL_TO_INSERT_RECORD-NAME_3908 https://fairsharing.org/FAIRsharing.c55d5e)  request with guideline (URL_TO_INSERT_TERM_3906 https://fairsharing.org/search?recordType=reporting_guideline) s, GitHub (URL_TO_INSERT_RECORD-NAME_3909 https://fairsharing.org/FAIRsharing.c55d5e)  request without guideline (URL_TO_INSERT_TERM_3907 https://fairsharing.org/search?recordType=reporting_guideline) s, email request).
 
 **Step 3**
-Prepare at least the following informat (URL_TO_INSERT_TERM_4956 https://fairsharing.org/search?recordType=model_and_format) ion for requesting a new term:
+Prepare at least the following informat (URL_TO_INSERT_TERM_3910 https://fairsharing.org/search?recordType=model_and_format) ion for requesting a new term:
 * justification for the request
 * preferred term label: a unique, unambiguous label for the term
 * potential alternative terms: common synonyms or translations
 * textual definition: expresses the meaning of the term, add sources and fully expand abbreviations
 * logical definition: suggest parent and child terms
 * example of usage: propose a use case
-* attribution: contributor names (and ORCID (URL_TO_INSERT_RECORD_4957 https://fairsharing.org/FAIRsharing.nx58jg) s)
+* attribution: contributor names (and ORCIDs)
 
 **Step 4**
-Finalize and submit term request. Depending on the ontology (URL_TO_INSERT_TERM_4958 https://fairsharing.org/search?recordType=terminology_artefact) , it can take up to a year to have the new term incorporated in the ontology (URL_TO_INSERT_TERM_4959 https://fairsharing.org/search?recordType=terminology_artefact) , or to have the request rejected.
+Finalize and submit term request. Depending on the ontology (URL_TO_INSERT_TERM_3911 https://fairsharing.org/search?recordType=terminology_artefact) , it can take up to a year to have the new term incorporated in the ontology (URL_TO_INSERT_TERM_3912 https://fairsharing.org/search?recordType=terminology_artefact) , or to have the request rejected.
 
 
 ## Examples
 
 ### Formal request process
 
-**Example ontology (URL_TO_INSERT_TERM_4960 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Example ontology (URL_TO_INSERT_TERM_3913 https://fairsharing.org/search?recordType=terminology_artefact) :**
 [SNOMED CT - Systematized Nomenclature of Medicine](http://www.snomed.org/)
 
-**Scope of the ontology (URL_TO_INSERT_TERM_4961 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Scope of the ontology (URL_TO_INSERT_TERM_3914 https://fairsharing.org/search?recordType=terminology_artefact) :**
 conditions, clinical findings, procedures, body structures, substances, pharmaceuticals, devices, specimen
 
-**Informat (URL_TO_INSERT_TERM_4962 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions:**
+**Informat (URL_TO_INSERT_TERM_3915 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions:**
 SNOMED CT has a [Content Request Service (CRS)](https://confluence.ihtsdotools.org/display/SCTCR/CRS+User+Guide). Requests can be submitted by members of SNOMED International, Nationale Release Centers or other authorized users, and must align with the [Editorial guide](https://confluence.ihtsdotools.org/display/DOCEG). 
 When submitting a request, it is important to follow the aspects mentioned in **Step 3** of the **Step-by-Step process**. In addition to these aspects, the following is important to provide as well:
-* Reference(s) from a scientific or professional journal (URL_TO_INSERT_TERM_4963 https://fairsharing.org/search?recordType=journal) , or professional society (URL_TO_INSERT_TERM_4964 https://fairsharing.org/search?recordType=society) 
+* Reference(s) from a scientific or professional journal (URL_TO_INSERT_TERM_3916 https://fairsharing.org/search?recordType=journal) , or professional society (URL_TO_INSERT_TERM_3917 https://fairsharing.org/search?recordType=society) 
 * Fully expanded abbreviations
 
 When submitting to the CRS, a request can have one of the sixteen possible statuses ('New', 'Draft', 'Accepted', 'Under Authoring', 'Ready for Release', 'In Inception', 'Clarification Needed', 'Pending Internal Input', 'On Hold', 'Forwarded', 'Withdrawn', 'Rejected', 'Completed', 'Appeal','Appeal rejected', 'In Appeal Clarification'). Within CRS, submitters are notified when a status has been changed.
 
-More informat (URL_TO_INSERT_TERM_4965 https://fairsharing.org/search?recordType=model_and_format) ion can be found [here](https://www.snomed.org/snomed-ct/change-or-add) and in this [guide](https://www.snomed.org/SNOMED/media/SNOMED/documents/Version-8-0-CRS-Customer-Guidance-20191024.pdf).
+More informat (URL_TO_INSERT_TERM_3918 https://fairsharing.org/search?recordType=model_and_format) ion can be found [here](https://www.snomed.org/snomed-ct/change-or-add) and in this [guide](https://www.snomed.org/SNOMED/media/SNOMED/documents/Version-8-0-CRS-Customer-Guidance-20191024.pdf).
 
 ### Request via GitHub with explicit guidelines
 
-**Example ontology (URL_TO_INSERT_TERM_4966 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Example ontology (URL_TO_INSERT_TERM_3919 https://fairsharing.org/search?recordType=terminology_artefact) :**
 [OBI - Ontology for Biomedical Investigations](http://obi-ontology.org/)
 
-**Scope of the ontology (URL_TO_INSERT_TERM_4967 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Scope of the ontology (URL_TO_INSERT_TERM_3920 https://fairsharing.org/search?recordType=terminology_artefact) :**
 assays, devices, objectives in scientific investigations
 
-**Informat (URL_TO_INSERT_TERM_4968 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions:** 
-OBI provides a [GitHub repository](https://github.com/obi-ontology/obi) and a mailing list. New-term requests are handle (URL_TO_INSERT_RECORD_4971 https://fairsharing.org/FAIRsharing.0b7e54) d as GitHub (URL_TO_INSERT_RECORD_4970 https://fairsharing.org/FAIRsharing.c55d5e)  issues. There is an explicit [guideline (URL_TO_INSERT_TERM_4969 https://fairsharing.org/search?recordType=reporting_guideline)  document](http://obi-ontology.org/page/OBI_term_guidelines) on how to request new terms.
+**Informat (URL_TO_INSERT_TERM_3921 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions:** 
+OBI (URL_TO_INSERT_RECORD-ABBREV_3924 https://fairsharing.org/FAIRsharing.284e1z)  provides a [GitHub repository](https://github.com/obi-ontology/obi) and a mailing list. New-term requests are handled as GitHub (URL_TO_INSERT_RECORD-NAME_3923 https://fairsharing.org/FAIRsharing.c55d5e)  issues. There is an explicit [guideline (URL_TO_INSERT_TERM_3922 https://fairsharing.org/search?recordType=reporting_guideline)  document](http://obi-ontology.org/page/OBI_term_guidelines) on how to request new terms.
 
-For a proposed new term, they ask for the following informat (URL_TO_INSERT_TERM_4972 https://fairsharing.org/search?recordType=model_and_format) ion:
+For a proposed new term, they ask for the following informat (URL_TO_INSERT_TERM_3925 https://fairsharing.org/search?recordType=model_and_format) ion:
 * editor preferred term: a unique, unambiguous label for the term in American English
 * alternative terms: common synonyms or translations
 * textual definition
 * definition source for the textual definition
 * logical definition (or parent term)
 * example of usage
-* term editor: your name, and that of any collaborators, as it should appear in OBI (URL_TO_INSERT_RECORD_4973 https://fairsharing.org/FAIRsharing.284e1z) 
+* term editor: your name, and that of any collaborators, as it should appear in OBI (URL_TO_INSERT_RECORD-ABBREV_3926 https://fairsharing.org/FAIRsharing.284e1z) 
 
 ### Request via GitHub without guidelines
 
-**Example ontology (URL_TO_INSERT_TERM_4974 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Example ontology (URL_TO_INSERT_TERM_3927 https://fairsharing.org/search?recordType=terminology_artefact) :**
 [CL - Cell Ontology](http://obofoundry.org/ontology/cl.html)
 
-**Scope of the ontology (URL_TO_INSERT_TERM_4975 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Scope of the ontology (URL_TO_INSERT_TERM_3928 https://fairsharing.org/search?recordType=terminology_artefact) :**
 cell types
 
-**Informat (URL_TO_INSERT_TERM_4976 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions**:
-The Cell Ontology (URL_TO_INSERT_TERM_4978 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD_4979 https://fairsharing.org/FAIRsharing.j9y503)  provides a [GitHub repository](https://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the GitHub (URL_TO_INSERT_RECORD_4980 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_4977 https://fairsharing.org/search?recordType=repository) . 
+**Informat (URL_TO_INSERT_TERM_3929 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions**:
+The Cell Ontology (URL_TO_INSERT_TERM_3931 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD-NAME_3932 https://fairsharing.org/FAIRsharing.j9y503)  provides a [GitHub repository](https://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the GitHub (URL_TO_INSERT_RECORD-NAME_3933 https://fairsharing.org/FAIRsharing.c55d5e)  repository (URL_TO_INSERT_TERM_3930 https://fairsharing.org/search?recordType=repository) . 
 
 ### Request via email
 
-**Example ontology (URL_TO_INSERT_TERM_4981 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Example ontology (URL_TO_INSERT_TERM_3934 https://fairsharing.org/search?recordType=terminology_artefact) :**
 [RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/index.html)
 
-**Scope of the ontology (URL_TO_INSERT_TERM_4982 https://fairsharing.org/search?recordType=terminology_artefact) :**
+**Scope of the ontology (URL_TO_INSERT_TERM_3935 https://fairsharing.org/search?recordType=terminology_artefact) :**
 drugs
 
-**Informat (URL_TO_INSERT_TERM_4983 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions**:
-Informat (URL_TO_INSERT_TERM_4984 https://fairsharing.org/search?recordType=model_and_format) ion about requesting terms can be found in the [FAQ section](https://www.nlm.nih.gov/research/umls/faq_main.html) of the Unified Medical Language System (UMLS) where RxNorm (URL_TO_INSERT_RECORD_4985 https://fairsharing.org/FAIRsharing.36pf8q)  is part of.  
+**Informat (URL_TO_INSERT_TERM_3936 https://fairsharing.org/search?recordType=model_and_format) ion about requesting changes or additions**:
+Informat (URL_TO_INSERT_TERM_3937 https://fairsharing.org/search?recordType=model_and_format) ion about requesting terms can be found in the [FAQ section](https://www.nlm.nih.gov/research/umls/faq_main.html) of the Unified Medical Language System (UMLS) where RxNorm (URL_TO_INSERT_RECORD-NAME_3938 https://fairsharing.org/FAIRsharing.36pf8q)  is part of.  
 
-Changes or additions to UMLS can be requested by contacting [NLM Customer Support](https://support.nlm.nih.gov). The NLM Customer Support can be contacted through a [form](https://support.nlm.nih.gov/support/create-case/). If additions are specific to the source, you should contact the terminology (URL_TO_INSERT_TERM_4987 https://fairsharing.org/search?recordType=terminology_artefact)  source provider. Contact informat (URL_TO_INSERT_TERM_4986 https://fairsharing.org/search?recordType=model_and_format) ion is available in [Appendix 1](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement_appendix.html) of the Licence agreement.
+Changes or additions to UMLS can be requested by contacting [NLM Customer Support](https://support.nlm.nih.gov). The NLM Customer Support can be contacted through a [form](https://support.nlm.nih.gov/support/create-case/). If additions are specific to the source, you should contact the terminology (URL_TO_INSERT_TERM_3940 https://fairsharing.org/search?recordType=terminology_artefact)  source provider. Contact informat (URL_TO_INSERT_TERM_3939 https://fairsharing.org/search?recordType=model_and_format) ion is available in [Appendix 1](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement_appendix.html) of the Licence agreement.
 
 UMLS is updated in May and November of each year.
 
