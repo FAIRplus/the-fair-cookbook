@@ -18,7 +18,7 @@
 
 ## Main objectives
 
-This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM_0 https://fairsharing.org/search?recordType=repository)  such as NCBI SRA (URL_TO_INSERT_RECORD_3 https://fairsharing.org/FAIRsharing.g7t2hv)  and EMBL ENA (URL_TO_INSERT_RECORD_1 https://fairsharing.org/FAIRsharing.dj8nt8) , it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR (URL_TO_INSERT_RECORD_2 https://fairsharing.org/FAIRsharing.WWI10U)  compliance.
+This recipe covers documentation of the popular Aspera Fast Transfer Protocol and complements related recipes concerned with efficient files uploads and downloads. While the Aspera protocol is used by major public scientific data repositories (URL_TO_INSERT_TERM_0 https://fairsharing.org/search?recordType=repository)  such as NCBI SRA (URL_TO_INSERT_RECORD-ABBREV_3 https://fairsharing.org/FAIRsharing.g7t2hv)  and EMBL ENA (URL_TO_INSERT_RECORD-ABBREV_1 https://fairsharing.org/FAIRsharing.dj8nt8) , it is important to note that the communication protocol is **proprietary**. The recipe will therefore also cover some of the implications of using a closed protocol in terms of achieving FAIR (URL_TO_INSERT_RECORD-ABBREV_2 https://fairsharing.org/FAIRsharing.WWI10U)  compliance.
 
 
 ## Graphical overview
@@ -43,7 +43,7 @@ Aspera Data Transfer Process.
 * Pay attention to the conditions.
 * Sign up if you are the appropriate person for this download/upload. 
 * Typically, Aspera sites are locked down and need a username and password.
-* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary fam (URL_TO_INSERT_RECORD_4 https://fairsharing.org/FAIRsharing.d0886a) iliarity with the data, and rules should be in place how to distribute the downloaded data further.
+* For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data
 * A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.
@@ -108,7 +108,7 @@ ascp version 3.9.6.176292
 ## Conclusion
 
 * Aspera is commercial software
-* Is this still okay as part of FAIR (URL_TO_INSERT_RECORD_5 https://fairsharing.org/FAIRsharing.WWI10U)  principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.
+* Is this still okay as part of FAIR (URL_TO_INSERT_RECORD-ABBREV_4 https://fairsharing.org/FAIRsharing.WWI10U)  principles? As long as the instution with the server has paid for the licence, clients for the protocol are available at no fee.
 
 
 ### What to read next?

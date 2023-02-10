@@ -23,21 +23,21 @@
 
 ## Main Objectives
 
-If you ever had to do a literature search (URL_TO_INSERT_RECORD_4247 https://fairsharing.org/FAIRsharing.52b22c)  for a project (URL_TO_INSERT_TERM_4246 https://fairsharing.org/search?recordType=project) , you probably can appreciate the great effort behind traversing 
-the ever-expanding volumes of texts and trying to organise the extracted informat (URL_TO_INSERT_TERM_4248 https://fairsharing.org/search?recordType=model_and_format) ion.
+If you ever had to do a literature search for a project (URL_TO_INSERT_TERM_3395 https://fairsharing.org/search?recordType=project) , you probably can appreciate the great effort behind traversing 
+the ever-expanding volumes of texts and trying to organise the extracted informat (URL_TO_INSERT_TERM_3396 https://fairsharing.org/search?recordType=model_and_format) ion.
 In the past two decades, noticeable progress has been made, harnessing the power of machine-learning (ML) and 
 artificial intelligence (AI) based approaches to extract knowledge from large corpora of scientific literature.
-Modern ML algorithms aim to identify, extract, and store important informat (URL_TO_INSERT_TERM_4249 https://fairsharing.org/search?recordType=model_and_format) ion from unstructured text. 
-Among the most popular structured representations, knowledge graphs, in the form of RDF (URL_TO_INSERT_RECORD_4250 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graphs are rapidly
-becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR (URL_TO_INSERT_RECORD_4251 https://fairsharing.org/FAIRsharing.WWI10U)  data`.
+Modern ML algorithms aim to identify, extract, and store important informat (URL_TO_INSERT_TERM_3397 https://fairsharing.org/search?recordType=model_and_format) ion from unstructured text. 
+Among the most popular structured representations, knowledge graphs, in the form of RDF (URL_TO_INSERT_RECORD-ABBREV_3398 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graphs are rapidly
+becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR (URL_TO_INSERT_RECORD-ABBREV_3399 https://fairsharing.org/FAIRsharing.WWI10U)  data`.
 
-In simplified terms, the overall pipeline for informat (URL_TO_INSERT_TERM_4252 https://fairsharing.org/search?recordType=model_and_format) ion extraction can be broken down in the following key steps:
+In simplified terms, the overall pipeline for informat (URL_TO_INSERT_TERM_3400 https://fairsharing.org/search?recordType=model_and_format) ion extraction can be broken down in the following key steps:
 
 - Collecting the text data and assembling the data corpus
 - Performing entity disambiguation using a technique such as co-reference resolution
 - Performing entity recognition and named entity linking (NER step)
 - Performing relationship detection and extraction
-- Creating and storing the data in a knowledge graph (an RDF (URL_TO_INSERT_RECORD_4253 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graph in our example).
+- Creating and storing the data in a knowledge graph (an RDF (URL_TO_INSERT_RECORD-ABBREV_3401 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graph in our example).
 
 
 ## Graphical Overview
@@ -90,11 +90,11 @@ The table below lists the software that is used to execute the examples in this 
 
 | Software                                            | Description|
 | --------------------------------------------------- | --------------------------|
-| [biopython](https://biopython.org/wiki/Download)| The biopython project (URL_TO_INSERT_TERM_4254 https://fairsharing.org/search?recordType=project)  is an open-source collection (URL_TO_INSERT_TERM_4255 https://fairsharing.org/search?recordType=collection)  of non-commercial Python tools for computational biology and bioinformat (URL_TO_INSERT_TERM_4256 https://fairsharing.org/search?recordType=model_and_format) ics, created by an international association of developers|
+| [biopython](https://biopython.org/wiki/Download)| The biopython project (URL_TO_INSERT_TERM_3402 https://fairsharing.org/search?recordType=project)  is an open-source collection (URL_TO_INSERT_TERM_3403 https://fairsharing.org/search?recordType=collection)  of non-commercial Python tools for computational biology and bioinformat (URL_TO_INSERT_TERM_3404 https://fairsharing.org/search?recordType=model_and_format) ics, created by an international association of developers|
 | [spacy](https://spacy.io/) | Spacy is a beginner level industry strength natural language processing library|
-| [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference)  | A multi-lingual approach to AllenNLP CoRe (URL_TO_INSERT_RECORD_4257 https://fairsharing.org/FAIRsharing.xMmOCL) ference Resolution along with a wrapper for spaCy|
-| [rebel](https://github.com/Babelscape/rebel) | REBEL is a seq2seq model (URL_TO_INSERT_TERM_4258 https://fairsharing.org/search?recordType=model_and_format)  that simplifies Relation Extraction  |
-| [rdflib](https://github.com/RDFLib)| RDF (URL_TO_INSERT_RECORD_4260 https://fairsharing.org/FAIRsharing.p77ph9) Lib is a Python library for working with RDF (URL_TO_INSERT_RECORD_4261 https://fairsharing.org/FAIRsharing.p77ph9) , a framework for representing informat (URL_TO_INSERT_TERM_4259 https://fairsharing.org/search?recordType=model_and_format) ion|
+| [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference)  | A multi-lingual approach to AllenNLP CoReference Resolution along with a wrapper for spaCy|
+| [rebel](https://github.com/Babelscape/rebel) | REBEL is a seq2seq model (URL_TO_INSERT_TERM_3405 https://fairsharing.org/search?recordType=model_and_format)  that simplifies Relation Extraction  |
+| [rdflib](https://github.com/RDFLib)| RDFLib is a Python library for working with RDF (URL_TO_INSERT_RECORD-ABBREV_3407 https://fairsharing.org/FAIRsharing.p77ph9) , a framework for representing informat (URL_TO_INSERT_TERM_3406 https://fairsharing.org/search?recordType=model_and_format) ion|
 | [networkx python library](https://networkx.org/)| NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. |
 | [matplotlib library](https://matplotlib.org/)| Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.|
 
@@ -108,7 +108,7 @@ patents, or even be a result of picture descriptions produced by image-to-text a
 
 In our example, we created a dataset of articles' abstracts (corpora) on the topic "cardiac amyloidosis". In the biological domain,
 articles can be collected from the [PubMed database](https://pubmed.ncbi.nlm.nih.gov/) using [biopython](https://biopython.org/wiki/Download). 
-For the sake of simplicity, we retained only the first 5 articles that come up in the search (URL_TO_INSERT_RECORD_4262 https://fairsharing.org/FAIRsharing.52b22c) .
+For the sake of simplicity, we retained only the first 5 articles that come up in the search.
 
 
 ```python
@@ -151,9 +151,9 @@ papers = fetch_details(id_list)
 
 The text corpus prepared in the previous step is now processed to replace all ambiguous words found in a sentence so 
 that the text does not need any extra context to be understood. 
-Although a number of approaches to perform this task exists, one of the most recently developed (URL_TO_INSERT_RECORD_4263 https://fairsharing.org/FAIRsharing.31385c)  is a method known as 
+Although a number of approaches to perform this task exists, one of the most recently developed is a method known as 
 [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference) from the
-[spaCy python library](https://spacy.io/) {footcite}`crosslingualcore (URL_TO_INSERT_RECORD_4264 https://fairsharing.org/FAIRsharing.m283c)  (URL_TO_INSERT_RECORD_4265 https://fairsharing.org/FAIRsharing.xMmOCL) ference`. 
+[spaCy python library](https://spacy.io/) {footcite}`crosslingualcoreference`. 
 spaCy is a python library providing a comprehensive yet accessible way to 
 create pipelines for natural language processing.  
 In a nutshell, applying this procedure will, for example, replace personal pronouns with a referred person's name.
@@ -181,20 +181,20 @@ coref.add_pipe(
 
 The next step is known as Named Entity Recognition (NER).
 Here, we want to detect and extract all domain relevant entities from the sentences. 
-Depending on the use case, one may have to specifically train a model (URL_TO_INSERT_TERM_4266 https://fairsharing.org/search?recordType=model_and_format)  to recognise entities of a specific type. 
+Depending on the use case, one may have to specifically train a model (URL_TO_INSERT_TERM_3408 https://fairsharing.org/search?recordType=model_and_format)  to recognise entities of a specific type. 
 For example, in [this tutorial](https://towardsdatascience.com/clinical-named-entity-recognition-using-spacy-5ae9c002e86f),
-one can find a way to train a model (URL_TO_INSERT_TERM_4267 https://fairsharing.org/search?recordType=model_and_format)  to recognise some entities from a biomedical domain. 
-However, the spaCy library also provides a number of pre-trained model (URL_TO_INSERT_TERM_4268 https://fairsharing.org/search?recordType=model_and_format) s and, we will be using those in our example.
+one can find a way to train a model (URL_TO_INSERT_TERM_3409 https://fairsharing.org/search?recordType=model_and_format)  to recognise some entities from a biomedical domain. 
+However, the spaCy library also provides a number of pre-trained model (URL_TO_INSERT_TERM_3410 https://fairsharing.org/search?recordType=model_and_format) s and, we will be using those in our example.
 
-Following the entity recognition, one needs to standard (URL_TO_INSERT_TERM_4269 https://fairsharing.org/search?fairsharingRegistry=Standard) ise the entities and map (URL_TO_INSERT_RECORD_4272 https://fairsharing.org/FAIRsharing.53edcc)  them to an existing controlled terminology (URL_TO_INSERT_TERM_4270 https://fairsharing.org/search?recordType=terminology_artefact) /ontology (URL_TO_INSERT_TERM_4271 https://fairsharing.org/search?recordType=terminology_artefact) . 
+Following the entity recognition, one needs to standard (URL_TO_INSERT_TERM_3411 https://fairsharing.org/search?fairsharingRegistry=Standard) ise the entities and map (URL_TO_INSERT_RECORD-NAME_3414 https://fairsharing.org/FAIRsharing.53edcc)  them to an existing controlled terminology (URL_TO_INSERT_TERM_3412 https://fairsharing.org/search?recordType=terminology_artefact) /ontology (URL_TO_INSERT_TERM_3413 https://fairsharing.org/search?recordType=terminology_artefact) . 
 The process is known as `Entity Linking` (EL). 
-With this step, entities recognized from the text are map (URL_TO_INSERT_RECORD_4274 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_4275 https://fairsharing.org/FAIRsharing.31385c)  to one or more corresponding unique resolvable identifier (URL_TO_INSERT_TERM_4273 https://fairsharing.org/search?recordType=identifier_schema) s 
-from a target knowledge base, for example, Wikiped (URL_TO_INSERT_RECORD_4277 https://fairsharing.org/FAIRsharing.31385c) ia or semantic resource (e.g. an ontology (URL_TO_INSERT_TERM_4276 https://fairsharing.org/search?recordType=terminology_artefact)  such as 
+With this step, entities recognized from the text are mapped to one or more corresponding unique resolvable identifier (URL_TO_INSERT_TERM_3415 https://fairsharing.org/search?recordType=identifier_schema) s 
+from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology (URL_TO_INSERT_TERM_3416 https://fairsharing.org/search?recordType=terminology_artefact)  such as 
 [disease ontology](https://github.com/DiseaseOntology)) {footcite}`pmid34755882`.
-One may also use resolvable identifier (URL_TO_INSERT_TERM_4279 https://fairsharing.org/search?recordType=identifier_schema) s minted by database (URL_TO_INSERT_TERM_4278 https://fairsharing.org/search?fairsharingRegistry=Database) s and relevant to the specific topic of the texts. 
+One may also use resolvable identifier (URL_TO_INSERT_TERM_3418 https://fairsharing.org/search?recordType=identifier_schema) s minted by database (URL_TO_INSERT_TERM_3417 https://fairsharing.org/search?fairsharingRegistry=Database) s and relevant to the specific topic of the texts. 
 
-In this example, we will map (URL_TO_INSERT_RECORD_4280 https://fairsharing.org/FAIRsharing.53edcc)  our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT) and 
-for simplicity, we will by default choose the first match as a map (URL_TO_INSERT_RECORD_4281 https://fairsharing.org/FAIRsharing.53edcc) ping.
+In this example, we will map (URL_TO_INSERT_RECORD-NAME_3419 https://fairsharing.org/FAIRsharing.53edcc)  our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT) and 
+for simplicity, we will by default choose the first match as a mapping.
 
 ```{warning}
 Note, that in principle that is not always the best choice and one may wish to use different similarity metrics to 
@@ -208,7 +208,7 @@ A mapping to Wikipedia terms is demonstrated in [this tutorial](https://towardsd
 ## Relationship Extraction
 
 Following the step of entity linking, we now need to extract the relationships between the identified
-entities. This is necessary to be able to generate canonical RDF (URL_TO_INSERT_RECORD_4282 https://fairsharing.org/FAIRsharing.p77ph9)  triples, also known as RDF (URL_TO_INSERT_RECORD_4283 https://fairsharing.org/FAIRsharing.p77ph9)  subject predicate object 
+entities. This is necessary to be able to generate canonical RDF (URL_TO_INSERT_RECORD-ABBREV_3420 https://fairsharing.org/FAIRsharing.p77ph9)  triples, also known as RDF (URL_TO_INSERT_RECORD-ABBREV_3421 https://fairsharing.org/FAIRsharing.p77ph9)  subject predicate object 
 statements, and build a knowledge graph, 
 To perform the relation identification, we will use the python [Rebel project](https://github.com/Babelscape/rebel), which is
 also available as a spaCy component, and allows extracting both entities and relations in one step {footcite}`huguet-cabot-navigli-2021-rebel-relation`. 
@@ -273,7 +273,7 @@ for value, rel_dict in doc._.rel.items():
 ```
 Following the disambiguation step (using co-reference),  the "it" pronoun in the second sentence is replaced by the 
 unambiguous "High fever" entity. 
-After that step, the `Rebel` model (URL_TO_INSERT_TERM_4284 https://fairsharing.org/search?recordType=model_and_format)  extracted the subject, relation, object triples and map (URL_TO_INSERT_RECORD_4286 https://fairsharing.org/FAIRsharing.53edcc) ped (URL_TO_INSERT_RECORD_4287 https://fairsharing.org/FAIRsharing.31385c)  them to the NCIT model (URL_TO_INSERT_TERM_4285 https://fairsharing.org/search?recordType=model_and_format) . 
+After that step, the `Rebel` model (URL_TO_INSERT_TERM_3422 https://fairsharing.org/search?recordType=model_and_format)  extracted the subject, relation, object triples and mapped them to the NCIT model (URL_TO_INSERT_TERM_3423 https://fairsharing.org/search?recordType=model_and_format) . 
 
 ```{warning}
 Note that the automatic mapping is far from perfect.
@@ -288,11 +288,11 @@ Having said that, a key learning point is that a 'man in the loop' approach is p
 
 ## Storing the results
 
-The final subject, predicate, object triples can either be stored as a `labeled property graph` or as an `RDF graph`.
+The final subject, predicate, object triples can either be stored as a `labeled property graph` or as an `RDF (URL_TO_INSERT_RECORD-ABBREV_3424 https://fairsharing.org/FAIRsharing.p77ph9)  graph`.
 
-Here, we will outline an approach to store the results as an RDF (URL_TO_INSERT_RECORD_4288 https://fairsharing.org/FAIRsharing.p77ph9)  graph by using the python [rdflib](https://github.com/RDFLib) library.
+Here, we will outline an approach to store the results as an RDF (URL_TO_INSERT_RECORD-ABBREV_3425 https://fairsharing.org/FAIRsharing.p77ph9)  graph by using the python [rdflib](https://github.com/RDFLib) library.
 
-rdflib allows the creation of entities with known URI (URL_TO_INSERT_RECORD_4289 https://fairsharing.org/FAIRsharing.d261e1) s with the URI (URL_TO_INSERT_RECORD_4290 https://fairsharing.org/FAIRsharing.d261e1) Ref command.
+rdflib allows the creation of entities with known URIs with the URIRef command.
 
 Also, one can create a custom namespace with new entities and relations. 
 
@@ -370,7 +370,7 @@ for i, paper in enumerate(papers['PubmedArticle']):
     relations = pd.concat([relations, df])
 ```
 
-Finally, we can export the resulting graph in turtle (.ttl) format (URL_TO_INSERT_TERM_4291 https://fairsharing.org/search?recordType=model_and_format)  ...
+Finally, we can export the resulting graph in turtle (.ttl) format (URL_TO_INSERT_TERM_3426 https://fairsharing.org/search?recordType=model_and_format)  ...
 library.
 
 ```python
@@ -442,10 +442,10 @@ Viewing the knowledge graph with networks and matplotlib
 
 ## Conclusion
 
-Modern AI/ML algorithms allow processing large corpus of unstructured text and extract informat (URL_TO_INSERT_TERM_4292 https://fairsharing.org/search?recordType=model_and_format) ion to structure it. 
-For instance, informat (URL_TO_INSERT_TERM_4293 https://fairsharing.org/search?recordType=model_and_format) ion can be organised in a form of knowledge graphs, e.g. RDF (URL_TO_INSERT_RECORD_4294 https://fairsharing.org/FAIRsharing.p77ph9)  linked open data (LOD) graphs.
+Modern AI/ML algorithms allow processing large corpus of unstructured text and extract informat (URL_TO_INSERT_TERM_3427 https://fairsharing.org/search?recordType=model_and_format) ion to structure it. 
+For instance, informat (URL_TO_INSERT_TERM_3428 https://fairsharing.org/search?recordType=model_and_format) ion can be organised in a form of knowledge graphs, e.g. RDF (URL_TO_INSERT_RECORD-ABBREV_3429 https://fairsharing.org/FAIRsharing.p77ph9)  linked open data (LOD) graphs.
 The present document provides a typical text processing pipeline to achieve this task, even if in a simplified form.
-In more realistic cases, large text corpora will require more advanced techniques to be deployed, from model (URL_TO_INSERT_TERM_4295 https://fairsharing.org/search?recordType=model_and_format)  training to
+In more realistic cases, large text corpora will require more advanced techniques to be deployed, from model (URL_TO_INSERT_TERM_3430 https://fairsharing.org/search?recordType=model_and_format)  training to
 the development of specific algorithms, and the inclusion of expert curators to assist in the creation of the final knowledge graphs.
 Still, we hope this will provide our readership with a basic understanding of the techniques available to move from 
 unstructured text to generating knowledge graphs.

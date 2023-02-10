@@ -44,22 +44,22 @@ end-user, API are designed to be used by other computer programs. Designing and 
 enables your application to be more interoperable with, and ultimately more reused, by other applications. 
 Depending on the type of application, there are different ways to design APIs. Most important is that APIs should be 
 documented well. We will not cover [FAIR](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#fair) 
-APIs of software libraries, but instead focus on developing FAIR (URL_TO_INSERT_RECORD_2389 https://fairsharing.org/FAIRsharing.WWI10U)  APIs for the web.
+APIs of software libraries, but instead focus on developing FAIR (URL_TO_INSERT_RECORD-ABBREV_1843 https://fairsharing.org/FAIRsharing.WWI10U)  APIs for the web.
 
 More and more web-based applications are becoming available every day. These applications typically perform complex 
-operations on large database (URL_TO_INSERT_TERM_2390 https://fairsharing.org/search?fairsharingRegistry=Database) s. While web-based applications provide users with the capacity to access a tool, a database (URL_TO_INSERT_TERM_2391 https://fairsharing.org/search?fairsharingRegistry=Database) , 
+operations on large database (URL_TO_INSERT_TERM_1844 https://fairsharing.org/search?fairsharingRegistry=Database) s. While web-based applications provide users with the capacity to access a tool, a database (URL_TO_INSERT_TERM_1845 https://fairsharing.org/search?fairsharingRegistry=Database) , 
 or other resource programmatically, they are not always able to interoperate with other independent web applications. 
-A web-based application that offers a FAIR (URL_TO_INSERT_RECORD_2392 https://fairsharing.org/FAIRsharing.WWI10U)  API is more accessible to operating as part of workflows, or integration 
-systems such as semantic search (URL_TO_INSERT_RECORD_2394 https://fairsharing.org/FAIRsharing.52b22c)  engines. This makes FAIR (URL_TO_INSERT_RECORD_2393 https://fairsharing.org/FAIRsharing.WWI10U)  API development very relevant for data catalogs or web tools 
-developed (URL_TO_INSERT_RECORD_2396 https://fairsharing.org/FAIRsharing.31385c)  by the CF DC (URL_TO_INSERT_RECORD_2395 https://fairsharing.org/FAIRsharing.3nx7t)  (URL_TO_INSERT_RECORD_2397 https://fairsharing.org/3547) Cs.
+A web-based application that offers a FAIR (URL_TO_INSERT_RECORD-ABBREV_1846 https://fairsharing.org/FAIRsharing.WWI10U)  API is more accessible to operating as part of workflows, or integration 
+systems such as semantic search engines. This makes FAIR (URL_TO_INSERT_RECORD-ABBREV_1847 https://fairsharing.org/FAIRsharing.WWI10U)  API development very relevant for data catalogs or web tools 
+developed by the CF DCCs.
 
-While a slew of standard (URL_TO_INSERT_TERM_2398 https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for web API development and documentation, each has their own level of FAIR (URL_TO_INSERT_RECORD_2399 https://fairsharing.org/FAIRsharing.WWI10U) ness. 
+While a slew of standard (URL_TO_INSERT_TERM_1848 https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for web API development and documentation, each has their own level of FAIRness. 
 Here we are going to focus on [RESTful APIs](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm), 
 which can be described with [OpenAPI](https://www.openapis.org/) (previously Swagger) to take advantage of RESTful API 
-flexibility while still permitting machine readable introspection. Several other standard (URL_TO_INSERT_TERM_2400 https://fairsharing.org/search?fairsharingRegistry=Standard) s are machine readable by
+flexibility while still permitting machine readable introspection. Several other standard (URL_TO_INSERT_TERM_1849 https://fairsharing.org/search?fairsharingRegistry=Standard) s are machine readable by
 default, including [SOAP](https://www.w3.org/TR/soap/), [SPARQL](https://www.w3.org/TR/sparql11-overview/) or
 [GraphQL](https://graphql.org/) among many others, but despite this, RESTful APIs are the most widely used because of
-their low barrier to entry. Some standard (URL_TO_INSERT_TERM_2401 https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
+their low barrier to entry. Some standard (URL_TO_INSERT_TERM_1850 https://fairsharing.org/search?fairsharingRegistry=Standard) s exist for RESTful APIs, in many cases, these can also be described by OpenAPI.
 We will consider a specific extension of OpenAPI: [Smart-API](https://smart-api.info/), which adds a few additional 
 fields and also has its own [get-started guide](https://smart-api.info/guide).
 
@@ -74,7 +74,7 @@ Documenting APIs or building them from the ground up with SmartAPI in mind have 
 - Enabling simple use cases like enhancing findability with [API Catalogs](https://apis.guru/browse-apis/)
 - Enabling future use cases
 
-SmartAPI specification (URL_TO_INSERT_RECORD_2403 https://fairsharing.org/FAIRsharing.f3jewy) s inherit all of the benefits of OpenAPI, while adding the potential for interoperability with RDF (URL_TO_INSERT_RECORD_2402 https://fairsharing.org/FAIRsharing.p77ph9) 
+SmartAPI specifications inherit all of the benefits of OpenAPI, while adding the potential for interoperability with RDF (URL_TO_INSERT_RECORD-ABBREV_1851 https://fairsharing.org/FAIRsharing.p77ph9) 
 semantically linked data. This can help enable future use cases like [BioThings API](https://biothings.io/), powering
 semantically linked APIs for biomedical knowledge exploration.
 
@@ -84,10 +84,10 @@ semantically linked APIs for biomedical knowledge exploration.
 - OpenAPI/SmartAPI Editor (see step 1)
 
 ## Objectives
-We will look at the existing REST service provided by the Metabolomics Workbench (URL_TO_INSERT_RECORD_2404 https://fairsharing.org/FAIRsharing.xfrgsf)  catalog: <https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD_2405 https://fairsharing.org/FAIRsharing.xfrgsf) /tools/mw_rest.php>.
+We will look at the existing REST service provided by the Metabolomics Workbench (URL_TO_INSERT_RECORD-NAME_1852 https://fairsharing.org/FAIRsharing.xfrgsf)  catalog: <https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD-HOMEPAGE_1853 https://fairsharing.org/FAIRsharing.xfrgsf) /tools/mw_rest.php>.
 This API is described for human consumption, including examples for each endpoint. We will tackle some of the endpoints using OpenAPI.
 
-Although OpenAPI can be edited by most standard (URL_TO_INSERT_TERM_2406 https://fairsharing.org/search?fairsharingRegistry=Standard) s editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html)
+Although OpenAPI can be edited by most standard (URL_TO_INSERT_TERM_1854 https://fairsharing.org/search?fairsharingRegistry=Standard) s editors because it is typically written in [YAML](https://yaml.org/spec/1.2/spec.html)
 (a slightly 'nicer' version of [JSON](https://cfde-published-documentation.readthedocs-hosted.com/en/latest/CFDE-glossary/#json) that is equivalent),
 it is helpful to use an OpenAPI editor like <https://app.swaggerhub.com/home>. 
 This will catch errors as you edit, and permit testing of the endpoints as you encode immediately.
@@ -130,9 +130,9 @@ it will be valuable to follow the tutorial and construct it iteratively.
 
 ### Step 1: Setting up the OpenAPI Editor
 Several options exist, including the [Swagger Editor](https://swagger.io/tools/swagger-editor/), especially with APIs 
-that are enabled to support CO (URL_TO_INSERT_RECORD_2407 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_2408 https://fairsharing.org/FAIRsharing.thskvr) RS.
+that are enabled to support CORS.
 Unfortunately, the API we will work with here **does not**, so we will need to obtain a Swagger Editor that can operate
-even when CO (URL_TO_INSERT_RECORD_2409 https://fairsharing.org/FAIRsharing.wgfrmg)  (URL_TO_INSERT_RECORD_2410 https://fairsharing.org/FAIRsharing.thskvr) RS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue.
+even when CORS is not enabled. Because the de-facto swagger editor is a web-app, most editors have this issue.
 We specifically modified [an Open Source Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) so 
 that it supports this specific use case.
 
@@ -191,7 +191,7 @@ Swagger Editor
 Edits to the file will update the view **in real time**, and the view may be used to craft/test API requests.
 
 ### Step 2: Beginning an OpenAPI specification
-We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact informat (URL_TO_INSERT_TERM_2411 https://fairsharing.org/search?recordType=model_and_format) ion. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info/), making it possible to find your own APIs.
+We start by annotating useful descriptions for the API in the `info` field, this includes adding descriptors, version, license, and contact informat (URL_TO_INSERT_TERM_1855 https://fairsharing.org/search?recordType=model_and_format) ion. This gives your API an identity and this way it can be used in OpenAPI catalogs, for which there are several including [SmartAPI](https://smart-api.info/), making it possible to find your own APIs.
 
 The `servers` field has the base url(s) for accessing the API we're about to describe.
 
@@ -215,9 +215,9 @@ servers:
 ### Step 3: Describing a path
 The Metabolomics API offers several examples, let's tackle one of them:
 
-|Example request|Example URL (URL_TO_INSERT_RECORD_2412 https://fairsharing.org/FAIRsharing.9d38e2) |
+|Example request|Example URL (URL_TO_INSERT_RECORD-ABBREV_1856 https://fairsharing.org/FAIRsharing.9d38e2) |
 |-|-|
-|Show all publicly available studies (Project (URL_TO_INSERT_TERM_2413 https://fairsharing.org/search?recordType=project) , Study, Analysis ID)|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD_2414 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/study/study_id/ST/available|
+|Show all publicly available studies (Project (URL_TO_INSERT_TERM_1857 https://fairsharing.org/search?recordType=project) , Study, Analysis ID)|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD-HOMEPAGE_1858 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/study/study_id/ST/available|
 
 This tells us what the endpoint does to an extent; let's add that to our API under the `paths`.
 
@@ -273,7 +273,7 @@ curl -v -X GET -H 'Content-Type: application/json' https://www.metabolomicsworkb
 ...
 ```
 
-Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser informat (URL_TO_INSERT_TERM_2415 https://fairsharing.org/search?recordType=model_and_format) ion for webpage optimization.
+Note that your web browser does the same, albeit with a few different headers for end-to-end compression and browser informat (URL_TO_INSERT_TERM_1859 https://fairsharing.org/search?recordType=model_and_format) ion for webpage optimization.
 
 ```bash
 > GET https://www.metabolomicsworkbench.org/rest/study/study_id/ST/available HTTP/1.1
@@ -285,7 +285,7 @@ Note that your web browser does the same, albeit with a few different headers fo
 
 ```
 
-The `GET` at the start is changed to `POST` or another value when sending actual data (in the body of the packet). (`curl -v -X PO (URL_TO_INSERT_RECORD_2416 https://fairsharing.org/FAIRsharing.3ngg40) ST ... -d "packet data"`)
+The `GET` at the start is changed to `POST` or another value when sending actual data (in the body of the packet). (`curl -v -X POST ... -d "packet data"`)
 
 We did not know what the response would be by the webpage, but OpenAPI provides a means to describe this as well.
 
@@ -312,7 +312,7 @@ paths:
                       type: string
 ```
 
-The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT_TERM_2417 https://fairsharing.org/search?fairsharingRegistry=Standard) ized by HTTP but the gist is:
+The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT_TERM_1860 https://fairsharing.org/search?fairsharingRegistry=Standard) ized by HTTP but the gist is:
 
 |Code|Meaning|
 |-|-|
@@ -323,16 +323,16 @@ The `200` here refers to the HTTP status code, these are standard (URL_TO_INSERT
 
 We can explicitly describe what the response means for our application in the `description` under the response code. The `content -> application/json` refers to the `Content-Type` returned on the response header. This header tells you that the body will be json, and not i.e. `text/html` which we view most webpages as.
 
-Finally, the `schema` is JSON (URL_TO_INSERT_RECORD_2418 https://fairsharing.org/FAIRsharing.5bbab9) -Schema describing how the JSON (URL_TO_INSERT_RECORD_2419 https://fairsharing.org/FAIRsharing.5bbab9)  should look. It also supports describing each field individually in depth, and specifying optional or mandatory fields. We use `additionalProperties` to refer to the `values` in the object, and `properties` on a `type: object` to refer to the `key` specific description.
+Finally, the `schema` is JSON (URL_TO_INSERT_RECORD-ABBREV_1861 https://fairsharing.org/FAIRsharing.5bbab9) -Schema describing how the JSON (URL_TO_INSERT_RECORD-ABBREV_1862 https://fairsharing.org/FAIRsharing.5bbab9)  should look. It also supports describing each field individually in depth, and specifying optional or mandatory fields. We use `additionalProperties` to refer to the `values` in the object, and `properties` on a `type: object` to refer to the `key` specific description.
 
-The benefit of fully describing and endpoint like this is that a developer can fully understand what to expect from an endpoint, enabling them to determine code logic validity prior to having to test it at runtime. Furthermore, the SmartAPI initiative has an extension for relating those types to RDF (URL_TO_INSERT_RECORD_2420 https://fairsharing.org/FAIRsharing.p77ph9)  for visions like the [BioThings](https://biothings.io/).
+The benefit of fully describing and endpoint like this is that a developer can fully understand what to expect from an endpoint, enabling them to determine code logic validity prior to having to test it at runtime. Furthermore, the SmartAPI initiative has an extension for relating those types to RDF (URL_TO_INSERT_RECORD-ABBREV_1863 https://fairsharing.org/FAIRsharing.p77ph9)  for visions like the [BioThings](https://biothings.io/).
 
 ### Step 4: Adding a path with parameters
 Let's tackle our next endpoint:
 
-|Example request|Example URL (URL_TO_INSERT_RECORD_2421 https://fairsharing.org/FAIRsharing.9d38e2) |
+|Example request|Example URL (URL_TO_INSERT_RECORD-ABBREV_1864 https://fairsharing.org/FAIRsharing.9d38e2) |
 |-|-|
-|Fetch analysis informat (URL_TO_INSERT_TERM_2422 https://fairsharing.org/search?recordType=model_and_format) ion for a study|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD_2423 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/study/study_id/ST000001/analysis|
+|Fetch analysis informat (URL_TO_INSERT_TERM_1865 https://fairsharing.org/search?recordType=model_and_format) ion for a study|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD-HOMEPAGE_1866 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/study/study_id/ST000001/analysis|
 
 While the example shows `ST000001` in reality, the idea is that this can be any study ID, such as those coming out of the previous endpoint.
 
@@ -358,11 +358,11 @@ paths:
 
 We see some new concepts here, the first is the path which has a variable in it delineated by `{study_id}` where we would want the `study_id` to go. Paired with this we add an entry into the `parameters` array and state the same name `study_id` is `in: path` referring to this path-style variable substitution.
 
-Parameters can be added in other places as well. Google, for instance, describes search (URL_TO_INSERT_RECORD_2424 https://fairsharing.org/FAIRsharing.52b22c) es like so: `https://www.google.com/search?q=smartapi&sourceid=chrome&ie=UTF-8`, the `?q=...&sourceid=...` are referred to as query parameters and they are in the form: `?{name}={value}&{name}={value}&...`. You could describe these in OpenAPI as well by using `in: query`.
+Parameters can be added in other places as well. Google, for instance, describes searches like so: `https://www.google.com/search?q=smartapi&sourceid=chrome&ie=UTF-8`, the `?q=...&sourceid=...` are referred to as query parameters and they are in the form: `?{name}={value}&{name}={value}&...`. You could describe these in OpenAPI as well by using `in: query`.
 
 In the case of a `POST` you might use, `in: body` referring to the content you send with your request.
 
-Again, every parameter is validatable with JSON (URL_TO_INSERT_RECORD_2425 https://fairsharing.org/FAIRsharing.5bbab9) Schema. In our current example, we have used a JSON (URL_TO_INSERT_RECORD_2426 https://fairsharing.org/FAIRsharing.5bbab9) Schema pattern to constrain the type of string (URL_TO_INSERT_RECORD_2428 https://fairsharing.org/FAIRsharing.9b7wvk)  acceptable by the endpoint. In the case of a body, it could be an elaborate JSON (URL_TO_INSERT_RECORD_2427 https://fairsharing.org/FAIRsharing.5bbab9)  object such as our response schema.
+Again, every parameter is validatable with JSONSchema. In our current example, we have used a JSONSchema pattern to constrain the type of string (URL_TO_INSERT_RECORD-NAME_1868 https://fairsharing.org/FAIRsharing.9b7wvk)  acceptable by the endpoint. In the case of a body, it could be an elaborate JSON (URL_TO_INSERT_RECORD-ABBREV_1867 https://fairsharing.org/FAIRsharing.5bbab9)  object such as our response schema.
 
 Finally, we have included an `example` which will help developers with rapid testing of endpoints given valid examples. Using this example, we can use our OpenAPI Editor to trigger a new request:
 
@@ -424,7 +424,7 @@ paths:
 ```
 
 ### Step 5: Identifying components
-In some cases, a common set of JSON (URL_TO_INSERT_RECORD_2429 https://fairsharing.org/FAIRsharing.5bbab9)  objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It is also extremely helpful to include descriptions especially for fields that are not directly interpretable.
+In some cases, a common set of JSON (URL_TO_INSERT_RECORD-ABBREV_1869 https://fairsharing.org/FAIRsharing.5bbab9)  objects are reused throughout the API. It is often meaningful to turn these into their own 'component' and reference them. It is also extremely helpful to include descriptions especially for fields that are not directly interpretable.
 
 
 ```yaml
@@ -484,11 +484,11 @@ components:
 Under `components`, as many individual components can be specified, and they can be referenced using `$ref` with [JSON-Schema pointers](https://json-schema.org/draft/2019-09/relative-json-pointer.html) as shown above.
 
 ### Step 6: SmartAPI extension
-When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF (URL_TO_INSERT_RECORD_2430 https://fairsharing.org/FAIRsharing.p77ph9)  annotations to parameters or responses. We will demonstrate it on a new endpoint:
+When it comes to *automatic* interoperability, the [SmartAPI extension](https://smart-api.info/guide) to OpenAPI is almost essential. It provides mechanisms for adding RDF (URL_TO_INSERT_RECORD-ABBREV_1870 https://fairsharing.org/FAIRsharing.p77ph9)  annotations to parameters or responses. We will demonstrate it on a new endpoint:
 
-|Example request|Example URL (URL_TO_INSERT_RECORD_2431 https://fairsharing.org/FAIRsharing.9d38e2) |
+|Example request|Example URL (URL_TO_INSERT_RECORD-ABBREV_1871 https://fairsharing.org/FAIRsharing.9d38e2) |
 |-|-|
-|Fetch all protein fields from Entrez gene id|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD_2432 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/protein/gene_id/19/all/|
+|Fetch all protein fields from Entrez gene id|https://www.metabolomicsworkbench.org (URL_TO_INSERT_RECORD-HOMEPAGE_1872 https://fairsharing.org/FAIRsharing.xfrgsf) /rest/protein/gene_id/19/all/|
 
 ```yaml
 paths:
@@ -571,21 +571,21 @@ paths:
             x-valueType: https://identifiers.org/uniprot
 ```
 
-Here we see our usual path setup with a new section: `x-responseValueType`, this is the smartAPI (URL_TO_INSERT_RECORD_2433 https://fairsharing.org/FAIRsharing.f3jewy)  extension. 
-Each `x-path` refers to the path in the JSON (URL_TO_INSERT_RECORD_2434 https://fairsharing.org/FAIRsharing.5bbab9)  object (using `.` on nested keys). 
+Here we see our usual path setup with a new section: `x-responseValueType`, this is the smartAPI (URL_TO_INSERT_RECORD-ABBREV_1873 https://fairsharing.org/FAIRsharing.f3jewy)  extension. 
+Each `x-path` refers to the path in the JSON (URL_TO_INSERT_RECORD-ABBREV_1874 https://fairsharing.org/FAIRsharing.5bbab9)  object (using `.` on nested keys). 
 For instance, the `gene_id` does not need any `.` because it is the root of the response object. 
 The `x-valueType` here identifies the id namespace or context for which that value has meaning.
-Typically, this is a prefix path, in other words, you would produce a full URI (URL_TO_INSERT_RECORD_2435 https://fairsharing.org/FAIRsharing.d261e1)  with: `{x-valueType}/{actual_value}`.
+Typically, this is a prefix path, in other words, you would produce a full URI (URL_TO_INSERT_RECORD-ABBREV_1875 https://fairsharing.org/FAIRsharing.d261e1)  with: `{x-valueType}/{actual_value}`.
 
-[identifiers.org](http://identifiers.org/) is a public resource cataloging actual identifier (URL_TO_INSERT_TERM_2436 https://fairsharing.org/search?recordType=identifier_schema)  schemes making it an ideal
-way to namespace a given identifier (URL_TO_INSERT_TERM_2437 https://fairsharing.org/search?recordType=identifier_schema) . 
+[identifiers.org](http://identifiers.org/) is a public resource cataloging actual identifier (URL_TO_INSERT_TERM_1876 https://fairsharing.org/search?recordType=identifier_schema)  schemes making it an ideal
+way to namespace a given identifier (URL_TO_INSERT_TERM_1877 https://fairsharing.org/search?recordType=identifier_schema) . 
 It has the added benefit of providing an API for accessing additional metadata such as 
-cached [schema.org](https://schema.org/) annotations on the landing page of the resulting identifier (URL_TO_INSERT_TERM_2438 https://fairsharing.org/search?recordType=identifier_schema) .
+cached [schema.org](https://schema.org/) annotations on the landing page of the resulting identifier (URL_TO_INSERT_TERM_1878 https://fairsharing.org/search?recordType=identifier_schema) .
 
-With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF (URL_TO_INSERT_RECORD_2439 https://fairsharing.org/FAIRsharing.p77ph9)  queries 
+With the annotations fully described here, it becomes possible to eventually utilize your API for federated RDF (URL_TO_INSERT_RECORD-ABBREV_1879 https://fairsharing.org/FAIRsharing.p77ph9)  queries 
 without any additional effort. 
 This was demonstrated by the [BioThings](https://biothings.io/), which can integrate SmartAPI APIs with proper annotations.
-It also permits end users to find your APIs knowing their identifier (URL_TO_INSERT_TERM_2440 https://fairsharing.org/search?recordType=identifier_schema) s (i.e. ncbigenes).
+It also permits end users to find your APIs knowing their identifier (URL_TO_INSERT_TERM_1880 https://fairsharing.org/search?recordType=identifier_schema) s (i.e. ncbigenes).
 
 ### Step 7: Publishing and utilizing your OpenAPI/SmartAPI
 Once you have a working OpenAPI document, this open up numerous possibilities that you can now do. 
@@ -606,18 +606,18 @@ reusability of your API.
 ## Conclusion
 
 We've walked you through a case study where we documented an API using OpenAPI and SmartAPI extensions to build a 
-document that will vastly improve the FAIR (URL_TO_INSERT_RECORD_2441 https://fairsharing.org/FAIRsharing.WWI10U) ness of your API. 
+document that will vastly improve the FAIRness of your API. 
 After registering your API on an API catalog platform, such as [smart-api.info](https://smart-api.info/) you will enable
 developers and programs to find, introspect and interoperate with our API.
 Furthermore, existing tooling around OpenAPI can enable the accessibility and reusability of your APIs in many 
-programming languages and other standard (URL_TO_INSERT_TERM_2442 https://fairsharing.org/search?fairsharingRegistry=Standard) ized systems.
+programming languages and other standard (URL_TO_INSERT_TERM_1881 https://fairsharing.org/search?fairsharingRegistry=Standard) ized systems.
 
 
 ### What to read next?
 
 This content type focus on using OpenAPI.
 
-- [Grlc](http://grlc.io/): "converting your SP (URL_TO_INSERT_RECORD_2444 https://fairsharing.org/FAIRsharing.s63y3p) ARQL (URL_TO_INSERT_RECORD_2443 https://fairsharing.org/FAIRsharing.87ccfd)  queries into RESTful APIs"
+- [Grlc](http://grlc.io/): "converting your SPARQL (URL_TO_INSERT_RECORD-ABBREV_1882 https://fairsharing.org/FAIRsharing.87ccfd)  queries into RESTful APIs"
 - [GraphQL](https://graphql.org/):  "a Query Language for your API"
 - [OpenAPI-to-GraphQL](https://github.com/IBM/openapi-to-graphql) "From OpenAPI-to-GraphQL "
 - [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL) "an example of a GraphQL querying mechanism built to interrogate ISA metadata".

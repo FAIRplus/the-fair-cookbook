@@ -17,12 +17,12 @@
 
 ## Main Objectives
 
-The main purpose of this recipe is to provide FAIR (URL_TO_INSERT_RECORD_3627 https://fairsharing.org/FAIRsharing.WWI10U)  guidance relevant to the clinical domain by:
+The main purpose of this recipe is to provide FAIR (URL_TO_INSERT_RECORD-ABBREV_2875 https://fairsharing.org/FAIRsharing.WWI10U)  guidance relevant to the clinical domain by:
 
-> - providing a tool to convert Variant Call Files (VCF) to a HL7 (URL_TO_INSERT_RECORD_3629 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3628 https://fairsharing.org/FAIRsharing.25k4yp)  message
+> - providing a tool to convert Variant Call Files (VCF (URL_TO_INSERT_RECORD-ABBREV_2877 https://fairsharing.org/FAIRsharing.cfzz0h) ) to a HL7 (URL_TO_INSERT_RECORD-ABBREV_2878 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2876 https://fairsharing.org/FAIRsharing.25k4yp)  message
 > - highlighting known limitations of the solution
-> - raising awareness of the FHIR (URL_TO_INSERT_RECORD_3631 https://fairsharing.org/FAIRsharing.25k4yp)  standard (URL_TO_INSERT_TERM_3630 https://fairsharing.org/search?fairsharingRegistry=Standard)  in the context of clinically relevant data. 
-> - discussing the benefits of obtaining genetic variation informat (URL_TO_INSERT_TERM_3632 https://fairsharing.org/search?recordType=model_and_format) ion in a regularized form and available in a well-known syntax.
+> - raising awareness of the FHIR (URL_TO_INSERT_RECORD-ABBREV_2880 https://fairsharing.org/FAIRsharing.25k4yp)  standard (URL_TO_INSERT_TERM_2879 https://fairsharing.org/search?fairsharingRegistry=Standard)  in the context of clinically relevant data. 
+> - discussing the benefits of obtaining genetic variation informat (URL_TO_INSERT_TERM_2881 https://fairsharing.org/search?recordType=model_and_format) ion in a regularized form and available in a well-known syntax.
 
 ## Graphical Overview
 
@@ -32,10 +32,10 @@ The main purpose of this recipe is to provide FAIR (URL_TO_INSERT_RECORD_3627 ht
 ```{figure} vcf2fhir-json-overview.png
 ---
 width: 1200px
-name: Converting a VCF (URL_TO_INSERT_RECORD_3636 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_3633 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD_3637 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3635 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_3634 https://fairsharing.org/search?recordType=model_and_format) ted payload
-alt: Converting a VCF (URL_TO_INSERT_RECORD_3641 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_3638 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD_3642 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3640 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_3639 https://fairsharing.org/search?recordType=model_and_format) ted payload
+name: Converting a VCF (URL_TO_INSERT_RECORD-ABBREV_2885 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_2882 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD-ABBREV_2886 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2884 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_2883 https://fairsharing.org/search?recordType=model_and_format) ted payload
+alt: Converting a VCF (URL_TO_INSERT_RECORD-ABBREV_2890 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_2887 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD-ABBREV_2891 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2889 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_2888 https://fairsharing.org/search?recordType=model_and_format) ted payload
 ---
-Context for a scenario requiring converting a VCF (URL_TO_INSERT_RECORD_3646 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_3643 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD_3647 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3645 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_3644 https://fairsharing.org/search?recordType=model_and_format) ted payload.
+Context for a scenario requiring converting a VCF (URL_TO_INSERT_RECORD-ABBREV_2895 https://fairsharing.org/FAIRsharing.cfzz0h)  open standard (URL_TO_INSERT_TERM_2892 https://fairsharing.org/search?fairsharingRegistry=Standard)  file to a HL7 (URL_TO_INSERT_RECORD-ABBREV_2896 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2894 https://fairsharing.org/FAIRsharing.25k4yp)  format (URL_TO_INSERT_TERM_2893 https://fairsharing.org/search?recordType=model_and_format) ted payload.
 ```
 ````
 
@@ -46,9 +46,9 @@ The table below lists relevant use cases.
 
 |As a ..| I want to .. |So that I can ..|
 |---|--|--|
-|Data owner| Convert VCF (URL_TO_INSERT_RECORD_3653 https://fairsharing.org/FAIRsharing.cfzz0h)  to a FHIR (URL_TO_INSERT_RECORD_3652 https://fairsharing.org/FAIRsharing.25k4yp)  message| Produce an informat (URL_TO_INSERT_TERM_3649 https://fairsharing.org/search?recordType=model_and_format) ion payload carrying patient genotyping informat (URL_TO_INSERT_TERM_3650 https://fairsharing.org/search?recordType=model_and_format) ion in a standard (URL_TO_INSERT_TERM_3648 https://fairsharing.org/search?fairsharingRegistry=Standard) ized format (URL_TO_INSERT_TERM_3651 https://fairsharing.org/search?recordType=model_and_format)  compatible with EHR|
-|Data consumer| Integrate patient genetic informat (URL_TO_INSERT_TERM_3654 https://fairsharing.org/search?recordType=model_and_format) ion| Have seamless integration with other FHIR (URL_TO_INSERT_RECORD_3655 https://fairsharing.org/FAIRsharing.25k4yp)  messages from other sources| 
-|Data manager| Unify clinical informat (URL_TO_INSERT_TERM_3656 https://fairsharing.org/search?recordType=model_and_format) ion in one format (URL_TO_INSERT_TERM_3657 https://fairsharing.org/search?recordType=model_and_format) | Facilitate reuse and mining by clinicians|
+|Data owner| Convert VCF (URL_TO_INSERT_RECORD-ABBREV_2902 https://fairsharing.org/FAIRsharing.cfzz0h)  to a FHIR (URL_TO_INSERT_RECORD-ABBREV_2901 https://fairsharing.org/FAIRsharing.25k4yp)  message| Produce an informat (URL_TO_INSERT_TERM_2898 https://fairsharing.org/search?recordType=model_and_format) ion payload carrying patient genotyping informat (URL_TO_INSERT_TERM_2899 https://fairsharing.org/search?recordType=model_and_format) ion in a standard (URL_TO_INSERT_TERM_2897 https://fairsharing.org/search?fairsharingRegistry=Standard) ized format (URL_TO_INSERT_TERM_2900 https://fairsharing.org/search?recordType=model_and_format)  compatible with EHR|
+|Data consumer| Integrate patient genetic informat (URL_TO_INSERT_TERM_2903 https://fairsharing.org/search?recordType=model_and_format) ion| Have seamless integration with other FHIR (URL_TO_INSERT_RECORD-ABBREV_2904 https://fairsharing.org/FAIRsharing.25k4yp)  messages from other sources| 
+|Data manager| Unify clinical informat (URL_TO_INSERT_TERM_2905 https://fairsharing.org/search?recordType=model_and_format) ion in one format (URL_TO_INSERT_TERM_2906 https://fairsharing.org/search?recordType=model_and_format) | Facilitate reuse and mining by clinicians|
 
 ---
 
@@ -56,12 +56,12 @@ The table below lists relevant use cases.
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Format conversion](http://edamontology.org/operation_3434)  | [FHIR (URL_TO_INSERT_RECORD_3658 https://fairsharing.org/FAIRsharing.25k4yp)  format](https://fairsharing.org/FAIRsharing.25k4yp)  | Conversion results, Error report  |
+| [Format conversion](http://edamontology.org/operation_3434)  | [FHIR (URL_TO_INSERT_RECORD-ABBREV_2907 https://fairsharing.org/FAIRsharing.25k4yp)  format](https://fairsharing.org/FAIRsharing.25k4yp)  | Conversion results, Error report  |
 
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_3660 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_3661 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_3659 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Format (URL_TO_INSERT_TERM_2909 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_2910 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_2908 https://fairsharing.org/search?recordType=model_and_format) s  |
 | :------------- | :------------- | :------------- |
 | [VCF](http://edamontology.org/format_3016)  | |
 | [BCF](http://edamontology.org/format_3020)  | |
@@ -70,14 +70,14 @@ The table below lists relevant use cases.
 ||[LOINC](https://fairsharing.org/FAIRsharing.2mk2zb)||
 ---
 
-The `Variant Call File` or [VCF](http://edamontology.org/format_3016) is a file format (URL_TO_INSERT_TERM_3662 https://fairsharing.org/search?recordType=model_and_format)  specified by the [Global Alliance for Genomic Health](https://www.ga4gh.org/genomic-data-toolkit/) to report on genetic variation as detected by a range of molecular biology techniques (e.g., PC (URL_TO_INSERT_RECORD_3663 https://fairsharing.org/FAIRsharing.5y3gdd) R, GeneChip, nucleic acid sequencing). 
-It is considered to be the _de facto_ standard (URL_TO_INSERT_TERM_3664 https://fairsharing.org/search?fairsharingRegistry=Standard)  for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Worflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
+The `Variant Call File` or [VCF](http://edamontology.org/format_3016) is a file format (URL_TO_INSERT_TERM_2911 https://fairsharing.org/search?recordType=model_and_format)  specified by the [Global Alliance for Genomic Health](https://www.ga4gh.org/genomic-data-toolkit/) to report on genetic variation as detected by a range of molecular biology techniques (e.g., PCR, GeneChip, nucleic acid sequencing). 
+It is considered to be the _de facto_ standard (URL_TO_INSERT_TERM_2912 https://fairsharing.org/search?fairsharingRegistry=Standard)  for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Worflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
 
-The latest version of `Variant Call File` format (URL_TO_INSERT_TERM_3665 https://fairsharing.org/search?recordType=model_and_format)  is v4.3, the detailed specifications of which can be found [here](http://samtools.github.io/hts-specs/VCFv4.3.pdf) 
+The latest version of `Variant Call File` format (URL_TO_INSERT_TERM_2913 https://fairsharing.org/search?recordType=model_and_format)  is v4.3, the detailed specifications of which can be found [here](http://samtools.github.io/hts-specs/VCFv4.3.pdf) 
 
-The VCF (URL_TO_INSERT_RECORD_3676 https://fairsharing.org/FAIRsharing.cfzz0h)  format (URL_TO_INSERT_TERM_3667 https://fairsharing.org/search?recordType=model_and_format)  is species agnostic, making it suitable for use in any context, from agronomy to clinical practice. In fact, it is this last use case that this particular recipe will be focusing on. Indeed, this is when bioinformat (URL_TO_INSERT_TERM_3668 https://fairsharing.org/search?recordType=model_and_format) ics meets medical informat (URL_TO_INSERT_TERM_3669 https://fairsharing.org/search?recordType=model_and_format) ics and the need to translate data into different format (URL_TO_INSERT_TERM_3670 https://fairsharing.org/search?recordType=model_and_format)  arises. In the world of clinical informat (URL_TO_INSERT_TERM_3671 https://fairsharing.org/search?recordType=model_and_format) ics, exchanging informat (URL_TO_INSERT_TERM_3672 https://fairsharing.org/search?recordType=model_and_format) ion between systems increasingly relies on Health Level 7 data standard (URL_TO_INSERT_TERM_3666 https://fairsharing.org/search?fairsharingRegistry=Standard) s and in particular on the Fast Healthcare Interoperability Resource (FHIR (URL_TO_INSERT_RECORD_3674 https://fairsharing.org/FAIRsharing.25k4yp) ). A number of working groups focus on how to best fit clinical informat (URL_TO_INSERT_TERM_3673 https://fairsharing.org/search?recordType=model_and_format) ion within the paradigm of the HL7 (URL_TO_INSERT_RECORD_3677 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3675 https://fairsharing.org/FAIRsharing.25k4yp)  representation.
+The VCF (URL_TO_INSERT_RECORD-ABBREV_2924 https://fairsharing.org/FAIRsharing.cfzz0h)  format (URL_TO_INSERT_TERM_2915 https://fairsharing.org/search?recordType=model_and_format)  is species agnostic, making it suitable for use in any context, from agronomy to clinical practice. In fact, it is this last use case that this particular recipe will be focusing on. Indeed, this is when bioinformat (URL_TO_INSERT_TERM_2916 https://fairsharing.org/search?recordType=model_and_format) ics meets medical informat (URL_TO_INSERT_TERM_2917 https://fairsharing.org/search?recordType=model_and_format) ics and the need to translate data into different format (URL_TO_INSERT_TERM_2918 https://fairsharing.org/search?recordType=model_and_format)  arises. In the world of clinical informat (URL_TO_INSERT_TERM_2919 https://fairsharing.org/search?recordType=model_and_format) ics, exchanging informat (URL_TO_INSERT_TERM_2920 https://fairsharing.org/search?recordType=model_and_format) ion between systems increasingly relies on Health Level 7 data standard (URL_TO_INSERT_TERM_2914 https://fairsharing.org/search?fairsharingRegistry=Standard) s and in particular on the Fast Healthcare Interoperability Resource (FHIR (URL_TO_INSERT_RECORD-ABBREV_2922 https://fairsharing.org/FAIRsharing.25k4yp) ). A number of working groups focus on how to best fit clinical informat (URL_TO_INSERT_TERM_2921 https://fairsharing.org/search?recordType=model_and_format) ion within the paradigm of the HL7 (URL_TO_INSERT_RECORD-ABBREV_2925 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2923 https://fairsharing.org/FAIRsharing.25k4yp)  representation.
 
-In this FAIR (URL_TO_INSERT_RECORD_3682 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipe, we will highlight a software component allowing to convert a specific type of genetic variation informat (URL_TO_INSERT_TERM_3678 https://fairsharing.org/search?recordType=model_and_format) ion stored in VCF (URL_TO_INSERT_RECORD_3683 https://fairsharing.org/FAIRsharing.cfzz0h)  files into an HL7 (URL_TO_INSERT_RECORD_3684 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3680 https://fairsharing.org/FAIRsharing.25k4yp)  compliant, JSON (URL_TO_INSERT_RECORD_3681 https://fairsharing.org/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM_3679 https://fairsharing.org/search?recordType=model_and_format) ed message. 
+In this FAIR (URL_TO_INSERT_RECORD-ABBREV_2930 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipe, we will highlight a software component allowing to convert a specific type of genetic variation informat (URL_TO_INSERT_TERM_2926 https://fairsharing.org/search?recordType=model_and_format) ion stored in VCF (URL_TO_INSERT_RECORD-ABBREV_2931 https://fairsharing.org/FAIRsharing.cfzz0h)  files into an HL7 (URL_TO_INSERT_RECORD-ABBREV_2932 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2928 https://fairsharing.org/FAIRsharing.25k4yp)  compliant, JSON (URL_TO_INSERT_RECORD-ABBREV_2929 https://fairsharing.org/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM_2927 https://fairsharing.org/search?recordType=model_and_format) ed message. 
 
 The aptly named `vcf2fhir` library is a python package designed to perform this task. It is the result of work recently published by Dolin et al, 2021. {footcite}`pmid33653260`.
 
@@ -129,15 +129,15 @@ pip install vcf2fhir
 
 ### Using `vcf2fhir` package:
 
-In order to use the `VCF to FHIR (URL_TO_INSERT_RECORD_3685 https://fairsharing.org/FAIRsharing.25k4yp)  converter` function provided by the library, one needs to first obtain VCF (URL_TO_INSERT_RECORD_3686 https://fairsharing.org/FAIRsharing.cfzz0h)  files.
-Not only that, but as we indicated in the introduction, the version of the VCF (URL_TO_INSERT_RECORD_3688 https://fairsharing.org/FAIRsharing.cfzz0h)  files should be at least v4.1. Furthermore, they should be such that they contain only `simple variant` informat (URL_TO_INSERT_TERM_3687 https://fairsharing.org/search?recordType=model_and_format) ion and not `structural variants` (a type of genetic variations which aren't currently supported by the `vcf2fhir` library).
+In order to use the `VCF (URL_TO_INSERT_RECORD-ABBREV_2934 https://fairsharing.org/FAIRsharing.cfzz0h)  to FHIR (URL_TO_INSERT_RECORD-ABBREV_2933 https://fairsharing.org/FAIRsharing.25k4yp)  converter` function provided by the library, one needs to first obtain VCF (URL_TO_INSERT_RECORD-ABBREV_2935 https://fairsharing.org/FAIRsharing.cfzz0h)  files.
+Not only that, but as we indicated in the introduction, the version of the VCF (URL_TO_INSERT_RECORD-ABBREV_2937 https://fairsharing.org/FAIRsharing.cfzz0h)  files should be at least v4.1. Furthermore, they should be such that they contain only `simple variant` informat (URL_TO_INSERT_TERM_2936 https://fairsharing.org/search?recordType=model_and_format) ion and not `structural variants` (a type of genetic variations which aren't currently supported by the `vcf2fhir` library).
 
 ```{admonition} Note
 :class: tip
 *  The following section shows how to download VCF files available from public location, the VCF2FHIR github repository in this instance. 
 ```
 
-Obtaining an exemplar VCF (URL_TO_INSERT_RECORD_3689 https://fairsharing.org/FAIRsharing.cfzz0h)  file from the [vcf2fhir github repository](https://github.com/elimuinformatics/vcf2fhir) using the `wget` command:
+Obtaining an exemplar VCF (URL_TO_INSERT_RECORD-ABBREV_2938 https://fairsharing.org/FAIRsharing.cfzz0h)  file from the [vcf2fhir github repository](https://github.com/elimuinformatics/vcf2fhir) using the `wget` command:
 
 ```bash
 wget -c https://raw.githubusercontent.com/elimuinformatics/vcf2fhir/master/vcf2fhir/test/vcf_example1.vcf
@@ -186,13 +186,13 @@ vcf_fhir_converter.convert()
 
 ```
 
-The result of the conversion is a so-called `FHIR (URL_TO_INSERT_RECORD_3691 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics report`, the specifications of which are available [here](http://hl7.org/fhir/uv/genomics-reporting/index.html). A number of options are available from the converter to allow users to modify and tune the output to contains specific informat (URL_TO_INSERT_TERM_3690 https://fairsharing.org/search?recordType=model_and_format) ion depending on the use cases. The conversion can be restricted to a subset of records found in a VCF (URL_TO_INSERT_RECORD_3692 https://fairsharing.org/FAIRsharing.cfzz0h)  file by specifying particular portions, e.g., conversion regions, studied regions, clinical annotations, or uncallable regions.
+The result of the conversion is a so-called `FHIR (URL_TO_INSERT_RECORD-ABBREV_2940 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics report`, the specifications of which are available [here](http://hl7.org/fhir/uv/genomics-reporting/index.html). A number of options are available from the converter to allow users to modify and tune the output to contains specific informat (URL_TO_INSERT_TERM_2939 https://fairsharing.org/search?recordType=model_and_format) ion depending on the use cases. The conversion can be restricted to a subset of records found in a VCF (URL_TO_INSERT_RECORD-ABBREV_2941 https://fairsharing.org/FAIRsharing.cfzz0h)  file by specifying particular portions, e.g., conversion regions, studied regions, clinical annotations, or uncallable regions.
 
 For a full and detailed overview of these options, we direct the readers to the [original manual](https://github.com/elimuinformatics/vcf2fhir/blob/master/docs/Manual.md) for the `vcf2fhir` library.
 
-Depending on the options specified by the user, different types of 'FHIR (URL_TO_INSERT_RECORD_3694 https://fairsharing.org/FAIRsharing.25k4yp)  genomics report' may be generated. They will differ in content and layout but all rely on a number of normative patterns and terminologies (URL_TO_INSERT_TERM_3693 https://fairsharing.org/search?recordType=terminology_artefact)  (e.g. LOINC (URL_TO_INSERT_RECORD_3695 https://fairsharing.org/FAIRsharing.2mk2zb) ).
+Depending on the options specified by the user, different types of 'FHIR (URL_TO_INSERT_RECORD-ABBREV_2943 https://fairsharing.org/FAIRsharing.25k4yp)  genomics report' may be generated. They will differ in content and layout but all rely on a number of normative patterns and terminologies (URL_TO_INSERT_TERM_2942 https://fairsharing.org/search?recordType=terminology_artefact)  (e.g. LOINC (URL_TO_INSERT_RECORD-ABBREV_2944 https://fairsharing.org/FAIRsharing.2mk2zb) ).
 
-* Create FHIR (URL_TO_INSERT_RECORD_3696 https://fairsharing.org/FAIRsharing.25k4yp)  Diagnostic Report
+* Create FHIR (URL_TO_INSERT_RECORD-ABBREV_2945 https://fairsharing.org/FAIRsharing.25k4yp)  Diagnostic Report
 * Create RegionStudied observations
 * Create Variant observations
 * Create SequencePhaseRelationship observations
@@ -201,15 +201,15 @@ Depending on the options specified by the user, different types of 'FHIR (URL_TO
 
 More examples to instantiate the converter
 
--  Converts all variants in VCF (URL_TO_INSERT_RECORD_3698 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD_3697 https://fairsharing.org/FAIRsharing.25k4yp)  report contains no region-studied observation.
+-  Converts all variants in VCF (URL_TO_INSERT_RECORD-ABBREV_2947 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD-ABBREV_2946 https://fairsharing.org/FAIRsharing.25k4yp)  report contains no region-studied observation.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'aabc')
 ```
 
--  Converts all variants in VCF (URL_TO_INSERT_RECORD_3700 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD_3699 https://fairsharing.org/FAIRsharing.25k4yp)  report assign homoplasmic vs. heteroplasmic based on:
+-  Converts all variants in VCF (URL_TO_INSERT_RECORD-ABBREV_2949 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD-ABBREV_2948 https://fairsharing.org/FAIRsharing.25k4yp)  report assign homoplasmic vs. heteroplasmic based on:
 
-   If allelic depth (FORMAT (URL_TO_INSERT_TERM_3701 https://fairsharing.org/search?recordType=model_and_format) .AD)/ read depth (FORMAT (URL_TO_INSERT_TERM_3702 https://fairsharing.org/search?recordType=model_and_format) .DP) is greater than 0.89 then allelic state is homoplasmic; otherwise, it is heteroplasmic.
+   If allelic depth (FORMAT (URL_TO_INSERT_TERM_2950 https://fairsharing.org/search?recordType=model_and_format) .AD)/ read depth (FORMAT (URL_TO_INSERT_TERM_2951 https://fairsharing.org/search?recordType=model_and_format) .DP) is greater than 0.89 then allelic state is homoplasmic; otherwise, it is heteroplasmic.
 
    **Note** : the default value of ratio_ad_dp = 0.99 and the ratio_ad_dp is considered valid only when its value lies between 0 and 1.
 
@@ -223,19 +223,19 @@ vcf2fhir.Converter('vcftests.vcf','GRCh37', 'aabc', ratio_ad_dp = 0.89)
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'babc', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
--  Converts all variants in VCF (URL_TO_INSERT_RECORD_3704 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD_3703 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome.
+-  Converts all variants in VCF (URL_TO_INSERT_RECORD-ABBREV_2953 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD-ABBREV_2952 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'cabc', region_studied_filename='WGS_b37_region_studied.bed')
 ```
 
--  Converts all variants in VCF (URL_TO_INSERT_RECORD_3706 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD_3705 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome.
+-  Converts all variants in VCF (URL_TO_INSERT_RECORD-ABBREV_2955 https://fairsharing.org/FAIRsharing.cfzz0h) . FHIR (URL_TO_INSERT_RECORD-ABBREV_2954 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'dabc', region_studied_filename='WGS_b37_region_studied.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
--  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD_3707 https://fairsharing.org/FAIRsharing.25k4yp)  report contains no region-studied observation.
+-  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD-ABBREV_2956 https://fairsharing.org/FAIRsharing.25k4yp)  report contains no region-studied observation.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'eabc', conv_region_filename='WGS_b37_convert_everything.bed')
@@ -247,28 +247,28 @@ vcf2fhir.Converter('vcftests.vcf','GRCh37', 'eabc', conv_region_filename='WGS_b3
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'fabc', conv_region_filename='WGS_b37_convert_everything.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
--  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD_3708 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome, intersected with
+-  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD-ABBREV_2957 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome, intersected with
    conversion region.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'gabc', conv_region_filename='WGS_b37_convert_everything.bed', region_studied_filename='WGS_b37_region_studied.bed')
 ```
 
--  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD_3709 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome, intersected with
+-  Converts all variants in conversion region. FHIR (URL_TO_INSERT_RECORD-ABBREV_2958 https://fairsharing.org/FAIRsharing.25k4yp)  report contains one region-studied observation per studied chromosome, intersected with
    conversion region.
 
 ```python
 vcf2fhir.Converter('vcftests.vcf','GRCh37', 'habc', conv_region_filename='WGS_b37_convert_everything.bed', region_studied_filename='WGS_b37_region_studied.bed', nocall_filename='WGS_b37_region_noncallable.bed')
 ```
 
--  Conversion of a bgzipped (URL_TO_INSERT_RECORD_3710 https://fairsharing.org/FAIRsharing.31385c)  VCF (URL_TO_INSERT_RECORD_3711 https://fairsharing.org/FAIRsharing.cfzz0h) 
+-  Conversion of a bgzipped VCF (URL_TO_INSERT_RECORD-ABBREV_2959 https://fairsharing.org/FAIRsharing.cfzz0h) 
 
 ```python
 vcf2fhir.Converter('vcf_example4.vcf.gz','GRCh37', 'kabc', has_tabix=True)
 ```
 
-Below is a typical output of the `vcf2fhir` tool: a HL7 (URL_TO_INSERT_RECORD_3713 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3712 https://fairsharing.org/FAIRsharing.25k4yp)  message compliant with the Genomics Report pattern. 
-Note the use of [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb) terminology (URL_TO_INSERT_TERM_3714 https://fairsharing.org/search?recordType=terminology_artefact)  for key descriptors.
+Below is a typical output of the `vcf2fhir` tool: a HL7 (URL_TO_INSERT_RECORD-ABBREV_2961 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2960 https://fairsharing.org/FAIRsharing.25k4yp)  message compliant with the Genomics Report pattern. 
+Note the use of [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb) terminology (URL_TO_INSERT_TERM_2962 https://fairsharing.org/search?recordType=terminology_artefact)  for key descriptors.
 
 
 ```JSON
@@ -403,9 +403,9 @@ Note the use of [LOINC](https://fairsharing.org/FAIRsharing.2mk2zb) terminology 
 
 No conversion tool is failsafe. Therefore, the `vcf2fhir` library provides 2 distinct logging functions, which plug naturally into the python generic error logging package.
 
--  **vcf2fhir.general**: this mode provides the standard (URL_TO_INSERT_TERM_3715 https://fairsharing.org/search?fairsharingRegistry=Standard)  library logging functions. 
+-  **vcf2fhir.general**: this mode provides the standard (URL_TO_INSERT_TERM_2963 https://fairsharing.org/search?fairsharingRegistry=Standard)  library logging functions. 
 
--  **vcf2fhir.invalidrecord**: this mode logs all the `records` from the input vcf file which are in present in the `conversion region` but are not converted to `fhir format (URL_TO_INSERT_TERM_3716 https://fairsharing.org/search?recordType=model_and_format) `.
+-  **vcf2fhir.invalidrecord**: this mode logs all the `records` from the input vcf file which are in present in the `conversion region` but are not converted to `fhir format (URL_TO_INSERT_TERM_2964 https://fairsharing.org/search?recordType=model_and_format) `.
 
 
 To take advantage of this mechanism, users can invoke each of the `vcf2fhir` loggers in the manner described below:
@@ -436,8 +436,8 @@ logger.addHandler(ch)
 
 ### Take home message from using the `vcf2fhir` python library
 
-* an `initial capability` supporting generation of `HL7 FHIR (URL_TO_INSERT_RECORD_3717 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics Report message` from VCF (URL_TO_INSERT_RECORD_3718 https://fairsharing.org/FAIRsharing.cfzz0h)  files.
-* generation of LOINC (URL_TO_INSERT_RECORD_3722 https://fairsharing.org/FAIRsharing.2mk2zb) -annotated, JSON (URL_TO_INSERT_RECORD_3721 https://fairsharing.org/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM_3719 https://fairsharing.org/search?recordType=model_and_format) ted documents containing simple genetic variation informat (URL_TO_INSERT_TERM_3720 https://fairsharing.org/search?recordType=model_and_format) ion.
+* an `initial capability` supporting generation of `HL7 (URL_TO_INSERT_RECORD-ABBREV_2967 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2965 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics Report message` from VCF (URL_TO_INSERT_RECORD-ABBREV_2966 https://fairsharing.org/FAIRsharing.cfzz0h)  files.
+* generation of LOINC (URL_TO_INSERT_RECORD-ABBREV_2971 https://fairsharing.org/FAIRsharing.2mk2zb) -annotated, JSON (URL_TO_INSERT_RECORD-ABBREV_2970 https://fairsharing.org/FAIRsharing.5bbab9)  format (URL_TO_INSERT_TERM_2968 https://fairsharing.org/search?recordType=model_and_format) ted documents containing simple genetic variation informat (URL_TO_INSERT_TERM_2969 https://fairsharing.org/search?recordType=model_and_format) ion.
 * availability of a conversion error log, for quality control and error tracking tasks.
 
 
@@ -446,27 +446,27 @@ logger.addHandler(ch)
 ## Conclusion
 
 
-**Why does this matter and how does it relate to FAIR (URL_TO_INSERT_RECORD_3723 https://fairsharing.org/FAIRsharing.WWI10U) ?**
+**Why does this matter and how does it relate to FAIR (URL_TO_INSERT_RECORD-ABBREV_2972 https://fairsharing.org/FAIRsharing.WWI10U) ?**
 
-The conversion from VCF (URL_TO_INSERT_RECORD_3727 https://fairsharing.org/FAIRsharing.cfzz0h)  to HL7 (URL_TO_INSERT_RECORD_3728 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3724 https://fairsharing.org/FAIRsharing.25k4yp)  JSON (URL_TO_INSERT_RECORD_3725 https://fairsharing.org/FAIRsharing.5bbab9)  message has to do with the `**I and R**` of `FAIR (URL_TO_INSERT_RECORD_3726 https://fairsharing.org/FAIRsharing.WWI10U) `, that is `interoperability` and `reusability`.
-- From a syntactic standpoint, the availability of genetic variation informat (URL_TO_INSERT_TERM_3729 https://fairsharing.org/search?recordType=model_and_format) ion at a granular level in an easily parseable form (JSON (URL_TO_INSERT_RECORD_3731 https://fairsharing.org/FAIRsharing.5bbab9) ) is a gain for anyone looking at merging this informat (URL_TO_INSERT_TERM_3730 https://fairsharing.org/search?recordType=model_and_format) ion with other clinical messages.
-- From a semantic standpoint, the reliance on `LOINC (URL_TO_INSERT_RECORD_3733 https://fairsharing.org/FAIRsharing.2mk2zb) ` vocabulary to mark up the patterns defined in the HL7 (URL_TO_INSERT_RECORD_3734 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD_3732 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics Reports enhances interoperation between systems by provided unambiguous annotations.
-- Finally, as more systems are able to produce FHIR (URL_TO_INSERT_RECORD_3735 https://fairsharing.org/FAIRsharing.25k4yp)  messages from a variety of instruments or data sources, the availability of a FHIR (URL_TO_INSERT_RECORD_3736 https://fairsharing.org/FAIRsharing.25k4yp)  message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.
+The conversion from VCF (URL_TO_INSERT_RECORD-ABBREV_2976 https://fairsharing.org/FAIRsharing.cfzz0h)  to HL7 (URL_TO_INSERT_RECORD-ABBREV_2977 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2973 https://fairsharing.org/FAIRsharing.25k4yp)  JSON (URL_TO_INSERT_RECORD-ABBREV_2974 https://fairsharing.org/FAIRsharing.5bbab9)  message has to do with the `**I and R**` of `FAIR (URL_TO_INSERT_RECORD-ABBREV_2975 https://fairsharing.org/FAIRsharing.WWI10U) `, that is `interoperability` and `reusability`.
+- From a syntactic standpoint, the availability of genetic variation informat (URL_TO_INSERT_TERM_2978 https://fairsharing.org/search?recordType=model_and_format) ion at a granular level in an easily parseable form (JSON (URL_TO_INSERT_RECORD-ABBREV_2980 https://fairsharing.org/FAIRsharing.5bbab9) ) is a gain for anyone looking at merging this informat (URL_TO_INSERT_TERM_2979 https://fairsharing.org/search?recordType=model_and_format) ion with other clinical messages.
+- From a semantic standpoint, the reliance on `LOINC (URL_TO_INSERT_RECORD-ABBREV_2982 https://fairsharing.org/FAIRsharing.2mk2zb) ` vocabulary to mark up the patterns defined in the HL7 (URL_TO_INSERT_RECORD-ABBREV_2983 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_2981 https://fairsharing.org/FAIRsharing.25k4yp)  Genomics Reports enhances interoperation between systems by provided unambiguous annotations.
+- Finally, as more systems are able to produce FHIR (URL_TO_INSERT_RECORD-ABBREV_2984 https://fairsharing.org/FAIRsharing.25k4yp)  messages from a variety of instruments or data sources, the availability of a FHIR (URL_TO_INSERT_RECORD-ABBREV_2985 https://fairsharing.org/FAIRsharing.25k4yp)  message covering a subset of genetic variation available from testing facilities makes investigating and mining phenotypic and genotypic relations more straightforward.
 - However, one needs to remember that the capability afforded by the `vcf2fhir` library is at an early stage and only supports simple cases. More efforts and more efforts is needed before a functionality is available at a Technical Readiness Level compatible with production systems.
 
 **Any other important issues?**
 
-- We have highlighted the existing limitations surrounding the use of the open source conversion tool and that users should **carefully** assess the nature of the informat (URL_TO_INSERT_TERM_3737 https://fairsharing.org/search?recordType=model_and_format) ion present in the input VCF (URL_TO_INSERT_RECORD_3739 https://fairsharing.org/FAIRsharing.cfzz0h)  files prior to executing the code. Bearing this in mind, the `vcf2fhir` tool provides an easy to deploy and easy to use solution for anyone interested in adding a FHIR (URL_TO_INSERT_RECORD_3738 https://fairsharing.org/FAIRsharing.25k4yp)  message capability to a clinical genetic analysis pipeline,for instance on consuming DNA microarray GeneChip genotyping solutions. The authors of the tool aim to expand its capabilities to include `enhancing the conversion logic to accommodate VCF (URL_TO_INSERT_RECORD_3740 https://fairsharing.org/FAIRsharing.cfzz0h)  rows representing structural variants (i.e. rows that contain an INFO.SVTYPE field)`.
+- We have highlighted the existing limitations surrounding the use of the open source conversion tool and that users should **carefully** assess the nature of the informat (URL_TO_INSERT_TERM_2986 https://fairsharing.org/search?recordType=model_and_format) ion present in the input VCF (URL_TO_INSERT_RECORD-ABBREV_2988 https://fairsharing.org/FAIRsharing.cfzz0h)  files prior to executing the code. Bearing this in mind, the `vcf2fhir` tool provides an easy to deploy and easy to use solution for anyone interested in adding a FHIR (URL_TO_INSERT_RECORD-ABBREV_2987 https://fairsharing.org/FAIRsharing.25k4yp)  message capability to a clinical genetic analysis pipeline,for instance on consuming DNA microarray GeneChip genotyping solutions. The authors of the tool aim to expand its capabilities to include `enhancing the conversion logic to accommodate VCF (URL_TO_INSERT_RECORD-ABBREV_2989 https://fairsharing.org/FAIRsharing.cfzz0h)  rows representing structural variants (i.e. rows that contain an INFO.SVTYPE field)`.
 
-- Finally, it is important to realize that the resulting JSON (URL_TO_INSERT_RECORD_3743 https://fairsharing.org/FAIRsharing.5bbab9)  message, as it is, lacks important metadata to be fully and properly FAIR (URL_TO_INSERT_RECORD_3745 https://fairsharing.org/FAIRsharing.WWI10U)  (e.g., `licence informat (URL_TO_INSERT_TERM_3741 https://fairsharing.org/search?recordType=model_and_format) ion`). One has therefore to see this `capability` as one of the many elements that needs to be put together to build and deliver a FAIR (URL_TO_INSERT_RECORD_3746 https://fairsharing.org/FAIRsharing.WWI10U)  infrastructure. For instance, this HL7 (URL_TO_INSERT_RECORD_3748 https://fairsharing.org/FAIRsharing.ka5tfc)  JSON (URL_TO_INSERT_RECORD_3744 https://fairsharing.org/FAIRsharing.5bbab9)  message could be embedded in a more complex system, which would package informat (URL_TO_INSERT_TERM_3742 https://fairsharing.org/search?recordType=model_and_format) ion and deliver a FAIR (URL_TO_INSERT_RECORD_3747 https://fairsharing.org/FAIRsharing.WWI10U)  payload.
+- Finally, it is important to realize that the resulting JSON (URL_TO_INSERT_RECORD-ABBREV_2992 https://fairsharing.org/FAIRsharing.5bbab9)  message, as it is, lacks important metadata to be fully and properly FAIR (URL_TO_INSERT_RECORD-ABBREV_2994 https://fairsharing.org/FAIRsharing.WWI10U)  (e.g., `licence informat (URL_TO_INSERT_TERM_2990 https://fairsharing.org/search?recordType=model_and_format) ion`). One has therefore to see this `capability` as one of the many elements that needs to be put together to build and deliver a FAIR (URL_TO_INSERT_RECORD-ABBREV_2995 https://fairsharing.org/FAIRsharing.WWI10U)  infrastructure. For instance, this HL7 (URL_TO_INSERT_RECORD-ABBREV_2997 https://fairsharing.org/FAIRsharing.ka5tfc)  JSON (URL_TO_INSERT_RECORD-ABBREV_2993 https://fairsharing.org/FAIRsharing.5bbab9)  message could be embedded in a more complex system, which would package informat (URL_TO_INSERT_TERM_2991 https://fairsharing.org/search?recordType=model_and_format) ion and deliver a FAIR (URL_TO_INSERT_RECORD-ABBREV_2996 https://fairsharing.org/FAIRsharing.WWI10U)  payload.
 
 
 
 ### What to read next?
 
 - [From Electronic Health Records Notes to FHIR](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/EHRN2FHIR.md) 
-- Pistoia Alliance FAIR (URL_TO_INSERT_RECORD_3749 https://fairsharing.org/FAIRsharing.WWI10U) 4Clinical Guidance - An Introduction
-- Pistoia Alliance FAIR (URL_TO_INSERT_RECORD_3750 https://fairsharing.org/FAIRsharing.WWI10U) 4Clin - Metadata
+- Pistoia Alliance FAIR4Clinical Guidance - An Introduction
+- Pistoia Alliance FAIR4Clin - Metadata
 - [HL7 FHIR for FAIR implementation guidelines](https://build.fhir.org/ig/HL7/fhir-for-fair/index.html)
 
 ````{rdmkit_panel}

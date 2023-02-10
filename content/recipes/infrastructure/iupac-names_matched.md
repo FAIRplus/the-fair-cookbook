@@ -20,15 +20,15 @@
 
 The main purpose of this recipe is:
 
-> To take an IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_2607 https://fairsharing.org/FAIRsharing.ddk9t9) Key
+> To take an IUPAC name and generate an InChIKey
 
 ---
 
 ### Using the OPSIN website
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
-OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChI (URL_TO_INSERT_RECORD_2608 https://fairsharing.org/FAIRsharing.ddk9t9) Key.
-The latter is done by the offical InChI (URL_TO_INSERT_RECORD_2609 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI (URL_TO_INSERT_RECORD_2610 https://fairsharing.org/FAIRsharing.ddk9t9) `.
+OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
+The latter is done by the offical InChI (URL_TO_INSERT_RECORD-ABBREV_2009 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI`.
 
 ### Automating translations with Google Colab
 
@@ -47,7 +47,7 @@ opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
 opsin = opsin_cls(".")
 ```
 
-After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD_2611 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChI (URL_TO_INSERT_RECORD_2612 https://fairsharing.org/FAIRsharing.ddk9t9) Key:
+After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD-ABBREV_2010 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChIKey:
 
 ```python
 anInChI = inchi.generate(opsin.parseIUPACName("methane"))
@@ -80,9 +80,9 @@ println "InchIKey: ${anInChI.getKey()}"
 
 ## Conclusion
 
-Cheminformat (URL_TO_INSERT_TERM_2613 https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC names and convert them to
-chemical graph based identifier (URL_TO_INSERT_TERM_2614 https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChI (URL_TO_INSERT_RECORD_2616 https://fairsharing.org/FAIRsharing.ddk9t9) Key. The InChI (URL_TO_INSERT_RECORD_2617 https://fairsharing.org/FAIRsharing.ddk9t9) Key identifier (URL_TO_INSERT_TERM_2615 https://fairsharing.org/search?recordType=identifier_schema) 
-can be used to find more informat (URL_TO_INSERT_TERM_2618 https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
+Cheminformat (URL_TO_INSERT_TERM_2011 https://fairsharing.org/search?recordType=model_and_format) ics provides us the tools to parse IUPAC names and convert them to
+chemical graph based identifier (URL_TO_INSERT_TERM_2012 https://fairsharing.org/search?recordType=identifier_schema) s, such as the InChIKey. The InChIKey identifier (URL_TO_INSERT_TERM_2013 https://fairsharing.org/search?recordType=identifier_schema) 
+can be used to find more informat (URL_TO_INSERT_TERM_2014 https://fairsharing.org/search?recordType=model_and_format) ion about the chemicals represented by the
 original IUPAC names.
 
 ### What to read next?
