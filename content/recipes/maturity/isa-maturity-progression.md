@@ -6,7 +6,7 @@
 ---
 Placeholder for Maturity Documentation
 
-If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
+If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org).
 
 ---
 
