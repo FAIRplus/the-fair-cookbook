@@ -1,4 +1,4 @@
-(fcb-introduction-terminologies (URL_TO_INSERT_TERM_3694 https://fairsharing.org/search?recordType=terminology_artefact) -ontologies (URL_TO_INSERT_TERM_3695 https://fairsharing.org/search?recordType=terminology_artefact) )=
+(fcb-introduction-terminologies-ontologies)=
 # Introduction to terminologies and ontologies
 
 
@@ -17,12 +17,12 @@
 
 ## Main objectives
 
-The aim of this recipe is to provide a compact introduction about `controlled terminologies (URL_TO_INSERT_TERM_3696 https://fairsharing.org/search?recordType=terminology_artefact) ` and `ontologies (URL_TO_INSERT_TERM_3697 https://fairsharing.org/search?recordType=terminology_artefact) `, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
+The aim of this recipe is to provide a compact introduction about `controlled terminologies` and `ontologies`, why these resources are central to the preservation of knowledge and data mining and how such resources are developed.
 
 
 ## Controlled terminology or ontology: what's the difference?
 
-The need for `controlled vocabulary` often arises in situations where validation of textual informat (URL_TO_INSERT_TERM_3698 https://fairsharing.org/search?recordType=model_and_format) ion is necessary 
+The need for `controlled vocabulary` often arises in situations where validation of textual information is necessary 
 for operational requirements. 
 The main initial driver for data entry harmonization is to increase query recall. 
 In its most basic form, `keywords` may be used to perform indexation. 
@@ -33,21 +33,21 @@ However, this can come at the cost of precision, as the predefined terms may not
 may need to describe. 
 Furthermore, term mis-selection by the user is not eliminated and introduces another type of error.
 
-A `controlled terminology (URL_TO_INSERT_TERM_3701 https://fairsharing.org/search?recordType=terminology_artefact) ` is a *`normative`* collection (URL_TO_INSERT_TERM_3699 https://fairsharing.org/search?recordType=collection)  of terms, the spelling of which is fixed and for which additional informat (URL_TO_INSERT_TERM_3700 https://fairsharing.org/search?recordType=model_and_format) ion may be provided such as a `definition`, a set of `synonyms`, an `editor`, a `version`, as well as a `license` determining the condition of use. 
-The set of informat (URL_TO_INSERT_TERM_3702 https://fairsharing.org/search?recordType=model_and_format) ion about a specific controlled terminology (URL_TO_INSERT_TERM_3703 https://fairsharing.org/search?recordType=terminology_artefact)  term is designated as `term metadata`. 
-In a controlled terminology (URL_TO_INSERT_TERM_3704 https://fairsharing.org/search?recordType=terminology_artefact) , terms appear as a `flat list`, meaning that no relationship between any of the entities the controlled terminology (URL_TO_INSERT_TERM_3705 https://fairsharing.org/search?recordType=terminology_artefact)  represents is captured in any formal way.
-This is the main drawback and limitation of `controlled terminologies (URL_TO_INSERT_TERM_3707 https://fairsharing.org/search?recordType=terminology_artefact) `, which are often developed to support a data model (URL_TO_INSERT_TERM_3706 https://fairsharing.org/search?recordType=model_and_format)  or an application.
+A `controlled terminology` is a *`normative`* collection of terms, the spelling of which is fixed and for which additional information may be provided such as a `definition`, a set of `synonyms`, an `editor`, a `version`, as well as a `license` determining the condition of use. 
+The set of information about a specific controlled terminology term is designated as `term metadata`. 
+In a controlled terminology, terms appear as a `flat list`, meaning that no relationship between any of the entities the controlled terminology represents is captured in any formal way.
+This is the main drawback and limitation of `controlled terminologies`, which are often developed to support a data model or an application.
 
-An `ontology (URL_TO_INSERT_TERM_3708 https://fairsharing.org/search?recordType=terminology_artefact) ` on the other hand, is a `formal representation of a domain knowledge where concepts are organized hierarchically`.
+An `ontology` on the other hand, is a `formal representation of a domain knowledge where concepts are organized hierarchically`.
 The qualifier `formal` refers to a set of axioms and rules based on logic (e.g. `first order logic`) to structure,
 organize and check the consistency of the term hierarchy. 
-As one can sense right away, ontologies (URL_TO_INSERT_TERM_3709 https://fairsharing.org/search?recordType=terminology_artefact)  are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry (URL_TO_INSERT_RECORD-NAME_3710 https://fairsharing.org/FAIRsharing.847069)  INCAtools or Robot tool).
+As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry (URL_TO_INSERT_RECORD-NAME_1875 https://fairsharing.org/FAIRsharing.847069)  INCAtools or Robot tool).
 
 
     
 ## How are they built and maintained and why does it matter?
 
-In order to improve over simple `controlled terminologies (URL_TO_INSERT_TERM_3711 https://fairsharing.org/search?recordType=terminology_artefact) `, a huge area of research has developed to provide `tools` and `frameworks` supporting the representations of relationships between entities. The field is known as `formal semantics` in knowledge representation circles. One of the most immediately available examples of `entity relationships` found in ontologies (URL_TO_INSERT_TERM_3712 https://fairsharing.org/search?recordType=terminology_artefact) , and their potential for improving searches, is the `is_a` relationship, which aims to cover the Parent/Child relationship that holds between two entities. For instance:
+In order to improve over simple `controlled terminologies`, a huge area of research has developed to provide `tools` and `frameworks` supporting the representations of relationships between entities. The field is known as `formal semantics` in knowledge representation circles. One of the most immediately available examples of `entity relationships` found in ontologies, and their potential for improving searches, is the `is_a` relationship, which aims to cover the Parent/Child relationship that holds between two entities. For instance:
 ```
 -Vertebrate
 --Mammal
@@ -57,21 +57,21 @@ In order to improve over simple `controlled terminologies (URL_TO_INSERT_TERM_37
 ```
 In this representation, `classes` are *directly* asserted (placed) under a parent class if and only if the rule `new class is a child of the parent Class` holds. 'Orchid', which in this hierarchy, would not be nested under 'Vertebrate'.
 
-While working on small structured vocabularies, it is still possible to detect potential errors but this approach does not scale to support real life semantic artefacts which support complex biological and biomedical informat (URL_TO_INSERT_TERM_3713 https://fairsharing.org/search?recordType=model_and_format) ion systems. 
+While working on small structured vocabularies, it is still possible to detect potential errors but this approach does not scale to support real life semantic artefacts which support complex biological and biomedical information systems. 
 Languages such as [RDF](https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/), [SKOS](https://www.w3.org/2004/02/skos/), and [OWL](https://www.w3.org/OWL/), exist to provide the expressivity required to establish relations between entities.
 In turn, building on these formal rules, automatic classifiers, known as a `reasoner`, can inspect semantic artefacts to detect inconsistencies and suggest parent classes. 
 This is a step known as `inference`, where new knowledge is produced by the software agent rather than direct assertion by humans.
 This provides a significant support, even if far from supporting all the subtleties of actual knowledge.
 
-There are `six important features` to consider when selecting a semantic artefact for making FAIR (URL_TO_INSERT_RECORD-ABBREV_3714 https://fairsharing.org/FAIRsharing.WWI10U)  datasets:
+There are `six important features` to consider when selecting a semantic artefact for making FAIR (URL_TO_INSERT_RECORD-ABBREV_1876 https://fairsharing.org/FAIRsharing.WWI10U)  datasets:
 
 1. **What license and terms of use does it mandate?**
 
-1. **What format (URL_TO_INSERT_TERM_3715 https://fairsharing.org/search?recordType=model_and_format)  does it come in?**
+1. **What format does it come in?**
 
-1. **Is it well maintained, i.e. frequent release, term requests handling, versioning and deprecation policies (URL_TO_INSERT_TERM_3716 https://fairsharing.org/search?fairsharingRegistry=Policy)  clarified?**
+1. **Is it well maintained, i.e. frequent release, term requests handling, versioning and deprecation policies clarified?**
 
-1. **Are there stable persistent resolvable identifier (URL_TO_INSERT_TERM_3717 https://fairsharing.org/search?recordType=identifier_schema) s for all terms?**
+1. **Are there stable persistent resolvable identifiers for all terms?**
 
 1. **Who use it and what resources are being annotated with it?**
 
@@ -79,55 +79,55 @@ There are `six important features` to consider when selecting a semantic artefac
     
 ## Why are they useful?
 
-As outlined in the introduction, the most immediate use for a controlled terminology (URL_TO_INSERT_TERM_3718 https://fairsharing.org/search?recordType=terminology_artefact)  is to ensure consistency in data entry. Controlled terminologies (URL_TO_INSERT_TERM_3719 https://fairsharing.org/search?recordType=terminology_artefact)  are important tools to improve data indexing and query recall. 
-The usefulness of ontologies (URL_TO_INSERT_TERM_3720 https://fairsharing.org/search?recordType=terminology_artefact)  and controlled vocabularies goes beyond this initial use.
-The main purpose of biomedical ontologies (URL_TO_INSERT_TERM_3721 https://fairsharing.org/search?recordType=terminology_artefact)  is to structure knowledge so that it can be operated on by software agents.
+As outlined in the introduction, the most immediate use for a controlled terminology is to ensure consistency in data entry. Controlled terminologies are important tools to improve data indexing and query recall. 
+The usefulness of ontologies and controlled vocabularies goes beyond this initial use.
+The main purpose of biomedical ontologies is to structure knowledge so that it can be operated on by software agents.
 
 One needs to also understand that the two processes coexist and operate in parallel. 
 As more experiments are performed, new discoveries are made.
-This new knowledge needs to be represented in the domain ontology (URL_TO_INSERT_TERM_3722 https://fairsharing.org/search?recordType=terminology_artefact)  so the new notions can be used to annotate the results of earlier experiments in the context of retrospective analysis.
+This new knowledge needs to be represented in the domain ontology so the new notions can be used to annotate the results of earlier experiments in the context of retrospective analysis.
 
 For example, he [Gene Ontology (GO)](http://www.obofoundry.org/ontology/go.html) is a widely used resource to describe `Molecular Processes`, `Biological Functions` and `Molecular Components`. 
-The [Gene Ontology Consortium](http://geneontology.org/docs/go-consortium/) maintains the controlled vocabulary and also releases of Genome Wide [Gene Ontology (URL_TO_INSERT_TERM_3723 https://fairsharing.org/search?recordType=terminology_artefact)  (URL_TO_INSERT_RECORD-NAME_3724 https://fairsharing.org/FAIRsharing.6xq0ee)  Annotations](http://geneontology.org/docs/go-annotations/).
-These are resources which associate genes and genomic features found in those genomes with GO (URL_TO_INSERT_RECORD-ABBREV_3725 https://fairsharing.org/FAIRsharing.6xq0ee)  terms. These are very important resources especially in the context of genome wide analysis such as transcriptomics profiling analysis.
+The [Gene Ontology Consortium](http://geneontology.org/docs/go-consortium/) maintains the controlled vocabulary and also releases of Genome Wide [Gene Ontology (URL_TO_INSERT_RECORD-NAME_1877 https://fairsharing.org/FAIRsharing.6xq0ee)  Annotations](http://geneontology.org/docs/go-annotations/).
+These are resources which associate genes and genomic features found in those genomes with GO (URL_TO_INSERT_RECORD-ABBREV_1878 https://fairsharing.org/FAIRsharing.6xq0ee)  terms. These are very important resources especially in the context of genome wide analysis such as transcriptomics profiling analysis.
 
 A particular type of analysis, [`enrichment analysis`](http://geneontology.org/docs/go-enrichment-analysis/), relies on the availability of such annotations to detect departures from the expected probability distribution in an expression profile and which biological processes are most affected in specific conditions.
 
-The applications are plentiful. The importance of ontologies (URL_TO_INSERT_TERM_3727 https://fairsharing.org/search?recordType=terminology_artefact)  for structuring informat (URL_TO_INSERT_TERM_3726 https://fairsharing.org/search?recordType=model_and_format) ion will only grow with the need to obtain Machine Learning ready datasets and speed up the readiness of datasets. This is what FAIR (URL_TO_INSERT_RECORD-ABBREV_3728 https://fairsharing.org/FAIRsharing.WWI10U)  is all about.
+The applications are plentiful. The importance of ontologies for structuring information will only grow with the need to obtain Machine Learning ready datasets and speed up the readiness of datasets. This is what FAIR (URL_TO_INSERT_RECORD-ABBREV_1879 https://fairsharing.org/FAIRsharing.WWI10U)  is all about.
 
-So ontologies (URL_TO_INSERT_TERM_3729 https://fairsharing.org/search?recordType=terminology_artefact)  are of particularly help for the following tasks:
-- **Improve query recall:** Given a 'search string (URL_TO_INSERT_RECORD-NAME_3730 https://fairsharing.org/FAIRsharing.9b7wvk) ', having a resource which holds synonyms can be used by a search index to retrieve data annotated with a synonym.
-- **Enable query expansion:** Owing to the hierarchical (parent/child) structure of ontologies (URL_TO_INSERT_TERM_3733 https://fairsharing.org/search?recordType=terminology_artefact) , a search index exploiting this informat (URL_TO_INSERT_TERM_3731 https://fairsharing.org/search?recordType=model_and_format) ion can retrieve all datasets annotated with a child term of items matching the input search string (URL_TO_INSERT_RECORD-NAME_3734 https://fairsharing.org/FAIRsharing.9b7wvk) . For example, searching with the string (URL_TO_INSERT_RECORD-NAME_3735 https://fairsharing.org/FAIRsharing.9b7wvk)  "breast cancer" againts an ontology (URL_TO_INSERT_TERM_3732 https://fairsharing.org/search?recordType=terminology_artefact)  aware search index could return records annotated with `Paget's Disease` or `ductal carcinoma in-situ (DCIS)`, both of which are types of mammary gland malignancies.
-- **Build knowledge graphs:** Ontology (URL_TO_INSERT_TERM_3738 https://fairsharing.org/search?recordType=terminology_artefact)  languages can be used to represent domain knowledge and build reference terminologies (URL_TO_INSERT_TERM_3737 https://fairsharing.org/search?recordType=terminology_artefact)  but the same technologies constitute powerful tools for model (URL_TO_INSERT_TERM_3736 https://fairsharing.org/search?recordType=model_and_format) ling instance datasets as nodes in a graph and linking resources together.
+So ontologies are of particularly help for the following tasks:
+- **Improve query recall:** Given a 'search string (URL_TO_INSERT_RECORD-NAME_1880 https://fairsharing.org/FAIRsharing.9b7wvk) ', having a resource which holds synonyms can be used by a search index to retrieve data annotated with a synonym.
+- **Enable query expansion:** Owing to the hierarchical (parent/child) structure of ontologies, a search index exploiting this information can retrieve all datasets annotated with a child term of items matching the input search string (URL_TO_INSERT_RECORD-NAME_1881 https://fairsharing.org/FAIRsharing.9b7wvk) . For example, searching with the string (URL_TO_INSERT_RECORD-NAME_1882 https://fairsharing.org/FAIRsharing.9b7wvk)  "breast cancer" againts an ontology aware search index could return records annotated with `Paget's Disease` or `ductal carcinoma in-situ (DCIS)`, both of which are types of mammary gland malignancies.
+- **Build knowledge graphs:** Ontology languages can be used to represent domain knowledge and build reference terminologies but the same technologies constitute powerful tools for modelling instance datasets as nodes in a graph and linking resources together.
 
 
 
 ## Are all ontologies compatible with each other?
 
 There is not a simple answer to that question as it depends heavily on the type of tasks data scientists have in mind.
-If the purpose is simply to improve query recall on a limited set of fields, a curation policy (URL_TO_INSERT_TERM_3739 https://fairsharing.org/search?fairsharingRegistry=Policy)  could be devised to mix and match resources to meet the needs at hands, possibly by building an application ontology (URL_TO_INSERT_TERM_3740 https://fairsharing.org/search?recordType=terminology_artefact) , i.e. an ontology (URL_TO_INSERT_TERM_3741 https://fairsharing.org/search?recordType=terminology_artefact)  specifically for designed for the use case with terms drawn from existing ontologies (URL_TO_INSERT_TERM_3742 https://fairsharing.org/search?recordType=terminology_artefact) .
+If the purpose is simply to improve query recall on a limited set of fields, a curation policy could be devised to mix and match resources to meet the needs at hands, possibly by building an application ontology, i.e. an ontology specifically for designed for the use case with terms drawn from existing ontologies.
 
 However, in a more integrated framework, it is important to be aware of some of the development choices made by the maintainers of the semantic artefacts.
 
 
-* **In the context of basic research and model (URL_TO_INSERT_TERM_3743 https://fairsharing.org/search?recordType=model_and_format)  organism based research**, the **`OBO foundry (URL_TO_INSERT_RECORD-NAME_3746 https://fairsharing.org/FAIRsharing.847069) `** is an organization which coordinates the development of interoperable resources. GO (URL_TO_INSERT_RECORD-ABBREV_3745 https://fairsharing.org/FAIRsharing.6xq0ee) , mentioned earlier is one of them. The establishment of domain specific reference ontologies (URL_TO_INSERT_TERM_3744 https://fairsharing.org/search?recordType=terminology_artefact)  sharing the same underlying rules means that some level of compositional development can be done. This means that axioms can be built connecting classes from compatible resources.
+* **In the context of basic research and model organism based research**, the **`OBO foundry (URL_TO_INSERT_RECORD-NAME_1884 https://fairsharing.org/FAIRsharing.847069) `** is an organization which coordinates the development of interoperable resources. GO (URL_TO_INSERT_RECORD-ABBREV_1883 https://fairsharing.org/FAIRsharing.6xq0ee) , mentioned earlier is one of them. The establishment of domain specific reference ontologies sharing the same underlying rules means that some level of compositional development can be done. This means that axioms can be built connecting classes from compatible resources.
 This point becomes particularly important when considering the role of the `reasoner` when assessing and checking the consistency of artefacts themselves but also when analysing instance datasets themselves.
 
-* **In the context of observation studies**, the Observational Medical Outcomes Partnership ([OMOP](https://ohdsi.org/omop/)) model (URL_TO_INSERT_TERM_3747 https://fairsharing.org/search?recordType=model_and_format)  also relies on controled terminologies (URL_TO_INSERT_TERM_3748 https://fairsharing.org/search?recordType=terminology_artefact)  such as [SNOMED-CT](https://www.snomed.org/snomed-ct/), [RxNORM](https://www.nlm.nih.gov/research/umls/rxnorm/index.html) for drugs and [LOINC](https://loinc.org/) for clinical and laboratory test descriptions.
+* **In the context of observation studies**, the Observational Medical Outcomes Partnership ([OMOP](https://ohdsi.org/omop/)) model also relies on controled terminologies such as [SNOMED-CT](https://www.snomed.org/snomed-ct/), [RxNORM](https://www.nlm.nih.gov/research/umls/rxnorm/index.html) for drugs and [LOINC](https://loinc.org/) for clinical and laboratory test descriptions.
 
-* **In the context of Clinical Data collection (URL_TO_INSERT_TERM_3750 https://fairsharing.org/search?recordType=collection) s**, the Clinical Data Interchange Standard (URL_TO_INSERT_TERM_3749 https://fairsharing.org/search?fairsharingRegistry=Standard) s Consortium ([CDISC](https://www.cdisc.org/)) model (URL_TO_INSERT_TERM_3751 https://fairsharing.org/search?recordType=model_and_format) s work tightly with [CDISC (URL_TO_INSERT_RECORD-NAME_3753 https://fairsharing.org/3525)  Terminology](https://www.cdisc.org/standards/terminology/controlled-terminology), National Cancer Institute's Enterprise Vocabulary Services ([EVS](https://evs.nci.nih.gov/)) and also recommend use of [SNOMED-CT](https://www.snomed.org/snomed-ct/) and terminologies (URL_TO_INSERT_TERM_3752 https://fairsharing.org/search?recordType=terminology_artefact)  such as [LOINC](https://loinc.org/), both of which come with specific licensing terms users need to be familiar with.
+* **In the context of Clinical Data collections**, the Clinical Data Interchange Standards Consortium ([CDISC](https://www.cdisc.org/)) models work tightly with [CDISC (URL_TO_INSERT_RECORD-NAME_1885 https://fairsharing.org/3525)  Terminology](https://www.cdisc.org/standards/terminology/controlled-terminology), National Cancer Institute's Enterprise Vocabulary Services ([EVS](https://evs.nci.nih.gov/)) and also recommend use of [SNOMED-CT](https://www.snomed.org/snomed-ct/) and terminologies such as [LOINC](https://loinc.org/), both of which come with specific licensing terms users need to be familiar with.
 
 
 ### Use cases and iterative approach  
 
 
-The use and implementation of common terminologies (URL_TO_INSERT_TERM_3755 https://fairsharing.org/search?recordType=terminology_artefact)  will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying a database (URL_TO_INSERT_TERM_3754 https://fairsharing.org/search?fairsharingRegistry=Database) . Implementing the use of common terminologies (URL_TO_INSERT_TERM_3756 https://fairsharing.org/search?recordType=terminology_artefact)  in the curation workflow will ensure consistency of the annotation across all studies.
+The use and implementation of common terminologies will enable a normalization/harmonization of variable labels (data label) and allowed values (data term) when querying a database. Implementing the use of common terminologies in the curation workflow will ensure consistency of the annotation across all studies.
 
 
 
 ### Selection criteria
 
-A set of widely accepted criteria for selecting terminologies (URL_TO_INSERT_TERM_3760 https://fairsharing.org/search?recordType=terminology_artefact)  (or other reporting standard (URL_TO_INSERT_TERM_3757 https://fairsharing.org/search?fairsharingRegistry=Standard) s) does not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standard (URL_TO_INSERT_TERM_3758 https://fairsharing.org/search?fairsharingRegistry=Standard) s Working Group and FAIRSharing (URL_TO_INSERT_RECORD-NAME_3761 https://fairsharing.org/FAIRsharing.2abjs5)  ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point to define possible criteria for excluding and/or including a terminology (URL_TO_INSERT_TERM_3759 https://fairsharing.org/search?recordType=terminology_artefact)  resource.
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and FAIRSharing (URL_TO_INSERT_RECORD-NAME_1886 https://fairsharing.org/FAIRsharing.2abjs5)  ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point to define possible criteria for excluding and/or including a terminology resource.
 
 
 *   **Exclusion criteria**:
@@ -139,7 +139,7 @@ A set of widely accepted criteria for selecting terminologies (URL_TO_INSERT_TER
  
 *   **Inclusion criteria**:
     * 🔰  Scope and coverage meets the requirements of the concept identified
-    * 🔰  Unique URI (URL_TO_INSERT_RECORD-ABBREV_3762 https://fairsharing.org/FAIRsharing.d261e1) , textual definition and IDs for each term
+    * 🔰  Unique URI (URL_TO_INSERT_RECORD-ABBREV_1887 https://fairsharing.org/FAIRsharing.d261e1) , textual definition and IDs for each term
     * 🔰  Resource releases are versioned
     * 🔰  Size of resource (_indicator of coverage_)
     * 🔰  Number of classes and subclasses (_indicator of depth_)
@@ -147,10 +147,10 @@ A set of widely accepted criteria for selecting terminologies (URL_TO_INSERT_TER
     * 🔰  Presence of a help desk and contact point (_indicator of community support_)
     * 🔰  Presence of term submission tracker/issue tracker (_indicator of resource agility and capability to grow upon request_)
     * 🔰  Potential integrative nature of the resource (_as indicator of translational application potential_)
-    * 🔰  Licensing informat (URL_TO_INSERT_TERM_3763 https://fairsharing.org/search?recordType=model_and_format) ion available (_as indicator of freedom to use_)
-    * 🔰  Use of a top level ontology (URL_TO_INSERT_TERM_3764 https://fairsharing.org/search?recordType=terminology_artefact)  (_as indicator of a resource built for generic use_)
+    * 🔰  Licensing information available (_as indicator of freedom to use_)
+    * 🔰  Use of a top level ontology (_as indicator of a resource built for generic use_)
     * 🔰  Pragmatism (_as indicator of actual, current real life practice)_
-    * 🔰  Possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology (URL_TO_INSERT_TERM_3765 https://fairsharing.org/search?recordType=terminology_artefact) , while the resource organisation commits to fix or improve the terminology (URL_TO_INSERT_TERM_3766 https://fairsharing.org/search?recordType=terminology_artefact)  in brief delays (one month after receipt?)
+    * 🔰  Possibility of collaborating: the resource accepts complaints/remarks that aim to fix or improve the terminology, while the resource organisation commits to fix or improve the terminology in brief delays (one month after receipt?)
 
 These criteria are simply indicative and need to be modulated depending on the `contexts` described in the introduction, as specific constraints (e.g. regulatory requirements) may take precedence over some of the criteria listed here. 
 
@@ -158,11 +158,11 @@ These criteria are simply indicative and need to be modulated depending on the `
 
 ## Conclusions
 
-Choosing an ontology (URL_TO_INSERT_TERM_3767 https://fairsharing.org/search?recordType=terminology_artefact)  and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow and regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
+Choosing an ontology and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow and regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
 Clearly, declaring the semantic resources used to annotate a dataset also influences the `findability` and `reusability` and it is good practice to do so as it allows potential users to gauge the amount of mapping work that may be required to combine two datasets.
 
 ###  What to read next?
-* {ref}`fcb-selecting-ontologies (URL_TO_INSERT_TERM_3768 https://fairsharing.org/search?recordType=terminology_artefact) `
+* {ref}`fcb-selecting-ontologies`
 * {ref}`fcb-interop-ontorequest`
 * {ref}`fcb-interop-ontorobot`
 * {ref}`fcb-interop-onto-op`

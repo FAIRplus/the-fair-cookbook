@@ -20,18 +20,18 @@
 
 Collaborating teams at two or more organizations often need to transfer and share data files. There are a number of 
 ways to share files, all with various degrees of ease and usability.
-The particular informat (URL_TO_INSERT_TERM_6 https://fairsharing.org/search?recordType=model_and_format) ion security risk management (ISRM) protocols at the sending and receiving institution (URL_TO_INSERT_TERM_5 https://fairsharing.org/search?recordType=institution) s need to 
+The particular information security risk management (ISRM) protocols at the sending and receiving institutions need to 
 be considered when one chooses and optimizes file-transfer solutions.
 One common method for transferring files is SFTP or scp (Secure Copy).
 
 
 
 ## Background info
-- SFTP: Secure or SSH File Transfer protocol is a standard (URL_TO_INSERT_TERM_7 https://fairsharing.org/search?fairsharingRegistry=Standard)  way to transfer files securely using a remote server.
+- SFTP: Secure or SSH File Transfer protocol is a standard way to transfer files securely using a remote server.
 SFTP is not to be confused with FTP or FTPS. While FTP does not use encryption at all and therefore can be considered
 insecure, FTPS adds a layer of encryption on top of FTP but it still comes with a number of drawbacks from the FTP 
 protocol, e.g. requiring a range of open ports. SFTP uses an entirely different protocol based on SSH (secure shell) 
-and uses strong encryption for authentication informat (URL_TO_INSERT_TERM_8 https://fairsharing.org/search?recordType=model_and_format) ion as well as the data transferred.
+and uses strong encryption for authentication information as well as the data transferred.
 In order to upload and download files, the client needs to communicate with the server over port 22 
 (which is the default port for SFTP) and the network configurations on the sender as well as the recipient side
 need to allow this traffic. If network restrictions block this communication, one might try to run the SFTP server on
@@ -65,7 +65,7 @@ For client (receiver/sender):
 -	(optional) Basic programming skills to automate upload or download process
 
 For server (system administrator):
--	Compliance with company IT-security policies (URL_TO_INSERT_TERM_9 https://fairsharing.org/search?fairsharingRegistry=Policy) 
+-	Compliance with company IT-security policies
 -	Understanding firewall configurations
 -	Ability to use terminal (bash)
 
@@ -220,10 +220,10 @@ The sender can use the sender organization’s HPC node to:
 - (2)	launch the FTP session in the same local network as the server and directory of files to be transferred.
 - (3)	Transfer the files via the filesystem on both the local and remote system.
 
-For example, an IMI collaboration project (URL_TO_INSERT_TERM_10 https://fairsharing.org/search?recordType=project)  requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
+For example, an IMI collaboration project requires transfer and sharing of a number of image data folders, each approximately ~300-500 GB.
 The process involves:
   i.  copying the files over to a secure FTP server
-  ii. the receiving institution (URL_TO_INSERT_TERM_11 https://fairsharing.org/search?recordType=institution)  copies to their server, 
+  ii. the receiving institution copies to their server, 
   iii. then the sender deletes the files on the FTP server.
 
 > **Pros and cons:**
@@ -244,7 +244,7 @@ This common process is described in a number of publically available resources, 
 
 ## Conclusion
 
-This content is a simple guideline (URL_TO_INSERT_TERM_12 https://fairsharing.org/search?recordType=reporting_guideline)  for using a well known secure file transfer protocol.
+This content is a simple guideline for using a well known secure file transfer protocol.
 
 More modern solutions and tools exist for fast transfer or mounting of remote drive.
 

@@ -19,8 +19,8 @@
 
 ## Main Objectives
 
-- Document how to convert raw data from a propriatory, vendor specific format (URL_TO_INSERT_TERM_3476 https://fairsharing.org/search?recordType=model_and_format)  to an open standard (URL_TO_INSERT_TERM_3475 https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM_3477 https://fairsharing.org/search?recordType=model_and_format) .
-- Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project (URL_TO_INSERT_TERM_3478 https://fairsharing.org/search?recordType=project) .
+- Document how to convert raw data from a propriatory, vendor specific format to an open standard format.
+- Apply the approach to a targeted metabolic profiling using Biocrates kit produced by IMI Resolute project.
 
 
 ---
@@ -35,10 +35,10 @@
 ```{figure} from-proprietary.png
 ---
 width: 450px
-name: Converting to an open standard (URL_TO_INSERT_TERM_3479 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3480 https://fairsharing.org/search?recordType=model_and_format) 
-alt: Converting to an open standard (URL_TO_INSERT_TERM_3481 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3482 https://fairsharing.org/search?recordType=model_and_format) 
+name: Converting to an open standard file format
+alt: Converting to an open standard file format
 ---
-Converting to an open standard (URL_TO_INSERT_TERM_3483 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3484 https://fairsharing.org/search?recordType=model_and_format) .
+Converting to an open standard file format.
 ```
 ````
 
@@ -56,7 +56,7 @@ Converting to an open standard (URL_TO_INSERT_TERM_3483 https://fairsharing.org/
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_3486 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_3487 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_3485 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [mzML](https://fairsharing.org/FAIRsharing.26dmba)  | [PSI-MS](https://fairsharing.org/FAIRsharing.284e1z)  |   |
 
@@ -135,7 +135,7 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 
 ### Step 3: Convert vendor specific format to an open format
 
-One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standard (URL_TO_INSERT_TERM_3488 https://fairsharing.org/search?fairsharingRegistry=Standard) s and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_TERM_3489 https://fairsharing.org/search?recordType=identifier_schema)  (URL_TO_INSERT_RECORD-NAME_3490 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI (URL_TO_INSERT_RECORD-ABBREV_3491 https://fairsharing.org/FAIRsharing.hFLKCn) ), https://fairsharing.org (URL_TO_INSERT_RECORD-HOMEPAGE_3494 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD-HOMEPAGE_3495 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD-HOMEPAGE_3496 https://fairsharing.org/3538) /FAIRsharing.26dmba for HUPO-PSI (URL_TO_INSERT_RECORD-ABBREV_3493 https://fairsharing.org/3514)  mzML (URL_TO_INSERT_RECORD-ABBREV_3492 https://fairsharing.org/FAIRsharing.26dmba)  specifications.
+One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_RECORD-NAME_1810 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI (URL_TO_INSERT_RECORD-ABBREV_1811 https://fairsharing.org/FAIRsharing.hFLKCn) ), https://fairsharing.org (URL_TO_INSERT_RECORD-HOMEPAGE_1814 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD-HOMEPAGE_1815 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD-HOMEPAGE_1816 https://fairsharing.org/3538) /FAIRsharing.26dmba for HUPO-PSI (URL_TO_INSERT_RECORD-ABBREV_1813 https://fairsharing.org/3514)  mzML (URL_TO_INSERT_RECORD-ABBREV_1812 https://fairsharing.org/FAIRsharing.26dmba)  specifications.
 
 <!-- <div>
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
@@ -147,15 +147,15 @@ One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of
 ```{figure} /images/AWOWTbr.png
 ---
 width: 750px
-name: A Standard (URL_TO_INSERT_TERM_3497 https://fairsharing.org/search?fairsharingRegistry=Standard)  Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_3498 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
-alt: A Standard (URL_TO_INSERT_TERM_3499 https://fairsharing.org/search?fairsharingRegistry=Standard)  Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_3500 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
+name: A Standard Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_1817 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
+alt: A Standard Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_1818 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
 ---
-The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing (URL_TO_INSERT_RECORD-NAME_3501 https://fairsharing.org/FAIRsharing.2abjs5)  catalog](https://fairsharing.org/) of resources.
+The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing (URL_TO_INSERT_RECORD-NAME_1819 https://fairsharing.org/FAIRsharing.2abjs5)  catalog](https://fairsharing.org/) of resources.
 ```
 ````
 
 
-The objective here is to conversion raw data in manufacturer format (URL_TO_INSERT_TERM_3502 https://fairsharing.org/search?recordType=model_and_format)  to an open format (URL_TO_INSERT_TERM_3503 https://fairsharing.org/search?recordType=model_and_format) , which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com/ProteoWizard/pwiz) {footcite}`Chambers2012`.
+The objective here is to conversion raw data in manufacturer format to an open format, which would allow data to be used without restrictions. To achieve this, we rely on a `containerized` version of the [Proteowizard](https://github.com/ProteoWizard/pwiz) {footcite}`Chambers2012`.
 
 > **requirements**:
 
@@ -179,7 +179,7 @@ on a MacOS system, invoke the following:
 
 #### 4. pull the docker container for ProteoWizard
 
-:warning: be sure to sign-up and login to https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_3504 https://fairsharing.org/FAIRsharing.afc2b3) /
+:warning: be sure to sign-up and login to https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1820 https://fairsharing.org/FAIRsharing.afc2b3) /
 
 ```bash
 >docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
@@ -187,7 +187,7 @@ on a MacOS system, invoke the following:
 
 * In order to be able to reach
 
-https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_3505 https://fairsharing.org/FAIRsharing.afc2b3) /r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
+https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1821 https://fairsharing.org/FAIRsharing.afc2b3) /r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 
 
 * Run the Proteowizard `pwiz tool` from the container over the WATERS raw data, by issueing the following command from the terminal:
@@ -199,18 +199,18 @@ https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_3505 https://fairsharing.o
 The command explained:
 
 
-By essence, the resulting mzML (URL_TO_INSERT_RECORD-ABBREV_3506 https://fairsharing.org/FAIRsharing.26dmba)  files generated during the conversion are syntactically valid documents as the `pwiz` performs validation against the mzml xml schema during the serialization.
+By essence, the resulting mzML (URL_TO_INSERT_RECORD-ABBREV_1822 https://fairsharing.org/FAIRsharing.26dmba)  files generated during the conversion are syntactically valid documents as the `pwiz` performs validation against the mzml xml schema during the serialization.
 
-In some situations, the conversion will fails and no mzML (URL_TO_INSERT_RECORD-ABBREV_3507 https://fairsharing.org/FAIRsharing.26dmba)  output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:
+In some situations, the conversion will fails and no mzML (URL_TO_INSERT_RECORD-ABBREV_1823 https://fairsharing.org/FAIRsharing.26dmba)  output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:
  - raw data files 
- - unsupported vendor format (URL_TO_INSERT_TERM_3508 https://fairsharing.org/search?recordType=model_and_format) 
+ - unsupported vendor format
 
 To address the former, it is good practice to compute a hash (md5, sha2) checksum fingerprinting each of the files. This allows to ensure that no file corruption has occurred during transfer and copy.
 
 To address the latter, one should consult the table of compatibility:
 
 
-|          Format (URL_TO_INSERT_TERM_3509 https://fairsharing.org/search?recordType=model_and_format)          |    Status   |
+|          Format         |    Status   |
 |:----------------------- |:----------- |
 | ABI T2D                 | not working |
 | Agilent MHDAC (non-IMS) | working     |
@@ -230,9 +230,9 @@ To address the latter, one should consult the table of compatibility:
 
 #### 5. Testing and processing the resulting mzML files
 
-For users unfamiliar with format (URL_TO_INSERT_TERM_3510 https://fairsharing.org/search?recordType=model_and_format) , a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
+For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
 
-A number of libraries are available for parsing (reading and writing) `mzML (URL_TO_INSERT_RECORD-ABBREV_3515 https://fairsharing.org/FAIRsharing.26dmba) ` document. `mzML (URL_TO_INSERT_RECORD-ABBREV_3516 https://fairsharing.org/FAIRsharing.26dmba) ` is a king of `XML (URL_TO_INSERT_RECORD-ABBREV_3513 https://fairsharing.org/FAIRsharing.b5cc91) ` format (URL_TO_INSERT_TERM_3512 https://fairsharing.org/search?recordType=model_and_format)  for which an XML (URL_TO_INSERT_RECORD-ABBREV_3514 https://fairsharing.org/FAIRsharing.b5cc91)  schema has been defined and allows syntactic validation through standard (URL_TO_INSERT_TERM_3511 https://fairsharing.org/search?fairsharingRegistry=Standard)  library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
+A number of libraries are available for parsing (reading and writing) `mzML (URL_TO_INSERT_RECORD-ABBREV_1826 https://fairsharing.org/FAIRsharing.26dmba) ` document. `mzML (URL_TO_INSERT_RECORD-ABBREV_1827 https://fairsharing.org/FAIRsharing.26dmba) ` is a king of `XML (URL_TO_INSERT_RECORD-ABBREV_1824 https://fairsharing.org/FAIRsharing.b5cc91) ` format for which an XML (URL_TO_INSERT_RECORD-ABBREV_1825 https://fairsharing.org/FAIRsharing.b5cc91)  schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
 <img src="/images/BTs0GUS.png" width="750" border="1"/>
@@ -287,16 +287,16 @@ width: 650px
 name: pymzml rendered msrun profile
 alt: pymzml rendered msrun profile
 ---
-The Python `pymzml` library rendering of a spectrum as extracted from an mzml format (URL_TO_INSERT_TERM_3517 https://fairsharing.org/search?recordType=model_and_format) ted mass spectrum data file.
+The Python `pymzml` library rendering of a spectrum as extracted from an mzml formatted mass spectrum data file.
 ```
 ````
 
-In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML (URL_TO_INSERT_RECORD-ABBREV_3518 https://fairsharing.org/FAIRsharing.26dmba)  documents. But in the following, we'll show how to read an mzML (URL_TO_INSERT_RECORD-ABBREV_3519 https://fairsharing.org/FAIRsharing.26dmba)  file using a python library.
+In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML (URL_TO_INSERT_RECORD-ABBREV_1828 https://fairsharing.org/FAIRsharing.26dmba)  documents. But in the following, we'll show how to read an mzML (URL_TO_INSERT_RECORD-ABBREV_1829 https://fairsharing.org/FAIRsharing.26dmba)  file using a python library.
 
 ## Conclusion
 
-In this recipe, we have shown how to convert a proprietary file format (URL_TO_INSERT_TERM_3521 https://fairsharing.org/search?recordType=model_and_format)  to an open standard (URL_TO_INSERT_TERM_3520 https://fairsharing.org/search?fairsharingRegistry=Standard)  format (URL_TO_INSERT_TERM_3522 https://fairsharing.org/search?recordType=model_and_format) , using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data format (URL_TO_INSERT_TERM_3523 https://fairsharing.org/search?recordType=model_and_format) s and unfortunately not all benefit from the support of open source / open format (URL_TO_INSERT_TERM_3524 https://fairsharing.org/search?recordType=model_and_format)  communities. However by consulting the [Elixir UK](https://elixir-europe.org/about-us/who-we-are/nodes/uk) [FAIRsharing (URL_TO_INSERT_RECORD-NAME_3526 https://fairsharing.org/FAIRsharing.2abjs5)  registry](https://fairsharing.org), it is possible to identify if such open format (URL_TO_INSERT_TERM_3525 https://fairsharing.org/search?recordType=model_and_format)  specifications are available.
-Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format (URL_TO_INSERT_TERM_3527 https://fairsharing.org/search?recordType=model_and_format) .
+In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the [Elixir UK](https://elixir-europe.org/about-us/who-we-are/nodes/uk) [FAIRsharing (URL_TO_INSERT_RECORD-NAME_1830 https://fairsharing.org/FAIRsharing.2abjs5)  registry](https://fairsharing.org), it is possible to identify if such open format specifications are available.
+Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format.
 
 
 

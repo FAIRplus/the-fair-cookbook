@@ -21,7 +21,7 @@
 
 ## Main Objective: 
 
-This recipe provides **guidance on the selection and exploitation of ontology (URL_TO_INSERT_TERM_2089 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services** . 
+This recipe provides **guidance on the selection and exploitation of ontology lookup services** . 
 
 >* **[Objective of the recipe: introduction to ontology lookup services](#heading=h.bb3h294tvdau)**
 >
@@ -29,154 +29,154 @@ This recipe provides **guidance on the selection and exploitation of ontology (U
 >
 >* **[Overview of widespread ontology lookup services](#bookmark=id.x42hawpkzgd3)**
 
-An ***ontology (URL_TO_INSERT_TERM_2090 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2091 https://fairsharing.org/FAIRsharing.Mkl9RR) *** 
-refers to *any type of application, standalone or Web-based, that enables the use of existing ontologies (URL_TO_INSERT_TERM_2092 https://fairsharing.org/search?recordType=terminology_artefact)  to support knowledge 
-formalization and sharing, by fostering ontology (URL_TO_INSERT_TERM_2093 https://fairsharing.org/search?recordType=terminology_artefact) -based descriptions of knowledge*. 
+An ***ontology lookup service (URL_TO_INSERT_RECORD-NAME_1191 https://fairsharing.org/FAIRsharing.Mkl9RR) *** 
+refers to *any type of application, standalone or Web-based, that enables the use of existing ontologies to support knowledge 
+formalization and sharing, by fostering ontology-based descriptions of knowledge*. 
 
 
 
 
-Tools useful to build, edit or maintain ontologies (URL_TO_INSERT_TERM_2095 https://fairsharing.org/search?recordType=terminology_artefact)  are not considered ontology (URL_TO_INSERT_TERM_2094 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services and thus are out of the scope of this recipe. 
+Tools useful to build, edit or maintain ontologies are not considered ontology lookup services and thus are out of the scope of this recipe. 
 
-In essence, an ontology (URL_TO_INSERT_TERM_2096 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2097 https://fairsharing.org/FAIRsharing.Mkl9RR)  is a platform that provides users with the possibility to **search in a set of
-ontologies (URL_TO_INSERT_TERM_2098 https://fairsharing.org/search?recordType=terminology_artefact) , the most suitable concepts to describe the semantics of a piece of knowledge of interest,
+In essence, an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1192 https://fairsharing.org/FAIRsharing.Mkl9RR)  is a platform that provides users with the possibility to **search in a set of
+ontologies, the most suitable concepts to describe the semantics of a piece of knowledge of interest,
 usually available in the form of one or more keywords or a text excerpt**. 
 
-Most ontology (URL_TO_INSERT_TERM_2099 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services are available as Web applications: most of them also support programmatic access to their 
-capabilities by means of (REST) APIs. Ontology (URL_TO_INSERT_TERM_2100 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services can vary in the features that are provided, but often include:
+Most ontology lookup services are available as Web applications: most of them also support programmatic access to their 
+capabilities by means of (REST) APIs. Ontology lookup services can vary in the features that are provided, but often include:
 
 
 
-* **Complex searching for concepts of interest**: most services implement advanced search features (i.e. scoping the search to specific ontologies (URL_TO_INSERT_TERM_2102 https://fairsharing.org/search?recordType=terminology_artefact)  or to specific parts of an ontology (URL_TO_INSERT_TERM_2101 https://fairsharing.org/search?recordType=terminology_artefact) ) or allow users to specify fine-grained patterns to aggregate or restrict the scope of search results.
-* **Advanced browsing capabilities**, to explore the contents of a specific ontology (URL_TO_INSERT_TERM_2103 https://fairsharing.org/search?recordType=terminology_artefact)  by means of custom data navigation widgets such as tree-based views.
-* **Managing distinct versions** of an ontology (URL_TO_INSERT_TERM_2104 https://fairsharing.org/search?recordType=terminology_artefact)  and alert its users when specific concepts become obsolete. 
-* **Importing** user-provided ontologies (URL_TO_INSERT_TERM_2106 https://fairsharing.org/search?recordType=terminology_artefact) , giving consumers the ability to leverage a service for other terminologies (URL_TO_INSERT_TERM_2105 https://fairsharing.org/search?recordType=terminology_artefact)  beyond those included.
-* Programmatic means to **access and deploy instances of the ontology (URL_TO_INSERT_TERM_2107 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2108 https://fairsharing.org/FAIRsharing.Mkl9RR)  in the premises of its users** represents another differentiating feature, using relevant documentation.
-* **Recommending ontologies (URL_TO_INSERT_TERM_2109 https://fairsharing.org/search?recordType=terminology_artefact) ** based on the input of a given term, with ontologies (URL_TO_INSERT_TERM_2110 https://fairsharing.org/search?recordType=terminology_artefact)  ranked according to custom-weighted criteria.
-* Access to an **active user community** that supports and exploits a specific ontology (URL_TO_INSERT_TERM_2111 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2112 https://fairsharing.org/FAIRsharing.Mkl9RR) , serving as an indication of widespread adoption and selection.
+* **Complex searching for concepts of interest**: most services implement advanced search features (i.e. scoping the search to specific ontologies or to specific parts of an ontology) or allow users to specify fine-grained patterns to aggregate or restrict the scope of search results.
+* **Advanced browsing capabilities**, to explore the contents of a specific ontology by means of custom data navigation widgets such as tree-based views.
+* **Managing distinct versions** of an ontology and alert its users when specific concepts become obsolete. 
+* **Importing** user-provided ontologies, giving consumers the ability to leverage a service for other terminologies beyond those included.
+* Programmatic means to **access and deploy instances of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1193 https://fairsharing.org/FAIRsharing.Mkl9RR)  in the premises of its users** represents another differentiating feature, using relevant documentation.
+* **Recommending ontologies** based on the input of a given term, with ontologies ranked according to custom-weighted criteria.
+* Access to an **active user community** that supports and exploits a specific ontology lookup service (URL_TO_INSERT_RECORD-NAME_1194 https://fairsharing.org/FAIRsharing.Mkl9RR) , serving as an indication of widespread adoption and selection.
 
-This recipe presents guideline (URL_TO_INSERT_TERM_2114 https://fairsharing.org/search?recordType=reporting_guideline) s and relevant considerations when choosing an ontology (URL_TO_INSERT_TERM_2113 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2115 https://fairsharing.org/FAIRsharing.Mkl9RR) , followed by
-overview of existing public ontology (URL_TO_INSERT_TERM_2116 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services and a comparison of their core (URL_TO_INSERT_RECORD-NAME_2117 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_2118 https://fairsharing.org/FAIRsharing.m283c)  features.
+This recipe presents guidelines and relevant considerations when choosing an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1195 https://fairsharing.org/FAIRsharing.Mkl9RR) , followed by
+overview of existing public ontology lookup services and a comparison of their core (URL_TO_INSERT_RECORD-NAME_1196 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_1197 https://fairsharing.org/FAIRsharing.m283c)  features.
 
 
 ## Selecting An Ontology Lookup Service
 
-This section provides guideline (URL_TO_INSERT_TERM_2120 https://fairsharing.org/search?recordType=reporting_guideline) s and suggestions on how to select and leverage an ontology (URL_TO_INSERT_TERM_2119 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2121 https://fairsharing.org/FAIRsharing.Mkl9RR) , on the basis
-of the knowledge needs and ontology (URL_TO_INSERT_TERM_2123 https://fairsharing.org/search?recordType=terminology_artefact)  use patterns that characterize a specific knowledge-intensive project (URL_TO_INSERT_TERM_2122 https://fairsharing.org/search?recordType=project) . 
+This section provides guidelines and suggestions on how to select and leverage an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1198 https://fairsharing.org/FAIRsharing.Mkl9RR) , on the basis
+of the knowledge needs and ontology use patterns that characterize a specific knowledge-intensive project. 
 
-Several aspects to consider when choosing an ontology (URL_TO_INSERT_TERM_2124 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2125 https://fairsharing.org/FAIRsharing.Mkl9RR)  are derived based on a series of commonly asked questions;
+Several aspects to consider when choosing an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1199 https://fairsharing.org/FAIRsharing.Mkl9RR)  are derived based on a series of commonly asked questions;
 
 
 
-* **Is the set of ontologies (URL_TO_INSERT_TERM_2128 https://fairsharing.org/search?recordType=terminology_artefact)  incorporated in the ontology (URL_TO_INSERT_TERM_2127 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2129 https://fairsharing.org/FAIRsharing.Mkl9RR)  suitable to formally describe the knowledge domain my project (URL_TO_INSERT_TERM_2126 https://fairsharing.org/search?recordType=project)  is interested in?**
+* **Is the set of ontologies incorporated in the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1200 https://fairsharing.org/FAIRsharing.Mkl9RR)  suitable to formally describe the knowledge domain my project is interested in?**
 
-    Ontology (URL_TO_INSERT_TERM_2130 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services usually provide access and enable users to search and reference classes and properties of _a specific set of ontologies (URL_TO_INSERT_TERM_2131 https://fairsharing.org/search?recordType=terminology_artefact)  related to a specific knowledge domain_ (i.e. biomedical knowledge).
-    When choosing an ontology (URL_TO_INSERT_TERM_2133 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2135 https://fairsharing.org/FAIRsharing.Mkl9RR)  it is important to verify whether the ontologies (URL_TO_INSERT_TERM_2134 https://fairsharing.org/search?recordType=terminology_artefact)  covered by a specific service are suitable to describe the content of our knowledge-intensive project (URL_TO_INSERT_TERM_2132 https://fairsharing.org/search?recordType=project) . 
-    Besides, a list of the ontologies (URL_TO_INSERT_TERM_2136 https://fairsharing.org/search?recordType=terminology_artefact)  covered, and interactive widgets to explore such ontologies (URL_TO_INSERT_TERM_2137 https://fairsharing.org/search?recordType=terminology_artefact)  (e.g. tree-based views), 
-    some ontology (URL_TO_INSERT_TERM_2138 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services also provide _ontology (URL_TO_INSERT_TERM_2139 https://fairsharing.org/search?recordType=terminology_artefact)  recommendation capabilities:_ given some “sample” 
-    (i.e. text excerpt or list of keywords) of the knowledge we need to describe by means of available ontologies (URL_TO_INSERT_TERM_2140 https://fairsharing.org/search?recordType=terminology_artefact) , 
-    the ontology (URL_TO_INSERT_TERM_2141 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2143 https://fairsharing.org/FAIRsharing.Mkl9RR)  ‘recommender’ suggests which are the best ontologies (URL_TO_INSERT_TERM_2142 https://fairsharing.org/search?recordType=terminology_artefact)  to use to this propose.
+    Ontology lookup services usually provide access and enable users to search and reference classes and properties of _a specific set of ontologies related to a specific knowledge domain_ (i.e. biomedical knowledge).
+    When choosing an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1201 https://fairsharing.org/FAIRsharing.Mkl9RR)  it is important to verify whether the ontologies covered by a specific service are suitable to describe the content of our knowledge-intensive project. 
+    Besides, a list of the ontologies covered, and interactive widgets to explore such ontologies (e.g. tree-based views), 
+    some ontology lookup services also provide _ontology recommendation capabilities:_ given some “sample” 
+    (i.e. text excerpt or list of keywords) of the knowledge we need to describe by means of available ontologies, 
+    the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1202 https://fairsharing.org/FAIRsharing.Mkl9RR)  ‘recommender’ suggests which are the best ontologies to use to this propose.
 
-* **Do I need to consider / rely on private ontologies (URL_TO_INSERT_TERM_2145 https://fairsharing.org/search?recordType=terminology_artefact)  in my project (URL_TO_INSERT_TERM_2144 https://fairsharing.org/search?recordType=project) ? Do I need to use ontologies (URL_TO_INSERT_TERM_2146 https://fairsharing.org/search?recordType=terminology_artefact)  that are not already 
-    imported and thus available in the ontology (URL_TO_INSERT_TERM_2147 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2148 https://fairsharing.org/FAIRsharing.Mkl9RR)  of my choice?**
+* **Do I need to consider / rely on private ontologies in my project? Do I need to use ontologies that are not already 
+    imported and thus available in the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1203 https://fairsharing.org/FAIRsharing.Mkl9RR)  of my choice?**
 
-    Some ontology (URL_TO_INSERT_TERM_2149 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services enable users to import external (i.e. user-provided) ontologies (URL_TO_INSERT_TERM_2150 https://fairsharing.org/search?recordType=terminology_artefact)  in order to incorporate
-    the content of these ontologies (URL_TO_INSERT_TERM_2151 https://fairsharing.org/search?recordType=terminology_artefact)  in their search and recommendation capabilities. 
-    This feature could represent a key factor to consider when choosing an ontology (URL_TO_INSERT_TERM_2152 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2153 https://fairsharing.org/FAIRsharing.Mkl9RR)  since several 
-    knowledge-intensive project (URL_TO_INSERT_TERM_2154 https://fairsharing.org/search?recordType=project) s rely on private ontologies (URL_TO_INSERT_TERM_2155 https://fairsharing.org/search?recordType=terminology_artefact)  or need to consider a set of additional ontologies (URL_TO_INSERT_TERM_2156 https://fairsharing.org/search?recordType=terminology_artefact)  not 
-    natively covered by a specific ontology (URL_TO_INSERT_TERM_2157 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2158 https://fairsharing.org/FAIRsharing.Mkl9RR) .
+    Some ontology lookup services enable users to import external (i.e. user-provided) ontologies in order to incorporate
+    the content of these ontologies in their search and recommendation capabilities. 
+    This feature could represent a key factor to consider when choosing an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1204 https://fairsharing.org/FAIRsharing.Mkl9RR)  since several 
+    knowledge-intensive projects rely on private ontologies or need to consider a set of additional ontologies not 
+    natively covered by a specific ontology lookup service (URL_TO_INSERT_RECORD-NAME_1205 https://fairsharing.org/FAIRsharing.Mkl9RR) .
 
-* **Because of data privacy or data protection issues, do I need to use an instance of the ontology (URL_TO_INSERT_TERM_2159 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2160 https://fairsharing.org/FAIRsharing.Mkl9RR)  that
+* **Because of data privacy or data protection issues, do I need to use an instance of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1206 https://fairsharing.org/FAIRsharing.Mkl9RR)  that
 is deployed locally on my private computing infrastructure?**
 
-    Several ontology (URL_TO_INSERT_TERM_2161 https://fairsharing.org/search?recordType=terminology_artefact) -lookup services provide the possibility to deploy the service on the private computing 
-    infrastructure of its users. This feature would be particularly relevant when private ontologies (URL_TO_INSERT_TERM_2162 https://fairsharing.org/search?recordType=terminology_artefact)  are adopted in a 
-    knowledge-intensive project (URL_TO_INSERT_TERM_2163 https://fairsharing.org/search?recordType=project) .
+    Several ontology-lookup services provide the possibility to deploy the service on the private computing 
+    infrastructure of its users. This feature would be particularly relevant when private ontologies are adopted in a 
+    knowledge-intensive project.
 
-* **Which are the usage patterns I will rely on in order to exploit the ontology (URL_TO_INSERT_TERM_2164 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2165 https://fairsharing.org/FAIRsharing.Mkl9RR) ? Will the 1)
-massive and systematic exploitation of the ontology (URL_TO_INSERT_TERM_2166 https://fairsharing.org/search?recordType=terminology_artefact)  search, 2) the recommendation features of the ontology (URL_TO_INSERT_TERM_2167 https://fairsharing.org/search?recordType=terminology_artefact)  lookup
+* **Which are the usage patterns I will rely on in order to exploit the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1207 https://fairsharing.org/FAIRsharing.Mkl9RR) ? Will the 1)
+massive and systematic exploitation of the ontology search, 2) the recommendation features of the ontology lookup
 service or 3) the integration of its capabilities in more complex systems, require the possibility to programmatically 
 access the service by means of an application programming interface (API)?**
 
-    Ontology (URL_TO_INSERT_TERM_2168 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services usually provide a (Web-based) user interface as the preferred way to interact with them to
-    browse and search for ontologies (URL_TO_INSERT_TERM_2169 https://fairsharing.org/search?recordType=terminology_artefact) , or recommend relevant concepts to describe contents of interest. 
-    In several scenarios, the possibility to programmatically interact with ontology (URL_TO_INSERT_TERM_2170 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services would be extremely
-    valuable; to this purpose, several ontology (URL_TO_INSERT_TERM_2171 https://fairsharing.org/search?recordType=terminology_artefact) -lookup services implement an API (mostly based on REST interactions)
-    that enable the user to programmatically invoke the majority of ontology (URL_TO_INSERT_TERM_2172 https://fairsharing.org/search?recordType=terminology_artefact)  search features of the same service. 
-    In order to simplify the integration of the ontology (URL_TO_INSERT_TERM_2173 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2174 https://fairsharing.org/FAIRsharing.Mkl9RR)  support into external applications,  
-   several-ontology (URL_TO_INSERT_TERM_2175 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services provide users with language-specific clients to interact with them through their API. 
+    Ontology lookup services usually provide a (Web-based) user interface as the preferred way to interact with them to
+    browse and search for ontologies, or recommend relevant concepts to describe contents of interest. 
+    In several scenarios, the possibility to programmatically interact with ontology lookup services would be extremely
+    valuable; to this purpose, several ontology-lookup services implement an API (mostly based on REST interactions)
+    that enable the user to programmatically invoke the majority of ontology search features of the same service. 
+    In order to simplify the integration of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1208 https://fairsharing.org/FAIRsharing.Mkl9RR)  support into external applications,  
+   several-ontology lookup services provide users with language-specific clients to interact with them through their API. 
 
-* **Is the distribution license of the ontology (URL_TO_INSERT_TERM_2176 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2177 https://fairsharing.org/FAIRsharing.Mkl9RR)  compatible with the way I plan to exploit the 
-features provided the same service in my project (URL_TO_INSERT_TERM_2178 https://fairsharing.org/search?recordType=project)  or with the way I plan to integrate the same service in my project (URL_TO_INSERT_TERM_2179 https://fairsharing.org/search?recordType=project) ?**
+* **Is the distribution license of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1209 https://fairsharing.org/FAIRsharing.Mkl9RR)  compatible with the way I plan to exploit the 
+features provided the same service in my project or with the way I plan to integrate the same service in my project?**
 
-    The licencing terms of the ontology (URL_TO_INSERT_TERM_2180 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2181 https://fairsharing.org/FAIRsharing.Mkl9RR)  of choice intended for use in a given context and 
-    knowledge-intensive project (URL_TO_INSERT_TERM_2182 https://fairsharing.org/search?recordType=project) , is a key consideration when selecting an ontology (URL_TO_INSERT_TERM_2183 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2184 https://fairsharing.org/FAIRsharing.Mkl9RR) : available 
-    ontology (URL_TO_INSERT_TERM_2185 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services range from open-source applications to commercial tools, and it is best to choose one with funding in mind.
+    The licencing terms of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1210 https://fairsharing.org/FAIRsharing.Mkl9RR)  of choice intended for use in a given context and 
+    knowledge-intensive project, is a key consideration when selecting an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1211 https://fairsharing.org/FAIRsharing.Mkl9RR) : available 
+    ontology lookup services range from open-source applications to commercial tools, and it is best to choose one with funding in mind.
 
-* **Does the ontology (URL_TO_INSERT_TERM_2186 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2189 https://fairsharing.org/FAIRsharing.Mkl9RR)  manage ontology (URL_TO_INSERT_TERM_2187 https://fairsharing.org/search?recordType=terminology_artefact)  versioning and updates so that I can easily reflect any ontology (URL_TO_INSERT_TERM_2188 https://fairsharing.org/search?recordType=terminology_artefact)  
-update into my knowledge-intensive project (URL_TO_INSERT_TERM_2190 https://fairsharing.org/search?recordType=project) ? **
+* **Does the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1212 https://fairsharing.org/FAIRsharing.Mkl9RR)  manage ontology versioning and updates so that I can easily reflect any ontology 
+update into my knowledge-intensive project? **
 
-    Ontologies (URL_TO_INSERT_TERM_2193 https://fairsharing.org/search?recordType=terminology_artefact)  and terminologies (URL_TO_INSERT_TERM_2191 https://fairsharing.org/search?recordType=terminology_artefact)  usually evolve over time: when a new, updated version of an ontology (URL_TO_INSERT_TERM_2192 https://fairsharing.org/search?recordType=terminology_artefact)  used in a 
-    knowledge-intensive project (URL_TO_INSERT_TERM_2194 https://fairsharing.org/search?recordType=project)  becomes available, best practice suggests that we should also update the part of our 
-    project (URL_TO_INSERT_TERM_2195 https://fairsharing.org/search?recordType=project) s that rely on such ontology (URL_TO_INSERT_TERM_2196 https://fairsharing.org/search?recordType=terminology_artefact) . Some ontology (URL_TO_INSERT_TERM_2197 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services implement specific procedures and tools to manage
-    and propagate ontology (URL_TO_INSERT_TERM_2198 https://fairsharing.org/search?recordType=terminology_artefact)  updates; the availability of such tools would simplify the implementation of changes deriving
-    from ontology (URL_TO_INSERT_TERM_2200 https://fairsharing.org/search?recordType=terminology_artefact)  updates in the project (URL_TO_INSERT_TERM_2199 https://fairsharing.org/search?recordType=project) s under consideration.
+    Ontologies and terminologies usually evolve over time: when a new, updated version of an ontology used in a 
+    knowledge-intensive project becomes available, best practice suggests that we should also update the part of our 
+    projects that rely on such ontology. Some ontology lookup services implement specific procedures and tools to manage
+    and propagate ontology updates; the availability of such tools would simplify the implementation of changes deriving
+    from ontology updates in the projects under consideration.
 
-* **Is the ontology (URL_TO_INSERT_TERM_2201 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2202 https://fairsharing.org/FAIRsharing.Mkl9RR)  supported by an active community of developers
+* **Is the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1213 https://fairsharing.org/FAIRsharing.Mkl9RR)  supported by an active community of developers
 or by an active company? Which are the available channels I can rely on to receive support on the usage and integration 
-of the ontology (URL_TO_INSERT_TERM_2203 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2204 https://fairsharing.org/FAIRsharing.Mkl9RR) ?**
+of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1214 https://fairsharing.org/FAIRsharing.Mkl9RR) ?**
 
     The support of an active community of developers and users is a key aspect to take into account when choosing an 
-    ontology (URL_TO_INSERT_TERM_2205 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2207 https://fairsharing.org/FAIRsharing.Mkl9RR) . This could be quantified by evaluating several factors of an ontology (URL_TO_INSERT_TERM_2206 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2208 https://fairsharing.org/FAIRsharing.Mkl9RR)  including:
-    (i) availability of mailing or support lists; (ii) for open-source project (URL_TO_INSERT_TERM_2210 https://fairsharing.org/search?recordType=project) s, using metric (URL_TO_INSERT_TERM_2209 https://fairsharing.org/search?recordType=metric) s such as the star-rating,
-    the number of forks and followers and the frequency of commits of the project (URL_TO_INSERT_TERM_2211 https://fairsharing.org/search?recordType=project)  on the code-sharing platform used 
-    (e.g. GitHub (URL_TO_INSERT_RECORD-NAME_2214 https://fairsharing.org/FAIRsharing.c55d5e) ); (iii) size of the community of users of the ontology (URL_TO_INSERT_TERM_2212 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2213 https://fairsharing.org/FAIRsharing.Mkl9RR)  (e.g. how many followers on social
+    ontology lookup service (URL_TO_INSERT_RECORD-NAME_1215 https://fairsharing.org/FAIRsharing.Mkl9RR) . This could be quantified by evaluating several factors of an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1216 https://fairsharing.org/FAIRsharing.Mkl9RR)  including:
+    (i) availability of mailing or support lists; (ii) for open-source projects, using metric (URL_TO_INSERT_TERM_1217 https://fairsharing.org/search?recordType=metric) s such as the star-rating,
+    the number of forks and followers and the frequency of commits of the project on the code-sharing platform used 
+    (e.g. GitHub (URL_TO_INSERT_RECORD-NAME_1219 https://fairsharing.org/FAIRsharing.c55d5e) ); (iii) size of the community of users of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1218 https://fairsharing.org/FAIRsharing.Mkl9RR)  (e.g. how many followers on social
     media accounts, how many clients advertised on the Website).
 
 ## Key Selection Criteria
 
 The above questions have highlighted 20 factors which should be taken into account when choosing a service. 
-These factors can be categorised into 3 groups; **ontology (URL_TO_INSERT_TERM_2216 https://fairsharing.org/search?recordType=terminology_artefact)  informat (URL_TO_INSERT_TERM_2215 https://fairsharing.org/search?recordType=model_and_format) ion, functionality** and **interfaces**, and include;
+These factors can be categorised into 3 groups; **ontology information, functionality** and **interfaces**, and include;
 
 ### **Ontology Information**
 
 
 
-1. **URL (URL_TO_INSERT_RECORD-ABBREV_2219 https://fairsharing.org/FAIRsharing.9d38e2) **: the main URL (URL_TO_INSERT_RECORD-ABBREV_2220 https://fairsharing.org/FAIRsharing.9d38e2)  where the ontology (URL_TO_INSERT_TERM_2217 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2218 https://fairsharing.org/FAIRsharing.Mkl9RR)  can be accessed
-2. **Latest version of service / data / code (where applicable**): the most recent version of both the content (i.e. ontologies (URL_TO_INSERT_TERM_2222 https://fairsharing.org/search?recordType=terminology_artefact) ) and the code of the ontology (URL_TO_INSERT_TERM_2221 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2223 https://fairsharing.org/FAIRsharing.Mkl9RR) 
-3. **Host Organisation**: the organisation responsible for the maintenance of the ontology (URL_TO_INSERT_TERM_2224 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2225 https://fairsharing.org/FAIRsharing.Mkl9RR) 
-4. **Public / private**: is the ontology (URL_TO_INSERT_TERM_2226 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2227 https://fairsharing.org/FAIRsharing.Mkl9RR)  a public or private infrastructure?
-5. **Licence**: the licence that regulates the use and cost of the ontology (URL_TO_INSERT_TERM_2228 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2229 https://fairsharing.org/FAIRsharing.Mkl9RR) 
-6. **Domain**: which is the knowledge domain covered by the ontologies (URL_TO_INSERT_TERM_2231 https://fairsharing.org/search?recordType=terminology_artefact)  referenced in the ontology (URL_TO_INSERT_TERM_2230 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2232 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
-7. **Quantification of community of users**: objective measures to quantify the community of users supporting and consuming an ontology (URL_TO_INSERT_TERM_2233 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2234 https://fairsharing.org/FAIRsharing.Mkl9RR) , including: number of stars and forks on GitHub (URL_TO_INSERT_RECORD-NAME_2235 https://fairsharing.org/FAIRsharing.c55d5e) , number of social media followers
+1. **URL (URL_TO_INSERT_RECORD-ABBREV_1221 https://fairsharing.org/FAIRsharing.9d38e2) **: the main URL (URL_TO_INSERT_RECORD-ABBREV_1222 https://fairsharing.org/FAIRsharing.9d38e2)  where the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1220 https://fairsharing.org/FAIRsharing.Mkl9RR)  can be accessed
+2. **Latest version of service / data / code (where applicable**): the most recent version of both the content (i.e. ontologies) and the code of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1223 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+3. **Host Organisation**: the organisation responsible for the maintenance of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1224 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+4. **Public / private**: is the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1225 https://fairsharing.org/FAIRsharing.Mkl9RR)  a public or private infrastructure?
+5. **Licence**: the licence that regulates the use and cost of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1226 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+6. **Domain**: which is the knowledge domain covered by the ontologies referenced in the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1227 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
+7. **Quantification of community of users**: objective measures to quantify the community of users supporting and consuming an ontology lookup service (URL_TO_INSERT_RECORD-NAME_1228 https://fairsharing.org/FAIRsharing.Mkl9RR) , including: number of stars and forks on GitHub (URL_TO_INSERT_RECORD-NAME_1229 https://fairsharing.org/FAIRsharing.c55d5e) , number of social media followers
 
 ### **Functionality**
 
 
 
-8. **Number and complexity of ontologies (URL_TO_INSERT_TERM_2237 https://fairsharing.org/search?recordType=terminology_artefact)  covered**: how many ontologies (URL_TO_INSERT_TERM_2238 https://fairsharing.org/search?recordType=terminology_artefact)  does the ontology (URL_TO_INSERT_TERM_2236 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2239 https://fairsharing.org/FAIRsharing.Mkl9RR)  cover and how complex are they?
-9. **Ontology (URL_TO_INSERT_TERM_2242 https://fairsharing.org/search?recordType=terminology_artefact)  format (URL_TO_INSERT_TERM_2240 https://fairsharing.org/search?recordType=model_and_format) s supported**: which ontology (URL_TO_INSERT_TERM_2243 https://fairsharing.org/search?recordType=terminology_artefact)  format (URL_TO_INSERT_TERM_2241 https://fairsharing.org/search?recordType=model_and_format) s are supported by the ontology (URL_TO_INSERT_TERM_2244 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2245 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
-10. **Ontology (URL_TO_INSERT_TERM_2246 https://fairsharing.org/search?recordType=terminology_artefact)  importing capabilities**: if and how ontologies (URL_TO_INSERT_TERM_2248 https://fairsharing.org/search?recordType=terminology_artefact)  can be imported and thus indexed by the ontology (URL_TO_INSERT_TERM_2247 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2249 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
-11. **Ontology (URL_TO_INSERT_TERM_2250 https://fairsharing.org/search?recordType=terminology_artefact)  browsing capabilities**: which interaction patterns are available to browse the set of ontologies (URL_TO_INSERT_TERM_2252 https://fairsharing.org/search?recordType=terminology_artefact)  contemplated by the ontology (URL_TO_INSERT_TERM_2251 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2253 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
-12. **Ontology (URL_TO_INSERT_TERM_2254 https://fairsharing.org/search?recordType=terminology_artefact)  search capabilities**: which search patterns are provided by the ontology (URL_TO_INSERT_TERM_2255 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2258 https://fairsharing.org/FAIRsharing.Mkl9RR)  to identify the best concept useful to represent the semantic of a term? When searching against a term, does the ontology (URL_TO_INSERT_TERM_2256 https://fairsharing.org/search?recordType=terminology_artefact)  give an indication of whether the term has been derived from a different ontology (URL_TO_INSERT_TERM_2257 https://fairsharing.org/search?recordType=terminology_artefact) ?
-13. **Ontology (URL_TO_INSERT_TERM_2259 https://fairsharing.org/search?recordType=terminology_artefact)  recommendation capabilities**: does the ontology (URL_TO_INSERT_TERM_2260 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2262 https://fairsharing.org/FAIRsharing.Mkl9RR)  provide users with a recommendation concerning the most suitable ontologies (URL_TO_INSERT_TERM_2261 https://fairsharing.org/search?recordType=terminology_artefact)  to semantically characterize the contents of some text / a set of keywords? 
-14. **Ontology (URL_TO_INSERT_TERM_2263 https://fairsharing.org/search?recordType=terminology_artefact)  update capabilities**: how are terms and/or relationships updated in a given ontology (URL_TO_INSERT_TERM_2264 https://fairsharing.org/search?recordType=terminology_artefact)  and how is this governed? Is this an automatic or manual update and what happens to terms that are considered obsolete?
-15. **Ontology (URL_TO_INSERT_TERM_2265 https://fairsharing.org/search?recordType=terminology_artefact)  versioning capabilities**: are there predefined patterns to identify, manage and compare distinct versions of an ontology (URL_TO_INSERT_TERM_2266 https://fairsharing.org/search?recordType=terminology_artefact) ? 
+8. **Number and complexity of ontologies covered**: how many ontologies does the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1230 https://fairsharing.org/FAIRsharing.Mkl9RR)  cover and how complex are they?
+9. **Ontology formats supported**: which ontology formats are supported by the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1231 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
+10. **Ontology importing capabilities**: if and how ontologies can be imported and thus indexed by the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1232 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
+11. **Ontology browsing capabilities**: which interaction patterns are available to browse the set of ontologies contemplated by the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1233 https://fairsharing.org/FAIRsharing.Mkl9RR) ?
+12. **Ontology search capabilities**: which search patterns are provided by the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1234 https://fairsharing.org/FAIRsharing.Mkl9RR)  to identify the best concept useful to represent the semantic of a term? When searching against a term, does the ontology give an indication of whether the term has been derived from a different ontology?
+13. **Ontology recommendation capabilities**: does the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1235 https://fairsharing.org/FAIRsharing.Mkl9RR)  provide users with a recommendation concerning the most suitable ontologies to semantically characterize the contents of some text / a set of keywords? 
+14. **Ontology update capabilities**: how are terms and/or relationships updated in a given ontology and how is this governed? Is this an automatic or manual update and what happens to terms that are considered obsolete?
+15. **Ontology versioning capabilities**: are there predefined patterns to identify, manage and compare distinct versions of an ontology? 
 
 ### **Interfaces**
 
 
 
-16. **Description of Web-based access to service**: which ontology (URL_TO_INSERT_TERM_2267 https://fairsharing.org/search?recordType=terminology_artefact)  browsing  and search patterns are available to the (Web-based) user interface of the ontology (URL_TO_INSERT_TERM_2268 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2270 https://fairsharing.org/FAIRsharing.Mkl9RR) ? Does the ontology (URL_TO_INSERT_TERM_2269 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2271 https://fairsharing.org/FAIRsharing.Mkl9RR)  also provide programmatic access to its data and services (e.g. by means of a REST API)?
-17. **Description of API**: reference to the documentation of the (REST) API provided by the ontology (URL_TO_INSERT_TERM_2272 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2273 https://fairsharing.org/FAIRsharing.Mkl9RR) , if any
-18. **Developer resources**: description of resources provided to developers in order to ease the programmatic access to the features of the ontology (URL_TO_INSERT_TERM_2274 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2275 https://fairsharing.org/FAIRsharing.Mkl9RR)  (i.e. libraries to query the REST API from a specific programming language).
-19. **Local deploy of service**: possibility to locally deploy the ontology (URL_TO_INSERT_TERM_2276 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2277 https://fairsharing.org/FAIRsharing.Mkl9RR) 
-20. **Source code reference**: if available, link to the source code of the ontology (URL_TO_INSERT_TERM_2278 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2279 https://fairsharing.org/FAIRsharing.Mkl9RR) 
-4. **Overview of Widespread Ontology (URL_TO_INSERT_TERM_2280 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Services**
+16. **Description of Web-based access to service**: which ontology browsing  and search patterns are available to the (Web-based) user interface of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1236 https://fairsharing.org/FAIRsharing.Mkl9RR) ? Does the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1237 https://fairsharing.org/FAIRsharing.Mkl9RR)  also provide programmatic access to its data and services (e.g. by means of a REST API)?
+17. **Description of API**: reference to the documentation of the (REST) API provided by the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1238 https://fairsharing.org/FAIRsharing.Mkl9RR) , if any
+18. **Developer resources**: description of resources provided to developers in order to ease the programmatic access to the features of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1239 https://fairsharing.org/FAIRsharing.Mkl9RR)  (i.e. libraries to query the REST API from a specific programming language).
+19. **Local deploy of service**: possibility to locally deploy the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1240 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+20. **Source code reference**: if available, link to the source code of the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1241 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+4. **Overview of Widespread Ontology Lookup Services**
 
 ---
 
-Here, we have used the selection criteria above to provide an overview and comparison of four widespread ontology (URL_TO_INSERT_TERM_2281 https://fairsharing.org/search?recordType=terminology_artefact)  lookup services, namely:
+Here, we have used the selection criteria above to provide an overview and comparison of four widespread ontology lookup services, namely:
 
 
 
@@ -185,9 +185,9 @@ Here, we have used the selection criteria above to provide an overview and compa
 -  [OHDSI Athena](https://athena.ohdsi.org/search-terms/start)
 -  [Ontobee and the OBO Foundry](http://www.ontobee.org)
 
-The results of the analysis can be found below, else in tabular format (URL_TO_INSERT_TERM_2282 https://fairsharing.org/search?recordType=model_and_format)  [here](https://docs.google.com/spreadsheets/d/1kn1oEhsYJPiLI5gA12B1UsbLBRoSLGbOYcOMDG4614o/edit#gid=0).
+The results of the analysis can be found below, else in tabular format [here](https://docs.google.com/spreadsheets/d/1kn1oEhsYJPiLI5gA12B1UsbLBRoSLGbOYcOMDG4614o/edit#gid=0).
 
-Note, the _‘last update of this table_’ field provides the date on which the ontology (URL_TO_INSERT_TERM_2283 https://fairsharing.org/search?recordType=terminology_artefact)  lookup service (URL_TO_INSERT_RECORD-NAME_2284 https://fairsharing.org/FAIRsharing.Mkl9RR)  was last assessed.
+Note, the _‘last update of this table_’ field provides the date on which the ontology lookup service (URL_TO_INSERT_RECORD-NAME_1242 https://fairsharing.org/FAIRsharing.Mkl9RR)  was last assessed.
 
 ### **The EBI Ontology Lookup Service** {footcite}`pmid20460452`
 
@@ -198,7 +198,7 @@ Note, the _‘last update of this table_’ field provides the date on which the
   <tr>
    <td><strong>Name</strong>
    </td>
-   <td>Ontology (URL_TO_INSERT_TERM_2285 https://fairsharing.org/search?recordType=terminology_artefact)  Lookup Servic (URL_TO_INSERT_RECORD-NAME_2286 https://fairsharing.org/FAIRsharing.Mkl9RR) e
+   <td>Ontology Lookup Servic (URL_TO_INSERT_RECORD-NAME_1243 https://fairsharing.org/FAIRsharing.Mkl9RR) e
    </td>
   </tr>
   <tr>
@@ -209,9 +209,9 @@ Note, the _‘last update of this table_’ field provides the date on which the
    </td>
   </tr>
   <tr>
-   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_2287 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
+   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_1244 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
    </td>
-   <td><a href="https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD-HOMEPAGE_2288 https://fairsharing.org/FAIRsharing.Mkl9RR) ">https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD-HOMEPAGE_2289 https://fairsharing.org/FAIRsharing.Mkl9RR) </a>
+   <td><a href="https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD-HOMEPAGE_1245 https://fairsharing.org/FAIRsharing.Mkl9RR) ">https://www.ebi.ac.uk/ols/index (URL_TO_INSERT_RECORD-HOMEPAGE_1246 https://fairsharing.org/FAIRsharing.Mkl9RR) </a>
    </td>
   </tr>
   <tr>
@@ -219,17 +219,17 @@ Note, the _‘last update of this table_’ field provides the date on which the
    </td>
    <td>Content: last update 12 Apr 2020 11:39
 <p>
-Code: Maven POV version (from GitHub (URL_TO_INSERT_RECORD-NAME_2290 https://fairsharing.org/FAIRsharing.c55d5e) ): 3.2.1-SNAPSHOT
+Code: Maven POV version (from GitHub (URL_TO_INSERT_RECORD-NAME_1247 https://fairsharing.org/FAIRsharing.c55d5e) ): 3.2.1-SNAPSHOT
 <p>
-<a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2291 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2292 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS</a>
+<a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1248 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1249 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS</a>
 <p>
-Last commit on GitHub (URL_TO_INSERT_RECORD-NAME_2293 https://fairsharing.org/FAIRsharing.c55d5e) : April 2020
+Last commit on GitHub (URL_TO_INSERT_RECORD-NAME_1250 https://fairsharing.org/FAIRsharing.c55d5e) : April 2020
    </td>
   </tr>
   <tr>
    <td><strong>Host organisation</strong>
    </td>
-   <td><a href="http://www.ebi.ac.uk/about/spot-team">Samples, Phenotypes and Ontologies (URL_TO_INSERT_TERM_2294 https://fairsharing.org/search?recordType=terminology_artefact)  Team</a> at EMBL-EBI
+   <td><a href="http://www.ebi.ac.uk/about/spot-team">Samples, Phenotypes and Ontologies Team</a> at EMBL-EBI
    </td>
   </tr>
   <tr>
@@ -247,39 +247,39 @@ Last commit on GitHub (URL_TO_INSERT_RECORD-NAME_2293 https://fairsharing.org/FA
   <tr>
    <td><strong>Domain</strong>
    </td>
-   <td>A repository (URL_TO_INSERT_TERM_2295 https://fairsharing.org/search?recordType=repository)  for biomedical ontologies (URL_TO_INSERT_TERM_2297 https://fairsharing.org/search?recordType=terminology_artefact)  that aims to provide a single point of access to the latest ontology (URL_TO_INSERT_TERM_2296 https://fairsharing.org/search?recordType=terminology_artefact)  versions
+   <td>A repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions
    </td>
   </tr>
   <tr>
-   <td><strong>Set of ontologies (URL_TO_INSERT_TERM_2298 https://fairsharing.org/search?recordType=terminology_artefact)  covered</strong>
+   <td><strong>Set of ontologies covered</strong>
    </td>
-   <td>245 ontologies (URL_TO_INSERT_TERM_2299 https://fairsharing.org/search?recordType=terminology_artefact)  / 6,119,228 terms / 27,778 properties / 485,541 individuals
+   <td>245 ontologies / 6,119,228 terms / 27,778 properties / 485,541 individuals
 <p>
 Whole list at: <a href="https://www.ebi.ac.uk/ols/ontologies">https://www.ebi.ac.uk/ols/ontologies</a>
    </td>
   </tr>
   <tr>
-   <td><strong>Onto. format (URL_TO_INSERT_TERM_2300 https://fairsharing.org/search?recordType=model_and_format) s supported</strong>
+   <td><strong>Onto. formats supported</strong>
    </td>
-   <td>OW (URL_TO_INSERT_RECORD-ABBREV_2301 https://fairsharing.org/FAIRsharing.atygwy) L 2 and OBO (URL_TO_INSERT_RECORD-ABBREV_2302 https://fairsharing.org/FAIRsharing.847069) 
+   <td>OW (URL_TO_INSERT_RECORD-ABBREV_1251 https://fairsharing.org/FAIRsharing.atygwy) L 2 and OBO (URL_TO_INSERT_RECORD-ABBREV_1252 https://fairsharing.org/FAIRsharing.847069) 
    </td>
   </tr>
   <tr>
    <td><strong>Onto. importing capabilities</strong>
    </td>
-   <td>By means of a local installation it is possible to import ontologies (URL_TO_INSERT_TERM_2304 https://fairsharing.org/search?recordType=terminology_artefact)  in OWL (URL_TO_INSERT_RECORD-ABBREV_2305 https://fairsharing.org/FAIRsharing.atygwy)  2 and OBO (URL_TO_INSERT_RECORD-ABBREV_2306 https://fairsharing.org/FAIRsharing.847069)  format (URL_TO_INSERT_TERM_2303 https://fairsharing.org/search?recordType=model_and_format) 
+   <td>By means of a local installation it is possible to import ontologies in OWL (URL_TO_INSERT_RECORD-ABBREV_1253 https://fairsharing.org/FAIRsharing.atygwy)  2 and OBO (URL_TO_INSERT_RECORD-ABBREV_1254 https://fairsharing.org/FAIRsharing.847069)  format
    </td>
   </tr>
   <tr>
    <td><strong>Onto. browsing capabilities</strong>
    </td>
-   <td>Tree-view based browsing of hierarchies of classes and properties of ontologies (URL_TO_INSERT_TERM_2309 https://fairsharing.org/search?recordType=terminology_artefact) . The modifications added by different version of each ontology (URL_TO_INSERT_TERM_2307 https://fairsharing.org/search?recordType=terminology_artefact)  are shown by means of distinct background colors in ontology (URL_TO_INSERT_TERM_2308 https://fairsharing.org/search?recordType=terminology_artefact)  browsing tree-views
+   <td>Tree-view based browsing of hierarchies of classes and properties of ontologies. The modifications added by different version of each ontology are shown by means of distinct background colors in ontology browsing tree-views
    </td>
   </tr>
   <tr>
    <td><strong>Onto. search capabilities</strong>
    </td>
-   <td>Search by term to gather all the ontologies (URL_TO_INSERT_TERM_2310 https://fairsharing.org/search?recordType=terminology_artefact)  where the term is found. It is possible to restrict search results to one or more ontologies (URL_TO_INSERT_TERM_2311 https://fairsharing.org/search?recordType=terminology_artefact) , to a specific type of result (i.e. class, property or individual) or to exact or partial term match
+   <td>Search by term to gather all the ontologies where the term is found. It is possible to restrict search results to one or more ontologies, to a specific type of result (i.e. class, property or individual) or to exact or partial term match
    </td>
   </tr>
   <tr>
@@ -291,19 +291,19 @@ Whole list at: <a href="https://www.ebi.ac.uk/ols/ontologies">https://www.ebi.ac
   <tr>
    <td><strong>Onto. update capabilities</strong>
    </td>
-   <td>OL (URL_TO_INSERT_RECORD-ABBREV_2313 https://fairsharing.org/FAIRsharing.Mkl9RR) S updates nightly to always provide the latest ontology (URL_TO_INSERT_TERM_2312 https://fairsharing.org/search?recordType=terminology_artefact)  versions
+   <td>OL (URL_TO_INSERT_RECORD-ABBREV_1255 https://fairsharing.org/FAIRsharing.Mkl9RR) S updates nightly to always provide the latest ontology versions
    </td>
   </tr>
   <tr>
    <td><strong>Onto. versioning capabilities</strong>
    </td>
-   <td>Obsoleted ontology (URL_TO_INSERT_TERM_2314 https://fairsharing.org/search?recordType=terminology_artefact)  terms are spotted by means of a boolean flag (is_obsolete)
+   <td>Obsoleted ontology terms are spotted by means of a boolean flag (is_obsolete)
    </td>
   </tr>
   <tr>
    <td><strong>Description of Web-based access to service</strong>
    </td>
-   <td>Besides a Web-based user interface useful to browse ontologies (URL_TO_INSERT_TERM_2316 https://fairsharing.org/search?recordType=terminology_artefact)  and search for ontology (URL_TO_INSERT_TERM_2315 https://fairsharing.org/search?recordType=terminology_artefact)  concepts, free-access by means of a REST API is provided to the users
+   <td>Besides a Web-based user interface useful to browse ontologies and search for ontology concepts, free-access by means of a REST API is provided to the users
    </td>
   </tr>
   <tr>
@@ -327,13 +327,13 @@ Whole list at: <a href="https://www.ebi.ac.uk/ols/ontologies">https://www.ebi.ac
   <tr>
    <td><strong>Source code reference</strong>
    </td>
-   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2317 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2318 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS</a>
+   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1256 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1257 https://fairsharing.org/FAIRsharing.c55d5e) /EBISPOT/OLS</a>
    </td>
   </tr>
   <tr>
    <td><strong>Quantification of community of users</strong>
    </td>
-   <td>GitHu (URL_TO_INSERT_RECORD-NAME_2319 https://fairsharing.org/FAIRsharing.c55d5e) b: 49 stars and 19 forks
+   <td>GitHu (URL_TO_INSERT_RECORD-NAME_1258 https://fairsharing.org/FAIRsharing.c55d5e) b: 49 stars and 19 forks
 <p>
 Twitter: 116 followers
    </td>
@@ -349,7 +349,7 @@ Twitter: 116 followers
   <tr>
    <td><strong>Name</strong>
    </td>
-   <td>Bioporta (URL_TO_INSERT_RECORD-NAME_2320 https://fairsharing.org/FAIRsharing.4m97ah) l 
+   <td>Bioporta (URL_TO_INSERT_RECORD-NAME_1259 https://fairsharing.org/FAIRsharing.4m97ah) l 
    </td>
   </tr>
   <tr>
@@ -360,9 +360,9 @@ Twitter: 116 followers
    </td>
   </tr>
   <tr>
-   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_2321 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
+   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_1260 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
    </td>
-   <td><a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_2322 https://fairsharing.org/FAIRsharing.4m97ah) /">https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_2323 https://fairsharing.org/FAIRsharing.4m97ah) /</a>
+   <td><a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_1261 https://fairsharing.org/FAIRsharing.4m97ah) /">https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_1262 https://fairsharing.org/FAIRsharing.4m97ah) /</a>
    </td>
   </tr>
   <tr>
@@ -373,14 +373,14 @@ Twitter: 116 followers
 <em>Code</em>: 
 <ul>
 
-<li>Web UI: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2324 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/bioportal_web_ui">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2325 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/bioportal_web_ui</a>
+<li>Web UI: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1263 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/bioportal_web_ui">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1264 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/bioportal_web_ui</a>
 
-<li>REST API: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2326 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2327 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api</a>
+<li>REST API: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1265 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1266 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api</a>
 
-<li>Linked Data: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2328 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_linked_data">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2329 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_linked_data</a>
+<li>Linked Data: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1267 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_linked_data">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1268 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_linked_data</a>
 
 <p>
-Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2330 https://fairsharing.org/FAIRsharing.c55d5e) : April 2020
+Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_1269 https://fairsharing.org/FAIRsharing.c55d5e) : April 2020
 </li>
 </ul>
    </td>
@@ -388,7 +388,7 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2330 https://fairsharing.org/
   <tr>
    <td><strong>Host organisation</strong>
    </td>
-   <td><a href="https://ncbo.bioontology.org/about-ncbo">U.S. National Center for Biomedical Ontology (URL_TO_INSERT_TERM_2331 https://fairsharing.org/search?recordType=terminology_artefact) </a>
+   <td><a href="https://ncbo.bioontology.org/about-ncbo">U.S. National Center for Biomedical Ontology</a>
    </td>
   </tr>
   <tr>
@@ -400,71 +400,71 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2330 https://fairsharing.org/
   <tr>
    <td><strong>Licence</strong>
    </td>
-   <td>Available at: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2332 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api/blob/master/LICENSE.txt">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2333 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api/blob/master/LICENSE.txt</a>
+   <td>Available at: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1270 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api/blob/master/LICENSE.txt">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1271 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ontologies_api/blob/master/LICENSE.txt</a>
    </td>
   </tr>
   <tr>
    <td><strong>Domain</strong>
    </td>
-   <td>A Web-based application for searching, sharing, visualizing, and analyzing a large repository (URL_TO_INSERT_TERM_2334 https://fairsharing.org/search?recordType=repository)  of biomedical ontologies (URL_TO_INSERT_TERM_2337 https://fairsharing.org/search?recordType=terminology_artefact) , terminologies (URL_TO_INSERT_TERM_2335 https://fairsharing.org/search?recordType=terminology_artefact) , and ontology (URL_TO_INSERT_TERM_2336 https://fairsharing.org/search?recordType=terminology_artefact) -based annotations
+   <td>A Web-based application for searching, sharing, visualizing, and analyzing a large repository of biomedical ontologies, terminologies, and ontology-based annotations
    </td>
   </tr>
   <tr>
-   <td><strong>Set of ontologies (URL_TO_INSERT_TERM_2338 https://fairsharing.org/search?recordType=terminology_artefact)  covered</strong>
+   <td><strong>Set of ontologies covered</strong>
    </td>
-   <td>Ontologies (URL_TO_INSERT_TERM_2339 https://fairsharing.org/search?recordType=terminology_artefact) : 842 / Classes: 11,324,508 
+   <td>Ontologies: 842 / Classes: 11,324,508 
 <p>
-Whole list at: <a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_2340 https://fairsharing.org/FAIRsharing.4m97ah) /ontologies">https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_2341 https://fairsharing.org/FAIRsharing.4m97ah) /ontologies</a>
+Whole list at: <a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_1272 https://fairsharing.org/FAIRsharing.4m97ah) /ontologies">https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_1273 https://fairsharing.org/FAIRsharing.4m97ah) /ontologies</a>
    </td>
   </tr>
   <tr>
-   <td><strong>Onto. format (URL_TO_INSERT_TERM_2342 https://fairsharing.org/search?recordType=model_and_format) s supported</strong>
+   <td><strong>Onto. formats supported</strong>
    </td>
-   <td>OW (URL_TO_INSERT_RECORD-ABBREV_2343 https://fairsharing.org/FAIRsharing.atygwy) L, OBO (URL_TO_INSERT_RECORD-ABBREV_2344 https://fairsharing.org/FAIRsharing.847069) , SKOS (URL_TO_INSERT_RECORD-ABBREV_2345 https://fairsharing.org/FAIRsharing.48e326) 
+   <td>OW (URL_TO_INSERT_RECORD-ABBREV_1274 https://fairsharing.org/FAIRsharing.atygwy) L, OBO (URL_TO_INSERT_RECORD-ABBREV_1275 https://fairsharing.org/FAIRsharing.847069) , SKOS (URL_TO_INSERT_RECORD-ABBREV_1276 https://fairsharing.org/FAIRsharing.48e326) 
    </td>
   </tr>
   <tr>
    <td><strong>Onto. importing capabilities</strong>
    </td>
-   <td>It is possible to upload / submit new ontologies (URL_TO_INSERT_TERM_2348 https://fairsharing.org/search?recordType=terminology_artefact)  or new versions of existing ontologies (URL_TO_INSERT_TERM_2349 https://fairsharing.org/search?recordType=terminology_artefact)  that will be indexed in BioPortal (URL_TO_INSERT_RECORD-NAME_2350 https://fairsharing.org/FAIRsharing.4m97ah) . Ontology (URL_TO_INSERT_TERM_2347 https://fairsharing.org/search?recordType=terminology_artefact)  metadata will be provided in the <a href="http://omv.ontoware.org">Ontology Metadata Vocabulary</a> (OMV (URL_TO_INSERT_RECORD-ABBREV_2351 https://fairsharing.org/FAIRsharing.wqy605) ) format (URL_TO_INSERT_TERM_2346 https://fairsharing.org/search?recordType=model_and_format) 
+   <td>It is possible to upload / submit new ontologies or new versions of existing ontologies that will be indexed in BioPortal (URL_TO_INSERT_RECORD-NAME_1277 https://fairsharing.org/FAIRsharing.4m97ah) . Ontology metadata will be provided in the <a href="http://omv.ontoware.org">Ontology Metadata Vocabulary</a> (OMV (URL_TO_INSERT_RECORD-ABBREV_1278 https://fairsharing.org/FAIRsharing.wqy605) ) format
    </td>
   </tr>
   <tr>
    <td><strong>Onto. browsing capabilities</strong>
    </td>
-   <td>For each ontology (URL_TO_INSERT_TERM_2354 https://fairsharing.org/search?recordType=terminology_artefact)  / terminology (URL_TO_INSERT_TERM_2352 https://fairsharing.org/search?recordType=terminology_artefact)  an overview of its content is provided together with separate tree-views tailored to explore its hierarchies of classes and properties. The set of available mappings to other ontologies (URL_TO_INSERT_TERM_2355 https://fairsharing.org/search?recordType=terminology_artefact)  / terminologies (URL_TO_INSERT_TERM_2353 https://fairsharing.org/search?recordType=terminology_artefact)  can be explored by a custom view
+   <td>For each ontology / terminology an overview of its content is provided together with separate tree-views tailored to explore its hierarchies of classes and properties. The set of available mappings to other ontologies / terminologies can be explored by a custom view
    </td>
   </tr>
   <tr>
    <td><strong>Onto. search capabilities</strong>
    </td>
-   <td>Search by term to gather all the ontologies (URL_TO_INSERT_TERM_2356 https://fairsharing.org/search?recordType=terminology_artefact)  where the term is found. It is possible to restrict search results to one or more ontologies (URL_TO_INSERT_TERM_2357 https://fairsharing.org/search?recordType=terminology_artefact) , to a specific type of result (i.e. class, property or individual) or to exact or partial term match
+   <td>Search by term to gather all the ontologies where the term is found. It is possible to restrict search results to one or more ontologies, to a specific type of result (i.e. class, property or individual) or to exact or partial term match
    </td>
   </tr>
   <tr>
    <td><strong>Onto. recommendation capabilities</strong>
    </td>
-   <td>An ontology (URL_TO_INSERT_TERM_2358 https://fairsharing.org/search?recordType=terminology_artefact)  recommender is available: it retrieves recommendations for the most relevant ontologies (URL_TO_INSERT_TERM_2359 https://fairsharing.org/search?recordType=terminology_artefact)  based on an excerpt from a biomedical text or a list of keywords.
+   <td>An ontology recommender is available: it retrieves recommendations for the most relevant ontologies based on an excerpt from a biomedical text or a list of keywords.
 <p>
-Recommendations are based on: (i) <em>coverage</em> of the input text / set of keywords; (ii) <em>acceptance</em> of the ontologies (URL_TO_INSERT_TERM_2362 https://fairsharing.org/search?recordType=terminology_artefact) ; (iii) <em>detail of knowledge</em> available in the ontology (URL_TO_INSERT_TERM_2360 https://fairsharing.org/search?recordType=terminology_artefact)  to describe input data and (iv) <em>specialization</em> of the ontology (URL_TO_INSERT_TERM_2361 https://fairsharing.org/search?recordType=terminology_artefact)  to the specific domain under consideration
+Recommendations are based on: (i) <em>coverage</em> of the input text / set of keywords; (ii) <em>acceptance</em> of the ontologies; (iii) <em>detail of knowledge</em> available in the ontology to describe input data and (iv) <em>specialization</em> of the ontology to the specific domain under consideration
    </td>
   </tr>
   <tr>
    <td><strong>Onto. update capabilities</strong>
    </td>
-   <td>Each ontology (URL_TO_INSERT_TERM_2363 https://fairsharing.org/search?recordType=terminology_artefact)  can be manually updated by accessing the BioPortal (URL_TO_INSERT_RECORD-NAME_2365 https://fairsharing.org/FAIRsharing.4m97ah)  or automatically updated by BioPortal (URL_TO_INSERT_RECORD-NAME_2366 https://fairsharing.org/FAIRsharing.4m97ah)  by continuously monitoring a URL (URL_TO_INSERT_RECORD-ABBREV_2367 https://fairsharing.org/FAIRsharing.9d38e2)  where the ontology (URL_TO_INSERT_TERM_2364 https://fairsharing.org/search?recordType=terminology_artefact)  and its new versions are published
+   <td>Each ontology can be manually updated by accessing the BioPortal (URL_TO_INSERT_RECORD-NAME_1279 https://fairsharing.org/FAIRsharing.4m97ah)  or automatically updated by BioPortal (URL_TO_INSERT_RECORD-NAME_1280 https://fairsharing.org/FAIRsharing.4m97ah)  by continuously monitoring a URL (URL_TO_INSERT_RECORD-ABBREV_1281 https://fairsharing.org/FAIRsharing.9d38e2)  where the ontology and its new versions are published
    </td>
   </tr>
   <tr>
    <td><strong>Onto. versioning capabilities</strong>
    </td>
-   <td>Each ontology (URL_TO_INSERT_TERM_2368 https://fairsharing.org/search?recordType=terminology_artefact)  is characterized by a version number in its metadata, useful to track distinct versions of the same ontology (URL_TO_INSERT_TERM_2369 https://fairsharing.org/search?recordType=terminology_artefact) 
+   <td>Each ontology is characterized by a version number in its metadata, useful to track distinct versions of the same ontology
    </td>
   </tr>
   <tr>
    <td><strong>Description of Web based access to service</strong>
    </td>
-   <td>Besides a Web-based interface that supports ontology (URL_TO_INSERT_TERM_2370 https://fairsharing.org/search?recordType=terminology_artefact)  search, annotation, recommendation and mapping, also a free-after-registration access by means of a REST API is provided to the users
+   <td>Besides a Web-based interface that supports ontology search, annotation, recommendation and mapping, also a free-after-registration access by means of a REST API is provided to the users
    </td>
   </tr>
   <tr>
@@ -476,25 +476,25 @@ Recommendations are based on: (i) <em>coverage</em> of the input text / set of k
   <tr>
    <td><strong>Developer resources</strong>
    </td>
-   <td>Sample code to access REST API in distinct languages is available at: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2371 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ncbo_rest_sample_code">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2372 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ncbo_rest_sample_code</a>
+   <td>Sample code to access REST API in distinct languages is available at: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1282 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ncbo_rest_sample_code">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1283 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo/ncbo_rest_sample_code</a>
    </td>
   </tr>
   <tr>
    <td><strong>Local deploy of service</strong>
    </td>
-   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code (Rails) for Web UI, REST API and Linked Data management is available on NCBO GiHub account, <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2373 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2374 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo</a>
+   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code (Rails) for Web UI, REST API and Linked Data management is available on NCBO GiHub account, <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1284 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1285 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo</a>
    </td>
   </tr>
   <tr>
    <td><strong>Source code reference</strong>
    </td>
-   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2375 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2376 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo</a>
+   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1286 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1287 https://fairsharing.org/FAIRsharing.c55d5e) /ncbo</a>
    </td>
   </tr>
   <tr>
    <td><strong>Quantification of community of users</strong>
    </td>
-   <td>GitHu (URL_TO_INSERT_RECORD-NAME_2377 https://fairsharing.org/FAIRsharing.c55d5e) b: 
+   <td>GitHu (URL_TO_INSERT_RECORD-NAME_1288 https://fairsharing.org/FAIRsharing.c55d5e) b: 
 <ul>
 
 <li>Web UI: 12 stars and 6 forks
@@ -533,7 +533,7 @@ Twitter: 192 followers
    </td>
   </tr>
   <tr>
-   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_2378 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
+   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_1289 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
    </td>
    <td><a href="https://www.ohdsi.org/analytic-tools/athena-standardized-vocabularies/">https://www.ohdsi.org/analytic-tools/athena-standardized-vocabularies/</a>
 <p>
@@ -545,17 +545,17 @@ Twitter: 192 followers
    </td>
    <td><em>Content</em>: last update 12 Apr 2020 11:39
 <p>
-<em>Code</em>: Maven POV version (from GitHub (URL_TO_INSERT_RECORD-NAME_2379 https://fairsharing.org/FAIRsharing.c55d5e) ): 1.10.0
+<em>Code</em>: Maven POV version (from GitHub (URL_TO_INSERT_RECORD-NAME_1290 https://fairsharing.org/FAIRsharing.c55d5e) ): 1.10.0
 <p>
-<a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2380 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2381 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a>
+<a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1291 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1292 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a>
 <p>
-Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2382 https://fairsharing.org/FAIRsharing.c55d5e) : September 2019
+Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_1293 https://fairsharing.org/FAIRsharing.c55d5e) : September 2019
    </td>
   </tr>
   <tr>
    <td><strong>Host organisation</strong>
    </td>
-   <td><a href="https://www.ohdsi.org/">Observational Health Data Sciences and Informat (URL_TO_INSERT_TERM_2383 https://fairsharing.org/search?recordType=model_and_format) ics (OHDSI) initiative</a>
+   <td><a href="https://www.ohdsi.org/">Observational Health Data Sciences and Informatics (OHDSI) initiative</a>
    </td>
   </tr>
   <tr>
@@ -573,25 +573,25 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2382 https://fairsharing.org/
   <tr>
    <td><strong>Domain</strong>
    </td>
-   <td>Useful to browse the set of Standard (URL_TO_INSERT_TERM_2384 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabularies which are part of the OMOP Common Data Model (URL_TO_INSERT_TERM_2385 https://fairsharing.org/search?recordType=model_and_format)  (CDM), version 5.x. They are maintained by the Observational Health Data Science and Informat (URL_TO_INSERT_TERM_2386 https://fairsharing.org/search?recordType=model_and_format) ics (OHDSI, pronounced “Odyssey”) initiative
+   <td>Useful to browse the set of Standardized Vocabularies which are part of the OMOP Common Data Model (CDM), version 5.x. They are maintained by the Observational Health Data Science and Informatics (OHDSI, pronounced “Odyssey”) initiative
    </td>
   </tr>
   <tr>
-   <td><strong>Set of ontologies (URL_TO_INSERT_TERM_2387 https://fairsharing.org/search?recordType=terminology_artefact)  covered</strong>
+   <td><strong>Set of ontologies covered</strong>
    </td>
-   <td>Standard (URL_TO_INSERT_TERM_2388 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabularies which are part of the<a href="https://www.ohdsi.org/web/wiki/doku.php?id=documentation:vocabulary_etl"> OMOP Common Data Model (URL_TO_INSERT_TERM_2389 https://fairsharing.org/search?recordType=model_and_format)  (CDM)</a>, version 5.x. It integrates several source vocabularies including UMLS, SNOMED, RxNorm (URL_TO_INSERT_RECORD-NAME_2390 https://fairsharing.org/FAIRsharing.36pf8q) , NDFRT (URL_TO_INSERT_RECORD-ABBREV_2391 https://fairsharing.org/FAIRsharing.901nkj) , VA Product, VA Class, ATC (URL_TO_INSERT_RECORD-ABBREV_2392 https://fairsharing.org/FAIRsharing.1a27h8) , MeSH, ICD10, GCN_SEQNO, ETC, Indication, ICD9CM, ICD9Proc, ICD10CM, LOiNC, etc.
+   <td>Standardized Vocabularies which are part of the<a href="https://www.ohdsi.org/web/wiki/doku.php?id=documentation:vocabulary_etl"> OMOP Common Data Model (CDM)</a>, version 5.x. It integrates several source vocabularies including UMLS, SNOMED, RxNorm (URL_TO_INSERT_RECORD-NAME_1294 https://fairsharing.org/FAIRsharing.36pf8q) , NDFRT (URL_TO_INSERT_RECORD-ABBREV_1295 https://fairsharing.org/FAIRsharing.901nkj) , VA Product, VA Class, ATC (URL_TO_INSERT_RECORD-ABBREV_1296 https://fairsharing.org/FAIRsharing.1a27h8) , MeSH, ICD10, GCN_SEQNO, ETC, Indication, ICD9CM, ICD9Proc, ICD10CM, LOiNC, etc.
    </td>
   </tr>
   <tr>
-   <td><strong>Onto. format (URL_TO_INSERT_TERM_2393 https://fairsharing.org/search?recordType=model_and_format) s supported</strong>
+   <td><strong>Onto. formats supported</strong>
    </td>
-   <td>Not a specific format (URL_TO_INSERT_TERM_2395 https://fairsharing.org/search?recordType=model_and_format) , a collection (URL_TO_INSERT_TERM_2394 https://fairsharing.org/search?recordType=collection)  of ontology (URL_TO_INSERT_TERM_2396 https://fairsharing.org/search?recordType=terminology_artefact)  concepts / classes assigned to a specific domain and imported from a specific source vocabulary 
+   <td>Not a specific format, a collection of ontology concepts / classes assigned to a specific domain and imported from a specific source vocabulary 
    </td>
   </tr>
   <tr>
    <td><strong>Onto. importing capabilities</strong>
    </td>
-   <td>Tailored to browse the Standard (URL_TO_INSERT_TERM_2397 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabularies which are part of the OMOP Common Data Model (URL_TO_INSERT_TERM_2398 https://fairsharing.org/search?recordType=model_and_format)  (CDM)
+   <td>Tailored to browse the Standardized Vocabularies which are part of the OMOP Common Data Model (CDM)
    </td>
   </tr>
   <tr>
@@ -615,19 +615,19 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2382 https://fairsharing.org/
   <tr>
    <td><strong>Onto. update capabilities</strong>
    </td>
-   <td>Each time a new version of the Standard (URL_TO_INSERT_TERM_2399 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabularies which are part of the OMOP Common Data Model (URL_TO_INSERT_TERM_2400 https://fairsharing.org/search?recordType=model_and_format)  (CDM) is available an updated the core (URL_TO_INSERT_RECORD-NAME_2401 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_2402 https://fairsharing.org/FAIRsharing.m283c)  set of concept is available
+   <td>Each time a new version of the Standardized Vocabularies which are part of the OMOP Common Data Model (CDM) is available an updated the core (URL_TO_INSERT_RECORD-NAME_1297 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_1298 https://fairsharing.org/FAIRsharing.m283c)  set of concept is available
    </td>
   </tr>
   <tr>
    <td><strong>Onto. versioning capabilities</strong>
    </td>
-   <td>The latest version of the Standard (URL_TO_INSERT_TERM_2403 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabulary is V5.0
+   <td>The latest version of the Standardized Vocabulary is V5.0
    </td>
   </tr>
   <tr>
    <td><strong>Description of Web-based access to service</strong>
    </td>
-   <td>Athena is a Web interface available to browse concepts of the Standard (URL_TO_INSERT_TERM_2404 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabulary (V5.0). Both search results and the whole dataset can be downloaded after registration
+   <td>Athena is a Web interface available to browse concepts of the Standardized Vocabulary (V5.0). Both search results and the whole dataset can be downloaded after registration
    </td>
   </tr>
   <tr>
@@ -645,21 +645,21 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2382 https://fairsharing.org/
   <tr>
    <td><strong>Local deploy of service</strong>
    </td>
-   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code on GitHub (URL_TO_INSERT_RECORD-NAME_2405 https://fairsharing.org/FAIRsharing.c55d5e)  account <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2406 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2407 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a> 
+   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code on GitHub (URL_TO_INSERT_RECORD-NAME_1299 https://fairsharing.org/FAIRsharing.c55d5e)  account <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1300 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1301 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a> 
    </td>
   </tr>
   <tr>
    <td><strong>Source code reference</strong>
    </td>
-   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2408 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2409 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a>
+   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1302 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1303 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/Athena</a>
    </td>
   </tr>
   <tr>
    <td><strong>Quantification of community of users</strong>
    </td>
-   <td>GitHu (URL_TO_INSERT_RECORD-NAME_2410 https://fairsharing.org/FAIRsharing.c55d5e) b: 29 stars and 6 forks
+   <td>GitHu (URL_TO_INSERT_RECORD-NAME_1304 https://fairsharing.org/FAIRsharing.c55d5e) b: 29 stars and 6 forks
 <p>
-Twitter: 1.284 followers of the Observational Health Data Sciences and Informat (URL_TO_INSERT_TERM_2411 https://fairsharing.org/search?recordType=model_and_format) ics (OHDSI) account
+Twitter: 1.284 followers of the Observational Health Data Sciences and Informatics (OHDSI) account
    </td>
   </tr>
 </table>
@@ -675,7 +675,7 @@ Twitter: 1.284 followers of the Observational Health Data Sciences and Informat 
   <tr>
    <td><strong>Name</strong>
    </td>
-   <td>OBO Foundr (URL_TO_INSERT_RECORD-NAME_2412 https://fairsharing.org/FAIRsharing.847069) y
+   <td>OBO Foundr (URL_TO_INSERT_RECORD-NAME_1305 https://fairsharing.org/FAIRsharing.847069) y
    </td>
   </tr>
   <tr>
@@ -686,19 +686,19 @@ Twitter: 1.284 followers of the Observational Health Data Sciences and Informat 
    </td>
   </tr>
   <tr>
-   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_2413 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
+   <td><strong>UR (URL_TO_INSERT_RECORD-ABBREV_1306 https://fairsharing.org/FAIRsharing.9d38e2) L</strong>
    </td>
-   <td><a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_2414 https://fairsharing.org/FAIRsharing.q8fx1b) /">http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_2415 https://fairsharing.org/FAIRsharing.q8fx1b) /</a> (<a href="http://obofoundry.org/">http://obofoundry.org/</a>)
+   <td><a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_1307 https://fairsharing.org/FAIRsharing.q8fx1b) /">http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_1308 https://fairsharing.org/FAIRsharing.q8fx1b) /</a> (<a href="http://obofoundry.org/">http://obofoundry.org/</a>)
    </td>
   </tr>
   <tr>
    <td><strong>Latest version of service / data / code (where applicable)</strong>
    </td>
-   <td><em>Content (OBO Foundry (URL_TO_INSERT_RECORD-NAME_2416 https://fairsharing.org/FAIRsharing.847069) )</em>: last update April 2020
+   <td><em>Content (OBO Foundry (URL_TO_INSERT_RECORD-NAME_1309 https://fairsharing.org/FAIRsharing.847069) )</em>: last update April 2020
 <p>
-<em>Code (Ontobee (URL_TO_INSERT_RECORD-NAME_2417 https://fairsharing.org/FAIRsharing.q8fx1b) )</em>: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2418 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2419 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
+<em>Code (Ontobee (URL_TO_INSERT_RECORD-NAME_1310 https://fairsharing.org/FAIRsharing.q8fx1b) )</em>: <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1311 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1312 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
 <p>
-Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2420 https://fairsharing.org/FAIRsharing.c55d5e) : August 2018
+Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_1313 https://fairsharing.org/FAIRsharing.c55d5e) : August 2018
    </td>
   </tr>
   <tr>
@@ -722,37 +722,37 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2420 https://fairsharing.org/
   <tr>
    <td><strong>Domain</strong>
    </td>
-   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_2427 https://fairsharing.org/FAIRsharing.q8fx1b) e has been used as the default ontology (URL_TO_INSERT_TERM_2421 https://fairsharing.org/search?recordType=terminology_artefact)  Linked Data server for most <a href="http://obofoundry.org/">Open Biological and Biomedical Ontology (URL_TO_INSERT_TERM_2422 https://fairsharing.org/search?recordType=terminology_artefact)  (OBO (URL_TO_INSERT_RECORD-ABBREV_2426 https://fairsharing.org/FAIRsharing.847069) ) Foundry</a> library ontologies (URL_TO_INSERT_TERM_2424 https://fairsharing.org/search?recordType=terminology_artefact) . The OBO Foundry (URL_TO_INSERT_RECORD-NAME_2425 https://fairsharing.org/FAIRsharing.847069)  is a collective of ontology (URL_TO_INSERT_TERM_2423 https://fairsharing.org/search?recordType=terminology_artefact)  developers that are committed to collaboration and adherence to shared principles
+   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_1316 https://fairsharing.org/FAIRsharing.q8fx1b) e has been used as the default ontology Linked Data server for most <a href="http://obofoundry.org/">Open Biological and Biomedical Ontology (OBO (URL_TO_INSERT_RECORD-ABBREV_1315 https://fairsharing.org/FAIRsharing.847069) ) Foundry</a> library ontologies. The OBO Foundry (URL_TO_INSERT_RECORD-NAME_1314 https://fairsharing.org/FAIRsharing.847069)  is a collective of ontology developers that are committed to collaboration and adherence to shared principles
    </td>
   </tr>
   <tr>
-   <td><strong>Set of ontologies (URL_TO_INSERT_TERM_2428 https://fairsharing.org/search?recordType=terminology_artefact)  covered</strong>
+   <td><strong>Set of ontologies covered</strong>
    </td>
-   <td>164 active ontologies (URL_TO_INSERT_TERM_2429 https://fairsharing.org/search?recordType=terminology_artefact) , 5 orphaned ontologies (URL_TO_INSERT_TERM_2430 https://fairsharing.org/search?recordType=terminology_artefact)  and 57 inactive ontologies (URL_TO_INSERT_TERM_2431 https://fairsharing.org/search?recordType=terminology_artefact)  (in OBO Foundry (URL_TO_INSERT_RECORD-NAME_2432 https://fairsharing.org/FAIRsharing.847069) )
+   <td>164 active ontologies, 5 orphaned ontologies and 57 inactive ontologies (in OBO Foundry (URL_TO_INSERT_RECORD-NAME_1317 https://fairsharing.org/FAIRsharing.847069) )
    </td>
   </tr>
   <tr>
-   <td><strong>Onto. format (URL_TO_INSERT_TERM_2433 https://fairsharing.org/search?recordType=model_and_format) s supported</strong>
+   <td><strong>Onto. formats supported</strong>
    </td>
-   <td>OW (URL_TO_INSERT_RECORD-ABBREV_2434 https://fairsharing.org/FAIRsharing.atygwy) L and OBO (URL_TO_INSERT_RECORD-ABBREV_2435 https://fairsharing.org/FAIRsharing.847069) 
+   <td>OW (URL_TO_INSERT_RECORD-ABBREV_1318 https://fairsharing.org/FAIRsharing.atygwy) L and OBO (URL_TO_INSERT_RECORD-ABBREV_1319 https://fairsharing.org/FAIRsharing.847069) 
    </td>
   </tr>
   <tr>
    <td><strong>Onto. importing capabilities</strong>
    </td>
-   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_2444 https://fairsharing.org/FAIRsharing.q8fx1b) e can import both OWL (URL_TO_INSERT_RECORD-ABBREV_2440 https://fairsharing.org/FAIRsharing.atygwy)  and OBO (URL_TO_INSERT_RECORD-ABBREV_2443 https://fairsharing.org/FAIRsharing.847069)  ontologies (URL_TO_INSERT_TERM_2437 https://fairsharing.org/search?recordType=terminology_artefact) . New ontologies (URL_TO_INSERT_TERM_2438 https://fairsharing.org/search?recordType=terminology_artefact)  can be proposed tired to the set of OBO Foundry (URL_TO_INSERT_RECORD-NAME_2441 https://fairsharing.org/FAIRsharing.847069)  ontologies (URL_TO_INSERT_TERM_2439 https://fairsharing.org/search?recordType=terminology_artefact) ; a committee will review the ontology (URL_TO_INSERT_TERM_2436 https://fairsharing.org/search?recordType=terminology_artefact)  to check if it adheres to all the OBO Foundry (URL_TO_INSERT_RECORD-NAME_2442 https://fairsharing.org/FAIRsharing.847069)  principles
+   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_1324 https://fairsharing.org/FAIRsharing.q8fx1b) e can import both OWL (URL_TO_INSERT_RECORD-ABBREV_1320 https://fairsharing.org/FAIRsharing.atygwy)  and OBO (URL_TO_INSERT_RECORD-ABBREV_1323 https://fairsharing.org/FAIRsharing.847069)  ontologies. New ontologies can be proposed tired to the set of OBO Foundry (URL_TO_INSERT_RECORD-NAME_1321 https://fairsharing.org/FAIRsharing.847069)  ontologies; a committee will review the ontology to check if it adheres to all the OBO Foundry (URL_TO_INSERT_RECORD-NAME_1322 https://fairsharing.org/FAIRsharing.847069)  principles
    </td>
   </tr>
   <tr>
    <td><strong>Onto. browsing capabilities</strong>
    </td>
-   <td>The OBO Foundry (URL_TO_INSERT_RECORD-NAME_2451 https://fairsharing.org/FAIRsharing.847069)  portal provides a set of metadata describing each ontology (URL_TO_INSERT_TERM_2446 https://fairsharing.org/search?recordType=terminology_artefact)  together with the possibility to download the same ontology (URL_TO_INSERT_TERM_2447 https://fairsharing.org/search?recordType=terminology_artefact)  in several format (URL_TO_INSERT_TERM_2445 https://fairsharing.org/search?recordType=model_and_format) s. To browse ontologies (URL_TO_INSERT_TERM_2449 https://fairsharing.org/search?recordType=terminology_artefact) , the OBO Foundry (URL_TO_INSERT_RECORD-NAME_2452 https://fairsharing.org/FAIRsharing.847069)  portal points to the ontology (URL_TO_INSERT_TERM_2448 https://fairsharing.org/search?recordType=terminology_artefact)  browsing pages of other Web platforms including <a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_2453 https://fairsharing.org/FAIRsharing.q8fx1b) /">Ontobee</a>, <a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_2450 https://fairsharing.org/FAIRsharing.4m97ah) /">BioPortal</a> and the <a href="https://www.ebi.ac.uk/ols">Ontology Lookup Service</a>.
+   <td>The OBO Foundry (URL_TO_INSERT_RECORD-NAME_1326 https://fairsharing.org/FAIRsharing.847069)  portal provides a set of metadata describing each ontology together with the possibility to download the same ontology in several formats. To browse ontologies, the OBO Foundry (URL_TO_INSERT_RECORD-NAME_1327 https://fairsharing.org/FAIRsharing.847069)  portal points to the ontology browsing pages of other Web platforms including <a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_1328 https://fairsharing.org/FAIRsharing.q8fx1b) /">Ontobee</a>, <a href="https://bioportal.bioontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_1325 https://fairsharing.org/FAIRsharing.4m97ah) /">BioPortal</a> and the <a href="https://www.ebi.ac.uk/ols">Ontology Lookup Service</a>.
    </td>
   </tr>
   <tr>
    <td><strong>Onto. search capabilities</strong>
    </td>
-   <td>The OBO Foundry (URL_TO_INSERT_RECORD-NAME_2457 https://fairsharing.org/FAIRsharing.847069)  portal exploits <a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_2459 https://fairsharing.org/FAIRsharing.q8fx1b) /">Ontobee</a> to provide users with ontology (URL_TO_INSERT_TERM_2454 https://fairsharing.org/search?recordType=terminology_artefact)  search capabilities.Ontobe (URL_TO_INSERT_RECORD-NAME_2458 https://fairsharing.org/FAIRsharing.q8fx1b) e enables users to search ontology (URL_TO_INSERT_TERM_2455 https://fairsharing.org/search?recordType=terminology_artefact)  concepts by term, eventually restricting the search to a specific ontology (URL_TO_INSERT_TERM_2456 https://fairsharing.org/search?recordType=terminology_artefact) 
+   <td>The OBO Foundry (URL_TO_INSERT_RECORD-NAME_1329 https://fairsharing.org/FAIRsharing.847069)  portal exploits <a href="http://www.ontobee.org (URL_TO_INSERT_RECORD-HOMEPAGE_1331 https://fairsharing.org/FAIRsharing.q8fx1b) /">Ontobee</a> to provide users with ontology search capabilities.Ontobe (URL_TO_INSERT_RECORD-NAME_1330 https://fairsharing.org/FAIRsharing.q8fx1b) e enables users to search ontology concepts by term, eventually restricting the search to a specific ontology
    </td>
   </tr>
   <tr>
@@ -764,25 +764,25 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2420 https://fairsharing.org/
   <tr>
    <td><strong>Onto. update capabilities</strong>
    </td>
-   <td>An established <a href="http://obofoundry.org/principles/fp-004-versioning.html">PURL system to publish new versions / updates of an ontology (URL_TO_INSERT_TERM_2461 https://fairsharing.org/search?recordType=terminology_artefact) </a> is defined; new versions of an ontologies (URL_TO_INSERT_TERM_2462 https://fairsharing.org/search?recordType=terminology_artefact)  should be accessible at PURLs with the following format (URL_TO_INSERT_TERM_2460 https://fairsharing.org/search?recordType=model_and_format) : <code>http://purl.obolibrary.org/obo/idspace/YYYY-MM-DD/idspace.owl</code> or <code>.obo</code>, for instance: <code><a href="https://raw.githubusercontent.com/BiodiversityOntologies/bco/2020-03-27/bco.owl">https://raw.githubusercontent.com/BiodiversityOntologies/bco/2020-03-27/bco.owl</a></code>
+   <td>An established <a href="http://obofoundry.org/principles/fp-004-versioning.html">PURL system to publish new versions / updates of an ontology</a> is defined; new versions of an ontologies should be accessible at PURLs with the following format: <code>http://purl.obolibrary.org/obo/idspace/YYYY-MM-DD/idspace.owl</code> or <code>.obo</code>, for instance: <code><a href="https://raw.githubusercontent.com/BiodiversityOntologies/bco/2020-03-27/bco.owl">https://raw.githubusercontent.com/BiodiversityOntologies/bco/2020-03-27/bco.owl</a></code>
    </td>
   </tr>
   <tr>
    <td><strong>Onto. versioning capabilities</strong>
    </td>
-   <td>The OBO (URL_TO_INSERT_RECORD-ABBREV_2467 https://fairsharing.org/FAIRsharing.847069)  principles, implemented by the ontologies (URL_TO_INSERT_TERM_2464 https://fairsharing.org/search?recordType=terminology_artefact)  available in OBO Foundry (URL_TO_INSERT_RECORD-NAME_2466 https://fairsharing.org/FAIRsharing.847069) , enforces a system of versioning systems, with each ontology (URL_TO_INSERT_TERM_2463 https://fairsharing.org/search?recordType=terminology_artefact)  version receiving an unique identifier (URL_TO_INSERT_TERM_2465 https://fairsharing.org/search?recordType=identifier_schema)  (by means of numbers, dates, tags)
+   <td>The OBO (URL_TO_INSERT_RECORD-ABBREV_1333 https://fairsharing.org/FAIRsharing.847069)  principles, implemented by the ontologies available in OBO Foundry (URL_TO_INSERT_RECORD-NAME_1332 https://fairsharing.org/FAIRsharing.847069) , enforces a system of versioning systems, with each ontology version receiving an unique identifier (by means of numbers, dates, tags)
    </td>
   </tr>
   <tr>
    <td><strong>Description of Web-based access to service</strong>
    </td>
-   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_2469 https://fairsharing.org/FAIRsharing.q8fx1b) e provides a web interface that supports, besides searching for ontology (URL_TO_INSERT_TERM_2468 https://fairsharing.org/search?recordType=terminology_artefact)  concepts, the execution of SPARQL (URL_TO_INSERT_RECORD-ABBREV_2470 https://fairsharing.org/FAIRsharing.87ccfd)  queries and the annotation of text excerpts
+   <td>Ontobe (URL_TO_INSERT_RECORD-NAME_1334 https://fairsharing.org/FAIRsharing.q8fx1b) e provides a web interface that supports, besides searching for ontology concepts, the execution of SPARQL (URL_TO_INSERT_RECORD-ABBREV_1335 https://fairsharing.org/FAIRsharing.87ccfd)  queries and the annotation of text excerpts
    </td>
   </tr>
   <tr>
    <td><strong>Description of API</strong>
    </td>
-   <td>No specific REST API is provided; users can retrieve both HTML (URL_TO_INSERT_RECORD-ABBREV_2472 https://fairsharing.org/FAIRsharing.YugnuL)  and RDF (URL_TO_INSERT_RECORD-ABBREV_2473 https://fairsharing.org/FAIRsharing.p77ph9)  descriptions of concepts that belongs to Ontobee (URL_TO_INSERT_RECORD-NAME_2474 https://fairsharing.org/FAIRsharing.q8fx1b)  ontologies (URL_TO_INSERT_TERM_2471 https://fairsharing.org/search?recordType=terminology_artefact) , in adherence to the principles of Linked Data community
+   <td>No specific REST API is provided; users can retrieve both HTML (URL_TO_INSERT_RECORD-ABBREV_1336 https://fairsharing.org/FAIRsharing.YugnuL)  and RDF (URL_TO_INSERT_RECORD-ABBREV_1337 https://fairsharing.org/FAIRsharing.p77ph9)  descriptions of concepts that belongs to Ontobee (URL_TO_INSERT_RECORD-NAME_1338 https://fairsharing.org/FAIRsharing.q8fx1b)  ontologies, in adherence to the principles of Linked Data community
    </td>
   </tr>
   <tr>
@@ -794,19 +794,19 @@ Latest commit on GitHub (URL_TO_INSERT_RECORD-NAME_2420 https://fairsharing.org/
   <tr>
    <td><strong>Local deploy of service</strong>
    </td>
-   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code on GiHub account <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2475 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2476 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
+   <td>In principle, local deploy of services is possible, even if not extensively documented. Source code on GiHub account <a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1339 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1340 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
    </td>
   </tr>
   <tr>
    <td><strong>Source code reference</strong>
    </td>
-   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2477 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2478 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
+   <td><a href="https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1341 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee">https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_1342 https://fairsharing.org/FAIRsharing.c55d5e) /OntoZoo/ontobee</a>
    </td>
   </tr>
   <tr>
    <td><strong>Quantification of community of users</strong>
    </td>
-   <td>GitHu (URL_TO_INSERT_RECORD-NAME_2479 https://fairsharing.org/FAIRsharing.c55d5e) b: 12 stars and 4 forks
+   <td>GitHu (URL_TO_INSERT_RECORD-NAME_1343 https://fairsharing.org/FAIRsharing.c55d5e) b: 12 stars and 4 forks
 <p>
 Twitter OBOFoundry account: 220 followers
    </td>

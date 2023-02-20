@@ -22,8 +22,8 @@
 ## Main Objectives
 
 In all tasks of data integration, especially in the area of Pharma, ensuring trust in data sources is essential.
-The steps taken to ensure new datasets or sources of informat (URL_TO_INSERT_TERM_5889 https://fairsharing.org/search?recordType=model_and_format) ion meet a number of criteria ascertaining some level of 
-quality are many. One of them is a check on the origin of the informat (URL_TO_INSERT_TERM_5890 https://fairsharing.org/search?recordType=model_and_format) ion, in other words, its **Provenance**. 
+The steps taken to ensure new datasets or sources of information meet a number of criteria ascertaining some level of 
+quality are many. One of them is a check on the origin of the information, in other words, its **Provenance**. 
 Provenance covers the elements detailing how the data was produced by identifying the agents 
 (human, software, workflows) so a certain level of traceability and accountability can be established. 
 The notions of **audit and trail** as well as **versioning** and **authorship** are essential to be able, 
@@ -32,20 +32,20 @@ should any distortion be identified in downstream analysis, to trace back to pos
 
 ## Provenance: a definition
 
-**"Provenance is informat (URL_TO_INSERT_TERM_5891 https://fairsharing.org/search?recordType=model_and_format) ion about entities, activities, and people involved in producing a piece of data or thing, 
+**"Provenance is information about entities, activities, and people involved in producing a piece of data or thing, 
 which can be used to form assessments about its quality, reliability or trustworthiness"**. 
-Provenance has been an active field of academic research and several model (URL_TO_INSERT_TERM_5892 https://fairsharing.org/search?recordType=model_and_format) s have been developed over the year to cover the domain.
-The next section will introduce the most known model (URL_TO_INSERT_TERM_5893 https://fairsharing.org/search?recordType=model_and_format) s as well as detail how their overlap and what are the differences between these.
+Provenance has been an active field of academic research and several models have been developed over the year to cover the domain.
+The next section will introduce the most known models as well as detail how their overlap and what are the differences between these.
 
 **Data provenance** is also referred to as **data lineage** 
 
 
 ### OPM Open Provenance Model
 
-Published in 2011, the Open Provenance Model (URL_TO_INSERT_TERM_5894 https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD-NAME_5896 https://fairsharing.org/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD-ABBREV_5897 https://fairsharing.org/FAIRsharing.7c683b) ) {footcite}`MOREAU2011743` was the first formal model (URL_TO_INSERT_TERM_5895 https://fairsharing.org/search?recordType=model_and_format)  developed
-to cater for the reporting of provenance informat (URL_TO_INSERT_TERM_5898 https://fairsharing.org/search?recordType=model_and_format) ion with several main goals in mind:
+Published in 2011, the Open Provenance Model (URL_TO_INSERT_RECORD-NAME_2772 https://fairsharing.org/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD-ABBREV_2773 https://fairsharing.org/FAIRsharing.7c683b) ) {footcite}`MOREAU2011743` was the first formal model developed
+to cater for the reporting of provenance information with several main goals in mind:
 - provide a domain agnostic, formal and actionable definition of provenance
-- enable sharing of provenance informat (URL_TO_INSERT_TERM_5899 https://fairsharing.org/search?recordType=model_and_format) ion between systems, an issue of interoperability
+- enable sharing of provenance information between systems, an issue of interoperability
 - support tool development and implementation
 - enable validation of provenance messages.
 
@@ -55,7 +55,7 @@ The following sections provides further insights into these efforts.
 
 
 ### The PROV Data Model
-This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_TERM_5900 https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD-NAME_5901 https://fairsharing.org/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
+This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2774 https://fairsharing.org/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
 
 ````{dropdown}
 :open:
@@ -63,20 +63,20 @@ This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_TERM_
 ---
 width: 800px
 name: prov-dm-overview
-alt: Overview of the Provenance Data Model (URL_TO_INSERT_TERM_5902 https://fairsharing.org/search?recordType=model_and_format)  main classes
+alt: Overview of the Provenance Data Model main classes
 ---
-Overview of the Provenance Data Model (URL_TO_INSERT_TERM_5903 https://fairsharing.org/search?recordType=model_and_format)  main classes.
+Overview of the Provenance Data Model main classes.
 ```
 ````
 
 ### PROV vocabulary:
 
-The PROV-O (URL_TO_INSERT_RECORD-ABBREV_5908 https://fairsharing.org/FAIRsharing.2rm2b3)  Provenance Ontology (URL_TO_INSERT_TERM_5905 https://fairsharing.org/search?recordType=terminology_artefact)  {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model (URL_TO_INSERT_TERM_5904 https://fairsharing.org/search?recordType=model_and_format)  as an OWL (URL_TO_INSERT_RECORD-ABBREV_5907 https://fairsharing.org/FAIRsharing.atygwy)  ontology (URL_TO_INSERT_TERM_5906 https://fairsharing.org/search?recordType=terminology_artefact) .
-The namespace for PROV-O (URL_TO_INSERT_RECORD-ABBREV_5909 https://fairsharing.org/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
-It is meant to allow expressing provenance informat (URL_TO_INSERT_TERM_5912 https://fairsharing.org/search?recordType=model_and_format) ion as model (URL_TO_INSERT_TERM_5910 https://fairsharing.org/search?recordType=model_and_format) ed in the provenance model (URL_TO_INSERT_TERM_5911 https://fairsharing.org/search?recordType=model_and_format) 
+The PROV-O (URL_TO_INSERT_RECORD-ABBREV_2776 https://fairsharing.org/FAIRsharing.2rm2b3)  Provenance Ontology {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model as an OWL (URL_TO_INSERT_RECORD-ABBREV_2775 https://fairsharing.org/FAIRsharing.atygwy)  ontology.
+The namespace for PROV-O (URL_TO_INSERT_RECORD-ABBREV_2777 https://fairsharing.org/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
+It is meant to allow expressing provenance information as modeled in the provenance model
 [W3C PROV-DM](https://www.w3.org/TR/prov-overview/) with Classes, Properties and relations defined in the W3C 
-Ontology (URL_TO_INSERT_TERM_5913 https://fairsharing.org/search?recordType=terminology_artefact)  Web Language (OWL (URL_TO_INSERT_RECORD-ABBREV_5914 https://fairsharing.org/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD-ABBREV_5915 https://fairsharing.org/FAIRsharing.p77ph9)  and distributed in any of the official 
-serialization, e.g. JSON (URL_TO_INSERT_RECORD-ABBREV_5916 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_5920 https://fairsharing.org/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD-ABBREV_5919 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_5917 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_5921 https://fairsharing.org/336) , Turtle (URL_TO_INSERT_RECORD-ABBREV_5918 https://fairsharing.org/FAIRsharing.3e194c) .
+Ontology Web Language (OWL (URL_TO_INSERT_RECORD-ABBREV_2778 https://fairsharing.org/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD-ABBREV_2779 https://fairsharing.org/FAIRsharing.p77ph9)  and distributed in any of the official 
+serialization, e.g. JSON (URL_TO_INSERT_RECORD-ABBREV_2780 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_2784 https://fairsharing.org/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD-ABBREV_2783 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_2781 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_2785 https://fairsharing.org/336) , Turtle (URL_TO_INSERT_RECORD-ABBREV_2782 https://fairsharing.org/FAIRsharing.3e194c) .
 
 
 ````{dropdown}
@@ -85,14 +85,14 @@ serialization, e.g. JSON (URL_TO_INSERT_RECORD-ABBREV_5916 https://fairsharing.o
 ---
 width: 800px
 name: prov-o-overview
-alt: Overview of the Provenance Ontology (URL_TO_INSERT_TERM_5922 https://fairsharing.org/search?recordType=terminology_artefact)  main classes
+alt: Overview of the Provenance Ontology main classes
 ---
-Overview of the Provenance Ontology (URL_TO_INSERT_TERM_5923 https://fairsharing.org/search?recordType=terminology_artefact)  main classes.
+Overview of the Provenance Ontology main classes.
 ```
 ````
 
 
-Below is an example of provenance informat (URL_TO_INSERT_TERM_5924 https://fairsharing.org/search?recordType=model_and_format) ion represented using the PROV-O (URL_TO_INSERT_RECORD-ABBREV_5927 https://fairsharing.org/FAIRsharing.2rm2b3)  ontology (URL_TO_INSERT_TERM_5925 https://fairsharing.org/search?recordType=terminology_artefact)  and serialized as RDF (URL_TO_INSERT_RECORD-ABBREV_5926 https://fairsharing.org/FAIRsharing.p77ph9)  statements
+Below is an example of provenance information represented using the PROV-O (URL_TO_INSERT_RECORD-ABBREV_2787 https://fairsharing.org/FAIRsharing.2rm2b3)  ontology and serialized as RDF (URL_TO_INSERT_RECORD-ABBREV_2786 https://fairsharing.org/FAIRsharing.p77ph9)  statements
 using turtle representation.
 
 ````bash
@@ -162,19 +162,19 @@ using turtle representation.
 
 ## Tools for creating provenance metadata
 
-In the previous section, we have detailed the landscape of formal model (URL_TO_INSERT_TERM_5928 https://fairsharing.org/search?recordType=model_and_format) s to represent provenance informat (URL_TO_INSERT_TERM_5929 https://fairsharing.org/search?recordType=model_and_format) ion.
-In this section, we will show how tools have implemented these model (URL_TO_INSERT_TERM_5930 https://fairsharing.org/search?recordType=model_and_format) s, or domain-specific extension of them as in the
-case of computation workflow provenance informat (URL_TO_INSERT_TERM_5931 https://fairsharing.org/search?recordType=model_and_format) ion.
+In the previous section, we have detailed the landscape of formal models to represent provenance information.
+In this section, we will show how tools have implemented these models, or domain-specific extension of them as in the
+case of computation workflow provenance information.
 
 ### CamFLow
 
 [CamFlow](https://camflow.org/#output_format) is a Linux Security Module (LSM) designed to capture data provenance for
-the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture informat (URL_TO_INSERT_TERM_5932 https://fairsharing.org/search?recordType=model_and_format) ion flow.
+the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture information flow.
 
 
-CamFlow support 2 output format (URL_TO_INSERT_TERM_5933 https://fairsharing.org/search?recordType=model_and_format) s.
+CamFlow support 2 output formats.
 
-- W3C PROV-JSO (URL_TO_INSERT_RECORD-ABBREV_5935 https://fairsharing.org/FAIRsharing.5bbab9) N format (URL_TO_INSERT_TERM_5934 https://fairsharing.org/search?recordType=model_and_format) 
+- W3C PROV-JSO (URL_TO_INSERT_RECORD-ABBREV_2788 https://fairsharing.org/FAIRsharing.5bbab9) N format
 
 ```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
@@ -197,7 +197,7 @@ CamFlow support 2 output format (URL_TO_INSERT_TERM_5933 https://fairsharing.org
 ```
 
 
-Example of a write edge in W3C PROV format (URL_TO_INSERT_TERM_5936 https://fairsharing.org/search?recordType=model_and_format) :
+Example of a write edge in W3C PROV format:
 ```bash
 "QAAAAAAAQIANAAAAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
     "cf:id": "13",
@@ -218,27 +218,27 @@ Example of a write edge in W3C PROV format (URL_TO_INSERT_TERM_5936 https://fair
 CamFlow also concerns itself with a informatics system audit and as obvious from its design, is meanly focused on the security of Linux based systems. The CamFlow framework is highly configurable and allows `profiles` to be defined. This is a very low level solution and its use remains the confines to information security specialists.
 ```
 
-While this tool is probably of limited use to Life Sciences and bioinformat (URL_TO_INSERT_TERM_5937 https://fairsharing.org/search?recordType=model_and_format) ics applications, we mention it for two reasons:
-* it provides one of the first example of an implementation (even if very basic) making use of the W3C Prov-O model (URL_TO_INSERT_TERM_5938 https://fairsharing.org/search?recordType=model_and_format) .
-* it provides an insight on how computational tool can deal with provenance informat (URL_TO_INSERT_TERM_5939 https://fairsharing.org/search?recordType=model_and_format) ion in ways which allow assessing 
+While this tool is probably of limited use to Life Sciences and bioinformatics applications, we mention it for two reasons:
+* it provides one of the first example of an implementation (even if very basic) making use of the W3C Prov-O model.
+* it provides an insight on how computational tool can deal with provenance information in ways which allow assessing 
 systems health from a security point of view. 
 
 
 ### Computational workflows and Provenance information:
 
 
-As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_TERM_5940 https://fairsharing.org/search?recordType=model_and_format)  (URL_TO_INSERT_RECORD-NAME_5942 https://fairsharing.org/FAIRsharing.36c7ea)  and Provenance Ontology (URL_TO_INSERT_TERM_5941 https://fairsharing.org/search?recordType=terminology_artefact) , three key entities are necessary to 
-record and track lineage informat (URL_TO_INSERT_TERM_5943 https://fairsharing.org/search?recordType=model_and_format) ion:
+As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2789 https://fairsharing.org/FAIRsharing.36c7ea)  and Provenance Ontology, three key entities are necessary to 
+record and track lineage information:
 
 - The Entity the origin of which we are concerned with.
 - The Activity which resulted in the creation of the Entity
 - The Agent which performed the Activity aforementioned.
 
-Because the PROV model (URL_TO_INSERT_TERM_5944 https://fairsharing.org/search?recordType=model_and_format)  is domain agnostic and very generic, it can be either applied as is, to any situation 
+Because the PROV model is domain agnostic and very generic, it can be either applied as is, to any situation 
 or it can also be extended and specialized to suit a particular domain on knowledge.
-To give an example, tracking provenance informat (URL_TO_INSERT_TERM_5945 https://fairsharing.org/search?recordType=model_and_format) ion in the field of bioinformat (URL_TO_INSERT_TERM_5946 https://fairsharing.org/search?recordType=model_and_format) ics shares features with provenance
+To give an example, tracking provenance information in the field of bioinformatics shares features with provenance
 tracking as used in manufacturing, but it also has a number of specific features.
-In the field of bioinformat (URL_TO_INSERT_TERM_5947 https://fairsharing.org/search?recordType=model_and_format) ics, where computational pipelines, known as workflows, are assembled to process ever larger
+In the field of bioinformatics, where computational pipelines, known as workflows, are assembled to process ever larger
 datasets on high performance computing infrastructure and cloud infrastructure, having the ability to access data 
 lineage matters for a number for reasons, such as:
 
@@ -249,8 +249,8 @@ It is those features which have been the focus of an extension as part of the wo
 
 #### Example of CWLProv document
 
-The infobox below shows an example of CWLProv RDF (URL_TO_INSERT_RECORD-ABBREV_5949 https://fairsharing.org/FAIRsharing.p77ph9)  document which details how provenance informat (URL_TO_INSERT_TERM_5948 https://fairsharing.org/search?recordType=model_and_format) ion about the execution 
-of CWL (URL_TO_INSERT_RECORD-ABBREV_5950 https://fairsharing.org/FAIRsharing.8y5ayx)  coded workflow may be represented.
+The infobox below shows an example of CWLProv RDF (URL_TO_INSERT_RECORD-ABBREV_2790 https://fairsharing.org/FAIRsharing.p77ph9)  document which details how provenance information about the execution 
+of CWL (URL_TO_INSERT_RECORD-ABBREV_2791 https://fairsharing.org/FAIRsharing.8y5ayx)  coded workflow may be represented.
 This document is take from the [CWLProv github repository](https://github.com/common-workflow-language/cwlprov/blob/main/prov.md).
 Such documents are generated and consumed by a feasibility demonstrator tool such as [CWLtool]()
 
@@ -300,26 +300,26 @@ See the [BagIt profile](https://github.com/common-workflow-language/cwlprov/blob
 #### CWLtool: a component to manage workflow information and generate CWLProv information
 
 
-'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_5951 https://fairsharing.org/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
-[Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD-ABBREV_5952 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications
-and provides validation functions to check CWL (URL_TO_INSERT_RECORD-ABBREV_5953 https://fairsharing.org/FAIRsharing.8y5ayx)  documents.
+'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2792 https://fairsharing.org/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
+[Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD-ABBREV_2793 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications
+and provides validation functions to check CWL (URL_TO_INSERT_RECORD-ABBREV_2794 https://fairsharing.org/FAIRsharing.8y5ayx)  documents.
 
 
 ```bash
 pip install cwltool
 ```
 
-cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD-ABBREV_5954 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
+cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD-ABBREV_2795 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
 [Toil](https://toil.ucsc-cgl.org/) exist. 
 In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as
-'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD-ABBREV_5955 https://fairsharing.org/FAIRsharing.8y5ayx)  implementation
+'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD-ABBREV_2796 https://fairsharing.org/FAIRsharing.8y5ayx)  implementation
 will be executed.
 
 ```bash
 pip install cwltool-runner
 ```
 
-For the purpose of this recipe, which is to show how provenance informat (URL_TO_INSERT_TERM_5956 https://fairsharing.org/search?recordType=model_and_format) ion can be generated by a tool such as 
+For the purpose of this recipe, which is to show how provenance information can be generated by a tool such as 
 cwltool {footcite}`cwltool`, users will need to make sure that a workflow is available before performing this conversion.
 
 
@@ -329,18 +329,18 @@ cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 
 #### CWLProv-py
 
-This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_5957 https://fairsharing.org/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
-informat (URL_TO_INSERT_TERM_5958 https://fairsharing.org/search?recordType=model_and_format) ion when available from Research Objects {footcite}`cwlprov-py`. 
+This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2797 https://fairsharing.org/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
+information when available from Research Objects {footcite}`cwlprov-py`. 
 It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects 
-capturing workflow execution informat (URL_TO_INSERT_TERM_5959 https://fairsharing.org/search?recordType=model_and_format) ion using the CWL (URL_TO_INSERT_RECORD-ABBREV_5960 https://fairsharing.org/FAIRsharing.8y5ayx)  syntax.
+capturing workflow execution information using the CWL (URL_TO_INSERT_RECORD-ABBREV_2798 https://fairsharing.org/FAIRsharing.8y5ayx)  syntax.
 
-To install the package, simply run the standard (URL_TO_INSERT_TERM_5961 https://fairsharing.org/search?fairsharingRegistry=Standard)  python install package pip: 
+To install the package, simply run the standard python install package pip: 
 
 ```python
 pip install cwlprov
 ```
 
-To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD-ABBREV_5962 https://fairsharing.org/FAIRsharing.8y5ayx)  file, run the following command:
+To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD-ABBREV_2799 https://fairsharing.org/FAIRsharing.8y5ayx)  file, run the following command:
 
 
 ```python
@@ -349,19 +349,19 @@ cwlprov --quiet --directory ./test/1.cwl validate
 
 ### Provenance and distributed ledger technology
 
-With this section, we intend to cover another aspect associated with provenance informat (URL_TO_INSERT_TERM_5963 https://fairsharing.org/search?recordType=model_and_format) ion. It is the issue of 
-trustworthiness of the informat (URL_TO_INSERT_TERM_5964 https://fairsharing.org/search?recordType=model_and_format) ion and how to ascertain that even if a provenance informat (URL_TO_INSERT_TERM_5965 https://fairsharing.org/search?recordType=model_and_format) ion message is valid, 
-it actually contains authentic and untempered informat (URL_TO_INSERT_TERM_5966 https://fairsharing.org/search?recordType=model_and_format) ion. 
+With this section, we intend to cover another aspect associated with provenance information. It is the issue of 
+trustworthiness of the information and how to ascertain that even if a provenance information message is valid, 
+it actually contains authentic and untempered information. 
 
 The raise of digital currencies such as bitcoin or ethereum has popularized the notion of 'blockchain', which is a type
 of what is known as "distributing ledger technology" (DLT).  Blockchains and DLT in general represent technological 
 solution to the problem of trust in provenance. To achieve this goal, DLT relies on three key principles:
 
-- distribution of informat (URL_TO_INSERT_TERM_5968 https://fairsharing.org/search?recordType=model_and_format) ion: in other words, the system is decentralized, meaning that no single entity holds the database (URL_TO_INSERT_TERM_5967 https://fairsharing.org/search?fairsharingRegistry=Database) .
-Instead, a multitude of copies of the informat (URL_TO_INSERT_TERM_5969 https://fairsharing.org/search?recordType=model_and_format) ion are available from a myriad of independent nodes. 
+- distribution of information: in other words, the system is decentralized, meaning that no single entity holds the database.
+Instead, a multitude of copies of the information are available from a myriad of independent nodes. 
 
 - transparency:  this is a consequence of the distributed nature of the architecture. Transparency is understood as the
-availability of means of verification by being able to access independent sources of the reference informat (URL_TO_INSERT_TERM_5970 https://fairsharing.org/search?recordType=model_and_format) ion. 
+availability of means of verification by being able to access independent sources of the reference information. 
 This allows consistency checks to be performed and therefore provides the means of tempering detection. 
 
 ````{note}
@@ -391,10 +391,10 @@ thus reinforcing the approach.
 
 ## Conclusion
 
-With this FAIR (URL_TO_INSERT_RECORD-ABBREV_5972 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook content, we have introduced the notion of Provenance informat (URL_TO_INSERT_TERM_5971 https://fairsharing.org/search?recordType=model_and_format) ion, providing a brief historical 
-review of the domain model (URL_TO_INSERT_TERM_5973 https://fairsharing.org/search?recordType=model_and_format)  and given a few examples of tools implementing provenance informat (URL_TO_INSERT_TERM_5974 https://fairsharing.org/search?recordType=model_and_format) ion tracking.
+With this FAIR (URL_TO_INSERT_RECORD-ABBREV_2800 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook content, we have introduced the notion of Provenance information, providing a brief historical 
+review of the domain model and given a few examples of tools implementing provenance information tracking.
 
-For a more in depth exploration of provenance informat (URL_TO_INSERT_TERM_5975 https://fairsharing.org/search?recordType=model_and_format) ion, we encourage our readers to follow up with more detailed 
+For a more in depth exploration of provenance information, we encourage our readers to follow up with more detailed 
 material listed below:
 
 

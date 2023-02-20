@@ -34,7 +34,7 @@
 
 ## Prerequisites
 
-No previous knowledge is needed, but it is important to understand how licensing can affect your project (URL_TO_INSERT_TERM_5617 https://fairsharing.org/search?recordType=project) .
+No previous knowledge is needed, but it is important to understand how licensing can affect your project.
 
 (rr-licensing-summary)=
 ## Summary
@@ -42,7 +42,7 @@ No previous knowledge is needed, but it is important to understand how licensing
 > This chapter was written using American English, in which the word **license** is a noun **_and_** a verb.
 > With British English, however, **licence** is a noun (as in, _to issue a licence_), while **license** is a verb (as in, _they licensed the event_).  
 
-As with anything else in society (URL_TO_INSERT_TERM_5618 https://fairsharing.org/search?recordType=society) , some of what you can and cannot do in software development is determined by the law.
+As with anything else in society, some of what you can and cannot do in software development is determined by the law.
 Most of the constraints in this particular domain stem from intellectual property laws: laws that make abstract things like designs, stories, or computer programs resemble physical objects by allowing them to be owned.
 
 This chapter aims to give a brief summary of relevant intellectual property laws (enough to be able to read most software licenses), explain free and open source software licensing, and explain how combining software from different sources works from a legal perspective.

@@ -27,10 +27,10 @@ The main purpose of this recipe to highlight the existence of semantic resources
 the generation of a Data Protection Impact Assessment (DPIA), as mandated by the European Union General Data Protection Regulation (GDPR)
 in a machine-readable form.
 The framework presented in the recipe therefore represents an important tool to consider for **Data Controllers** 
-responsible for human subject informat (URL_TO_INSERT_TERM_5116 https://fairsharing.org/search?recordType=model_and_format) ion. 
+responsible for human subject information. 
 
 > Learn what a Data Protection Impact Assessment is.
-> Learn how to express Data Protection Impact Assessment key informat (URL_TO_INSERT_TERM_5117 https://fairsharing.org/search?recordType=model_and_format) ion in RDF (URL_TO_INSERT_RECORD-ABBREV_5118 https://fairsharing.org/FAIRsharing.p77ph9) .
+> Learn how to express Data Protection Impact Assessment key information in RDF (URL_TO_INSERT_RECORD-ABBREV_2487 https://fairsharing.org/FAIRsharing.p77ph9) .
 ---
 
 
@@ -76,25 +76,25 @@ Flowchart to decide if a DPIA is needed
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_5120 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_5121 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_5119 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [RDF](https://www.w3.org/TR/rdf-syntax-grammar/)  | [DPV-OWL](https://w3c.github.io/dpv/dpv-owl/)  | |
-| [Terse RDF Triple Language - (Turtle)](https://doi.org/10.25504/FAIRsharing.3e194c)  | [DPV-SKO (URL_TO_INSERT_RECORD-ABBREV_5123 https://fairsharing.org/FAIRsharing.48e326) S]( https://www.w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_5122 https://fairsharing.org/FAIRsharing.S6BoUk) /dpv/dpv-skos)  | |
+| [Terse RDF Triple Language - (Turtle)](https://doi.org/10.25504/FAIRsharing.3e194c)  | [DPV-SKO (URL_TO_INSERT_RECORD-ABBREV_2489 https://fairsharing.org/FAIRsharing.48e326) S]( https://www.w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_2488 https://fairsharing.org/FAIRsharing.S6BoUk) /dpv/dpv-skos)  | |
 | |[DPV-NACE](https://w3c.github.io/dpv/dpv-nace/) ||
 ||[riskonto](https://raw.githubusercontent.com/coolharsh55/riskonto/master/riskonto.ttl)||
 ---
 
 ## Main Content
 
-Data management, especially the management of personal informat (URL_TO_INSERT_TERM_5124 https://fairsharing.org/search?recordType=model_and_format) ion, is a sensitive activity which requires a number of
+Data management, especially the management of personal information, is a sensitive activity which requires a number of
 specific considerations and, depending on the part of the world where the operations are taking place, specific legal
 frameworks will apply. Since its adoption in 2018, the European Union General Data Protection Regulation (GDPR), by
-inscribing privacy of informat (URL_TO_INSERT_TERM_5126 https://fairsharing.org/search?recordType=model_and_format) ion as fundamental right, established a standard (URL_TO_INSERT_TERM_5125 https://fairsharing.org/search?fairsharingRegistry=Standard)  for the domain by providing boundaries to
+inscribing privacy of information as fundamental right, established a standard for the domain by providing boundaries to
 what had been, for a long time, an unregulated space.
 
 What does the GDPR regulation imply for the research practice and why does it matter for healthcare research? 
 
-The regulation means that, prior to conducting any data processing involving human personal informat (URL_TO_INSERT_TERM_5127 https://fairsharing.org/search?recordType=model_and_format) ion, a 
+The regulation means that, prior to conducting any data processing involving human personal information, a 
 **Data Protection Impact Assessment (DPIA)** needs to be carried out. 
 
 In the event that the intended data processing includes data provided by a third party, then the use of this data is dependent on the 
@@ -104,18 +104,18 @@ Failure to generate a GDPR-compliant DPIA or adhere to condition(s) imposed by a
 the regulation.
 
 In the following sections, we will examine the key steps to consider when generating a DPIA and 
-how to code such informat (URL_TO_INSERT_TERM_5128 https://fairsharing.org/search?recordType=model_and_format) ion in machine-readable form, utilizing the 'Data Privacy Vocabulary' (DPV) 
+how to code such information in machine-readable form, utilizing the 'Data Privacy Vocabulary' (DPV) 
 {footcite}`10.1007_978-3-030-33246-4_44` and its extensions.
 
 
 ### Survey the data types of the project
 
-During the survey of the data types, if it becomes clear that personal, patient centric informat (URL_TO_INSERT_TERM_5129 https://fairsharing.org/search?recordType=model_and_format) ion will be *processed within the EU*,
+During the survey of the data types, if it becomes clear that personal, patient centric information will be *processed within the EU*,
 then the GDPR regulation applies (i.e. a multi-centric, international clinical trial recruiting patients in the EU and/or
 outside the EU the data of which will be processed in the EU falls under GDPR).
 
 In the context of scientific research, the **purpose** of the research can be explicitly determined as a justification
-for the data collection (URL_TO_INSERT_TERM_5130 https://fairsharing.org/search?recordType=collection)  activity.
+for the data collection activity.
 
 
 ### Identifying the key entities:
@@ -130,15 +130,15 @@ These functions are:
 Then, it is necessary to declare all the **purposes, anticipated uses and actions** on the collected data, so these can 
 be clearly listed and documented.
 
-For each of these actions, a justification needs to be provided, explaining the reasons why informat (URL_TO_INSERT_TERM_5131 https://fairsharing.org/search?recordType=model_and_format) ion is collected
+For each of these actions, a justification needs to be provided, explaining the reasons why information is collected
 and how it contributes to answering the research questions.
 
 The results of this survey should also be included in the **informed consent**, which will be reviewed and signed by the
-*participants (Data Subjects)* in the research project (URL_TO_INSERT_TERM_5132 https://fairsharing.org/search?recordType=project) .
+*participants (Data Subjects)* in the research project.
 
 The availability of a new semantic resource, developed as a W3C specification, provides the necessary vocabulary to 
-structure informat (URL_TO_INSERT_TERM_5133 https://fairsharing.org/search?recordType=model_and_format) ion which was until now only available in natural text and legal documents. The figure below shows an 
-excerpt of the Data Privacy Vocabulary in the Protégé ontology (URL_TO_INSERT_TERM_5134 https://fairsharing.org/search?recordType=terminology_artefact)  editing tool.
+structure information which was until now only available in natural text and legal documents. The figure below shows an 
+excerpt of the Data Privacy Vocabulary in the Protégé ontology editing tool.
 
 ```{figure} ../../../images/dpv_in_protege.png
 ---
@@ -149,7 +149,7 @@ alt: DPIA_RDF
 A snippet of the Data Privacy Vocabulary as seen in Protégé ontology editor
 ```
 
-In the following RDF (URL_TO_INSERT_RECORD-ABBREV_5136 https://fairsharing.org/FAIRsharing.p77ph9)  fragment, we show how to express the goal of the data collection (URL_TO_INSERT_TERM_5135 https://fairsharing.org/search?recordType=collection)  of an exemplar study.
+In the following RDF (URL_TO_INSERT_RECORD-ABBREV_2490 https://fairsharing.org/FAIRsharing.p77ph9)  fragment, we show how to express the goal of the data collection of an exemplar study.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -251,7 +251,7 @@ ex:AcmeEUOrg rdf:type dpv:LegalEntity, dpv:Organization, dpv:DataController;
 ### Identifying the risks to privacy and define risk mitigation and security measures
 
 With the previous steps performed, the next step consists in understanding the risks to privacy associated with the data
-collection (URL_TO_INSERT_TERM_5137 https://fairsharing.org/search?recordType=collection)  and processing scenarios defined by the research program. 
+collection and processing scenarios defined by the research program. 
 
 For each of these identified risks, a mitigation plan should be established.
 
@@ -263,11 +263,11 @@ possibly more importantly, maintained.
 - The first arm focuses on training and ensuring personnel in charge of the data receives the proper education. 
 - The second arm is obviously the techniques themselves and their implementations. 
 
-When dealing with human centric sensitive informat (URL_TO_INSERT_TERM_5138 https://fairsharing.org/search?recordType=model_and_format) ion, the main privacy concerns for data managers are:
+When dealing with human centric sensitive information, the main privacy concerns for data managers are:
 - unauthorized access to the data
 - patient re-identification
 
-which can be represented by the following RDF (URL_TO_INSERT_RECORD-ABBREV_5139 https://fairsharing.org/FAIRsharing.p77ph9)  statements:
+which can be represented by the following RDF (URL_TO_INSERT_RECORD-ABBREV_2491 https://fairsharing.org/FAIRsharing.p77ph9)  statements:
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -287,10 +287,10 @@ ex:ReIdentification rdf:type dpv:Risk .
 
 ```
 
-Both cases are very serious security and privacy issues which demand robust policies (URL_TO_INSERT_TERM_5140 https://fairsharing.org/search?fairsharingRegistry=Policy)  to be in place.
+Both cases are very serious security and privacy issues which demand robust policies to be in place.
 These situations can be de-risked by implementing different types of solutions.
 In the following paragraphs, we show how 'data anonymization' and 'data encryption' can be explicitly declared as measures
-to mitigate patient re-identification or informat (URL_TO_INSERT_TERM_5141 https://fairsharing.org/search?recordType=model_and_format) ion retrieval in case of unauthorized access.
+to mitigate patient re-identification or information retrieval in case of unauthorized access.
 
 #### Organisational measures:
 
@@ -400,24 +400,24 @@ Data access requests are common situations whereby researchers may seek access t
 within the same jurisdiction or outside the jurisdiction. 
 
 Data access requests need to be appraised and evaluated by specific structures, the Data Access Committees (DAC), which 
-establish policy (URL_TO_INSERT_TERM_5142 https://fairsharing.org/search?fairsharingRegistry=Policy)  documents detailing the conditions of access and terms of data reuse. 
+establish policy documents detailing the conditions of access and terms of data reuse. 
 
 The DAC will evaluate the requests and actions on the data planned by the requester against the data permitted use associated to the dataset. 
 Depending on this assessment, the DAC will decide whether or not to grant the request.
 
-For more informat (URL_TO_INSERT_TERM_5143 https://fairsharing.org/search?recordType=model_and_format) ion about 'data permitted uses', see [this dedicated recipe FCB035](https://w3id.org/faircookbook/FCB035): 
+For more information about 'data permitted uses', see [this dedicated recipe FCB035](https://w3id.org/faircookbook/FCB035): 
 
 In the context of data access requests, a DAC needs to appraise risks such as:
 1. Use for un-consented research
 2. Data transfer to a different jurisdiction: would the data be protected to the same level once outside EU?
 3. Nature of transfer tools, which fall into 3 possible categories:
-   1. Standard (URL_TO_INSERT_TERM_5144 https://fairsharing.org/search?fairsharingRegistry=Standard)  Contractual Clauses (SCC (URL_TO_INSERT_RECORD-ABBREV_5145 https://fairsharing.org/FAIRsharing.84ebcy) ): 18 statements which can be used to assemble a `boiler plate` agreement to 
+   1. Standard Contractual Clauses (SCC (URL_TO_INSERT_RECORD-ABBREV_2492 https://fairsharing.org/FAIRsharing.84ebcy) ): 18 statements which can be used to assemble a `boiler plate` agreement to 
       transfer data outside EU rule of law **but in ways which conform to the EU GDPR**.
    2. Binding Corporate Rules (BRC):
       These are legally binding rules to transfer data within the different branches of a Company, which may operate 
-      in different countries. BRCs need to guarantee at minima the same level of protection as the Standard (URL_TO_INSERT_TERM_5146 https://fairsharing.org/search?fairsharingRegistry=Standard)  Contractual Clauses.
+      in different countries. BRCs need to guarantee at minima the same level of protection as the Standard Contractual Clauses.
    3. Code of Conducts (CoC)
-      Code of Conducts represent data protection policies (URL_TO_INSERT_TERM_5147 https://fairsharing.org/search?fairsharingRegistry=Policy)  developed for a particular type of data and/or for a 
+      Code of Conducts represent data protection policies developed for a particular type of data and/or for a 
       particular professionals. For example, [Cloud Security Alliance Code of Conduct](https://downloads.cloudsecurityalliance.org/assets/research/gdpr/CSA_Code_of_Conduct_for_GDPR_Compliance.pdf)
 4. Data leak or data breach 
 5. Individual re-identification 
@@ -427,9 +427,9 @@ A specific data protection impact assessment is needed for each request and this
 This is where the availability of machine-actionable representations of legal documents such as DPIA, data use agreements, 
 and data access requests can yield great benefits. 
 By enabling the creation of readily exploitable documents, it could help the development of automated assessment tool,
-which would expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive informat (URL_TO_INSERT_TERM_5148 https://fairsharing.org/search?recordType=model_and_format) ion. 
+which would expedite decisions regarding data access while potentially reducing the risks associated with the use of sensitive information. 
 Privacy preserving use of data is of paramount importance to retain the public confidence in the scientific practice 
-and the safe-keeping of informat (URL_TO_INSERT_TERM_5149 https://fairsharing.org/search?recordType=model_and_format) ion.
+and the safe-keeping of information.
 
 
 ````{dropdown}
@@ -463,15 +463,15 @@ Based on all the information collected in the previous steps, a **data governanc
 
 > With this recipe, we have:
 > - highlighted the importance of the European legal framework devised to ensure protection of privacy.
-> - highlighted the existence of a dedicated vocabulary / semantic model (URL_TO_INSERT_TERM_5150 https://fairsharing.org/search?recordType=model_and_format)  to express key informat (URL_TO_INSERT_TERM_5151 https://fairsharing.org/search?recordType=model_and_format) ion about data protection impact assessment
-> - provided practical examples of how to produce an RDF (URL_TO_INSERT_RECORD-ABBREV_5152 https://fairsharing.org/FAIRsharing.p77ph9) -based representation exploiting the DPV vocabulary.
+> - highlighted the existence of a dedicated vocabulary / semantic model to express key information about data protection impact assessment
+> - provided practical examples of how to produce an RDF (URL_TO_INSERT_RECORD-ABBREV_2493 https://fairsharing.org/FAIRsharing.p77ph9) -based representation exploiting the DPV vocabulary.
 > 
 > The reader should understand that this is an active area of research and therefore, patterns for using the 
 vocabularies introduced in this recipe may evolve and be refined. The main point is to raise awareness about these resources. 
 which can be used for mapping DPIA documents which are in pure narrative form. 
-The recipe should also be used as guide when creating DPIA documents to ensure that key informat (URL_TO_INSERT_TERM_5153 https://fairsharing.org/search?recordType=model_and_format) ion is covered. 
+The recipe should also be used as guide when creating DPIA documents to ensure that key information is covered. 
 Finally, as more DPIA document data are represented using these resources, it is likely that new toolsets will be available to produce
-new DPIA documents which are FAIR (URL_TO_INSERT_RECORD-ABBREV_5154 https://fairsharing.org/FAIRsharing.WWI10U)  by design, available as textual documents for humans and as linked data graphs for machines. 
+new DPIA documents which are FAIR (URL_TO_INSERT_RECORD-ABBREV_2494 https://fairsharing.org/FAIRsharing.WWI10U)  by design, available as textual documents for humans and as linked data graphs for machines. 
 
 
 ```{warning}
@@ -489,7 +489,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 
 > ### What should I read next?
 >  We highly recommend following up this recipe with another relevant content type which looks at how to express permitted data uses
-> by relying on two standard (URL_TO_INSERT_TERM_5155 https://fairsharing.org/search?fairsharingRegistry=Standard) s, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (URL_TO_INSERT_TERM_5156 https://fairsharing.org/search?recordType=terminology_artefact)  (DUO (URL_TO_INSERT_RECORD-ABBREV_5157 https://fairsharing.org/FAIRsharing.5dnjs2) ).
+> by relying on two standards, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (DUO (URL_TO_INSERT_RECORD-ABBREV_2495 https://fairsharing.org/FAIRsharing.5dnjs2) ).
 > * [Provenance Information](fcb-reusability-provenance)
 > * [Data Use Ontology and ODRL](fcb-reusability-data_use)
 

@@ -1,16 +1,16 @@
 # Registering Datasets in Wikidata
 
  ````{panels_fairplus}
-:identifier (URL_TO_INSERT_TERM_1237 https://fairsharing.org/search?recordType=identifier_schema) _text: FCB060
-:identifier (URL_TO_INSERT_TERM_1238 https://fairsharing.org/search?recordType=identifier_schema) _link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_1239 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
+:identifier_text: FCB060
+:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_661 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
-:intended_audience: bioinformat (URL_TO_INSERT_TERM_1240 https://fairsharing.org/search?recordType=model_and_format) ician, data_scientist, data_engineer
+:intended_audience: bioinformatician, data_scientist, data_engineer
 :maturity_level: 1
 :maturity_indicator: 5, 8
 :has_executable_code: nope
-:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD-NAME_1241 https://fairsharing.org/FAIRsharing.6s749p)  
+:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD-NAME_662 https://fairsharing.org/FAIRsharing.6s749p)  
 ```` 
 
 [comment]: <> ("UCnn.x Registering a dataset in Wikidata.")
