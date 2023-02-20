@@ -24,18 +24,18 @@ The main purpose of this recipe is:
 > To provide an overview of elements that could help users in prioritization and selection of potential projects,
 > processes, or data for FAIRification. 
 > For each of these elements, we provide comparative benefits between different stages and justify the order of the 
-> stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR (URL_TO_INSERT_RECORD-ABBREV_2556 https://fairsharing.org/FAIRsharing.WWI10U) .
+> stages required for FAIRification. Finally, we also highlight the reasons for making the data FAIR (URL_TO_INSERT_RECORD-ABBREV_2290 https://fairsharing.org/FAIRsharing.WWI10U) .
 
 
 ## Introduction
-With the increased awareness of the FAIR (URL_TO_INSERT_RECORD-ABBREV_2558 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2557 https://fairsharing.org/FAIRsharing.WWI10U) , the drive to implement them can be felt in projects and programs. 
+With the increased awareness of the FAIR (URL_TO_INSERT_RECORD-ABBREV_2292 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2291 https://fairsharing.org/FAIRsharing.WWI10U) , the drive to implement them can be felt in projects and programs. 
 However, considering the volume and variety of such projects and the finite nature of available resources, it is also
 necessary to establish a *principled approach* to prioritizing datasets for data FAIRification.
 The present recipe aims to provide insights into how to go about this process by showcasing essential criteria which 
 have been considered and "battle-tested".  
 
 The recipe is structured in the following way:
-* We begin by pointing out the reasons why one should to make their dataset FAIR (URL_TO_INSERT_RECORD-ABBREV_2559 https://fairsharing.org/FAIRsharing.WWI10U) . 
+* We begin by pointing out the reasons why one should to make their dataset FAIR (URL_TO_INSERT_RECORD-ABBREV_2293 https://fairsharing.org/FAIRsharing.WWI10U) . 
 * Following this, a brief overview of the dataset corpus formulation. Once "the team" has collected all the necessary data,
 it can now pass through the prioritization phase. Here, a thorough assessment of the dataset based on certain criteria is done. 
 This assessment, in turn, leads to the development of a "scorecard".
@@ -65,8 +65,8 @@ Prioritization overview.
 
 ## Determining the need for FAIRification
 
-Before understanding why and how to *prioritize* projects for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2560 https://fairsharing.org/FAIRsharing.WWI10U)  pipeline, it is essential to understand 
-*the need* for FAIRification of data {footcite}`d3_report`. The list below identifies key reasons why one should make data FAIR (URL_TO_INSERT_RECORD-ABBREV_2561 https://fairsharing.org/FAIRsharing.WWI10U) : 
+Before understanding why and how to *prioritize* projects for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2294 https://fairsharing.org/FAIRsharing.WWI10U)  pipeline, it is essential to understand 
+*the need* for FAIRification of data {footcite}`d3_report`. The list below identifies key reasons why one should make data FAIR (URL_TO_INSERT_RECORD-ABBREV_2295 https://fairsharing.org/FAIRsharing.WWI10U) : 
 * Increase impact and visibility:
     - Standardising published project/dataset metadata using a well-accepted metadata model and getting indexed by
   major community resources helps in increasing the visibility and impact of the data within the scientific community.
@@ -75,7 +75,7 @@ Before understanding why and how to *prioritize* projects for the FAIR (URL_TO_I
   integration of data sources, for instance with the help of a common terminology.
 * Encourages community collaboration:
     - The FAIRification process can attract communities together for potential collaboration as each of the independent
-  communities would now have a structured data format to map (URL_TO_INSERT_RECORD-NAME_2562 https://fairsharing.org/FAIRsharing.53edcc)  their data for integration.
+  communities would now have a structured data format to map (URL_TO_INSERT_RECORD-NAME_2296 https://fairsharing.org/FAIRsharing.53edcc)  their data for integration.
 * Prepare data for downstream tasks:
     - A FAIRified data is machine-readable and hence can potentially be used by software agents such as machine learning
     (ML) or artificial intelligence (AI) models for analysis with help of downstream.
@@ -93,11 +93,11 @@ To answer whether a project requires FAIRification or not, it is essential to fi
 about the projects and then analyze the resultant information in a stepwise manner. 
 
 Prior to digging deeper into the selection and prioritization process, it is essential to assemble a group of people who
-would take care of the prioritization process, the **Project Selection and Prioritization (PSP (URL_TO_INSERT_RECORD-ABBREV_2563 https://fairsharing.org/FAIRsharing.x8xt3k) )** team. 
+would take care of the prioritization process, the **Project Selection and Prioritization (PSP (URL_TO_INSERT_RECORD-ABBREV_2297 https://fairsharing.org/FAIRsharing.x8xt3k) )** team. 
 This team is an ensemble of people both within and outside the organization (if possible) to provide better directionality 
 to the prioritization task.
 
-The information that PSP (URL_TO_INSERT_RECORD-ABBREV_2564 https://fairsharing.org/FAIRsharing.x8xt3k)  team users can collect about the projects covered:
+The information that PSP (URL_TO_INSERT_RECORD-ABBREV_2298 https://fairsharing.org/FAIRsharing.x8xt3k)  team users can collect about the projects covered:
 <ol>
 	<li>Name</li>
 	<li>Objective or aim</li>
@@ -107,23 +107,23 @@ The information that PSP (URL_TO_INSERT_RECORD-ABBREV_2564 https://fairsharing.o
 	<li>Data and the data types involved</li>
 </ol>
 
-With the help of the above-mentioned list, the PSP (URL_TO_INSERT_RECORD-ABBREV_2565 https://fairsharing.org/FAIRsharing.x8xt3k)  team can formulate a filtering or prioritization schema.
+With the help of the above-mentioned list, the PSP (URL_TO_INSERT_RECORD-ABBREV_2299 https://fairsharing.org/FAIRsharing.x8xt3k)  team can formulate a filtering or prioritization schema.
 The next sections discuss different methods for achieving this. 
 
 
 ## Project prioritization
 
-Once the basic information is collected, the PSP (URL_TO_INSERT_RECORD-ABBREV_2566 https://fairsharing.org/FAIRsharing.x8xt3k)  team can now describe projects through a [scoreboard](https://zenodo.org/record/5778431#.YbikDxNKhH1). 
+Once the basic information is collected, the PSP (URL_TO_INSERT_RECORD-ABBREV_2300 https://fairsharing.org/FAIRsharing.x8xt3k)  team can now describe projects through a [scoreboard](https://zenodo.org/record/5778431#.YbikDxNKhH1). 
 
 This scoreboard serves the purpose for prioritization of the projects that would go through the FAIRification process.
 
 Enlisted below are the different aspects that can be considered while creating the scoreboard.
 
-This list is not extensive and the PSP (URL_TO_INSERT_RECORD-ABBREV_2567 https://fairsharing.org/FAIRsharing.x8xt3k)  team can modify the criteria based on their needs.
+This list is not extensive and the PSP (URL_TO_INSERT_RECORD-ABBREV_2301 https://fairsharing.org/FAIRsharing.x8xt3k)  team can modify the criteria based on their needs.
 
 ### 1. Prioritization based on focus
 
-When dealing with large number of projects, the PSP (URL_TO_INSERT_RECORD-ABBREV_2568 https://fairsharing.org/FAIRsharing.x8xt3k)  team can get an overview of the research area or focus area of the given project.
+When dealing with large number of projects, the PSP (URL_TO_INSERT_RECORD-ABBREV_2302 https://fairsharing.org/FAIRsharing.x8xt3k)  team can get an overview of the research area or focus area of the given project.
 
 Specifically, projects from biomedical or clinical areas tend to be associated with a comorbidity or pathology, and
 the team can leverage this specific information to create a customised prioritization schema. 
@@ -133,7 +133,7 @@ language processing (NLP) pipelines to extract this information from project doc
 
 One such example of the tool used by IMI is demonstrated on [GitHub](https://github.com/Fraunhofer-ITMP/IMI-Project-Prioritization).
 
-An *in-house* prioritization scheme can be established by FAIR (URL_TO_INSERT_RECORD-ABBREV_2569 https://fairsharing.org/FAIRsharing.WWI10U)  experts for selection of relevant projects for the FAIRification process.
+An *in-house* prioritization scheme can be established by FAIR (URL_TO_INSERT_RECORD-ABBREV_2303 https://fairsharing.org/FAIRsharing.WWI10U)  experts for selection of relevant projects for the FAIRification process.
 
 This involves a two-step approach:
 <ol>
@@ -151,7 +151,7 @@ Taking a deeper look into the data dependency for the FAIRification process, a p
 of development: early stage, middle stage, and end stage.
 - A project is in early stages of development when the data requirements for the given project are being listed and 
 simultaneously being collected. At this stage, the data availability is the lowest, and it is easier to design a data model,
-choose ontologies etc. that ensures creation of FAIR (URL_TO_INSERT_RECORD-ABBREV_2570 https://fairsharing.org/FAIRsharing.WWI10U)  data by design.
+choose ontologies etc. that ensures creation of FAIR (URL_TO_INSERT_RECORD-ABBREV_2304 https://fairsharing.org/FAIRsharing.WWI10U)  data by design.
 - In the middle stage, all the data relevant for the given project has been collected and now needs to be standardised 
 for downstream tasks such as for predictions using machine learning approaches. 
 This is a stage where there is maximum availability of data. 
@@ -161,7 +161,7 @@ with staff reassignment or departure. Hence, starting a FAIRification process at
 least favourable as this could place large demands in time and resources on key personnel, such as for corresponding
 data owners and data generators, at a time of effort wind down.
 
-Hence, the best time of engaging a project into the FAIR (URL_TO_INSERT_RECORD-ABBREV_2571 https://fairsharing.org/FAIRsharing.WWI10U)  pipeline would be dependent on the retrospective and 
+Hence, the best time of engaging a project into the FAIR (URL_TO_INSERT_RECORD-ABBREV_2305 https://fairsharing.org/FAIRsharing.WWI10U)  pipeline would be dependent on the retrospective and 
 prospective aspects of the project. **The best time to FAIRify prospective projects is the early stage**.
 This stage is the best time to define and layout metadata standards that need to be followed during the project's trajectory. 
 As a result, it eliminates many of the downstream logistical and financial problems.
@@ -190,9 +190,9 @@ As a result, the FAIRification process would be beneficial by increasing transpa
 A data management plan (DMP) is a document that describes the life cycle of a data beginning from its generation, 
 followed by processing and collection, then dissemination, and finally the usage 
 (More details in [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html) recipe). 
-This established document gives the data owners and FAIR (URL_TO_INSERT_RECORD-ABBREV_2572 https://fairsharing.org/FAIRsharing.WWI10U)  experts an overview of the resource under study. 
+This established document gives the data owners and FAIR (URL_TO_INSERT_RECORD-ABBREV_2306 https://fairsharing.org/FAIRsharing.WWI10U)  experts an overview of the resource under study. 
 On the basis of this DMP document, a FAIRification process can be determined and established. 
-In case of the absence of a DMP, the FAIR (URL_TO_INSERT_RECORD-ABBREV_2573 https://fairsharing.org/FAIRsharing.WWI10U)  experts lack the ability to find the best FAIRification process for the given 
+In case of the absence of a DMP, the FAIR (URL_TO_INSERT_RECORD-ABBREV_2307 https://fairsharing.org/FAIRsharing.WWI10U)  experts lack the ability to find the best FAIRification process for the given 
 data thereby leading to inefficient results. 
 Overall, the DMP plan would potentially point to the data regulatory aspect, considering the data usage as well as
 dissemination of the data into public resources.
@@ -205,7 +205,7 @@ to ensure both data availability and accessibility before the FAIRification proc
 In most situations, the data would only be accessible to users within the consortium, while in other situations the 
 data is strictly restricted to data producers such as health records, especially for sensitive data.
 
-The best practice in such situations is to have at least one member from the consortium in the **FAIR (URL_TO_INSERT_RECORD-ABBREV_2574 https://fairsharing.org/FAIRsharing.WWI10U)  experts team**,
+The best practice in such situations is to have at least one member from the consortium in the **FAIR (URL_TO_INSERT_RECORD-ABBREV_2308 https://fairsharing.org/FAIRsharing.WWI10U)  experts team**,
 the team involved in the FAIRification process. This enables easing the FAIRification process in 2 ways: 
 first, it removes the limitation for data availability (in cases the data can only be accessed by an individual within the consortium)
 and second, it allows direct contact with data owners and generators, a guarantee for better understanding of the data. 
@@ -214,30 +214,30 @@ When mentioned data accessibility, this could be broadly classified into three c
 - **Accessing via web-interface** - Here, the data is hosted by the data owner in a cloud system and the relevant data
 can be accessed using the web simply.
 - **Programmatic access** - Here, the data is made available via programmatic services such as REST API. 
-This is mainly of interest to data handlers within the FAIR (URL_TO_INSERT_RECORD-ABBREV_2575 https://fairsharing.org/FAIRsharing.WWI10U)  expert team who can with few lines of programmatic code access the data.
+This is mainly of interest to data handlers within the FAIR (URL_TO_INSERT_RECORD-ABBREV_2309 https://fairsharing.org/FAIRsharing.WWI10U)  expert team who can with few lines of programmatic code access the data.
 - **No access** - Here, given the confidentiality and legal aspects involved in dealing with the data, certain data
 owners will be reluctant to provide access to the data. One such example in this case could be a potential lead
 compound in a pharmaceutical company. Here, the company would give no access to the data until they have patented
 the compound or given the compound to clinical trial.
 
-**In summary, projects that FAIR (URL_TO_INSERT_RECORD-ABBREV_2576 https://fairsharing.org/FAIRsharing.WWI10U)  experts can get access to data should be at a higher priority than those that have
+**In summary, projects that FAIR (URL_TO_INSERT_RECORD-ABBREV_2310 https://fairsharing.org/FAIRsharing.WWI10U)  experts can get access to data should be at a higher priority than those that have
 limitations on data access.**
 
 ### 6. Prioritization based on presence of data champions
 
 **Data champions** can be defined as a group of people that have an expertise in dealing with certain processes, data,
 or pipeline. When dealing with specific processes or data types, it is beneficial if an expert who has experience in 
-dealing with such processes or data already exists within the FAIR (URL_TO_INSERT_RECORD-ABBREV_2577 https://fairsharing.org/FAIRsharing.WWI10U)  expert team.
+dealing with such processes or data already exists within the FAIR (URL_TO_INSERT_RECORD-ABBREV_2311 https://fairsharing.org/FAIRsharing.WWI10U)  expert team.
 
 **Prioritization of projects with consideration of expertise required in dealing with FAIRification tasks should be done.** 
 Such projects can then have a predetermined timeline involved, making the step-by-step approach for accomplishing a 
-FAIR (URL_TO_INSERT_RECORD-ABBREV_2578 https://fairsharing.org/FAIRsharing.WWI10U)  process or data comparatively easy.
+FAIR (URL_TO_INSERT_RECORD-ABBREV_2312 https://fairsharing.org/FAIRsharing.WWI10U)  process or data comparatively easy.
 
 ### 7. Prioritization based on data types
 
 Each project may produce a range of data that may be available in a number of different formats. 
 For instance, sequencing data can be in distributed in *FASTQ* format while associated metadata be described using
-*INSDC SRA (URL_TO_INSERT_RECORD-ABBREV_2580 https://fairsharing.org/FAIRsharing.g7t2hv) * format or imaging data in *DICOM (URL_TO_INSERT_RECORD-ABBREV_2579 https://fairsharing.org/FAIRsharing.b7z8by) * format. 
+*INSDC SRA (URL_TO_INSERT_RECORD-ABBREV_2314 https://fairsharing.org/FAIRsharing.g7t2hv) * format or imaging data in *DICOM (URL_TO_INSERT_RECORD-ABBREV_2313 https://fairsharing.org/FAIRsharing.b7z8by) * format. 
 It is therefore possible to rank projects based on this information and more precisely, one may use a resources
 such as [FAIRsharing](https://fairsharing.org) to do two things:
 
@@ -285,7 +285,7 @@ Overall, in the scorecard, each project is assigned a score based on certain cri
 To enable ranking of projects, an additive sum of each of these criteria should be used, thereby assigning each 
 project with one final score. 
 In the end, a descending ranking of the projects can be achieved, and the top projects can be selected for FAIRification
-by the PSP (URL_TO_INSERT_RECORD-ABBREV_2581 https://fairsharing.org/FAIRsharing.x8xt3k)  team and handed over to the people responsible for the FAIRification process.
+by the PSP (URL_TO_INSERT_RECORD-ABBREV_2315 https://fairsharing.org/FAIRsharing.x8xt3k)  team and handed over to the people responsible for the FAIRification process.
 
 The prioritisation and selection schema mentioned in this recipe was successfully adapted and applied for the 
 FAIRification process within IMI {footcite}`d1_report`.
@@ -314,7 +314,7 @@ Score card template.
 ---
 ## Conclusion
 
-Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR (URL_TO_INSERT_RECORD-ABBREV_2582 https://fairsharing.org/FAIRsharing.WWI10U) , provided suggestions for assisting in establishing a prioritization procedure. 
+Faced with a larger number of projects needing FAIRification, it is necessary to establish a process for ranking and prioritizing these projects. The recipe, besides reminding the benefits of making their data FAIR (URL_TO_INSERT_RECORD-ABBREV_2316 https://fairsharing.org/FAIRsharing.WWI10U) , provided suggestions for assisting in establishing a prioritization procedure. 
 Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. 
 Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
  

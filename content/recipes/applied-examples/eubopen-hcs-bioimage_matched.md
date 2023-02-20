@@ -24,7 +24,7 @@ provides:
 * recommends domain-specific repositories. 
 * ways to structure your data.
 
-If you run high-content screens to test the effect of compounds on cells and want to make your data FAIR (URL_TO_INSERT_RECORD-ABBREV_161 https://fairsharing.org/FAIRsharing.WWI10U) , 
+If you run high-content screens to test the effect of compounds on cells and want to make your data FAIR (URL_TO_INSERT_RECORD-ABBREV_138 https://fairsharing.org/FAIRsharing.WWI10U) , 
 this recipe is for you.
 
 
@@ -91,12 +91,12 @@ Transfer and conversion of data sets is typically a challenge because of the hig
 You might need to resort to high-speed transfer tooling to transfer data fast enough, such as 
 [Aspera](https://www.ibm.com/products/aspera), especially when in industrial settings.
 
-(Meta-)Data might be embedded into the file containing the image, e.g. in OME (URL_TO_INSERT_RECORD-ABBREV_162 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_163 https://fairsharing.org/FAIRsharing.cq8tg2)  format.
+(Meta-)Data might be embedded into the file containing the image, e.g. in OME (URL_TO_INSERT_RECORD-ABBREV_139 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_140 https://fairsharing.org/FAIRsharing.cq8tg2)  format.
 
-This might include "identifiers", e.g. a URN in OME (URL_TO_INSERT_RECORD-ABBREV_164 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_165 https://fairsharing.org/FAIRsharing.cq8tg2) , but also further information, 
+This might include "identifiers", e.g. a URN in OME (URL_TO_INSERT_RECORD-ABBREV_141 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_142 https://fairsharing.org/FAIRsharing.cq8tg2) , but also further information, 
 e.g. about the employed excitation/emission filters during the imaging.
 
-In some formats, e.g. OME (URL_TO_INSERT_RECORD-ABBREV_166 https://fairsharing.org/3502) -XM (URL_TO_INSERT_RECORD-ABBREV_167 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_168 https://fairsharing.org/FAIRsharing.zk8p4g) , this information is held in separate files, linking to other files through their identifiers.
+In some formats, e.g. OME (URL_TO_INSERT_RECORD-ABBREV_143 https://fairsharing.org/3502) -XM (URL_TO_INSERT_RECORD-ABBREV_144 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_145 https://fairsharing.org/FAIRsharing.zk8p4g) , this information is held in separate files, linking to other files through their identifiers.
 
 Strict definitions of "data" and "metadata" did not reach community-consensus in the field yet, and can be generally 
 assumed missing.
@@ -106,10 +106,10 @@ assumed missing.
 
 There is not a single specification around a metadata standard for high-content screening experiments.
 
-The most advanced recommendation is [REMBI](http://bit.ly/rembi_v1), the "Recommended Metadata for Biological Images (URL_TO_INSERT_RECORD-NAME_169 https://fairsharing.org/523) " 
+The most advanced recommendation is [REMBI](http://bit.ly/rembi_v1), the "Recommended Metadata for Biological Images (URL_TO_INSERT_RECORD-NAME_146 https://fairsharing.org/523) " 
 {footcite}`Sarkans2021` .
 
-REMBI (URL_TO_INSERT_RECORD-ABBREV_170 https://fairsharing.org/523)  spans different layers of granularity, from study, over samples, to images and even analyzed data. 
+REMBI (URL_TO_INSERT_RECORD-ABBREV_147 https://fairsharing.org/523)  spans different layers of granularity, from study, over samples, to images and even analyzed data. 
 This granularity is not necessarily reflected in the ways available to store information in files.
 
 Strict definitions of "data" vs. "metadata" did not reach community-consensus in the field.
@@ -123,12 +123,12 @@ possible into a public repository, away from your HCS instrument.
 A typical alternative set-up is the availability of large network-connected storage, which is used to store the 
 intermediate data until it is analyzed by automated methods.
 
-A possibility to start is the BioImage Archive (URL_TO_INSERT_RECORD-NAME_171 https://fairsharing.org/FAIRsharing.x38D2k) , which allows to deposit any files in a submission. 
+A possibility to start is the BioImage Archive (URL_TO_INSERT_RECORD-NAME_148 https://fairsharing.org/FAIRsharing.x38D2k) , which allows to deposit any files in a submission. 
 
-Each submission receives a persistent identifier in the sense of an URL (URL_TO_INSERT_RECORD-ABBREV_172 https://fairsharing.org/FAIRsharing.9d38e2)  promised to be persistent; 
+Each submission receives a persistent identifier in the sense of an URL (URL_TO_INSERT_RECORD-ABBREV_149 https://fairsharing.org/FAIRsharing.9d38e2)  promised to be persistent; 
 individual files do not receive individual identifiers, but are accessible via HTTP-resolvable URLs.
 
-You will need to find your own way to represent your data in BioImage Archive (URL_TO_INSERT_RECORD-NAME_173 https://fairsharing.org/FAIRsharing.x38D2k)  or similar repositories,
+You will need to find your own way to represent your data in BioImage Archive (URL_TO_INSERT_RECORD-NAME_150 https://fairsharing.org/FAIRsharing.x38D2k)  or similar repositories,
 as no community-agreed standards exist.
 
 An exemplar of a data deposition including information about the assayed compounds and links to raw data,
@@ -152,7 +152,7 @@ This should allow you to connect your final results with the underlying "metadat
 
 An exemplar of an implementation is described in the published protocol "High-Content Live-Cell Multiplex Screen 
 for Chemogenomics Compound Annotation based on Nuclear Morphology" *(in preparation)*, 
-with the corresponding Python code available on Zenodo (URL_TO_INSERT_RECORD-NAME_174 https://fairsharing.org/FAIRsharing.wy4egf) : 
+with the corresponding Python code available on Zenodo (URL_TO_INSERT_RECORD-NAME_151 https://fairsharing.org/FAIRsharing.wy4egf) : 
 [doi:10.5281/zenodo.6325622](https://doi.org/10.5281/zenodo.6325622)
 
 
@@ -193,17 +193,17 @@ python other_python_script.py other_input_file.extension
 ```
 
 
-6. Upload your analysis data and the aggregated version to Zenodo (URL_TO_INSERT_RECORD-NAME_175 https://fairsharing.org/FAIRsharing.wy4egf) .
+6. Upload your analysis data and the aggregated version to Zenodo (URL_TO_INSERT_RECORD-NAME_152 https://fairsharing.org/FAIRsharing.wy4egf) .
 
 
 ## Conclusion
 
-With this content and the associated python scripts, we highlight path to deposit HCS imaging data the EMBL-EBI BioImage Archive (URL_TO_INSERT_RECORD-NAME_176 https://fairsharing.org/FAIRsharing.x38D2k) .
+With this content and the associated python scripts, we highlight path to deposit HCS imaging data the EMBL-EBI BioImage Archive (URL_TO_INSERT_RECORD-NAME_153 https://fairsharing.org/FAIRsharing.x38D2k) .
 This therefore improves **Findability** and **Reusability** of such data.
 
 ### What to read next?
 - {ref}`fcb-access-aspera`
-- {ref}`fcb-find-zenod (URL_TO_INSERT_RECORD-NAME_177 https://fairsharing.org/FAIRsharing.wy4egf) o`
+- {ref}`fcb-find-zenod (URL_TO_INSERT_RECORD-NAME_154 https://fairsharing.org/FAIRsharing.wy4egf) o`
 ````{rdmkit_panel}
 ```` 
 

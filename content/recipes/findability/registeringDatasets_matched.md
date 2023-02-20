@@ -2,7 +2,7 @@
 
  ````{panels_fairplus}
 :identifier_text: FCB060
-:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_661 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
+:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_513 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB060'
 :difficulty_level: 2
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -10,7 +10,7 @@
 :maturity_level: 1
 :maturity_indicator: 5, 8
 :has_executable_code: nope
-:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD-NAME_662 https://fairsharing.org/FAIRsharing.6s749p)  
+:recipe_name: Registering datasets with Wikidata (URL_TO_INSERT_RECORD-NAME_514 https://fairsharing.org/FAIRsharing.6s749p)  
 ```` 
 
 [comment]: <> ("UCnn.x Registering a dataset in Wikidata.")

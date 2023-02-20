@@ -26,7 +26,7 @@ The main purpose of this recipe is:
 > Provide guidance on resources available to help developers and data scientists make the various workflows used for daily tasks
 > (for extract-load-transform, quality control, deployment or analytical workflow) available in open format and reusable.
 > 
-> Provide guidance for regulatory submissions for nucleic acid sequence analysis using the BioCompute Object (BCO (URL_TO_INSERT_RECORD-ABBREV_212 https://fairsharing.org/FAIRsharing.8ktkqy) )
+> Provide guidance for regulatory submissions for nucleic acid sequence analysis using the BioCompute Object (BCO (URL_TO_INSERT_RECORD-ABBREV_189 https://fairsharing.org/FAIRsharing.8ktkqy) )
 > specification.
 > 
 > Remind the active nature of the field and the fast evolving environment and platforms developed for these
@@ -46,9 +46,9 @@ ___
 ---
 width: 700px
 name: fair-workflows
-alt: FAIR (URL_TO_INSERT_RECORD-ABBREV_213 https://fairsharing.org/FAIRsharing.WWI10U)  workflows
+alt: FAIR workflows
 ---
-FAIR (URL_TO_INSERT_RECORD-ABBREV_214 https://fairsharing.org/FAIRsharing.WWI10U)  workflows
+FAIR workflows
 ```
 ````
 
@@ -57,7 +57,7 @@ FAIR (URL_TO_INSERT_RECORD-ABBREV_214 https://fairsharing.org/FAIRsharing.WWI10U
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [validation](http://edamontology.org/operation_2428)  | [Common Workflow Language (URL_TO_INSERT_RECORD-NAME_215 https://fairsharing.org/FAIRsharing.8y5ayx)  (CWL (URL_TO_INSERT_RECORD-ABBREV_216 https://fairsharing.org/FAIRsharing.8y5ayx) )](https://fairsharing.org/FAIRsharing.8y5ayx)  | [report](http://edamontology.org/data_2048)  |
+| [validation](http://edamontology.org/operation_2428)  | [Common Workflow Language (URL_TO_INSERT_RECORD-NAME_190 https://fairsharing.org/FAIRsharing.8y5ayx)  (CWL (URL_TO_INSERT_RECORD-ABBREV_191 https://fairsharing.org/FAIRsharing.8y5ayx) )](https://fairsharing.org/FAIRsharing.8y5ayx)  | [report](http://edamontology.org/data_2048)  |
 | [text annotation](http://edamontology.org/operation_3778)  | [EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)  | [annotated text](http://edamontology.org/data_3779)  |
 
 
@@ -66,19 +66,19 @@ FAIR (URL_TO_INSERT_RECORD-ABBREV_214 https://fairsharing.org/FAIRsharing.WWI10U
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [CWL](https://fairsharing.org/FAIRsharing.8y5ayx) | [EDAM](https://fairsharing.org/FAIRsharing.a6r7zs)  |   |
-|[Biocompute Object - IEEE 2791-2020 (URL_TO_INSERT_RECORD-NAME_217 https://fairsharing.org/FAIRsharing.bbd7df) ](https://opensource.ieee.org/2791-object/ieee-2791-schema/)|||
+|[Biocompute Object - IEEE 2791-2020 (URL_TO_INSERT_RECORD-NAME_192 https://fairsharing.org/FAIRsharing.bbd7df) ](https://opensource.ieee.org/2791-object/ieee-2791-schema/)|||
 
 
 ## Tools:
 
-|Name | URL (URL_TO_INSERT_RECORD-ABBREV_218 https://fairsharing.org/FAIRsharing.9d38e2) | type |
+|Name | URL (URL_TO_INSERT_RECORD-ABBREV_193 https://fairsharing.org/FAIRsharing.9d38e2) | type |
 |:--|:--|:--|
 |Apache Airflow| [https://airflow.apache.org/](https://airflow.apache.org/) |workflow engine|
 |Galaxy| [https://galaxy.aws.biochemistry.gwu.edu/root/login?redirect=%2F](https://galaxy.aws.biochemistry.gwu.edu/root/login?redirect=%2F) |workflow engine|
 |Hive| [https://hive.aws.biochemistry.gwu.edu/dna.cgi?cmd=main](https://hive.aws.biochemistry.gwu.edu/dna.cgi?cmd=main) |workflow engine|
 |BioCompute Platform| [https://portal.aws.biochemistry.gwu.edu/sign-in](https://portal.aws.biochemistry.gwu.edu/sign-in) |workflow engine|
 |SevenBridges BioCompute App| [https://sbg.github.io/biocompute/](https://sbg.github.io/biocompute/) |workflow engine|
-|CWL (URL_TO_INSERT_RECORD-ABBREV_219 https://fairsharing.org/FAIRsharing.8y5ayx) -Airflow| [https://barski-lab.github.io/cwl-airflow/](https://barski-lab.github.io/cwl-airflow/) |adapter|
+|CWL (URL_TO_INSERT_RECORD-ABBREV_194 https://fairsharing.org/FAIRsharing.8y5ayx) -Airflow| [https://barski-lab.github.io/cwl-airflow/](https://barski-lab.github.io/cwl-airflow/) |adapter|
 
 
 
@@ -105,19 +105,19 @@ make workflow more interoperable and reusable thanks to the use of existing, off
 
 ### 1. CWL: Common Workflow Language - A brief overview
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_221 https://fairsharing.org/FAIRsharing.8y5ayx) , short for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_220 https://fairsharing.org/FAIRsharing.8y5ayx) , is an open standard developed by a consortium of experts, including workflow 
+* CWL (URL_TO_INSERT_RECORD-ABBREV_196 https://fairsharing.org/FAIRsharing.8y5ayx) , short for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_195 https://fairsharing.org/FAIRsharing.8y5ayx) , is an open standard developed by a consortium of experts, including workflow 
 engine developers, data scientists, data analysts and bioinformaticians.
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_222 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications are available from: https://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_223 https://fairsharing.org/FAIRsharing.8y5ayx) /v1.2/Workflow.html
+* CWL (URL_TO_INSERT_RECORD-ABBREV_197 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications are available from: https://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_198 https://fairsharing.org/FAIRsharing.8y5ayx) /v1.2/Workflow.html
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_224 https://fairsharing.org/FAIRsharing.8y5ayx)  use YAML syntax to describe workflow steps, tools, input, output and parameters.
+* CWL (URL_TO_INSERT_RECORD-ABBREV_199 https://fairsharing.org/FAIRsharing.8y5ayx)  use YAML syntax to describe workflow steps, tools, input, output and parameters.
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_225 https://fairsharing.org/FAIRsharing.8y5ayx)  is meant to provide for platform-independent workflow description, meaning that people should ideally describe 
-workflows once to be able to execute them on CWL (URL_TO_INSERT_RECORD-ABBREV_226 https://fairsharing.org/FAIRsharing.8y5ayx)  aware workflow engines.
+* CWL (URL_TO_INSERT_RECORD-ABBREV_200 https://fairsharing.org/FAIRsharing.8y5ayx)  is meant to provide for platform-independent workflow description, meaning that people should ideally describe 
+workflows once to be able to execute them on CWL (URL_TO_INSERT_RECORD-ABBREV_201 https://fairsharing.org/FAIRsharing.8y5ayx)  aware workflow engines.
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_227 https://fairsharing.org/FAIRsharing.8y5ayx)  is currently implemented by an increasing number of platforms, which are listed here
+* CWL (URL_TO_INSERT_RECORD-ABBREV_202 https://fairsharing.org/FAIRsharing.8y5ayx)  is currently implemented by an increasing number of platforms, which are listed here
 
-* CWL (URL_TO_INSERT_RECORD-ABBREV_228 https://fairsharing.org/FAIRsharing.8y5ayx)  user guide is available here: http://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_229 https://fairsharing.org/FAIRsharing.8y5ayx) /user_guide/
+* CWL (URL_TO_INSERT_RECORD-ABBREV_203 https://fairsharing.org/FAIRsharing.8y5ayx)  user guide is available here: http://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_204 https://fairsharing.org/FAIRsharing.8y5ayx) /user_guide/
 
 ````{dropdown} **See a CWL example**
 :open:
@@ -144,31 +144,31 @@ inputs:
   annotation_file:
     type: File
     label: "Annotation file"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_230 https://fairsharing.org/FAIRsharing.a6r7zs) /format_3475"
+    format: "http://edamontology.org/format_3475"
     doc: "Tab-separated input annotation file"
 
   genome_size:
-    type: string (URL_TO_INSERT_RECORD-NAME_231 https://fairsharing.org/FAIRsharing.9b7wvk) 
+    type: string
     label: "Effective genome size"
     doc: "MACS2 effective genome size: hs, mm, ce, dm or number, for example 2.7e9"
 
   chrom_length:
     type: File
     label: "Chromosome length file"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_232 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2330"
+    format: "http://edamontology.org/format_2330"
     doc: "Chromosome length file"
 
   control_file:
     type: File?
     default: null
-    label: "Control BAM (URL_TO_INSERT_RECORD-ABBREV_233 https://fairsharing.org/FAIRsharing.hza1ec)  file"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_234 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2572"
-    doc: "Control BAM (URL_TO_INSERT_RECORD-ABBREV_235 https://fairsharing.org/FAIRsharing.hza1ec)  file file for MACS2 peak calling"
+    label: "Control BAM file"
+    format: "http://edamontology.org/format_2572"
+    doc: "Control BAM file file for MACS2 peak calling"
 
   fastq_file:
     type: File
     label: "FASTQ input file"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_236 https://fairsharing.org/FAIRsharing.a6r7zs) /format_1930"
+    format: "http://edamontology.org/format_1930"
     doc: "Reads data in a FASTQ format, received after single end sequencing"
 
 ...
@@ -177,7 +177,7 @@ inputs:
     type: boolean?
     default: false
     label: "Remove duplicates"
-    doc: "Calls samtools rmdup to remove duplicates from sortesd BAM (URL_TO_INSERT_RECORD-ABBREV_237 https://fairsharing.org/FAIRsharing.hza1ec)  file"
+    doc: "Calls samtools rmdup to remove duplicates from sortesd BAM file"
 
   threads:
     type: int?
@@ -189,7 +189,7 @@ outputs:
 
   bigwig:
     type: File
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_238 https://fairsharing.org/FAIRsharing.a6r7zs) /format_3006"
+    format: "http://edamontology.org/format_3006"
     label: "BigWig file"
     doc: "Generated BigWig file"
     outputSource: bam_to_bigwig/bigwig_file
@@ -197,14 +197,14 @@ outputs:
   fastx_statistics:
     type: File
     label: "FASTQ statistics"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_239 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2330"
+    format: "http://edamontology.org/format_2330"
     doc: "fastx_quality_stats generated FASTQ file quality statistics file"
     outputSource: fastx_quality_stats/statistics_file
 
   bowtie_log:
     type: File
     label: "BOWTIE alignment log"
-    format: "http://edamontology.org (URL_TO_INSERT_RECORD-HOMEPAGE_240 https://fairsharing.org/FAIRsharing.a6r7zs) /format_2330"
+    format: "http://edamontology.org/format_2330"
     doc: "BOWTIE generated alignment log"
     outputSource: bowtie_aligner/log_file
 
@@ -232,11 +232,11 @@ steps:
 When describing a protocol, it is often desirable to what to do if a specific situation arises. 
 Computational workflows are no different, and it is in fact quite frequent to have the need to define specific sets of
 steps if a threshold or condition is met. 
-Therefore, the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_241 https://fairsharing.org/FAIRsharing.8y5ayx)  contains a dedicated keyword **when** to represent
+Therefore, the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_205 https://fairsharing.org/FAIRsharing.8y5ayx)  contains a dedicated keyword **when** to represent
 such situations.
 The following block shows how it can be used with a example:
 
-http://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_242 https://fairsharing.org/FAIRsharing.8y5ayx) /user_guide/24_conditional-workflow/index.html
+http://www.commonwl.org (URL_TO_INSERT_RECORD-HOMEPAGE_206 https://fairsharing.org/FAIRsharing.8y5ayx) /user_guide/24_conditional-workflow/index.html
 
 ```bash
 class: Workflow
@@ -279,7 +279,7 @@ requirements:
 
 ### 3. Semantic Markup of CWL workflows
 
-CWL (URL_TO_INSERT_RECORD-ABBREV_243 https://fairsharing.org/FAIRsharing.8y5ayx)  documents can be annotated with [Schema.org](https://schema.org/) or [EDAM (URL_TO_INSERT_RECORD-ABBREV_244 https://fairsharing.org/FAIRsharing.a6r7zs)  vocabulary](http://edamontology.org/) elements to support findability.
+CWL (URL_TO_INSERT_RECORD-ABBREV_207 https://fairsharing.org/FAIRsharing.8y5ayx)  documents can be annotated with [Schema.org](https://schema.org/) or [EDAM (URL_TO_INSERT_RECORD-ABBREV_208 https://fairsharing.org/FAIRsharing.a6r7zs)  vocabulary](http://edamontology.org/) elements to support findability.
 
 The blocks of code below shows how this is done with 2 examples.
 
@@ -346,19 +346,19 @@ $schemas:
 ````{dropdown} **View another example
 ```bash
 $namespaces:
-  s: http://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_245 https://fairsharing.org/FAIRsharing.hzdzq8) /
+  s: http://schema.org/
 
 $schemas:
-- http://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_246 https://fairsharing.org/FAIRsharing.hzdzq8) /docs/schema_org_rdfa.html
+- http://schema.org/docs/schema_org_rdfa.html
 
 s:name: "biowardrobe_chipseq_se"
 s:downloadUrl: https://raw.githubusercontent.com/Barski-lab/ga4gh_challenge/master/biowardrobe_chipseq_se.cwl
-s:codeRepository: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_247 https://fairsharing.org/FAIRsharing.c55d5e) /Barski-lab/ga4gh_challenge
+s:codeRepository: https://github.com/Barski-lab/ga4gh_challenge
 s:license: http://www.apache.org/licenses/LICENSE-2.0
 
 s:isPartOf:
   class: s:CreativeWork
-  s:name: Common Workflow Language (URL_TO_INSERT_RECORD-NAME_248 https://fairsharing.org/FAIRsharing.8y5ayx) 
+  s:name: Common Workflow Language
   s:url: http://commonwl.org/
 
 s:creator:
@@ -384,21 +384,21 @@ s:creator:
         s:name: Michael Kotliar
         s:email: mailto:misha.kotliar@gmail.com
         s:sameAs:
-        - id: http://orcid.org (URL_TO_INSERT_RECORD-HOMEPAGE_249 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0002-6486-3898
+        - id: http://orcid.org/0000-0002-6486-3898
 
 doc: |
   The workflow is used to run CHIP-Seq basic analysis with single-end input FASTQ file.
-  In outputs it returns coordinate sorted BAM (URL_TO_INSERT_RECORD-ABBREV_250 https://fairsharing.org/FAIRsharing.hza1ec)  file alongside with index BAI file, quality
+  In outputs it returns coordinate sorted BAM file alongside with index BAI file, quality
   statistics of the input FASTQ file, reads coverage in a form of bigWig file, peaks calling
   data in a form of narrowPeak or broadPeak files.
 
 s:about: |
-  The workflow is a CWL (URL_TO_INSERT_RECORD-ABBREV_251 https://fairsharing.org/FAIRsharing.8y5ayx)  version of a Python pipeline from BioWardrobe (Kartashov and Barski, 2015).
+  The workflow is a CWL version of a Python pipeline from BioWardrobe (Kartashov and Barski, 2015).
   It starts by extracting input FASTQ file (in case it was compressed). Next step runs BowTie
-  (Langmead et al., 2009) to perform alignment to a reference genome, resulting in an unsorted SAM (URL_TO_INSERT_RECORD-ABBREV_252 https://fairsharing.org/FAIRsharing.k97xzh)  file.
-  The SAM (URL_TO_INSERT_RECORD-ABBREV_254 https://fairsharing.org/FAIRsharing.k97xzh)  file is then sorted and indexed with samtools (Li et al., 2009) to obtain a BAM (URL_TO_INSERT_RECORD-ABBREV_253 https://fairsharing.org/FAIRsharing.hza1ec)  file and a BAI index.
+  (Langmead et al., 2009) to perform alignment to a reference genome, resulting in an unsorted SAM file.
+  The SAM file is then sorted and indexed with samtools (Li et al., 2009) to obtain a BAM file and a BAI index.
   Next MACS2 (Zhang et al., 2008) is used to call peaks and to estimate fragment size. In the last few steps,
-  the coverage by estimated fragments is calculated from the BAM (URL_TO_INSERT_RECORD-ABBREV_255 https://fairsharing.org/FAIRsharing.hza1ec)  file and is reported in bigWig format. The pipeline
+  the coverage by estimated fragments is calculated from the BAM file and is reported in bigWig format. The pipeline
   also reports statistics, such as read quality, peak number and base frequency, and other troubleshooting information
   using tools such as fastx-toolkit and bamtools.
 ```
@@ -413,7 +413,7 @@ s:about: |
 
 * A number of repositories exist and may be used to deposit workflows.
 
-* One may use a generic repository such as Zenodo (URL_TO_INSERT_RECORD-NAME_256 https://fairsharing.org/FAIRsharing.wy4egf)  to do so (see recipe {ref}`fcb-find-zenod (URL_TO_INSERT_RECORD-NAME_257 https://fairsharing.org/FAIRsharing.wy4egf) o`).
+* One may use a generic repository such as Zenodo (URL_TO_INSERT_RECORD-NAME_209 https://fairsharing.org/FAIRsharing.wy4egf)  to do so (see recipe {ref}`fcb-find-zenod (URL_TO_INSERT_RECORD-NAME_210 https://fairsharing.org/FAIRsharing.wy4egf) o`).
 
 * Preferably, one should use a **specialized repository** such as [Workflowhub.eu](https://workflowhub.eu/),
 which is presented below.
@@ -423,10 +423,10 @@ which is presented below.
 ```{figure} workflowhub-eu-1.png
 ---
 width: 700px
-name: workflowhub (URL_TO_INSERT_RECORD-NAME_258 https://fairsharing.org/FAIRsharing.07cf72) .eu website 1
-alt: workflowhub (URL_TO_INSERT_RECORD-NAME_259 https://fairsharing.org/FAIRsharing.07cf72) .eu website 1
+name: workflowhub.eu website 1
+alt: workflowhub.eu website 1
 ---
-The european workflowhub (URL_TO_INSERT_RECORD-NAME_260 https://fairsharing.org/FAIRsharing.07cf72)  website 1.
+The european workflowhub website 1.
 ```
 ````
 
@@ -435,10 +435,10 @@ The european workflowhub (URL_TO_INSERT_RECORD-NAME_260 https://fairsharing.org/
 ```{figure} ./workflowhub-eu-2.png
 ---
 width: 700px
-name: workflowhub (URL_TO_INSERT_RECORD-NAME_261 https://fairsharing.org/FAIRsharing.07cf72) .eu website 2
-alt: workflowhub (URL_TO_INSERT_RECORD-NAME_262 https://fairsharing.org/FAIRsharing.07cf72) .eu website 2
+name: workflowhub.eu website 2
+alt: workflowhub.eu website 2
 ---
-The european workflowhub (URL_TO_INSERT_RECORD-NAME_263 https://fairsharing.org/FAIRsharing.07cf72)  website 2.
+The european workflowhub website 2.
 ```
 ````
 
@@ -449,27 +449,27 @@ quote the project's site.
 It has established itself in industry settings and has broad uptake.
 
 Apache Airflow represents workflows as **Directed Acyclic Graph** (or DAGs) and Airflow allows the serialization of these
-as JSON (URL_TO_INSERT_RECORD-ABBREV_264 https://fairsharing.org/FAIRsharing.5bbab9)  documents.
+as JSON (URL_TO_INSERT_RECORD-ABBREV_211 https://fairsharing.org/FAIRsharing.5bbab9)  documents.
 
 The main thing about Apache Airflow is that code is used to generate the workflows. 
 For more information, refer to this tutorial: https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html. 
 
-A tool developed by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL (URL_TO_INSERT_RECORD-ABBREV_265 https://fairsharing.org/FAIRsharing.8y5ayx)  support to the Apache Airflow 
-framework, meaning that CWL (URL_TO_INSERT_RECORD-ABBREV_266 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
+A tool developed by Michael Kotliar, Andrey V Kartashov, Artem Barski brings CWL (URL_TO_INSERT_RECORD-ABBREV_212 https://fairsharing.org/FAIRsharing.8y5ayx)  support to the Apache Airflow 
+framework, meaning that CWL (URL_TO_INSERT_RECORD-ABBREV_213 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow can now be executed on the platform {footcite}`cwl-airflow`.
 
 ````{dropdown}
 :open:
 ```{figure} workflow-cwl-airflow.png
 ---
 width: 700px
-name: CWL (URL_TO_INSERT_RECORD-ABBREV_267 https://fairsharing.org/FAIRsharing.8y5ayx) -Airflow component
-alt: CWL (URL_TO_INSERT_RECORD-ABBREV_268 https://fairsharing.org/FAIRsharing.8y5ayx) -Airflow component
+name: CWL-Airflow component
+alt: CWL-Airflow component
 ---
-the CWL (URL_TO_INSERT_RECORD-ABBREV_269 https://fairsharing.org/FAIRsharing.8y5ayx) -Airflow component.
+the CWL-Airflow component.
 ```
 ````
 
-A key step in this linkage is the conversion of a CWL (URL_TO_INSERT_RECORD-ABBREV_270 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow into an Apache Airflow DAG, which can 
+A key step in this linkage is the conversion of a CWL (URL_TO_INSERT_RECORD-ABBREV_214 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow into an Apache Airflow DAG, which can 
 then be subsequently executed.
 
 With this example, we aim to bring awareness about the value of having platform independent expression of workflows.
@@ -483,7 +483,7 @@ using genotyping information, it is a regulatory requirements of the US FDA to s
 if seeking approval.
 The availability of such information in this context is a prerequisite for FDA auditors to examine the data.
 
-The IEEE 2791-2020 (URL_TO_INSERT_RECORD-NAME_271 https://fairsharing.org/FAIRsharing.bbd7df)  specifications, also known as BCO (URL_TO_INSERT_RECORD-ABBREV_272 https://fairsharing.org/FAIRsharing.8ktkqy)  for BioCompute Object is a specification to do this.
+The IEEE 2791-2020 (URL_TO_INSERT_RECORD-NAME_215 https://fairsharing.org/FAIRsharing.bbd7df)  specifications, also known as BCO (URL_TO_INSERT_RECORD-ABBREV_216 https://fairsharing.org/FAIRsharing.8ktkqy)  for BioCompute Object is a specification to do this.
 
 This has been made possible thanks to the fast-track submission of a new data format specifically tailored to ensure
 reproducibility and unambiguous description of workflow key descriptors.
@@ -494,26 +494,26 @@ reproducibility and unambiguous description of workflow key descriptors.
 ```{figure} ./workflow-bco-cloud-tools.png
 ---
 width: 700px
-name: Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_273 https://fairsharing.org/FAIRsharing.8ktkqy)  specifications
-alt: Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_274 https://fairsharing.org/FAIRsharing.8ktkqy)  specifications
+name: Cloud based tools supported BCO specifications
+alt: Cloud based tools supported BCO specifications
 ---
-Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsharing.org/FAIRsharing.8ktkqy)  specifications
+Cloud based tools supported BCO specifications
 ```
 ````
 
 #### What are the main features of a BioCompute Object?
 
-* a BioCompute Object is serialized as a JSON (URL_TO_INSERT_RECORD-ABBREV_276 https://fairsharing.org/FAIRsharing.5bbab9)  document. A typical BCO (URL_TO_INSERT_RECORD-ABBREV_277 https://fairsharing.org/FAIRsharing.8ktkqy)  looks like this:
+* a BioCompute Object is serialized as a JSON (URL_TO_INSERT_RECORD-ABBREV_217 https://fairsharing.org/FAIRsharing.5bbab9)  document. A typical BCO (URL_TO_INSERT_RECORD-ABBREV_218 https://fairsharing.org/FAIRsharing.8ktkqy)  looks like this:
 
 ````{dropdown}
 :open:
 ```json
 {
     "object_id": "urn:uuid:dc308d7c-7949-446a-9c39-511b8ab40caf",
-    "spec_version": "https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_278 https://fairsharing.org/FAIRsharing.S6BoUk) /ieee/ieee-2791-schema/",
+    "spec_version": "https://w3id.org/ieee/ieee-2791-schema/",
     "etag": "f8b213e62dfc7d05934ffdb7a36e4661f13b9cd04ad2de3ff3da6e933c4aebc8",
     "provenance_domain": {
-        "name": "nf-cor (URL_TO_INSERT_RECORD-NAME_279 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_280 https://fairsharing.org/FAIRsharing.m283c) e/chipseq: ChIP-seq peak-calling, QC and differential analysis pipeline",
+        "name": "nf-core/chipseq: ChIP-seq peak-calling, QC and differential analysis pipeline",
         "version": "1.2.1",
         "created": "2020-07-29T17:33:46+01:00",
         "modified": "2020-09-10T13:11:58+01:00",
@@ -522,7 +522,7 @@ Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsha
             {"contribution": ["authoredBy"], "name": "Chuan Wang" },
             {"contribution": ["authoredBy"], "name": "Phil Ewels" },
             {"contribution": ["authoredBy"], "name": "Alexander Peltzer" },
-            {"contribution": ["authoredBy"], "name": "Tiago Chedraoui Silva (URL_TO_INSERT_RECORD-NAME_281 https://fairsharing.org/FAIRsharing.5vtYGG) " },
+            {"contribution": ["authoredBy"], "name": "Tiago Chedraoui Silva" },
             {"contribution": ["authoredBy"], "name": "Drew Behrens" },
             {"contribution": ["authoredBy"], "name": "Maxime Garcia" },
             {"contribution": ["authoredBy"], "name": "mashehu" },
@@ -531,10 +531,10 @@ Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsha
             {"contribution": ["authoredBy"], "name": "Winni Kretzschmar" },
             {"contribution": ["createdBy"],
               "name": "Stian Soiland-Reyes",
-              "orcid": "https://orcid.org (URL_TO_INSERT_RECORD-HOMEPAGE_282 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0001-9842-9718"
+              "orcid": "https://orcid.org/0000-0001-9842-9718"
             }   
         ],
-        "license": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_283 https://fairsharing.org/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
+        "license": "https://github.com/nf-core/chipseq/blob/1.2.1/LICENSE"
     },
     "usability_domain": [
         "nfcore/chipseq is a bioinformatics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data.",
@@ -563,7 +563,7 @@ Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsha
             {"step_number": 15, "name": "MERGED_BAM_REMOVE_ORPHAN", "description": "", "input_list": [], "output_list": []},
             {"step_number": 16, "name": "PHANTOMPEAKQUALTOOLS", "description": "", "input_list": [], "output_list": []},
             {"step_number": 17, "name": "BIGWIG", "description": "", "input_list": [], "output_list": []},
-            {"step_number": 18, "name": "PICARD_METRIC (URL_TO_INSERT_TERM_284 https://fairsharing.org/search?recordType=metric) S", "description": "", "input_list": [], "output_list": []},
+            {"step_number": 18, "name": "PICARD_METRICS", "description": "", "input_list": [], "output_list": []},
             {"step_number": 19, "name": "PLOTFINGERPRINT", "description": "", "input_list": [], "output_list": []},
             {"step_number": 20, "name": "MACS2", "description": "", "input_list": [], "output_list": []},
             {"step_number": 21, "name": "PLOTPROFILE", "description": "", "input_list": [], "output_list": []},
@@ -631,18 +631,18 @@ Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsha
 {"name": "phantompeakqualtools", "version": "1.2.2", "uri": {"uri": "https://bioconda.github.io/recipes/phantompeakqualtools/README.html"} },
 {"name": "preseq", "version": "2.0.3", "uri": {"uri": "https://bioconda.github.io/recipes/preseq/README.html"} },
 {"name": "multiqc", "version": "1.9", "uri": {"uri": "https://bioconda.github.io/recipes/multiqc/README.html"} },
-{"name": "bioconductor (URL_TO_INSERT_RECORD-NAME_285 https://fairsharing.org/FAIRsharing.81ettx) -biocparallel", "version": "1.20.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-biocparallel/README.html"} },
-{"name": "bioconductor (URL_TO_INSERT_RECORD-NAME_286 https://fairsharing.org/FAIRsharing.81ettx) -deseq2", "version": "1.26.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-deseq2/README.html"} },
-{"name": "bioconductor (URL_TO_INSERT_RECORD-NAME_287 https://fairsharing.org/FAIRsharing.81ettx) -vsn", "version": "3.54.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-vsn/README.html"} }          
+{"name": "bioconductor-biocparallel", "version": "1.20.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-biocparallel/README.html"} },
+{"name": "bioconductor-deseq2", "version": "1.26.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-deseq2/README.html"} },
+{"name": "bioconductor-vsn", "version": "3.54.0", "uri": {"uri": "https://bioconda.github.io/recipes/bioconductor-vsn/README.html"} }          
         ],
         "external_data_endpoints": [
           {"name": "Experiment design file for minimal test dataset",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/chipseq/design.csv"
           },
-          {"name": "iGenomes R64-1-1 Ensembl (URL_TO_INSERT_RECORD-NAME_288 https://fairsharing.org/FAIRsharing.fx0mw7)  (Fasta sequence)",
+          {"name": "iGenomes R64-1-1 Ensembl (Fasta sequence)",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/atacseq/reference/genome.fa"
           },
-          {"name": "iGenomes R64-1-1 Ensembl (URL_TO_INSERT_RECORD-NAME_290 https://fairsharing.org/FAIRsharing.fx0mw7)  (GTF (URL_TO_INSERT_RECORD-ABBREV_289 https://fairsharing.org/FAIRsharing.sggb1n)  Genes)",
+          {"name": "iGenomes R64-1-1 Ensembl (GTF Genes)",
            "url": "https://raw.githubusercontent.com/nf-core/test-datasets/atacseq/reference/genes.gtf"
           }                    
         ],
@@ -655,18 +655,18 @@ Cloud based tools supported BCO (URL_TO_INSERT_RECORD-ABBREV_275 https://fairsha
 }
 ```
 ````
-source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/chipseq_20200910.json
+source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_219 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/chipseq_20200910.json
 
 
-* a BioCompute Object can be packaged as an RO (URL_TO_INSERT_RECORD-ABBREV_293 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD-ABBREV_294 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD-ABBREV_295 https://fairsharing.org/FAIRsharing.cp0ybc) -Crate (URL_TO_INSERT_RECORD-ABBREV_292 https://fairsharing.org/FAIRsharing.wUoZKE) . 
+* a BioCompute Object can be packaged as an RO (URL_TO_INSERT_RECORD-ABBREV_221 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD-ABBREV_222 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD-ABBREV_223 https://fairsharing.org/FAIRsharing.cp0ybc) -Crate (URL_TO_INSERT_RECORD-ABBREV_220 https://fairsharing.org/FAIRsharing.wUoZKE) . 
 
 ````{dropdown} View an RO-Crate json denoting a BCO
 ```json
 {
   "@context": [
-    "https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_297 https://fairsharing.org/FAIRsharing.S6BoUk) /ro (URL_TO_INSERT_RECORD-HOMEPAGE_298 https://fairsharing.org/FAIRsharing.cp0ybc) /crate (URL_TO_INSERT_RECORD-HOMEPAGE_296 https://fairsharing.org/FAIRsharing.wUoZKE) /1.0/context",
+    "https://w3id.org/ro/crate/1.0/context",
     {
-      "@vocab": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_299 https://fairsharing.org/FAIRsharing.hzdzq8) /"
+      "@vocab": "https://schema.org/"
     }
   ],
   "@graph": [
@@ -678,7 +678,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
       },
       "identifier": "ro-crate-metadata.json",
       "conformsTo": {
-        "@id": "https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_301 https://fairsharing.org/FAIRsharing.S6BoUk) /ro (URL_TO_INSERT_RECORD-HOMEPAGE_302 https://fairsharing.org/FAIRsharing.cp0ybc) /crate (URL_TO_INSERT_RECORD-HOMEPAGE_300 https://fairsharing.org/FAIRsharing.wUoZKE) /1.0"
+        "@id": "https://w3id.org/ro/crate/1.0"
       },
       "license": {
         "@id": "https://creativecommons.org/licenses/by-sa/3.0"
@@ -688,18 +688,18 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     {
       "@type": "Dataset",
       "author": {
-        "@id": "https://orcid.org (URL_TO_INSERT_RECORD-HOMEPAGE_303 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0001-9842-9718"
+        "@id": "https://orcid.org/0000-0001-9842-9718"
       },
       "citation": {
         "@id": "https://doi.org/10.5281/zenodo.3966161"
       },
       "contactPoint": {
-        "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_304 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues"
+        "@id": "https://github.com/biocompute-objects/bco-ro-example-chipseq/issues"
       },
       "datePublished": "2020-09-09T23:00:00.000Z",
       "description": "Workflow run of a ChIP-seq peak-calling, QC and differential analysis pipeline",
       "distribution": {
-        "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_305 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+        "@id": "https://github.com/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
       },
       "hasPart": [
         {
@@ -721,7 +721,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
       "license": {
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
-      "name": "Workflow run of nf-cor (URL_TO_INSERT_RECORD-NAME_306 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_307 https://fairsharing.org/FAIRsharing.m283c) e/chipseq",
+      "name": "Workflow run of nf-core/chipseq",
       "publisher": {
         "@id": "https://biocomputeobject.org/"
       },
@@ -743,7 +743,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     {
       "@type": "File",
       "conformsTo": {
-        "@id": "https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_308 https://fairsharing.org/FAIRsharing.S6BoUk) /ieee/ieee-2791-schema/"
+        "@id": "https://w3id.org/ieee/ieee-2791-schema/"
       },
       "dateModified": "2020-09-10T13:50:02.378Z",
       "identifier": {
@@ -765,7 +765,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     },
     {
       "@type": "Organization",
-      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEEE 2791-2020 (URL_TO_INSERT_RECORD-NAME_309 https://fairsharing.org/FAIRsharing.bbd7df)  Standard, and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEEE standard is maintained by an IEEE GitLab (URL_TO_INSERT_RECORD-NAME_310 https://fairsharing.org/FAIRsharing.530e61)  repository. ",
+      "description": " Two non-overlapping entities work in parallel to help drive BioCompute, the IEEE 2791-2020 Standard, and a Public Private Partnership. Leadership for the Public Private Partnership consists of an Executive Steering Committee and a Technical Steering Committee. The schema that is referenced by the current draft of the IEEE standard is maintained by an IEEE GitLab repository. ",
       "name": "BioCompute Objects",
       "@reverse": {
         "publisher": [
@@ -778,7 +778,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     },
     {
       "@type": "ScholarlyArticle",
-      "name": "nf-cor (URL_TO_INSERT_RECORD-NAME_311 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_313 https://fairsharing.org/FAIRsharing.m283c) e/chipseq: nf-cor (URL_TO_INSERT_RECORD-NAME_312 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_314 https://fairsharing.org/FAIRsharing.m283c) e/chipseq v1.2.1 - Platinum Mole",
+      "name": "nf-core/chipseq: nf-core/chipseq v1.2.1 - Platinum Mole",
       "@reverse": {
         "citation": [
           {
@@ -802,11 +802,11 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_315 https://fairsharing.org/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
+      "@id": "https://github.com/nf-core/chipseq/blob/1.2.1/LICENSE"
     },
     {
       "@type": "CreativeWork",
-      "description": "\nMIT License\n\nCopyright (c) 2018 nf-cor (URL_TO_INSERT_RECORD-NAME_316 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_317 https://fairsharing.org/FAIRsharing.m283c) e\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF (URL_TO_INSERT_RECORD-ABBREV_319 https://fairsharing.org/FAIRsharing.t6y94s)  ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO (URL_TO_INSERT_RECORD-ABBREV_318 https://fairsharing.org/FAIRsharing.w69t6r)  THE WARRANTIES OF (URL_TO_INSERT_RECORD-ABBREV_320 https://fairsharing.org/FAIRsharing.t6y94s)  MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF (URL_TO_INSERT_RECORD-ABBREV_321 https://fairsharing.org/FAIRsharing.t6y94s)  CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF (URL_TO_INSERT_RECORD-ABBREV_322 https://fairsharing.org/FAIRsharing.t6y94s)  OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "description": "\nMIT License\n\nCopyright (c) 2018 nf-core\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
       "name": "MIT License",
       "@reverse": {
         "license": [
@@ -815,15 +815,15 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_323 https://fairsharing.org/FAIRsharing.c55d5e) /nf-core/test-datasets/blob/atacseq/LICENSE"
+      "@id": "https://github.com/nf-core/test-datasets/blob/atacseq/LICENSE"
     },
     {
       "@type": "DataDownload",
-      "path": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_324 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip",
+      "path": "https://github.com/biocompute-objects/bco-ro-example-chipseq/archive/main.zip",
       "license": {
         "@id": "https://spdx.org/licenses/CC0-1.0"
       },
-      "name": "GitHub (URL_TO_INSERT_RECORD-NAME_325 https://fairsharing.org/FAIRsharing.c55d5e)  download of biocompute-objects/bco-ro-example-chipseq",
+      "name": "GitHub download of biocompute-objects/bco-ro-example-chipseq",
       "@reverse": {
         "distribution": [
           {
@@ -831,12 +831,12 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_326 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+      "@id": "https://github.com/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
     },
     {
       "@type": "ContactPoint",
-      "name": " bco-ro-example-chipseq GitHub (URL_TO_INSERT_RECORD-NAME_327 https://fairsharing.org/FAIRsharing.c55d5e)  issue tracker",
-      "url": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_328 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues",
+      "name": " bco-ro-example-chipseq GitHub issue tracker",
+      "url": "https://github.com/biocompute-objects/bco-ro-example-chipseq/issues",
       "@reverse": {
         "contactPoint": [
           {
@@ -844,7 +844,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_329 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/issues"
+      "@id": "https://github.com/biocompute-objects/bco-ro-example-chipseq/issues"
     },
     {
       "@type": "Person",
@@ -859,7 +859,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "https://orcid.org (URL_TO_INSERT_RECORD-HOMEPAGE_330 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0001-9842-9718"
+      "@id": "https://orcid.org/0000-0001-9842-9718"
     },
     {
       "@type": [
@@ -906,9 +906,9 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
       },
       "description": "nfcore/chipseq is a bioinformatics analysis pipeline used for Chromatin ImmunopreciPitation sequencing (ChIP-seq) data",
       "license": {
-        "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_331 https://fairsharing.org/FAIRsharing.c55d5e) /nf-core/chipseq/blob/1.2.1/LICENSE"
+        "@id": "https://github.com/nf-core/chipseq/blob/1.2.1/LICENSE"
       },
-      "name": "nf-cor (URL_TO_INSERT_RECORD-NAME_332 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_333 https://fairsharing.org/FAIRsharing.m283c) e/chipseq",
+      "name": "nf-core/chipseq",
       "@reverse": {
         "hasPart": [
           {
@@ -945,13 +945,13 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     {
       "@type": "Dataset",
       "author": {
-        "@id": "https://orcid.org (URL_TO_INSERT_RECORD-HOMEPAGE_334 https://fairsharing.org/FAIRsharing.nx58jg) /0000-0001-9842-9718"
+        "@id": "https://orcid.org/0000-0001-9842-9718"
       },
       "creator": {
         "@id": "#db65dfb7-4867-400e-a12f-a1652d46a333"
       },
       "dateModified": "2020-09-10T13:20:49.143Z",
-      "description": "Nextflow outputs from examplar run of nf-cor (URL_TO_INSERT_RECORD-NAME_335 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_336 https://fairsharing.org/FAIRsharing.m283c) e/ pipeline workflow.",
+      "description": "Nextflow outputs from examplar run of nf-core/ pipeline workflow.",
       "hasPart": [
         {
           "@id": "results/bwa/"
@@ -976,7 +976,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
         }
       ],
       "license": {
-        "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_337 https://fairsharing.org/FAIRsharing.c55d5e) /nf-core/test-datasets/blob/atacseq/LICENSE"
+        "@id": "https://github.com/nf-core/test-datasets/blob/atacseq/LICENSE"
       },
       "name": "results",
       "@reverse": {
@@ -1021,7 +1021,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           "@id": "results/bwa/mergedLibrary/phantompeakqualtools/"
         },
         {
-          "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM_338 https://fairsharing.org/search?recordType=metric) s/"
+          "@id": "results/bwa/mergedLibrary/picard_metrics/"
         }
       ],
       "name": "mergedLibrary",
@@ -1139,7 +1139,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     {
       "@type": "Dataset",
       "dateModified": "2020-09-10T12:04:45.952Z",
-      "name": "picard_metric (URL_TO_INSERT_TERM_339 https://fairsharing.org/search?recordType=metric) s",
+      "name": "picard_metrics",
       "@reverse": {
         "hasPart": [
           {
@@ -1147,7 +1147,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
           }
         ]
       },
-      "@id": "results/bwa/mergedLibrary/picard_metric (URL_TO_INSERT_TERM_340 https://fairsharing.org/search?recordType=metric) s/"
+      "@id": "results/bwa/mergedLibrary/picard_metrics/"
     },
     {
       "@type": "Dataset",
@@ -1442,7 +1442,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
             "@id": "chipseq_20200910.json"
           },
           {
-            "@id": "https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_341 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
+            "@id": "https://github.com/biocompute-objects/bco-ro-example-chipseq/archive/main.zip"
           }
         ]
       },
@@ -1498,7 +1498,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
     },
     {
       "@type": "Person",
-      "name": "Tiago Chedraoui Silva (URL_TO_INSERT_RECORD-NAME_342 https://fairsharing.org/FAIRsharing.5vtYGG) ",
+      "name": "Tiago Chedraoui Silva",
       "@reverse": {
         "author": [
           {
@@ -1603,9 +1603,9 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_291 https://fairsharin
 }
 ```
 ````
-source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_343 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/ro-crate-metadata.json
+source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_224 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/ro-crate-metadata.json
 
-* a BioCompute Object can be integrated with HL7 (URL_TO_INSERT_RECORD-ABBREV_345 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_344 https://fairsharing.org/FAIRsharing.25k4yp)  as a Provenance Resource.
+* a BioCompute Object can be integrated with HL7 (URL_TO_INSERT_RECORD-ABBREV_226 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_225 https://fairsharing.org/FAIRsharing.25k4yp)  as a Provenance Resource.
 
 ```json
 {
@@ -1664,7 +1664,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_343 https://fairsharin
 }
 ```
 
-* a BioCompute Object may allow referencing a CWL (URL_TO_INSERT_RECORD-ABBREV_346 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow thus increasing interoperability.
+* a BioCompute Object may allow referencing a CWL (URL_TO_INSERT_RECORD-ABBREV_227 https://fairsharing.org/FAIRsharing.8y5ayx)  expressed workflow thus increasing interoperability.
 
 
 #### Several tools currently support the BCO format:
@@ -1683,10 +1683,10 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_343 https://fairsharin
 ```{figure} ./workflow-sb-biocompute-app.png
 ---
 width: 700px
-name: Seven Bridges (URL_TO_INSERT_RECORD-NAME_347 https://fairsharing.org/FAIRsharing.ac95d5)  Biocompute app
-alt: Seven Bridges (URL_TO_INSERT_RECORD-NAME_348 https://fairsharing.org/FAIRsharing.ac95d5)  Biocompute app
+name: Seven Bridges Biocompute app
+alt: Seven Bridges Biocompute app
 ---
-Seven Bridges (URL_TO_INSERT_RECORD-NAME_349 https://fairsharing.org/FAIRsharing.ac95d5)  Biocompute app.
+Seven Bridges Biocompute app.
 ```
 ````
 

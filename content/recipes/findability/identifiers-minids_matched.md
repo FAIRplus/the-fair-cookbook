@@ -261,9 +261,9 @@ Landing pages are accessible via the minid website: [http://minid.bd2k.org/minid
 ### file manifest format
 
 
-Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_596 https://fairsharing.org/FAIRsharing.c55d5e) /ini-bdds/bdbag>`_ or the minid file manifest format.
+Minids can only be assigned to a single file. In order to assign a minid to a collection of files, we recommend using a `BDBag <https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_448 https://fairsharing.org/FAIRsharing.c55d5e) /ini-bdds/bdbag>`_ or the minid file manifest format.
 
-The minid file manifest format is a JSON (URL_TO_INSERT_RECORD-ABBREV_597 https://fairsharing.org/FAIRsharing.5bbab9) -based format that enumerates a list of files as JSON (URL_TO_INSERT_RECORD-ABBREV_598 https://fairsharing.org/FAIRsharing.5bbab9)  objects that have the following attributes:
+The minid file manifest format is a JSON (URL_TO_INSERT_RECORD-ABBREV_449 https://fairsharing.org/FAIRsharing.5bbab9) -based format that enumerates a list of files as JSON (URL_TO_INSERT_RECORD-ABBREV_450 https://fairsharing.org/FAIRsharing.5bbab9)  objects that have the following attributes:
 
 
 * length: The length of the file in bytes.
@@ -278,7 +278,7 @@ The minid file manifest format is a JSON (URL_TO_INSERT_RECORD-ABBREV_597 https:
 
   * sha512:\<sha512 hex value\>
 
-* url: the URL (URL_TO_INSERT_RECORD-ABBREV_599 https://fairsharing.org/FAIRsharing.9d38e2)  to the file.
+* url: the URL (URL_TO_INSERT_RECORD-ABBREV_451 https://fairsharing.org/FAIRsharing.9d38e2)  to the file.
 
 The manifest may be used to create a minid for a collection of files or alternatively as input to the minid batch-register command.
 

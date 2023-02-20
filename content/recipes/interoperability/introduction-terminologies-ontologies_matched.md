@@ -41,7 +41,7 @@ This is the main drawback and limitation of `controlled terminologies`, which ar
 An `ontology` on the other hand, is a `formal representation of a domain knowledge where concepts are organized hierarchically`.
 The qualifier `formal` refers to a set of axioms and rules based on logic (e.g. `first order logic`) to structure,
 organize and check the consistency of the term hierarchy. 
-As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry (URL_TO_INSERT_RECORD-NAME_1875 https://fairsharing.org/FAIRsharing.847069)  INCAtools or Robot tool).
+As one can sense right away, ontologies are often a more sophisticated artefact, supported by more advanced theoretical frameworks and dedicated tools to develop them (e.g. Protégé, TopBraid Composer, OBO foundry (URL_TO_INSERT_RECORD-NAME_1669 https://fairsharing.org/FAIRsharing.847069)  INCAtools or Robot tool).
 
 
     
@@ -63,7 +63,7 @@ In turn, building on these formal rules, automatic classifiers, known as a `reas
 This is a step known as `inference`, where new knowledge is produced by the software agent rather than direct assertion by humans.
 This provides a significant support, even if far from supporting all the subtleties of actual knowledge.
 
-There are `six important features` to consider when selecting a semantic artefact for making FAIR (URL_TO_INSERT_RECORD-ABBREV_1876 https://fairsharing.org/FAIRsharing.WWI10U)  datasets:
+There are `six important features` to consider when selecting a semantic artefact for making FAIR (URL_TO_INSERT_RECORD-ABBREV_1670 https://fairsharing.org/FAIRsharing.WWI10U)  datasets:
 
 1. **What license and terms of use does it mandate?**
 
@@ -88,16 +88,16 @@ As more experiments are performed, new discoveries are made.
 This new knowledge needs to be represented in the domain ontology so the new notions can be used to annotate the results of earlier experiments in the context of retrospective analysis.
 
 For example, he [Gene Ontology (GO)](http://www.obofoundry.org/ontology/go.html) is a widely used resource to describe `Molecular Processes`, `Biological Functions` and `Molecular Components`. 
-The [Gene Ontology Consortium](http://geneontology.org/docs/go-consortium/) maintains the controlled vocabulary and also releases of Genome Wide [Gene Ontology (URL_TO_INSERT_RECORD-NAME_1877 https://fairsharing.org/FAIRsharing.6xq0ee)  Annotations](http://geneontology.org/docs/go-annotations/).
-These are resources which associate genes and genomic features found in those genomes with GO (URL_TO_INSERT_RECORD-ABBREV_1878 https://fairsharing.org/FAIRsharing.6xq0ee)  terms. These are very important resources especially in the context of genome wide analysis such as transcriptomics profiling analysis.
+The [Gene Ontology Consortium](http://geneontology.org/docs/go-consortium/) maintains the controlled vocabulary and also releases of Genome Wide [Gene Ontology (URL_TO_INSERT_RECORD-NAME_1671 https://fairsharing.org/FAIRsharing.6xq0ee)  Annotations](http://geneontology.org/docs/go-annotations/).
+These are resources which associate genes and genomic features found in those genomes with GO (URL_TO_INSERT_RECORD-ABBREV_1672 https://fairsharing.org/FAIRsharing.6xq0ee)  terms. These are very important resources especially in the context of genome wide analysis such as transcriptomics profiling analysis.
 
 A particular type of analysis, [`enrichment analysis`](http://geneontology.org/docs/go-enrichment-analysis/), relies on the availability of such annotations to detect departures from the expected probability distribution in an expression profile and which biological processes are most affected in specific conditions.
 
-The applications are plentiful. The importance of ontologies for structuring information will only grow with the need to obtain Machine Learning ready datasets and speed up the readiness of datasets. This is what FAIR (URL_TO_INSERT_RECORD-ABBREV_1879 https://fairsharing.org/FAIRsharing.WWI10U)  is all about.
+The applications are plentiful. The importance of ontologies for structuring information will only grow with the need to obtain Machine Learning ready datasets and speed up the readiness of datasets. This is what FAIR (URL_TO_INSERT_RECORD-ABBREV_1673 https://fairsharing.org/FAIRsharing.WWI10U)  is all about.
 
 So ontologies are of particularly help for the following tasks:
-- **Improve query recall:** Given a 'search string (URL_TO_INSERT_RECORD-NAME_1880 https://fairsharing.org/FAIRsharing.9b7wvk) ', having a resource which holds synonyms can be used by a search index to retrieve data annotated with a synonym.
-- **Enable query expansion:** Owing to the hierarchical (parent/child) structure of ontologies, a search index exploiting this information can retrieve all datasets annotated with a child term of items matching the input search string (URL_TO_INSERT_RECORD-NAME_1881 https://fairsharing.org/FAIRsharing.9b7wvk) . For example, searching with the string (URL_TO_INSERT_RECORD-NAME_1882 https://fairsharing.org/FAIRsharing.9b7wvk)  "breast cancer" againts an ontology aware search index could return records annotated with `Paget's Disease` or `ductal carcinoma in-situ (DCIS)`, both of which are types of mammary gland malignancies.
+- **Improve query recall:** Given a 'search string (URL_TO_INSERT_RECORD-NAME_1674 https://fairsharing.org/FAIRsharing.9b7wvk) ', having a resource which holds synonyms can be used by a search index to retrieve data annotated with a synonym.
+- **Enable query expansion:** Owing to the hierarchical (parent/child) structure of ontologies, a search index exploiting this information can retrieve all datasets annotated with a child term of items matching the input search string (URL_TO_INSERT_RECORD-NAME_1675 https://fairsharing.org/FAIRsharing.9b7wvk) . For example, searching with the string (URL_TO_INSERT_RECORD-NAME_1676 https://fairsharing.org/FAIRsharing.9b7wvk)  "breast cancer" againts an ontology aware search index could return records annotated with `Paget's Disease` or `ductal carcinoma in-situ (DCIS)`, both of which are types of mammary gland malignancies.
 - **Build knowledge graphs:** Ontology languages can be used to represent domain knowledge and build reference terminologies but the same technologies constitute powerful tools for modelling instance datasets as nodes in a graph and linking resources together.
 
 
@@ -110,12 +110,12 @@ If the purpose is simply to improve query recall on a limited set of fields, a c
 However, in a more integrated framework, it is important to be aware of some of the development choices made by the maintainers of the semantic artefacts.
 
 
-* **In the context of basic research and model organism based research**, the **`OBO foundry (URL_TO_INSERT_RECORD-NAME_1884 https://fairsharing.org/FAIRsharing.847069) `** is an organization which coordinates the development of interoperable resources. GO (URL_TO_INSERT_RECORD-ABBREV_1883 https://fairsharing.org/FAIRsharing.6xq0ee) , mentioned earlier is one of them. The establishment of domain specific reference ontologies sharing the same underlying rules means that some level of compositional development can be done. This means that axioms can be built connecting classes from compatible resources.
+* **In the context of basic research and model organism based research**, the **`OBO foundry (URL_TO_INSERT_RECORD-NAME_1678 https://fairsharing.org/FAIRsharing.847069) `** is an organization which coordinates the development of interoperable resources. GO (URL_TO_INSERT_RECORD-ABBREV_1677 https://fairsharing.org/FAIRsharing.6xq0ee) , mentioned earlier is one of them. The establishment of domain specific reference ontologies sharing the same underlying rules means that some level of compositional development can be done. This means that axioms can be built connecting classes from compatible resources.
 This point becomes particularly important when considering the role of the `reasoner` when assessing and checking the consistency of artefacts themselves but also when analysing instance datasets themselves.
 
 * **In the context of observation studies**, the Observational Medical Outcomes Partnership ([OMOP](https://ohdsi.org/omop/)) model also relies on controled terminologies such as [SNOMED-CT](https://www.snomed.org/snomed-ct/), [RxNORM](https://www.nlm.nih.gov/research/umls/rxnorm/index.html) for drugs and [LOINC](https://loinc.org/) for clinical and laboratory test descriptions.
 
-* **In the context of Clinical Data collections**, the Clinical Data Interchange Standards Consortium ([CDISC](https://www.cdisc.org/)) models work tightly with [CDISC (URL_TO_INSERT_RECORD-NAME_1885 https://fairsharing.org/3525)  Terminology](https://www.cdisc.org/standards/terminology/controlled-terminology), National Cancer Institute's Enterprise Vocabulary Services ([EVS](https://evs.nci.nih.gov/)) and also recommend use of [SNOMED-CT](https://www.snomed.org/snomed-ct/) and terminologies such as [LOINC](https://loinc.org/), both of which come with specific licensing terms users need to be familiar with.
+* **In the context of Clinical Data collections**, the Clinical Data Interchange Standards Consortium ([CDISC](https://www.cdisc.org/)) models work tightly with [CDISC (URL_TO_INSERT_RECORD-NAME_1679 https://fairsharing.org/3525)  Terminology](https://www.cdisc.org/standards/terminology/controlled-terminology), National Cancer Institute's Enterprise Vocabulary Services ([EVS](https://evs.nci.nih.gov/)) and also recommend use of [SNOMED-CT](https://www.snomed.org/snomed-ct/) and terminologies such as [LOINC](https://loinc.org/), both of which come with specific licensing terms users need to be familiar with.
 
 
 ### Use cases and iterative approach  
@@ -127,7 +127,7 @@ The use and implementation of common terminologies will enable a normalization/h
 
 ### Selection criteria
 
-A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and FAIRSharing (URL_TO_INSERT_RECORD-NAME_1886 https://fairsharing.org/FAIRsharing.2abjs5)  ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point to define possible criteria for excluding and/or including a terminology resource.
+A set of widely accepted criteria for selecting terminologies (or other reporting standards) does not exists. However, the initial work by the Clinical and Translational Science Awards’ (CTSA) Omics Data Standards Working Group and FAIRSharing (URL_TO_INSERT_RECORD-NAME_1680 https://fairsharing.org/FAIRsharing.2abjs5)  ([http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long](http://jamia.bmj.com/content/early/2013/10/03/amiajnl-2013-002066.long)) has been used as starting point to define possible criteria for excluding and/or including a terminology resource.
 
 
 *   **Exclusion criteria**:
@@ -139,7 +139,7 @@ A set of widely accepted criteria for selecting terminologies (or other reportin
  
 *   **Inclusion criteria**:
     * 🔰  Scope and coverage meets the requirements of the concept identified
-    * 🔰  Unique URI (URL_TO_INSERT_RECORD-ABBREV_1887 https://fairsharing.org/FAIRsharing.d261e1) , textual definition and IDs for each term
+    * 🔰  Unique URI (URL_TO_INSERT_RECORD-ABBREV_1681 https://fairsharing.org/FAIRsharing.d261e1) , textual definition and IDs for each term
     * 🔰  Resource releases are versioned
     * 🔰  Size of resource (_indicator of coverage_)
     * 🔰  Number of classes and subclasses (_indicator of depth_)

@@ -20,8 +20,8 @@
 
 The main purpose of this recipe is:
 
-> To take an SDF (URL_TO_INSERT_RECORD-ABBREV_945 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
-> InChIs, InChIKeys, and SMILES (URL_TO_INSERT_RECORD-ABBREV_946 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_947 https://fairsharing.org/FAIRsharing.ew26v7)  file.
+> To take an SDF (URL_TO_INSERT_RECORD-ABBREV_775 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
+> InChIs, InChIKeys, and SMILES (URL_TO_INSERT_RECORD-ABBREV_776 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_777 https://fairsharing.org/FAIRsharing.ew26v7)  file.
 
 ---
 
@@ -50,8 +50,8 @@ Check this git repository for more detailed use instructions and where to find t
 
 ### Record validation
 
-When generating InChIs, the InChI (URL_TO_INSERT_RECORD-ABBREV_948 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI`) may return several success states reflecting issues with
-the compound record in the SDF (URL_TO_INSERT_RECORD-ABBREV_949 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERROR. This first script reports such issues:
+When generating InChIs, the InChI (URL_TO_INSERT_RECORD-ABBREV_778 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI`) may return several success states reflecting issues with
+the compound record in the SDF (URL_TO_INSERT_RECORD-ABBREV_779 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERROR. This first script reports such issues:
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
@@ -77,7 +77,7 @@ When the success state is ERROR, nothing is outputted.
 
 ### Calculate SMILES strings
 
-The last script calculates a SMILES (URL_TO_INSERT_RECORD-ABBREV_950 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_951 https://fairsharing.org/FAIRsharing.ew26v7)  file:
+The last script calculates a SMILES (URL_TO_INSERT_RECORD-ABBREV_780 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_781 https://fairsharing.org/FAIRsharing.ew26v7)  file:
 
 ```bash
 groovy smiles.groovy -f foo.sdf
@@ -85,9 +85,9 @@ groovy smiles.groovy -f foo.sdf
 
 ## Conclusion
 
-This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD-ABBREV_952 https://fairsharing.org/FAIRsharing.ew26v7)  file,
-and convert them to SMILES (URL_TO_INSERT_RECORD-ABBREV_953 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD-ABBREV_954 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChIKey. The latter can then be used
-with BridgeDb (URL_TO_INSERT_RECORD-NAME_955 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID mapping databases to get additional identifiers.
+This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD-ABBREV_782 https://fairsharing.org/FAIRsharing.ew26v7)  file,
+and convert them to SMILES (URL_TO_INSERT_RECORD-ABBREV_783 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD-ABBREV_784 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChIKey. The latter can then be used
+with BridgeDb (URL_TO_INSERT_RECORD-NAME_785 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID mapping databases to get additional identifiers.
 
 ### What to read next?
 

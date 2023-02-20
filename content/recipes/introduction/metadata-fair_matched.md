@@ -23,13 +23,13 @@
 
 The main purpose of this recipe is:
 
-> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_2554 https://fairsharing.org/FAIRsharing.WWI10U) . 
+> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_2288 https://fairsharing.org/FAIRsharing.WWI10U) . 
 > This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. We also introduce semantics elements, such as controlled vocabularies, to make metadata machine actionable.
 
 ---
 ## Introduction
 
-Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD-ABBREV_2555 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata'.
+Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD-ABBREV_2289 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata'.
 Below are a number of commonly found definitions of metadata:
 
 * The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidataMetadata`.
