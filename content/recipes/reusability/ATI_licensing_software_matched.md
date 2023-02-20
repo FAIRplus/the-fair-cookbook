@@ -32,7 +32,7 @@ A software license governs the extent of use or redistribution of software, with
 There are many software licenses in existence.
 Many of those allow the licensee to do very little, but some give you more freedom to use and re-use the licensed software.
 
-The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project (URL_TO_INSERT_TERM_5628 https://fairsharing.org/search?recordType=project) .
+The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project.
 
 To make some sense of this variety, we can categorize them as follows.
 

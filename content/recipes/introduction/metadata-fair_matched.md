@@ -23,13 +23,13 @@
 
 The main purpose of this recipe is:
 
-> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_5294 https://fairsharing.org/FAIRsharing.WWI10U) . 
+> To introduce the notion of metadata and detail why it matters in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_2554 https://fairsharing.org/FAIRsharing.WWI10U) . 
 > This recipe aims to provide insights into the different types of metadata, why they differ, and how they relate to each other. We also introduce semantics elements, such as controlled vocabularies, to make metadata machine actionable.
 
 ---
 ## Introduction
 
-Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD-ABBREV_5295 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata'.
+Upon reading the [FAIR principles](fcb-fair-principles), one can't help but notice that everything rests on the availability of **machine readable metadata**. For a number of newcomers to FAIR (URL_TO_INSERT_RECORD-ABBREV_2555 https://fairsharing.org/FAIRsharing.WWI10U)  or Data Management for that matter, the first hurdle is to grasp the notion of 'metadata'.
 Below are a number of commonly found definitions of metadata:
 
 * The recursive definition **"data about the data"**, which provides the idea that to understand data, you need extra data describing it {footcite}`wikidataMetadata`.
@@ -40,7 +40,7 @@ Below are a number of commonly found definitions of metadata:
 
 * The fractal definition  **"your metadata is my data"**, which conveys the notion that `quantity has a quality all of its own` when it comes to metadata, and by accumulating enough metadata, however small, statistical handling may reveal patterns and provide insights. This in fact can have unforeseen and possibly untoward consequences, such as loss of privacy and risks of reidentification of supposedly anonymized data.
 
-The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society (URL_TO_INSERT_TERM_5296 https://fairsharing.org/search?recordType=society)  which relies on informat (URL_TO_INSERT_TERM_5297 https://fairsharing.org/search?recordType=model_and_format) ion technology.
+The definitions above hints that *metadata* is indeed important and above all pervasive in any modern society which relies on information technology.
 
 In the following sections, we will delve further into the possibly controversial typology of metadata {footcite}`NISOMetadata`.
 
@@ -82,8 +82,8 @@ Taking an example, let's consider the domain of a bibliographic record and look 
 ```bash
 @Article{Alter2020DATS,
    Author="Alter, G.  and Gonzalez-Beltran, A.  and Ohno-Machado, L.  and Rocca-Serra, P. ",
-   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model (URL_TO_INSERT_TERM_5298 https://fairsharing.org/search?recordType=model_and_format)  for discovering data access and use requirements}",
-   Journal (URL_TO_INSERT_TERM_5299 https://fairsharing.org/search?recordType=journal) ="Gigascience",
+   Title="{{T}he {D}ata {T}ags {S}uite ({D}{A}{T}{S}) model for discovering data access and use requirements}",
+   Journal="Gigascience",
    Year="2020",
    Volume="9",
    Number="2",
@@ -131,7 +131,7 @@ It can range from quantitative metrics such as the variance or standard error of
 
 
 ````{note}
-This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic model (URL_TO_INSERT_TERM_5300 https://fairsharing.org/search?recordType=model_and_format) s and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
+This typology can easily be criticised as the boundaries between different domains can be something blurred by underlying semantic models and granularity levels, so we advise the reader to be mindful of this. Volumes have been written on the topics and this is an area in constant evolution and where shape shifting happens.
 ````
 
 

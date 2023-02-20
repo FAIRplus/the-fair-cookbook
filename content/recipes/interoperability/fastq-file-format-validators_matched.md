@@ -30,10 +30,10 @@ The main purpose of this recipe is to:
 ```{figure} fastq-validation.png
 ---
 width: 350px
-name: Validating FASTQ open standard (URL_TO_INSERT_TERM_3444 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3445 https://fairsharing.org/search?recordType=model_and_format) 
-alt: Validating FASTQ open standard (URL_TO_INSERT_TERM_3446 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3447 https://fairsharing.org/search?recordType=model_and_format) 
+name: Validating FASTQ open standard file format
+alt: Validating FASTQ open standard file format
 ---
-Validating FASTQ open standard (URL_TO_INSERT_TERM_3448 https://fairsharing.org/search?fairsharingRegistry=Standard)  file format (URL_TO_INSERT_TERM_3449 https://fairsharing.org/search?recordType=model_and_format) .
+Validating FASTQ open standard file format.
 ```
 ````
 
@@ -47,7 +47,7 @@ The table below lists common file validation use cases. This recipe provides sol
 |---|--|--|
 |Data owner| Validate my sequencing files before depositing to public archives| Reduce the risk of submitting invalid files or submission rejection|
 |Data consumer| Validate files before running analysis|Avoid wasting time and resource processing corrupted files|
-|Data consumer| Integrate file format (URL_TO_INSERT_TERM_3450 https://fairsharing.org/search?recordType=model_and_format)  validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
+|Data consumer| Integrate file format validation into my data process pipeline| Build a more reproducible and error-proof pipeline| 
 |Data librarian| Check files downloaded from unknown sources before deposition| Ensure the file is usable in the future.|
 
 
@@ -62,17 +62,17 @@ The table below lists common file validation use cases. This recipe provides sol
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_3452 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_3453 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_3451 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [FASTQ](http://edamontology.org/format_2182)  | |
 | [Compressed Format](https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_4006)| |
 ---
 
-[FASTQ](http://edamontology.org/format_2182) is the _de facto_ sequencing file format (URL_TO_INSERT_TERM_3454 https://fairsharing.org/search?recordType=model_and_format)  and one of the most common file format (URL_TO_INSERT_TERM_3455 https://fairsharing.org/search?recordType=model_and_format) s in bioinformat (URL_TO_INSERT_TERM_3456 https://fairsharing.org/search?recordType=model_and_format) ics analysis {footcite}`ENAfastq`, {footcite}`NCBIformat (URL_TO_INSERT_TERM_3457 https://fairsharing.org/search?recordType=model_and_format) s`. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformat (URL_TO_INSERT_TERM_3458 https://fairsharing.org/search?recordType=model_and_format) ics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis processes.
+[FASTQ](http://edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis {footcite}`ENAfastq`, {footcite}`NCBIformats`. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis processes.
 
-FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle (URL_TO_INSERT_RECORD-NAME_3459 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FASTQ files. 
+FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle (URL_TO_INSERT_RECORD-NAME_1799 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FASTQ files. 
 
-[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive (URL_TO_INSERT_RECORD-NAME_3460 https://fairsharing.org/FAIRsharing.dj8nt8) (EN (URL_TO_INSERT_RECORD-ABBREV_3461 https://fairsharing.org/FAIRsharing.dj8nt8) A)](https://www.ebi.ac.uk/ena), and several research initiatives. 
+[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive (URL_TO_INSERT_RECORD-NAME_1800 https://fairsharing.org/FAIRsharing.dj8nt8) (EN (URL_TO_INSERT_RECORD-ABBREV_1801 https://fairsharing.org/FAIRsharing.dj8nt8) A)](https://www.ebi.ac.uk/ena), and several research initiatives. 
 
 This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on MacOS and Linux machines.
 
@@ -123,11 +123,11 @@ conda install -c bioconda fastq_utils
 ```
 
 
-In this step, we download example FASTQ files from ENA (URL_TO_INSERT_RECORD-ABBREV_3462 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
+In this step, we download example FASTQ files from ENA (URL_TO_INSERT_RECORD-ABBREV_1802 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
 
 __Example 1: Get single read FASTQ file__
 
-The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD-ABBREV_3463 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
+The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD-ABBREV_1803 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 
 ```shell
 wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
@@ -145,7 +145,7 @@ A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB
 ```
 __Example 2: Get paired-read FASTQ files__
 
-The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD-ABBREV_3464 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
+The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD-ABBREV_1804 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
 
 ```shell
 wget -c \
@@ -247,21 +247,21 @@ The table lists technical considerations when selecting the validator, including
 
 |Aspects|Validation content |Description|FASTQ-utils|
 |--|--|--|--|
-|Basic validation|4-line format (URL_TO_INSERT_TERM_3465 https://fairsharing.org/search?recordType=model_and_format) |Check if the FASTQ file is a 4-line file|☑️|
+|Basic validation|4-line format|Check if the FASTQ file is a 4-line file|☑️|
 | |Character encoding| Check if the base calls and quality score encoding are correct.  |☑️| 
 ||Read length| Check if the length of the base calls are the same as that of the quality scores|☑️|
 ||File truncation|Check if the file is truncated or not|☑️|
 |Paired-end reads validation| Deinterleaved paired reads| Validate when the forward and reverse reads are in two files.|☑️|
 | |Interleaved _"8-line"_ files|Validate when the forward and reverse reads are listed together as an 8-line file|☑️|
 |Compressed file validation| gzip| Validate compressed fastq files, with extension `fastq.gz`|☑️|
-|FASTQ variants* validation| fastq-illumina|Validate the _fastq-illumina_ format (URL_TO_INSERT_TERM_3466 https://fairsharing.org/search?recordType=model_and_format) |☑️|
-| |fastq-sanger|Validate the _fastq-sanger_ format (URL_TO_INSERT_TERM_3467 https://fairsharing.org/search?recordType=model_and_format) |☑️||
-| |fastq-solexa|Validate the _fastq-solexa_ format (URL_TO_INSERT_TERM_3468 https://fairsharing.org/search?recordType=model_and_format) |☑️|
+|FASTQ variants* validation| fastq-illumina|Validate the _fastq-illumina_ format|☑️|
+| |fastq-sanger|Validate the _fastq-sanger_ format|☑️||
+| |fastq-solexa|Validate the _fastq-solexa_ format|☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
-|Archieve compatiablity|EN (URL_TO_INSERT_RECORD-ABBREV_3469 https://fairsharing.org/FAIRsharing.dj8nt8) A|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD-ABBREV_3470 https://fairsharing.org/FAIRsharing.dj8nt8)  archive.|☑️|
-||ArrayExpress (URL_TO_INSERT_RECORD-NAME_3471 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
-||SRA (URL_TO_INSERT_RECORD-ABBREV_3472 https://fairsharing.org/FAIRsharing.g7t2hv) |File validated can be submitted to the SRA (URL_TO_INSERT_RECORD-ABBREV_3473 https://fairsharing.org/FAIRsharing.g7t2hv)  archive.|☑️|
+|Archieve compatiablity|EN (URL_TO_INSERT_RECORD-ABBREV_1805 https://fairsharing.org/FAIRsharing.dj8nt8) A|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD-ABBREV_1806 https://fairsharing.org/FAIRsharing.dj8nt8)  archive.|☑️|
+||ArrayExpress (URL_TO_INSERT_RECORD-NAME_1807 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
+||SRA (URL_TO_INSERT_RECORD-ABBREV_1808 https://fairsharing.org/FAIRsharing.g7t2hv) |File validated can be submitted to the SRA (URL_TO_INSERT_RECORD-ABBREV_1809 https://fairsharing.org/FAIRsharing.g7t2hv)  archive.|☑️|
 |Interface|Command line interface|Can be used in shell and intergerated in pipe commands|☑️|
 |License|Licensed||☑️[GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)|
 | |Commercial use|Can be used for commercial purpose|☑️|
@@ -271,7 +271,7 @@ _*See details in the [FASTQ specification recipe]( TODO include link)._
  
 ## Conclusion
 
-In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file format (URL_TO_INSERT_TERM_3474 https://fairsharing.org/search?recordType=model_and_format) s and other use cases.
+In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.
 
 
 ### What to read next?

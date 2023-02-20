@@ -23,11 +23,11 @@
 
 2. [License](#License) -->
 
-This document aims to identify the values underlying or correlated with the FAIR (URL_TO_INSERT_RECORD-ABBREV_5075 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_5074 https://fairsharing.org/FAIRsharing.WWI10U)  (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR (URL_TO_INSERT_RECORD-ABBREV_5076 https://fairsharing.org/FAIRsharing.WWI10U) . Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
+This document aims to identify the values underlying or correlated with the FAIR (URL_TO_INSERT_RECORD-ABBREV_2460 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2459 https://fairsharing.org/FAIRsharing.WWI10U)  (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR (URL_TO_INSERT_RECORD-ABBREV_2461 https://fairsharing.org/FAIRsharing.WWI10U) . Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
 
 The list, non-exhaustive, is oriented towards answering the following question: “Why to share or re-use data?” [and as a first step in this process, “Why FAIRify data?”]. 
 
-As there will be project (URL_TO_INSERT_TERM_5077 https://fairsharing.org/search?recordType=project) s related to different subjects and/or with different kinds of datasets and different stakeholders involved, the FAIRification of some of the data sets could rely on values that are not yet listed here. In that respect, all data providers, partners and participants of FAIRplus and stakeholders are invited to discuss and add any other motivations they have to make data FAIR (URL_TO_INSERT_RECORD-ABBREV_5078 https://fairsharing.org/FAIRsharing.WWI10U) . 
+As there will be projects related to different subjects and/or with different kinds of datasets and different stakeholders involved, the FAIRification of some of the data sets could rely on values that are not yet listed here. In that respect, all data providers, partners and participants of FAIRplus and stakeholders are invited to discuss and add any other motivations they have to make data FAIR (URL_TO_INSERT_RECORD-ABBREV_2462 https://fairsharing.org/FAIRsharing.WWI10U) . 
 
 
 
@@ -39,16 +39,16 @@ As there will be project (URL_TO_INSERT_TERM_5077 https://fairsharing.org/search
 
 - **Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data re-use. 
 
-- **Transparency**: to make data findable, data providers have to give informat (URL_TO_INSERT_TERM_5079 https://fairsharing.org/search?recordType=model_and_format) ion on the origin, process and sharing process of their FAIR (URL_TO_INSERT_RECORD-ABBREV_5080 https://fairsharing.org/FAIRsharing.WWI10U)  data (metadata).  
+- **Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR (URL_TO_INSERT_RECORD-ABBREV_2463 https://fairsharing.org/FAIRsharing.WWI10U)  data (metadata).  
 
-- **Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR (URL_TO_INSERT_RECORD-ABBREV_5081 https://fairsharing.org/FAIRsharing.WWI10U)  data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
+- **Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR (URL_TO_INSERT_RECORD-ABBREV_2464 https://fairsharing.org/FAIRsharing.WWI10U)  data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
 
-- **Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR (URL_TO_INSERT_RECORD-ABBREV_5082 https://fairsharing.org/FAIRsharing.WWI10U)  data users). In the first case, FAIR (URL_TO_INSERT_RECORD-ABBREV_5083 https://fairsharing.org/FAIRsharing.WWI10U)  data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR (URL_TO_INSERT_RECORD-ABBREV_5084 https://fairsharing.org/FAIRsharing.WWI10U)  data users can reuse data that in another way it would be too demanding to obtain.  
+- **Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR (URL_TO_INSERT_RECORD-ABBREV_2465 https://fairsharing.org/FAIRsharing.WWI10U)  data users). In the first case, FAIR (URL_TO_INSERT_RECORD-ABBREV_2466 https://fairsharing.org/FAIRsharing.WWI10U)  data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR (URL_TO_INSERT_RECORD-ABBREV_2467 https://fairsharing.org/FAIRsharing.WWI10U)  data users can reuse data that in another way it would be too demanding to obtain.  
 
 - **Recognition of work**; legitimacy of a number of tasks: by making data more visible the work of quality data production becomes more recognized, whereas it can be more neglected as an achievement or a research output if data are not findable.
 
 
-**Legal measures**: data sets must respect professional secret rules and data pseudonymization must be ensured to preserve individuals’ privacy and data confidentiality. If pseudonymization is not possible, it is required to obtain explicit, informed consent of all data participants. This consent has to be also documented. Data providers must also verify there are no rules related to classified informat (URL_TO_INSERT_TERM_5085 https://fairsharing.org/search?recordType=model_and_format) ion that can be applicable to these data.   
+**Legal measures**: data sets must respect professional secret rules and data pseudonymization must be ensured to preserve individuals’ privacy and data confidentiality. If pseudonymization is not possible, it is required to obtain explicit, informed consent of all data participants. This consent has to be also documented. Data providers must also verify there are no rules related to classified information that can be applicable to these data.   
 
 
 
@@ -85,21 +85,21 @@ As there will be project (URL_TO_INSERT_TERM_5077 https://fairsharing.org/search
 
 - **Benefit sharing**: making good quality data re-used is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
 
-- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR (URL_TO_INSERT_RECORD-ABBREV_5087 https://fairsharing.org/FAIRsharing.WWI10U)  data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society (URL_TO_INSERT_TERM_5086 https://fairsharing.org/search?recordType=society) . 
+- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR (URL_TO_INSERT_RECORD-ABBREV_2468 https://fairsharing.org/FAIRsharing.WWI10U)  data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
 
 - **Long term view and generosity**: data re-use gives a temporal dimension to the original work done to produce the data that tends towards eternity.
 
 - **Freedom of research**: by allowing data to be re-used for multiple researches that might otherwise be impossible, the freedom of research is enhanced.
 
-- **Legitimacy of research**: the potential for re-use of data can be considered as a possibility to increase the legitimacy of an initial research and its place in society (URL_TO_INSERT_TERM_5088 https://fairsharing.org/search?recordType=society) .
+- **Legitimacy of research**: the potential for re-use of data can be considered as a possibility to increase the legitimacy of an initial research and its place in society.
 
-- **Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection (URL_TO_INSERT_TERM_5089 https://fairsharing.org/search?recordType=collection)  and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
+- **Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
 
 
-**Legal measures**: The reuse of data has to respect all restrictions expressed by data subjects, compliance with the initial informat (URL_TO_INSERT_TERM_5091 https://fairsharing.org/search?recordType=model_and_format) ion and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies (URL_TO_INSERT_TERM_5090 https://fairsharing.org/search?fairsharingRegistry=Policy)  ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 
+**Legal measures**: The reuse of data has to respect all restrictions expressed by data subjects, compliance with the initial information and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 
  
 
-A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR (URL_TO_INSERT_RECORD-ABBREV_5093 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_5092 https://fairsharing.org/FAIRsharing.WWI10U) . This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
+A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR (URL_TO_INSERT_RECORD-ABBREV_2470 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2469 https://fairsharing.org/FAIRsharing.WWI10U) . This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
 ## References

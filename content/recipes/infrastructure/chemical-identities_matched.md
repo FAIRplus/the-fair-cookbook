@@ -20,8 +20,8 @@
 
 The main purpose of this recipe is:
 
-> To take an SDF (URL_TO_INSERT_RECORD-ABBREV_1661 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
-> InChIs, InChIKeys, and SMILES (URL_TO_INSERT_RECORD-ABBREV_1662 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_1663 https://fairsharing.org/FAIRsharing.ew26v7)  file.
+> To take an SDF (URL_TO_INSERT_RECORD-ABBREV_945 https://fairsharing.org/FAIRsharing.ew26v7)  file, validate the content for chemical inconsistencies, and generate
+> InChIs, InChIKeys, and SMILES (URL_TO_INSERT_RECORD-ABBREV_946 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_947 https://fairsharing.org/FAIRsharing.ew26v7)  file.
 
 ---
 
@@ -45,13 +45,13 @@ To run the below scripts, you need a [Groovy](https://groovy.apache.org/download
 The Groovy scripts use version 2.7.1 of the [Chemistry Development Kit](https://cdk.github.io/)
 (see {footcite}`Willighagen2017`). This library and its use in Groovy is further explain in
 the book [Groovy Cheminformatics with the Chemistry Development Kit](https://egonw.github.io/cdkbook/).
-Check this git repository (URL_TO_INSERT_TERM_1664 https://fairsharing.org/search?recordType=repository)  for more detailed use instructions and where to find the tools:
+Check this git repository for more detailed use instructions and where to find the tools:
 [https://github.com/FAIRplus/fairplus-sdf](https://github.com/FAIRplus/fairplus-sdf)
 
 ### Record validation
 
-When generating InChIs, the InChI (URL_TO_INSERT_RECORD-ABBREV_1665 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI`) may return several success states reflecting issues with
-the compound record in the SDF (URL_TO_INSERT_RECORD-ABBREV_1666 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERROR. This first script reports such issues:
+When generating InChIs, the InChI (URL_TO_INSERT_RECORD-ABBREV_948 https://fairsharing.org/FAIRsharing.ddk9t9)  library (see {footcite}`Goodman2021InChI`) may return several success states reflecting issues with
+the compound record in the SDF (URL_TO_INSERT_RECORD-ABBREV_949 https://fairsharing.org/FAIRsharing.ew26v7)  file, including: WARNING and ERROR. This first script reports such issues:
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
@@ -77,7 +77,7 @@ When the success state is ERROR, nothing is outputted.
 
 ### Calculate SMILES strings
 
-The last script calculates a SMILES (URL_TO_INSERT_RECORD-ABBREV_1667 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_1668 https://fairsharing.org/FAIRsharing.ew26v7)  file:
+The last script calculates a SMILES (URL_TO_INSERT_RECORD-ABBREV_950 https://fairsharing.org/FAIRsharing.qv4b3c)  for each entry in the SDF (URL_TO_INSERT_RECORD-ABBREV_951 https://fairsharing.org/FAIRsharing.ew26v7)  file:
 
 ```bash
 groovy smiles.groovy -f foo.sdf
@@ -85,9 +85,9 @@ groovy smiles.groovy -f foo.sdf
 
 ## Conclusion
 
-This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD-ABBREV_1669 https://fairsharing.org/FAIRsharing.ew26v7)  file,
-and convert them to SMILES (URL_TO_INSERT_RECORD-ABBREV_1670 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD-ABBREV_1671 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChIKey. The latter can then be used
-with BridgeDb (URL_TO_INSERT_RECORD-NAME_1674 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID mapping database (URL_TO_INSERT_TERM_1672 https://fairsharing.org/search?fairsharingRegistry=Database) s to get additional identifier (URL_TO_INSERT_TERM_1673 https://fairsharing.org/search?recordType=identifier_schema) s.
+This recipe explained who to validate the chemical structures in an SDF (URL_TO_INSERT_RECORD-ABBREV_952 https://fairsharing.org/FAIRsharing.ew26v7)  file,
+and convert them to SMILES (URL_TO_INSERT_RECORD-ABBREV_953 https://fairsharing.org/FAIRsharing.qv4b3c) , InChI (URL_TO_INSERT_RECORD-ABBREV_954 https://fairsharing.org/FAIRsharing.ddk9t9) , and InChIKey. The latter can then be used
+with BridgeDb (URL_TO_INSERT_RECORD-NAME_955 https://fairsharing.org/FAIRsharing.5ry74y)  and its metabolite ID mapping databases to get additional identifiers.
 
 ### What to read next?
 

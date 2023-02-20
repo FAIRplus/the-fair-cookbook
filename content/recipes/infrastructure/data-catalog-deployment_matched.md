@@ -23,13 +23,13 @@ This recipe is a step-by-step guide on how to deploy the IMI Data Catalogue in D
 
 ## Introduction
 
-For a more general introduction to data catalogues, their elements and data model (URL_TO_INSERT_TERM_1675 https://fairsharing.org/search?recordType=model_and_format) s, 
+For a more general introduction to data catalogues, their elements and data models, 
 see the [data catalogue recipe](https://www.TODO.uldatacatalog.ul). 
 This recipe is intended as a set of step-by-step instructions to deploy via Docker the IMI Data Catalogue
 developed at the Luxembourg Centre for Systems Biomedicine. The overall purpose of the data catalogue is to host 
-dataset-level metadata for a wide range of IMI project (URL_TO_INSERT_TERM_1676 https://fairsharing.org/search?recordType=project) s. Datasets are FAIRified and searchable by a range facets. 
+dataset-level metadata for a wide range of IMI projects. Datasets are FAIRified and searchable by a range facets. 
 The catalogue is not intended to hold the actual data, although it provides links to where the data is hosted, 
-together with informat (URL_TO_INSERT_TERM_1677 https://fairsharing.org/search?recordType=model_and_format) ion on any access restrictions.
+together with information on any access restrictions.
 
 ## Requirements
 
@@ -59,7 +59,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 **(local)** and **(web container)** indicate context of execution.
 
-* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_1678 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
+* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_956 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
 
 ```bash
 $ cd docker/nginx/
@@ -71,7 +71,7 @@ $ ./generate_keys.sh
 This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
 
 ```{warning}
-⚡ However, be aware that skipping this would cause the HTTPS (URL_TO_INSERT_RECORD-ABBREV_1679 https://fairsharing.org/FAIRsharing.cd2f9e)  connection to be unsafe!
+⚡ However, be aware that skipping this would cause the HTTPS (URL_TO_INSERT_RECORD-ABBREV_957 https://fairsharing.org/FAIRsharing.cd2f9e)  connection to be unsafe!
 ```
 
 ````
@@ -83,7 +83,7 @@ $ cd ../..
 $ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
-* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_1680 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
+* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_958 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
 in **Python**, use the following to generate this key:
 
 ```python
@@ -138,7 +138,7 @@ os.urandom(24)
 
 ### Maintenance of docker-compose
 Docker container keeps the application in the state it was when  built. Therefore, **if you change any files in 
-the project (URL_TO_INSERT_TERM_1681 https://fairsharing.org/search?recordType=project) , the container has to be rebuilt in order to see changes in application** :
+the project, the container has to be rebuilt in order to see changes in application** :
 
 ```shell
 $ docker-compose up --build

@@ -18,15 +18,15 @@
 
 ## Main objectives
 
-In this recipe, an example will be described on how to make observational health database (URL_TO_INSERT_TERM_58 https://fairsharing.org/search?fairsharingRegistry=Database) s and observational studies
-more Findable (notably the FAIR (URL_TO_INSERT_RECORD-ABBREV_60 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_59 https://fairsharing.org/FAIRsharing.WWI10U)  [F2](https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/)
+In this recipe, an example will be described on how to make observational health databases and observational studies
+more Findable (notably the FAIR (URL_TO_INSERT_RECORD-ABBREV_25 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_24 https://fairsharing.org/FAIRsharing.WWI10U)  [F2](https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata/)
 and [F4](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/)) and
 interoperability (principles [I1](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/)
 and [I2](https://www.go-fair.org/fair-principles/i2-metadata-use-vocabularies-follow-fair-principles/)), by creating 
-a metadata model (URL_TO_INSERT_TERM_61 https://fairsharing.org/search?recordType=model_and_format)  and a human and machine readable website for dissemination of these resources. 
+a metadata model and a human and machine readable website for dissemination of these resources. 
 
 The output of the [COVID-19](https://www.ohdsi.org/covid-19-updates) [study-a-thon](https://www.thehyve.nl/articles/studyathon-multidisciplinary-collaboration-in-biomedical-open-science) 
-(a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project (URL_TO_INSERT_TERM_62 https://fairsharing.org/search?recordType=project) ) 
+(a OHDSI community [initiative](https://www.ohdsi.org/88-hours), involving the IMI [EHDEN](https://ehden.eu) project) 
 held in March 2020, is used as proof-of-concept.
 
 
@@ -34,66 +34,66 @@ held in March 2020, is used as proof-of-concept.
 
 *   [EHDEN](https://ehden.eu): European Health Data & Evidence Network
 *   ETL: Extract Transform Load
-*   [JSON-LD](https://www.w3.org/TR/json-ld11): JSON (URL_TO_INSERT_RECORD-ABBREV_63 https://fairsharing.org/FAIRsharing.5bbab9)  - Linked Data
-*   [OHDSI](https://www.ohdsi.org): Observational Health Data Sciences and Informat (URL_TO_INSERT_TERM_64 https://fairsharing.org/search?recordType=model_and_format) ics
-*   [OMOP CDM](https://ohdsi.github.io/CommonDataModel): Observational Medical Outcomes Partnership Common Data Model (URL_TO_INSERT_TERM_65 https://fairsharing.org/search?recordType=model_and_format) 
-*   [RDF](https://www.w3.org/TR/rdf-concepts): Resource Description Framework (URL_TO_INSERT_RECORD-NAME_66 https://fairsharing.org/FAIRsharing.p77ph9) 
+*   [JSON-LD](https://www.w3.org/TR/json-ld11): JSON (URL_TO_INSERT_RECORD-ABBREV_26 https://fairsharing.org/FAIRsharing.5bbab9)  - Linked Data
+*   [OHDSI](https://www.ohdsi.org): Observational Health Data Sciences and Informatics
+*   [OMOP CDM](https://ohdsi.github.io/CommonDataModel): Observational Medical Outcomes Partnership Common Data Model
+*   [RDF](https://www.w3.org/TR/rdf-concepts): Resource Description Framework (URL_TO_INSERT_RECORD-NAME_27 https://fairsharing.org/FAIRsharing.p77ph9) 
 *   [YAML](https://yaml.org): YAML Ain’t Markup Language (human-readable data-serialization language)
 
 
 ## Introduction
 
-This recipe is based on work done on OMOP Common Data Model (URL_TO_INSERT_TERM_67 https://fairsharing.org/search?recordType=model_and_format)  data as used during the Covid 19 Study-a-thon, a OHDSI
-community initiative, organised in collaboration with the IMI EHDEN project (URL_TO_INSERT_TERM_68 https://fairsharing.org/search?recordType=project) . The background informat (URL_TO_INSERT_TERM_69 https://fairsharing.org/search?recordType=model_and_format) ion was previously
+This recipe is based on work done on OMOP Common Data Model data as used during the Covid 19 Study-a-thon, a OHDSI
+community initiative, organised in collaboration with the IMI EHDEN project. The background information was previously
 described in this [use case](https://fairtoolkit.pistoiaalliance.org/use-cases/fairifying-collaborative-research-on-real-world-data-the-hyve/)
-on the Pistoia Alliance FAIR (URL_TO_INSERT_RECORD-ABBREV_70 https://fairsharing.org/FAIRsharing.WWI10U)  toolkit website, and also published in an EHDEN Deliverable, 
+on the Pistoia Alliance FAIR (URL_TO_INSERT_RECORD-ABBREV_28 https://fairsharing.org/FAIRsharing.WWI10U)  toolkit website, and also published in an EHDEN Deliverable, 
 [D4.5 - Roadmap for interoperability](https://zenodo.org/record/4474373). 
-Briefly, the IMI2 EHDEN project (URL_TO_INSERT_TERM_71 https://fairsharing.org/search?recordType=project) 's main aim is to reduce the time to produce medical evidence for health outcomes 
+Briefly, the IMI2 EHDEN project's main aim is to reduce the time to produce medical evidence for health outcomes 
 research and to do so, EHDEN has prioritized data harmonization at source.
 
-However, data standard (URL_TO_INSERT_TERM_72 https://fairsharing.org/search?fairsharingRegistry=Standard) ization and harmonization does not necessarily equate with FAIR (URL_TO_INSERT_RECORD-ABBREV_73 https://fairsharing.org/FAIRsharing.WWI10U)  data 
+However, data standardization and harmonization does not necessarily equate with FAIR (URL_TO_INSERT_RECORD-ABBREV_29 https://fairsharing.org/FAIRsharing.WWI10U)  data 
 (see for example this [article](https://www.thehyve.nl/articles/data-quality-with-fair-principles)). 
-This is where the interaction with the IMI2 FAIRplus project (URL_TO_INSERT_TERM_74 https://fairsharing.org/search?recordType=project)  can bring benefits.
+This is where the interaction with the IMI2 FAIRplus project can bring benefits.
 
 The purpose of the present content is to highlight how to improve dataset Findability after the data harmonization
 has taken place.
 
-The methods described in this recipe are however generally applicable for observational health database (URL_TO_INSERT_TERM_75 https://fairsharing.org/search?fairsharingRegistry=Database) s and studies,
-not just data in the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_77 https://fairsharing.org/FAIRsharing.qk984b)  format (URL_TO_INSERT_TERM_76 https://fairsharing.org/search?recordType=model_and_format) .
+The methods described in this recipe are however generally applicable for observational health databases and studies,
+not just data in the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_30 https://fairsharing.org/FAIRsharing.qk984b)  format.
 
 In March 2020 the OHDSI community organized a [study-a-thon focussed on COVID-19](https://www.ohdsi.org/ohdsi-news-updates/covid19-studyathon/),
 which was aimed at addressing a number of key medical questions around COVID-19, such as predicting hospitalization
-and drug safety and effectiveness. For this purpose, a large collection (URL_TO_INSERT_TERM_79 https://fairsharing.org/search?recordType=collection)  of healthcare database (URL_TO_INSERT_TERM_78 https://fairsharing.org/search?fairsharingRegistry=Database) s around the world were
+and drug safety and effectiveness. For this purpose, a large collection of healthcare databases around the world were
 investigated. Many important digital assets were produced during the [study-a-thon](https://ohdsi.org/ohdsi-kicks-off-international-collaborative-to-generate-real-world-evidence-on-covid-19-with-virtual-study-a-thon/),
-such as study protocols, database (URL_TO_INSERT_TERM_80 https://fairsharing.org/search?fairsharingRegistry=Database)  metadata and characterizations, study results, and publications. 
+such as study protocols, database metadata and characterizations, study results, and publications. 
 
-From the FAIR (URL_TO_INSERT_RECORD-ABBREV_82 https://fairsharing.org/FAIRsharing.WWI10U)  assessment performed in order to better understand the current state of FAIRness of studies and database (URL_TO_INSERT_TERM_81 https://fairsharing.org/search?fairsharingRegistry=Database) s
+From the FAIR (URL_TO_INSERT_RECORD-ABBREV_31 https://fairsharing.org/FAIRsharing.WWI10U)  assessment performed in order to better understand the current state of FAIRness of studies and databases
 used in OHDSI and in the COVID-19 study-a-thon in particular, it was found that there was room for improvement on both 
 Findability and Reusability. Since increasing Findability was a common denominator for both studies and data sources, 
 the main focus of the FAIRification was on developing structured metadata, specifically tailored for studies and data sources.
 
-This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR (URL_TO_INSERT_RECORD-ABBREV_83 https://fairsharing.org/FAIRsharing.WWI10U)  by:
+This recipe will describe a proof-of-concept that shows the step-by-step process of making resources more FAIR (URL_TO_INSERT_RECORD-ABBREV_32 https://fairsharing.org/FAIRsharing.WWI10U)  by:
 
 *   Inventory and prioritisation of digital resources; 
-*   Adding metadata to the resources using existing ontologies (URL_TO_INSERT_TERM_84 https://fairsharing.org/search?recordType=terminology_artefact)  and defining new entities to make them findable by humans and machines;
-*   Creating a website for FAIR (URL_TO_INSERT_RECORD-ABBREV_85 https://fairsharing.org/FAIRsharing.WWI10U)  dissemination of selected digital resources.
+*   Adding metadata to the resources using existing ontologies and defining new entities to make them findable by humans and machines;
+*   Creating a website for FAIR (URL_TO_INSERT_RECORD-ABBREV_33 https://fairsharing.org/FAIRsharing.WWI10U)  dissemination of selected digital resources.
 
 
 ## Tools
 
 | Tool Name| capability|
 |:--|:--|
-|[Apache Jena RDF validator](https://jena.apache.org/)|RDF format (URL_TO_INSERT_TERM_86 https://fairsharing.org/search?recordType=model_and_format)  validators|
-|[Rich Results Test for JSON-LD](https://search.google.com/test/rich-results)|RDF format (URL_TO_INSERT_TERM_87 https://fairsharing.org/search?recordType=model_and_format)  validators|
+|[Apache Jena RDF validator](https://jena.apache.org/)|RDF format validators|
+|[Rich Results Test for JSON-LD](https://search.google.com/test/rich-results)|RDF format validators|
 |[EMIF Catalogue](https://emif-catalogue.eu/)|Database|
 |[HUGO](https://gohugo.io/)|Static website generator|
 
 
 ## Table of Data Standards
 
-| Data Format (URL_TO_INSERT_TERM_89 https://fairsharing.org/search?recordType=model_and_format) s  | Terminologies (URL_TO_INSERT_TERM_90 https://fairsharing.org/search?recordType=terminology_artefact)  | Model (URL_TO_INSERT_TERM_88 https://fairsharing.org/search?recordType=model_and_format) s  |
+| Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-|  [JSON-LD](https://www.w3.org/TR/json-ld11/) |  [Schema.org](https://schema.org) and [Custom OHDSI extension](https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl) to schema.org (URL_TO_INSERT_RECORD-NAME_92 https://fairsharing.org/FAIRsharing.hzdzq8)   | RDF (URL_TO_INSERT_RECORD-ABBREV_91 https://fairsharing.org/FAIRsharing.p77ph9)   |
+|  [JSON-LD](https://www.w3.org/TR/json-ld11/) |  [Schema.org](https://schema.org) and [Custom OHDSI extension](https://github.com/thehyve/ohdsi-schemas/blob/master/models/ohdsi_model/ohdsi_semantic_model.ttl) to schema.org (URL_TO_INSERT_RECORD-NAME_35 https://fairsharing.org/FAIRsharing.hzdzq8)   | RDF (URL_TO_INSERT_RECORD-ABBREV_34 https://fairsharing.org/FAIRsharing.p77ph9)   |
 | [YAML](https://yaml.org/spec/1.2/spec.html) | Custom HUGO template | NA |
 
 
@@ -116,8 +116,8 @@ Recipe Steps
 ### Inventory and prioritization of digital resources
 
 In order to start the FAIRification process of digital resources in OHDSI, it was important to take inventory of which 
-kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_93 https://fairsharing.org/FAIRsharing.qk984b)  
-itself, the OMOP Standard (URL_TO_INSERT_TERM_94 https://fairsharing.org/search?fairsharingRegistry=Standard) ized Vocabularies (URL_TO_INSERT_RECORD-ABBREV_95 https://fairsharing.org/FAIRsharing.658tcg) , studies, cohort definitions and many more. 
+kind of digital resources reside in the OHDSI ecosystem. Digital resources in OHDSI include for example the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_36 https://fairsharing.org/FAIRsharing.qk984b)  
+itself, the OMOP Standardized Vocabularies (URL_TO_INSERT_RECORD-ABBREV_37 https://fairsharing.org/FAIRsharing.658tcg) , studies, cohort definitions and many more. 
 Each digital resource itself can consist of multiple (sub) digital resources, as shown in {numref}`ehden-ohdsi-figure1`.
 
 ````{dropdown}
@@ -135,24 +135,24 @@ Inventory and prioritization of digital resources. Example of digital resources 
 Prioritization of initial digital resources to FAIRify was important, as the OHDSI ecosystem is quite extensive.
 In light of the study-a-thon on COVID-19 held in March 2020 by OHDSI and after a 
 [community inventory](https://forums.ohdsi.org/t/implementing-the-fair-principles-in-the-ohdsi-approach-and-tools/10387),
-studies and database (URL_TO_INSERT_TERM_96 https://fairsharing.org/search?fairsharingRegistry=Database) s were selected as relevant digital resources to FAIRify, as these are important resources for the
+studies and databases were selected as relevant digital resources to FAIRify, as these are important resources for the
 researchers studying observational health data on COVID-19 and related topics. 
 
 
 ### Current status of database and study dissemination in OHDSI
 
-**Database (URL_TO_INSERT_TERM_97 https://fairsharing.org/search?fairsharingRegistry=Database) s in OHDSI**
+**Databases in OHDSI**
 
-General sources that provide informat (URL_TO_INSERT_TERM_99 https://fairsharing.org/search?recordType=model_and_format) ion on observational health database (URL_TO_INSERT_TERM_98 https://fairsharing.org/search?fairsharingRegistry=Database) s that are conformed to the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_100 https://fairsharing.org/FAIRsharing.qk984b)  are the
+General sources that provide information on observational health databases that are conformed to the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_38 https://fairsharing.org/FAIRsharing.qk984b)  are the
 [data network page](https://www.ohdsi.org/web/wiki/doku.php?id=resources:2020_data_network), 
 the [EMIF catalogue](https://emif-catalogue.eu/) and the [EHDEN Portal](https://portal.ehden.eu) (under development). 
 
-The data network page of OHDSI shows some metadata on database (URL_TO_INSERT_TERM_101 https://fairsharing.org/search?fairsharingRegistry=Database) s converted to the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_102 https://fairsharing.org/FAIRsharing.qk984b) .
+The data network page of OHDSI shows some metadata on databases converted to the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_39 https://fairsharing.org/FAIRsharing.qk984b) .
 
-The [EMIF catalogue](https://emif-catalogue.eu/) is developed by the European Medical Informat (URL_TO_INSERT_TERM_103 https://fairsharing.org/search?recordType=model_and_format) ion Framework (EMIF) and
-enables publishing and sharing of metadata on health data sources. Different consortia implementing the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_104 https://fairsharing.org/FAIRsharing.qk984b)  
-disseminate metadata on database (URL_TO_INSERT_TERM_105 https://fairsharing.org/search?fairsharingRegistry=Database) s in this catalogue. The EHDEN Portal builds on technology from the EMIF catalogue and
-further expands this with functionality to compare database (URL_TO_INSERT_TERM_106 https://fairsharing.org/search?fairsharingRegistry=Database) s and run studies in the network.
+The [EMIF catalogue](https://emif-catalogue.eu/) is developed by the European Medical Information Framework (EMIF) and
+enables publishing and sharing of metadata on health data sources. Different consortia implementing the OMOP CDM (URL_TO_INSERT_RECORD-ABBREV_40 https://fairsharing.org/FAIRsharing.qk984b)  
+disseminate metadata on databases in this catalogue. The EHDEN Portal builds on technology from the EMIF catalogue and
+further expands this with functionality to compare databases and run studies in the network.
 
 **Studies in OHDSI**
 
@@ -164,20 +164,20 @@ in OHDSI with some associated metadata, such as study status, study leads and re
 
 ### Defining a (semantic) model for relevant metadata elements
 
-To increase the findability we captured the structured and rich metadata, by developing a semantic model (URL_TO_INSERT_TERM_107 https://fairsharing.org/search?recordType=model_and_format)  in RDF (URL_TO_INSERT_RECORD-ABBREV_108 https://fairsharing.org/FAIRsharing.p77ph9)  for the
-observational studies and database (URL_TO_INSERT_TERM_109 https://fairsharing.org/search?fairsharingRegistry=Database) s. The model (URL_TO_INSERT_TERM_111 https://fairsharing.org/search?recordType=model_and_format)  contained all relevant metadata elements for studies, database (URL_TO_INSERT_TERM_110 https://fairsharing.org/search?fairsharingRegistry=Database) s, as well
-as persons associated with those studies and database (URL_TO_INSERT_TERM_112 https://fairsharing.org/search?fairsharingRegistry=Database) s. 
+To increase the findability we captured the structured and rich metadata, by developing a semantic model in RDF (URL_TO_INSERT_RECORD-ABBREV_41 https://fairsharing.org/FAIRsharing.p77ph9)  for the
+observational studies and databases. The model contained all relevant metadata elements for studies, databases, as well
+as persons associated with those studies and databases. 
 
-Model (URL_TO_INSERT_TERM_113 https://fairsharing.org/search?recordType=model_and_format) ling metadata elements in RDF (URL_TO_INSERT_RECORD-ABBREV_114 https://fairsharing.org/FAIRsharing.p77ph9)  has the advantage that the metadata elements are properly semantically described,
-structured and linked. In addition, RDF (URL_TO_INSERT_RECORD-ABBREV_115 https://fairsharing.org/FAIRsharing.p77ph9)  is easily expandable and modifiable. 
+Modelling metadata elements in RDF (URL_TO_INSERT_RECORD-ABBREV_42 https://fairsharing.org/FAIRsharing.p77ph9)  has the advantage that the metadata elements are properly semantically described,
+structured and linked. In addition, RDF (URL_TO_INSERT_RECORD-ABBREV_43 https://fairsharing.org/FAIRsharing.p77ph9)  is easily expandable and modifiable. 
 
-The Turtle (URL_TO_INSERT_RECORD-ABBREV_118 https://fairsharing.org/FAIRsharing.3e194c)  serialization format (URL_TO_INSERT_TERM_116 https://fairsharing.org/search?recordType=model_and_format)  was chosen as the RDF (URL_TO_INSERT_RECORD-ABBREV_119 https://fairsharing.org/FAIRsharing.p77ph9)  format (URL_TO_INSERT_TERM_117 https://fairsharing.org/search?recordType=model_and_format) . Metadata elements were defined and mapped to 
-[Schema.org](http://schema.org) types and properties. Schema.org (URL_TO_INSERT_RECORD-NAME_120 https://fairsharing.org/FAIRsharing.hzdzq8)  is a vocabulary that can be used to create structured
+The Turtle (URL_TO_INSERT_RECORD-ABBREV_44 https://fairsharing.org/FAIRsharing.3e194c)  serialization format was chosen as the RDF (URL_TO_INSERT_RECORD-ABBREV_45 https://fairsharing.org/FAIRsharing.p77ph9)  format. Metadata elements were defined and mapped to 
+[Schema.org](http://schema.org) types and properties. Schema.org (URL_TO_INSERT_RECORD-NAME_46 https://fairsharing.org/FAIRsharing.hzdzq8)  is a vocabulary that can be used to create structured
 data on the internet and to make the data discoverable. 
 
-Relevant Schema.org (URL_TO_INSERT_RECORD-NAME_122 https://fairsharing.org/FAIRsharing.hzdzq8)  types for studies and database (URL_TO_INSERT_TERM_121 https://fairsharing.org/search?fairsharingRegistry=Database) s included: 
+Relevant Schema.org (URL_TO_INSERT_RECORD-NAME_47 https://fairsharing.org/FAIRsharing.hzdzq8)  types for studies and databases included: 
 
-*   [Dataset](https://schema.org/Dataset): represents a data file or database (URL_TO_INSERT_TERM_123 https://fairsharing.org/search?fairsharingRegistry=Database)  resulting from the study
+*   [Dataset](https://schema.org/Dataset): represents a data file or database resulting from the study
 *   [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy): main type that represents the medical study itself
 *   [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign): provides details about the design of the study
 *   [MedicalStudyStatus](https://schema.org/MedicalStudyStatus): provides the status of the study (although this is based on clinical trials, and observational studies will not use all statuses)
@@ -186,33 +186,33 @@ Relevant Schema.org (URL_TO_INSERT_RECORD-NAME_122 https://fairsharing.org/FAIRs
 *   [Organization](https://schema.org/Organization): represents an organization, such as a university
 *   [Person](https://schema.org/Person): represents a person and is mainly used to indicate the authors of / researchers involved in the study
 
-{numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model (URL_TO_INSERT_TERM_124 https://fairsharing.org/search?recordType=model_and_format) .
+{numref}`ehden-ohdsi-figure-2` shows part of the relevant metadata elements in the model.
 
 ````{dropdown}
 :open:
 ```{figure} ehden-ohdsi.md-figure2.jpg
 ---
 name: ehden-ohdsi-figure-2
-alt: Part of the metadata model (URL_TO_INSERT_TERM_125 https://fairsharing.org/search?recordType=model_and_format) . Here, each class (orange) and relationship is represented as a schema.org (URL_TO_INSERT_RECORD-NAME_126 https://fairsharing.org/FAIRsharing.hzdzq8)  concept. Literals (yellow) are data types, e.g integers or strings. 
+alt: Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org (URL_TO_INSERT_RECORD-NAME_48 https://fairsharing.org/FAIRsharing.hzdzq8)  concept. Literals (yellow) are data types, e.g integers or strings. 
 ---
-Part of the metadata model (URL_TO_INSERT_TERM_127 https://fairsharing.org/search?recordType=model_and_format) . Here, each class (orange) and relationship is represented as a schema.org (URL_TO_INSERT_RECORD-NAME_128 https://fairsharing.org/FAIRsharing.hzdzq8)  concept. Literals (yellow) are data types, e.g integers or strings. 
+Part of the metadata model. Here, each class (orange) and relationship is represented as a schema.org (URL_TO_INSERT_RECORD-NAME_49 https://fairsharing.org/FAIRsharing.hzdzq8)  concept. Literals (yellow) are data types, e.g integers or strings. 
 ```
 ````
 
-RDF (URL_TO_INSERT_RECORD-ABBREV_130 https://fairsharing.org/FAIRsharing.p77ph9)  representation of two Schema.org (URL_TO_INSERT_RECORD-NAME_131 https://fairsharing.org/FAIRsharing.hzdzq8)  types, written in Turtle (URL_TO_INSERT_RECORD-ABBREV_129 https://fairsharing.org/FAIRsharing.3e194c) :
+RDF (URL_TO_INSERT_RECORD-ABBREV_51 https://fairsharing.org/FAIRsharing.p77ph9)  representation of two Schema.org (URL_TO_INSERT_RECORD-NAME_52 https://fairsharing.org/FAIRsharing.hzdzq8)  types, written in Turtle (URL_TO_INSERT_RECORD-ABBREV_50 https://fairsharing.org/FAIRsharing.3e194c) :
 
 ````{dropdown}
 :open:
 ```
 schema:MedicalObservationalStudy a owl:Class ;
        rdfs:isDefinedBy  
-<https://health-lifesci.schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_132 https://fairsharing.org/FAIRsharing.hzdzq8) /MedicalObservationalStudy> ;
+<https://health-lifesci.schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_53 https://fairsharing.org/FAIRsharing.hzdzq8) /MedicalObservationalStudy> ;
        rdfs:label  "MedicalObservationalStudy"@en ;
        rdfs:subClassOf schema:MedicalStudy .
 
 schema:Drug a owl:Class ;
        rdfs:isDefinedBy  
-<https://health-lifesci.schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_133 https://fairsharing.org/FAIRsharing.hzdzq8) /Drug> ;
+<https://health-lifesci.schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_54 https://fairsharing.org/FAIRsharing.hzdzq8) /Drug> ;
        rdfs:label  "Drug"@en ;
        rdfs:subClassOf schema:Substance .
 ```
@@ -225,14 +225,14 @@ elements specific for some OHDSI assets were not present. To be able to capture 
 custom types and properties had to be created. These included: 
 
 *   Properties specific for OHDSI studies(e.g. study types and study use cases)
-*   Database (URL_TO_INSERT_TERM_134 https://fairsharing.org/search?fairsharingRegistry=Database)  properties (e.g. database (URL_TO_INSERT_TERM_135 https://fairsharing.org/search?fairsharingRegistry=Database)  characteristics and population size) 
-*   Author properties (e.g. GitHub (URL_TO_INSERT_RECORD-NAME_136 https://fairsharing.org/FAIRsharing.c55d5e)  handle (URL_TO_INSERT_RECORD-NAME_137 https://fairsharing.org/FAIRsharing.0b7e54)  and forum profile). 
+*   Database properties (e.g. database characteristics and population size) 
+*   Author properties (e.g. GitHub (URL_TO_INSERT_RECORD-NAME_55 https://fairsharing.org/FAIRsharing.c55d5e)  handle (URL_TO_INSERT_RECORD-NAME_56 https://fairsharing.org/FAIRsharing.0b7e54)  and forum profile). 
 
-The resulting metadata model (URL_TO_INSERT_TERM_138 https://fairsharing.org/search?recordType=model_and_format)  was shared in a public [GitHub repository](https://github.com/thehyve/ohdsi-schemas/blob/d18a9a924cd13fc4525b5965e6ecb43c5d22a333/models/ohdsi_model/ohdsi_semantic_model.ttl).
+The resulting metadata model was shared in a public [GitHub repository](https://github.com/thehyve/ohdsi-schemas/blob/d18a9a924cd13fc4525b5965e6ecb43c5d22a333/models/ohdsi_model/ohdsi_semantic_model.ttl).
 
 For OHDSI specific types and properties the namespace [http://data.ohdsi.org/](http://data.ohdsi.org/) is used, using the `ohdsi` prefix. 
 
-The RDF (URL_TO_INSERT_RECORD-ABBREV_140 https://fairsharing.org/FAIRsharing.p77ph9)  model (URL_TO_INSERT_TERM_139 https://fairsharing.org/search?recordType=model_and_format)  was validated using Apache Jena RIOT (version 3.15.0), using the following command:
+The RDF (URL_TO_INSERT_RECORD-ABBREV_57 https://fairsharing.org/FAIRsharing.p77ph9)  model was validated using Apache Jena RIOT (version 3.15.0), using the following command:
 
 ```bash
 riot.bat --validate ohdsi_semantic_model.ttl
@@ -241,12 +241,12 @@ riot.bat --validate ohdsi_semantic_model.ttl
 
 ### Metadata capture using YAML
 
-In principle, the RDF (URL_TO_INSERT_RECORD-ABBREV_143 https://fairsharing.org/FAIRsharing.p77ph9)  classes defined in the above Turtle (URL_TO_INSERT_RECORD-ABBREV_142 https://fairsharing.org/FAIRsharing.3e194c)  file can directly be used to set up the JSON (URL_TO_INSERT_RECORD-ABBREV_141 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_144 https://fairsharing.org/FAIRsharing.8f9bbb)  file needed 
+In principle, the RDF (URL_TO_INSERT_RECORD-ABBREV_60 https://fairsharing.org/FAIRsharing.p77ph9)  classes defined in the above Turtle (URL_TO_INSERT_RECORD-ABBREV_59 https://fairsharing.org/FAIRsharing.3e194c)  file can directly be used to set up the JSON (URL_TO_INSERT_RECORD-ABBREV_58 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_61 https://fairsharing.org/FAIRsharing.8f9bbb)  file needed 
 for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, 
-database (URL_TO_INSERT_TERM_145 https://fairsharing.org/search?fairsharingRegistry=Database) s and authors, in the more data entry friendly YAML format (URL_TO_INSERT_TERM_146 https://fairsharing.org/search?recordType=model_and_format) . The YAML format (URL_TO_INSERT_TERM_147 https://fairsharing.org/search?recordType=model_and_format)  can be annotated with comments
+databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments
 to guide the person submitting their metadata. 
 
-The following figure shows the metadata in Turtle (URL_TO_INSERT_RECORD-ABBREV_148 https://fairsharing.org/FAIRsharing.3e194c)  and in YAML. YAML uses slightly different wording and syntax, 
+The following figure shows the metadata in Turtle (URL_TO_INSERT_RECORD-ABBREV_62 https://fairsharing.org/FAIRsharing.3e194c)  and in YAML. YAML uses slightly different wording and syntax, 
 to make it easier for end users / science bloggers to understand what kind of metadata is expected to be filled in. 
 
 In YAML, the data looks like this:
@@ -281,7 +281,7 @@ study_subject:
     concept_code_url: "http://purl.bioontology.org/ontology/RXNORM/1546359"
 ```
 
-The data in YAML gets converted into Turtle (URL_TO_INSERT_RECORD-ABBREV_149 https://fairsharing.org/FAIRsharing.3e194c)  programatically:
+The data in YAML gets converted into Turtle (URL_TO_INSERT_RECORD-ABBREV_63 https://fairsharing.org/FAIRsharing.3e194c)  programatically:
 
 ```text
 @prefix ohdsi: <http://data.ohdsi.org/> .
@@ -308,43 +308,43 @@ schema:codingSystem "RxNorm" ;
 schema:sameAs "http://purl.bioontology.org/ontology/RXNORM/“1546359" ] .
 ```
 
-The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML (URL_TO_INSERT_RECORD-ABBREV_150 https://fairsharing.org/FAIRsharing.YugnuL)  output
-from that which contains the article text but also embeds the entered metadata as JSON (URL_TO_INSERT_RECORD-ABBREV_151 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_152 https://fairsharing.org/FAIRsharing.8f9bbb)  
+The Hugo backend that we created, reads in the study articles, including the YAML metadata, and produces an HTML (URL_TO_INSERT_RECORD-ABBREV_64 https://fairsharing.org/FAIRsharing.YugnuL)  output
+from that which contains the article text but also embeds the entered metadata as JSON (URL_TO_INSERT_RECORD-ABBREV_65 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_66 https://fairsharing.org/FAIRsharing.8f9bbb)  
 (see {numref}`ehden-ohdsi-figure3`). In order to do this, we have written custom processing logic that takes the YAML 
-data as input and format (URL_TO_INSERT_TERM_154 https://fairsharing.org/search?recordType=model_and_format) s this into RDF (URL_TO_INSERT_RECORD-ABBREV_155 https://fairsharing.org/FAIRsharing.p77ph9)  in accordance with the metadata model (URL_TO_INSERT_TERM_153 https://fairsharing.org/search?recordType=model_and_format) .
+data as input and formats this into RDF (URL_TO_INSERT_RECORD-ABBREV_67 https://fairsharing.org/FAIRsharing.p77ph9)  in accordance with the metadata model.
 
 ````{dropdown}
 :open:
 ```{figure} ehden-ohdsi.md-figure3.jpg
 ---
 name: ehden-ohdsi-figure3
-alt: Relationship between the use of Turtle (URL_TO_INSERT_RECORD-ABBREV_158 https://fairsharing.org/FAIRsharing.3e194c) , JSON (URL_TO_INSERT_RECORD-ABBREV_157 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_159 https://fairsharing.org/FAIRsharing.8f9bbb)  and YAML in this proof-of-concept project (URL_TO_INSERT_TERM_156 https://fairsharing.org/search?recordType=project) .
+alt: Relationship between the use of Turtle (URL_TO_INSERT_RECORD-ABBREV_69 https://fairsharing.org/FAIRsharing.3e194c) , JSON (URL_TO_INSERT_RECORD-ABBREV_68 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_70 https://fairsharing.org/FAIRsharing.8f9bbb)  and YAML in this proof-of-concept project.
 ---
-Relationship between the use of Turtle (URL_TO_INSERT_RECORD-ABBREV_162 https://fairsharing.org/FAIRsharing.3e194c) , JSON (URL_TO_INSERT_RECORD-ABBREV_161 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_163 https://fairsharing.org/FAIRsharing.8f9bbb)  and YAML in this proof-of-concept project (URL_TO_INSERT_TERM_160 https://fairsharing.org/search?recordType=project) .
+Relationship between the use of Turtle (URL_TO_INSERT_RECORD-ABBREV_72 https://fairsharing.org/FAIRsharing.3e194c) , JSON (URL_TO_INSERT_RECORD-ABBREV_71 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_73 https://fairsharing.org/FAIRsharing.8f9bbb)  and YAML in this proof-of-concept project.
 ```
 ````
 
 
 ### Embedding the metadata in the website as JSON-LD
 
-JSON (URL_TO_INSERT_RECORD-ABBREV_166 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_169 https://fairsharing.org/FAIRsharing.8f9bbb)  is a format (URL_TO_INSERT_TERM_164 https://fairsharing.org/search?recordType=model_and_format)  for structured and linked data and, like Turtle (URL_TO_INSERT_RECORD-ABBREV_167 https://fairsharing.org/FAIRsharing.3e194c) , a serialization format (URL_TO_INSERT_TERM_165 https://fairsharing.org/search?recordType=model_and_format)  of RDF (URL_TO_INSERT_RECORD-ABBREV_168 https://fairsharing.org/FAIRsharing.p77ph9) . 
+JSON (URL_TO_INSERT_RECORD-ABBREV_74 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_77 https://fairsharing.org/FAIRsharing.8f9bbb)  is a format for structured and linked data and, like Turtle (URL_TO_INSERT_RECORD-ABBREV_75 https://fairsharing.org/FAIRsharing.3e194c) , a serialization format of RDF (URL_TO_INSERT_RECORD-ABBREV_76 https://fairsharing.org/FAIRsharing.p77ph9) . 
 
-It can be embedded in the HTML (URL_TO_INSERT_RECORD-ABBREV_170 https://fairsharing.org/FAIRsharing.YugnuL)  code in the back end of a website. Search engines like Google 
+It can be embedded in the HTML (URL_TO_INSERT_RECORD-ABBREV_78 https://fairsharing.org/FAIRsharing.YugnuL)  code in the back end of a website. Search engines like Google 
 (including [Google dataset search](https://datasetsearch.research.google.com/)) use this structured data to find 
 and understand the data. Understanding the data goes hand in hand with using the [Schema.org](http://schema.org) 
-vocabulary, because annotating metadata with Schema.org (URL_TO_INSERT_RECORD-NAME_171 https://fairsharing.org/FAIRsharing.hzdzq8)  types and properties gives meaning to the data. 
+vocabulary, because annotating metadata with Schema.org (URL_TO_INSERT_RECORD-NAME_79 https://fairsharing.org/FAIRsharing.hzdzq8)  types and properties gives meaning to the data. 
 This search engine optimization (SEO, see the [Search Engine optimization recipe](https://w3id.org/faircookbook/FCB010)) 
 enables better Findability of the data.
 
-For this proof-of-concept project (URL_TO_INSERT_TERM_172 https://fairsharing.org/search?recordType=project) , a website was created for dissemination of metadata on studies, 
-database (URL_TO_INSERT_TERM_173 https://fairsharing.org/search?fairsharingRegistry=Database) s and authors, generated and used during the OHDSI COVID-19 "study-a-thon". Metadata on studies, database (URL_TO_INSERT_TERM_174 https://fairsharing.org/search?fairsharingRegistry=Database) s and
-authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON (URL_TO_INSERT_RECORD-ABBREV_175 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_177 https://fairsharing.org/FAIRsharing.8f9bbb)  in the HTML (URL_TO_INSERT_RECORD-ABBREV_176 https://fairsharing.org/FAIRsharing.YugnuL)  code as well.
+For this proof-of-concept project, a website was created for dissemination of metadata on studies, 
+databases and authors, generated and used during the OHDSI COVID-19 "study-a-thon". Metadata on studies, databases and
+authors is displayed on this [website](https://covid19.ohdsi.app/), and is embedded as JSON (URL_TO_INSERT_RECORD-ABBREV_80 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_82 https://fairsharing.org/FAIRsharing.8f9bbb)  in the HTML (URL_TO_INSERT_RECORD-ABBREV_81 https://fairsharing.org/FAIRsharing.YugnuL)  code as well.
 <!-- TODO: Give example of a page with markup -->
 
-Embedding metadata in JSON (URL_TO_INSERT_RECORD-ABBREV_178 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_180 https://fairsharing.org/FAIRsharing.8f9bbb)  in HTML (URL_TO_INSERT_RECORD-ABBREV_179 https://fairsharing.org/FAIRsharing.YugnuL)  will enable web crawlers to scrape the metadata and will increase Findability 
+Embedding metadata in JSON (URL_TO_INSERT_RECORD-ABBREV_83 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_85 https://fairsharing.org/FAIRsharing.8f9bbb)  in HTML (URL_TO_INSERT_RECORD-ABBREV_84 https://fairsharing.org/FAIRsharing.YugnuL)  will enable web crawlers to scrape the metadata and will increase Findability 
 by search engines. When for example querying 
 [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/),
-the data should pop up when JSON (URL_TO_INSERT_RECORD-ABBREV_181 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_182 https://fairsharing.org/FAIRsharing.8f9bbb)  is embedded, but only when the `schema:Dataset` class is included
+the data should pop up when JSON (URL_TO_INSERT_RECORD-ABBREV_86 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_87 https://fairsharing.org/FAIRsharing.8f9bbb)  is embedded, but only when the `schema:Dataset` class is included
 (see also the next section for details on this).
 
 
@@ -360,18 +360,18 @@ User-agent: *
 The Hugo framework automatically generates a sitemap when building a website 
 (in this example: [https://covid19.ohdsi.app/sitemap.xml](https://covid19.ohdsi.app/sitemap.xml))
 
-The generated JSON (URL_TO_INSERT_RECORD-ABBREV_183 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_184 https://fairsharing.org/FAIRsharing.8f9bbb)  files can be validated using [Google’s Rich Result Test](https://search.google.com/test/rich-results).
-This tool can easily validate JSON (URL_TO_INSERT_RECORD-ABBREV_185 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_189 https://fairsharing.org/FAIRsharing.8f9bbb)  code, by either submitting a URL (URL_TO_INSERT_RECORD-ABBREV_188 https://fairsharing.org/FAIRsharing.9d38e2)  directing to the JSON (URL_TO_INSERT_RECORD-ABBREV_186 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_190 https://fairsharing.org/FAIRsharing.8f9bbb) , or by pasting JSON (URL_TO_INSERT_RECORD-ABBREV_187 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_191 https://fairsharing.org/FAIRsharing.8f9bbb)  code.
+The generated JSON (URL_TO_INSERT_RECORD-ABBREV_88 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_89 https://fairsharing.org/FAIRsharing.8f9bbb)  files can be validated using [Google’s Rich Result Test](https://search.google.com/test/rich-results).
+This tool can easily validate JSON (URL_TO_INSERT_RECORD-ABBREV_90 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_94 https://fairsharing.org/FAIRsharing.8f9bbb)  code, by either submitting a URL (URL_TO_INSERT_RECORD-ABBREV_93 https://fairsharing.org/FAIRsharing.9d38e2)  directing to the JSON (URL_TO_INSERT_RECORD-ABBREV_91 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_95 https://fairsharing.org/FAIRsharing.8f9bbb) , or by pasting JSON (URL_TO_INSERT_RECORD-ABBREV_92 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_96 https://fairsharing.org/FAIRsharing.8f9bbb)  code.
 <!-- TODO give an example link to a page being validated -->
 
-An important note to make here is that to make the data findable for Google Dataset search the model (URL_TO_INSERT_TERM_192 https://fairsharing.org/search?recordType=model_and_format)  and final
-JSON (URL_TO_INSERT_RECORD-ABBREV_193 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_194 https://fairsharing.org/FAIRsharing.8f9bbb)  markup needed to mention the `schema:Dataset` class. In a first iteration, we had used our new 
-`ohdsi:database (URL_TO_INSERT_TERM_195 https://fairsharing.org/search?fairsharingRegistry=Database) ` class and the website was not found (even if the `ohdsi:database (URL_TO_INSERT_TERM_196 https://fairsharing.org/search?fairsharingRegistry=Database)  is-a schema:Dataset` statement from
-the model (URL_TO_INSERT_TERM_197 https://fairsharing.org/search?recordType=model_and_format)  is repeated in the JSON (URL_TO_INSERT_RECORD-ABBREV_198 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_199 https://fairsharing.org/FAIRsharing.8f9bbb) ; 
-Google's Schema.org (URL_TO_INSERT_RECORD-NAME_202 https://fairsharing.org/FAIRsharing.hzdzq8)  tools used a fixed context file, ignoring any additional statements included in your own JSON (URL_TO_INSERT_RECORD-ABBREV_200 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_201 https://fairsharing.org/FAIRsharing.8f9bbb) ).
+An important note to make here is that to make the data findable for Google Dataset search the model and final
+JSON (URL_TO_INSERT_RECORD-ABBREV_97 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_98 https://fairsharing.org/FAIRsharing.8f9bbb)  markup needed to mention the `schema:Dataset` class. In a first iteration, we had used our new 
+`ohdsi:database` class and the website was not found (even if the `ohdsi:database is-a schema:Dataset` statement from
+the model is repeated in the JSON (URL_TO_INSERT_RECORD-ABBREV_99 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_100 https://fairsharing.org/FAIRsharing.8f9bbb) ; 
+Google's Schema.org (URL_TO_INSERT_RECORD-NAME_103 https://fairsharing.org/FAIRsharing.hzdzq8)  tools used a fixed context file, ignoring any additional statements included in your own JSON (URL_TO_INSERT_RECORD-ABBREV_101 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_102 https://fairsharing.org/FAIRsharing.8f9bbb) ).
 
-To illustrate, the JSON (URL_TO_INSERT_RECORD-ABBREV_203 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_204 https://fairsharing.org/FAIRsharing.8f9bbb)  representation of metadata instantiation of the OHDSI Covid19 Icarius study looks like this in
-JSON (URL_TO_INSERT_RECORD-ABBREV_206 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_208 https://fairsharing.org/FAIRsharing.8f9bbb)  (compare the metadata presented above in YAML and Turtle (URL_TO_INSERT_RECORD-ABBREV_207 https://fairsharing.org/FAIRsharing.3e194c)  format (URL_TO_INSERT_TERM_205 https://fairsharing.org/search?recordType=model_and_format) ):
+To illustrate, the JSON (URL_TO_INSERT_RECORD-ABBREV_104 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_105 https://fairsharing.org/FAIRsharing.8f9bbb)  representation of metadata instantiation of the OHDSI Covid19 Icarius study looks like this in
+JSON (URL_TO_INSERT_RECORD-ABBREV_106 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_108 https://fairsharing.org/FAIRsharing.8f9bbb)  (compare the metadata presented above in YAML and Turtle (URL_TO_INSERT_RECORD-ABBREV_107 https://fairsharing.org/FAIRsharing.3e194c)  format):
 
 ```
 { "@graph" : [ 
@@ -430,13 +430,13 @@ JSON (URL_TO_INSERT_RECORD-ABBREV_206 https://fairsharing.org/FAIRsharing.5bbab9
 The static site generator [HUGO](https://gohugo.io/) was used to create the 
 [covid19.ohdsi.app](https://covid19.ohdsi.app/) website. To populate the website with metadata, so-called
 [archetypes](https://gohugo.io/content-management/archetypes/) were created. These archetypes are content templates 
-that use the YAML format (URL_TO_INSERT_TERM_209 https://fairsharing.org/search?recordType=model_and_format) , as the JSON (URL_TO_INSERT_RECORD-ABBREV_212 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_213 https://fairsharing.org/FAIRsharing.8f9bbb)  format (URL_TO_INSERT_TERM_210 https://fairsharing.org/search?recordType=model_and_format)  is not the easiest format (URL_TO_INSERT_TERM_211 https://fairsharing.org/search?recordType=model_and_format)  to enter data, to manually populate the static
+that use the YAML format, as the JSON (URL_TO_INSERT_RECORD-ABBREV_109 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_110 https://fairsharing.org/FAIRsharing.8f9bbb)  format is not the easiest format to enter data, to manually populate the static
 website pages with metadata. Hence, these archetype templates are used for metadata instantiation of the website. 
 (see the previous sections of this recipe). 
 
-Part of the content is populated automatically, by scraping informat (URL_TO_INSERT_TERM_214 https://fairsharing.org/search?recordType=model_and_format) ion from the 
+Part of the content is populated automatically, by scraping information from the 
 [OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the 
-study-specific GitHub (URL_TO_INSERT_RECORD-NAME_218 https://fairsharing.org/FAIRsharing.c55d5e)  repositories (URL_TO_INSERT_TERM_215 https://fairsharing.org/search?recordType=repository) . The metadata in YAML is converted to JSON (URL_TO_INSERT_RECORD-ABBREV_216 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_217 https://fairsharing.org/FAIRsharing.8f9bbb)  in the back end of the website. 
+study-specific GitHub (URL_TO_INSERT_RECORD-NAME_113 https://fairsharing.org/FAIRsharing.c55d5e)  repositories. The metadata in YAML is converted to JSON (URL_TO_INSERT_RECORD-ABBREV_111 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_112 https://fairsharing.org/FAIRsharing.8f9bbb)  in the back end of the website. 
 In the front end of the website, this metadata is shown in a human-readable way. 
 
 The source code of the website can be found on [https://github.com/thehyve/ohdsi-covid19-site](https://github.com/thehyve/ohdsi-covid19-site). 
@@ -444,23 +444,23 @@ The source code of the website can be found on [https://github.com/thehyve/ohdsi
 
 ### Final result
 
-The final result of applying all these steps looks like this: an HTML (URL_TO_INSERT_RECORD-ABBREV_220 https://fairsharing.org/FAIRsharing.YugnuL)  page in the browser with JSON (URL_TO_INSERT_RECORD-ABBREV_219 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_221 https://fairsharing.org/FAIRsharing.8f9bbb)  metadata under
+The final result of applying all these steps looks like this: an HTML (URL_TO_INSERT_RECORD-ABBREV_115 https://fairsharing.org/FAIRsharing.YugnuL)  page in the browser with JSON (URL_TO_INSERT_RECORD-ABBREV_114 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_116 https://fairsharing.org/FAIRsharing.8f9bbb)  metadata under
 the hood. 
-A screenshot of the HTML (URL_TO_INSERT_RECORD-ABBREV_222 https://fairsharing.org/FAIRsharing.YugnuL)  page is presented in {numref}`ehden-ohdsi-figure6`.
+A screenshot of the HTML (URL_TO_INSERT_RECORD-ABBREV_117 https://fairsharing.org/FAIRsharing.YugnuL)  page is presented in {numref}`ehden-ohdsi-figure6`.
 
 ````{dropdown}
 :open:
 ```{figure} ehden-ohdsi.md-figure6.png
 ---
 name: ehden-ohdsi-figure6
-alt: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON (URL_TO_INSERT_RECORD-ABBREV_223 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_225 https://fairsharing.org/FAIRsharing.8f9bbb) " tab would allow to see the corresponding JSON (URL_TO_INSERT_RECORD-ABBREV_224 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_226 https://fairsharing.org/FAIRsharing.8f9bbb)  for this record.
+alt: This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON (URL_TO_INSERT_RECORD-ABBREV_118 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_120 https://fairsharing.org/FAIRsharing.8f9bbb) " tab would allow to see the corresponding JSON (URL_TO_INSERT_RECORD-ABBREV_119 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_121 https://fairsharing.org/FAIRsharing.8f9bbb)  for this record.
 ---
-This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON (URL_TO_INSERT_RECORD-ABBREV_227 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_229 https://fairsharing.org/FAIRsharing.8f9bbb) " tab would allow to see the corresponding JSON (URL_TO_INSERT_RECORD-ABBREV_228 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_230 https://fairsharing.org/FAIRsharing.8f9bbb)  for this record.
+This screenshot shows the "study" view of the Hugo covid19 app, here the entry "covid19icarius" (https://covid19.ohdsi.app/study/covid19icarius/). The selected tab shows collapsed details sections, whereas the "JSON (URL_TO_INSERT_RECORD-ABBREV_122 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_124 https://fairsharing.org/FAIRsharing.8f9bbb) " tab would allow to see the corresponding JSON (URL_TO_INSERT_RECORD-ABBREV_123 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_125 https://fairsharing.org/FAIRsharing.8f9bbb)  for this record.
 ```
 ````
 
-In the HTML (URL_TO_INSERT_RECORD-ABBREV_232 https://fairsharing.org/FAIRsharing.YugnuL)  page of the record, the HTML (URL_TO_INSERT_RECORD-ABBREV_233 https://fairsharing.org/FAIRsharing.YugnuL)  head element is augmented with a script element which embeds the same JSON (URL_TO_INSERT_RECORD-ABBREV_231 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_234 https://fairsharing.org/FAIRsharing.8f9bbb) 
-informat (URL_TO_INSERT_TERM_235 https://fairsharing.org/search?recordType=model_and_format) ion payload and makes it available to search engines’ crawlers.
+In the HTML (URL_TO_INSERT_RECORD-ABBREV_127 https://fairsharing.org/FAIRsharing.YugnuL)  page of the record, the HTML (URL_TO_INSERT_RECORD-ABBREV_128 https://fairsharing.org/FAIRsharing.YugnuL)  head element is augmented with a script element which embeds the same JSON (URL_TO_INSERT_RECORD-ABBREV_126 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_129 https://fairsharing.org/FAIRsharing.8f9bbb) 
+information payload and makes it available to search engines’ crawlers.
 
 Finally, with all this in place, one may now use the dedicated Google Dataset Search site to discover new covid-related
 datasets. {numref}`ehden-ohdsi-figure7` shows the ICARIUS dataset, which was highlighted in the previous sections, 
@@ -471,26 +471,26 @@ as indexed in Google Dataset Search.
 ```{figure} ehden-ohdsi.md-figure7.png
 ---
 name: ehden-ohdsi-figure7
-alt: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON (URL_TO_INSERT_RECORD-ABBREV_236 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_237 https://fairsharing.org/FAIRsharing.8f9bbb)  descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe. 
+alt: The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON (URL_TO_INSERT_RECORD-ABBREV_130 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_131 https://fairsharing.org/FAIRsharing.8f9bbb)  descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe. 
 ---
-The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON (URL_TO_INSERT_RECORD-ABBREV_238 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_239 https://fairsharing.org/FAIRsharing.8f9bbb)  descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
+The OHDSI covid19 datasets can be found in Google Dataset Search, because Google indexed the JSON (URL_TO_INSERT_RECORD-ABBREV_132 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_133 https://fairsharing.org/FAIRsharing.8f9bbb)  descriptions provided by the Hugo covid19 app. Highlighted is the ICARIUS study which was extensively discussed in this recipe.
 ```
 ````
 
 ## Conclusion
 
-The key reusable element in this recipe is the use of Schema.org (URL_TO_INSERT_RECORD-NAME_242 https://fairsharing.org/FAIRsharing.hzdzq8)  JSON (URL_TO_INSERT_RECORD-ABBREV_240 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_241 https://fairsharing.org/FAIRsharing.8f9bbb)  statements in any website to promote
+The key reusable element in this recipe is the use of Schema.org (URL_TO_INSERT_RECORD-NAME_136 https://fairsharing.org/FAIRsharing.hzdzq8)  JSON (URL_TO_INSERT_RECORD-ABBREV_134 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_135 https://fairsharing.org/FAIRsharing.8f9bbb)  statements in any website to promote
 findability of metadata in search engines. Using the Hugo site generator has the advantage that it is very versatile
 and includes a lot of scientific/blogging authoring tools out of the box. 
-However, the particular implementation of using YAML as input format (URL_TO_INSERT_TERM_243 https://fairsharing.org/search?recordType=model_and_format)  (which is ‘canonical Hugo’) and converting this 
-during the static website generation process to JSON (URL_TO_INSERT_RECORD-ABBREV_244 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_245 https://fairsharing.org/FAIRsharing.8f9bbb)  is quite laborious and also potentially introduces issues during
+However, the particular implementation of using YAML as input format (which is ‘canonical Hugo’) and converting this 
+during the static website generation process to JSON (URL_TO_INSERT_RECORD-ABBREV_137 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_138 https://fairsharing.org/FAIRsharing.8f9bbb)  is quite laborious and also potentially introduces issues during
 the conversion. Therefore, it is probably easier and more scalable to let the scientists write their metadata directly
-in JSON (URL_TO_INSERT_RECORD-ABBREV_246 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_247 https://fairsharing.org/FAIRsharing.8f9bbb) , helped by some good examples and templates, and the Hugo software could even be extended to facilitate 
+in JSON (URL_TO_INSERT_RECORD-ABBREV_139 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_140 https://fairsharing.org/FAIRsharing.8f9bbb) , helped by some good examples and templates, and the Hugo software could even be extended to facilitate 
 that as well.
 
-Another next step that could be taken, besides publishing the JSON (URL_TO_INSERT_RECORD-ABBREV_248 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_249 https://fairsharing.org/FAIRsharing.8f9bbb)  metadata directly on the web, is to wrap it 
+Another next step that could be taken, besides publishing the JSON (URL_TO_INSERT_RECORD-ABBREV_141 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_142 https://fairsharing.org/FAIRsharing.8f9bbb)  metadata directly on the web, is to wrap it 
 into a container such as [RO-CRATE](https://www.researchobject.org/ro-crate/) and publish these directly into a 
-scientific artefact repository (URL_TO_INSERT_TERM_250 https://fairsharing.org/search?recordType=repository) . This would also help to sustain the availability of the data, because for all its
+scientific artefact repository. This would also help to sustain the availability of the data, because for all its
 great properties, static websites only live as long as the web-host stays up, and the average website disappears after
 a few years. 
 Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service could be yet another remedy to fix this
