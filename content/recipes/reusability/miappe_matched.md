@@ -20,7 +20,7 @@
 Plant genotyping and phenotyping data are often used in combination to make evidence-based inferences about different 
 trait expressions. 
 A challenge here is not necessarily to collect the data, but to offer them in a stable way over the
-long term in public repositories with sufficient metadata information to make conclusions about them, in line with FAIR (URL_TO_INSERT_RECORD-ABBREV_2717 https://fairsharing.org/FAIRsharing.WWI10U) 
+long term in public repositories with sufficient metadata information to make conclusions about them, in line with FAIR (URL_TO_INSERT_RECORD-ABBREV_2427 https://fairsharing.org/FAIRsharing.WWI10U) 
 principles. 
 Since these repositories are often not linked directly, it is even more important to provide metadata that
 allows users to recognise these links by their identifiers.
@@ -31,13 +31,13 @@ The main objective of the recipe is to provide a means of submitting to public r
 data, with a particular focus on plants.  This includes:
 
     1) Submission of sample data and metadata information to BioSamples.
-    2) Submission of sequencing data and metadata to ENA (URL_TO_INSERT_RECORD-ABBREV_2718 https://fairsharing.org/FAIRsharing.dj8nt8) .
+    2) Submission of sequencing data and metadata to ENA (URL_TO_INSERT_RECORD-ABBREV_2428 https://fairsharing.org/FAIRsharing.dj8nt8) .
     3) Retrieval of the correct genome assembly for the genotyping experiment
-    4) Conversion of the resulting analysis file (in VCF (URL_TO_INSERT_RECORD-ABBREV_2720 https://fairsharing.org/FAIRsharing.cfzz0h)  format) to be FAIR (URL_TO_INSERT_RECORD-ABBREV_2719 https://fairsharing.org/FAIRsharing.WWI10U) 
-    5) Submission of the genotyping results to EVA (URL_TO_INSERT_RECORD-ABBREV_2721 https://fairsharing.org/FAIRsharing.6824pv) .
+    4) Conversion of the resulting analysis file (in VCF (URL_TO_INSERT_RECORD-ABBREV_2430 https://fairsharing.org/FAIRsharing.cfzz0h)  format) to be FAIR (URL_TO_INSERT_RECORD-ABBREV_2429 https://fairsharing.org/FAIRsharing.WWI10U) 
+    5) Submission of the genotyping results to EVA (URL_TO_INSERT_RECORD-ABBREV_2431 https://fairsharing.org/FAIRsharing.6824pv) .
 
 In terms of FAIRification goals, this means obtaining stable, resolvable  identifiers for the datasets and meeting
-community annotation requirements as expressed in the MIAPPE (URL_TO_INSERT_RECORD-ABBREV_2722 https://fairsharing.org/FAIRsharing.nd9ce9)  requirements. 
+community annotation requirements as expressed in the MIAPPE (URL_TO_INSERT_RECORD-ABBREV_2432 https://fairsharing.org/FAIRsharing.nd9ce9)  requirements. 
 
 ## Summary
 
@@ -46,7 +46,7 @@ fashion which work should be done and when. Special attention should be paid to 
 that will be deposited in different repositories as part of this recipe. A prerequisite for fully understanding
 this recipe is a basic knowledge of the [MIAPPE standard](https://fairsharing.org/bsg-s000543/). 
 
-The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF (URL_TO_INSERT_RECORD-ABBREV_2723 https://fairsharing.org/FAIRsharing.cfzz0h)  file is 
+The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF (URL_TO_INSERT_RECORD-ABBREV_2433 https://fairsharing.org/FAIRsharing.cfzz0h)  file is 
 also part of this recipe with examples and explanations (See details in Section 4.2).
 
 ## Graphical overview of the FAIRification Objectives
@@ -118,7 +118,7 @@ fields with sample traceability information.
 
 ### Step 2: Register sample material at BioSamples
 
-This is done in general through JSON (URL_TO_INSERT_RECORD-ABBREV_2724 https://fairsharing.org/FAIRsharing.5bbab9)  API ([Python](https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/python) 
+This is done in general through JSON (URL_TO_INSERT_RECORD-ABBREV_2434 https://fairsharing.org/FAIRsharing.5bbab9)  API ([Python](https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/python) 
 and [Shell](https://github.com/PBR/elixir-fondue-datathon/tree/master/test_data_set/BioSamples/scripts/shell) commands are also available).
 Refer to the official [documentation](https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_a_sample) for 
 the complete details, for training material and slides regarding this, refer to {footcite}`fondue_datathon`. 
@@ -127,14 +127,14 @@ Here is the proposed procedure:
 1. Create a user account
 
 First you need an account to submit samples to EMBL-EBI BioSamples database. We recommend new users, or those planning 
-to make downstream submissions to ENA (URL_TO_INSERT_RECORD-ABBREV_2725 https://fairsharing.org/FAIRsharing.dj8nt8) , to use the Webin Authentication service. You can create a Webin account using 
+to make downstream submissions to ENA (URL_TO_INSERT_RECORD-ABBREV_2435 https://fairsharing.org/FAIRsharing.dj8nt8) , to use the Webin Authentication service. You can create a Webin account using 
 [Webin web interface](https://www.ebi.ac.uk/ena/submit/sra/#home). 
 Please refer to [ENA documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html) 
 for more details about creating an account. 
 
-2. Login to the system and get a JSON (URL_TO_INSERT_RECORD-ABBREV_2726 https://fairsharing.org/FAIRsharing.5bbab9)  Web Token (JWT)
+2. Login to the system and get a JSON (URL_TO_INSERT_RECORD-ABBREV_2436 https://fairsharing.org/FAIRsharing.5bbab9)  Web Token (JWT)
 
-Webin uses JSON (URL_TO_INSERT_RECORD-ABBREV_2727 https://fairsharing.org/FAIRsharing.5bbab9)  Web Token (JWT) for authentication. Use your login credentials to retrieve a JWT. You can either use 
+Webin uses JSON (URL_TO_INSERT_RECORD-ABBREV_2437 https://fairsharing.org/FAIRsharing.5bbab9)  Web Token (JWT) for authentication. Use your login credentials to retrieve a JWT. You can either use 
 the Webin [Swagger interface](https://www.ebi.ac.uk/ena/submit/webin/auth/swagger-ui/index.html?configUrl=/ena/submit/webin/auth/v3/api-docs/swagger-config) 
 (A) or a programmatic method (B):
 
@@ -179,13 +179,13 @@ then archived in the institutional Laboratory Information Management System (LIM
 
 ### Step 4: Register and submit sequencing reads to ENA 
 
-Submit Sequencing reads to ENA (URL_TO_INSERT_RECORD-ABBREV_2728 https://fairsharing.org/FAIRsharing.dj8nt8) , using BioSamples IDs to identify material.
+Submit Sequencing reads to ENA (URL_TO_INSERT_RECORD-ABBREV_2438 https://fairsharing.org/FAIRsharing.dj8nt8) , using BioSamples IDs to identify material.
 
 
 #### 4.1 The Study
 
 To begin, you should register a study. Recall that a study describes the purpose of the work you have done, groups other
-objects beneath it, and controls when the data becomes public. A study is required for all submissions to ENA (URL_TO_INSERT_RECORD-ABBREV_2729 https://fairsharing.org/FAIRsharing.dj8nt8) .
+objects beneath it, and controls when the data becomes public. A study is required for all submissions to ENA (URL_TO_INSERT_RECORD-ABBREV_2439 https://fairsharing.org/FAIRsharing.dj8nt8) .
 
 1. Log in to the [Webin Submission Portal](https://www.ebi.ac.uk/ena/submit/sra/#home) with your Webin credentials.
  
@@ -224,7 +224,7 @@ submitting. The sample describes the source biological material of your sequenci
 
 As discussed above, **samples are best submitted through BioSamples**.
 
-In ENA (URL_TO_INSERT_RECORD-ABBREV_2730 https://fairsharing.org/FAIRsharing.dj8nt8) , samples are required to conform to a checklist of values. Checklists define a set of mandatory and recommended 
+In ENA (URL_TO_INSERT_RECORD-ABBREV_2440 https://fairsharing.org/FAIRsharing.dj8nt8) , samples are required to conform to a checklist of values. Checklists define a set of mandatory and recommended 
 descriptor fields for a given type of sample. It is recommended that you look at these early and make sure you collect 
 all required metadata items for the type of sample you will be registering.
 
@@ -238,9 +238,9 @@ button at the bottom of the page.
 2. Find the '**Register samples**' radio button and click **'Next'**.
 3. You must choose an appropriate checklist of values to be provided for your sample: click '**Select checklist**' and
 expand the '**Other checklists**' group to browse checklists of this type.
-4. Select the appropriate checklist. For general purposes ERC000037 (**‘ENA (URL_TO_INSERT_RECORD-ABBREV_2731 https://fairsharing.org/FAIRsharing.dj8nt8)  Plant Sample Checklist’**) should be the 
+4. Select the appropriate checklist. For general purposes ERC000037 (**‘ENA (URL_TO_INSERT_RECORD-ABBREV_2441 https://fairsharing.org/FAIRsharing.dj8nt8)  Plant Sample Checklist’**) should be the 
 default when submitting plant sequencing data. Now click '**Next**'.
-add an image of the web ui for https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD-HOMEPAGE_2732 https://fairsharing.org/FAIRsharing.dj8nt8) /browser/view/ERC000037
+add an image of the web ui for https://www.ebi.ac.uk/ena (URL_TO_INSERT_RECORD-HOMEPAGE_2442 https://fairsharing.org/FAIRsharing.dj8nt8) /browser/view/ERC000037
 5. Submitters now have the option of including additional fields in their checklist. It is not necessary to include any 
 additional fields, but you can take this opportunity to see which fields are included by default, what requirements they have, and what else is available.
 
@@ -348,9 +348,9 @@ Note that the use of template spreadsheets is the best way to submit multiple da
 Is a GCF / GCA accession number available ? Check on [https://www.ebi.ac.uk/ena/browser](https://www.ebi.ac.uk/ena/browser).
 
 
-* If yes, proceed directly to VCF (URL_TO_INSERT_RECORD-ABBREV_2733 https://fairsharing.org/FAIRsharing.cfzz0h)  submission at step 4.
+* If yes, proceed directly to VCF (URL_TO_INSERT_RECORD-ABBREV_2443 https://fairsharing.org/FAIRsharing.cfzz0h)  submission at step 4.
 * If no, [submit reference genome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html) 
-to [INSDC](https://www.insdc.org/) (NCBI Genbank / EMBL-EBI ENA (URL_TO_INSERT_RECORD-ABBREV_2735 https://fairsharing.org/FAIRsharing.dj8nt8)  / DDBJ (URL_TO_INSERT_RECORD-ABBREV_2734 https://fairsharing.org/FAIRsharing.k337f0) ) and wait until accession number is issued,
+to [INSDC](https://www.insdc.org/) (NCBI Genbank / EMBL-EBI ENA (URL_TO_INSERT_RECORD-ABBREV_2445 https://fairsharing.org/FAIRsharing.dj8nt8)  / DDBJ (URL_TO_INSERT_RECORD-ABBREV_2444 https://fairsharing.org/FAIRsharing.k337f0) ) and wait until accession number is issued,
  then proceed to step 4.
 
 
@@ -364,8 +364,8 @@ The bioinformatician performs the computational analysis, then the genotyping re
 
 ### Step 7: Prepare genotyping dataset for submission of VCF file to EVA
 
-In order to ensure interoperability of VCF (URL_TO_INSERT_RECORD-ABBREV_2736 https://fairsharing.org/FAIRsharing.cfzz0h)  files, in accordance with the good practice outlined in 
-{footcite}`beier_f1000r_2022`, the following VCF (URL_TO_INSERT_RECORD-ABBREV_2737 https://fairsharing.org/FAIRsharing.cfzz0h)  meta-information lines should be used:
+In order to ensure interoperability of VCF (URL_TO_INSERT_RECORD-ABBREV_2446 https://fairsharing.org/FAIRsharing.cfzz0h)  files, in accordance with the good practice outlined in 
+{footcite}`beier_f1000r_2022`, the following VCF (URL_TO_INSERT_RECORD-ABBREV_2447 https://fairsharing.org/FAIRsharing.cfzz0h)  meta-information lines should be used:
 
 
 #### Obligatory meta-information line :
@@ -378,14 +378,14 @@ In order to ensure interoperability of VCF (URL_TO_INSERT_RECORD-ABBREV_2736 htt
 
 #### Recommended meta-information lines :
 
-**##fileDate(Date)**: creation date of the VCF (URL_TO_INSERT_RECORD-ABBREV_2738 https://fairsharing.org/FAIRsharing.cfzz0h)  in the basic form without separator: YYYYMMDD 
+**##fileDate(Date)**: creation date of the VCF (URL_TO_INSERT_RECORD-ABBREV_2448 https://fairsharing.org/FAIRsharing.cfzz0h)  in the basic form without separator: YYYYMMDD 
 
 > Example:
 >  `##fileDate=20120921` 
 
-**##bioinformatics_source (URL (URL_TO_INSERT_RECORD-ABBREV_2740 https://fairsharing.org/FAIRsharing.9d38e2)  or URI (URL_TO_INSERT_RECORD-ABBREV_2739 https://fairsharing.org/FAIRsharing.d261e1) )**: Analytic approach usually consisting of chains of bioinformatics tools for 
-creating the VCF (URL_TO_INSERT_RECORD-ABBREV_2744 https://fairsharing.org/FAIRsharing.cfzz0h)  file specified as the DOI (URL_TO_INSERT_RECORD-ABBREV_2742 https://fairsharing.org/FAIRsharing.hFLKCn)  of a publication, or more generally as URL (URL_TO_INSERT_RECORD-ABBREV_2743 https://fairsharing.org/FAIRsharing.9d38e2) /UR (URL_TO_INSERT_RECORD-ABBREV_2741 https://fairsharing.org/FAIRsharing.d261e1) I, like a public repository for
-the scripts used. The preferred way to describe this would be to use WorkflowHub (URL_TO_INSERT_RECORD-NAME_2745 https://fairsharing.org/FAIRsharing.07cf72) .eu (possibly in CWL (URL_TO_INSERT_RECORD-ABBREV_2746 https://fairsharing.org/FAIRsharing.8y5ayx)  format) and to be
+**##bioinformatics_source (URL (URL_TO_INSERT_RECORD-ABBREV_2450 https://fairsharing.org/FAIRsharing.9d38e2)  or URI (URL_TO_INSERT_RECORD-ABBREV_2449 https://fairsharing.org/FAIRsharing.d261e1) )**: Analytic approach usually consisting of chains of bioinformatics tools for 
+creating the VCF (URL_TO_INSERT_RECORD-ABBREV_2454 https://fairsharing.org/FAIRsharing.cfzz0h)  file specified as the DOI (URL_TO_INSERT_RECORD-ABBREV_2452 https://fairsharing.org/FAIRsharing.hFLKCn)  of a publication, or more generally as URL (URL_TO_INSERT_RECORD-ABBREV_2453 https://fairsharing.org/FAIRsharing.9d38e2) /UR (URL_TO_INSERT_RECORD-ABBREV_2451 https://fairsharing.org/FAIRsharing.d261e1) I, like a public repository for
+the scripts used. The preferred way to describe this would be to use WorkflowHub (URL_TO_INSERT_RECORD-NAME_2455 https://fairsharing.org/FAIRsharing.07cf72) .eu (possibly in CWL (URL_TO_INSERT_RECORD-ABBREV_2456 https://fairsharing.org/FAIRsharing.8y5ayx)  format) and to be
 fully transparent about the bioinformatics toolchain used to generate the results.
 
 > Example:
@@ -393,12 +393,12 @@ fully transparent about the bioinformatics toolchain used to generate the result
 
 
 **##reference_ac (assembly_accession)**: accession number, including the version, of the reference sequence on 
-which the variation data of the present VCF (URL_TO_INSERT_RECORD-ABBREV_2747 https://fairsharing.org/FAIRsharing.cfzz0h)  is based. 
+which the variation data of the present VCF (URL_TO_INSERT_RECORD-ABBREV_2457 https://fairsharing.org/FAIRsharing.cfzz0h)  is based. 
 
 > Example: 
 > ` ##reference_ac=GCA_902498975.1  `
 
-**##reference_url (DOI (URL_TO_INSERT_RECORD-ABBREV_2749 https://fairsharing.org/FAIRsharing.hFLKCn) )**: a DOI (URL_TO_INSERT_RECORD-ABBREV_2750 https://fairsharing.org/FAIRsharing.hFLKCn)  (or URL (URL_TO_INSERT_RECORD-ABBREV_2751 https://fairsharing.org/FAIRsharing.9d38e2) /UR (URL_TO_INSERT_RECORD-ABBREV_2748 https://fairsharing.org/FAIRsharing.d261e1) I) for downloading of this reference genome, preferably from one INSDC archive. 
+**##reference_url (DOI (URL_TO_INSERT_RECORD-ABBREV_2459 https://fairsharing.org/FAIRsharing.hFLKCn) )**: a DOI (URL_TO_INSERT_RECORD-ABBREV_2460 https://fairsharing.org/FAIRsharing.hFLKCn)  (or URL (URL_TO_INSERT_RECORD-ABBREV_2461 https://fairsharing.org/FAIRsharing.9d38e2) /UR (URL_TO_INSERT_RECORD-ABBREV_2458 https://fairsharing.org/FAIRsharing.d261e1) I) for downloading of this reference genome, preferably from one INSDC archive. 
 
 > Example: 
 > `##reference_url="ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/498/975/GCA_902498975.1_Morex_v2.0/GCA_902498975.1_Morex_v2.0_genomic.fna.gz"` 
@@ -410,28 +410,28 @@ The individual sequence(s) of the reference genome.
 > Example: 
 > `##contig=<ID=chr1H,length=522466905,assembly=GCA_902498975.1,md5=8d21a35cc68340ecf40e2a8dec9428fa,species=NCBITaxon:4513>`
 
-**##SAMPLE(<ID=$BioSample_accession, DOI (URL_TO_INSERT_RECORD-ABBREV_2752 https://fairsharing.org/FAIRsharing.hFLKCn) =$url, ext_ID=$registry:identifier>)** : Describe the material whose variants 
-are given in the genotype call columns in greater detail and can be extended using the specifications of the VCF (URL_TO_INSERT_RECORD-ABBREV_2753 https://fairsharing.org/FAIRsharing.cfzz0h)  format.
+**##SAMPLE(<ID=$BioSample_accession, DOI (URL_TO_INSERT_RECORD-ABBREV_2462 https://fairsharing.org/FAIRsharing.hFLKCn) =$url, ext_ID=$registry:identifier>)** : Describe the material whose variants 
+are given in the genotype call columns in greater detail and can be extended using the specifications of the VCF (URL_TO_INSERT_RECORD-ABBREV_2463 https://fairsharing.org/FAIRsharing.cfzz0h)  format.
 
-In case no DOI (URL_TO_INSERT_RECORD-ABBREV_2754 https://fairsharing.org/FAIRsharing.hFLKCn)  exists and the material is held by a FAO (URL_TO_INSERT_RECORD-ABBREV_2755 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS ([https://www.fao.org/wiews/background/en/](https://www.fao.org/wiews/background/en/)) 
-recognised institution, the external ID consists of the FAO (URL_TO_INSERT_RECORD-ABBREV_2756 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS instcode, the genus and the accession number (see example 2).
-If the database is not registered with FAO (URL_TO_INSERT_RECORD-ABBREV_2758 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS and is not available under a DOI (URL_TO_INSERT_RECORD-ABBREV_2757 https://fairsharing.org/FAIRsharing.hFLKCn) , the DNS of the holding institution,
+In case no DOI (URL_TO_INSERT_RECORD-ABBREV_2464 https://fairsharing.org/FAIRsharing.hFLKCn)  exists and the material is held by a FAO (URL_TO_INSERT_RECORD-ABBREV_2465 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS ([https://www.fao.org/wiews/background/en/](https://www.fao.org/wiews/background/en/)) 
+recognised institution, the external ID consists of the FAO (URL_TO_INSERT_RECORD-ABBREV_2466 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS instcode, the genus and the accession number (see example 2).
+If the database is not registered with FAO (URL_TO_INSERT_RECORD-ABBREV_2468 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS and is not available under a DOI (URL_TO_INSERT_RECORD-ABBREV_2467 https://fairsharing.org/FAIRsharing.hFLKCn) , the DNS of the holding institution,
 the database identifier, the identifier scheme and the identifier value should be provided (see example 3).
 For multiple external IDs the field should be used multiple times (delimited by commas). 
 
 > Examples:
 >
-> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with a DOI (URL_TO_INSERT_RECORD-ABBREV_2759 https://fairsharing.org/FAIRsharing.hFLKCn)  registered.
+> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with a DOI (URL_TO_INSERT_RECORD-ABBREV_2469 https://fairsharing.org/FAIRsharing.hFLKCn)  registered.
 >
->       `##SAMPLE=<ID=SAMEA104646767,DO (URL_TO_INSERT_RECORD-ABBREV_2760 https://fairsharing.org/FAIRsharing.hFLKCn) I="doi.org/10.25642/IPK/GBIS/7811152">`
+>       `##SAMPLE=<ID=SAMEA104646767,DO (URL_TO_INSERT_RECORD-ABBREV_2470 https://fairsharing.org/FAIRsharing.hFLKCn) I="doi.org/10.25642/IPK/GBIS/7811152">`
 >
 > 
-> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with the FAO (URL_TO_INSERT_RECORD-ABBREV_2762 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS code available but no DOI (URL_TO_INSERT_RECORD-ABBREV_2761 https://fairsharing.org/FAIRsharing.hFLKCn) .
+> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with the FAO (URL_TO_INSERT_RECORD-ABBREV_2472 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS code available but no DOI (URL_TO_INSERT_RECORD-ABBREV_2471 https://fairsharing.org/FAIRsharing.hFLKCn) .
 >
 >       `##SAMPLE=<ID=SAMEA104646767,ext_ID="DEU146:Hordeum:HOR 1361 BRG">`
 > 
 > 
-> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with no DOI (URL_TO_INSERT_RECORD-ABBREV_2763 https://fairsharing.org/FAIRsharing.hFLKCn)  and no FAO (URL_TO_INSERT_RECORD-ABBREV_2764 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS code available.
+> * One genotype from a barley (_Hordeum vulgare_) GBS experiment with no DOI (URL_TO_INSERT_RECORD-ABBREV_2473 https://fairsharing.org/FAIRsharing.hFLKCn)  and no FAO (URL_TO_INSERT_RECORD-ABBREV_2474 https://fairsharing.org/FAIRsharing.xs6t67) -WIEWS code available.
 > 
 >       ##SAMPLE=<ID=SAMEA104646767,ext_ID="ipk-gatersleben.de:GBIS:akzessionId:7811152">
 > 
@@ -442,8 +442,8 @@ Please check the official format specifications to avoid redundancy and possible
 
 ### Step 8: Submit VCF file to EVA
 
-Once the metadata and data has been formatted according to the specifications above, make sure that the resulting VCF (URL_TO_INSERT_RECORD-ABBREV_2765 https://fairsharing.org/FAIRsharing.cfzz0h)  
-file complies with VCF (URL_TO_INSERT_RECORD-ABBREV_2766 https://fairsharing.org/FAIRsharing.cfzz0h)  specifications. 
+Once the metadata and data has been formatted according to the specifications above, make sure that the resulting VCF (URL_TO_INSERT_RECORD-ABBREV_2475 https://fairsharing.org/FAIRsharing.cfzz0h)  
+file complies with VCF (URL_TO_INSERT_RECORD-ABBREV_2476 https://fairsharing.org/FAIRsharing.cfzz0h)  specifications. 
 For that purpose, we propose the [VCF validator tool on GitHub](https://github.com/EBIvariation/vcf-validator)  
 
 ```bash
@@ -454,16 +454,16 @@ vcf_validator -i /path/to/file.vcf
 vcf_validator -i /path/to/compressed_file.vcf.gz
 ```
 
-Once the file has been fully validated without any error messages, you can submit the VCF (URL_TO_INSERT_RECORD-ABBREV_2768 https://fairsharing.org/FAIRsharing.cfzz0h)  file to EVA (URL_TO_INSERT_RECORD-ABBREV_2767 https://fairsharing.org/FAIRsharing.6824pv) , using 
-BioSamples IDs to identify the material, GCF/GCA accession for the reference genome assembly, and ENA (URL_TO_INSERT_RECORD-ABBREV_2769 https://fairsharing.org/FAIRsharing.dj8nt8)  accession numbers
+Once the file has been fully validated without any error messages, you can submit the VCF (URL_TO_INSERT_RECORD-ABBREV_2478 https://fairsharing.org/FAIRsharing.cfzz0h)  file to EVA (URL_TO_INSERT_RECORD-ABBREV_2477 https://fairsharing.org/FAIRsharing.6824pv) , using 
+BioSamples IDs to identify the material, GCF/GCA accession for the reference genome assembly, and ENA (URL_TO_INSERT_RECORD-ABBREV_2479 https://fairsharing.org/FAIRsharing.dj8nt8)  accession numbers
 for the sequencing reads of the material used. Refer to the official [documentation](https://www.ebi.ac.uk/eva/?Submit-Data).
    
  
 ## Conclusion
-At this point, the VCF (URL_TO_INSERT_RECORD-ABBREV_2770 https://fairsharing.org/FAIRsharing.cfzz0h)  contains metadata and data formatted for the purpose of better discoverability and higher 
+At this point, the VCF (URL_TO_INSERT_RECORD-ABBREV_2480 https://fairsharing.org/FAIRsharing.cfzz0h)  contains metadata and data formatted for the purpose of better discoverability and higher 
 interoperability. 
 Data could thus be more easily read and evaluated automatically by machines, and it is made easier to 
-connect different data sources with each other, so that in general a higher degree of FAIR (URL_TO_INSERT_RECORD-ABBREV_2771 https://fairsharing.org/FAIRsharing.WWI10U)  has been achieved.
+connect different data sources with each other, so that in general a higher degree of FAIR (URL_TO_INSERT_RECORD-ABBREV_2481 https://fairsharing.org/FAIRsharing.WWI10U)  has been achieved.
 
 ### What to read next? 
 

@@ -39,7 +39,7 @@ The recipe will cover the following elements:
 :open:
 ```{figure} approach-cdisc.md-figure0.mmd.png
 ---
-name: approach-cdis (URL_TO_INSERT_RECORD-NAME_11 https://fairsharing.org/3525) c-figure0
+name: approach-cdisc-figure0
 height: 1000 px
 alt: Recipe Steps
 ---
@@ -57,7 +57,7 @@ Recipe Steps
    * Knowledge of relational databases is an advantage
    * Fluency in a scripting language such as bash, Python or R
 * Knowledge requirement:
-   * A thorough understanding of CDISC (URL_TO_INSERT_RECORD-NAME_13 https://fairsharing.org/3525)  standards, in particular CDISC (URL_TO_INSERT_RECORD-NAME_14 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_12 https://fairsharing.org/FAIRsharing.s51qk5) , is essential
+   * A thorough understanding of CDISC (URL_TO_INSERT_RECORD-NAME_12 https://fairsharing.org/3525)  standards, in particular CDISC (URL_TO_INSERT_RECORD-NAME_13 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_11 https://fairsharing.org/FAIRsharing.s51qk5) , is essential
    * understanding of what a  [data dictionary](../interoperability/creating-data-dictionary.md) is.
    
 
@@ -76,7 +76,7 @@ Recipe Steps
 
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
-| [CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm)  |  [CDISC (URL_TO_INSERT_RECORD-NAME_15 https://fairsharing.org/3525)  terminology](https://www.cdisc.org/standards/terminology/controlled-terminology) | |
+| [CDISC-SDTM](https://www.cdisc.org/standards/foundational/sdtm)  |  [CDISC (URL_TO_INSERT_RECORD-NAME_14 https://fairsharing.org/3525)  terminology](https://www.cdisc.org/standards/terminology/controlled-terminology) | |
 | [CDISC-SDTM v2](https://www.cdisc.org/standards/foundational/sdtm/sdtm-v2-0)| | |
 | [CDISC-SDTMIG 3.4](https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4)| | |
 ---
@@ -125,7 +125,7 @@ Once a good understanding of the data dictionary has been gained, the main domai
 data need to be identified. Common domains that will occur in most clinical trial datasets include Demographics (DM), 
 Medical History (MH), Laboratory Test Results (LB), Adverse Events (AE) and Vital Signs (VS).
 
-* The ABIRISK data dictionary already used a similar setup to CDISC (URL_TO_INSERT_RECORD-NAME_17 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_16 https://fairsharing.org/FAIRsharing.s51qk5) , which made this step relatively straight-forward. 
+* The ABIRISK data dictionary already used a similar setup to CDISC (URL_TO_INSERT_RECORD-NAME_16 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_15 https://fairsharing.org/FAIRsharing.s51qk5) , which made this step relatively straight-forward. 
 * The APPROACH data dictionary on the other hand used categories that, while providing a clear structure to the data, 
 did not align directly with SDTMIG domains. This made the identification of appropriate domains more difficult and the
 initial list had to be revised several times during the variable mapping process, when variables were identified that 
@@ -141,8 +141,8 @@ Mapping of data dictionary properties to SDTMIG variables falls into several cat
 * Splitting - a property from the dataset needs to be split into component parts. This is commonly the case if values and units were captured together in the same field.
 * Derivation - some values might be derived from another value, for example using a logical decision tree "if A=x, then value=y" or transformed, e.g. converting a laboratory result reported in non-standard units into standard units.
 * Fixed value - an implicit field in the original dataset may correspond to a fixed value for an SDTMIG variable. In the APPROACH dataset, the demographics property "Age" has the unit "years" implied in the property description as the inclusion criteria for the trial specify adult subjects only. DM.AGEU is a required value so in this particular conversion, "YEARS" is set a fixed value.
-* One-to-many/many-to-one - In some cases, a single property might map (URL_TO_INSERT_RECORD-NAME_18 https://fairsharing.org/FAIRsharing.53edcc)  to multiple SDTMIG variables, depending on the corresponding value in the dataset. Equally, multiple properties may map (URL_TO_INSERT_RECORD-NAME_19 https://fairsharing.org/FAIRsharing.53edcc)  to the same SDTMIG variable. 
-* Unmappable properties - some project-specific properties may not have an equivalent SDTMIG variable at all. If the property and its values are important for the interpretation of the dataset overall, this scenario may require the creation of a custom domain. Equally however, some properties may simply be out of scope of SDTM. The APPROACH data dictionary contains a number of such properties, including checks whether a given CRF (URL_TO_INSERT_RECORD-ABBREV_20 https://fairsharing.org/FAIRsharing.1ece03) , examination or questionnaire was completed or sample collected, and properties to identify the coder or analyst. 
+* One-to-many/many-to-one - In some cases, a single property might map (URL_TO_INSERT_RECORD-NAME_17 https://fairsharing.org/FAIRsharing.53edcc)  to multiple SDTMIG variables, depending on the corresponding value in the dataset. Equally, multiple properties may map (URL_TO_INSERT_RECORD-NAME_18 https://fairsharing.org/FAIRsharing.53edcc)  to the same SDTMIG variable. 
+* Unmappable properties - some project-specific properties may not have an equivalent SDTMIG variable at all. If the property and its values are important for the interpretation of the dataset overall, this scenario may require the creation of a custom domain. Equally however, some properties may simply be out of scope of SDTM. The APPROACH data dictionary contains a number of such properties, including checks whether a given CRF (URL_TO_INSERT_RECORD-ABBREV_19 https://fairsharing.org/FAIRsharing.1ece03) , examination or questionnaire was completed or sample collected, and properties to identify the coder or analyst. 
 * Auto-generated - some SDTM variables such as "STUDYID" or sequence ID ("-SEQ") will likely not be encoded directly in the dataset and need to be autogenerated or autocompleted during the data transformation process.
 
 
@@ -175,8 +175,8 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 
 ## Conclusion
 
-* We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC (URL_TO_INSERT_RECORD-NAME_21 https://fairsharing.org/3525) -SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
-* The CDISC (URL_TO_INSERT_RECORD-NAME_23 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_22 https://fairsharing.org/FAIRsharing.s51qk5)  standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
+* We presented an overview of our approach to mapping project-specific data dictionaries to the CDISC (URL_TO_INSERT_RECORD-NAME_20 https://fairsharing.org/3525) -SDTMIG with a view to transforming the corresponding datasets to be SDTM-compliant.
+* The CDISC (URL_TO_INSERT_RECORD-NAME_22 https://fairsharing.org/3525) -SDTM (URL_TO_INSERT_RECORD-ABBREV_21 https://fairsharing.org/FAIRsharing.s51qk5)  standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
 * The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
 
 ### What to read next?

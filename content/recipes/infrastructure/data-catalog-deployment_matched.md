@@ -59,7 +59,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 **(local)** and **(web container)** indicate context of execution.
 
-* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_956 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
+* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_786 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
 
 ```bash
 $ cd docker/nginx/
@@ -71,7 +71,7 @@ $ ./generate_keys.sh
 This command relies on OpenSSL. If you don't plan to use HTTPS or just want to see demo running, you can skip this.
 
 ```{warning}
-⚡ However, be aware that skipping this would cause the HTTPS (URL_TO_INSERT_RECORD-ABBREV_957 https://fairsharing.org/FAIRsharing.cd2f9e)  connection to be unsafe!
+⚡ However, be aware that skipping this would cause the HTTPS connection to be unsafe!
 ```
 
 ````
@@ -83,7 +83,7 @@ $ cd ../..
 $ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
-* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_958 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
+* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_787 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
 in **Python**, use the following to generate this key:
 
 ```python

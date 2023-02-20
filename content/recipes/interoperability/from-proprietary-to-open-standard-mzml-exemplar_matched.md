@@ -135,7 +135,7 @@ drwxr-xr-x  118 bob  staff    3776 14 Jan 15:53 data
 
 ### Step 3: Convert vendor specific format to an open format
 
-One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_RECORD-NAME_1810 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI (URL_TO_INSERT_RECORD-ABBREV_1811 https://fairsharing.org/FAIRsharing.hFLKCn) ), https://fairsharing.org (URL_TO_INSERT_RECORD-HOMEPAGE_1814 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD-HOMEPAGE_1815 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD-HOMEPAGE_1816 https://fairsharing.org/3538) /FAIRsharing.26dmba for HUPO-PSI (URL_TO_INSERT_RECORD-ABBREV_1813 https://fairsharing.org/3514)  mzML (URL_TO_INSERT_RECORD-ABBREV_1812 https://fairsharing.org/FAIRsharing.26dmba)  specifications.
+One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of standards and resources to discover if an open specification exists in the domain of mass spectrometry. In this case, there is as shown below. Note that every records in the catalog has a digital object identifier (URL_TO_INSERT_RECORD-NAME_1607 https://fairsharing.org/FAIRsharing.hFLKCn)  (DOI (URL_TO_INSERT_RECORD-ABBREV_1608 https://fairsharing.org/FAIRsharing.hFLKCn) ), https://fairsharing.org (URL_TO_INSERT_RECORD-HOMEPAGE_1611 https://fairsharing.org/3518)  (URL_TO_INSERT_RECORD-HOMEPAGE_1612 https://fairsharing.org/3536)  (URL_TO_INSERT_RECORD-HOMEPAGE_1613 https://fairsharing.org/3538) /FAIRsharing.26dmba for HUPO-PSI (URL_TO_INSERT_RECORD-ABBREV_1610 https://fairsharing.org/3514)  mzML (URL_TO_INSERT_RECORD-ABBREV_1609 https://fairsharing.org/FAIRsharing.26dmba)  specifications.
 
 <!-- <div>
   <img src="/images/AWOWTbr.png" width="750" link="https://fairsharing.org/FAIRsharing.26dmba">
@@ -147,10 +147,10 @@ One can consult the Elixir-UK [FAIRsharing catalog](https://fairsharing.org/) of
 ```{figure} /images/AWOWTbr.png
 ---
 width: 750px
-name: A Standard Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_1817 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
-alt: A Standard Record in the FAIRsharing (URL_TO_INSERT_RECORD-NAME_1818 https://fairsharing.org/FAIRsharing.2abjs5)  catalog of resources
+name: A Standard Record in the FAIRsharing catalog of resources
+alt: A Standard Record in the FAIRsharing catalog of resources
 ---
-The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing (URL_TO_INSERT_RECORD-NAME_1819 https://fairsharing.org/FAIRsharing.2abjs5)  catalog](https://fairsharing.org/) of resources.
+The [HUPI-PSI mzML Standard Record](https://fairsharing.org/FAIRsharing.26dmba) in the [Elixir FAIRsharing catalog](https://fairsharing.org/) of resources.
 ```
 ````
 
@@ -179,7 +179,7 @@ on a MacOS system, invoke the following:
 
 #### 4. pull the docker container for ProteoWizard
 
-:warning: be sure to sign-up and login to https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1820 https://fairsharing.org/FAIRsharing.afc2b3) /
+:warning: be sure to sign-up and login to https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1614 https://fairsharing.org/FAIRsharing.afc2b3) /
 
 ```bash
 >docker pull chambm/pwiz-i-agree-to-the-vendor-licenses
@@ -187,7 +187,7 @@ on a MacOS system, invoke the following:
 
 * In order to be able to reach
 
-https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1821 https://fairsharing.org/FAIRsharing.afc2b3) /r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
+https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1615 https://fairsharing.org/FAIRsharing.afc2b3) /r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 
 
 * Run the Proteowizard `pwiz tool` from the container over the WATERS raw data, by issueing the following command from the terminal:
@@ -199,9 +199,9 @@ https://hub.docker.com (URL_TO_INSERT_RECORD-HOMEPAGE_1821 https://fairsharing.o
 The command explained:
 
 
-By essence, the resulting mzML (URL_TO_INSERT_RECORD-ABBREV_1822 https://fairsharing.org/FAIRsharing.26dmba)  files generated during the conversion are syntactically valid documents as the `pwiz` performs validation against the mzml xml schema during the serialization.
+By essence, the resulting mzML (URL_TO_INSERT_RECORD-ABBREV_1616 https://fairsharing.org/FAIRsharing.26dmba)  files generated during the conversion are syntactically valid documents as the `pwiz` performs validation against the mzml xml schema during the serialization.
 
-In some situations, the conversion will fails and no mzML (URL_TO_INSERT_RECORD-ABBREV_1823 https://fairsharing.org/FAIRsharing.26dmba)  output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:
+In some situations, the conversion will fails and no mzML (URL_TO_INSERT_RECORD-ABBREV_1617 https://fairsharing.org/FAIRsharing.26dmba)  output will be generated. Various reasons can explain failure to convert. The most common ones are corrupted:
  - raw data files 
  - unsupported vendor format
 
@@ -232,7 +232,7 @@ To address the latter, one should consult the table of compatibility:
 
 For users unfamiliar with format, a search via popular search engine will yield options. Alternately, users may consult the Elixir Biotools registry for suggestions.
 
-A number of libraries are available for parsing (reading and writing) `mzML (URL_TO_INSERT_RECORD-ABBREV_1826 https://fairsharing.org/FAIRsharing.26dmba) ` document. `mzML (URL_TO_INSERT_RECORD-ABBREV_1827 https://fairsharing.org/FAIRsharing.26dmba) ` is a king of `XML (URL_TO_INSERT_RECORD-ABBREV_1824 https://fairsharing.org/FAIRsharing.b5cc91) ` format for which an XML (URL_TO_INSERT_RECORD-ABBREV_1825 https://fairsharing.org/FAIRsharing.b5cc91)  schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
+A number of libraries are available for parsing (reading and writing) `mzML (URL_TO_INSERT_RECORD-ABBREV_1620 https://fairsharing.org/FAIRsharing.26dmba) ` document. `mzML (URL_TO_INSERT_RECORD-ABBREV_1621 https://fairsharing.org/FAIRsharing.26dmba) ` is a king of `XML (URL_TO_INSERT_RECORD-ABBREV_1618 https://fairsharing.org/FAIRsharing.b5cc91) ` format for which an XML (URL_TO_INSERT_RECORD-ABBREV_1619 https://fairsharing.org/FAIRsharing.b5cc91)  schema has been defined and allows syntactic validation through standard library in languages such as java, c++ or python. The top hit corresponds the the `pymzml` library {footcite}`Bald2012`.
 
 <!-- <div>
 <img src="/images/BTs0GUS.png" width="750" border="1"/>
@@ -291,11 +291,11 @@ The Python `pymzml` library rendering of a spectrum as extracted from an mzml fo
 ```
 ````
 
-In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML (URL_TO_INSERT_RECORD-ABBREV_1828 https://fairsharing.org/FAIRsharing.26dmba)  documents. But in the following, we'll show how to read an mzML (URL_TO_INSERT_RECORD-ABBREV_1829 https://fairsharing.org/FAIRsharing.26dmba)  file using a python library.
+In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML (URL_TO_INSERT_RECORD-ABBREV_1622 https://fairsharing.org/FAIRsharing.26dmba)  documents. But in the following, we'll show how to read an mzML (URL_TO_INSERT_RECORD-ABBREV_1623 https://fairsharing.org/FAIRsharing.26dmba)  file using a python library.
 
 ## Conclusion
 
-In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the [Elixir UK](https://elixir-europe.org/about-us/who-we-are/nodes/uk) [FAIRsharing (URL_TO_INSERT_RECORD-NAME_1830 https://fairsharing.org/FAIRsharing.2abjs5)  registry](https://fairsharing.org), it is possible to identify if such open format specifications are available.
+In this recipe, we have shown how to convert a proprietary file format to an open standard format, using the exemplar situation of mass spectrometry data. Of course, there are many domain specific data formats and unfortunately not all benefit from the support of open source / open format communities. However by consulting the [Elixir UK](https://elixir-europe.org/about-us/who-we-are/nodes/uk) [FAIRsharing (URL_TO_INSERT_RECORD-NAME_1624 https://fairsharing.org/FAIRsharing.2abjs5)  registry](https://fairsharing.org), it is possible to identify if such open format specifications are available.
 Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be also possible to retrieve libraries and software components allowing manipulations of such format.
 
 

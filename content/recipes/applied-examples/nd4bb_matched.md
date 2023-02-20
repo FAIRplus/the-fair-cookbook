@@ -47,12 +47,12 @@ This is one of the first recipes within the FAIRplus project, and served as a pi
 	* Data curation tools: Excel, Java
 	* FAIRification pipeline tools: KNIME workflow
 	* Ontology recommender: [ZOOMA](https://www.ebi.ac.uk/spot/zooma/), [NCBO](https://bioportal.bioontology.org/)
-	* FAIR (URL_TO_INSERT_RECORD-ABBREV_351 https://fairsharing.org/FAIRsharing.WWI10U)  assessment: RDA (URL_TO_INSERT_RECORD-ABBREV_350 https://fairsharing.org/FAIRsharing.2g5kcb)  indicators
+	* FAIR (URL_TO_INSERT_RECORD-ABBREV_229 https://fairsharing.org/FAIRsharing.WWI10U)  assessment: RDA (URL_TO_INSERT_RECORD-ABBREV_228 https://fairsharing.org/FAIRsharing.2g5kcb)  indicators
 
 
 ## Objectives
 
-The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data into a public repository using machine readable format, as well as improvement of some FAIR (URL_TO_INSERT_RECORD-ABBREV_352 https://fairsharing.org/FAIRsharing.WWI10U)  parameters.
+The current AMR dataset is stored in a local webpage at UNICA. We make the AMR data more accessible by extracting the data into a public repository using machine readable format, as well as improvement of some FAIR (URL_TO_INSERT_RECORD-ABBREV_230 https://fairsharing.org/FAIRsharing.WWI10U)  parameters.
 
 
 ## Step by Step Process
@@ -60,9 +60,9 @@ The current AMR dataset is stored in a local webpage at UNICA. We make the AMR d
 
 ### Dataset description
 
-The AMR database consists of several nested static HTML (URL_TO_INSERT_RECORD-ABBREV_353 https://fairsharing.org/FAIRsharing.YugnuL)  pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and a machine-readable data set should be easily created.
+The AMR database consists of several nested static HTML (URL_TO_INSERT_RECORD-ABBREV_231 https://fairsharing.org/FAIRsharing.YugnuL)  pages. The information is well structured, results are mainly quantitative numeric data, and for all compounds a complete set of data is available. Thus, it should be easily linkable to other public sources (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and a machine-readable data set should be easily created.
 
-To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes three types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results (URL_TO_INSERT_RECORD-NAME_354 https://fairsharing.org/FAIRsharing.QlUiql) . The descriptive metadata is always stored in a free-text format without data structure. 
+To get a good understanding of the AMR dataset, the AMR metadata shall be extracted. The AMR metadata includes three types of metadata: structural metadata, administrative metadata, and descriptive metadata. The structural metadata describes the structure of the dataset, for examples, column names and/or IDs. Administrative metadata contains the author, organization, and other provenance information. The descriptive metadata includes the procedure, usually protocols, in generating the experimental results (URL_TO_INSERT_RECORD-NAME_232 https://fairsharing.org/FAIRsharing.QlUiql) . The descriptive metadata is always stored in a free-text format without data structure. 
 
 {numref}`nd4bb-figure1` is an example of the simplified schematic workflow of FAIRification, which includes the extraction, the transformation, the annotation, the licensing and the identifier assigning process. Due to time constraint, we focussed on the extraction and annotation of structural metadata. The administrative and the descriptive metadata will be added in the future.
 
@@ -81,9 +81,9 @@ Schematic workflow of the general FAIRification pipeline. Some steps need repeti
 
 ### Data extraction
 
-Data are extracted using a [KNIME workflow provided here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), with which we can visualize the data extraction steps, handle (URL_TO_INSERT_RECORD-NAME_355 https://fairsharing.org/FAIRsharing.0b7e54)  complex data extraction workflows and be easily reproduced. 
+Data are extracted using a [KNIME workflow provided here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_ANTIMICROBIAL_COMPOUNDS_DATABASE_Cagliari_V4.knwf), with which we can visualize the data extraction steps, handle (URL_TO_INSERT_RECORD-NAME_233 https://fairsharing.org/FAIRsharing.0b7e54)  complex data extraction workflows and be easily reproduced. 
 
-{numref}`nd4bb-figure2` is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML (URL_TO_INSERT_RECORD-ABBREV_356 https://fairsharing.org/FAIRsharing.YugnuL)  heading level 3 (\<h3\>, shown in the red box in {numref}`nd4bb-figure3`) and compounds as an unordered list (\<ul\>, shown in the yellow box in {numref}`nd4bb-figure3`).
+{numref}`nd4bb-figure2` is a screenshot of the ND4BB website, which is structured into a central part (the blue section) with data and two side columns with additional information. Here, we focus on data extraction from the central part. The central part of the home page consists of a single table with compound class names as table data configured as HTML (URL_TO_INSERT_RECORD-ABBREV_234 https://fairsharing.org/FAIRsharing.YugnuL)  heading level 3 (\<h3\>, shown in the red box in {numref}`nd4bb-figure3`) and compounds as an unordered list (\<ul\>, shown in the yellow box in {numref}`nd4bb-figure3`).
 
 ````{dropdown}
 :open:
@@ -112,7 +112,7 @@ Snapshot of the AMR compound database home page source code. The red box shows t
 
 We first identified all websites that contain the project data. The homepage ({numref}`nd4bb-figure2`) describes the compound name, the compound class and links to the compound subpage. Such information was generated using the Xpath nodes in the workflow in {numref}`nd4bb-figure4`. 
 
-Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by HTML (URL_TO_INSERT_RECORD-ABBREV_357 https://fairsharing.org/FAIRsharing.YugnuL)  \<td\>…\</td\>, chemical “Oxazolidinones” and “Tetracyclines” use different data structure. Therefore the extracted XML (URL_TO_INSERT_RECORD-ABBREV_358 https://fairsharing.org/FAIRsharing.b5cc91)  document was updated before applying further nodes to the XML (URL_TO_INSERT_RECORD-ABBREV_359 https://fairsharing.org/FAIRsharing.b5cc91)  document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. 
+Data structure discrepancy was found in the extraction. In the compound class extraction, unlike the usual compound class structure, which is listed as a table and separated by HTML (URL_TO_INSERT_RECORD-ABBREV_235 https://fairsharing.org/FAIRsharing.YugnuL)  \<td\>…\</td\>, chemical “Oxazolidinones” and “Tetracyclines” use different data structure. Therefore the extracted XML (URL_TO_INSERT_RECORD-ABBREV_236 https://fairsharing.org/FAIRsharing.b5cc91)  document was updated before applying further nodes to the XML (URL_TO_INSERT_RECORD-ABBREV_237 https://fairsharing.org/FAIRsharing.b5cc91)  document. In the subpage link extraction, compound Amikacin and ampicillin have multiple subpages for differently charged molecules. 
 
 ````{dropdown}
 :open:
@@ -178,7 +178,7 @@ Example data set for +3 charged Amikacin.
 
 To prepare for the ontology annotation, we first generated lists of different types of attributes, which include “AMRclass”, “AMR compound”, “PropertyGroup”, etc. In each spreadsheet, the values are listed as separate rows for ontology annotation. 
 
-The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map (URL_TO_INSERT_RECORD-NAME_360 https://fairsharing.org/FAIRsharing.53edcc)  the keyword to its root form to avoid mismatch due to spelling or form variations.
+The strings went through additional parsing to improve mapping confidence. Duplicated or missing attributes were removed. Stemming and lemmatization were implemented to map (URL_TO_INSERT_RECORD-NAME_238 https://fairsharing.org/FAIRsharing.53edcc)  the keyword to its root form to avoid mismatch due to spelling or form variations.
 
 All the strings were sent through ZOOMA/NCBO API to search for ontology annotation. The ontology annotation results are listed here ([result Excel file for querying ZOOMA](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BZOOMA_1019.xlsx), [result Excel file for querying NCBO](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/ExtractedMetadata_20190124_TP%2BNCBOREC_1021.xlsx)). The ontology annotations were ranked and selected based on its confidence. For strings that didn’t find proper ontology mapping, the original values were kept. The ontology annotation preparation workflow is [here](https://owncloud.lcsb.uni.lu/remote.php/webdav/ND4BB/AMR_DB/AMR_DB_AnnotationProcess/20190122_EBI_ZOOMA_requests_V5.knwf). 
 
@@ -198,17 +198,17 @@ The proposed workflow is insufficient to extract adequate and consistent semanti
 
 ## FAIR assessment
 
-We conducted an assessment of the FAIRness of the dataset, with the results stored [here](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260). Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness separately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA (URL_TO_INSERT_RECORD-ABBREV_361 https://fairsharing.org/FAIRsharing.2g5kcb)  FAIR (URL_TO_INSERT_RECORD-ABBREV_362 https://fairsharing.org/FAIRsharing.WWI10U)  indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%. 
+We conducted an assessment of the FAIRness of the dataset, with the results stored [here](https://docs.google.com/spreadsheets/d/1zFcmllpD0loX_yi9NE56vFxbH_RaW-Z1/edit#gid=1320380260). Although there are a few indicators that are not applicable to the ND4BB dataset because of data type limitations, and some indicators are too ambiguous to provide a objective assessment. We got different data curators evaluating the FAIRness separately and compared and discussed the conflicting assessment. In general, the FAIRness score against RDA (URL_TO_INSERT_RECORD-ABBREV_239 https://fairsharing.org/FAIRsharing.2g5kcb)  FAIR (URL_TO_INSERT_RECORD-ABBREV_240 https://fairsharing.org/FAIRsharing.WWI10U)  indicator is 36%, of which the mandatory indicator score is 47% and the recommended indicator score is 32%. 
 
 
 ## Possible next steps
 
 1. Extract administrative metadata, provenance information, e.g. owner, date of creation
 2. Add a license to data set
-3. Store data (=experimental results (URL_TO_INSERT_RECORD-NAME_363 https://fairsharing.org/FAIRsharing.QlUiql) ) together with administrative, structural, and descriptive metadata in a public repository
+3. Store data (=experimental results (URL_TO_INSERT_RECORD-NAME_241 https://fairsharing.org/FAIRsharing.QlUiql) ) together with administrative, structural, and descriptive metadata in a public repository
 4. Add PID to data set (=digital object)
 5. Add metadata together with PID to a public catalog
-6. Add metric (URL_TO_INSERT_TERM_364 https://fairsharing.org/search?recordType=metric) s according to CMMI and add to the public catalog
+6. Add metric (URL_TO_INSERT_TERM_242 https://fairsharing.org/search?recordType=metric) s according to CMMI and add to the public catalog
 7. Add checksums for all files for QC and integrity checks
 8. Expand the ontology annotation to all terms
 
@@ -217,7 +217,7 @@ We conducted an assessment of the FAIRness of the dataset, with the results stor
 
 The AMR dataset was provided as a first example as it was immediately available. A generic FAIRification workflow was also provided. We reviewed the workflow and derived general principles for the cookbook. However (as for the principles we learnt) the lack of a context for the data, and the lack of goals for the FAIRification process made the actual action of FAIRification not valuable.
 
-As a result of our work on the AMR dataset, we identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map (URL_TO_INSERT_RECORD-NAME_365 https://fairsharing.org/FAIRsharing.53edcc)  to) and other details included in our report.
+As a result of our work on the AMR dataset, we identified useful general principles, including the need for license, availability of the data, the importance of context (e.g.: what ontologies to map (URL_TO_INSERT_RECORD-NAME_243 https://fairsharing.org/FAIRsharing.53edcc)  to) and other details included in our report.
 
 We also identified key FAIRification steps in the proposed process, some of which are non-obvious (e.g.: capture modifications done to ingest data). On this basis we started to sketch a generic workflow. 
 

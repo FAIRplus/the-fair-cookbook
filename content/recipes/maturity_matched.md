@@ -4,7 +4,7 @@
 <!--
 ````{panels_fairplus}
 :identifier_text: FCB081
-:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_2653 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCB081'
+:identifier_link: 'https://w3id.org/faircookbook/FCB081'
 :difficulty_level: 3
 :recipe_type: guidance
 :reading_time_minutes: 30
@@ -19,8 +19,8 @@
 ## Abstract
 
 The present content introduces the FAIRplus "Dataset Maturity Model", shows how to use it in the context of a 
-FAIRification process to decide how far to go on a FAIR (URL_TO_INSERT_RECORD-ABBREV_2654 https://fairsharing.org/FAIRsharing.WWI10U)  journey.
-We also show how each FAIR (URL_TO_INSERT_RECORD-ABBREV_2655 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipes has been anchored to the model.
+FAIRification process to decide how far to go on a FAIR (URL_TO_INSERT_RECORD-ABBREV_2386 https://fairsharing.org/FAIRsharing.WWI10U)  journey.
+We also show how each FAIR (URL_TO_INSERT_RECORD-ABBREV_2387 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook recipes has been anchored to the model.
 Recipes can therefore be assembled to build a coherent path which should guarantee that datasets handled according 
 to the recommendations can meet data management expectations in terms of FAIRness.
 Therefore, the FAIRplus DSM provides a handy tool for data managers to advise on changing the culture of data management 
@@ -44,7 +44,7 @@ Organizations need to decide how to allocate resources to increase the impact of
 Large amounts of literature exist detailing the key ideas for handling data. A resource such as the *DAMA book* covers in 
 great depths the fundamental operations and challenges associated with data management activities {footcite}`DAMA-DMBOOK`.
 
-More recently, The FAIR (URL_TO_INSERT_RECORD-ABBREV_2657 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2656 https://fairsharing.org/FAIRsharing.WWI10U)  articulated key requirements and properties data should have {footcite}`pmid26978244`.
+More recently, The FAIR (URL_TO_INSERT_RECORD-ABBREV_2389 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2388 https://fairsharing.org/FAIRsharing.WWI10U)  articulated key requirements and properties data should have {footcite}`pmid26978244`.
 Following this important work, a number of initiatives have worked at producing domain specific maturity indicators. 
 Among these initiatives, the Research Data Alliance Maturity Indicators seem to have gain notoriety
 {footcite}`RDAindicators`.
@@ -66,10 +66,10 @@ a screenshot of which is presented below.
 ```{figure} ../../images/maturity_img_1.png
 ---
 width: 700px
-name: FAIR (URL_TO_INSERT_RECORD-ABBREV_2658 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model
-alt:  FAIR (URL_TO_INSERT_RECORD-ABBREV_2659 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model
+name: FAIR Dataset Maturity Model
+alt:  FAIR Dataset Maturity Model
 ---
- FAIR (URL_TO_INSERT_RECORD-ABBREV_2660 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity Model
+ FAIR Dataset Maturity Model
 ```
 ````
 
@@ -83,10 +83,10 @@ These can be found in the **Recipe Card**.
 They are there to provide our readership with a pointer to the level of data set maturity they can expect to meet if
 they apply and implement the recipe.
 
-The FAIR (URL_TO_INSERT_RECORD-ABBREV_2661 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
+The FAIR (URL_TO_INSERT_RECORD-ABBREV_2390 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators are also used to browse the recipes through the lense of maturity improvements level, which is
 of interest. 
 
-Finally, the FAIR (URL_TO_INSERT_RECORD-ABBREV_2662 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook produced specific content available as jupyter notebooks which use the familiar Investigation Study Assay model {footcite}`pmid20679334` 
+Finally, the FAIR (URL_TO_INSERT_RECORD-ABBREV_2391 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook produced specific content available as jupyter notebooks which use the familiar Investigation Study Assay model {footcite}`pmid20679334` 
 and Research Objects {footcite}`sefton_peter_2022_5841615` to showcase how users can move through maturity levels and decide for themselves how far they need to go along the scale.
 
 
@@ -96,10 +96,10 @@ and Research Objects {footcite}`sefton_peter_2022_5841615` to showcase how users
 ```{figure} ../../images/maturity_img.png
 ---
 width: 450px
-name: FAIR (URL_TO_INSERT_RECORD-ABBREV_2663 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD-ABBREV_2664 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
-alt:  FAIR (URL_TO_INSERT_RECORD-ABBREV_2665 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD-ABBREV_2666 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
+name: FAIR DSM indicators in the FAIR Cookbook Recipe card
+alt:  FAIR DSM indicators in the FAIR Cookbook Recipe card
 ---
- FAIR (URL_TO_INSERT_RECORD-ABBREV_2667 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators in the FAIR (URL_TO_INSERT_RECORD-ABBREV_2668 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook Recipe card
+ FAIR DSM indicators in the FAIR Cookbook Recipe card
 ```
 ````
 
@@ -113,7 +113,7 @@ The FAIRplus DSM has subsequently been used to assess the effectiveness of inter
 to FAIRplus experts.
 
 Each of the 20 projects, which have interacted with FAIRplus, have been subjected to a standard protocol looking at
-FAIR (URL_TO_INSERT_RECORD-ABBREV_2669 https://fairsharing.org/FAIRsharing.WWI10U)  maturity before and after intervention, when performing retrospective processing of the data. 
+FAIR (URL_TO_INSERT_RECORD-ABBREV_2392 https://fairsharing.org/FAIRsharing.WWI10U)  maturity before and after intervention, when performing retrospective processing of the data. 
 In few instances, the effect of prospective interventions could also be measured. 
 
 FAIRplus DSM developed a dedicated manual assessment template.
@@ -126,7 +126,7 @@ can use the framework in a consistent fashion.
 
 ### Performing the assessment
 
-The FAIRplus DSM group therefore recruited FAIR (URL_TO_INSERT_RECORD-ABBREV_2670 https://fairsharing.org/FAIRsharing.WWI10U)  experts and over the
+The FAIRplus DSM group therefore recruited FAIR (URL_TO_INSERT_RECORD-ABBREV_2393 https://fairsharing.org/FAIRsharing.WWI10U)  experts and over the
 course of a dedicated workshop presented the DSM model, proposed exercises and then asked participants to rate several
 datasets independently.
 
@@ -147,10 +147,10 @@ The following figure shows the effect of a FAIRification process on an IMI eTOX 
 ```{figure} ../../images/DSMeval-img1.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD-ABBREV_2671 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
-alt:   FAIR (URL_TO_INSERT_RECORD-ABBREV_2672 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
+name: FAIR DSM indicators before and after intervention-Content
+alt:   FAIR DSM indicators before and after intervention-Content
 ---
-FAIR (URL_TO_INSERT_RECORD-ABBREV_2673 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Content
+FAIR DSM indicators before and after intervention-Content
 ```
 ````
 
@@ -162,10 +162,10 @@ FAIR (URL_TO_INSERT_RECORD-ABBREV_2673 https://fairsharing.org/FAIRsharing.WWI10
 ```{figure} ../../images/DSMeval-img2.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD-ABBREV_2674 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format
-alt:   FAIR (URL_TO_INSERT_RECORD-ABBREV_2675 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format
+name: FAIR DSM indicators before and after intervention-Format
+alt:   FAIR DSM indicators before and after intervention-Format
 ---
-FAIR (URL_TO_INSERT_RECORD-ABBREV_2676 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Format
+FAIR DSM indicators before and after intervention-Format
 ```
 ````
 
@@ -179,10 +179,10 @@ FAIR (URL_TO_INSERT_RECORD-ABBREV_2676 https://fairsharing.org/FAIRsharing.WWI10
 ```{figure} ../../images/DSMeval-img3.png
 ---
 width: 800px
-name: FAIR (URL_TO_INSERT_RECORD-ABBREV_2677 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
-alt:  FAIR (URL_TO_INSERT_RECORD-ABBREV_2678 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
+name: FAIR DSM indicators before and after intervention-Access
+alt:  FAIR DSM indicators before and after intervention-Access
 ---
-FAIR (URL_TO_INSERT_RECORD-ABBREV_2679 https://fairsharing.org/FAIRsharing.WWI10U)  DSM indicators before and after intervention-Access
+FAIR DSM indicators before and after intervention-Access
 ```
 ````
 

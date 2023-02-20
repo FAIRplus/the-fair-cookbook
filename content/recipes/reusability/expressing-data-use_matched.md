@@ -19,7 +19,7 @@
 
 The purpose of this content is to provide guidance on how to describe **permitted use of data** and identify the **resources** that exist to do so.
 
-The aim is also to document equivalent representations and how bridges (URL_TO_INSERT_RECORD-NAME_2680 https://fairsharing.org/FAIRsharing.ac95d5)  can be built between the distinct but equivalent implementations.
+The aim is also to document equivalent representations and how bridges (URL_TO_INSERT_RECORD-NAME_2394 https://fairsharing.org/FAIRsharing.ac95d5)  can be built between the distinct but equivalent implementations.
 
 Finally, the content aims to highlight key use-cases which require coverage, how to code such information, documenting 
 implementation patterns in the context of **data cataloguing efforts**, for instance by expressing **Data Access Policies**.
@@ -51,7 +51,7 @@ Data Use
  Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | JSON-LD<!-- TODO add a link to corresponding document --> | <!-- TODO add a link to corresponding document -->  |   |
-| [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DCAT (URL_TO_INSERT_RECORD-ABBREV_2681 https://fairsharing.org/FAIRsharing.h4j3qm)  v2](https://www.w3.org/TR/vocab-dcat-2/)  |   |
+| [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html)  | [DCAT (URL_TO_INSERT_RECORD-ABBREV_2395 https://fairsharing.org/FAIRsharing.h4j3qm)  v2](https://www.w3.org/TR/vocab-dcat-2/)  |   |
 | [ISO-3066](https://www.iso.org/iso-3166-country-codes.html)  | [ODRL](https://www.w3.org/TR/odrl-vocab/)  |   |
 | EGA XML<!-- TODO add a link to corresponding document -->   | [DUO](http://www.obofoundry.org/ontology/duo.html)  |   |
 | [Data Article Tag Suite (DATS)](https://datatagsuite.github.io/schema/)  | [MONDO](http://www.obofoundry.org/ontology/mondo.html)  |   |
@@ -81,9 +81,9 @@ Therefore, efforts to enable the provision of concise, efficient and **machine p
 Several resources are now available for the coding and exchange of **machine-actionable**, **legally binding** and
 **explicit** information related to allowed and consented data usage.
 
-The following sections detail how the international sequence data archives (US NCBI dbGAP, SRA (URL_TO_INSERT_RECORD-ABBREV_2683 https://fairsharing.org/FAIRsharing.g7t2hv)  and EU EMBL_EBI EGA (URL_TO_INSERT_RECORD-ABBREV_2682 https://fairsharing.org/FAIRsharing.mya1ff) )
+The following sections detail how the international sequence data archives (US NCBI dbGAP, SRA (URL_TO_INSERT_RECORD-ABBREV_2397 https://fairsharing.org/FAIRsharing.g7t2hv)  and EU EMBL_EBI EGA (URL_TO_INSERT_RECORD-ABBREV_2396 https://fairsharing.org/FAIRsharing.mya1ff) )
 are encoding **Data Use Information**  but also how ODRL, a W3C specification, 
-can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT (URL_TO_INSERT_RECORD-ABBREV_2684 https://fairsharing.org/FAIRsharing.h4j3qm)  specifications.
+can be used to represent equivalent information in a format compatible with the data cataloguing efforts relying on W3C DCAT (URL_TO_INSERT_RECORD-ABBREV_2398 https://fairsharing.org/FAIRsharing.h4j3qm)  specifications.
 
 
 
@@ -96,7 +96,7 @@ and representation models for defining the conditions of use.
 
 We summarize here the key objects used by the European Genome Archive, in compliance with INSDC and GA4GH guidelines.
 
-https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2685 https://fairsharing.org/FAIRsharing.mya1ff) /data-use-conditions
+https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2399 https://fairsharing.org/FAIRsharing.mya1ff) /data-use-conditions
 
 ````{dropdown}
 :open:
@@ -126,13 +126,13 @@ Data Use Ontology Overview Part 2
 ````{panels}
 :column: col-8
 :card: border-2
-DUO (URL_TO_INSERT_RECORD-ABBREV_2686 https://fairsharing.org/FAIRsharing.5dnjs2)  in OLS (URL_TO_INSERT_RECORD-ABBREV_2687 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+DUO in OLS
 ^^^
 ```{figure} duo-ols-view-1.png
 width: 400px
 ```
 ---
-DUO (URL_TO_INSERT_RECORD-ABBREV_2688 https://fairsharing.org/FAIRsharing.5dnjs2)  in OLS (URL_TO_INSERT_RECORD-ABBREV_2689 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+DUO in OLS
 ^^^
 ```{figure} duo-ols-view-2.png
 width: 400px
@@ -150,12 +150,12 @@ The information presented below has been sourced from the ENA GitHub repo.
 ```XML
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <DAC_SET>
-    <DAC alias="DAC-2011-08-11T11:45:28Z-1873" accession="EGAC00000000001" center_name="EBI" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2690 https://fairsharing.org/FAIRsharing.mya1ff) GA">
+    <DAC alias="DAC-2011-08-11T11:45:28Z-1873" accession="EGAC00000000001" center_name="EBI" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2400 https://fairsharing.org/FAIRsharing.mya1ff) GA">
         <IDENTIFIERS>
             <PRIMARY_ID>EGAC00000000001</PRIMARY_ID>
             <SUBMITTER_ID namespace="EBI">DAC-2011-08-11T11:45:28Z-1873</SUBMITTER_ID>
         </IDENTIFIERS>
-        <TITLE>EG (URL_TO_INSERT_RECORD-ABBREV_2691 https://fairsharing.org/FAIRsharing.mya1ff) A DAC TITLE</TITLE>
+        <TITLE>EG (URL_TO_INSERT_RECORD-ABBREV_2401 https://fairsharing.org/FAIRsharing.mya1ff) A DAC TITLE</TITLE>
         <CONTACTS>
             <CONTACT name="Joe Bloggs" email="joe@noname.com" organisation="EBI"/>
         </CONTACTS>
@@ -172,7 +172,7 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/sra/xml/ega_policy/ega_policy.xml
 
 ```{note}
-in the following example, the text of the policy is present in the XML (URL_TO_INSERT_RECORD-ABBREV_2692 https://fairsharing.org/FAIRsharing.b5cc91)  representation
+in the following example, the text of the policy is present in the XML (URL_TO_INSERT_RECORD-ABBREV_2402 https://fairsharing.org/FAIRsharing.b5cc91)  representation
 ```
 
 
@@ -198,7 +198,7 @@ in the following example, the text of the policy is present in the XML (URL_TO_I
 
 
 ```{note}
-In the following example, the file address (url) to the policy is included in the XML (URL_TO_INSERT_RECORD-ABBREV_2693 https://fairsharing.org/FAIRsharing.b5cc91)  representation.
+In the following example, the file address (url) to the policy is included in the XML (URL_TO_INSERT_RECORD-ABBREV_2403 https://fairsharing.org/FAIRsharing.b5cc91)  representation.
 Ideally, the url provided should be a globally unique persistent identifier so one can be sure to obtain at least the metadata about the document.
 ```
 
@@ -246,7 +246,7 @@ Ideally, the url provided should be a globally unique persistent identifier so o
    			<DATA_USE>http://purl.obolibrary.org/obo/DUO_0000004</DATA_USE>
 
 			<DATA_USES>
-			   <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2694 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000004" version="17-07-2016"/>
+			   <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2404 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000004" version="17-07-2016"/>
 			</DATA_USES>
 
         </DATA_USES>
@@ -293,15 +293,15 @@ Indicating disease specific restriction on research with DUO and ontologies cove
 
 
 ```{note}
-When using the consent code DUO_0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifiers from well established disease terminologies such as MONDO (URL_TO_INSERT_RECORD-ABBREV_2695 https://fairsharing.org/FAIRsharing.b2979t) , DOID (URL_TO_INSERT_RECORD-ABBREV_2696 https://fairsharing.org/FAIRsharing.8b6wfq) , SNOMED-CT.
-For instance, if data reuse is restricted to research into `juvenile idiopathic arthritis`, the code should be displayed as DUO_0000007; MONDO (URL_TO_INSERT_RECORD-ABBREV_2697 https://fairsharing.org/FAIRsharing.b2979t) :0011429
+When using the consent code DUO_0000007 where data is restricted for use on a specific disease area, it is necessary to explicitly indicate which disease area is allowed. This can be done by associating codes/identifiers from well established disease terminologies such as MONDO (URL_TO_INSERT_RECORD-ABBREV_2405 https://fairsharing.org/FAIRsharing.b2979t) , DOID (URL_TO_INSERT_RECORD-ABBREV_2406 https://fairsharing.org/FAIRsharing.8b6wfq) , SNOMED-CT.
+For instance, if data reuse is restricted to research into `juvenile idiopathic arthritis`, the code should be displayed as DUO_0000007; MONDO (URL_TO_INSERT_RECORD-ABBREV_2407 https://fairsharing.org/FAIRsharing.b2979t) :0011429
 ```
 
 
 
 ```XML
 <POLICY_SET>
-  <POLICY alias="ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62" center_name="BABRAHAM" accession="EGAP00001000615" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2698 https://fairsharing.org/FAIRsharing.mya1ff) GA">  
+  <POLICY alias="ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62" center_name="BABRAHAM" accession="EGAP00001000615" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2408 https://fairsharing.org/FAIRsharing.mya1ff) GA">  
     <IDENTIFIERS> 
       <PRIMARY_ID>EGAP00001000615</PRIMARY_ID>
       <SUBMITTER_ID namespace="BABRAHAM">ena-POLICY-BABRAHAM-23-03-2017-09:47:38:853-62</SUBMITTER_ID>
@@ -314,18 +314,18 @@ For instance, if data reuse is restricted to research into `juvenile idiopathic 
     </DAC_REF>
     <POLICY_FILE>ftp://ftp.ebi.ac.uk/pub/contrib/pchic/EGA_Data_Access_Request_DIL.docx</POLICY_FILE>
     <DATA_USES>
-      <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2699 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000007" version="17-07-2016">
+      <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2409 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000007" version="17-07-2016">
       	<!-- disease specific research -->
         <MODIFIER>
-           <DB>EF (URL_TO_INSERT_RECORD-ABBREV_2700 https://fairsharing.org/FAIRsharing.1gr4tz) O</DB>
+           <DB>EF (URL_TO_INSERT_RECORD-ABBREV_2410 https://fairsharing.org/FAIRsharing.1gr4tz) O</DB>
            <ID>0001645</ID>
         </MODIFIER> 
         <MODIFIER>
-           <DB>EF (URL_TO_INSERT_RECORD-ABBREV_2701 https://fairsharing.org/FAIRsharing.1gr4tz) O</DB>
+           <DB>EF (URL_TO_INSERT_RECORD-ABBREV_2411 https://fairsharing.org/FAIRsharing.1gr4tz) O</DB>
            <ID>0001655</ID>
         </MODIFIER>
        </DATA_USE>
-       <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2702 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000014" version="17-07-2016"/>
+       <DATA_USE ontology="D (URL_TO_INSERT_RECORD-ABBREV_2412 https://fairsharing.org/FAIRsharing.5dnjs2) UO" code="0000014" version="17-07-2016"/>
        </DATA_USES>
    </POLICY>
 </POLICY_SET>
@@ -339,7 +339,7 @@ https://github.com/enasequence/schema/blob/USI/src/test/resources/uk/ac/ebi/ena/
 
 ```XML
 <DATASETS>
-    <DATASET alias="EGAS000000001-sc-20110919" center_name="SC" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2703 https://fairsharing.org/FAIRsharing.mya1ff) GA" accession="EGAD00001000039">
+    <DATASET alias="EGAS000000001-sc-20110919" center_name="SC" broker_name="E (URL_TO_INSERT_RECORD-ABBREV_2413 https://fairsharing.org/FAIRsharing.mya1ff) GA" accession="EGAD00001000039">
         <IDENTIFIERS>
             <PRIMARY_ID>EGAD00001000039</PRIMARY_ID>
             <SUBMITTER_ID namespace="SC">EGAS000000001-sc-20110919</SUBMITTER_ID>
@@ -409,15 +409,15 @@ The ODRL Vocabulary and Expression complements the ODRL information model, which
 
 
 ```{warning}
-In 2015, the dedicated working group produced the following JSON (URL_TO_INSERT_RECORD-ABBREV_2704 https://fairsharing.org/FAIRsharing.5bbab9)  schema implementation guidance
+In 2015, the dedicated working group produced the following JSON (URL_TO_INSERT_RECORD-ABBREV_2414 https://fairsharing.org/FAIRsharing.5bbab9)  schema implementation guidance
 https://www.w3.org/community/odrl/json/2.1/#section-Schema
 
 We base our representations on this specification {footcite}`ODRLJSON`. 
 
 We are aware of a possible misalignment between the specifications of the Working Group (from 2015) and the latest
 specifications as to whether to use the keys "name" or "leftOperand" (https://www.w3.org/TR/odrl-model/#constraint-rule, 2018).
-In the following representations, we use the key "name" to validate against the 2015 JSON (URL_TO_INSERT_RECORD-ABBREV_2705 https://fairsharing.org/FAIRsharing.5bbab9) -schema
- https://www.w3.org/community/odrl/json/2.1/#section-Schema / https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2706 https://fairsharing.org/FAIRsharing.c55d5e) /iptc/rightsml-dev/blob/master/licensed/ODRL21.json
+In the following representations, we use the key "name" to validate against the 2015 JSON (URL_TO_INSERT_RECORD-ABBREV_2415 https://fairsharing.org/FAIRsharing.5bbab9) -schema
+ https://www.w3.org/community/odrl/json/2.1/#section-Schema / https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2416 https://fairsharing.org/FAIRsharing.c55d5e) /iptc/rightsml-dev/blob/master/licensed/ODRL21.json
 
 ```
 
@@ -544,10 +544,10 @@ vs
 
 
 ```{note}
-While DUO (URL_TO_INSERT_RECORD-ABBREV_2707 https://fairsharing.org/FAIRsharing.5dnjs2)  is unique in its coverage of data uses, various disease ontologies exist and may be used to specify the
+While DUO (URL_TO_INSERT_RECORD-ABBREV_2417 https://fairsharing.org/FAIRsharing.5dnjs2)  is unique in its coverage of data uses, various disease ontologies exist and may be used to specify the
 specific focus research should have.
-For instance, SNOMED-CT, Disease Ontology (URL_TO_INSERT_RECORD-NAME_2708 https://fairsharing.org/FAIRsharing.8b6wfq)  could also be used.
-It is worth noting that extensive cross referencing exists between resources such as DOID (URL_TO_INSERT_RECORD-ABBREV_2710 https://fairsharing.org/FAIRsharing.8b6wfq) , MONDO (URL_TO_INSERT_RECORD-ABBREV_2709 https://fairsharing.org/FAIRsharing.b2979t)  and
+For instance, SNOMED-CT, Disease Ontology (URL_TO_INSERT_RECORD-NAME_2418 https://fairsharing.org/FAIRsharing.8b6wfq)  could also be used.
+It is worth noting that extensive cross referencing exists between resources such as DOID (URL_TO_INSERT_RECORD-ABBREV_2420 https://fairsharing.org/FAIRsharing.8b6wfq) , MONDO (URL_TO_INSERT_RECORD-ABBREV_2419 https://fairsharing.org/FAIRsharing.b2979t)  and
 SNOMED-CT but this is something to consider when implementing brokering systems.
 ```
 
@@ -655,18 +655,18 @@ Duration and time related value should be represented using **ISO-8601 standard*
 
 ```{warning} 
 
-This ODRL representation is **not vetted, nor endorsed by GA4GH or EGA (URL_TO_INSERT_RECORD-ABBREV_2711 https://fairsharing.org/FAIRsharing.mya1ff) **.
-This example is currently meant to present an example of how to use ODRL to represent some of the information represented in EGA (URL_TO_INSERT_RECORD-ABBREV_2712 https://fairsharing.org/FAIRsharing.mya1ff) .
+This ODRL representation is **not vetted, nor endorsed by GA4GH or EGA (URL_TO_INSERT_RECORD-ABBREV_2421 https://fairsharing.org/FAIRsharing.mya1ff) **.
+This example is currently meant to present an example of how to use ODRL to represent some of the information represented in EGA (URL_TO_INSERT_RECORD-ABBREV_2422 https://fairsharing.org/FAIRsharing.mya1ff) .
 
 ```
 
 ```json
 {
     "policytype": "http://www.w3.org/ns/odrl/2/Policy",
-    "policyid": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2713 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAP0000000XYZ",
+    "policyid": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2423 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAP0000000XYZ",
     "permissions": [
         {
-            "target": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2714 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
+            "target": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2424 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
             "action": [{
                 "rdf:value": { "@id": "odrl:secondaryUse" },
                 "refinement": {
@@ -679,7 +679,7 @@ This example is currently meant to present an example of how to use ODRL to repr
                   }
                 }
             }],
-            "assigner": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2715 https://fairsharing.org/FAIRsharing.mya1ff) /",
+            "assigner": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2425 https://fairsharing.org/FAIRsharing.mya1ff) /",
             "constraints":[{
                     "name": "http://www.w3.org/ns/odrl/2/purpose",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",
@@ -693,7 +693,7 @@ This example is currently meant to present an example of how to use ODRL to repr
             ],
             "duties": [{
                 "action": "http://www.w3.org/ns/odrl/2/delete",
-                "target": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2716 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
+                "target": "https://ega-archive.org (URL_TO_INSERT_RECORD-HOMEPAGE_2426 https://fairsharing.org/FAIRsharing.mya1ff) /datasets/EGAD0000000YYY",
                 "constraints": [{
                     "name": "http://www.w3.org/ns/odrl/2/dateTime",
                     "operator": "http://www.w3.org/ns/odrl/2/eq",

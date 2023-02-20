@@ -45,7 +45,7 @@ Building an ontology with Robot tool.
 
 | Actions.Objectives.Tasks  | Input | Output  |
 | :------------- | :------------- | :------------- |
-| [Ontology and terminology](http://edamontology.org/topic_0089)  | [tsv,OW (URL_TO_INSERT_RECORD-ABBREV_1998 https://fairsharing.org/FAIRsharing.atygwy) L]|O (URL_TO_INSERT_RECORD-ABBREV_1999 https://fairsharing.org/FAIRsharing.atygwy) WL|
+| [Ontology and terminology](http://edamontology.org/topic_0089)  | [tsv,OW (URL_TO_INSERT_RECORD-ABBREV_1777 https://fairsharing.org/FAIRsharing.atygwy) L]|O (URL_TO_INSERT_RECORD-ABBREV_1778 https://fairsharing.org/FAIRsharing.atygwy) WL|
 
 
 ## Table of Data Standards
@@ -69,7 +69,7 @@ Building an ontology with Robot tool.
 | ROBOT | [http://robot.obolibrary.org/](http://robot.obolibrary.org/) | ontology management cli |
 | Ontology development kit | [https://github.com/INCATools/ontology-development-kit](https://github.com/INCATools/ontology-development-kit) (comes with ROBOT included)| ontology management environment |
 | Protégé/other ontology editor | [https://protege.stanford.edu/](https://protege.stanford.edu/) | ontology editor |
-| SPARQL (URL_TO_INSERT_RECORD-ABBREV_2000 https://fairsharing.org/FAIRsharing.87ccfd)  | [https://www.w3.org/TR/sparql11-query/](https://www.w3.org/TR/sparql11-query/) | ontology query language |
+| SPARQL (URL_TO_INSERT_RECORD-ABBREV_1779 https://fairsharing.org/FAIRsharing.87ccfd)  | [https://www.w3.org/TR/sparql11-query/](https://www.w3.org/TR/sparql11-query/) | ontology query language |
 | ELK |[https://www.cs.ox.ac.uk/isg/tools/ELK/](https://www.cs.ox.ac.uk/isg/tools/ELK/)|ontology reasoner|
 |Hermit|[http://www.hermit-reasoner.com/](http://www.hermit-reasoner.com/)|ontology reasoner|
 
@@ -99,15 +99,15 @@ In this recipe, we demonstrate the workflow of building an application ontology 
 |                                                       | ➕ How to guarantee consistency of the final ontology?                                                                |
 |                                                       | ➕ How to identify differences in comparison to a previous version of the resulting ontology?                         |
 | **Questions without specifying compounds or genes for the {download}`example dataset <./ontology-robot-recipe/ExternalStudiesKQ.xlsx>`**   |                                                                                                                                       |
-|                                                       | ➕ Identify all data generated from tissues (URL_TO_INSERT_RECORD-NAME_2001 https://fairsharing.org/FAIRsharing.yXPvpU)  taken from patients suffering from a specific disease.                                     |
-|                                                       | ➕ Identify all data generated from a specific tissues (URL_TO_INSERT_RECORD-NAME_2002 https://fairsharing.org/FAIRsharing.yXPvpU)  obtained from mouse models that are related to a specific disease.              |
+|                                                       | ➕ Identify all data generated from tissues (URL_TO_INSERT_RECORD-NAME_1780 https://fairsharing.org/FAIRsharing.yXPvpU)  taken from patients suffering from a specific disease.                                     |
+|                                                       | ➕ Identify all data generated from a specific tissues (URL_TO_INSERT_RECORD-NAME_1781 https://fairsharing.org/FAIRsharing.yXPvpU)  obtained from mouse models that are related to a specific disease.              |
 |                                                       | ➕ Identify all data generated from lung tissue taken from patients suffering from a lung disease that is not related to oncology.     |
 |                                                       | ➕ Identify all data generated from primary cells whose origin is the lung.                                                            |
 |                                                       | ➕ Identify all data generated from cell lines whose origin is the lung.                                                                |
 | **Questions including single genes or gene sets**     |                                                                                                                                       |
 |                                                       | ➕ What is the expression of PPARg / growths factors in lung tissue from IPF patients?                                                 |
 |                                                       | ➕ What is the expression of PPARg / growths factors in primary cells obtained from lung tissue from healthy subjects?                 |
-|                                                       | ➕ What is the expression of PPARg / growths factors in all available tissues (URL_TO_INSERT_RECORD-NAME_2003 https://fairsharing.org/FAIRsharing.yXPvpU)  obtained from healthy subjects?                          |
+|                                                       | ➕ What is the expression of PPARg / growths factors in all available tissues (URL_TO_INSERT_RECORD-NAME_1782 https://fairsharing.org/FAIRsharing.yXPvpU)  obtained from healthy subjects?                          |
 | **Questions including compound or treatment information** |                                                                                                                                       |
 |                                                       | ➕ Identify all data generated from primary cells treated with a kinase inhibitor.                                                     |
 |                                                       | ➕ Identify all data from patients treated with a specific medication.                                                                 |
@@ -144,14 +144,14 @@ When selecting reference ontologies as source ontologies, the reusability and su
 Specific use cases and requirements from the target dataset also affect the choice of source ontologies. For use cases focusing on extracting data from heterogeneous datasets with complicated data types and data relationships, reference ontologies with rich term relationships are preferred. The interpretation of each term also depends on the context and requirements of the target dataset. For example, _"hypertension"_ can be either interpreted as a _phenotype_ and mapped to phenotype ontologies, or a _disease_ mapped to disease ontologies.
 
 
-The example dataset includes metadata related to disease, species, cell lines, tissues (URL_TO_INSERT_RECORD-NAME_2006 https://fairsharing.org/FAIRsharing.yXPvpU)  and biological sex. _Table 2_ lists some reference ontologies available in corresponding domains. In this recipe, we selected _MOND (URL_TO_INSERT_RECORD-ABBREV_2004 https://fairsharing.org/FAIRsharing.b2979t) O_ for disease domain, _UBERO (URL_TO_INSERT_RECORD-ABBREV_2005 https://fairsharing.org/FAIRsharing.4c0b6b) N_ for anatomy, _NCBItaxon_ for species taxonomy and _PAT (URL_TO_INSERT_RECORD-ABBREV_2007 https://fairsharing.org/FAIRsharing.ezwdhz) O_ for biological sex. 
+The example dataset includes metadata related to disease, species, cell lines, tissues (URL_TO_INSERT_RECORD-NAME_1785 https://fairsharing.org/FAIRsharing.yXPvpU)  and biological sex. _Table 2_ lists some reference ontologies available in corresponding domains. In this recipe, we selected _MOND (URL_TO_INSERT_RECORD-ABBREV_1783 https://fairsharing.org/FAIRsharing.b2979t) O_ for disease domain, _UBERO (URL_TO_INSERT_RECORD-ABBREV_1784 https://fairsharing.org/FAIRsharing.4c0b6b) N_ for anatomy, _NCBItaxon_ for species taxonomy and _PAT (URL_TO_INSERT_RECORD-ABBREV_1786 https://fairsharing.org/FAIRsharing.ezwdhz) O_ for biological sex. 
 
 
 |Domain|Reference Ontologies|
 |----|----|
-|Disease| [Mondo Disease Ontology, MONDO](http://www.obofoundry.org/ontology/mondo.html)<br> [Disease Ontology (URL_TO_INSERT_RECORD-NAME_2008 https://fairsharing.org/FAIRsharing.8b6wfq) , DOID](https://disease-ontology.org/)<br> |
+|Disease| [Mondo Disease Ontology, MONDO](http://www.obofoundry.org/ontology/mondo.html)<br> [Disease Ontology (URL_TO_INSERT_RECORD-NAME_1787 https://fairsharing.org/FAIRsharing.8b6wfq) , DOID](https://disease-ontology.org/)<br> |
 |Species|[NCBI organismal classification, NCBItaxon](http://www.obofoundry.org/ontology/ncbitaxon.html)|
-|Cell line|[Cell Ontology, CL](http://www.obofoundry.org/ontology/cl.html)<br> [Cell Line Ontology (URL_TO_INSERT_RECORD-NAME_2009 https://fairsharing.org/FAIRsharing.4dvtcz) , CLO](http://www.obofoundry.org/ontology/clo.html)|
+|Cell line|[Cell Ontology, CL](http://www.obofoundry.org/ontology/cl.html)<br> [Cell Line Ontology (URL_TO_INSERT_RECORD-NAME_1788 https://fairsharing.org/FAIRsharing.4dvtcz) , CLO](http://www.obofoundry.org/ontology/clo.html)|
 |Tissue|[NCI Thesaurus OBO Edition, NCIT](http://www.obofoundry.org/ontology/ncit.html)<br> [Ontology for MIRNA Target, OMIT](http://www.obofoundry.org/ontology/omit.html)<br> [Uberon multi-species anatomy ontology, UBERON](http://www.obofoundry.org/ontology/uberon.html)|
 |Biological Sex|[Phenotype And Trait Ontology, PATO](http://www.obofoundry.org/ontology/pato.html)|
 
@@ -183,7 +183,7 @@ Ontology seed term selection approaches.
 [ZOOMA](https://www.ebi.ac.uk/spot/zooma/) is a web service for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at the [European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk)
 . It can be used to automatically annotate plain text about biological entities with ontology classes. Zooma allows to limit the sources used to perform the annotations. These sources are either curated data sources, or ontologies from the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index). Zooma contains a linked data repository of annotation knowledge and highly annotated data that has been fed with manually curated annotation derived from publicly available databases. Because the source data has been curated by hand, it is a rich source of knowledge that is optimised for this task of semantic markup of keywords, in contrast with text-mining approaches.
 
-The [NCBO Annotator](https://bioportal.bioontology.org/annotator) is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal (URL_TO_INSERT_RECORD-NAME_2010 https://fairsharing.org/FAIRsharing.4m97ah)  ontologies.
+The [NCBO Annotator](https://bioportal.bioontology.org/annotator) is an ontology-based web service that annotates public datasets with biomedical ontology concepts based on their textual metadata. It can be used to automatically tag data  with ontology concepts. These concepts come from the Unified Medical Language System (UMLS) Metathesaurus and the National Center for Biomedical Ontology (NCBO) BioPortal (URL_TO_INSERT_RECORD-NAME_1789 https://fairsharing.org/FAIRsharing.4m97ah)  ontologies.
 
 Both the `Zooma` and `NCBO Annotator service` provides a `web interface` and a `REST API` to identify the seed terms by annotation of free text. Two scripts able to automate the annotation of a set of free text terms are shown following.
 
@@ -313,7 +313,7 @@ Running the above script to get the seeds for the terms `male`, `female`, and `u
 
 #### Step 2.2.3 Seed term extraction with SPARQL 
 
-Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL (URL_TO_INSERT_RECORD-ABBREV_2013 https://fairsharing.org/FAIRsharing.87ccfd)  query`. Here, we generate a subset of `UBERON (URL_TO_INSERT_RECORD-ABBREV_2012 https://fairsharing.org/FAIRsharing.4c0b6b) ` terms which have a cross-reference to either `FMA (URL_TO_INSERT_RECORD-ABBREV_2011 https://fairsharing.org/FAIRsharing.x56jsy)  (for human anatomy)` or `MA (URL_TO_INSERT_RECORD-ABBREV_2014 https://fairsharing.org/FAIRsharing.pdwqcr)  (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
+Instead of manually maintaining a list of seed terms to generate a module, a term list can be generated on the fly using a `SPARQL (URL_TO_INSERT_RECORD-ABBREV_1792 https://fairsharing.org/FAIRsharing.87ccfd)  query`. Here, we generate a subset of `UBERON (URL_TO_INSERT_RECORD-ABBREV_1791 https://fairsharing.org/FAIRsharing.4c0b6b) ` terms which have a cross-reference to either `FMA (URL_TO_INSERT_RECORD-ABBREV_1790 https://fairsharing.org/FAIRsharing.x56jsy)  (for human anatomy)` or `MA (URL_TO_INSERT_RECORD-ABBREV_1793 https://fairsharing.org/FAIRsharing.pdwqcr)  (for mouse anatomy)` terms, since our example datasets includes human, mouse and rat data.
 
 ```bash
 PREFIX scdo: <http://scdontology.h3abionet.org/ontology/>
@@ -359,12 +359,12 @@ curl -L http://purl.obolibrary.org/obo/uberon.owl > uberon.owl
 
 #### Step 3.2 Choose ontology extraction algorithms
 
-`ROBOT` supports two types of ontology module extraction, `Syntactic Locality Module Extractor` (SLME) and `Minimum Information to Reference an External Ontology Term` (MIREOT). `SLME` extractions can be further subdivided into TOP (URL_TO_INSERT_RECORD-ABBREV_2015 https://fairsharing.org/FAIRsharing.yvmb9y)  (top module), `BOT` (bottom module) and `STAR` (fixpoint-nested module). For full details of what these different options entail, see http://robot.obolibrary.org/extract.html. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of `MIREOT` if relationships apart from parent-child ones are less important. 
+`ROBOT` supports two types of ontology module extraction, `Syntactic Locality Module Extractor` (SLME) and `Minimum Information to Reference an External Ontology Term` (MIREOT). `SLME` extractions can be further subdivided into TOP (URL_TO_INSERT_RECORD-ABBREV_1794 https://fairsharing.org/FAIRsharing.yvmb9y)  (top module), `BOT` (bottom module) and `STAR` (fixpoint-nested module). For full details of what these different options entail, see http://robot.obolibrary.org/extract.html. We recommend the use of BOT for comprehensive modules that preserve the links between ontology classes and the use of `MIREOT` if relationships apart from parent-child ones are less important. 
 
 
 #### Step 3.3 Extract modules using seed terms
 
-Using `robot` tool provided by the `OBO foundry (URL_TO_INSERT_RECORD-NAME_2016 https://fairsharing.org/FAIRsharing.847069) `, the creation of a module can be done with one command:
+Using `robot` tool provided by the `OBO foundry (URL_TO_INSERT_RECORD-NAME_1795 https://fairsharing.org/FAIRsharing.847069) `, the creation of a module can be done with one command:
 
 ```bash
 robot extract --method <some_selection> \
@@ -375,7 +375,7 @@ robot extract --method <some_selection> \
 ```
 The `robot` extract command takes several arguments:
 
-* *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP (URL_TO_INSERT_RECORD-ABBREV_2017 https://fairsharing.org/FAIRsharing.yvmb9y) `, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
+* *method*: `ROBOT` uses 4 different algorithms to generate a module.  `TOP (URL_TO_INSERT_RECORD-ABBREV_1796 https://fairsharing.org/FAIRsharing.yvmb9y) `, `BOT`, `STAR` (all from the SLME method), and `MIREOT`. The first two will create a module  below or above the seed classes (the classes of interest in the target ontology) respectively. The `STAR` method creates a module by pulling all the properties and axioms of the seed classes but nothing else. `MIREOT` uses a different methods and offers some more options, in particular when it comes to how many levels up or down (parent and children) are needed.     
 * *input*: this argument is to specify the target ontology you want to extract a module from. It can be the original artefact or a filtered version of it.
 * *imports*: this argument allows specifying whether or not to include imported ontologies. Note that the default is to do so using the value `include`. Choose `exclude` otherwise.
 * *term-file*: the text file holding the list of classes of interested identified by their iri (e.g. http://purl.obolibrary.org/obo/UBERON_0001235 # adrenal cortex).
@@ -403,7 +403,7 @@ The extracted ontology module should include all seed terms and represent the te
 
 The umbrella ontology is the root structure of the ontology. Building the umbrella ontology aims to model the main entity of the use case and its relationships with the ontology classes extracted on the previous step. The main identity of the ontology and relationships with extracted modules can be identified by domain experts, or specified by the use case owner.
 
-`ROBOT` provides a template-driven ontology term generation system. A `ROBOT template` is a `tab-separated values (URL_TO_INSERT_RECORD-NAME_2018 https://fairsharing.org/FAIRsharing.a978c9) ` (TSV (URL_TO_INSERT_RECORD-ABBREV_2019 https://fairsharing.org/FAIRsharing.a978c9) ) or `comma-separated values (URL_TO_INSERT_RECORD-NAME_2020 https://fairsharing.org/FAIRsharing.1943d4) ` (CSV (URL_TO_INSERT_RECORD-ABBREV_2021 https://fairsharing.org/FAIRsharing.1943d4) ) file that depicts a set of patterns to build ontology entities - i.e., classes, properties, and individuals -. These templates can be used for modular ontology development.
+`ROBOT` provides a template-driven ontology term generation system. A `ROBOT template` is a `tab-separated values (URL_TO_INSERT_RECORD-NAME_1797 https://fairsharing.org/FAIRsharing.a978c9) ` (TSV (URL_TO_INSERT_RECORD-ABBREV_1798 https://fairsharing.org/FAIRsharing.a978c9) ) or `comma-separated values (URL_TO_INSERT_RECORD-NAME_1799 https://fairsharing.org/FAIRsharing.1943d4) ` (CSV (URL_TO_INSERT_RECORD-ABBREV_1800 https://fairsharing.org/FAIRsharing.1943d4) ) file that depicts a set of patterns to build ontology entities - i.e., classes, properties, and individuals -. These templates can be used for modular ontology development.
 After the _Domain Expert_ and the _Use Case/Scenario Owner_ specify the main entity of the use case and its relationships with remaining ontology entities, the _Ontology Developer_ generates the `ROBOT` templates depicting the set of patterns aimed to build the _umbrella_ ontology.
 
 A `ROBOT` command using a template to build an ontology is shown below:
@@ -424,7 +424,7 @@ And a template sample is presented following:
 |ex:cl_2 | Class_2 | class |-|-|-|-|
 |ex:cl_3 | Class_3 | class |ex:cl_2|-|-|-|
 |ex:op_1	|Prop_1| object property|-|Class_2|Class_3| |
-|ex:dp_1	|Prop_2| data property|-|functional|Class_2|xsd:strin (URL_TO_INSERT_RECORD-NAME_2022 https://fairsharing.org/FAIRsharing.9b7wvk) g|
+|ex:dp_1	|Prop_2| data property|-|functional|Class_2|xsd:strin (URL_TO_INSERT_RECORD-NAME_1801 https://fairsharing.org/FAIRsharing.9b7wvk) g|
 
 
 ```{admonition} Tip
@@ -463,9 +463,9 @@ reduce \
 --output materialized.owl 
 ```
 
-The ontology materialization uses `OWL (URL_TO_INSERT_RECORD-ABBREV_2023 https://fairsharing.org/FAIRsharing.atygwy)  reasoners`. `ROBOT` provides [several ontology reasoners](http://robot.obolibrary.org/reason). 
+The ontology materialization uses `OWL (URL_TO_INSERT_RECORD-ABBREV_1802 https://fairsharing.org/FAIRsharing.atygwy)  reasoners`. `ROBOT` provides [several ontology reasoners](http://robot.obolibrary.org/reason). 
 
-It is also possible to identify issues in the ontology with some `quality control SPARQL (URL_TO_INSERT_RECORD-ABBREV_2024 https://fairsharing.org/FAIRsharing.87ccfd)  queries`. 
+It is also possible to identify issues in the ontology with some `quality control SPARQL (URL_TO_INSERT_RECORD-ABBREV_1803 https://fairsharing.org/FAIRsharing.87ccfd)  queries`. 
 
 ```bash
 robot report --input edit.owl --output report.tsv
@@ -507,7 +507,7 @@ example:annotated.owl
 
 #### Step 6.3: Convert
 
-Besides `OWL (URL_TO_INSERT_RECORD-ABBREV_2025 https://fairsharing.org/FAIRsharing.atygwy)  format`, the `Open Biomedical Ontology (OBO (URL_TO_INSERT_RECORD-ABBREV_2026 https://fairsharing.org/FAIRsharing.847069) ) format` is also widely used in life science related ontologies. It is possible to convert an `.owl` file to `.obo` file using:
+Besides `OWL (URL_TO_INSERT_RECORD-ABBREV_1804 https://fairsharing.org/FAIRsharing.atygwy)  format`, the `Open Biomedical Ontology (OBO (URL_TO_INSERT_RECORD-ABBREV_1805 https://fairsharing.org/FAIRsharing.847069) ) format` is also widely used in life science related ontologies. It is possible to convert an `.owl` file to `.obo` file using:
 
 ```bash
 #CONVERT:
@@ -519,11 +519,11 @@ robot convert \
 
 ### Step 7: Assess coverage of the ontology scope
 
-The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of `SPARQL (URL_TO_INSERT_RECORD-ABBREV_2027 https://fairsharing.org/FAIRsharing.87ccfd)  queries` and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The `use case owner` and `ontology developer` can also collaborate on the assessment of the competency questions answers/results. 
+The final step of the ontology construction is to assess coverage of the ontology scope by verifying if it is able to answer the competency questions predefined. The competency questions can be implemented as a set of `SPARQL (URL_TO_INSERT_RECORD-ABBREV_1806 https://fairsharing.org/FAIRsharing.87ccfd)  queries` and run against the developed ontology to check if the answers/results are aligned with the scope of the ontology. The `use case owner` and `ontology developer` can also collaborate on the assessment of the competency questions answers/results. 
 
-`ROBOT` provides the `query` command to perform `SPARQL (URL_TO_INSERT_RECORD-ABBREV_2028 https://fairsharing.org/FAIRsharing.87ccfd)  queries`  against an ontology to verify and validate the ontology.
+`ROBOT` provides the `query` command to perform `SPARQL (URL_TO_INSERT_RECORD-ABBREV_1807 https://fairsharing.org/FAIRsharing.87ccfd)  queries`  against an ontology to verify and validate the ontology.
 
-The query command runs SPARQL (URL_TO_INSERT_RECORD-ABBREV_2029 https://fairsharing.org/FAIRsharing.87ccfd)  `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. A pattern example of this command is shown as follows.
+The query command runs SPARQL (URL_TO_INSERT_RECORD-ABBREV_1808 https://fairsharing.org/FAIRsharing.87ccfd)  `ASK`, `SELECT`, and `CONSTRUCT` queries by using the `--query` option with two arguments: `a query file` and `an output file`. Instead of specifying one or more pairs (query file, output file), it is also possible to specify a single `--output-dir` and use the `--queries` option to provide one or more queries of any type. Each output file will be written to the output directory with the same base name as the query file that produced it. A pattern example of this command is shown as follows.
 
 ```bash
 robot query --input <input_ontology_file> \
@@ -541,7 +541,7 @@ It is therefore also critical to understand the benefits of contributing to exis
 
 ### What to read next?
 
-* OBO Foundry (URL_TO_INSERT_RECORD-NAME_2030 https://fairsharing.org/FAIRsharing.847069)  Semantic Engineering training and the [Robot tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/) 
+* OBO Foundry (URL_TO_INSERT_RECORD-NAME_1809 https://fairsharing.org/FAIRsharing.847069)  Semantic Engineering training and the [Robot tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/) 
 * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
 * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
 

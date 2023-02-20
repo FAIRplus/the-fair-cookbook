@@ -18,7 +18,7 @@
 
 ## Main Objectives
 
-This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1344 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD-ABBREV_1345 https://fairsharing.org/FAIRsharing.Mkl9RR) ) {footcite}`pmid20460452`, {footcite}`ols_jupp` on local machines. 
+This recipe is a step-by-step guide on how to deploy the EBI Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1159 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD-ABBREV_1160 https://fairsharing.org/FAIRsharing.Mkl9RR) ) {footcite}`pmid20460452`, {footcite}`ols_jupp` on local machines. 
 This demonstrates the workflow for deploying open source ontology service software in-house {footcite}`ols-install-guide`. 
 
 ## Introduction
@@ -29,19 +29,19 @@ save the time and cost. [Recipe FCB003](https://w3id.org/faircookbook/FCB003) id
 In this recipe, we use the [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index) to demonstrate the workflow of 
 deploying public ontology services in-house.
 
-Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1346 https://fairsharing.org/FAIRsharing.Mkl9RR)  is an open-source ontology management service developed by [EMBL-EBI](https://www.ebi.ac.uk/).
+Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1161 https://fairsharing.org/FAIRsharing.Mkl9RR)  is an open-source ontology management service developed by [EMBL-EBI](https://www.ebi.ac.uk/).
 
 It is a repository for biomedical ontologies, and serves as a single point of access to query, browse and navigate
 different ontologies. 
 
-OLS (URL_TO_INSERT_RECORD-ABBREV_1347 https://fairsharing.org/FAIRsharing.Mkl9RR)  supports the [Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/)
+OLS (URL_TO_INSERT_RECORD-ABBREV_1162 https://fairsharing.org/FAIRsharing.Mkl9RR)  supports the [Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/)
 guidelines and connects with other ontology services. 
 
 It provides both web interface and API to search and browser 
 ontologies. 
-[Recipe FCB003](https://w3id.org/faircookbook/FCB003) provides a detailed description of OLS (URL_TO_INSERT_RECORD-ABBREV_1348 https://fairsharing.org/FAIRsharing.Mkl9RR) .
+[Recipe FCB003](https://w3id.org/faircookbook/FCB003) provides a detailed description of OLS (URL_TO_INSERT_RECORD-ABBREV_1163 https://fairsharing.org/FAIRsharing.Mkl9RR) .
 
-A local OLS (URL_TO_INSERT_RECORD-ABBREV_1349 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows users to protect and control their ontology-related data, and make stable and fast access to ontology
+A local OLS (URL_TO_INSERT_RECORD-ABBREV_1164 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows users to protect and control their ontology-related data, and make stable and fast access to ontology
 services possible. 
 
 It can serve as the hub of internal ontology eco-system, linking internal vocabulary, 
@@ -67,9 +67,9 @@ specific policies regarding tool deployment the use of containerized application
 ```{figure} ols-deploy.svg
 ---
 name: ols-deploy
-alt: Deploying EMBL-EBI OLS (URL_TO_INSERT_RECORD-ABBREV_1350 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+alt: Deploying EMBL-EBI OLS
 ---
-Deploying EMBL-EBI Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1351 https://fairsharing.org/FAIRsharing.Mkl9RR) 
+Deploying EMBL-EBI Ontology Lookup Service
 ```
 ````
  
@@ -109,14 +109,14 @@ Minor modifications are required to run it on Windows machines.
 ### 2. Load ontologies into OLS 
 
 Ontologies in both [OBO](https://fairsharing.org/10.25504/FAIRsharing.aa0eat) and
-[OWL](https://fairsharing.org/10.25504/FAIRsharing.atygwy) formats can be loaded to OLS (URL_TO_INSERT_RECORD-ABBREV_1352 https://fairsharing.org/FAIRsharing.Mkl9RR)  by adding ontology
+[OWL](https://fairsharing.org/10.25504/FAIRsharing.atygwy) formats can be loaded to OLS (URL_TO_INSERT_RECORD-ABBREV_1165 https://fairsharing.org/FAIRsharing.Mkl9RR)  by adding ontology
 metadata to the configuration file, **ols-config.yaml**. 
 
 Three fields, **id**,**url** and **ontology_purl** are mandatory ontology metadata attributes.
 
 Other fields are also recommended, especially for self-defined ontologies. 
 
-Below is an example configuration of the Experimental Factor Ontology (URL_TO_INSERT_RECORD-NAME_1353 https://fairsharing.org/FAIRsharing.1gr4tz)  (EFO (URL_TO_INSERT_RECORD-ABBREV_1354 https://fairsharing.org/FAIRsharing.1gr4tz) ) provided
+Below is an example configuration of the Experimental Factor Ontology (URL_TO_INSERT_RECORD-NAME_1166 https://fairsharing.org/FAIRsharing.1gr4tz)  (EFO (URL_TO_INSERT_RECORD-ABBREV_1167 https://fairsharing.org/FAIRsharing.1gr4tz) ) provided
 by [OLS](https://www.ebi.ac.uk/ols/docs/installation-guide). 
 
 ```bash
@@ -148,7 +148,7 @@ The location of the target ontology shall be specified in the **ontology_purl** 
 
 Ontologies from both local files and online resources can be imported. 
 
-To add local ontologies, the ontology files need to be first copied to the **OLS (URL_TO_INSERT_RECORD-ABBREV_1355 https://fairsharing.org/FAIRsharing.Mkl9RR) -docker** directory. 
+To add local ontologies, the ontology files need to be first copied to the **OLS (URL_TO_INSERT_RECORD-ABBREV_1168 https://fairsharing.org/FAIRsharing.Mkl9RR) -docker** directory. 
 
 By default, the ontology file location is specified as **/opt/ols/example.owl**. 
 
@@ -156,11 +156,11 @@ For example, **ontology_purl:file:///opt/ols/example.owl**.
 
 To add ontologies from online resources, ontology URLs are required.
 
-Most reference ontologies use the OBO foundry (URL_TO_INSERT_RECORD-NAME_1356 https://fairsharing.org/FAIRsharing.847069)  Permanent URLs (PURLs). 
+Most reference ontologies use the OBO foundry (URL_TO_INSERT_RECORD-NAME_1169 https://fairsharing.org/FAIRsharing.847069)  Permanent URLs (PURLs). 
 
 The PURLs can be found [here](http://www.obofoundry.org/). 
 
-For example, the location of Data Usage Ontology (DUO (URL_TO_INSERT_RECORD-ABBREV_1357 https://fairsharing.org/FAIRsharing.5dnjs2) ) can be specified by adding:
+For example, the location of Data Usage Ontology (DUO (URL_TO_INSERT_RECORD-ABBREV_1170 https://fairsharing.org/FAIRsharing.5dnjs2) ) can be specified by adding:
 
 ```
 ontology_purl: http://purl.obolibrary.org/obo/duo.owl
@@ -171,20 +171,20 @@ to the configuration file.
 Ontology metadata for the configuration file can be written by users. 
 
 For common public ontologies, the ontology metadata can also be downloaded from either the 
-[EBI OLS](https://www.ebi.ac.uk/ols/index) or the [OBO Foundry (URL_TO_INSERT_RECORD-NAME_1358 https://fairsharing.org/FAIRsharing.847069) ](https://obofoundry.org/) {footcite}`pmid17989687obofoundry2007`,
+[EBI OLS](https://www.ebi.ac.uk/ols/index) or the [OBO Foundry (URL_TO_INSERT_RECORD-NAME_1171 https://fairsharing.org/FAIRsharing.847069) ](https://obofoundry.org/) {footcite}`pmid17989687obofoundry2007`,
 {footcite}`pmid34697637obofoundry2021` .
 
 #### 2.1 Get ontology metadata from the EBI OLS
 
-For ontologies included in the EBI OLS (URL_TO_INSERT_RECORD-ABBREV_1359 https://fairsharing.org/FAIRsharing.Mkl9RR) , the metadata can be downloaded directly using the EBI OLS (URL_TO_INSERT_RECORD-ABBREV_1360 https://fairsharing.org/FAIRsharing.Mkl9RR)  endpoint,
+For ontologies included in the EBI OLS (URL_TO_INSERT_RECORD-ABBREV_1172 https://fairsharing.org/FAIRsharing.Mkl9RR) , the metadata can be downloaded directly using the EBI OLS (URL_TO_INSERT_RECORD-ABBREV_1173 https://fairsharing.org/FAIRsharing.Mkl9RR)  endpoint,
 **https://www.ebi.ac.uk/ols/api/ols-config\?ids\=<ontologies-short-names-list>**, by providing the ontology short names.
 
 Metadata of multiple ontologies can be downloaded at the same time.
 
-[Here](https://www.ebi.ac.uk/ols/ontologies) is a list of all the ontologies available at OLS (URL_TO_INSERT_RECORD-ABBREV_1361 https://fairsharing.org/FAIRsharing.Mkl9RR) , along with their
+[Here](https://www.ebi.ac.uk/ols/ontologies) is a list of all the ontologies available at OLS (URL_TO_INSERT_RECORD-ABBREV_1174 https://fairsharing.org/FAIRsharing.Mkl9RR) , along with their
 respective "short name" and other information. 
 
-For example, the following command downloads the ontology metadata of EFO (URL_TO_INSERT_RECORD-ABBREV_1362 https://fairsharing.org/FAIRsharing.1gr4tz)  and Adverse Event Reporting Ontology (AERO) 
+For example, the following command downloads the ontology metadata of EFO (URL_TO_INSERT_RECORD-ABBREV_1175 https://fairsharing.org/FAIRsharing.1gr4tz)  and Adverse Event Reporting Ontology (AERO) 
 and saves it as **ols-config.yaml**:
 
 ```{warning}
@@ -198,7 +198,7 @@ and saves it as **ols-config.yaml**:
 ```shell
 wget -O ols-config.yaml https://www.ebi.ac.uk/ols/api/ols-config\?ids\=aero,efo
 ```
-To avoid losing pre-loaded ontologies, the metadata of EFO (URL_TO_INSERT_RECORD-ABBREV_1363 https://fairsharing.org/FAIRsharing.1gr4tz)  and AERO can also be appended to the already existing **ols-config.yml** using:
+To avoid losing pre-loaded ontologies, the metadata of EFO (URL_TO_INSERT_RECORD-ABBREV_1176 https://fairsharing.org/FAIRsharing.1gr4tz)  and AERO can also be appended to the already existing **ols-config.yml** using:
 
 ```shell
 wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.yaml
@@ -208,9 +208,9 @@ wget -O - https://www.ebi.ac.uk/ols/api/ols-config\?ids\=efo,aero >> ols-config.
 >:warning: The file needs to be manually edited by removing the header of the new metadata and adding proper indentation.
 ```
 
-For ontologies that are in the OBO foundry (URL_TO_INSERT_RECORD-NAME_1364 https://fairsharing.org/FAIRsharing.847069) , the metadata can also be downloaded from the [OBO Foundry GitHub repository](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config).
+For ontologies that are in the OBO foundry (URL_TO_INSERT_RECORD-NAME_1177 https://fairsharing.org/FAIRsharing.847069) , the metadata can also be downloaded from the [OBO Foundry GitHub repository](https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config).
 
-Additional formatting is required for metadata downloaded from the OBO foundry (URL_TO_INSERT_RECORD-NAME_1365 https://fairsharing.org/FAIRsharing.847069) .
+Additional formatting is required for metadata downloaded from the OBO foundry (URL_TO_INSERT_RECORD-NAME_1178 https://fairsharing.org/FAIRsharing.847069) .
 
 ### 3. Set up OLS in the local environment 
 
@@ -233,10 +233,10 @@ sudo docker build -t ols .
 sudo docker run -d -p 8080:8080 --name=OLS -t ols
 ```
 
-The local OLS (URL_TO_INSERT_RECORD-ABBREV_1366 https://fairsharing.org/FAIRsharing.Mkl9RR)  service can be accessed at http://localhost:8080/index 
+The local OLS (URL_TO_INSERT_RECORD-ABBREV_1179 https://fairsharing.org/FAIRsharing.Mkl9RR)  service can be accessed at http://localhost:8080/index 
 
 ### 4. Manage ontologies
-OLS (URL_TO_INSERT_RECORD-ABBREV_1367 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows the addition, update, and removal of ontologies.
+OLS (URL_TO_INSERT_RECORD-ABBREV_1180 https://fairsharing.org/FAIRsharing.Mkl9RR)  allows the addition, update, and removal of ontologies.
 
 Such ontology management is achieved through editing the configuration file, **ols-config.yaml**. 
 
@@ -251,10 +251,10 @@ Loaded ontologies will be updated to the latest version automatically by rebuild
 #### 4.2 Rebuild OLS image and restart OLS 
 Before rebuilding the Docker image, the existing container needs to be stopped and removed. 
 
-The OLS (URL_TO_INSERT_RECORD-ABBREV_1368 https://fairsharing.org/FAIRsharing.Mkl9RR)  container can be stopped and removed by providing the container name. 
+The OLS (URL_TO_INSERT_RECORD-ABBREV_1181 https://fairsharing.org/FAIRsharing.Mkl9RR)  container can be stopped and removed by providing the container name. 
 
 According to the parameters presented on the previous Docker creation command block, 
-the name of the OLS (URL_TO_INSERT_RECORD-ABBREV_1369 https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker container is "OLS (URL_TO_INSERT_RECORD-ABBREV_1370 https://fairsharing.org/FAIRsharing.Mkl9RR) ": 
+the name of the OLS (URL_TO_INSERT_RECORD-ABBREV_1182 https://fairsharing.org/FAIRsharing.Mkl9RR)  Docker container is "OLS (URL_TO_INSERT_RECORD-ABBREV_1183 https://fairsharing.org/FAIRsharing.Mkl9RR) ": 
 
 ```{warning}
 By rebuilding the OLS image, all loaded ontologies will be automatically updated to the latest version.
@@ -291,7 +291,7 @@ sudo docker run -d -p 8080:8080 --name=OLS -t ols
 
 Loading multiple ontologies from disk:
     
-If more than one ontology are going to be loaded into OLS (URL_TO_INSERT_RECORD-ABBREV_1371 https://fairsharing.org/FAIRsharing.Mkl9RR)  from disk, the **Dockerfile** needs modifying before 
+If more than one ontology are going to be loaded into OLS (URL_TO_INSERT_RECORD-ABBREV_1184 https://fairsharing.org/FAIRsharing.Mkl9RR)  from disk, the **Dockerfile** needs modifying before 
 building the Docker container again:
 
 * At Line 3 of the configuration file, replace **ENV OLS_HOME /opt/ols** with **ENV OLS_HOME /opt/ols/**
@@ -309,14 +309,14 @@ building the Docker container again:
     ```
     
 ## Conclusion
-The local OLS (URL_TO_INSERT_RECORD-ABBREV_1372 https://fairsharing.org/FAIRsharing.Mkl9RR)  provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a 
+The local OLS (URL_TO_INSERT_RECORD-ABBREV_1185 https://fairsharing.org/FAIRsharing.Mkl9RR)  provides API endpoints for retrieving, submitting, updating, and querying ontology data, as well as a 
 user interface for searching and browsing ontologies and ontology terms.
 
 For example, all ontologies loaded can be queried through endpoint **http://localhost:8080/api/ontologies**.
 
-A detailed description of OLS (URL_TO_INSERT_RECORD-ABBREV_1373 https://fairsharing.org/FAIRsharing.Mkl9RR)  functions can be found in the built-in documentation page.
+A detailed description of OLS (URL_TO_INSERT_RECORD-ABBREV_1186 https://fairsharing.org/FAIRsharing.Mkl9RR)  functions can be found in the built-in documentation page.
 
-To customize the local OLS (URL_TO_INSERT_RECORD-ABBREV_1374 https://fairsharing.org/FAIRsharing.Mkl9RR)  user interface, for example, adding corporate logos, please check the OLS (URL_TO_INSERT_RECORD-ABBREV_1375 https://fairsharing.org/FAIRsharing.Mkl9RR)  source code
+To customize the local OLS (URL_TO_INSERT_RECORD-ABBREV_1187 https://fairsharing.org/FAIRsharing.Mkl9RR)  user interface, for example, adding corporate logos, please check the OLS (URL_TO_INSERT_RECORD-ABBREV_1188 https://fairsharing.org/FAIRsharing.Mkl9RR)  source code
 [here](https://github.com/EBISPOT/OLS). 
 
 ---

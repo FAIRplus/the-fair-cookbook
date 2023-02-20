@@ -28,8 +28,8 @@ the ever-expanding volumes of texts and trying to organise the extracted informa
 In the past two decades, noticeable progress has been made, harnessing the power of machine-learning (ML) and 
 artificial intelligence (AI) based approaches to extract knowledge from large corpora of scientific literature.
 Modern ML algorithms aim to identify, extract, and store important information from unstructured text. 
-Among the most popular structured representations, knowledge graphs, in the form of RDF (URL_TO_INSERT_RECORD-ABBREV_1788 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graphs are rapidly
-becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR (URL_TO_INSERT_RECORD-ABBREV_1789 https://fairsharing.org/FAIRsharing.WWI10U)  data`.
+Among the most popular structured representations, knowledge graphs, in the form of RDF (URL_TO_INSERT_RECORD-ABBREV_1585 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graphs are rapidly
+becoming a dominant form. This is chiefly due to it being a favourite form of  `active metadata` and `FAIR (URL_TO_INSERT_RECORD-ABBREV_1586 https://fairsharing.org/FAIRsharing.WWI10U)  data`.
 
 In simplified terms, the overall pipeline for information extraction can be broken down in the following key steps:
 
@@ -37,7 +37,7 @@ In simplified terms, the overall pipeline for information extraction can be brok
 - Performing entity disambiguation using a technique such as co-reference resolution
 - Performing entity recognition and named entity linking (NER step)
 - Performing relationship detection and extraction
-- Creating and storing the data in a knowledge graph (an RDF (URL_TO_INSERT_RECORD-ABBREV_1790 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graph in our example).
+- Creating and storing the data in a knowledge graph (an RDF (URL_TO_INSERT_RECORD-ABBREV_1587 https://fairsharing.org/FAIRsharing.p77ph9)  linked data graph in our example).
 
 
 ## Graphical Overview
@@ -94,7 +94,7 @@ The table below lists the software that is used to execute the examples in this 
 | [spacy](https://spacy.io/) | Spacy is a beginner level industry strength natural language processing library|
 | [crosslingual coreference](https://spacy.io/universe/project/crosslingualcoreference)  | A multi-lingual approach to AllenNLP CoReference Resolution along with a wrapper for spaCy|
 | [rebel](https://github.com/Babelscape/rebel) | REBEL is a seq2seq model that simplifies Relation Extraction  |
-| [rdflib](https://github.com/RDFLib)| RDFLib is a Python library for working with RDF (URL_TO_INSERT_RECORD-ABBREV_1791 https://fairsharing.org/FAIRsharing.p77ph9) , a framework for representing information|
+| [rdflib](https://github.com/RDFLib)| RDFLib is a Python library for working with RDF (URL_TO_INSERT_RECORD-ABBREV_1588 https://fairsharing.org/FAIRsharing.p77ph9) , a framework for representing information|
 | [networkx python library](https://networkx.org/)| NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. |
 | [matplotlib library](https://matplotlib.org/)| Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.|
 
@@ -186,14 +186,14 @@ For example, in [this tutorial](https://towardsdatascience.com/clinical-named-en
 one can find a way to train a model to recognise some entities from a biomedical domain. 
 However, the spaCy library also provides a number of pre-trained models and, we will be using those in our example.
 
-Following the entity recognition, one needs to standardise the entities and map (URL_TO_INSERT_RECORD-NAME_1792 https://fairsharing.org/FAIRsharing.53edcc)  them to an existing controlled terminology/ontology. 
+Following the entity recognition, one needs to standardise the entities and map (URL_TO_INSERT_RECORD-NAME_1589 https://fairsharing.org/FAIRsharing.53edcc)  them to an existing controlled terminology/ontology. 
 The process is known as `Entity Linking` (EL). 
 With this step, entities recognized from the text are mapped to one or more corresponding unique resolvable identifiers 
 from a target knowledge base, for example, Wikipedia or semantic resource (e.g. an ontology such as 
 [disease ontology](https://github.com/DiseaseOntology)) {footcite}`pmid34755882`.
 One may also use resolvable identifiers minted by databases and relevant to the specific topic of the texts. 
 
-In this example, we will map (URL_TO_INSERT_RECORD-NAME_1793 https://fairsharing.org/FAIRsharing.53edcc)  our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT) and 
+In this example, we will map (URL_TO_INSERT_RECORD-NAME_1590 https://fairsharing.org/FAIRsharing.53edcc)  our entities to the [NCI Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT) and 
 for simplicity, we will by default choose the first match as a mapping.
 
 ```{warning}
@@ -208,7 +208,7 @@ A mapping to Wikipedia terms is demonstrated in [this tutorial](https://towardsd
 ## Relationship Extraction
 
 Following the step of entity linking, we now need to extract the relationships between the identified
-entities. This is necessary to be able to generate canonical RDF (URL_TO_INSERT_RECORD-ABBREV_1794 https://fairsharing.org/FAIRsharing.p77ph9)  triples, also known as RDF (URL_TO_INSERT_RECORD-ABBREV_1795 https://fairsharing.org/FAIRsharing.p77ph9)  subject predicate object 
+entities. This is necessary to be able to generate canonical RDF (URL_TO_INSERT_RECORD-ABBREV_1591 https://fairsharing.org/FAIRsharing.p77ph9)  triples, also known as RDF (URL_TO_INSERT_RECORD-ABBREV_1592 https://fairsharing.org/FAIRsharing.p77ph9)  subject predicate object 
 statements, and build a knowledge graph, 
 To perform the relation identification, we will use the python [Rebel project](https://github.com/Babelscape/rebel), which is
 also available as a spaCy component, and allows extracting both entities and relations in one step {footcite}`huguet-cabot-navigli-2021-rebel-relation`. 
@@ -288,9 +288,9 @@ Having said that, a key learning point is that a 'man in the loop' approach is p
 
 ## Storing the results
 
-The final subject, predicate, object triples can either be stored as a `labeled property graph` or as an `RDF (URL_TO_INSERT_RECORD-ABBREV_1796 https://fairsharing.org/FAIRsharing.p77ph9)  graph`.
+The final subject, predicate, object triples can either be stored as a `labeled property graph` or as an `RDF (URL_TO_INSERT_RECORD-ABBREV_1593 https://fairsharing.org/FAIRsharing.p77ph9)  graph`.
 
-Here, we will outline an approach to store the results as an RDF (URL_TO_INSERT_RECORD-ABBREV_1797 https://fairsharing.org/FAIRsharing.p77ph9)  graph by using the python [rdflib](https://github.com/RDFLib) library.
+Here, we will outline an approach to store the results as an RDF (URL_TO_INSERT_RECORD-ABBREV_1594 https://fairsharing.org/FAIRsharing.p77ph9)  graph by using the python [rdflib](https://github.com/RDFLib) library.
 
 rdflib allows the creation of entities with known URIs with the URIRef command.
 
@@ -443,7 +443,7 @@ Viewing the knowledge graph with networks and matplotlib
 ## Conclusion
 
 Modern AI/ML algorithms allow processing large corpus of unstructured text and extract information to structure it. 
-For instance, information can be organised in a form of knowledge graphs, e.g. RDF (URL_TO_INSERT_RECORD-ABBREV_1798 https://fairsharing.org/FAIRsharing.p77ph9)  linked open data (LOD) graphs.
+For instance, information can be organised in a form of knowledge graphs, e.g. RDF (URL_TO_INSERT_RECORD-ABBREV_1595 https://fairsharing.org/FAIRsharing.p77ph9)  linked open data (LOD) graphs.
 The present document provides a typical text processing pipeline to achieve this task, even if in a simplified form.
 In more realistic cases, large text corpora will require more advanced techniques to be deployed, from model training to
 the development of specific algorithms, and the inclusion of expert curators to assist in the creation of the final knowledge graphs.

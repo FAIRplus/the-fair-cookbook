@@ -20,7 +20,7 @@
 
 The main purpose of this recipe is:
 
-> To embed `Schema.org (URL_TO_INSERT_RECORD-NAME_800 https://fairsharing.org/FAIRsharing.hzdzq8) ` markup in a web page representing a dataset.
+> To embed `Schema.org (URL_TO_INSERT_RECORD-NAME_650 https://fairsharing.org/FAIRsharing.hzdzq8) ` markup in a web page representing a dataset.
 
 
 
@@ -66,13 +66,13 @@ and the [Bioschemas Dataset Profile](https://bioschemas.org/profiles/Dataset). T
 
 We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this recipe.
 
-1. Identify the page in your site about a specific dataset, e.g. https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_801 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/
+1. Identify the page in your site about a specific dataset, e.g. https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_651 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/
 
 2. Open the  [Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)
 
-   1.  Select `Dataset` from the Bioschemas (URL_TO_INSERT_RECORD-NAME_802 https://fairsharing.org/3517)  Profile dropdown
+   1.  Select `Dataset` from the Bioschemas (URL_TO_INSERT_RECORD-NAME_652 https://fairsharing.org/3517)  Profile dropdown
 
-   2.  Enter the URL (URL_TO_INSERT_RECORD-ABBREV_803 https://fairsharing.org/FAIRsharing.9d38e2)  of the page in URL (URL_TO_INSERT_RECORD-ABBREV_804 https://fairsharing.org/FAIRsharing.9d38e2)  box, e.g. `https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_805 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/`
+   2.  Enter the URL (URL_TO_INSERT_RECORD-ABBREV_653 https://fairsharing.org/FAIRsharing.9d38e2)  of the page in URL (URL_TO_INSERT_RECORD-ABBREV_654 https://fairsharing.org/FAIRsharing.9d38e2)  box, e.g. `https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_655 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/`
 
    3.  Click on the `Show Form` button
 
@@ -81,40 +81,40 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    :open:
    ```{figure} BioschemasGenerator.png
    ---
-   name: bioschemas (URL_TO_INSERT_RECORD-NAME_806 https://fairsharing.org/3517) -generator-start-screen-3
-   alt: Bioschemas (URL_TO_INSERT_RECORD-NAME_807 https://fairsharing.org/3517)  Generator start screen.
+   name: bioschemas (URL_TO_INSERT_RECORD-NAME_656 https://fairsharing.org/3517) -generator-start-screen-3
+   alt: Bioschemas (URL_TO_INSERT_RECORD-NAME_657 https://fairsharing.org/3517)  Generator start screen.
    
    ---
-   Bioschemas (URL_TO_INSERT_RECORD-NAME_808 https://fairsharing.org/3517)  Generator start screen.
+   Bioschemas (URL_TO_INSERT_RECORD-NAME_658 https://fairsharing.org/3517)  Generator start screen.
    ```
    ````
    
 3. Complete the profile form with the data relevant for your page. Once completed, click on the `Generate Markup`  button
 
    - You should complete all *Minimum* properties and as many *Recommended* properties as possible. You can show/hide properties using the `Additional Properties` buttons.
-   - Where possible you should link to other resources. The Bioschemas (URL_TO_INSERT_RECORD-NAME_809 https://fairsharing.org/3517)  Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a `url` and no other properties
-   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier`, this defaults to `PropertyValue` but `Text` or `URL (URL_TO_INSERT_RECORD-ABBREV_810 https://fairsharing.org/FAIRsharing.9d38e2)  ` will be more appropriate in most cases
-   - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas (URL_TO_INSERT_RECORD-NAME_811 https://fairsharing.org/3517)  profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
+   - Where possible you should link to other resources. The Bioschemas (URL_TO_INSERT_RECORD-NAME_659 https://fairsharing.org/3517)  Generator does not make this as simple as it could, but you can do it in step 5 once you have generated your markup, e.g. our dataset will link to a page with DataCatalog markup in rather than repeating all the properties for now we will just enter a `url` and no other properties
+   - The form defaults to the data type with the first alphabetical character, e.g. for `identifier`, this defaults to `PropertyValue` but `Text` or `URL (URL_TO_INSERT_RECORD-ABBREV_660 https://fairsharing.org/FAIRsharing.9d38e2)  ` will be more appropriate in most cases
+   - The right side of the screen gives examples for properties, where these have been provided by the Bioschemas (URL_TO_INSERT_RECORD-NAME_661 https://fairsharing.org/3517)  profile authors. Click on the `Show` button to see the example for a specific property. Click on `Minimum`, `Recommended`, or `Optional` to expand/contract the section and see the properties contained at that marginality level
 
    ````{dropdown} 
    :open:
    ```{figure} BioschemasGeneratorDatasetForm.png
    ---
    height: 550px
-   name: Bioschemas (URL_TO_INSERT_RECORD-NAME_812 https://fairsharing.org/3517)  Generator Dataset profile form
-   alt: Bioschemas (URL_TO_INSERT_RECORD-NAME_813 https://fairsharing.org/3517)  Generator Dataset profile form
+   name: Bioschemas (URL_TO_INSERT_RECORD-NAME_662 https://fairsharing.org/3517)  Generator Dataset profile form
+   alt: Bioschemas (URL_TO_INSERT_RECORD-NAME_663 https://fairsharing.org/3517)  Generator Dataset profile form
    ---
-   Bioschemas (URL_TO_INSERT_RECORD-NAME_814 https://fairsharing.org/3517)  Generator Dataset profile form.
+   Bioschemas (URL_TO_INSERT_RECORD-NAME_664 https://fairsharing.org/3517)  Generator Dataset profile form.
    ``` 
    ````
    
-4. You will now see the generated markup in `JSON (URL_TO_INSERT_RECORD-ABBREV_815 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_818 https://fairsharing.org/FAIRsharing.8f9bbb) ` format. You can click on the `Microdata` and `RDFa (URL_TO_INSERT_RECORD-ABBREV_817 https://fairsharing.org/663) ` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON (URL_TO_INSERT_RECORD-ABBREV_816 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_819 https://fairsharing.org/FAIRsharing.8f9bbb) `. For our UniProtKB (URL_TO_INSERT_RECORD-ABBREV_820 https://fairsharing.org/FAIRsharing.s1ne3g)  example, we get the following markup
+4. You will now see the generated markup in `JSON (URL_TO_INSERT_RECORD-ABBREV_665 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_668 https://fairsharing.org/FAIRsharing.8f9bbb) ` format. You can click on the `Microdata` and `RDFa (URL_TO_INSERT_RECORD-ABBREV_667 https://fairsharing.org/663) ` tabs to see the same content rendered in the different formats. However, we recommend the use of `JSON (URL_TO_INSERT_RECORD-ABBREV_666 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_669 https://fairsharing.org/FAIRsharing.8f9bbb) `. For our UniProtKB (URL_TO_INSERT_RECORD-ABBREV_670 https://fairsharing.org/FAIRsharing.s1ne3g)  example, we get the following markup
    
    ```
    <script type="application/ld+json" >
    {
-     "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_821 https://fairsharing.org/FAIRsharing.hzdzq8) ",
-     "@id": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_822 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/",
+     "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_671 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+     "@id": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_672 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/",
      "@type": "Dataset",
      "citation": [
        {
@@ -124,27 +124,27 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
      ],
      "creator": [
        {
-         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_823 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_673 https://fairsharing.org/FAIRsharing.hzdzq8) ",
          "@type": "Organization",
-         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_824 https://fairsharing.org/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_674 https://fairsharing.org/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
          "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. ",
          "name": "UniProt Consortium"
        }
      ],
-     "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_826 https://fairsharing.org/3517) /profiles/Dataset (URL_TO_INSERT_RECORD-HOMEPAGE_825 https://fairsharing.org/FAIRsharing.20sbr9) /0.3-RELEASE-2019_06_14",
-     "description": "The UniProt Knowledgebase (URL_TO_INSERT_RECORD-NAME_829 https://fairsharing.org/FAIRsharing.s1ne3g)  (UniProtKB (URL_TO_INSERT_RECORD-ABBREV_830 https://fairsharing.org/FAIRsharing.s1ne3g) ) is the central hub for the collection of functional information on proteins, with accurate, consistent and rich annotation. In addition to capturing the core (URL_TO_INSERT_RECORD-NAME_827 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_828 https://fairsharing.org/FAIRsharing.m283c)  data mandatory for each UniProtKB (URL_TO_INSERT_RECORD-ABBREV_831 https://fairsharing.org/FAIRsharing.s1ne3g)  entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation information), as much annotation information as possible is added.",
+     "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_676 https://fairsharing.org/3517) /profiles/Dataset (URL_TO_INSERT_RECORD-HOMEPAGE_675 https://fairsharing.org/FAIRsharing.20sbr9) /0.3-RELEASE-2019_06_14",
+     "description": "The UniProt Knowledgebase (URL_TO_INSERT_RECORD-NAME_679 https://fairsharing.org/FAIRsharing.s1ne3g)  (UniProtKB (URL_TO_INSERT_RECORD-ABBREV_680 https://fairsharing.org/FAIRsharing.s1ne3g) ) is the central hub for the collection of functional information on proteins, with accurate, consistent and rich annotation. In addition to capturing the core (URL_TO_INSERT_RECORD-NAME_677 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_678 https://fairsharing.org/FAIRsharing.m283c)  data mandatory for each UniProtKB (URL_TO_INSERT_RECORD-ABBREV_681 https://fairsharing.org/FAIRsharing.s1ne3g)  entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation information), as much annotation information as possible is added.",
      "distribution": {
-       "@id": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_832 https://fairsharing.org/FAIRsharing.s1ne3g) /downloads#uniprotkblink",
+       "@id": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_682 https://fairsharing.org/FAIRsharing.s1ne3g) /downloads#uniprotkblink",
        "@type": "DataDownload"
      },
      "identifier": [
-       "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_833 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/"
+       "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_683 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/"
      ],
      "includedInDataCatalog": [
        {
-         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_834 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_684 https://fairsharing.org/FAIRsharing.hzdzq8) ",
          "@type": "DataCatalog",
-         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_836 https://fairsharing.org/3517) /profiles/DataCatalog/0.3-RELEASE-2019_07_01 (URL_TO_INSERT_RECORD-HOMEPAGE_835 https://fairsharing.org/FAIRsharing.2037b2) ",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_686 https://fairsharing.org/3517) /profiles/DataCatalog/0.3-RELEASE-2019_07_01 (URL_TO_INSERT_RECORD-HOMEPAGE_685 https://fairsharing.org/FAIRsharing.2037b2) ",
          "description": "",
          "keywords": [],
          "name": "",
@@ -152,12 +152,12 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
        }
      ],
      "keywords": [
-       "Protein (URL_TO_INSERT_RECORD-ABBREV_837 https://fairsharing.org/FAIRsharing.rtndct) ",
-       "Protein (URL_TO_INSERT_RECORD-ABBREV_838 https://fairsharing.org/FAIRsharing.rtndct)  annotation"
+       "Protein (URL_TO_INSERT_RECORD-ABBREV_687 https://fairsharing.org/FAIRsharing.rtndct) ",
+       "Protein (URL_TO_INSERT_RECORD-ABBREV_688 https://fairsharing.org/FAIRsharing.rtndct)  annotation"
      ],
      "license": "https://creativecommons.org/licenses/by/4.0/",
-     "name": "UniProtKB (URL_TO_INSERT_RECORD-ABBREV_839 https://fairsharing.org/FAIRsharing.s1ne3g) ",
-     "url": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_840 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/"
+     "name": "UniProtKB (URL_TO_INSERT_RECORD-ABBREV_689 https://fairsharing.org/FAIRsharing.s1ne3g) ",
+     "url": "https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_690 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/"
    }
    </script >
    ```
@@ -171,9 +171,9 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    ```
    "includedInDataCatalog": [
        {
-         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_841 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_691 https://fairsharing.org/FAIRsharing.hzdzq8) ",
          "@type": "DataCatalog",
-         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_843 https://fairsharing.org/3517) /profiles/DataCatalog/0.3-RELEASE-2019_07_01 (URL_TO_INSERT_RECORD-HOMEPAGE_842 https://fairsharing.org/FAIRsharing.2037b2) ",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_693 https://fairsharing.org/3517) /profiles/DataCatalog/0.3-RELEASE-2019_07_01 (URL_TO_INSERT_RECORD-HOMEPAGE_692 https://fairsharing.org/FAIRsharing.2037b2) ",
          "description": "",
          "keywords": [],
          "name": "",
@@ -191,9 +191,9 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
     },
    ```
 
-   You can test that your JSON (URL_TO_INSERT_RECORD-ABBREV_844 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_845 https://fairsharing.org/FAIRsharing.8f9bbb)  is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
+   You can test that your JSON (URL_TO_INSERT_RECORD-ABBREV_694 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_695 https://fairsharing.org/FAIRsharing.8f9bbb)  is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
 
-7. Once you are happy with your markup, include the `JSON (URL_TO_INSERT_RECORD-ABBREV_846 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_848 https://fairsharing.org/FAIRsharing.8f9bbb) `, script tags and all, at the bottom of your HTML (URL_TO_INSERT_RECORD-ABBREV_847 https://fairsharing.org/FAIRsharing.YugnuL)  page template.
+7. Once you are happy with your markup, include the `JSON (URL_TO_INSERT_RECORD-ABBREV_696 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_698 https://fairsharing.org/FAIRsharing.8f9bbb) `, script tags and all, at the bottom of your HTML (URL_TO_INSERT_RECORD-ABBREV_697 https://fairsharing.org/FAIRsharing.YugnuL)  page template.
 
    Make sure that this is before the closing `</html>` tag
 
@@ -202,20 +202,20 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
    ```
       <script type="application/ld+json">
       {
-        "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_849 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+        "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_699 https://fairsharing.org/FAIRsharing.hzdzq8) ",
         "@id": "%%%PAGEURL%%%",
         "@type": "Dataset",
         "citation": [
           {
-            "@id": "%%%DOI (URL_TO_INSERT_RECORD-ABBREV_850 https://fairsharing.org/FAIRsharing.hFLKCn) %%%",
+            "@id": "%%%DOI (URL_TO_INSERT_RECORD-ABBREV_700 https://fairsharing.org/FAIRsharing.hFLKCn) %%%",
             "@type": "CreativeWork"
           }
         ],
         "creator": [
           {
-            "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_851 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+            "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_701 https://fairsharing.org/FAIRsharing.hzdzq8) ",
             "@type": "Organization",
-            "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_852 https://fairsharing.org/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
+            "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_702 https://fairsharing.org/3517) /profiles/Organization/0.2-DRAFT-2019_07_19",
             "description": "The mission of UniProt is to provide the scientific community with a comprehensive, high quality and freely accessible resource of protein sequence and functional information. ",
             "name": "UniProt Consortium"
           }
@@ -227,7 +227,7 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
    Your site should now generate dataset pages with embedded markup. 
 
-   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas (URL_TO_INSERT_RECORD-NAME_853 https://fairsharing.org/3517)  profiles<sup>[1](#biosche (URL_TO_INSERT_RECORD-NAME_854 https://fairsharing.org/3517) mas-validator)</sup>.
+   Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas (URL_TO_INSERT_RECORD-NAME_703 https://fairsharing.org/3517)  profiles<sup>[1](#biosche (URL_TO_INSERT_RECORD-NAME_704 https://fairsharing.org/3517) mas-validator)</sup>.
 
 ---
 

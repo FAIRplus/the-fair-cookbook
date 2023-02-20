@@ -17,7 +17,7 @@
 ```` 
 
 
-The **FAIR (URL_TO_INSERT_RECORD-ABBREV_600 https://fairsharing.org/FAIRsharing.WWI10U)  principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
+The **FAIR (URL_TO_INSERT_RECORD-ABBREV_452 https://fairsharing.org/FAIRsharing.WWI10U)  principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
 > 
 >A1. (Meta)data are retrievable by their identifier using a standardised communications protocol 
@@ -109,7 +109,7 @@ Key Processes to sustain Globally Unique Persistent Resolvable Identifiers (GUPR
 ```
 
 
-Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. This organization is the `authority` which rules over that area of knowledge. The core (URL_TO_INSERT_RECORD-NAME_601 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_602 https://fairsharing.org/FAIRsharing.m283c)  assumption is that identifiers must be unique, that is they can not be shared and there is a 1 to 1 relation between the 'identifier' and the entity it identifies.
+Identifiers are used to tag, identify, find and retrieve entities which are part of a collection or a resource maintained by some organization. This organization is the `authority` which rules over that area of knowledge. The core (URL_TO_INSERT_RECORD-NAME_453 https://fairsharing.org/FAIRsharing.xMmOCL)  (URL_TO_INSERT_RECORD-ABBREV_454 https://fairsharing.org/FAIRsharing.m283c)  assumption is that identifiers must be unique, that is they can not be shared and there is a 1 to 1 relation between the 'identifier' and the entity it identifies.
 
 With isolated systems, disconnected from any other system, the risk of identifier collision is null but two isolated systems can create local identifiers which could be completely identical but which denote completely different entities. In fact, this happens all the time.
 
@@ -161,7 +161,7 @@ This approach uses 2 inputs:
 - a cryptographic hashing algorithm implemented as a software function
 - a digital resource (e.g. a file)
 
-Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string (URL_TO_INSERT_RECORD-NAME_603 https://fairsharing.org/FAIRsharing.9b7wvk) , which is therefore a signature (or fingerprint) of the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
+Indeed, the approach generates an identifier by using all or some of the content of the digital resource as input to the cryptographic hashing function to compute a unique string (URL_TO_INSERT_RECORD-NAME_455 https://fairsharing.org/FAIRsharing.9b7wvk) , which is therefore a signature (or fingerprint) of the digital resource {footcite}`Retter-1`, {footcite}`Retter-2`.
 A number of algorithms can be used and some are already widely used such as *Message Digest algorithm MD5* specified by the RFC1321 {footcite}`MD5`, the *Secure Hash Algorithm (SHA1)*,  *Secure Hash Algorithm 2 (SHA256)*, *Secure Hash Algorithm 3 (SHA3)* or *BLAKE2b-256* (RFC 7693) {footcite}`Blake2`. 
 The first two are considered obsolete, while the latter two are most advanced and approved by NIST.
 
@@ -178,7 +178,7 @@ The first two are considered obsolete, while the latter two are most advanced an
 ---
 
 #### Generation in Python
-The following code snippet shows the generation of a hash for a string (URL_TO_INSERT_RECORD-NAME_604 https://fairsharing.org/FAIRsharing.9b7wvk)  using the Python hashlib package:
+The following code snippet shows the generation of a hash for a string (URL_TO_INSERT_RECORD-NAME_456 https://fairsharing.org/FAIRsharing.9b7wvk)  using the Python hashlib package:
 
 ```python
 import hashlib
@@ -214,7 +214,7 @@ curl https://fairplus.github.io/cookbook-dev/intro | b2sum --length 256 --binary
 
 
 
-In our context, the use of the hashing function is to generate a unique key which may be used to generate a URL (URL_TO_INSERT_RECORD-ABBREV_605 https://fairsharing.org/FAIRsharing.9d38e2) . This simply indicates a technical option for generating opaque URL (URL_TO_INSERT_RECORD-ABBREV_606 https://fairsharing.org/FAIRsharing.9d38e2) , not that it is necessarily the most widespread approach.
+In our context, the use of the hashing function is to generate a unique key which may be used to generate a URL (URL_TO_INSERT_RECORD-ABBREV_457 https://fairsharing.org/FAIRsharing.9d38e2) . This simply indicates a technical option for generating opaque URL (URL_TO_INSERT_RECORD-ABBREV_458 https://fairsharing.org/FAIRsharing.9d38e2) , not that it is necessarily the most widespread approach.
 
 
 ## Understanding Uniform Resource Locators (URLs)
@@ -241,7 +241,7 @@ scheme          authority                  path                 query           
 source:[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 
 
-The structure of `URL (URL_TO_INSERT_RECORD-ABBREV_607 https://fairsharing.org/FAIRsharing.9d38e2) `, according to the World Wide Web Consortium (W3C) specification, is as follows:
+The structure of `URL (URL_TO_INSERT_RECORD-ABBREV_459 https://fairsharing.org/FAIRsharing.9d38e2) `, according to the World Wide Web Consortium (W3C) specification, is as follows:
 
 ```bash
 URI = scheme:[//authority]path[?query][#fragment]
@@ -250,11 +250,11 @@ URI = scheme:[//authority]path[?query][#fragment]
 ### `scheme`:
 In this structure, the `scheme` defines the protocol or application to use to obtain the resource. The list of official `scheme` is maintained by the **Internet Assigned Numbers Authority** and the following link (https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) holds the most up to date version.
 
-The most relevant `URI (URL_TO_INSERT_RECORD-ABBREV_608 https://fairsharing.org/FAIRsharing.d261e1)  scheme` in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_609 https://fairsharing.org/FAIRsharing.WWI10U)  data and Linked Open Data are `http` and `https` which denote the `Hypertext Transfer Protocol` and the `Hypertext Tranfer Protocol Secure`.
+The most relevant `URI (URL_TO_INSERT_RECORD-ABBREV_460 https://fairsharing.org/FAIRsharing.d261e1)  scheme` in the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_461 https://fairsharing.org/FAIRsharing.WWI10U)  data and Linked Open Data are `http` and `https` which denote the `Hypertext Transfer Protocol` and the `Hypertext Tranfer Protocol Secure`.
 
 ### `authority`:
 
-Besides setting the `scheme`, the other essential fragment of a URI (URL_TO_INSERT_RECORD-ABBREV_610 https://fairsharing.org/FAIRsharing.d261e1)  is the `authority`, which according to the Internet Engineering Task Force (IETF) specifications, presents the following characteristics:
+Besides setting the `scheme`, the other essential fragment of a URI (URL_TO_INSERT_RECORD-ABBREV_462 https://fairsharing.org/FAIRsharing.d261e1)  is the `authority`, which according to the Internet Engineering Task Force (IETF) specifications, presents the following characteristics:
 ```
 authority = [userinfo@]host[:port]
 ```
@@ -289,17 +289,17 @@ it is often the case the `authority` is reduced to the `host` , which is then re
 The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zero or more path segements separated by a `/`.
 
 ### `query`:
-The `query` is an optional part of the URL (URL_TO_INSERT_RECORD-ABBREV_611 https://fairsharing.org/FAIRsharing.9d38e2)  syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
+The `query` is an optional part of the URL (URL_TO_INSERT_RECORD-ABBREV_463 https://fairsharing.org/FAIRsharing.9d38e2)  syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
 
 In the context resolvable identiers, `query` components should be avoided.
 
 ### `fragment`
-The `fragement` is an optional part of the URL (URL_TO_INSERT_RECORD-ABBREV_612 https://fairsharing.org/FAIRsharing.9d38e2)  syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
+The `fragement` is an optional part of the URL (URL_TO_INSERT_RECORD-ABBREV_464 https://fairsharing.org/FAIRsharing.9d38e2)  syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
 
 ## Generating Resolvable URLs
 
-In the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_613 https://fairsharing.org/FAIRsharing.WWI10U)  data, resources on the web must have **unique**, **persistent**, and **resolvable** identifiers.
-In order to achieve the capability of `persistence`, it is necessary for the resource identifiers to comply to the RFC 3986 IETF standard for URIs (and IRIs, which are URI (URL_TO_INSERT_RECORD-ABBREV_614 https://fairsharing.org/FAIRsharing.d261e1)  extended to cope with unicode). This means that it must comprise the following components:
+In the context of FAIR (URL_TO_INSERT_RECORD-ABBREV_465 https://fairsharing.org/FAIRsharing.WWI10U)  data, resources on the web must have **unique**, **persistent**, and **resolvable** identifiers.
+In order to achieve the capability of `persistence`, it is necessary for the resource identifiers to comply to the RFC 3986 IETF standard for URIs (and IRIs, which are URI (URL_TO_INSERT_RECORD-ABBREV_466 https://fairsharing.org/FAIRsharing.d261e1)  extended to cope with unicode). This means that it must comprise the following components:
 
 1. scheme: https
 2. an authority: www.example.com
@@ -312,7 +312,7 @@ In a virtual example which uses a UUID for the local identifier and does not use
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI - commonly referred to as a URL (URL_TO_INSERT_RECORD-ABBREV_615 https://fairsharing.org/FAIRsharing.9d38e2) ) by appending the local identifier onto a namesapce.
+Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI - commonly referred to as a URL (URL_TO_INSERT_RECORD-ABBREV_467 https://fairsharing.org/FAIRsharing.9d38e2) ) by appending the local identifier onto a namesapce.
 
 ---
 
@@ -323,7 +323,7 @@ Taking a real life example, to make the `UniProt accession number` globally uniq
 
 In the case of UniProt, the resource has provided IRIs for each page about a protein as well as separate IRIs for the protein itself; this is because the page is not the concept of the protein by a document that describes properties of the protein. This separation of identities is achieved by using different namespaces for the different types of resource.
 
-- UniProt P38398 web page IRI: https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_616 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/P38398
+- UniProt P38398 web page IRI: https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_468 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/P38398
 - UniProt protein P38398 IRI: http://purl.uniprot.org/uniprot/P38398
 
 Once such URIs are available, one may also turn them into compact identifiers called CURIEs. This will be discussed further in the next section.
@@ -331,7 +331,7 @@ Once such URIs are available, one may also turn them into compact identifiers ca
 ## Identifier Resolution - Enabling persistence through indirection
 
 
-This relates to the following FAIR (URL_TO_INSERT_RECORD-ABBREV_617 https://fairsharing.org/FAIRsharing.WWI10U)  principle mentioned in the introduction:
+This relates to the following FAIR (URL_TO_INSERT_RECORD-ABBREV_469 https://fairsharing.org/FAIRsharing.WWI10U)  principle mentioned in the introduction:
 
 > A1. (Meta)data are retrievable by their identifier using a standardised communications protocol.
 
@@ -343,40 +343,40 @@ This relates to the following FAIR (URL_TO_INSERT_RECORD-ABBREV_617 https://fair
 
 The standard approach would be resolving a `HTTP GET` request using content negotiation to choose between different representations of the resource.
 
-A PURL (URL_TO_INSERT_RECORD-ABBREV_618 https://fairsharing.org/FAIRsharing.3e603c)  is a **`persistent URL (URL_TO_INSERT_RECORD-ABBREV_619 https://fairsharing.org/FAIRsharing.9d38e2) `**, meaning that it provides a **permanent address to access a resource on the web**.
+A PURL (URL_TO_INSERT_RECORD-ABBREV_470 https://fairsharing.org/FAIRsharing.3e603c)  is a **`persistent URL (URL_TO_INSERT_RECORD-ABBREV_471 https://fairsharing.org/FAIRsharing.9d38e2) `**, meaning that it provides a **permanent address to access a resource on the web**.
 
-To understand the notion of PURL (URL_TO_INSERT_RECORD-ABBREV_620 https://fairsharing.org/FAIRsharing.3e603c) , one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding` ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified. 
+To understand the notion of PURL (URL_TO_INSERT_RECORD-ABBREV_472 https://fairsharing.org/FAIRsharing.3e603c) , one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding` ), which refers to the practice of providing a stable, fixed web address/url, but setting it up so that it points to another content, which may be periodically modified. 
 
-When a user retrieves a PURL (URL_TO_INSERT_RECORD-ABBREV_621 https://fairsharing.org/FAIRsharing.3e603c) , they will be **`redirected`** to the current location of the resource.
-When an author needs to move a page, they can update the PURL (URL_TO_INSERT_RECORD-ABBREV_622 https://fairsharing.org/FAIRsharing.3e603c)  to point to the new location.
+When a user retrieves a PURL (URL_TO_INSERT_RECORD-ABBREV_473 https://fairsharing.org/FAIRsharing.3e603c) , they will be **`redirected`** to the current location of the resource.
+When an author needs to move a page, they can update the PURL (URL_TO_INSERT_RECORD-ABBREV_474 https://fairsharing.org/FAIRsharing.3e603c)  to point to the new location.
 
 ```{admonition} Tip
 :class: tip
 The practice of **indirection** comes handy as it ensures invariant url address for resources which are known to change, owing to version changes for instance or owing to change in ownership. 
 ```
 
-We can see this practice in action with the reliance on purl.org url for identifying OBO Foundry (URL_TO_INSERT_RECORD-NAME_623 https://fairsharing.org/FAIRsharing.847069)  resources. For instance, the following url [`http://purl.obolibrary.org/obo/stato.owl`](http://purl.obolibrary.org/obo/stato.owl) is a redirect to the latest release of the file, which is [https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl](https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl).
+We can see this practice in action with the reliance on purl.org url for identifying OBO Foundry (URL_TO_INSERT_RECORD-NAME_475 https://fairsharing.org/FAIRsharing.847069)  resources. For instance, the following url [`http://purl.obolibrary.org/obo/stato.owl`](http://purl.obolibrary.org/obo/stato.owl) is a redirect to the latest release of the file, which is [https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl](https://raw.githubusercontent.com/ISA-tools/stato/dev/releases/latest_release/stato.owl).
 
 PURLs with a `common prefix` are grouped together into **domains**. Each domain has a single maintainer who can add new PURLs to the domain and make changes to existing PURLs within the domain.
 
 
-FAIR (URL_TO_INSERT_RECORD-ABBREV_624 https://fairsharing.org/FAIRsharing.WWI10U)  Principle A1 states that:
+FAIR (URL_TO_INSERT_RECORD-ABBREV_476 https://fairsharing.org/FAIRsharing.WWI10U)  Principle A1 states that:
 >(meta)data should be retrievable by its identifier.
 
-When the identifier is not a resolvable URL (URL_TO_INSERT_RECORD-ABBREV_625 https://fairsharing.org/FAIRsharing.9d38e2) , then `Identifier Resolution Services` are required that know how to map (URL_TO_INSERT_RECORD-NAME_626 https://fairsharing.org/FAIRsharing.53edcc)  an IRI to a location for the data. 
+When the identifier is not a resolvable URL (URL_TO_INSERT_RECORD-ABBREV_477 https://fairsharing.org/FAIRsharing.9d38e2) , then `Identifier Resolution Services` are required that know how to map (URL_TO_INSERT_RECORD-NAME_478 https://fairsharing.org/FAIRsharing.53edcc)  an IRI to a location for the data. 
 
 
 
 ### Introducing CURIES or Compact URIs
 CURIEs (short for compact URIs) are defined by a World Wide Web Consortium Working Group Note [CURIE Syntax 1.0](https://www.w3.org/TR/2010/NOTE-curie-20101216/), and provide a human readable shortening of IRIs. 
 
-The CURIE (URL_TO_INSERT_RECORD-ABBREV_627 https://fairsharing.org/FAIRsharing.af21db)  consists of a **`namespace prefix`** followed by the **`local identifier`**.
+The CURIE (URL_TO_INSERT_RECORD-ABBREV_479 https://fairsharing.org/FAIRsharing.af21db)  consists of a **`namespace prefix`** followed by the **`local identifier`**.
 
-There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI (URL_TO_INSERT_RECORD-ABBREV_629 https://fairsharing.org/FAIRsharing.hFLKCn)  `[doi:10.1038/sdata.2016.18]` refers to the FAIR (URL_TO_INSERT_RECORD-ABBREV_636 https://fairsharing.org/FAIRsharing.WWI10U)  Principles (URL_TO_INSERT_RECORD-NAME_635 https://fairsharing.org/FAIRsharing.WWI10U)  paper. The Digital Object Identifier (URL_TO_INSERT_RECORD-NAME_628 https://fairsharing.org/FAIRsharing.hFLKCn)  System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI (URL_TO_INSERT_RECORD-ABBREV_630 https://fairsharing.org/FAIRsharing.hFLKCn)  to the website.The client will be redirected to the URL (URL_TO_INSERT_RECORD-ABBREV_633 https://fairsharing.org/FAIRsharing.9d38e2)  where the resource about the concept is located, e.g. for the FAIR (URL_TO_INSERT_RECORD-ABBREV_637 https://fairsharing.org/FAIRsharing.WWI10U)  Data Principles paper we can use the URL (URL_TO_INSERT_RECORD-ABBREV_634 https://fairsharing.org/FAIRsharing.9d38e2)  https://www.doi.org (URL_TO_INSERT_RECORD-HOMEPAGE_632 https://fairsharing.org/FAIRsharing.hFLKCn) /10.1038/sdata.2016.18 to resolve the paper's DOI (URL_TO_INSERT_RECORD-ABBREV_631 https://fairsharing.org/FAIRsharing.hFLKCn) . This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
+There are some widely used and defined CURIEs such as DOIs and ISBN numbers. For example the DOI (URL_TO_INSERT_RECORD-ABBREV_481 https://fairsharing.org/FAIRsharing.hFLKCn)  `[doi:10.1038/sdata.2016.18]` refers to the FAIR (URL_TO_INSERT_RECORD-ABBREV_488 https://fairsharing.org/FAIRsharing.WWI10U)  Principles (URL_TO_INSERT_RECORD-NAME_487 https://fairsharing.org/FAIRsharing.WWI10U)  paper. The Digital Object Identifier (URL_TO_INSERT_RECORD-NAME_480 https://fairsharing.org/FAIRsharing.hFLKCn)  System web site (https://www.doi.org/) provides a resolution service for DOIs. The service is available as a web form on the site or can be used by appending a DOI (URL_TO_INSERT_RECORD-ABBREV_482 https://fairsharing.org/FAIRsharing.hFLKCn)  to the website.The client will be redirected to the URL (URL_TO_INSERT_RECORD-ABBREV_485 https://fairsharing.org/FAIRsharing.9d38e2)  where the resource about the concept is located, e.g. for the FAIR (URL_TO_INSERT_RECORD-ABBREV_489 https://fairsharing.org/FAIRsharing.WWI10U)  Data Principles paper we can use the URL (URL_TO_INSERT_RECORD-ABBREV_486 https://fairsharing.org/FAIRsharing.9d38e2)  https://www.doi.org (URL_TO_INSERT_RECORD-HOMEPAGE_484 https://fairsharing.org/FAIRsharing.hFLKCn) /10.1038/sdata.2016.18 to resolve the paper's DOI (URL_TO_INSERT_RECORD-ABBREV_483 https://fairsharing.org/FAIRsharing.hFLKCn) . This results in the client being taken to the page at https://www.nature.com/articles/sdata201618.
 
-`Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](##identifier-resolution-services) below). These are extensively used to map (URL_TO_INSERT_RECORD-NAME_638 https://fairsharing.org/FAIRsharing.53edcc)  CURIEs to URLs that can be resolved.
+`Namespaces` can be defined *by convention*, such as the case with `doi`, and registered with services to allow for the resolution of CURIEs (see [Identifier Resolution Services](##identifier-resolution-services) below). These are extensively used to map (URL_TO_INSERT_RECORD-NAME_490 https://fairsharing.org/FAIRsharing.53edcc)  CURIEs to URLs that can be resolved.
 
-Going back to our *Life Science context*, we can use the following CURIE (URL_TO_INSERT_RECORD-ABBREV_639 https://fairsharing.org/FAIRsharing.af21db)  `[uniprot:P38398]` to refer to the UniProt record for the protein. 
+Going back to our *Life Science context*, we can use the following CURIE (URL_TO_INSERT_RECORD-ABBREV_491 https://fairsharing.org/FAIRsharing.af21db)  `[uniprot:P38398]` to refer to the UniProt record for the protein. 
 
 This is very useful for including unambiguous, global identifiers in scientific articles.
 
@@ -390,7 +390,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 * [purl.org](https://archive.org/services/purl/)
 
-    > The PURL (URL_TO_INSERT_RECORD-ABBREV_640 https://fairsharing.org/FAIRsharing.3e603c)  system is a service of the Internet Archive, which provides an interface to administer domain. For more information about the service, visit https://archive.org/services/purl/help
+    > The PURL (URL_TO_INSERT_RECORD-ABBREV_492 https://fairsharing.org/FAIRsharing.3e603c)  system is a service of the Internet Archive, which provides an interface to administer domain. For more information about the service, visit https://archive.org/services/purl/help
     >
 
 * [w3ids](https://w3id.org/)
@@ -400,21 +400,21 @@ This is very useful for including unambiguous, global identifiers in scientific 
     > - resolution service
     > - redirection service:
     > 
-    > Send a request to add a redirect to the public-perma-id@w3.org mailing list. Make sure to include the URL (URL_TO_INSERT_RECORD-ABBREV_642 https://fairsharing.org/FAIRsharing.9d38e2)  that you want on w3id.org (URL_TO_INSERT_RECORD-NAME_641 https://fairsharing.org/FAIRsharing.S6BoUk) , the URL (URL_TO_INSERT_RECORD-ABBREV_643 https://fairsharing.org/FAIRsharing.9d38e2)  that you want to redirect to, and the HTTP code that you want to use when redirecting. An administrator will then create the redirect for you.
+    > Send a request to add a redirect to the public-perma-id@w3.org mailing list. Make sure to include the URL (URL_TO_INSERT_RECORD-ABBREV_494 https://fairsharing.org/FAIRsharing.9d38e2)  that you want on w3id.org (URL_TO_INSERT_RECORD-NAME_493 https://fairsharing.org/FAIRsharing.S6BoUk) , the URL (URL_TO_INSERT_RECORD-ABBREV_495 https://fairsharing.org/FAIRsharing.9d38e2)  that you want to redirect to, and the HTTP code that you want to use when redirecting. An administrator will then create the redirect for you.
 
 
 * [Identifiers.org](http://identifiers.org/)
 
-    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifiers`](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL (URL_TO_INSERT_RECORD-ABBREV_644 https://fairsharing.org/FAIRsharing.9d38e2)  pattern {footcite}`Juty2012`. 
+    > [Identifiers.org](https://identifiers.org) is a **Resolution Service** provides consistent access to life science data using [`Compact Uniform Resource Identifiers`](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL (URL_TO_INSERT_RECORD-ABBREV_496 https://fairsharing.org/FAIRsharing.9d38e2)  pattern {footcite}`Juty2012`. 
     >`Compact Identifiers` consist of an `assigned`, `unique` `prefix` and a `local provider designated` **`accession number`** (prefix:accession).
     > The resolving location of `Compact Identifiers` is determined using information that is stored in the [Identifiers.org Registry](http://identifiers.org/).
-    > Datasets can register their *namespace `prefix`* together with their `identifier pattern`. The service can then be used in the same way as the DOI (URL_TO_INSERT_RECORD-ABBREV_645 https://fairsharing.org/FAIRsharing.hFLKCn)  resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE (URL_TO_INSERT_RECORD-ABBREV_646 https://fairsharing.org/FAIRsharing.af21db)  `[uniprot:P38938]` using Identifiers.org. This means that the URL (URL_TO_INSERT_RECORD-ABBREV_647 https://fairsharing.org/FAIRsharing.9d38e2)  https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_648 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/P38938.
+    > Datasets can register their *namespace `prefix`* together with their `identifier pattern`. The service can then be used in the same way as the DOI (URL_TO_INSERT_RECORD-ABBREV_497 https://fairsharing.org/FAIRsharing.hFLKCn)  resolution service. So for the UniProt page about BRCA1, we can resolve the CURIE (URL_TO_INSERT_RECORD-ABBREV_498 https://fairsharing.org/FAIRsharing.af21db)  `[uniprot:P38938]` using Identifiers.org. This means that the URL (URL_TO_INSERT_RECORD-ABBREV_499 https://fairsharing.org/FAIRsharing.9d38e2)  https://identifiers.org/uniprot:P38938 resolves to the UniProt page https://www.uniprot.org (URL_TO_INSERT_RECORD-HOMEPAGE_500 https://fairsharing.org/FAIRsharing.s1ne3g) /uniprot/P38938.
 
 
 
 * [Name2Things](https://n2t.net/)
 
-    > [Name2Things](https://n2t.net/) (N2T) is a **Resolution Service**, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL (URL_TO_INSERT_RECORD-ABBREV_649 https://fairsharing.org/FAIRsharing.9d38e2)  shorteners like bit.ly, N2T serves content **indirectly**.
+    > [Name2Things](https://n2t.net/) (N2T) is a **Resolution Service**, maintained at the California Digital Library (CDL) within the University of California (UC) Office of the President. CDL supports electronic library services for ten UC campuses and affiliated law schools, medical centers, and national laboratories, as well as hundreds of museums, herbaria, botanical gardens, etc. Similar to URL (URL_TO_INSERT_RECORD-ABBREV_501 https://fairsharing.org/FAIRsharing.9d38e2)  shorteners like bit.ly, N2T serves content **indirectly**.
     > N2T can store more than one "target" (forwarding link) for an identifier, as well as any kind or amount of metadata (descriptive information)
         > N2T.net is also a "meta-resolver". In collaboration with identifiers.org, it recognizes over 600 well-known identifier types and knows where their respective servers are. Failing to find forwarding information for a specific individual identifier, it uses the identifier's type to look for an overall target rule.
 
@@ -422,7 +422,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 * [Bioregistry](https://bioregistry.io/)
 
-    > [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub (URL_TO_INSERT_RECORD-NAME_655 https://fairsharing.org/FAIRsharing.c55d5e)  repository](https://github.com/biopragmatics/bioregistry). Like Identifiers.org it has a registry, but also a registry of registries, and it imports data from Identifiers.org and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub (URL_TO_INSERT_RECORD-NAME_656 https://fairsharing.org/FAIRsharing.c55d5e)  issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL (URL_TO_INSERT_RECORD-ABBREV_652 https://fairsharing.org/FAIRsharing.9d38e2)  https://bioregistry.io (URL_TO_INSERT_RECORD-HOMEPAGE_654 https://fairsharing.org/FAIRsharing.250a8c) /chebi:138488 resolves to the ChEBI (URL_TO_INSERT_RECORD-ABBREV_650 https://fairsharing.org/FAIRsharing.62qk8w)  page https://www.ebi.ac.uk/chebi (URL_TO_INSERT_RECORD-HOMEPAGE_651 https://fairsharing.org/FAIRsharing.62qk8w) /searchId.do?chebiId=CHEBI:138488. Bioregistry (URL_TO_INSERT_RECORD-NAME_653 https://fairsharing.org/FAIRsharing.250a8c)  provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
+    > [Bioregistry](https://bioregistry.io/) is a **Resolution Service**, developed in a [GitHub (URL_TO_INSERT_RECORD-NAME_507 https://fairsharing.org/FAIRsharing.c55d5e)  repository](https://github.com/biopragmatics/bioregistry). Like Identifiers.org it has a registry, but also a registry of registries, and it imports data from Identifiers.org and Name-to-Thing but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be [registered via GitHub (URL_TO_INSERT_RECORD-NAME_508 https://fairsharing.org/FAIRsharing.c55d5e)  issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL (URL_TO_INSERT_RECORD-ABBREV_504 https://fairsharing.org/FAIRsharing.9d38e2)  https://bioregistry.io (URL_TO_INSERT_RECORD-HOMEPAGE_506 https://fairsharing.org/FAIRsharing.250a8c) /chebi:138488 resolves to the ChEBI (URL_TO_INSERT_RECORD-ABBREV_502 https://fairsharing.org/FAIRsharing.62qk8w)  page https://www.ebi.ac.uk/chebi (URL_TO_INSERT_RECORD-HOMEPAGE_503 https://fairsharing.org/FAIRsharing.62qk8w) /searchId.do?chebiId=CHEBI:138488. Bioregistry (URL_TO_INSERT_RECORD-NAME_505 https://fairsharing.org/FAIRsharing.250a8c)  provides an [API to query the registry](https://bioregistry.io/apidocs/) itself.
 
 
 
@@ -432,7 +432,7 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 ## Conclusion
 
-In this recipe, we have given an overview of globally unique and persistent identifier {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR (URL_TO_INSERT_RECORD-ABBREV_657 https://fairsharing.org/FAIRsharing.WWI10U)  principle F1. We have covered:
+In this recipe, we have given an overview of globally unique and persistent identifier {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR (URL_TO_INSERT_RECORD-ABBREV_509 https://fairsharing.org/FAIRsharing.WWI10U)  principle F1. We have covered:
 
 - The difference between global and local identifiers;
 - How to convert a local identifier into a global one;
@@ -440,7 +440,7 @@ In this recipe, we have given an overview of globally unique and persistent iden
 
 We have given an overview of the different services available for handling identifiers.
  
-But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI (URL_TO_INSERT_RECORD-ABBREV_658 https://fairsharing.org/FAIRsharing.d261e1) {footcite}`U (URL_TO_INSERT_RECORD-ABBREV_660 https://fairsharing.org/FAIRsharing.9d38e2) RL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF (URL_TO_INSERT_RECORD-ABBREV_659 https://fairsharing.org/FAIRsharing.p77ph9) {footcite}`RDFconcepts` and HTTP.
+But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI (URL_TO_INSERT_RECORD-ABBREV_510 https://fairsharing.org/FAIRsharing.d261e1) {footcite}`U (URL_TO_INSERT_RECORD-ABBREV_512 https://fairsharing.org/FAIRsharing.9d38e2) RL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF (URL_TO_INSERT_RECORD-ABBREV_511 https://fairsharing.org/FAIRsharing.p77ph9) {footcite}`RDFconcepts` and HTTP.
 
 ### What to read next?
 <!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->

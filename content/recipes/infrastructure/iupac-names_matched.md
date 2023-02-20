@@ -28,7 +28,7 @@ The main purpose of this recipe is:
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
 OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
-The latter is done by the offical InChI (URL_TO_INSERT_RECORD-ABBREV_1142 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI`.
+The latter is done by the offical InChI (URL_TO_INSERT_RECORD-ABBREV_971 https://fairsharing.org/FAIRsharing.ddk9t9)  library {footcite}`Goodman2021InChI`.
 
 ### Automating translations with Google Colab
 
@@ -47,7 +47,7 @@ opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
 opsin = opsin_cls(".")
 ```
 
-After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD-ABBREV_1143 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChIKey:
+After that, we use the manager API to parse the IUPAC name and generate an InChI (URL_TO_INSERT_RECORD-ABBREV_972 https://fairsharing.org/FAIRsharing.ddk9t9)  and InChIKey:
 
 ```python
 anInChI = inchi.generate(opsin.parseIUPACName("methane"))

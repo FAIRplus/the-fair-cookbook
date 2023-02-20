@@ -21,19 +21,19 @@ Terms could be missing from public ontologies of choice. Where needed, new terms
 
 Requesting new terms in public (biomedical) ontologies might be a structured, streamlined process or completely undocumented, depending on the actual ontology. Also, the process can take somewhere between days and up to a year, depending on the implemented release cycles of the target ontology.
 
-Some ontologies, often large projects organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies rely on [GitHub](https://github.com) as a publicly accessible ticketing system for reporting issues on the ontology and also for requesting new terms. They might provide explicit guidelines on how to create an issue for a new term request, or they rely on GitHub (URL_TO_INSERT_RECORD-NAME_1936 https://fairsharing.org/FAIRsharing.c55d5e)  issues without guidelines. And there are also ontologies relying on email for requesting new terms. These different request processes can be summarized as follows:
+Some ontologies, often large projects organized by consortia, have a detailed formal request process, maybe even with a dedicated ticketing and tracking system. A big number of ontologies rely on [GitHub](https://github.com) as a publicly accessible ticketing system for reporting issues on the ontology and also for requesting new terms. They might provide explicit guidelines on how to create an issue for a new term request, or they rely on GitHub (URL_TO_INSERT_RECORD-NAME_1715 https://fairsharing.org/FAIRsharing.c55d5e)  issues without guidelines. And there are also ontologies relying on email for requesting new terms. These different request processes can be summarized as follows:
 * Formal request process
-* Request via GitHub (URL_TO_INSERT_RECORD-NAME_1937 https://fairsharing.org/FAIRsharing.c55d5e)  with explicit guidelines
-* Request via GitHub (URL_TO_INSERT_RECORD-NAME_1938 https://fairsharing.org/FAIRsharing.c55d5e)  without guidelines
+* Request via GitHub (URL_TO_INSERT_RECORD-NAME_1716 https://fairsharing.org/FAIRsharing.c55d5e)  with explicit guidelines
+* Request via GitHub (URL_TO_INSERT_RECORD-NAME_1717 https://fairsharing.org/FAIRsharing.c55d5e)  without guidelines
 * Request via email
 
-In most ontologies, everybody can request new terms. However, in some ontologies only members have access to the request process. In case of a request process organized via GitHub (URL_TO_INSERT_RECORD-NAME_1939 https://fairsharing.org/FAIRsharing.c55d5e) , a free [GitHub account](https://github.com/join) is required.
+In most ontologies, everybody can request new terms. However, in some ontologies only members have access to the request process. In case of a request process organized via GitHub (URL_TO_INSERT_RECORD-NAME_1718 https://fairsharing.org/FAIRsharing.c55d5e) , a free [GitHub account](https://github.com/join) is required.
 
 
 ## Ingredients
 * List of new terms
 * Target ontology
-    * E.g. SNOMED CT, MedDRA (URL_TO_INSERT_RECORD-ABBREV_1948 https://fairsharing.org/FAIRsharing.ad3137) , OBI (URL_TO_INSERT_RECORD-ABBREV_1944 https://fairsharing.org/FAIRsharing.284e1z) , EFO (URL_TO_INSERT_RECORD-ABBREV_1947 https://fairsharing.org/FAIRsharing.1gr4tz) , BAO (URL_TO_INSERT_RECORD-ABBREV_1945 https://fairsharing.org/FAIRsharing.mye76w) , CL (URL_TO_INSERT_RECORD-ABBREV_1943 https://fairsharing.org/FAIRsharing.j9y503) , RxNorm (URL_TO_INSERT_RECORD-NAME_1946 https://fairsharing.org/FAIRsharing.36pf8q) , BTO (URL_TO_INSERT_RECORD-ABBREV_1941 https://fairsharing.org/FAIRsharing.1414v8)  - BRENDA (URL_TO_INSERT_RECORD-ABBREV_1942 https://fairsharing.org/FAIRsharing.etp533) , DCAT (URL_TO_INSERT_RECORD-ABBREV_1940 https://fairsharing.org/FAIRsharing.h4j3qm)  2
+    * E.g. SNOMED CT, MedDRA (URL_TO_INSERT_RECORD-ABBREV_1727 https://fairsharing.org/FAIRsharing.ad3137) , OBI (URL_TO_INSERT_RECORD-ABBREV_1723 https://fairsharing.org/FAIRsharing.284e1z) , EFO (URL_TO_INSERT_RECORD-ABBREV_1726 https://fairsharing.org/FAIRsharing.1gr4tz) , BAO (URL_TO_INSERT_RECORD-ABBREV_1724 https://fairsharing.org/FAIRsharing.mye76w) , CL (URL_TO_INSERT_RECORD-ABBREV_1722 https://fairsharing.org/FAIRsharing.j9y503) , RxNorm (URL_TO_INSERT_RECORD-NAME_1725 https://fairsharing.org/FAIRsharing.36pf8q) , BTO (URL_TO_INSERT_RECORD-ABBREV_1720 https://fairsharing.org/FAIRsharing.1414v8)  - BRENDA (URL_TO_INSERT_RECORD-ABBREV_1721 https://fairsharing.org/FAIRsharing.etp533) , DCAT (URL_TO_INSERT_RECORD-ABBREV_1719 https://fairsharing.org/FAIRsharing.h4j3qm)  2
     
 ## Graphical Overview
 
@@ -60,8 +60,8 @@ Process for requesting an new term to a terminology.
 
 | Data Formats  | Ontologies |
 | :------------- | :------------- |
-| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology (URL_TO_INSERT_RECORD-NAME_1949 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)|
-| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology (URL_TO_INSERT_RECORD-NAME_1950 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)  |
+| [OWL](https://fairsharing.org/FAIRsharing.atygwy)  | [OBI](https://fairsharing.org/FAIRsharing.284e1z), [Cell Ontology (URL_TO_INSERT_RECORD-NAME_1728 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)|
+| [OBO](https://fairsharing.org/FAIRsharing.aa0eat)  | [Cell Ontology (URL_TO_INSERT_RECORD-NAME_1729 https://fairsharing.org/FAIRsharing.j9y503) ](https://fairsharing.org/FAIRsharing.j9y503)  |
 | Release Format 2 | [SNOMED CT](https://fairsharing.org/FAIRsharing.d88s6e)|
 | Rich Release Format |[RxNorm](https://fairsharing.org/FAIRsharing.36pf8q)|
 
@@ -71,7 +71,7 @@ Process for requesting an new term to a terminology.
 Identify and describe relevant terms not included in public ontology of choice.
 
 **Step 2**
-Identify request process of the public ontology (i.e. formal request process, GitHub (URL_TO_INSERT_RECORD-NAME_1951 https://fairsharing.org/FAIRsharing.c55d5e)  request with guidelines, GitHub (URL_TO_INSERT_RECORD-NAME_1952 https://fairsharing.org/FAIRsharing.c55d5e)  request without guidelines, email request).
+Identify request process of the public ontology (i.e. formal request process, GitHub (URL_TO_INSERT_RECORD-NAME_1730 https://fairsharing.org/FAIRsharing.c55d5e)  request with guidelines, GitHub (URL_TO_INSERT_RECORD-NAME_1731 https://fairsharing.org/FAIRsharing.c55d5e)  request without guidelines, email request).
 
 **Step 3**
 Prepare at least the following information for requesting a new term:
@@ -116,7 +116,7 @@ More information can be found [here](https://www.snomed.org/snomed-ct/change-or-
 assays, devices, objectives in scientific investigations
 
 **Information about requesting changes or additions:** 
-OBI (URL_TO_INSERT_RECORD-ABBREV_1954 https://fairsharing.org/FAIRsharing.284e1z)  provides a [GitHub repository](https://github.com/obi-ontology/obi) and a mailing list. New-term requests are handled as GitHub (URL_TO_INSERT_RECORD-NAME_1953 https://fairsharing.org/FAIRsharing.c55d5e)  issues. There is an explicit [guideline document](http://obi-ontology.org/page/OBI_term_guidelines) on how to request new terms.
+OBI (URL_TO_INSERT_RECORD-ABBREV_1733 https://fairsharing.org/FAIRsharing.284e1z)  provides a [GitHub repository](https://github.com/obi-ontology/obi) and a mailing list. New-term requests are handled as GitHub (URL_TO_INSERT_RECORD-NAME_1732 https://fairsharing.org/FAIRsharing.c55d5e)  issues. There is an explicit [guideline document](http://obi-ontology.org/page/OBI_term_guidelines) on how to request new terms.
 
 For a proposed new term, they ask for the following information:
 * editor preferred term: a unique, unambiguous label for the term in American English
@@ -125,7 +125,7 @@ For a proposed new term, they ask for the following information:
 * definition source for the textual definition
 * logical definition (or parent term)
 * example of usage
-* term editor: your name, and that of any collaborators, as it should appear in OBI (URL_TO_INSERT_RECORD-ABBREV_1955 https://fairsharing.org/FAIRsharing.284e1z) 
+* term editor: your name, and that of any collaborators, as it should appear in OBI (URL_TO_INSERT_RECORD-ABBREV_1734 https://fairsharing.org/FAIRsharing.284e1z) 
 
 ### Request via GitHub without guidelines
 
@@ -136,7 +136,7 @@ For a proposed new term, they ask for the following information:
 cell types
 
 **Information about requesting changes or additions**:
-The Cell Ontology (URL_TO_INSERT_RECORD-NAME_1956 https://fairsharing.org/FAIRsharing.j9y503)  provides a [GitHub repository](https://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the GitHub (URL_TO_INSERT_RECORD-NAME_1957 https://fairsharing.org/FAIRsharing.c55d5e)  repository. 
+The Cell Ontology (URL_TO_INSERT_RECORD-NAME_1735 https://fairsharing.org/FAIRsharing.j9y503)  provides a [GitHub repository](https://github.com/obophenotype/cell-ontology), a contact email, and a mail list. New-term requests (NTR) are formulated as issues on the GitHub (URL_TO_INSERT_RECORD-NAME_1736 https://fairsharing.org/FAIRsharing.c55d5e)  repository. 
 
 ### Request via email
 
@@ -147,7 +147,7 @@ The Cell Ontology (URL_TO_INSERT_RECORD-NAME_1956 https://fairsharing.org/FAIRsh
 drugs
 
 **Information about requesting changes or additions**:
-Information about requesting terms can be found in the [FAQ section](https://www.nlm.nih.gov/research/umls/faq_main.html) of the Unified Medical Language System (UMLS) where RxNorm (URL_TO_INSERT_RECORD-NAME_1958 https://fairsharing.org/FAIRsharing.36pf8q)  is part of.  
+Information about requesting terms can be found in the [FAQ section](https://www.nlm.nih.gov/research/umls/faq_main.html) of the Unified Medical Language System (UMLS) where RxNorm (URL_TO_INSERT_RECORD-NAME_1737 https://fairsharing.org/FAIRsharing.36pf8q)  is part of.  
 
 Changes or additions to UMLS can be requested by contacting [NLM Customer Support](https://support.nlm.nih.gov). The NLM Customer Support can be contacted through a [form](https://support.nlm.nih.gov/support/create-case/). If additions are specific to the source, you should contact the terminology source provider. Contact information is available in [Appendix 1](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement_appendix.html) of the Licence agreement.
 
