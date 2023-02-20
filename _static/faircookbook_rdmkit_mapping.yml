@@ -80,9 +80,9 @@
   - fcb_title: Interlinking data from different sources
     fcb_id: FCB016
   - fcb_title: Introducing the DATS model
-    fcb_id:  FCB082
+    fcb_id: FCB082
   - fcb_title: Creating knowledge graphs from unstructured text
-    fcb_id:  FCB081
+    fcb_id: FCB081
 
 - rdmkit_title: Documentation and metadata
   rdmkit_filename: metadata_management
