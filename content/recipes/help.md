@@ -24,34 +24,16 @@ We also provide a few tips and tricks that you can use to ease integration with 
 
 <br>  
 
-***Overview principles of what recipes should and should not be***
-<table>
-        <tr>
-          <th colspan=2><b>A recipe should be</b></th>
-          <th colspan=2><b>A recipe should not be</b></th>
-        </tr>
-        <tr>
-            <td><b>Specific</b></td>
-            <td>Target a specific task or action or tool and service that brings FAIRness one or more levels up; or provide an example of data FAIRification.</td>
-          <td><b>Too broad and high level</b></td>
-          <td>Should not be a repeat of the full user manual. 
-Should not be a features list of a tool.</td>
-        </tr>
-        <tr>
-            <td><b>Complete</b></td>
-            <td>Should be an end-to-end recipe that users can follow and finish a task.</td>
-          <td><b>Incomplete</b></td>
-          <td>Should not be just a teaser that only shows a few steps at the beginning.
-Should not be an advertisement.</td>
-        </tr>
-        <tr>
-            <td><b>FAIR</b></td>
-            <td>The tools and services used should be open, or, if proprietary, a “free” or “community” version should be available.</td>
-          <td><b>Closed</b></td>
-          <td>Users can only test it after purchasing a paid software.</td>
-        </tr>
-</table>
+***Overview principles of what recipes should and should not be:***
 
+The tables below summarize the key features we are seeking for our content.
+
+```{tabbed} A recipe should be
+| Qualifier  | *Example* |
+| :------------- | :------------- | 
+| **Specific**  | *Should target a specific task or action or tool and service that brings FAIRness one or more levels up; or provide an example of data FAIRification.* | 
+| **Complete**  | *Should be an end-to-end recipe that users can follow and finish a task.* | 
+| **Open**  | *Should be open, or,  the tools and services used, if proprietary, should have a “free” or “community” version available.*  | 
 <br>  
 
 You can always contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org).
