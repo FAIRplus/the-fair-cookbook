@@ -43,20 +43,10 @@ The table below summarizes the key features we are seeking for our content.
 | **Closed**  | *Should not allow testing it after purchasing a paid software.* | 
 ```
 
-
-
-The tables below summarize the key features we are seeking for our content.
-
-```{tabbed} A recipe should be
-| Qualifier  | *Example* |
-| :------------- | :------------- | 
-| **Specific**  | *Should target a specific task or action or tool and service that brings FAIRness one or more levels up; or provide an example of data FAIRification.* | 
-| **Complete**  | *Should be an end-to-end recipe that users can follow and finish a task.* | 
-| **Open**  | *Should be open, or,  the tools and services used, if proprietary, should have a “free” or “community” version available.*  | 
-<br>  
+----
 
 You can always contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org).
 
 Thank you in advance for your input, you are awesome!
 
----
+----
