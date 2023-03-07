@@ -1227,3 +1227,7 @@ input.rounded {
 footer a, footer a:visited {
     color: white !important;
 }
+
+footer a.primary--text, footer a.primary--text:visited {
+    color: #1976D2 !important;
+}

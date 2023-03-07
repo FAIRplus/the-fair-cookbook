@@ -7,7 +7,7 @@ This chapter is dedicated to FAIRification examples, using publicly available da
 
 Browse existing recipes, but bear in mind that this is a ‘live resource’, and recipes are added and improved, iteratively, in an open manner.
 
-If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org).
+If you want to contribute follow the {ref}`help <fcb-help>` provided, or contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org).
 
 <!-- 1. [FAIRification of Metabolomics Data: Clarifying the Semantics of Data Matrices](TODO:link/not/here/yet)
 2. [Conversion to an open format - using Frictionless Data Package](TODO:link/not/here/yet)
