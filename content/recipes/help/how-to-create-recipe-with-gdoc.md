@@ -35,7 +35,7 @@ Once you feel your edits are complete and think your recipe is ready for release
 
 1. **Direct handover to an FAIR Cookbook Editor**:
 If you are not comfortable with **Markdown** and **git**, this is the easiest route and this is what we recommend.
-Simply drop an email to [fairplus-cookbook@elixirhub.org](mailto:fairplus-cookbook@elixir-europe.org) stating 
+Simply drop an email to [fairplus-cookbook@elixirhub.org](mailto:faircookbook-ed@elixir-europe.org) stating 
 the **recipe GitHub issue** identifier.
 
 2. **Convert to Markdown before handing over**:
@@ -131,7 +131,7 @@ the following contents should be of help.
 > 
 > {ref}`fcb-help-recipe-git`
 > 
-> One can also get in touch with the [FAIR Cookbook editors](mailto:fairplus-cookbook@elixir-europe.org) for assistance.
+> One can also get in touch with the [FAIR Cookbook editors](mailto:faircookbook-ed@elixir-europe.org) for assistance.
 >
 
 ---
