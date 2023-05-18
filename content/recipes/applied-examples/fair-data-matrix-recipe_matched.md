@@ -144,7 +144,7 @@ The transformation is documented in a jupyter notebook (https://github.com/procc
 ### Step4: Address Reusability
 
 We performed a conversion to Linked Data, using terms from OBO Foundry (URL_TO_INSERT_RECORD-NAME_176 https://fairsharing.org/FAIRsharing.847069)  Ontologies (https://fairsharing.org/biodbcore-001083/) 
-As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL (URL_TO_INSERT_RECORD-ABBREV_179 https://fairsharing.org/FAIRsharing.87ccfd)  query over the RDF (URL_TO_INSERT_RECORD-ABBREV_177 https://fairsharing.org/FAIRsharing.p77ph9)  representation or from the data package (URL_TO_INSERT_RECORD-NAME_178 https://fairsharing.org/FAIRsharing.3b861d)  directly.
+As a result, the metabolite measurements can be plotted using popular visualization libraries (Python plotnine or R ggplot2) from either a SPARQL (URL_TO_INSERT_RECORD-ABBREV_178 https://fairsharing.org/FAIRsharing.87ccfd)  query over the RDF (URL_TO_INSERT_RECORD-ABBREV_177 https://fairsharing.org/FAIRsharing.p77ph9)  representation or from the data package (URL_TO_INSERT_RECORD-NAME_179 https://fairsharing.org/FAIRsharing.3b861d)  directly.
 
      
 ### Step5: address Findability and Accessibility

@@ -134,13 +134,13 @@ We will outline the steps for embedding machine processable mark up within a web
         "BRCA1, DNA repair associated",
         "BRCA1 DNA repair associated"
       ],
-      "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_541 https://fairsharing.org/3517) /profiles/Gene/0.7-RELEASE",
+      "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_542 https://fairsharing.org/3517) /profiles (URL_TO_INSERT_RECORD-HOMEPAGE_541 https://fairsharing.org/4744) /Gene/0.7-RELEASE",
       "description": "protein-coding gene in the species Homo sapiens",
       "encodesBioChemEntity": {
         "@type": "BioChemEntity",
-        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_542 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
+        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_543 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
       },
-      "identifier": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_543 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q227339",
+      "identifier": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_544 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q227339",
       "identifier": "Q227339",
       "image": {
         "@type": "ImageObject",
@@ -148,21 +148,21 @@ We will outline the steps for embedding machine processable mark up within a web
       },
       "isPartOfBioChemEntity": {
         "@type": "BioChemEntity",
-        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_544 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q220677"
+        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_545 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q220677"
       },
       "name": "BRCA1", 
       "sameAs": [
         "https://meshb.nlm.nih.gov/#/record/ui?ui=D019398",
         "https://www.ncbi.nlm.nih.gov/nuccore/NR_027676",
         "https://identifiers.org/ensembl/ENSG00000012048",
-        "https://www.ncbi.nlm.nih.gov/gene (URL_TO_INSERT_RECORD-HOMEPAGE_545 https://fairsharing.org/FAIRsharing.5h3maw) /672",
+        "https://www.ncbi.nlm.nih.gov/gene (URL_TO_INSERT_RECORD-HOMEPAGE_546 https://fairsharing.org/FAIRsharing.5h3maw) /672",
         "https://identifiers.org/ncbigene/672"
       ],
       "taxonomicRange": {
         "@type": "Taxon",
-        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_546 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q15978631"
+        "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_547 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q15978631"
       },
-      "url": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_547 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q227339"
+      "url": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_548 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q227339"
     }
     </script >
     ```
@@ -176,7 +176,7 @@ We will outline the steps for embedding machine processable mark up within a web
     ```
     "encodesBioChemEntity": {
       "@type": "BioChemEntity",
-      "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_548 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
+      "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_549 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
     },
     ```
 
@@ -184,25 +184,25 @@ We will outline the steps for embedding machine processable mark up within a web
 
     ```
     "encodesBioChemEntity": {
-      "@type": "Protein (URL_TO_INSERT_RECORD-ABBREV_549 https://fairsharing.org/FAIRsharing.rtndct) ",
-      "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_550 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
+      "@type": "Protein (URL_TO_INSERT_RECORD-ABBREV_550 https://fairsharing.org/FAIRsharing.rtndct) ",
+      "@id": "https://www.wikidata.org (URL_TO_INSERT_RECORD-HOMEPAGE_551 https://fairsharing.org/FAIRsharing.6s749p) /wiki/Q17487737"
     },
     ```
 
-    You can test that your JSON (URL_TO_INSERT_RECORD-ABBREV_551 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_552 https://fairsharing.org/FAIRsharing.8f9bbb)  is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
+    You can test that your JSON (URL_TO_INSERT_RECORD-ABBREV_552 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_553 https://fairsharing.org/FAIRsharing.8f9bbb)  is valid syntax, and visualise your markup using the [JSON-LD Playground](https://json-ld.org/playground/).
 
     
-7. Once you are happy with your markup, include the `JSON (URL_TO_INSERT_RECORD-ABBREV_553 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_555 https://fairsharing.org/FAIRsharing.8f9bbb) `, script tags and all, at the bottom of your HTML (URL_TO_INSERT_RECORD-ABBREV_554 https://fairsharing.org/FAIRsharing.YugnuL)  page template. Make sure that this is before the closing `</html>` tag
+7. Once you are happy with your markup, include the `JSON (URL_TO_INSERT_RECORD-ABBREV_554 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_556 https://fairsharing.org/FAIRsharing.8f9bbb) `, script tags and all, at the bottom of your HTML (URL_TO_INSERT_RECORD-ABBREV_555 https://fairsharing.org/FAIRsharing.YugnuL)  page template. Make sure that this is before the closing `</html>` tag
     
    1. Replace the values in your markup with variables that your web page templating system will replace with values from your database. For example, the follow snippet uses variables of the form `%%%PAGEURL%%%`
 
        ```html
        <script type="application/ld+json" >
        {
-         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_556 https://fairsharing.org/FAIRsharing.hzdzq8) ",
+         "@context": "https://schema.org (URL_TO_INSERT_RECORD-HOMEPAGE_557 https://fairsharing.org/FAIRsharing.hzdzq8) ",
          "@id": "%%%PAGEURL%%%",
          "@type": "Gene",
-         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_557 https://fairsharing.org/3517) /profiles/Gene/0.7-RELEASE",
+         "dct:conformsTo": "https://bioschemas.org (URL_TO_INSERT_RECORD-HOMEPAGE_559 https://fairsharing.org/3517) /profiles (URL_TO_INSERT_RECORD-HOMEPAGE_558 https://fairsharing.org/4744) /Gene/0.7-RELEASE",
          "identifier": "%%%PAGEURL%%%",
          "description": "%%%DESCRIPTION%%%",
          ...
@@ -211,11 +211,11 @@ We will outline the steps for embedding machine processable mark up within a web
    
        Your site should now generate data pages with embedded markup.
 
-       You should complete this process for each different type of data that you include in your site, e.g. ChEMBL (URL_TO_INSERT_RECORD-NAME_558 https://fairsharing.org/FAIRsharing.m3jtpg)  would
-       have `MolecularEntity` markup on their chemical pages and `Protein (URL_TO_INSERT_RECORD-ABBREV_559 https://fairsharing.org/FAIRsharing.rtndct) ` markup on their target pages so would need to 
+       You should complete this process for each different type of data that you include in your site, e.g. ChEMBL (URL_TO_INSERT_RECORD-NAME_560 https://fairsharing.org/FAIRsharing.m3jtpg)  would
+       have `MolecularEntity` markup on their chemical pages and `Protein (URL_TO_INSERT_RECORD-ABBREV_561 https://fairsharing.org/FAIRsharing.rtndct) ` markup on their target pages so would need to 
        complete this process twice.
     
-       Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas (URL_TO_INSERT_RECORD-NAME_560 https://fairsharing.org/3517)  profiles<sup>[2](#biosche (URL_TO_INSERT_RECORD-NAME_561 https://fairsharing.org/3517) mas-validator)</sup>.
+       Once you have deployed this on your web server, you can test it with the [Bioschemas Validator](https://www.macs.hw.ac.uk/SWeL/BioschemasValidator/) which scrapes the markup from your page and allows you to test it against various Bioschemas (URL_TO_INSERT_RECORD-NAME_563 https://fairsharing.org/3517)  profiles (URL_TO_INSERT_RECORD-NAME_562 https://fairsharing.org/4744) <sup>[2](#biosche (URL_TO_INSERT_RECORD-NAME_564 https://fairsharing.org/3517) mas-validator)</sup>.
 
 ---
 

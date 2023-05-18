@@ -171,7 +171,7 @@ as persons associated with those studies and databases.
 Modelling metadata elements in RDF (URL_TO_INSERT_RECORD-ABBREV_41 https://fairsharing.org/FAIRsharing.p77ph9)  has the advantage that the metadata elements are properly semantically described,
 structured and linked. In addition, RDF (URL_TO_INSERT_RECORD-ABBREV_42 https://fairsharing.org/FAIRsharing.p77ph9)  is easily expandable and modifiable. 
 
-The Turtle (URL_TO_INSERT_RECORD-ABBREV_43 https://fairsharing.org/FAIRsharing.3e194c)  serialization format was chosen as the RDF (URL_TO_INSERT_RECORD-ABBREV_44 https://fairsharing.org/FAIRsharing.p77ph9)  format. Metadata elements were defined and mapped to 
+The Turtle (URL_TO_INSERT_RECORD-ABBREV_44 https://fairsharing.org/FAIRsharing.3e194c)  serialization format was chosen as the RDF (URL_TO_INSERT_RECORD-ABBREV_43 https://fairsharing.org/FAIRsharing.p77ph9)  format. Metadata elements were defined and mapped to 
 [Schema.org](http://schema.org) types and properties. Schema.org (URL_TO_INSERT_RECORD-NAME_45 https://fairsharing.org/FAIRsharing.hzdzq8)  is a vocabulary that can be used to create structured
 data on the internet and to make the data discoverable. 
 
@@ -199,7 +199,7 @@ Part of the metadata model. Here, each class (orange) and relationship is repres
 ```
 ````
 
-RDF (URL_TO_INSERT_RECORD-ABBREV_48 https://fairsharing.org/FAIRsharing.p77ph9)  representation of two Schema.org (URL_TO_INSERT_RECORD-NAME_49 https://fairsharing.org/FAIRsharing.hzdzq8)  types, written in Turtle (URL_TO_INSERT_RECORD-ABBREV_47 https://fairsharing.org/FAIRsharing.3e194c) :
+RDF (URL_TO_INSERT_RECORD-ABBREV_47 https://fairsharing.org/FAIRsharing.p77ph9)  representation of two Schema.org (URL_TO_INSERT_RECORD-NAME_49 https://fairsharing.org/FAIRsharing.hzdzq8)  types, written in Turtle (URL_TO_INSERT_RECORD-ABBREV_48 https://fairsharing.org/FAIRsharing.3e194c) :
 
 ````{dropdown}
 :open:
@@ -241,7 +241,7 @@ riot.bat --validate ohdsi_semantic_model.ttl
 
 ### Metadata capture using YAML
 
-In principle, the RDF (URL_TO_INSERT_RECORD-ABBREV_55 https://fairsharing.org/FAIRsharing.p77ph9)  classes defined in the above Turtle (URL_TO_INSERT_RECORD-ABBREV_54 https://fairsharing.org/FAIRsharing.3e194c)  file can directly be used to set up the JSON (URL_TO_INSERT_RECORD-ABBREV_53 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_56 https://fairsharing.org/FAIRsharing.8f9bbb)  file needed 
+In principle, the RDF (URL_TO_INSERT_RECORD-ABBREV_54 https://fairsharing.org/FAIRsharing.p77ph9)  classes defined in the above Turtle (URL_TO_INSERT_RECORD-ABBREV_55 https://fairsharing.org/FAIRsharing.3e194c)  file can directly be used to set up the JSON (URL_TO_INSERT_RECORD-ABBREV_53 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_56 https://fairsharing.org/FAIRsharing.8f9bbb)  file needed 
 for the website metadata. But in this example, we used an extra step by first capturing the metadata of studies, 
 databases and authors, in the more data entry friendly YAML format. The YAML format can be annotated with comments
 to guide the person submitting their metadata. 
@@ -327,7 +327,7 @@ Relationship between the use of Turtle, JSON-LD and YAML in this proof-of-concep
 
 ### Embedding the metadata in the website as JSON-LD
 
-JSON (URL_TO_INSERT_RECORD-ABBREV_63 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_66 https://fairsharing.org/FAIRsharing.8f9bbb)  is a format for structured and linked data and, like Turtle (URL_TO_INSERT_RECORD-ABBREV_64 https://fairsharing.org/FAIRsharing.3e194c) , a serialization format of RDF (URL_TO_INSERT_RECORD-ABBREV_65 https://fairsharing.org/FAIRsharing.p77ph9) . 
+JSON (URL_TO_INSERT_RECORD-ABBREV_63 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_66 https://fairsharing.org/FAIRsharing.8f9bbb)  is a format for structured and linked data and, like Turtle (URL_TO_INSERT_RECORD-ABBREV_65 https://fairsharing.org/FAIRsharing.3e194c) , a serialization format of RDF (URL_TO_INSERT_RECORD-ABBREV_64 https://fairsharing.org/FAIRsharing.p77ph9) . 
 
 It can be embedded in the HTML (URL_TO_INSERT_RECORD-ABBREV_67 https://fairsharing.org/FAIRsharing.YugnuL)  code in the back end of a website. Search engines like Google 
 (including [Google dataset search](https://datasetsearch.research.google.com/)) use this structured data to find 
@@ -436,7 +436,7 @@ website pages with metadata. Hence, these archetype templates are used for metad
 
 Part of the content is populated automatically, by scraping information from the 
 [OHDSI forum](https://forums.ohdsi.org/) and [README files](https://github.com/ohdsi-studies/StudyRepoTemplate) in the 
-study-specific GitHub (URL_TO_INSERT_RECORD-NAME_102 https://fairsharing.org/FAIRsharing.c55d5e)  repositories. The metadata in YAML is converted to JSON (URL_TO_INSERT_RECORD-ABBREV_100 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_101 https://fairsharing.org/FAIRsharing.8f9bbb)  in the back end of the website. 
+study-specific GitHub (URL_TO_INSERT_RECORD-NAME_101 https://fairsharing.org/FAIRsharing.c55d5e)  repositories. The metadata in YAML is converted to JSON (URL_TO_INSERT_RECORD-ABBREV_100 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_102 https://fairsharing.org/FAIRsharing.8f9bbb)  in the back end of the website. 
 In the front end of the website, this metadata is shown in a human-readable way. 
 
 The source code of the website can be found on [https://github.com/thehyve/ohdsi-covid19-site](https://github.com/thehyve/ohdsi-covid19-site). 

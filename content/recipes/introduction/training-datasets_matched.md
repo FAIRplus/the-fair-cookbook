@@ -21,7 +21,7 @@
 > This recipe aims to provide example clinical datasets to allow users to get familiar with the process of handling clinical datasets
 and develop related computational tools while minimizing the challenges of accessing real-world human data.
 
-The FAIR (URL_TO_INSERT_RECORD-ABBREV_2381 https://fairsharing.org/FAIRsharing.WWI10U)  cookbook aims to provide hands-on, practical advice on how to deliver FAIR (URL_TO_INSERT_RECORD-ABBREV_2382 https://fairsharing.org/FAIRsharing.WWI10U)  data through interactions with
+The FAIR (URL_TO_INSERT_RECORD-ABBREV_2407 https://fairsharing.org/FAIRsharing.WWI10U)  cookbook aims to provide hands-on, practical advice on how to deliver FAIR (URL_TO_INSERT_RECORD-ABBREV_2408 https://fairsharing.org/FAIRsharing.WWI10U)  data through interactions with
 Innovative Medicine Initiative(IMI) projects. These research projects, by nature, often involve patient-centric information. 
 But dealing with real-world data and human-centric information, clinical data, in particular, is challenging. 
 It most often mandates interacting with Data Access Committees (DACs), and undergoes a vetting process, 
@@ -35,7 +35,7 @@ This recipe aims to provide a list of relevant resources belonging to the realm 
 - obtain datasets with which to work and hone computational skills.
 
 The recipe will cover two types of datasets:
-- `real datasets`, such as the Medical Information Mart for Intensive Care III (URL_TO_INSERT_RECORD-NAME_2383 https://fairsharing.org/FAIRsharing.pqnhpj) (MIMIC-II (URL_TO_INSERT_RECORD-ABBREV_2384 https://fairsharing.org/FAIRsharing.pqnhpj) I) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
+- `real datasets`, such as the Medical Information Mart for Intensive Care III (URL_TO_INSERT_RECORD-NAME_2409 https://fairsharing.org/FAIRsharing.pqnhpj) (MIMIC-II (URL_TO_INSERT_RECORD-ABBREV_2410 https://fairsharing.org/FAIRsharing.pqnhpj) I) dataset {footcite}`pmid27219127`, which corresponds to actual medical notes data
 for which data access requests must be made but which are made available to computational scientists
 for research purposes.
 - `synthetic datasets`, which are available without restrictions since produced by computational methods 
@@ -114,7 +114,7 @@ For more information about the OMOP Common Data Model, refer to the following:
 
 CDM 5.2.2 DDL for the OHDSI supported DBMSs is available health-related
 
-https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2385 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/CommonDataModel/tree/v5.2.2
+https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_2411 https://fairsharing.org/FAIRsharing.c55d5e) /OHDSI/CommonDataModel/tree/v5.2.2
 ````
 
 `````

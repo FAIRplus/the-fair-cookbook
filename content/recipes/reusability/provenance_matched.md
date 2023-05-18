@@ -42,7 +42,7 @@ The next section will introduce the most known models as well as detail how thei
 
 ### OPM Open Provenance Model
 
-Published in 2011, the Open Provenance Model (URL_TO_INSERT_RECORD-NAME_2482 https://fairsharing.org/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD-ABBREV_2483 https://fairsharing.org/FAIRsharing.7c683b) ) {footcite}`MOREAU2011743` was the first formal model developed
+Published in 2011, the Open Provenance Model (URL_TO_INSERT_RECORD-NAME_2508 https://fairsharing.org/FAIRsharing.7c683b)  (OPM (URL_TO_INSERT_RECORD-ABBREV_2509 https://fairsharing.org/FAIRsharing.7c683b) ) {footcite}`MOREAU2011743` was the first formal model developed
 to cater for the reporting of provenance information with several main goals in mind:
 - provide a domain agnostic, formal and actionable definition of provenance
 - enable sharing of provenance information between systems, an issue of interoperability
@@ -55,7 +55,7 @@ The following sections provides further insights into these efforts.
 
 
 ### The PROV Data Model
-This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2484 https://fairsharing.org/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
+This definition is taken from the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2510 https://fairsharing.org/FAIRsharing.36c7ea)  specifications {footcite}`provdm`.
 
 ````{dropdown}
 :open:
@@ -71,12 +71,12 @@ Overview of the Provenance Data Model main classes.
 
 ### PROV vocabulary:
 
-The PROV-O (URL_TO_INSERT_RECORD-ABBREV_2486 https://fairsharing.org/FAIRsharing.2rm2b3)  Provenance Ontology {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model as an OWL (URL_TO_INSERT_RECORD-ABBREV_2485 https://fairsharing.org/FAIRsharing.atygwy)  ontology.
-The namespace for PROV-O (URL_TO_INSERT_RECORD-ABBREV_2487 https://fairsharing.org/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
+The PROV-O (URL_TO_INSERT_RECORD-ABBREV_2512 https://fairsharing.org/FAIRsharing.2rm2b3)  Provenance Ontology {footcite}`provo` is a W3C-vetted specification of the Provenance Data Model as an OWL (URL_TO_INSERT_RECORD-ABBREV_2511 https://fairsharing.org/FAIRsharing.atygwy)  ontology.
+The namespace for PROV-O (URL_TO_INSERT_RECORD-ABBREV_2513 https://fairsharing.org/FAIRsharing.2rm2b3)  is [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#).
 It is meant to allow expressing provenance information as modeled in the provenance model
 [W3C PROV-DM](https://www.w3.org/TR/prov-overview/) with Classes, Properties and relations defined in the W3C 
-Ontology Web Language (OWL (URL_TO_INSERT_RECORD-ABBREV_2488 https://fairsharing.org/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD-ABBREV_2489 https://fairsharing.org/FAIRsharing.p77ph9)  and distributed in any of the official 
-serialization, e.g. JSON (URL_TO_INSERT_RECORD-ABBREV_2490 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_2494 https://fairsharing.org/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD-ABBREV_2493 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_2491 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_2495 https://fairsharing.org/336) , Turtle (URL_TO_INSERT_RECORD-ABBREV_2492 https://fairsharing.org/FAIRsharing.3e194c) .
+Ontology Web Language (OWL (URL_TO_INSERT_RECORD-ABBREV_2515 https://fairsharing.org/FAIRsharing.atygwy) ). Instances can therefore be represented in RDF (URL_TO_INSERT_RECORD-ABBREV_2514 https://fairsharing.org/FAIRsharing.p77ph9)  and distributed in any of the official 
+serialization, e.g. JSON (URL_TO_INSERT_RECORD-ABBREV_2518 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_2521 https://fairsharing.org/FAIRsharing.8f9bbb) , RDF (URL_TO_INSERT_RECORD-ABBREV_2519 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_2517 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_2516 https://fairsharing.org/336) , Turtle (URL_TO_INSERT_RECORD-ABBREV_2520 https://fairsharing.org/FAIRsharing.3e194c) .
 
 
 ````{dropdown}
@@ -92,7 +92,7 @@ Overview of the Provenance Ontology main classes.
 ````
 
 
-Below is an example of provenance information represented using the PROV-O (URL_TO_INSERT_RECORD-ABBREV_2497 https://fairsharing.org/FAIRsharing.2rm2b3)  ontology and serialized as RDF (URL_TO_INSERT_RECORD-ABBREV_2496 https://fairsharing.org/FAIRsharing.p77ph9)  statements
+Below is an example of provenance information represented using the PROV-O (URL_TO_INSERT_RECORD-ABBREV_2523 https://fairsharing.org/FAIRsharing.2rm2b3)  ontology and serialized as RDF (URL_TO_INSERT_RECORD-ABBREV_2522 https://fairsharing.org/FAIRsharing.p77ph9)  statements
 using turtle representation.
 
 ````bash
@@ -174,7 +174,7 @@ the purpose of system audit {footcite}`Pasquier2017Camflow` and aims at capture 
 
 CamFlow support 2 output formats.
 
-- W3C PROV-JSO (URL_TO_INSERT_RECORD-ABBREV_2498 https://fairsharing.org/FAIRsharing.5bbab9) N format
+- W3C PROV-JSO (URL_TO_INSERT_RECORD-ABBREV_2524 https://fairsharing.org/FAIRsharing.5bbab9) N format
 
 ```bash
 "ABAAAAAAACAe9wIAAAAAAE7aeaI+200UAAAAAAAAAAA=": {
@@ -227,7 +227,7 @@ systems health from a security point of view.
 ### Computational workflows and Provenance information:
 
 
-As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2499 https://fairsharing.org/FAIRsharing.36c7ea)  and Provenance Ontology, three key entities are necessary to 
+As seen when introducing the W3C Provenance Data Model (URL_TO_INSERT_RECORD-NAME_2525 https://fairsharing.org/FAIRsharing.36c7ea)  and Provenance Ontology, three key entities are necessary to 
 record and track lineage information:
 
 - The Entity the origin of which we are concerned with.
@@ -249,8 +249,8 @@ It is those features which have been the focus of an extension as part of the wo
 
 #### Example of CWLProv document
 
-The infobox below shows an example of CWLProv RDF (URL_TO_INSERT_RECORD-ABBREV_2500 https://fairsharing.org/FAIRsharing.p77ph9)  document which details how provenance information about the execution 
-of CWL (URL_TO_INSERT_RECORD-ABBREV_2501 https://fairsharing.org/FAIRsharing.8y5ayx)  coded workflow may be represented.
+The infobox below shows an example of CWLProv RDF (URL_TO_INSERT_RECORD-ABBREV_2526 https://fairsharing.org/FAIRsharing.p77ph9)  document which details how provenance information about the execution 
+of CWL (URL_TO_INSERT_RECORD-ABBREV_2527 https://fairsharing.org/FAIRsharing.8y5ayx)  coded workflow may be represented.
 This document is take from the [CWLProv github repository](https://github.com/common-workflow-language/cwlprov/blob/main/prov.md).
 Such documents are generated and consumed by a feasibility demonstrator tool such as [CWLtool]()
 
@@ -300,19 +300,19 @@ See the [BagIt profile](https://github.com/common-workflow-language/cwlprov/blob
 #### CWLtool: a component to manage workflow information and generate CWLProv information
 
 
-'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2502 https://fairsharing.org/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
-[Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD-ABBREV_2503 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications
-and provides validation functions to check CWL (URL_TO_INSERT_RECORD-ABBREV_2504 https://fairsharing.org/FAIRsharing.8y5ayx)  documents.
+'cwltool' for Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2528 https://fairsharing.org/FAIRsharing.8y5ayx)  tool is a python reference implementation for the
+[Common Workflow Language](https://www.commonwl.org/), which means that it supports the full set of CWL (URL_TO_INSERT_RECORD-ABBREV_2529 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications
+and provides validation functions to check CWL (URL_TO_INSERT_RECORD-ABBREV_2530 https://fairsharing.org/FAIRsharing.8y5ayx)  documents.
 
 
 ```bash
 pip install cwltool
 ```
 
-cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD-ABBREV_2505 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
+cwltool is not the only implementation of the CWL (URL_TO_INSERT_RECORD-ABBREV_2531 https://fairsharing.org/FAIRsharing.8y5ayx)  specifications, others such as [Arvados](https://arvados.org/) and 
 [Toil](https://toil.ucsc-cgl.org/) exist. 
 In case these distinct implementations are also installed on the system, one needs to make sure a helper tool known as
-'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD-ABBREV_2506 https://fairsharing.org/FAIRsharing.8y5ayx)  implementation
+'cwl-runner' is also installed. The *key* function of 'cwl-runner' is to allow users to select which CWL (URL_TO_INSERT_RECORD-ABBREV_2532 https://fairsharing.org/FAIRsharing.8y5ayx)  implementation
 will be executed.
 
 ```bash
@@ -329,10 +329,10 @@ cwltool --print-rdf --rdf-serializer=turtle mywf.cwl
 
 #### CWLProv-py
 
-This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2507 https://fairsharing.org/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
+This tool, also an output from the Common Workflow Language (URL_TO_INSERT_RECORD-NAME_2533 https://fairsharing.org/FAIRsharing.8y5ayx)  consortium, is solely intended as a validator for provenance
 information when available from Research Objects {footcite}`cwlprov-py`. 
 It is a standalone python package, which provides a command line interface (CLI) to read, inspect research objects 
-capturing workflow execution information using the CWL (URL_TO_INSERT_RECORD-ABBREV_2508 https://fairsharing.org/FAIRsharing.8y5ayx)  syntax.
+capturing workflow execution information using the CWL (URL_TO_INSERT_RECORD-ABBREV_2534 https://fairsharing.org/FAIRsharing.8y5ayx)  syntax.
 
 To install the package, simply run the standard python install package pip: 
 
@@ -340,7 +340,7 @@ To install the package, simply run the standard python install package pip:
 pip install cwlprov
 ```
 
-To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD-ABBREV_2509 https://fairsharing.org/FAIRsharing.8y5ayx)  file, run the following command:
+To run 'cwlprov' following installation and using an exemplar CWL (URL_TO_INSERT_RECORD-ABBREV_2535 https://fairsharing.org/FAIRsharing.8y5ayx)  file, run the following command:
 
 
 ```python
@@ -391,7 +391,7 @@ thus reinforcing the approach.
 
 ## Conclusion
 
-With this FAIR (URL_TO_INSERT_RECORD-ABBREV_2510 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook content, we have introduced the notion of Provenance information, providing a brief historical 
+With this FAIR (URL_TO_INSERT_RECORD-ABBREV_2536 https://fairsharing.org/FAIRsharing.WWI10U)  Cookbook content, we have introduced the notion of Provenance information, providing a brief historical 
 review of the domain model and given a few examples of tools implementing provenance information tracking.
 
 For a more in depth exploration of provenance information, we encourage our readers to follow up with more detailed 

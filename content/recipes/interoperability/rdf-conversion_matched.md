@@ -20,7 +20,7 @@
 
 The main purpose of this recipe is:
 
-> Present an inventory of a selection of popular tools for converting datasets in different formats (e.g. CSV (URL_TO_INSERT_RECORD-ABBREV_1811 https://fairsharing.org/FAIRsharing.1943d4) , JSON (URL_TO_INSERT_RECORD-ABBREV_1810 https://fairsharing.org/FAIRsharing.5bbab9) , RDBMs, XML (URL_TO_INSERT_RECORD-ABBREV_1812 https://fairsharing.org/FAIRsharing.b5cc91) ) to RDF (URL_TO_INSERT_RECORD-ABBREV_1813 https://fairsharing.org/FAIRsharing.p77ph9) , and to provide guidance for choosing the right tool.
+> Present an inventory of a selection of popular tools for converting datasets in different formats (e.g. CSV (URL_TO_INSERT_RECORD-ABBREV_1838 https://fairsharing.org/FAIRsharing.1943d4) , JSON (URL_TO_INSERT_RECORD-ABBREV_1836 https://fairsharing.org/FAIRsharing.5bbab9) , RDBMs, XML (URL_TO_INSERT_RECORD-ABBREV_1835 https://fairsharing.org/FAIRsharing.b5cc91) ) to RDF (URL_TO_INSERT_RECORD-ABBREV_1837 https://fairsharing.org/FAIRsharing.p77ph9) , and to provide guidance for choosing the right tool.
 
 ---
 
@@ -47,9 +47,9 @@ Building an ontology with Robot tool.
 ## Requirements
 
 * recipe dependency:
-    * This recipe is an example of how to perform ETL with the RDF (URL_TO_INSERT_RECORD-ABBREV_1814 https://fairsharing.org/FAIRsharing.p77ph9)  model. For tools on general ETL process. Please check recipe {ref}`fcb-interop-etl`
+    * This recipe is an example of how to perform ETL with the RDF (URL_TO_INSERT_RECORD-ABBREV_1839 https://fairsharing.org/FAIRsharing.p77ph9)  model. For tools on general ETL process. Please check recipe {ref}`fcb-interop-etl`
 * knowledge requirement:
-  * basic understanding of: command line syntax, RDF (URL_TO_INSERT_RECORD-ABBREV_1815 https://fairsharing.org/FAIRsharing.p77ph9) , configuration using YAML
+  * basic understanding of: command line syntax, RDF (URL_TO_INSERT_RECORD-ABBREV_1840 https://fairsharing.org/FAIRsharing.p77ph9) , configuration using YAML
 * other:
   * plan/model of how to map your source entities/properties to classes/types/properties, and how to create resource URIs <!-- TODO would be nice to link out to a recipe about minting -->
 
@@ -68,16 +68,16 @@ Building an ontology with Robot tool.
 
 ## Introduction
 
-Research data is produced in a range of different formats, such as spreadsheets, delimiter-separated files (CVS, TSV (URL_TO_INSERT_RECORD-ABBREV_1816 https://fairsharing.org/FAIRsharing.a978c9) ), or (relational) databases. To improve reusability of data and make them more FAIR (URL_TO_INSERT_RECORD-ABBREV_1818 https://fairsharing.org/FAIRsharing.WWI10U) , these data sets can be published in the _de facto_ standard for reusable data, RDF (URL_TO_INSERT_RECORD-ABBREV_1817 https://fairsharing.org/FAIRsharing.p77ph9) . 
+Research data is produced in a range of different formats, such as spreadsheets, delimiter-separated files (CVS, TSV (URL_TO_INSERT_RECORD-ABBREV_1842 https://fairsharing.org/FAIRsharing.a978c9) ), or (relational) databases. To improve reusability of data and make them more FAIR (URL_TO_INSERT_RECORD-ABBREV_1843 https://fairsharing.org/FAIRsharing.WWI10U) , these data sets can be published in the _de facto_ standard for reusable data, RDF (URL_TO_INSERT_RECORD-ABBREV_1841 https://fairsharing.org/FAIRsharing.p77ph9) . 
 
-There are many tools available to convert non-RD (URL_TO_INSERT_RECORD-ABBREV_1819 https://fairsharing.org/FAIRsharing.p77ph9) F data to RDF (URL_TO_INSERT_RECORD-ABBREV_1820 https://fairsharing.org/FAIRsharing.p77ph9) , a process also known as ‘triplification’ or ‘RDFizing’ of data. See for instance the lists maintained by W3C at [ConverterToRdf](https://www.w3.org/wiki/ConverterToRdf), [RDFImportersAndAdapters](https://www.w3.org/wiki/RDFImportersAndAdapters) (outdated), and [RdfAndSql](https://www.w3.org/wiki/RdfAndSql), or perform a quick Google search. 
+There are many tools available to convert non-RD (URL_TO_INSERT_RECORD-ABBREV_1844 https://fairsharing.org/FAIRsharing.p77ph9) F data to RDF (URL_TO_INSERT_RECORD-ABBREV_1845 https://fairsharing.org/FAIRsharing.p77ph9) , a process also known as ‘triplification’ or ‘RDFizing’ of data. See for instance the lists maintained by W3C at [ConverterToRdf](https://www.w3.org/wiki/ConverterToRdf), [RDFImportersAndAdapters](https://www.w3.org/wiki/RDFImportersAndAdapters) (outdated), and [RdfAndSql](https://www.w3.org/wiki/RdfAndSql), or perform a quick Google search. 
 
 However, finding the right tool for a particular scenario can be difficult and time-consuming. A user needs to try the tool and invest some time in understanding it, while its limitations may only be discovered later. Many tools are limited to a particular input format or come with a particular application; are no longer supported, maintained or suffer from bugs; need a significant time investment to learn the specifics of their use or configuration options; or lack sufficient documentation. 
 
 This recipe aims to address these problems by presenting a selection of conversion tools, and giving guidance on choosing the right tool, that adhere to the following (somewhat subjective) criteria:
 
-*   Generic applicability (e.g. not limited to OWL (URL_TO_INSERT_RECORD-ABBREV_1821 https://fairsharing.org/FAIRsharing.atygwy)  or SKOS (URL_TO_INSERT_RECORD-ABBREV_1822 https://fairsharing.org/FAIRsharing.48e326) )
-*   Multiple formats: tabular (Excel, CSV (URL_TO_INSERT_RECORD-ABBREV_1824 https://fairsharing.org/FAIRsharing.1943d4)  etc), hierarchical (XML (URL_TO_INSERT_RECORD-ABBREV_1825 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1823 https://fairsharing.org/FAIRsharing.5bbab9) ), RDBs
+*   Generic applicability (e.g. not limited to OWL (URL_TO_INSERT_RECORD-ABBREV_1847 https://fairsharing.org/FAIRsharing.atygwy)  or SKOS (URL_TO_INSERT_RECORD-ABBREV_1846 https://fairsharing.org/FAIRsharing.48e326) )
+*   Multiple formats: tabular (Excel, CSV (URL_TO_INSERT_RECORD-ABBREV_1850 https://fairsharing.org/FAIRsharing.1943d4)  etc), hierarchical (XML (URL_TO_INSERT_RECORD-ABBREV_1848 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1849 https://fairsharing.org/FAIRsharing.5bbab9) ), RDBs
 *   Well documented
 *   Actively maintained
 *   Easy to install and use (i.e. no compilation or docker needed)
@@ -99,15 +99,15 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 
 |                                           | GUI | CLI, automation | Reuse mappings | Messy data | Virtual graph |
 | ----------------------------------------- | --- | --------------- | -------------- | ---------- | ------------- |
-| OpenRefine + RDF (URL_TO_INSERT_RECORD-ABBREV_1826 https://fairsharing.org/FAIRsharing.p77ph9)  extension                | ✅   | +/-         | +/-        | ✅          |               |
+| OpenRefine + RDF (URL_TO_INSERT_RECORD-ABBREV_1851 https://fairsharing.org/FAIRsharing.p77ph9)  extension                | ✅   | +/-         | +/-        | ✅          |               |
 | TopBraid Composer (ME)1                   | ✅   |                 |                |            |               |
 | RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
-| SPARQL (URL_TO_INSERT_RECORD-ABBREV_1827 https://fairsharing.org/FAIRsharing.87ccfd) -Generate                           |     | ✅               | ✅              |            |               |
+| SPARQL (URL_TO_INSERT_RECORD-ABBREV_1852 https://fairsharing.org/FAIRsharing.87ccfd) -Generate                           |     | ✅               | ✅              |            |               |
 | Ontop (RDB only)                          |     | ✅               | ✅              |            | ✅             |
 | Virtuoso (proprietary tool)                                 |     |                 | ✅              |            | ✅             |
 | Custom code                               |     | ✅               |                | ✅          |               |
 
-Except for OpenRefine and writing your own code, most tools make use of a mapping language to declare the rules for conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1828 https://fairsharing.org/FAIRsharing.p77ph9) . Read the section on transformation/mapping languages to find out more about these languages and why it makes sense to prefer YARRRML as the mapping language of choice.
+Except for OpenRefine and writing your own code, most tools make use of a mapping language to declare the rules for conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1853 https://fairsharing.org/FAIRsharing.p77ph9) . Read the section on transformation/mapping languages to find out more about these languages and why it makes sense to prefer YARRRML as the mapping language of choice.
 
 ### Step 2: select/install tool
 
@@ -121,20 +121,20 @@ Select one or more tools to install and evaluate, go through the tutorials, and 
 
 OpenRefine is an open source data transformation tool for exploring, cleaning, and transforming all kinds of structured data. It offers a spreadsheet-like user interface that allows users to interactively explore and transform their data. Data can be manipulated through menu actions and GREL (Google Refine Expression Language) or Python/Jython expressions. It keeps a undo/redo history which can also be used to ‘replay’ transformation and configuration steps.
 
-OpenRefine is open source and has an active community. Additional functionality is provided through extensions and custom distributions. For instance, the ability to work with RDF (URL_TO_INSERT_RECORD-ABBREV_1829 https://fairsharing.org/FAIRsharing.p77ph9)  is provided by installing the RDF (URL_TO_INSERT_RECORD-ABBREV_1830 https://fairsharing.org/FAIRsharing.p77ph9)  extension. Publication to FAIR (URL_TO_INSERT_RECORD-ABBREV_1831 https://fairsharing.org/FAIRsharing.WWI10U)  data points is provided through the FAIR (URL_TO_INSERT_RECORD-ABBREV_1832 https://fairsharing.org/FAIRsharing.WWI10U)  metadata extension.
+OpenRefine is open source and has an active community. Additional functionality is provided through extensions and custom distributions. For instance, the ability to work with RDF (URL_TO_INSERT_RECORD-ABBREV_1854 https://fairsharing.org/FAIRsharing.p77ph9)  is provided by installing the RDF (URL_TO_INSERT_RECORD-ABBREV_1855 https://fairsharing.org/FAIRsharing.p77ph9)  extension. Publication to FAIR (URL_TO_INSERT_RECORD-ABBREV_1856 https://fairsharing.org/FAIRsharing.WWI10U)  data points is provided through the FAIR (URL_TO_INSERT_RECORD-ABBREV_1857 https://fairsharing.org/FAIRsharing.WWI10U)  metadata extension.
 
 
 When you should use this application:
 
 *   When you are more familiar with working with a user interface and not so much with configuration scripts or coding, and want to interactively explore and manipulate your data
-*   When you have data that needs some manipulation, i.e. messy data, before conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1833 https://fairsharing.org/FAIRsharing.p77ph9) 
+*   When you have data that needs some manipulation, i.e. messy data, before conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1858 https://fairsharing.org/FAIRsharing.p77ph9) 
 
 
 Installation:
 
-*   For working with RDF (URL_TO_INSERT_RECORD-ABBREV_1834 https://fairsharing.org/FAIRsharing.p77ph9) , a plugin is needed.
+*   For working with RDF (URL_TO_INSERT_RECORD-ABBREV_1859 https://fairsharing.org/FAIRsharing.p77ph9) , a plugin is needed.
 *   It is possible to use a distribution of openrefine that comes prepackaged with this plugin and other useful features. However, this package is not maintained anymore.
-*   It is therefore advised to download the latest version of OpenRefine and RDF (URL_TO_INSERT_RECORD-ABBREV_1835 https://fairsharing.org/FAIRsharing.p77ph9)  plugin and install the plugin yourself.
+*   It is therefore advised to download the latest version of OpenRefine and RDF (URL_TO_INSERT_RECORD-ABBREV_1860 https://fairsharing.org/FAIRsharing.p77ph9)  plugin and install the plugin yourself.
 
 
 Details:
@@ -143,17 +143,17 @@ Details:
 *   [download](https://openrefine.org/download.html), [installation instructions](https://github.com/OpenRefine/OpenRefine/wiki/Installation-Instructions)
 *   [documentation](https://github.com/OpenRefine/OpenRefine/wiki) 
 *   Tutorial(s), see [OpenRefine Foundation course](https://courses.tranzf.org/course/view.php?id=18), [screencast](https://github.com/OpenRefine/OpenRefine/wiki/Screencasts), [curated list](https://github.com/OpenRefine/OpenRefine/wiki/External-Resources)
-*   Input format(s): Excel, CVS/TS (URL_TO_INSERT_RECORD-ABBREV_1837 https://fairsharing.org/FAIRsharing.a978c9) V, XML (URL_TO_INSERT_RECORD-ABBREV_1838 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1836 https://fairsharing.org/FAIRsharing.5bbab9) , (relational) databases
+*   Input format(s): Excel, CVS/TS (URL_TO_INSERT_RECORD-ABBREV_1863 https://fairsharing.org/FAIRsharing.a978c9) V, XML (URL_TO_INSERT_RECORD-ABBREV_1861 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1862 https://fairsharing.org/FAIRsharing.5bbab9) , (relational) databases
 *   It is possible to automate, see [FAQ](https://github.com/OpenRefine/OpenRefine/wiki/FAQ#can-openrefine-be-used-as-a-piece-of-a-larger-etl-pipeline)
 *   Complex manipulation of data is possible with [GREL](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language) or Python ([Jython](https://www.jython.org/)) expressions
-*   It is possible to reuse mappings through exporting part of the undo/redo history that led to the RDF (URL_TO_INSERT_RECORD-ABBREV_1839 https://fairsharing.org/FAIRsharing.p77ph9)  export, see [replaying operations](https://github.com/OpenRefine/OpenRefine/wiki/History#replaying-operations)
+*   It is possible to reuse mappings through exporting part of the undo/redo history that led to the RDF (URL_TO_INSERT_RECORD-ABBREV_1864 https://fairsharing.org/FAIRsharing.p77ph9)  export, see [replaying operations](https://github.com/OpenRefine/OpenRefine/wiki/History#replaying-operations)
 
 
-Installing the RDF (URL_TO_INSERT_RECORD-ABBREV_1840 https://fairsharing.org/FAIRsharing.p77ph9)  extension:
+Installing the RDF (URL_TO_INSERT_RECORD-ABBREV_1865 https://fairsharing.org/FAIRsharing.p77ph9)  extension:
 
-*   Download on GitHub (URL_TO_INSERT_RECORD-NAME_1841 https://fairsharing.org/FAIRsharing.c55d5e)  ([wiki](https://github.com/stkenny/grefine-rdf-extension/wiki))
-*   Enables graphical mapping of data to an RDF (URL_TO_INSERT_RECORD-ABBREV_1842 https://fairsharing.org/FAIRsharing.p77ph9)  skeleton for export (with autocomplete)
-*   Import and export to Turtle (URL_TO_INSERT_RECORD-ABBREV_1844 https://fairsharing.org/FAIRsharing.3e194c)  and RDF (URL_TO_INSERT_RECORD-ABBREV_1845 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_1843 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_1846 https://fairsharing.org/336) 
+*   Download on GitHub (URL_TO_INSERT_RECORD-NAME_1866 https://fairsharing.org/FAIRsharing.c55d5e)  ([wiki](https://github.com/stkenny/grefine-rdf-extension/wiki))
+*   Enables graphical mapping of data to an RDF (URL_TO_INSERT_RECORD-ABBREV_1867 https://fairsharing.org/FAIRsharing.p77ph9)  skeleton for export (with autocomplete)
+*   Import and export to Turtle (URL_TO_INSERT_RECORD-ABBREV_1871 https://fairsharing.org/FAIRsharing.3e194c)  and RDF (URL_TO_INSERT_RECORD-ABBREV_1870 https://fairsharing.org/FAIRsharing.p77ph9) /XM (URL_TO_INSERT_RECORD-ABBREV_1869 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_1868 https://fairsharing.org/336) 
 *   Query against a Sparql endpoint
 
 Notes on how to install extensions: [install extensions](https://docs.openrefine.org/manual/installing#installing-extensions)
@@ -161,7 +161,7 @@ Notes on how to install extensions: [install extensions](https://docs.openrefine
 
 #### OpenRefine metadata extension
 
-The OpenRefine metadata extension adds support for uploading metadata of a dataset to a so-called [FAIR Data Point](https://github.com/FAIRDataTeam/FAIRDataPoint-Spec) (FDP (URL_TO_INSERT_RECORD-ABBREV_1849 https://fairsharing.org/298) ). A FDP (URL_TO_INSERT_RECORD-ABBREV_1850 https://fairsharing.org/298)  is a metadata repository that provides access to metadata in a FAIR (URL_TO_INSERT_RECORD-ABBREV_1848 https://fairsharing.org/FAIRsharing.WWI10U)  way. This extension can be used in conjunction with the RDF (URL_TO_INSERT_RECORD-ABBREV_1847 https://fairsharing.org/FAIRsharing.p77ph9)  extension.
+The OpenRefine metadata extension adds support for uploading metadata of a dataset to a so-called [FAIR Data Point](https://github.com/FAIRDataTeam/FAIRDataPoint-Spec) (FDP (URL_TO_INSERT_RECORD-ABBREV_1874 https://fairsharing.org/298) ). A FDP (URL_TO_INSERT_RECORD-ABBREV_1875 https://fairsharing.org/298)  is a metadata repository that provides access to metadata in a FAIR (URL_TO_INSERT_RECORD-ABBREV_1873 https://fairsharing.org/FAIRsharing.WWI10U)  way. This extension can be used in conjunction with the RDF (URL_TO_INSERT_RECORD-ABBREV_1872 https://fairsharing.org/FAIRsharing.p77ph9)  extension.
 
 *   OpenRefine-metadata-extension ([GitHub](https://github.com/FAIRDataTeam/OpenRefine-metadata-extension), [download](https://github.com/FAIRDataTeam/OpenRefine-metadata-extension/releases))
 
@@ -170,7 +170,7 @@ The OpenRefine metadata extension adds support for uploading metadata of a datas
 
 Some users may favor a text-based approach over a graphical tool. In addition, graphical tools may come with several disadvantages: mapping and generation is tied to that particular application, exchange of mappings (between users or applications) may be difficult, and automation or integration in a built pipeline may not be possible. 
 
-A more flexible approach is offered by transformation or mapping languages. These languages allow to declare mappings and RDF (URL_TO_INSERT_RECORD-ABBREV_1851 https://fairsharing.org/FAIRsharing.p77ph9)  generation independent from a particular application. 
+A more flexible approach is offered by transformation or mapping languages. These languages allow to declare mappings and RDF (URL_TO_INSERT_RECORD-ABBREV_1876 https://fairsharing.org/FAIRsharing.p77ph9)  generation independent from a particular application. 
 
 
 #### D2RQ
@@ -180,23 +180,23 @@ A more flexible approach is offered by transformation or mapping languages. Thes
 
 #### R2RML
 
-A well-known mapping language is [R2RML](https://www.w3.org/TR/r2rml/) (RDB to RDF (URL_TO_INSERT_RECORD-ABBREV_1852 https://fairsharing.org/FAIRsharing.p77ph9)  Mapping Language), which is an RDF (URL_TO_INSERT_RECORD-ABBREV_1853 https://fairsharing.org/FAIRsharing.p77ph9)  vocabulary to describe mappings from relational databases to RDF (URL_TO_INSERT_RECORD-ABBREV_1854 https://fairsharing.org/FAIRsharing.p77ph9) . R2RML is an official W3C recommendation and is supported by many tools.
+A well-known mapping language is [R2RML](https://www.w3.org/TR/r2rml/) (RDB to RDF (URL_TO_INSERT_RECORD-ABBREV_1877 https://fairsharing.org/FAIRsharing.p77ph9)  Mapping Language), which is an RDF (URL_TO_INSERT_RECORD-ABBREV_1878 https://fairsharing.org/FAIRsharing.p77ph9)  vocabulary to describe mappings from relational databases to RDF (URL_TO_INSERT_RECORD-ABBREV_1879 https://fairsharing.org/FAIRsharing.p77ph9) . R2RML is an official W3C recommendation and is supported by many tools.
 
 
 #### RML
 
-[RML](https://rml.io/specs/rml/) (Rule markup Language) is a mapping language that extends R2RML to also support mappings from other structured formats such as CSV (URL_TO_INSERT_RECORD-ABBREV_1856 https://fairsharing.org/FAIRsharing.1943d4)  and JSON (URL_TO_INSERT_RECORD-ABBREV_1855 https://fairsharing.org/FAIRsharing.5bbab9)  (it is a superset of R2RML). 
+[RML](https://rml.io/specs/rml/) (Rule markup Language) is a mapping language that extends R2RML to also support mappings from other structured formats such as CSV (URL_TO_INSERT_RECORD-ABBREV_1881 https://fairsharing.org/FAIRsharing.1943d4)  and JSON (URL_TO_INSERT_RECORD-ABBREV_1880 https://fairsharing.org/FAIRsharing.5bbab9)  (it is a superset of R2RML). 
 
 *   Online graphical editor for creating RML mappings: [RMLEditor](https://app.rml.io/rmleditor/) (beta, with some size limitations)
 
-Downside of RML and R2RML is that they are designed to be processed by machines: manual definition of rules using these RDF (URL_TO_INSERT_RECORD-ABBREV_1857 https://fairsharing.org/FAIRsharing.p77ph9)  vocabularies is complex, time-consuming, and comes with a steep learning curve. To address these problems, the mapping language YARRRML was created.
+Downside of RML and R2RML is that they are designed to be processed by machines: manual definition of rules using these RDF (URL_TO_INSERT_RECORD-ABBREV_1882 https://fairsharing.org/FAIRsharing.p77ph9)  vocabularies is complex, time-consuming, and comes with a steep learning curve. To address these problems, the mapping language YARRRML was created.
 
 
 #### YARRRML
 
 YARRRML is a human-readable text-based representation for generation rules that can be directly translated to RML. It is a subset of [YAML](https://en.wikipedia.org/wiki/YAML), which is a human-friendly data serialization standard that is commonly used for configuration files. 
 
-YAML uses Python-style indentation to indicate nesting (no tabs), has compact notations for lists and maps and is a superset of JSON (URL_TO_INSERT_RECORD-ABBREV_1858 https://fairsharing.org/FAIRsharing.5bbab9) . YARRRML hides the complexity of machine-processable rules while it remains interoperable with existing tools.
+YAML uses Python-style indentation to indicate nesting (no tabs), has compact notations for lists and maps and is a superset of JSON (URL_TO_INSERT_RECORD-ABBREV_1883 https://fairsharing.org/FAIRsharing.5bbab9) . YARRRML hides the complexity of machine-processable rules while it remains interoperable with existing tools.
 
 
 
@@ -218,7 +218,7 @@ Defining your mappings in YARRRML is advisable, considering it’s easy to under
 
 #### RMLMapper
 
-RMLMapper is the reference implementation for RML-based mapping tools. It has the option to generate PROV-O (URL_TO_INSERT_RECORD-ABBREV_1860 https://fairsharing.org/FAIRsharing.2rm2b3)  metadata for the conversion, suitable as FAIR (URL_TO_INSERT_RECORD-ABBREV_1859 https://fairsharing.org/FAIRsharing.WWI10U)  metadata. Although easy to use/configure, it has the downside that it loads all data in memory, which means there is a limit on the size of the data that can be converted.
+RMLMapper is the reference implementation for RML-based mapping tools. It has the option to generate PROV-O (URL_TO_INSERT_RECORD-ABBREV_1885 https://fairsharing.org/FAIRsharing.2rm2b3)  metadata for the conversion, suitable as FAIR (URL_TO_INSERT_RECORD-ABBREV_1884 https://fairsharing.org/FAIRsharing.WWI10U)  metadata. Although easy to use/configure, it has the downside that it loads all data in memory, which means there is a limit on the size of the data that can be converted.
 
 *   Download: [rmlmapper-java releases](https://github.com/RMLio/rmlmapper-java/releases)
 
@@ -231,7 +231,7 @@ SDM-RDFizer is a Python-based tool which is similar to RMLMapper but is suited f
 
 ### Morph-KGC
 
-Morph-KGC is a powerful engine to generate RDF (URL_TO_INSERT_RECORD-ABBREV_1861 https://fairsharing.org/FAIRsharing.p77ph9)  and RDF (URL_TO_INSERT_RECORD-ABBREV_1862 https://fairsharing.org/FAIRsharing.p77ph9) -star knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating [RDFLib](https://github.com/RDFLib/rdflib) or [Oxigraph](https://github.com/oxigraph/oxigraph) graphs). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
+Morph-KGC is a powerful engine to generate RDF (URL_TO_INSERT_RECORD-ABBREV_1886 https://fairsharing.org/FAIRsharing.p77ph9)  and RDF (URL_TO_INSERT_RECORD-ABBREV_1887 https://fairsharing.org/FAIRsharing.p77ph9) -star knowledge graphs. It supports a wide range of relational databases and data file formats. It scales to large volumes of data and runs from the command line or as a python library (creating [RDFLib](https://github.com/RDFLib/rdflib) or [Oxigraph](https://github.com/oxigraph/oxigraph) graphs). It is also integrated in [kglab](https://github.com/DerwenAI/kglab), an abstraction layer for working with knowledge graphs using popular libraries.
 
 * Download: [Morph-KGC](https://github.com/oeg-upm/morph-kgc).
 * Documentation: [readthedocs](https://morph-kgc.readthedocs.io).
@@ -244,22 +244,22 @@ There are other RML-based conversion tools that are more tailored to particular 
 
 #### SPARQL-Generate
 
-[SPARQL-Generate](https://ci.mines-stetienne.fr/sparql-generate/) is a template-based language for generating RDF (URL_TO_INSERT_RECORD-ABBREV_1865 https://fairsharing.org/FAIRsharing.p77ph9)  streams from a range of input formats, such as tabular data, JSON (URL_TO_INSERT_RECORD-ABBREV_1863 https://fairsharing.org/FAIRsharing.5bbab9) , XML (URL_TO_INSERT_RECORD-ABBREV_1864 https://fairsharing.org/FAIRsharing.b5cc91) , and relational databases. It extends SPARQL (URL_TO_INSERT_RECORD-ABBREV_1866 https://fairsharing.org/FAIRsharing.87ccfd)  1.1, which means it should feel familiar for everyone already familiar with SPARQL (URL_TO_INSERT_RECORD-ABBREV_1867 https://fairsharing.org/FAIRsharing.87ccfd)  queries.
+[SPARQL-Generate](https://ci.mines-stetienne.fr/sparql-generate/) is a template-based language for generating RDF (URL_TO_INSERT_RECORD-ABBREV_1890 https://fairsharing.org/FAIRsharing.p77ph9)  streams from a range of input formats, such as tabular data, JSON (URL_TO_INSERT_RECORD-ABBREV_1889 https://fairsharing.org/FAIRsharing.5bbab9) , XML (URL_TO_INSERT_RECORD-ABBREV_1888 https://fairsharing.org/FAIRsharing.b5cc91) , and relational databases. It extends SPARQL (URL_TO_INSERT_RECORD-ABBREV_1891 https://fairsharing.org/FAIRsharing.87ccfd)  1.1, which means it should feel familiar for everyone already familiar with SPARQL (URL_TO_INSERT_RECORD-ABBREV_1892 https://fairsharing.org/FAIRsharing.87ccfd)  queries.
 
 *   To quickly write and test queries (on small datasets), use the [SPARQL-Generate Playground](https://ci.mines-stetienne.fr/sparql-generate/playground.html) web-application.
-*   The [SPARQL-Generate executable jar](https://ci.mines-stetienne.fr/sparql-generate/language-cli.html) is a CLI (command line interface) tool for executing SPARQL (URL_TO_INSERT_RECORD-ABBREV_1868 https://fairsharing.org/FAIRsharing.87ccfd) -Generate queries. 
+*   The [SPARQL-Generate executable jar](https://ci.mines-stetienne.fr/sparql-generate/language-cli.html) is a CLI (command line interface) tool for executing SPARQL (URL_TO_INSERT_RECORD-ABBREV_1893 https://fairsharing.org/FAIRsharing.87ccfd) -Generate queries. 
 
 
 ### Virtual graph
 
-Tools that dynamically render a relational database as virtual RDF (URL_TO_INSERT_RECORD-ABBREV_1869 https://fairsharing.org/FAIRsharing.p77ph9)  graph.
+Tools that dynamically render a relational database as virtual RDF (URL_TO_INSERT_RECORD-ABBREV_1894 https://fairsharing.org/FAIRsharing.p77ph9)  graph.
 
 
 #### Ontop
 
 [Ontop](https://ontop-vkg.org/) is a virtual knowledge graph system for arbitrary databases. It has its own mapping language but also supports R2RML. It runs as a command line tool, but there is also an Ontop plugin for Protégé to define mappings and import triples using a GUI application.
 
-Although triples are exposed as a virtual graph, it is possible to export to RDF (URL_TO_INSERT_RECORD-ABBREV_1870 https://fairsharing.org/FAIRsharing.p77ph9)  using a ‘materialize’ command.
+Although triples are exposed as a virtual graph, it is possible to export to RDF (URL_TO_INSERT_RECORD-ABBREV_1895 https://fairsharing.org/FAIRsharing.p77ph9)  using a ‘materialize’ command.
 
 
 ### Proprietary tools
@@ -269,9 +269,9 @@ A proprietary tool is a commercial tool for which licenses need to be obtained
 
 #### TopBraid Composer
 
-[TopBraid Composer Maestro Edition](https://www.topquadrant.com/products/topbraid-composer/) (commercial license) is an Integrated development environment (IDE) for working with semantic web technologies, such as RDF (URL_TO_INSERT_RECORD-ABBREV_1876 https://fairsharing.org/FAIRsharing.p77ph9)  and OWL (URL_TO_INSERT_RECORD-ABBREV_1875 https://fairsharing.org/FAIRsharing.atygwy) . It has support for converting a range of formats to RDF (URL_TO_INSERT_RECORD-ABBREV_1877 https://fairsharing.org/FAIRsharing.p77ph9) , including tabular/spreadsheet data, XML (URL_TO_INSERT_RECORD-ABBREV_1872 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1871 https://fairsharing.org/FAIRsharing.5bbab9) , and RDB. It uses a straightforward conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1878 https://fairsharing.org/FAIRsharing.p77ph9) , which doesn’t allow for extensive customization: sheets and tabular data are directly mapped to a spreadsheet ontology, XML (URL_TO_INSERT_RECORD-ABBREV_1873 https://fairsharing.org/FAIRsharing.b5cc91)  directly according to an XML (URL_TO_INSERT_RECORD-ABBREV_1874 https://fairsharing.org/FAIRsharing.b5cc91)  vocabulary, and relational databases are mapped using direct mapping with [D2RQ](http://d2rq.org/d2rq-language). 
+[TopBraid Composer Maestro Edition](https://www.topquadrant.com/products/topbraid-composer/) (commercial license) is an Integrated development environment (IDE) for working with semantic web technologies, such as RDF (URL_TO_INSERT_RECORD-ABBREV_1900 https://fairsharing.org/FAIRsharing.p77ph9)  and OWL (URL_TO_INSERT_RECORD-ABBREV_1903 https://fairsharing.org/FAIRsharing.atygwy) . It has support for converting a range of formats to RDF (URL_TO_INSERT_RECORD-ABBREV_1901 https://fairsharing.org/FAIRsharing.p77ph9) , including tabular/spreadsheet data, XML (URL_TO_INSERT_RECORD-ABBREV_1896 https://fairsharing.org/FAIRsharing.b5cc91) , JSON (URL_TO_INSERT_RECORD-ABBREV_1899 https://fairsharing.org/FAIRsharing.5bbab9) , and RDB. It uses a straightforward conversion to RDF (URL_TO_INSERT_RECORD-ABBREV_1902 https://fairsharing.org/FAIRsharing.p77ph9) , which doesn’t allow for extensive customization: sheets and tabular data are directly mapped to a spreadsheet ontology, XML (URL_TO_INSERT_RECORD-ABBREV_1897 https://fairsharing.org/FAIRsharing.b5cc91)  directly according to an XML (URL_TO_INSERT_RECORD-ABBREV_1898 https://fairsharing.org/FAIRsharing.b5cc91)  vocabulary, and relational databases are mapped using direct mapping with [D2RQ](http://d2rq.org/d2rq-language). 
 
-The resulting RDF (URL_TO_INSERT_RECORD-ABBREV_1879 https://fairsharing.org/FAIRsharing.p77ph9)  directly reflects the structure and schema of the database. However, once loaded as RDF (URL_TO_INSERT_RECORD-ABBREV_1880 https://fairsharing.org/FAIRsharing.p77ph9) , transformations and elaborate mappings can be applied using TopBraids visual scripting language [SPARQLMotion](https://www.topquadrant.com/technology/sparqlmotion/), or SPIN/Sparql construct queries.
+The resulting RDF (URL_TO_INSERT_RECORD-ABBREV_1904 https://fairsharing.org/FAIRsharing.p77ph9)  directly reflects the structure and schema of the database. However, once loaded as RDF (URL_TO_INSERT_RECORD-ABBREV_1905 https://fairsharing.org/FAIRsharing.p77ph9) , transformations and elaborate mappings can be applied using TopBraids visual scripting language [SPARQLMotion](https://www.topquadrant.com/technology/sparqlmotion/), or SPIN/Sparql construct queries.
 
 
 #### Virtuoso Universal Serve
@@ -291,16 +291,16 @@ There is also an open-source edition available, known as OpenLink Virtuoso.
 
 Instead of relying on a tool, most programmers may prefer to write their own conversion code/scripts using their language of choice (e.g. Python, Java). This is probably the fastest, most accessible option because it capitalizes on existing programming skills and avoids the overhead of learning another tool or mapping language. It offers great flexibility: it is highly customizable, any input and output format is possible, and it can be scaled to large datasets. Downside is that it may not be easy to adapt existing code to changing mapping requirements. Also, it may be difficult for others to understand the mapping. In addition, custom code may be susceptible to bugs, while established tools have been tested thoroughly.
 
-Although it is possible to generate RDF (URL_TO_INSERT_RECORD-ABBREV_1881 https://fairsharing.org/FAIRsharing.p77ph9)  by constructing triples using basic string (URL_TO_INSERT_RECORD-NAME_1883 https://fairsharing.org/FAIRsharing.9b7wvk)  operations, it pays off to use a RDF (URL_TO_INSERT_RECORD-ABBREV_1882 https://fairsharing.org/FAIRsharing.p77ph9)  library for these tasks.
+Although it is possible to generate RDF (URL_TO_INSERT_RECORD-ABBREV_1906 https://fairsharing.org/FAIRsharing.p77ph9)  by constructing triples using basic string (URL_TO_INSERT_RECORD-NAME_1908 https://fairsharing.org/FAIRsharing.9b7wvk)  operations, it pays off to use a RDF (URL_TO_INSERT_RECORD-ABBREV_1907 https://fairsharing.org/FAIRsharing.p77ph9)  library for these tasks.
 
-For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyter notebooks with one of the common data manipulation libraries (e.g. pandas) allows you to interactively explore and manipulate the data before converting it into RDF (URL_TO_INSERT_RECORD-ABBREV_1884 https://fairsharing.org/FAIRsharing.p77ph9) .
+For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyter notebooks with one of the common data manipulation libraries (e.g. pandas) allows you to interactively explore and manipulate the data before converting it into RDF (URL_TO_INSERT_RECORD-ABBREV_1909 https://fairsharing.org/FAIRsharing.p77ph9) .
 
-For Java the two most common libraries for working with RDF (URL_TO_INSERT_RECORD-ABBREV_1885 https://fairsharing.org/FAIRsharing.p77ph9)  are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
+For Java the two most common libraries for working with RDF (URL_TO_INSERT_RECORD-ABBREV_1910 https://fairsharing.org/FAIRsharing.p77ph9)  are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
 ## What to read next?
 
-* [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo (URL_TO_INSERT_RECORD-NAME_1886 https://fairsharing.org/FAIRsharing.wy4egf) )
+* [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo (URL_TO_INSERT_RECORD-NAME_1911 https://fairsharing.org/FAIRsharing.wy4egf) )
 
 ````{rdmkit_panel}
 ````

@@ -23,11 +23,11 @@
 
 2. [License](#License) -->
 
-This document aims to identify the values underlying or correlated with the FAIR (URL_TO_INSERT_RECORD-ABBREV_2204 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2203 https://fairsharing.org/FAIRsharing.WWI10U)  (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR (URL_TO_INSERT_RECORD-ABBREV_2205 https://fairsharing.org/FAIRsharing.WWI10U) . Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
+This document aims to identify the values underlying or correlated with the FAIR (URL_TO_INSERT_RECORD-ABBREV_2230 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2229 https://fairsharing.org/FAIRsharing.WWI10U)  (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR (URL_TO_INSERT_RECORD-ABBREV_2231 https://fairsharing.org/FAIRsharing.WWI10U) . Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
 
 The list, non-exhaustive, is oriented towards answering the following question: “Why to share or re-use data?” [and as a first step in this process, “Why FAIRify data?”]. 
 
-As there will be projects related to different subjects and/or with different kinds of datasets and different stakeholders involved, the FAIRification of some of the data sets could rely on values that are not yet listed here. In that respect, all data providers, partners and participants of FAIRplus and stakeholders are invited to discuss and add any other motivations they have to make data FAIR (URL_TO_INSERT_RECORD-ABBREV_2206 https://fairsharing.org/FAIRsharing.WWI10U) . 
+As there will be projects related to different subjects and/or with different kinds of datasets and different stakeholders involved, the FAIRification of some of the data sets could rely on values that are not yet listed here. In that respect, all data providers, partners and participants of FAIRplus and stakeholders are invited to discuss and add any other motivations they have to make data FAIR (URL_TO_INSERT_RECORD-ABBREV_2232 https://fairsharing.org/FAIRsharing.WWI10U) . 
 
 
 
@@ -39,11 +39,11 @@ As there will be projects related to different subjects and/or with different ki
 
 - **Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data re-use. 
 
-- **Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR (URL_TO_INSERT_RECORD-ABBREV_2207 https://fairsharing.org/FAIRsharing.WWI10U)  data (metadata).  
+- **Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR (URL_TO_INSERT_RECORD-ABBREV_2233 https://fairsharing.org/FAIRsharing.WWI10U)  data (metadata).  
 
-- **Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR (URL_TO_INSERT_RECORD-ABBREV_2208 https://fairsharing.org/FAIRsharing.WWI10U)  data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
+- **Sustainability**: facilitating the replication of studies for validation and avoiding unnecessary duplication, FAIR (URL_TO_INSERT_RECORD-ABBREV_2234 https://fairsharing.org/FAIRsharing.WWI10U)  data reduces monetary and energy costs linked to the production of data, helping to preserve a good environment for present and future generations. 
 
-- **Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR (URL_TO_INSERT_RECORD-ABBREV_2209 https://fairsharing.org/FAIRsharing.WWI10U)  data users). In the first case, FAIR (URL_TO_INSERT_RECORD-ABBREV_2210 https://fairsharing.org/FAIRsharing.WWI10U)  data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR (URL_TO_INSERT_RECORD-ABBREV_2211 https://fairsharing.org/FAIRsharing.WWI10U)  data users can reuse data that in another way it would be too demanding to obtain.  
+- **Efficiency**: the inclusion of data in FAIRplus reduces the costs of medical research and makes medical technologies/innovations more affordable. This could represent a mutual benefit between data providers and the scientific community (FAIR (URL_TO_INSERT_RECORD-ABBREV_2235 https://fairsharing.org/FAIRsharing.WWI10U)  data users). In the first case, FAIR (URL_TO_INSERT_RECORD-ABBREV_2236 https://fairsharing.org/FAIRsharing.WWI10U)  data can for instance enable data providers expand their influence into new territories (beneficence) and, in the second one, FAIR (URL_TO_INSERT_RECORD-ABBREV_2237 https://fairsharing.org/FAIRsharing.WWI10U)  data users can reuse data that in another way it would be too demanding to obtain.  
 
 - **Recognition of work**; legitimacy of a number of tasks: by making data more visible the work of quality data production becomes more recognized, whereas it can be more neglected as an achievement or a research output if data are not findable.
 
@@ -85,7 +85,7 @@ As there will be projects related to different subjects and/or with different ki
 
 - **Benefit sharing**: making good quality data re-used is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
 
-- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR (URL_TO_INSERT_RECORD-ABBREV_2212 https://fairsharing.org/FAIRsharing.WWI10U)  data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
+- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR (URL_TO_INSERT_RECORD-ABBREV_2238 https://fairsharing.org/FAIRsharing.WWI10U)  data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
 
 - **Long term view and generosity**: data re-use gives a temporal dimension to the original work done to produce the data that tends towards eternity.
 
@@ -99,7 +99,7 @@ As there will be projects related to different subjects and/or with different ki
 **Legal measures**: The reuse of data has to respect all restrictions expressed by data subjects, compliance with the initial information and consent given by the participant has to be achieved, and participants’ data protection rights have to be guaranteed. In addition, the data provider must define policies ruling the access and use of data sets that must be respected by data users. All parties must assure the respect of the data provider license (and FAIRplus objectives). 
  
 
-A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR (URL_TO_INSERT_RECORD-ABBREV_2214 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2213 https://fairsharing.org/FAIRsharing.WWI10U) . This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
+A lot has been written about the values underpinning data sharing but little has been done to explicit values underpinning each of the FAIR (URL_TO_INSERT_RECORD-ABBREV_2240 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2239 https://fairsharing.org/FAIRsharing.WWI10U) . This work and the contribution to it of the FAIRplus consortium and participants may help constructing an original value framework.
 
 
 ## References

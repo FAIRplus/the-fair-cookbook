@@ -1,4 +1,4 @@
-(fcb-bridged (URL_TO_INSERT_RECORD-NAME_1366 https://fairsharing.org/FAIRsharing.5ry74y) b-recipe)=
+(fcb-bridged (URL_TO_INSERT_RECORD-NAME_1389 https://fairsharing.org/FAIRsharing.5ry74y) b-recipe)=
 # Identifier mapping with BridgeDb
 
 
@@ -24,7 +24,7 @@ TODO : the recipe does not reference its figures
 
 The main purpose of this recipe is to:
 
-> Provide practical examples on how to **map (URL_TO_INSERT_RECORD-NAME_1367 https://fairsharing.org/FAIRsharing.53edcc)  identifiers for Genes, Proteins, Metabolites and Pathways** between resources using a purpose built tool, namely [BridgeDb](https://bio.tools/bridgedb).
+> Provide practical examples on how to **map (URL_TO_INSERT_RECORD-NAME_1390 https://fairsharing.org/FAIRsharing.53edcc)  identifiers for Genes, Proteins, Metabolites and Pathways** between resources using a purpose built tool, namely [BridgeDb](https://bio.tools/bridgedb).
 > Hands on guidance is provided for 2 interfaces (R package and a Python Webservices) provided by [BridgeDb](https://bio.tools/bridgedb).
 
 
@@ -65,7 +65,7 @@ This recipe has the following requirements:
 
 * Technical dependency
     * R or Python environment
-    * BridgeDb (URL_TO_INSERT_RECORD-NAME_1368 https://fairsharing.org/FAIRsharing.5ry74y)  R package installed
+    * BridgeDb (URL_TO_INSERT_RECORD-NAME_1391 https://fairsharing.org/FAIRsharing.5ry74y)  R package installed
 ---
 
 ## Tools
@@ -74,12 +74,12 @@ The table below lists the software that is used to execute the examples in this 
 
 | Software                                            | Description                                                                                                                                                                               | version | Biotools record                                          |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- 
-| [BridgeDb webservices](https://bridgedb.github.io/) | BridgeDb (URL_TO_INSERT_RECORD-NAME_1369 https://fairsharing.org/FAIRsharing.5ry74y)  is a framework to map (URL_TO_INSERT_RECORD-NAME_1370 https://fairsharing.org/FAIRsharing.53edcc)  identifiers between various databases. It includes a Java library that provides an API to work with identifier-identifier mapping databases and resources. | 0.0.9   | [https://bio.tools/bridgedb](https://bio.tools/bridgedb) |
+| [BridgeDb webservices](https://bridgedb.github.io/) | BridgeDb (URL_TO_INSERT_RECORD-NAME_1392 https://fairsharing.org/FAIRsharing.5ry74y)  is a framework to map (URL_TO_INSERT_RECORD-NAME_1393 https://fairsharing.org/FAIRsharing.53edcc)  identifiers between various databases. It includes a Java library that provides an API to work with identifier-identifier mapping databases and resources. | 0.0.9   | [https://bio.tools/bridgedb](https://bio.tools/bridgedb) |
 | Python                                              | An interpreted, high-level and general-purpose programming language.                                                                                                                       | 3.8.5   |                                                          |
 | [pandas](https://pandas.pydata.org/)                | pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.                                     | 1.1.3   |                                                          |
-| R                                                   | R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.                                 | v4.0.3  | https://bio.tools (URL_TO_INSERT_RECORD-HOMEPAGE_1371 https://fairsharing.org/FAIRsharing.63520c) /r                                      |
+| R                                                   | R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.                                 | v4.0.3  | https://bio.tools (URL_TO_INSERT_RECORD-HOMEPAGE_1394 https://fairsharing.org/FAIRsharing.63520c) /r                                      |
 | [tidyverse](https://www.tidyverse.org/)                                           | tidyverse is an opinionated collection of R packages designed for data science.  | 1.3.0||
-|[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)|An R package for BridgeDb (URL_TO_INSERT_RECORD-NAME_1372 https://fairsharing.org/FAIRsharing.5ry74y) | 2.0.0||
+|[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)|An R package for BridgeDb (URL_TO_INSERT_RECORD-NAME_1395 https://fairsharing.org/FAIRsharing.5ry74y) | 2.0.0||
 
 ---
 
@@ -87,7 +87,7 @@ The table below lists the software that is used to execute the examples in this 
 
 {ref}`Interlinking data from different sources <fcb-identifier-mapping>` is an essential step for data reusability and interoperability. This step requires dedicated tools. With the present recipe, we show how to use [BridgeDb](https://bridgedb.github.io/) to carry out this process.
 
-[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping {footcite}`van_iersel_bridgedb_2010`. BridgeDb (URL_TO_INSERT_RECORD-NAME_1373 https://fairsharing.org/FAIRsharing.5ry74y)  offers three different interfaces:
+[BridgeDb](https://bridgedb.github.io/) is an open source tool dedicated to performing identifier mapping {footcite}`van_iersel_bridgedb_2010`. BridgeDb (URL_TO_INSERT_RECORD-NAME_1396 https://fairsharing.org/FAIRsharing.5ry74y)  offers three different interfaces:
 * Java API
 * R package
 * REST Web-services
@@ -95,28 +95,28 @@ The table below lists the software that is used to execute the examples in this 
 
 > 📖 In the context of this recipe, we distinguish between two types of identifiers:
 >* *Local identifiers* which refer to identifiers that are minted within an organization or database and thus internally defined (i.e. local to said organization). 
->* *Global identifiers* which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb (URL_TO_INSERT_RECORD-NAME_1374 https://fairsharing.org/FAIRsharing.5ry74y) 's [data sources file](https://github.com/bridgedb/datasources)
+>* *Global identifiers* which refer to identifiers that are globally unique and uniquely point to an entity, as available from BridgeDb (URL_TO_INSERT_RECORD-NAME_1397 https://fairsharing.org/FAIRsharing.5ry74y) 's [data sources file](https://github.com/bridgedb/datasources)
 
 We will focus here on two distinct cases, depending on the nature of the incoming data. Namely, whether our data is already using global identifiers or only relies on local identifiers. 
 
-In this recipe, we will cover how BridgeDb (URL_TO_INSERT_RECORD-NAME_1375 https://fairsharing.org/FAIRsharing.5ry74y) 's R package and webservices can be used to map (URL_TO_INSERT_RECORD-NAME_1376 https://fairsharing.org/FAIRsharing.53edcc)  between resource identifiers.
+In this recipe, we will cover how BridgeDb (URL_TO_INSERT_RECORD-NAME_1398 https://fairsharing.org/FAIRsharing.5ry74y) 's R package and webservices can be used to map (URL_TO_INSERT_RECORD-NAME_1399 https://fairsharing.org/FAIRsharing.53edcc)  between resource identifiers.
 
 ### Mapping a global identifier to other global identifiers
-In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/datasources). In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV (URL_TO_INSERT_RECORD-ABBREV_1377 https://fairsharing.org/FAIRsharing.a978c9)  file. The objective is to map (URL_TO_INSERT_RECORD-NAME_1378 https://fairsharing.org/FAIRsharing.53edcc)  these to other available gene identifiers.
+In this case, the input data is a list of elements with an identifier that is part of [BridgeDb's data sources](https://github.com/bridgedb/datasources). In our example, we will use a list of Homo Sapien Hugo Gene Nomenclature Convention ([HGNC](http://www.genenames.org)) gene identifiers stored in a TSV (URL_TO_INSERT_RECORD-ABBREV_1401 https://fairsharing.org/FAIRsharing.a978c9)  file. The objective is to map (URL_TO_INSERT_RECORD-NAME_1400 https://fairsharing.org/FAIRsharing.53edcc)  these to other available gene identifiers.
 
 #### BridgeDb via Webservices using Python
-> ❗ For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3, and BridgeDb (URL_TO_INSERT_RECORD-NAME_1379 https://fairsharing.org/FAIRsharing.5ry74y)  Webservices v0.9.0 were used.
+> ❗ For this tutorial Python v3.8.5, [pandas](https://pandas.pydata.org/) v1.1.3, and BridgeDb (URL_TO_INSERT_RECORD-NAME_1402 https://fairsharing.org/FAIRsharing.5ry74y)  Webservices v0.9.0 were used.
 
-One of the biggest benefits of using BridgeDb (URL_TO_INSERT_RECORD-NAME_1380 https://fairsharing.org/FAIRsharing.5ry74y)  webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb (URL_TO_INSERT_RECORD-NAME_1381 https://fairsharing.org/FAIRsharing.5ry74y)  Python library, we show here how to use the BridgeDb (URL_TO_INSERT_RECORD-NAME_1382 https://fairsharing.org/FAIRsharing.5ry74y)  Webservices to perform exemplary mappings.
+One of the biggest benefits of using BridgeDb (URL_TO_INSERT_RECORD-NAME_1403 https://fairsharing.org/FAIRsharing.5ry74y)  webservices is that these can be accessed using most programming languages. Python has become one of the leading programming languages in data science and predictive modelling. Despite the lack of a dedicated BridgeDb (URL_TO_INSERT_RECORD-NAME_1404 https://fairsharing.org/FAIRsharing.5ry74y)  Python library, we show here how to use the BridgeDb (URL_TO_INSERT_RECORD-NAME_1405 https://fairsharing.org/FAIRsharing.5ry74y)  Webservices to perform exemplary mappings.
 
-We start by defining strings containing the URL (URL_TO_INSERT_RECORD-ABBREV_1384 https://fairsharing.org/FAIRsharing.9d38e2)  of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map (URL_TO_INSERT_RECORD-NAME_1385 https://fairsharing.org/FAIRsharing.53edcc)  to a specific data source, e.g. Ensembl (URL_TO_INSERT_RECORD-NAME_1383 https://fairsharing.org/FAIRsharing.fx0mw7) .
+We start by defining strings containing the URL (URL_TO_INSERT_RECORD-ABBREV_1408 https://fairsharing.org/FAIRsharing.9d38e2)  of the webservices and the specific method from the Webservices we want to use. In our case, a `batch cross reference`. When doing the query, we need to specify **the organism** and **the source dataset**. We can also *optionally* specify a *target data source* if we only want to map (URL_TO_INSERT_RECORD-NAME_1406 https://fairsharing.org/FAIRsharing.53edcc)  to a specific data source, e.g. Ensembl (URL_TO_INSERT_RECORD-NAME_1407 https://fairsharing.org/FAIRsharing.fx0mw7) .
 
 ```python
 url = "https://webservice.bridgedb.org/"
 batch_request = url+"{org}/xrefsBatch/{source}{}"
 ```
 
-If the aim is to map (URL_TO_INSERT_RECORD-NAME_1386 https://fairsharing.org/FAIRsharing.53edcc)  only to a specific target data source, then one can check whether the mapping is supported by invoking the following webservice call:  
+If the aim is to map (URL_TO_INSERT_RECORD-NAME_1409 https://fairsharing.org/FAIRsharing.53edcc)  only to a specific target data source, then one can check whether the mapping is supported by invoking the following webservice call:  
 
 ```python
 mapping_available = "{org}/isMappingSupported/{source}/{target}"
@@ -145,26 +145,26 @@ In our case the output of `to_df` is:
 
 | original   | source   | mapping         | target   |
 |:-----------|:---------|:----------------|:---------|
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1387 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1388 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000121410 | En       |
-| A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1389 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1390 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000148584 | En       |
-| A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1391 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1392 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000256069 | En       |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1410 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1411 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000121410 | En       |
+| A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1412 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1413 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000148584 | En       |
+| A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1414 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1415 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000256069 | En       |
 
-If we were to not specify the target data source (by passing an empty string (URL_TO_INSERT_RECORD-NAME_1393 https://fairsharing.org/FAIRsharing.9b7wvk)  as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
+If we were to not specify the target data source (by passing an empty string (URL_TO_INSERT_RECORD-NAME_1416 https://fairsharing.org/FAIRsharing.9b7wvk)  as the parameter), we would get all the potential mappings for the given identifiers. In our case (top 10 rows):
 
 | original   | source   | mapping      | target   |
 |:-----------|:---------|:-------------|:---------|
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1394 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1395 https://fairsharing.org/FAIRsharing.29we0s)      | uc002qsd.5   | Uc       |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1396 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1397 https://fairsharing.org/FAIRsharing.29we0s)      | 8039748      | X        |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1399 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1400 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1398 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   | T        |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1401 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1402 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drj.1   | Uc       |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1403 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1404 https://fairsharing.org/FAIRsharing.29we0s)      | ILMN_2055271 | Il       |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1405 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1406 https://fairsharing.org/FAIRsharing.29we0s)      | Hs.529161    | U        |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1408 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1409 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1407 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   | T        |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1411 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1412 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1410 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   | T        |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1413 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1414 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drt.1   | Uc       |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1415 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1416 https://fairsharing.org/FAIRsharing.29we0s)      | 51020_at     | X        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1417 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1418 https://fairsharing.org/FAIRsharing.29we0s)      | uc002qsd.5   | Uc       |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1419 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1420 https://fairsharing.org/FAIRsharing.29we0s)      | 8039748      | X        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1422 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1423 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1421 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   | T        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1424 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1425 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drj.1   | Uc       |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1426 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1427 https://fairsharing.org/FAIRsharing.29we0s)      | ILMN_2055271 | Il       |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1428 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1429 https://fairsharing.org/FAIRsharing.29we0s)      | Hs.529161    | U        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1431 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1432 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1430 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   | T        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1434 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1435 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1433 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   | T        |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1436 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1437 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drt.1   | Uc       |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1438 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1439 https://fairsharing.org/FAIRsharing.29we0s)      | 51020_at     | X        |
 
-As one can see, using the BridgeDb (URL_TO_INSERT_RECORD-NAME_1417 https://fairsharing.org/FAIRsharing.5ry74y)  webservice via Python is extremely simple and can be easily integrated in an annotation pipeline.
+As one can see, using the BridgeDb (URL_TO_INSERT_RECORD-NAME_1440 https://fairsharing.org/FAIRsharing.5ry74y)  webservice via Python is extremely simple and can be easily integrated in an annotation pipeline.
 
 
 #### BridgeDb via the dedicated R package
@@ -187,7 +187,7 @@ We then load the data for the organism we are mapping from.
  mapper <- loadDatabase(location)
 ```
 
-And use the library's     dedicated function to map (URL_TO_INSERT_RECORD-NAME_1418 https://fairsharing.org/FAIRsharing.53edcc)  the identifiers:
+And use the library's     dedicated function to map (URL_TO_INSERT_RECORD-NAME_1441 https://fairsharing.org/FAIRsharing.53edcc)  the identifiers:
 
 ```r
 mapping = maps(mapper, data_df, target='En')
@@ -204,12 +204,12 @@ As seen earlier when using Python language, we can obtain all possible mappings 
 |:---------- |:------ |:------ |:------------ |
 | A1BG       | H      | Uc     | uc002qsd.5   |
 | A1BG       | H      | X      | 8039748      |
-| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1419 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   |
+| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1442 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   |
 | A1BG       | H      | Uc     | uc061drj.1   |
 | A1BG       | H      | Il     | ILMN_2055271 |
 | A1BG       | H      | U      | Hs.529161    |
-| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1420 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   |
-| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1421 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   |
+| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1443 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   |
+| A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1444 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   |
 | A1BG       | H      | Uc     | uc061drt.1   |
 | A1BG       | H      | X      | 51020_at     |
 
@@ -235,7 +235,7 @@ This is a step that should be done manually. In this case an important decision 
  In this section, we assume that we already have an equivalence file containing the mapping of a local identifier to one of the global identifiers. In our case, this will be contained in a TSV where we map our local gene identifier to [HGNC](http://www.genenames.org). One may consult the list of other potential data formats in the {ref}`fcb-identifier-mapping` recipe. The mapping should be **one-to-one** for this recipe. 
 ```
 
-The TSV (URL_TO_INSERT_RECORD-ABBREV_1422 https://fairsharing.org/FAIRsharing.a978c9)  mapping file looks as follows:
+The TSV (URL_TO_INSERT_RECORD-ABBREV_1445 https://fairsharing.org/FAIRsharing.a978c9)  mapping file looks as follows:
 | local   | source   |
 |:--------|:---------|
 | aa11    | A1BG     |
@@ -260,7 +260,7 @@ Overview of BridgeDb tools
 
 #### Webservices in Python
 
-As before, we will define variables including the `web-service's URL (URL_TO_INSERT_RECORD-ABBREV_1423 https://fairsharing.org/FAIRsharing.9d38e2) ` and the `method` that we will use, in this instance: `xRefsBatch`.
+As before, we will define variables including the `web-service's URL (URL_TO_INSERT_RECORD-ABBREV_1446 https://fairsharing.org/FAIRsharing.9d38e2) ` and the `method` that we will use, in this instance: `xRefsBatch`.
 We then pass the source column to the `post request` as follows
 
 ```python
@@ -277,26 +277,26 @@ local_mapping = mappings.join(case2.set_index('source'), on='original')
 which will return the following table (first 10 rows)
 | original   | source   | mapping      | target   | local   |
 |:-----------|:---------|:-------------|:---------|:--------|
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1424 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1425 https://fairsharing.org/FAIRsharing.29we0s)      | uc002qsd.5   | Uc       | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1426 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1427 https://fairsharing.org/FAIRsharing.29we0s)      | 8039748      | X        | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1429 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1430 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1428 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   | T        | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1431 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1432 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drj.1   | Uc       | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1433 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1434 https://fairsharing.org/FAIRsharing.29we0s)      | ILMN_2055271 | Il       | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1435 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1436 https://fairsharing.org/FAIRsharing.29we0s)      | Hs.529161    | U        | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1438 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1439 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1437 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   | T        | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1441 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1442 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1440 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   | T        | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1443 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1444 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drt.1   | Uc       | aa11    |
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1445 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1446 https://fairsharing.org/FAIRsharing.29we0s)      | 51020_at     | X        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1447 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1448 https://fairsharing.org/FAIRsharing.29we0s)      | uc002qsd.5   | Uc       | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1449 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1450 https://fairsharing.org/FAIRsharing.29we0s)      | 8039748      | X        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1452 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1453 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1451 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   | T        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1454 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1455 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drj.1   | Uc       | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1456 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1457 https://fairsharing.org/FAIRsharing.29we0s)      | ILMN_2055271 | Il       | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1458 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1459 https://fairsharing.org/FAIRsharing.29we0s)      | Hs.529161    | U        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1461 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1462 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1460 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   | T        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1464 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1465 https://fairsharing.org/FAIRsharing.29we0s)      | GO (URL_TO_INSERT_RECORD-ABBREV_1463 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   | T        | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1466 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1467 https://fairsharing.org/FAIRsharing.29we0s)      | uc061drt.1   | Uc       | aa11    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1468 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1469 https://fairsharing.org/FAIRsharing.29we0s)      | 51020_at     | X        | aa11    |
 
-In case we did specify the `target` argument to be `Ensembl (URL_TO_INSERT_RECORD-NAME_1447 https://fairsharing.org/FAIRsharing.fx0mw7)  (En)`, we would instead get
+In case we did specify the `target` argument to be `Ensembl (URL_TO_INSERT_RECORD-NAME_1470 https://fairsharing.org/FAIRsharing.fx0mw7)  (En)`, we would instead get
 
 | original   | source   | mapping         | target   | local   |
 |:-----------|:---------|:----------------|:---------|:--------|
-| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1448 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1449 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000121410 | En       | aa11    |
-| A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1450 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1451 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000148584 | En       | bb34    |
-| A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1452 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1453 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000256069 | En       | eg93    |
+| A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1471 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1472 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000121410 | En       | aa11    |
+| A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1473 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1474 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000148584 | En       | bb34    |
+| A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1475 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1476 https://fairsharing.org/FAIRsharing.29we0s)      | ENSG00000256069 | En       | eg93    |
 
-Here, we see a `one-to-one` relation between the identifiers in HGNC (URL_TO_INSERT_RECORD-ABBREV_1455 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1457 https://fairsharing.org/FAIRsharing.29we0s)  and En while the relation between HGNC (URL_TO_INSERT_RECORD-ABBREV_1456 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1458 https://fairsharing.org/FAIRsharing.29we0s)  and UCSC Genome Browser (Uc) or Gene Ontology (URL_TO_INSERT_RECORD-NAME_1454 https://fairsharing.org/FAIRsharing.6xq0ee)  (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
+Here, we see a `one-to-one` relation between the identifiers in HGNC (URL_TO_INSERT_RECORD-ABBREV_1478 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1480 https://fairsharing.org/FAIRsharing.29we0s)  and En while the relation between HGNC (URL_TO_INSERT_RECORD-ABBREV_1479 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1481 https://fairsharing.org/FAIRsharing.29we0s)  and UCSC Genome Browser (Uc) or Gene Ontology (URL_TO_INSERT_RECORD-NAME_1477 https://fairsharing.org/FAIRsharing.6xq0ee)  (T) is `one-to-many`. Depending on the identifiers and resources, the relation could also be `many-to-many` as shown below.
 
 
 ````{dropdown} 
@@ -331,12 +331,12 @@ Assuming we did not specify the target data source we obtain the following table
 |:----- |:--------   |:------ |:------ |:------------ |
 | aa11  | A1BG       | H      | Uc     | uc002qsd.5   |
 | aa11  | A1BG       | H      | X      | 8039748      |
-| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1459 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   |
+| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1482 https://fairsharing.org/FAIRsharing.6xq0ee) :0072562   |
 | aa11  | A1BG       | H      | Uc     | uc061drj.1   |
 | aa11  | A1BG       | H      | Il     | ILMN_2055271 |
 | aa11  | A1BG       | H      | U      | Hs.529161    |
-| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1460 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   |
-| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1461 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   |
+| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1483 https://fairsharing.org/FAIRsharing.6xq0ee) :0070062   |
+| aa11  | A1BG       | H      | T      | GO (URL_TO_INSERT_RECORD-ABBREV_1484 https://fairsharing.org/FAIRsharing.6xq0ee) :0002576   |
 | aa11  | A1BG       | H      | Uc     | uc061drt.1   |
 | aa11  | A1BG       | H      | X      | 51020_at     |
 
@@ -344,14 +344,14 @@ In case we did specify the target data source we would get:
 
 | local | identifier | source | target | mapping         |
 |:----- |:---------- |:------ |:------ |:--------------- |
-| aa11  | A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1462 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1463 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000121410 |
-| bb34  | A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1464 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1465 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000148584 |
-| eg93  | A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1466 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1467 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000256069 |
+| aa11  | A1BG       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1485 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1486 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000121410 |
+| bb34  | A1CF       | HGNC (URL_TO_INSERT_RECORD-ABBREV_1487 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1488 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000148584 |
+| eg93  | A2MP1      | HGNC (URL_TO_INSERT_RECORD-ABBREV_1489 https://fairsharing.org/FAIRsharing.amcv1e)  (URL_TO_INSERT_RECORD-ABBREV_1490 https://fairsharing.org/FAIRsharing.29we0s)    | En     | ENSG00000256069 |
 
 ---
 ## Provenance
 
-BridgeDb (URL_TO_INSERT_RECORD-NAME_1468 https://fairsharing.org/FAIRsharing.5ry74y)  provides provenance information through:
+BridgeDb (URL_TO_INSERT_RECORD-NAME_1491 https://fairsharing.org/FAIRsharing.5ry74y)  provides provenance information through:
 * A call to `/properties/` method of the Webservice
 * `getProperties()` in BridgeDbR (passing the mapper as a parameter)
 
@@ -368,14 +368,14 @@ Improvements on provenance are under way (see [here](https://github.com/bridgedb
 ---
 
 ## Code 
-You can find ready-made methods to map (URL_TO_INSERT_RECORD-NAME_1469 https://fairsharing.org/FAIRsharing.53edcc)  using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data). These assume the data has the structure described in this recipe.
+You can find ready-made methods to map (URL_TO_INSERT_RECORD-NAME_1492 https://fairsharing.org/FAIRsharing.53edcc)  using R and Python for the given use cases [here](https://github.com/FAIRplus/the-fair-cookbook/tree/9ad9481be32812b2565f9f9f1897642ae26eddff/content/recipes/interoperability/bridgedb/data). These assume the data has the structure described in this recipe.
 
 ---
 
 ## Conclusion
 
-We showed how to use BridgeDb (URL_TO_INSERT_RECORD-NAME_1470 https://fairsharing.org/FAIRsharing.5ry74y) 's webservices and R package to map (URL_TO_INSERT_RECORD-NAME_1471 https://fairsharing.org/FAIRsharing.53edcc)  identifiers from different data sources using a minimal dataset. 
-BridgeDb (URL_TO_INSERT_RECORD-NAME_1472 https://fairsharing.org/FAIRsharing.5ry74y)  provides handy functionality to make 'omics' data more interoperable and reusable.
+We showed how to use BridgeDb (URL_TO_INSERT_RECORD-NAME_1493 https://fairsharing.org/FAIRsharing.5ry74y) 's webservices and R package to map (URL_TO_INSERT_RECORD-NAME_1494 https://fairsharing.org/FAIRsharing.53edcc)  identifiers from different data sources using a minimal dataset. 
+BridgeDb (URL_TO_INSERT_RECORD-NAME_1495 https://fairsharing.org/FAIRsharing.5ry74y)  provides handy functionality to make 'omics' data more interoperable and reusable.
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
 These are aspects of information provenance which we plan to provide in the future.
  

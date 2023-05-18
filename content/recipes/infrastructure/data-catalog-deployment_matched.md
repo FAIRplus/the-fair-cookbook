@@ -59,7 +59,7 @@ Unless otherwise specified, all the following commands should be run in a termin
 
 **(local)** and **(web container)** indicate context of execution.
 
-* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_786 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
+* First, generate the certificates that will be used to enable HTTPS (URL_TO_INSERT_RECORD-ABBREV_810 https://fairsharing.org/FAIRsharing.cd2f9e)  in reverse proxy. To do so, execute:
 
 ```bash
 $ cd docker/nginx/
@@ -83,7 +83,7 @@ $ cd ../..
 $ cp datacatalog/settings.py.template datacatalog/settings.py
 ```
 
-* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_787 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
+* Edit the **settings.py** file to add a random string (URL_TO_INSERT_RECORD-NAME_811 https://fairsharing.org/FAIRsharing.9b7wvk)  of characters in **SECRET_KEY** attribute. For maximum security,
 in **Python**, use the following to generate this key:
 
 ```python

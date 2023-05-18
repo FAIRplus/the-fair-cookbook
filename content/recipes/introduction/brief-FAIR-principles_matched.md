@@ -33,10 +33,10 @@ Owing to the success of the principles, now endorsed by funding agencies (IMI, W
 ```{figure} https://i.imgur.com/RxkoNed.png
 ---
 height: 650px
-name: the FAIR (URL_TO_INSERT_RECORD-ABBREV_2216 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2215 https://fairsharing.org/FAIRsharing.WWI10U) 
-alt: the cover page for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2218 https://fairsharing.org/FAIRsharing.WWI10U)  principle article as published in Scientific Data (URL_TO_INSERT_RECORD-ABBREV_2217 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18
+name: the FAIR (URL_TO_INSERT_RECORD-ABBREV_2242 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_2241 https://fairsharing.org/FAIRsharing.WWI10U) 
+alt: the cover page for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2244 https://fairsharing.org/FAIRsharing.WWI10U)  principle article as published in Scientific Data (URL_TO_INSERT_RECORD-ABBREV_2243 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18
 ---
-_The FAIR (URL_TO_INSERT_RECORD-ABBREV_2221 https://fairsharing.org/FAIRsharing.WWI10U)  Principle (URL_TO_INSERT_RECORD-NAME_2220 https://fairsharing.org/FAIRsharing.WWI10U) s_ the cover pages for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2222 https://fairsharing.org/FAIRsharing.WWI10U)  principle articles as published in Scientific Data (URL_TO_INSERT_RECORD-ABBREV_2219 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18.
+_The FAIR (URL_TO_INSERT_RECORD-ABBREV_2247 https://fairsharing.org/FAIRsharing.WWI10U)  Principle (URL_TO_INSERT_RECORD-NAME_2246 https://fairsharing.org/FAIRsharing.WWI10U) s_ the cover pages for the FAIR (URL_TO_INSERT_RECORD-ABBREV_2248 https://fairsharing.org/FAIRsharing.WWI10U)  principle articles as published in Scientific Data (URL_TO_INSERT_RECORD-ABBREV_2245 https://fairsharing.org/FAIRsharing.w4k4nr) . https://doi.org/10.1038/sdata.2016.18.
 ```
 
 ````

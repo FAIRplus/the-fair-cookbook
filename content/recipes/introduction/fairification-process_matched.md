@@ -56,12 +56,12 @@ FAIRification framework
 
 ## The FAIRification Framework
 
-The FAIRplus FAIRification Framework was developed to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR (URL_TO_INSERT_RECORD-ABBREV_2269 https://fairsharing.org/FAIRsharing.WWI10U)  principles into actionable, "tried and tested" processes. The framework was developed in an iterative fashion by a multi-disciplinary team of research scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner projects.
+The FAIRplus FAIRification Framework was developed to address the significant demand for hands-on, practical advice on how to translate general and high-level FAIR (URL_TO_INSERT_RECORD-ABBREV_2295 https://fairsharing.org/FAIRsharing.WWI10U)  principles into actionable, "tried and tested" processes. The framework was developed in an iterative fashion by a multi-disciplinary team of research scientists, data managers and software engineers from both academia and the pharmaceutical industry, and tested on a range of IMI partner projects.
 
 The framework consists of 3 components:
 >* a reusable  FAIRification Process, which outlines the main phases of a FAIRification activity
->* a FAIRification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR (URL_TO_INSERT_RECORD-ABBREV_2270 https://fairsharing.org/FAIRsharing.WWI10U)  transformation
->* a FAIRification Workplan layout, which provides a structure for organising FAIR (URL_TO_INSERT_RECORD-ABBREV_2271 https://fairsharing.org/FAIRsharing.WWI10U)  implementation work tailored to the needs of a specific project.
+>* a FAIRification Template, which breaks down key elements of the process into a series of steps to follow when undertaking a FAIR (URL_TO_INSERT_RECORD-ABBREV_2296 https://fairsharing.org/FAIRsharing.WWI10U)  transformation
+>* a FAIRification Workplan layout, which provides a structure for organising FAIR (URL_TO_INSERT_RECORD-ABBREV_2297 https://fairsharing.org/FAIRsharing.WWI10U)  implementation work tailored to the needs of a specific project.
 
 
 ### The FAIRification Process
@@ -93,8 +93,8 @@ In the following sections, we will discuss in depth the work involved in the ind
 
 This phase involves the identification of outcomes and planning of goals that data or project owner would want to achieve
 upon FAIRification of the data. 
-These goals are either **centric to one aspect of FAIR (URL_TO_INSERT_RECORD-ABBREV_2272 https://fairsharing.org/FAIRsharing.WWI10U) **, for example *deposition of data to
-Zenodo (URL_TO_INSERT_RECORD-NAME_2273 https://fairsharing.org/FAIRsharing.wy4egf) * to increase its findability, or they could cover **multiple aspects of FAIR (URL_TO_INSERT_RECORD-ABBREV_2274 https://fairsharing.org/FAIRsharing.WWI10U) **, such as *use of consistent 
+These goals are either **centric to one aspect of FAIR (URL_TO_INSERT_RECORD-ABBREV_2298 https://fairsharing.org/FAIRsharing.WWI10U) **, for example *deposition of data to
+Zenodo (URL_TO_INSERT_RECORD-NAME_2300 https://fairsharing.org/FAIRsharing.wy4egf) * to increase its findability, or they could cover **multiple aspects of FAIR (URL_TO_INSERT_RECORD-ABBREV_2299 https://fairsharing.org/FAIRsharing.WWI10U) **, such as *use of consistent 
 terminologies and controlled vocabularies to represent the data (interoperability aspect) along with deposition of data
 in relevant repositories (findability aspect)*. 
 
@@ -123,11 +123,11 @@ Following the selection of the "action" team, an iterative cycle of assessment, 
 Prior to starting the work, the assessment of goals is done to ensure that individuals in the action team are updated and clear 
 with the FAIRification goals formulated by the data owners. This assessment is carried out by review team which could
 be an independent team or certain individuals from the technical team who are not involved in the action team. 
-The assessment involves a binary decision of "GO (URL_TO_INSERT_RECORD-ABBREV_2275 https://fairsharing.org/FAIRsharing.6xq0ee) " or "NO GO (URL_TO_INSERT_RECORD-ABBREV_2276 https://fairsharing.org/FAIRsharing.6xq0ee) " based on the FAIRification goals and the catalog provided.
+The assessment involves a binary decision of "GO (URL_TO_INSERT_RECORD-ABBREV_2301 https://fairsharing.org/FAIRsharing.6xq0ee) " or "NO GO (URL_TO_INSERT_RECORD-ABBREV_2302 https://fairsharing.org/FAIRsharing.6xq0ee) " based on the FAIRification goals and the catalog provided.
 At this stage, the reviews can also provide suggestion based on their experiences on the resources, tool, or goals.
 
 **Design :**
-Once the team receives a "GO (URL_TO_INSERT_RECORD-ABBREV_2277 https://fairsharing.org/FAIRsharing.6xq0ee) " decision from the review team, the action team now starts by enlisting the steps that 
+Once the team receives a "GO (URL_TO_INSERT_RECORD-ABBREV_2303 https://fairsharing.org/FAIRsharing.6xq0ee) " decision from the review team, the action team now starts by enlisting the steps that 
 need to be done performed to achieve the goal. For each task, the resources, an estimate time duration, 
 as well as the responsible person is selected. 
 
@@ -149,7 +149,7 @@ At this phase, the FAIRification work has been completed by the team. The techni
 together to assess the output of FAIRification. At this point, the technical team packages all the work done and hands
 it over to the data owners. Decisions on the key learning as well as future aspects of the work take place. 
 Finally, to ensure that the work done is sustainable, the deposition of workflows and the information on steps is 
-deposited on online catalogs and recipe books such as teh Cookbook, RDMKit, IMI Data Catalog (URL_TO_INSERT_RECORD-ABBREV_2278 https://fairsharing.org/FAIRsharing.de533c)  to name a few.
+deposited on online catalogs and recipe books such as teh Cookbook, RDMKit, IMI Data Catalog (URL_TO_INSERT_RECORD-ABBREV_2304 https://fairsharing.org/FAIRsharing.de533c)  to name a few.
 
 ### The FAIRification Template
 
@@ -194,7 +194,7 @@ FAIRification template
 >    with ontologies either pre-existing or formulate an application ontology for your use case.
 >
 >- **Step 6: Transform data for interoperability**: Not only would you represent the data in one ontology but also link
->    or map (URL_TO_INSERT_RECORD-NAME_2279 https://fairsharing.org/FAIRsharing.53edcc)  to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.
+>    or map (URL_TO_INSERT_RECORD-NAME_2305 https://fairsharing.org/FAIRsharing.53edcc)  to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.
 >
 >- **Step 7: Host your data**: Once the dataset is ready, hosting and search engine optimization inputs for the dataset
 >    need to be in place. Alongside hosting, data versioning and data formats need to also be considered.
@@ -213,7 +213,7 @@ goals set in phase 1 and requirements identified in phase 2 of the Process.
 Relevant elements from the FAIRification Template are selected and broken down into concrete tasks. 
 These tasks are then completed within the agreed cycle time frame as per the FAIRification Process.
 
-The diagram below shows the bespoke FAIRification Workplan for the CARE (URL_TO_INSERT_RECORD-ABBREV_2280 https://fairsharing.org/FAIRsharing.zgqy0v)  project. 
+The diagram below shows the bespoke FAIRification Workplan for the CARE (URL_TO_INSERT_RECORD-ABBREV_2306 https://fairsharing.org/FAIRsharing.zgqy0v)  project. 
 The  Workplan follows the general outline of the FAIRification Process, with the goals listed in section 1 (red),
 the outcomes of the project examination on section 2 (orange) and the pre-FAIRification assessment outcomes in section 3.
 It can also be beneficial to explicitly list the indicators targeted for improvement in this section in order to keep
@@ -259,17 +259,17 @@ it is worth highlighting a few important practical considerations:
 	* Defined scope: a good goal has a clearly defined scope or endpoint. Without this, work on an open-ended goal is likely going to carry on indefinitely with diminishing benefits.
 	* Scientific value: FAIRification work comes at a cost so a good FAIRification goal needs to explicitly state why the work will increase the data's scientific value. Investing a great deal of effort to FAIRify a single-use internal dataset that is not intended to ever be shared or reused would not constitute a prudent investment of resources. 
  
-* **Multi-disciplinary task teams**. FAIR (URL_TO_INSERT_RECORD-ABBREV_2281 https://fairsharing.org/FAIRsharing.WWI10U)  considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology maintenance to data management aspects such as the creation of data dictionaries to project-level governance issues like data licensing and reuse conditions. A successful FAIRification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research scientists and project managers, to name just a few. The exact composition of a task team depends on the nature of the FAIRification tasks and may change over the course of the FAIRification process, with different skills required in the goal setting and project examiniation phases than during task implementations.
+* **Multi-disciplinary task teams**. FAIR (URL_TO_INSERT_RECORD-ABBREV_2307 https://fairsharing.org/FAIRsharing.WWI10U)  considerations range across a range of skill levels, from highly technical work such as the practicals of data access control or ontology maintenance to data management aspects such as the creation of data dictionaries to project-level governance issues like data licensing and reuse conditions. A successful FAIRification process will therefore involve the assembly of a multi-discplinary task team of data managers, software developers, research scientists and project managers, to name just a few. The exact composition of a task team depends on the nature of the FAIRification tasks and may change over the course of the FAIRification process, with different skills required in the goal setting and project examiniation phases than during task implementations.
 
-* **Flexibility of the framework with regards to specific FAIR (URL_TO_INSERT_RECORD-ABBREV_2282 https://fairsharing.org/FAIRsharing.WWI10U)  approaches or implementations**. The FAIRification Framework described here is agnostic of any specific FAIR (URL_TO_INSERT_RECORD-ABBREV_2283 https://fairsharing.org/FAIRsharing.WWI10U)  implementation such as different FAIR (URL_TO_INSERT_RECORD-ABBREV_2284 https://fairsharing.org/FAIRsharing.WWI10U)  assessment methodologies. During the development of the framework, we trialed a range of methodologies including [RDA](https://www.rd-alliance.org/group/fair-data-maturity-model-wg/post/fair-data-maturity-model-indicators), [FAIRsFAIR](https://fairsfair.eu/fairsfair-data-object-assessment-metrics-request-comments) and [FAIR (URL_TO_INSERT_RECORD-ABBREV_2285 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity (DSM)](https://fairplus.github.io/Data-Maturity/) indicators to assess FAIRification as well as a range of tools to support the definition of FAIRification goals and their translation into a workplan.
+* **Flexibility of the framework with regards to specific FAIR (URL_TO_INSERT_RECORD-ABBREV_2308 https://fairsharing.org/FAIRsharing.WWI10U)  approaches or implementations**. The FAIRification Framework described here is agnostic of any specific FAIR (URL_TO_INSERT_RECORD-ABBREV_2309 https://fairsharing.org/FAIRsharing.WWI10U)  implementation such as different FAIR (URL_TO_INSERT_RECORD-ABBREV_2310 https://fairsharing.org/FAIRsharing.WWI10U)  assessment methodologies. During the development of the framework, we trialed a range of methodologies including [RDA](https://www.rd-alliance.org/group/fair-data-maturity-model-wg/post/fair-data-maturity-model-indicators), [FAIRsFAIR](https://fairsfair.eu/fairsfair-data-object-assessment-metrics-request-comments) and [FAIR (URL_TO_INSERT_RECORD-ABBREV_2311 https://fairsharing.org/FAIRsharing.WWI10U)  Dataset Maturity (DSM)](https://fairplus.github.io/Data-Maturity/) indicators to assess FAIRification as well as a range of tools to support the definition of FAIRification goals and their translation into a workplan.
 
 ---
 
 ## Conclusion
 The key take-homes of this recipe are:
 
-1. **Tailor the generic FAIRification process to individual needs**. There is no single right way to "do FAIR (URL_TO_INSERT_RECORD-ABBREV_2286 https://fairsharing.org/FAIRsharing.WWI10U) " and every project will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project's needs. 
-1. **Carefully define FAIRification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR (URL_TO_INSERT_RECORD-ABBREV_2287 https://fairsharing.org/FAIRsharing.WWI10U)  enough”** status.
+1. **Tailor the generic FAIRification process to individual needs**. There is no single right way to "do FAIR (URL_TO_INSERT_RECORD-ABBREV_2312 https://fairsharing.org/FAIRsharing.WWI10U) " and every project will have a distinct set of needs and requirements. Customising the relevant template elements allows the building of a coherent workplan that optimally supports a project's needs. 
+1. **Carefully define FAIRification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR (URL_TO_INSERT_RECORD-ABBREV_2313 https://fairsharing.org/FAIRsharing.WWI10U)  enough”** status.
 1. **Assemble a multi-disciplinary team**. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
 ### What to read next?

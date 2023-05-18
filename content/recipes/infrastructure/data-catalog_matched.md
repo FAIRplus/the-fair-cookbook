@@ -84,22 +84,22 @@ organized (but not always)' around specific **data types** or **data production 
 ### What are the standards supporting establishing a data catalogue?
 
 **Data Catalogues** have been identified as critical infrastructure and therefore a number of model exist to support their implementation.
-1. DATS (URL_TO_INSERT_RECORD-ABBREV_788 https://fairsharing.org/FAIRsharing.e20vsd) :
+1. DATS (URL_TO_INSERT_RECORD-ABBREV_812 https://fairsharing.org/FAIRsharing.e20vsd) :
 The Data Article Tag Suite model<!-- TODO add a link to corresponding document --> has been developed during the 
 NIH-BD2K projects and underpins the [datamed catalogue](https://datamed.org/), the aim of which was to produce a 
 prototype of a [**Pubmed for Datasets**](https://pubmed.ncbi.nlm.nih.gov/29346583/).
 
-2. DCAT (URL_TO_INSERT_RECORD-ABBREV_789 https://fairsharing.org/FAIRsharing.h4j3qm) :
+2. DCAT (URL_TO_INSERT_RECORD-ABBREV_813 https://fairsharing.org/FAIRsharing.h4j3qm) :
 In the world of semantic web technologies, The W3C DCAT specifications<!-- TODO add a link to corresponding document -->
-(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF (URL_TO_INSERT_RECORD-ABBREV_790 https://fairsharing.org/FAIRsharing.p77ph9) **.
-3. Schema.org (URL_TO_INSERT_RECORD-NAME_791 https://fairsharing.org/FAIRsharing.hzdzq8) :
+(v1 and the newly released version 2) provide a vocabulary to express **data catalogue metadata** in **RDF (URL_TO_INSERT_RECORD-ABBREV_814 https://fairsharing.org/FAIRsharing.p77ph9) **.
+3. Schema.org (URL_TO_INSERT_RECORD-NAME_815 https://fairsharing.org/FAIRsharing.hzdzq8) :
 The vocabulary developed by the consortium of search engines has defined a metadata profile for [**Dataset**](https://schema.org/Dataset),
 [**Data Catalogue**](https://schema.org/DataCatalog)
 
 
 ### How are Data Catalogue populated?
 
-A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON (URL_TO_INSERT_RECORD-ABBREV_792 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_793 https://fairsharing.org/FAIRsharing.8f9bbb)  files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
+A number data Indexes/Data Catalogue are populated by harvest Dataset metadata from primary Data Repositories or harvesting JSON (URL_TO_INSERT_RECORD-ABBREV_816 https://fairsharing.org/FAIRsharing.5bbab9) -LD (URL_TO_INSERT_RECORD-ABBREV_817 https://fairsharing.org/FAIRsharing.8f9bbb)  files served by these same pages for rapid, shallow indexing. The former method is often richer but requires more 
 
 ### What are examples of Data Catalogues?
 
@@ -129,7 +129,7 @@ We encourage the readers to either delve deeper into the specific of data catalo
 <!-- * TODO Deploying the FAIRPORT data catalogue {ref}` TODO fcb-infra-fairport-deploy` --> 
 <!-- * TODO Deploying the GA4GH Beacon endpoint {ref}` TODO fcb-infra-beacon-deploy`     -->
 
-For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR (URL_TO_INSERT_RECORD-ABBREV_794 https://fairsharing.org/FAIRsharing.WWI10U)  such
+For the readership interested in finding out about additional capabilities needed to enhance other aspects of FAIR (URL_TO_INSERT_RECORD-ABBREV_818 https://fairsharing.org/FAIRsharing.WWI10U)  such
 interoperability and reusability, see the following:
 
 * {ref}`fcb-find-seo`

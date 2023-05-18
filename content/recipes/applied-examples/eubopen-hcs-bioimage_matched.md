@@ -91,12 +91,12 @@ Transfer and conversion of data sets is typically a challenge because of the hig
 You might need to resort to high-speed transfer tooling to transfer data fast enough, such as 
 [Aspera](https://www.ibm.com/products/aspera), especially when in industrial settings.
 
-(Meta-)Data might be embedded into the file containing the image, e.g. in OME (URL_TO_INSERT_RECORD-ABBREV_139 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_140 https://fairsharing.org/FAIRsharing.cq8tg2)  format.
+(Meta-)Data might be embedded into the file containing the image, e.g. in OME (URL_TO_INSERT_RECORD-ABBREV_140 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_139 https://fairsharing.org/FAIRsharing.cq8tg2)  format.
 
-This might include "identifiers", e.g. a URN in OME (URL_TO_INSERT_RECORD-ABBREV_141 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_142 https://fairsharing.org/FAIRsharing.cq8tg2) , but also further information, 
+This might include "identifiers", e.g. a URN in OME (URL_TO_INSERT_RECORD-ABBREV_142 https://fairsharing.org/3502) -TIFF (URL_TO_INSERT_RECORD-ABBREV_141 https://fairsharing.org/FAIRsharing.cq8tg2) , but also further information, 
 e.g. about the employed excitation/emission filters during the imaging.
 
-In some formats, e.g. OME (URL_TO_INSERT_RECORD-ABBREV_143 https://fairsharing.org/3502) -XM (URL_TO_INSERT_RECORD-ABBREV_144 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_145 https://fairsharing.org/FAIRsharing.zk8p4g) , this information is held in separate files, linking to other files through their identifiers.
+In some formats, e.g. OME (URL_TO_INSERT_RECORD-ABBREV_145 https://fairsharing.org/3502) -XM (URL_TO_INSERT_RECORD-ABBREV_143 https://fairsharing.org/FAIRsharing.b5cc91) L (URL_TO_INSERT_RECORD-ABBREV_144 https://fairsharing.org/FAIRsharing.zk8p4g) , this information is held in separate files, linking to other files through their identifiers.
 
 Strict definitions of "data" and "metadata" did not reach community-consensus in the field yet, and can be generally 
 assumed missing.

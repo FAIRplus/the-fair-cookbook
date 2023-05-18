@@ -16,7 +16,7 @@
 ```` 
 
 ## Main objective
-This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL (URL_TO_INSERT_RECORD-NAME_1340 https://fairsharing.org/FAIRsharing.m3jtpg)  submission criteria, focusing on data formats, structures, and vocabularies. 
+This recipe shows how to prepare `bioactivity data`, defined as the measurable effects of a chemical compound in a biological system monitored with a specific assay, to meet the ChEMBL (URL_TO_INSERT_RECORD-NAME_1363 https://fairsharing.org/FAIRsharing.m3jtpg)  submission criteria, focusing on data formats, structures, and vocabularies. 
 This recipe is meant to address the Findability and Interoperability of such type of data.
 
 ## Graphical overview of the Recipe FAIRification Objectives
@@ -38,9 +38,9 @@ Bioactivity data, as stored in public archives such as the European repository [
 
 Early-stage bioactivity dataset includes compound molecular structure, molecular production details, assay data and, pharmacokinetic study information.
 
-The FAIR (URL_TO_INSERT_RECORD-ABBREV_1342 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_1341 https://fairsharing.org/FAIRsharing.WWI10U)  for data management can guide the improvements of pharmacokinetic properties of compounds and the identification of drug targets by enhancing the reporting of `bioactivity data`.
+The FAIR (URL_TO_INSERT_RECORD-ABBREV_1365 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_1364 https://fairsharing.org/FAIRsharing.WWI10U)  for data management can guide the improvements of pharmacokinetic properties of compounds and the identification of drug targets by enhancing the reporting of `bioactivity data`.
 
-Among the FAIR (URL_TO_INSERT_RECORD-ABBREV_1344 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_1343 https://fairsharing.org/FAIRsharing.WWI10U) , the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standards`  (R1.3. (meta)data meet domain-relevant community standards) are essential.
+Among the FAIR (URL_TO_INSERT_RECORD-ABBREV_1367 https://fairsharing.org/FAIRsharing.WWI10U)  principles (URL_TO_INSERT_RECORD-NAME_1366 https://fairsharing.org/FAIRsharing.WWI10U) , the `use of  rich metadata` (F2. data are described with rich metadata and R1. meta(data) are richly described with a plurality of accurate and relevant attributes) and the reliance on `community standards`  (R1.3. (meta)data meet domain-relevant community standards) are essential.
 
 In the context of `bioactivity data`, we have on the one hand the [Minimum information about a bioactive entity (MIABE)](https://www.nature.com/articles/nrd3503) checklist recommend attributes, formats and vocabularies for the reuse of such datasets. 
 
@@ -59,18 +59,18 @@ On the other hand, public bioactivity data archives, such as [ChEMBL](https://ww
    </td>
   </tr>
   <tr>
-   <td>Chemistr (URL_TO_INSERT_RECORD-NAME_1345 https://fairsharing.org/3524) y (SDF (URL_TO_INSERT_RECORD-ABBREV_1346 https://fairsharing.org/FAIRsharing.ew26v7) )
+   <td>Chemistr (URL_TO_INSERT_RECORD-NAME_1368 https://fairsharing.org/3524) y (SDF (URL_TO_INSERT_RECORD-ABBREV_1369 https://fairsharing.org/FAIRsharing.ew26v7) )
    </td>
    <td>Structure ID
    </td>
    <td>
 <ul>
 
-<li>SD (URL_TO_INSERT_RECORD-ABBREV_1347 https://fairsharing.org/FAIRsharing.ew26v7) F
+<li>SD (URL_TO_INSERT_RECORD-ABBREV_1370 https://fairsharing.org/FAIRsharing.ew26v7) F
 
 <li>SMILE
 
-<li>InCh (URL_TO_INSERT_RECORD-ABBREV_1348 https://fairsharing.org/FAIRsharing.ddk9t9) I
+<li>InCh (URL_TO_INSERT_RECORD-ABBREV_1371 https://fairsharing.org/FAIRsharing.ddk9t9) I
 
 <li>CID
 </li>
@@ -80,7 +80,7 @@ On the other hand, public bioactivity data archives, such as [ChEMBL](https://ww
   <tr>
    <td>Target 
    </td>
-   <td>Protei (URL_TO_INSERT_RECORD-ABBREV_1349 https://fairsharing.org/FAIRsharing.rtndct) n/GENE ID
+   <td>Protei (URL_TO_INSERT_RECORD-ABBREV_1372 https://fairsharing.org/FAIRsharing.rtndct) n/GENE ID
    </td>
    <td>PN_ or SwissProt ID
    </td>
@@ -136,7 +136,7 @@ A **minimum metadata set** represents a collection of metadata items that should
 
 ![](https://i.imgur.com/aU2KYV1.png)
 
-For ChEMBL (URL_TO_INSERT_RECORD-NAME_1351 https://fairsharing.org/FAIRsharing.m3jtpg)  submission, molecular structures and assay description as depicted in the scheme above are suggested as essential metadata. This is a subset of the following [schema](https://www.ebi.ac.uk/chembl/db_schema). In case mutated cell lines and/or mutated target proteins have been used in the assay, additional desirable metadata should be added in the proper group. MIABE (URL_TO_INSERT_RECORD-ABBREV_1350 https://fairsharing.org/FAIRsharing.dt7hn8)  also lists detailed bioassay description requirements.
+For ChEMBL (URL_TO_INSERT_RECORD-NAME_1374 https://fairsharing.org/FAIRsharing.m3jtpg)  submission, molecular structures and assay description as depicted in the scheme above are suggested as essential metadata. This is a subset of the following [schema](https://www.ebi.ac.uk/chembl/db_schema). In case mutated cell lines and/or mutated target proteins have been used in the assay, additional desirable metadata should be added in the proper group. MIABE (URL_TO_INSERT_RECORD-ABBREV_1373 https://fairsharing.org/FAIRsharing.dt7hn8)  also lists detailed bioassay description requirements.
 
 Besides metadata, the diagram below also shows how to prepare numeric assay data.
 
@@ -152,22 +152,22 @@ Besides metadata, the diagram below also shows how to prepare numeric assay data
 
 ### Data vocabularies
 
-[A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL (URL_TO_INSERT_RECORD-NAME_1352 https://fairsharing.org/FAIRsharing.m3jtpg)  formatting.  
+[A set of well-established standards and **minimum metadata checklists**](https://chembl.gitbook.io/chembl-loader/untitled-10) exist for various aspects of ChEMBL (URL_TO_INSERT_RECORD-NAME_1375 https://fairsharing.org/FAIRsharing.m3jtpg)  formatting.  
 
-* **Chemical information ontology (URL_TO_INSERT_RECORD-NAME_1353 https://fairsharing.org/FAIRsharing.sjhvyy)  (CHEMINF (URL_TO_INSERT_RECORD-ABBREV_1354 https://fairsharing.org/FAIRsharing.sjhvyy) )** [http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) 
+* **Chemical information ontology (URL_TO_INSERT_RECORD-NAME_1376 https://fairsharing.org/FAIRsharing.sjhvyy)  (CHEMINF (URL_TO_INSERT_RECORD-ABBREV_1377 https://fairsharing.org/FAIRsharing.sjhvyy) )** [http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) 
 
-    CHEMINF (URL_TO_INSERT_RECORD-ABBREV_1355 https://fairsharing.org/FAIRsharing.sjhvyy)  covers information about chemical entities and defines descriptors commonly used in cheminformatics software applications and to denote algorithms used to generate those chemicals.
+    CHEMINF (URL_TO_INSERT_RECORD-ABBREV_1378 https://fairsharing.org/FAIRsharing.sjhvyy)  covers information about chemical entities and defines descriptors commonly used in cheminformatics software applications and to denote algorithms used to generate those chemicals.
 
-* **BioAssay Ontology (URL_TO_INSERT_RECORD-NAME_1356 https://fairsharing.org/FAIRsharing.mye76w) **( (URL_TO_INSERT_RECORD-ABBREV_1357 https://fairsharing.org/FAIRsharing.mye76w) BAO (URL_TO_INSERT_RECORD-ABBREV_1358 https://fairsharing.org/FAIRsharing.mye76w) )
+* **BioAssay Ontology (URL_TO_INSERT_RECORD-NAME_1379 https://fairsharing.org/FAIRsharing.mye76w) **( (URL_TO_INSERT_RECORD-ABBREV_1380 https://fairsharing.org/FAIRsharing.mye76w) BAO (URL_TO_INSERT_RECORD-ABBREV_1381 https://fairsharing.org/FAIRsharing.mye76w) )
 
     [http://www.bioassayontology.org/bao/bao_complete.owl](http://www.bioassayontology.org/bao/bao_complete.owl) 
 
-    The BioAssay Ontology (URL_TO_INSERT_RECORD-NAME_1359 https://fairsharing.org/FAIRsharing.mye76w)  (BAO (URL_TO_INSERT_RECORD-ABBREV_1360 https://fairsharing.org/FAIRsharing.mye76w) ) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO (URL_TO_INSERT_RECORD-ABBREV_1361 https://fairsharing.org/FAIRsharing.mye76w)  is an extensible, knowledge-based, highly expressive description of biological assays {footcite}`pmid21702939` making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
+    The BioAssay Ontology (URL_TO_INSERT_RECORD-NAME_1382 https://fairsharing.org/FAIRsharing.mye76w)  (BAO (URL_TO_INSERT_RECORD-ABBREV_1383 https://fairsharing.org/FAIRsharing.mye76w) ) describes biological screening assays and their results, including high-throughput screening (HTS) data for the purpose of categorising assays and data analysis. BAO (URL_TO_INSERT_RECORD-ABBREV_1384 https://fairsharing.org/FAIRsharing.mye76w)  is an extensible, knowledge-based, highly expressive description of biological assays {footcite}`pmid21702939` making use of descriptive logic based features of the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl2-syntax/)
 
 * **Ontology of units of Measure (OM)**
  [http://www.ontology-of-units-of-measure.org/resource/om-2](http://www.ontology-of-units-of-measure.org/resource/om-2) 
  The OM ontology provides classes, instances, and properties that represent the different concepts used for defining and using measures and units.
- It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry (URL_TO_INSERT_RECORD-NAME_1362 https://fairsharing.org/3524)  and related information.
+ It includes, for instance, common units such as the SI units meter and kilogram, and a wide range of units of significance for the field of Chemistry (URL_TO_INSERT_RECORD-NAME_1385 https://fairsharing.org/3524)  and related information.
 It can be easily mapped to other resources such as [Unit Ontology](https://www.ebi.ac.uk/ols/ontologies/om), with tools such as [OXO](https://www.ebi.ac.uk/spot/oxo/)
 
 More information on annotating data with ontologies using tools like [Zooma](https://www.ebi.ac.uk/spot/zooma/), can be found in Section 7.7.3.3. of [this recipe](https://w3id.org/faircookbook/FCB023)
@@ -178,7 +178,7 @@ More information on annotating data with ontologies using tools like [Zooma](htt
 
 The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects-results/project-factsheets/care) dataset with compounds tested on the Caco-2 cell line. The dataset can be downloaded and, besides structural information, it will contain readout numbers for activity (e.g. either `percentage of cellular cytopathic inhibition at a given concentration` or corresponding extracted `dose-response IC50 `(Half-maximal inhibitory concentration)).
 
-> Recommendations above are based on ChEMBL (URL_TO_INSERT_RECORD-NAME_1363 https://fairsharing.org/FAIRsharing.m3jtpg)  ontology requirements. The US counterpart to ChEMBL (URL_TO_INSERT_RECORD-NAME_1364 https://fairsharing.org/FAIRsharing.m3jtpg) , the  PubChem (URL_TO_INSERT_RECORD-NAME_1365 https://fairsharing.org/FAIRsharing.qt3w7z)  data bank have different ontology requirements for upload but provide a wizard-based upload process described in [this blog](https://pubchemblog.ncbi.nlm.nih.gov/tag/pubchem-upload/)
+> Recommendations above are based on ChEMBL (URL_TO_INSERT_RECORD-NAME_1386 https://fairsharing.org/FAIRsharing.m3jtpg)  ontology requirements. The US counterpart to ChEMBL (URL_TO_INSERT_RECORD-NAME_1387 https://fairsharing.org/FAIRsharing.m3jtpg) , the  PubChem (URL_TO_INSERT_RECORD-NAME_1388 https://fairsharing.org/FAIRsharing.qt3w7z)  data bank have different ontology requirements for upload but provide a wizard-based upload process described in [this blog](https://pubchemblog.ncbi.nlm.nih.gov/tag/pubchem-upload/)
 
 ## Glossary
 |Term|Definition|

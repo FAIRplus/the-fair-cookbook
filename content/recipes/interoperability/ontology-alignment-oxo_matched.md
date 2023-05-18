@@ -25,11 +25,11 @@ Different ontology terms can describe the same concept, which makes it difficult
 `Ontology mapping`, or ontology alignment, is the process of determining correspondences between equivalent
 concepts in alternative ontologies and distinct vocabularies. 
 
-OxO (URL_TO_INSERT_RECORD-ABBREV_1682 https://fairsharing.org/FAIRsharing.0c6fea)  maps terms in different ontologies, vocabularies and coding standards using evidence collected mainly 
-from the Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1683 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD-ABBREV_1684 https://fairsharing.org/FAIRsharing.Mkl9RR) ), Unified Medical Language System (UMLS), but also from other sources. 
+OxO (URL_TO_INSERT_RECORD-ABBREV_1707 https://fairsharing.org/FAIRsharing.0c6fea)  maps terms in different ontologies, vocabularies and coding standards using evidence collected mainly 
+from the Ontology Lookup Service (URL_TO_INSERT_RECORD-NAME_1708 https://fairsharing.org/FAIRsharing.Mkl9RR)  (OLS (URL_TO_INSERT_RECORD-ABBREV_1709 https://fairsharing.org/FAIRsharing.Mkl9RR) ), Unified Medical Language System (UMLS), but also from other sources. 
 
 This recipe shows how to use the [EMBL-EBI Ontology Xref Service (OxO)](https://www.ebi.ac.uk/spot/oxo/) service
-to map (URL_TO_INSERT_RECORD-NAME_1685 https://fairsharing.org/FAIRsharing.53edcc)  ontology terms between source and target vocabularies {footcite}`oxo` .
+to map (URL_TO_INSERT_RECORD-NAME_1710 https://fairsharing.org/FAIRsharing.53edcc)  ontology terms between source and target vocabularies {footcite}`oxo` .
 
 ## Graphical Overview
 
@@ -77,18 +77,18 @@ An overview of the ontology alignment process
 
 ## Using EMBL-EBI OXO
 
-Ontology cross Ontology or OxO (URL_TO_INSERT_RECORD-ABBREV_1686 https://fairsharing.org/FAIRsharing.0c6fea)  service is available from a web interface or a programmatic interface. The following sections show both.
+Ontology cross Ontology or OxO (URL_TO_INSERT_RECORD-ABBREV_1711 https://fairsharing.org/FAIRsharing.0c6fea)  service is available from a web interface or a programmatic interface. The following sections show both.
 
 ### OXO Web Interface:
 
 #### Step 1: Identify source vocabulary and target vocabulary
 
-For pathology data annotation, vocabularies, such as [MeSH](https://meshb.nlm.nih.gov/search), [NCI thesaurus (URL_TO_INSERT_RECORD-NAME_1689 https://fairsharing.org/FAIRsharing.4cvwxa) ](https://www.ebi.ac.uk/ols/ontologies/ncit), [ICD-10](https://www.who.int/standards/classifications/classification-of-diseases), [UMLS](https://www.nlm.nih.gov/research/umls/index.html), [Human Disease Ontology (URL_TO_INSERT_RECORD-NAME_1690 https://fairsharing.org/FAIRsharing.8b6wfq) (DOI (URL_TO_INSERT_RECORD-ABBREV_1692 https://fairsharing.org/FAIRsharing.8b6wfq) D)](https://www.ebi.ac.uk/ols/ontologies/doid), and [MONDO (URL_TO_INSERT_RECORD-ABBREV_1687 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD-NAME_1691 https://fairsharing.org/FAIRsharing.8b6wfq) ](https://www.ebi.ac.uk/ols/ontologies/mondo), are widely used. In this example, we use **MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_1693 https://fairsharing.org/FAIRsharing.8b6wfq) ** as `source vocabularies` and **MONDO (URL_TO_INSERT_RECORD-ABBREV_1688 https://fairsharing.org/FAIRsharing.b2979t) ** as the `target vocabulary` to demonstrate the ontology mapping workflow. 
+For pathology data annotation, vocabularies, such as [MeSH](https://meshb.nlm.nih.gov/search), [NCI thesaurus (URL_TO_INSERT_RECORD-NAME_1714 https://fairsharing.org/FAIRsharing.4cvwxa) ](https://www.ebi.ac.uk/ols/ontologies/ncit), [ICD-10](https://www.who.int/standards/classifications/classification-of-diseases), [UMLS](https://www.nlm.nih.gov/research/umls/index.html), [Human Disease Ontology (URL_TO_INSERT_RECORD-NAME_1715 https://fairsharing.org/FAIRsharing.8b6wfq) (DOI (URL_TO_INSERT_RECORD-ABBREV_1717 https://fairsharing.org/FAIRsharing.8b6wfq) D)](https://www.ebi.ac.uk/ols/ontologies/doid), and [MONDO (URL_TO_INSERT_RECORD-ABBREV_1712 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD-NAME_1716 https://fairsharing.org/FAIRsharing.8b6wfq) ](https://www.ebi.ac.uk/ols/ontologies/mondo), are widely used. In this example, we use **MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_1718 https://fairsharing.org/FAIRsharing.8b6wfq) ** as `source vocabularies` and **MONDO (URL_TO_INSERT_RECORD-ABBREV_1713 https://fairsharing.org/FAIRsharing.b2979t) ** as the `target vocabulary` to demonstrate the ontology mapping workflow. 
 
 Obviously, a target vocabulary needs to be selected before mapping. A variety of factors can influence the selection of a terminology resource for a specific purpose or curation context. For more information about this topic, more detailed guidance on how to select vocabularies can be found [here](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/selecting-ontologies.html). 
 
 
-OxO (URL_TO_INSERT_RECORD-ABBREV_1696 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore the mapping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO (URL_TO_INSERT_RECORD-ABBREV_1694 https://fairsharing.org/FAIRsharing.b2979t)  are linked to terms in other ontologies. MONDO (URL_TO_INSERT_RECORD-ABBREV_1695 https://fairsharing.org/FAIRsharing.b2979t)  has over 16,000 mappings to terms in UMLS. It is also mapped to terms in DOID (URL_TO_INSERT_RECORD-ABBREV_1697 https://fairsharing.org/FAIRsharing.8b6wfq) , Ophanet, OMIM (URL_TO_INSERT_RECORD-ABBREV_1698 https://fairsharing.org/FAIRsharing.9qkaz9) , MeSH, etc.
+OxO (URL_TO_INSERT_RECORD-ABBREV_1722 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore the mapping status between the target vocabulary and other vocabularies. Figure 1 shows how terms in MONDO (URL_TO_INSERT_RECORD-ABBREV_1719 https://fairsharing.org/FAIRsharing.b2979t)  are linked to terms in other ontologies. MONDO (URL_TO_INSERT_RECORD-ABBREV_1720 https://fairsharing.org/FAIRsharing.b2979t)  has over 16,000 mappings to terms in UMLS. It is also mapped to terms in DOID (URL_TO_INSERT_RECORD-ABBREV_1721 https://fairsharing.org/FAIRsharing.8b6wfq) , Ophanet, OMIM (URL_TO_INSERT_RECORD-ABBREV_1723 https://fairsharing.org/FAIRsharing.9qkaz9) , MeSH, etc.
 
 
 ````{dropdown} 
@@ -105,17 +105,17 @@ OxO summary result overview.
 
 ### Step 2: Provide the source vocabulary term ID
 
-OxO (URL_TO_INSERT_RECORD-ABBREV_1699 https://fairsharing.org/FAIRsharing.0c6fea)  takes ontology term IDs as inputs for ontology mapping, which assumes the (meta)data has been annotated. If the data is not annotated, please check the ontology annotation recipe first. 
+OxO (URL_TO_INSERT_RECORD-ABBREV_1724 https://fairsharing.org/FAIRsharing.0c6fea)  takes ontology term IDs as inputs for ontology mapping, which assumes the (meta)data has been annotated. If the data is not annotated, please check the ontology annotation recipe first. 
 
 In this example, we use terms for ***type 2 diabetes*** from 2 distinct sources. The corresponding term IDs are listed in the table below.
 
-|Text|Corresponding term in MeSH| Corresponding term in DOID (URL_TO_INSERT_RECORD-ABBREV_1700 https://fairsharing.org/FAIRsharing.8b6wfq) |
+|Text|Corresponding term in MeSH| Corresponding term in DOID (URL_TO_INSERT_RECORD-ABBREV_1725 https://fairsharing.org/FAIRsharing.8b6wfq) |
 |--|--|--|
 |type 2 diabetes|[MeSH:D003924](https://www.ncbi.nlm.nih.gov/mesh/68003924)|[DOID:9352](https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FDOID_9352)
 
 ### Step 3: Perform mapping
 
-Figure 2 shows how to map (URL_TO_INSERT_RECORD-NAME_1704 https://fairsharing.org/FAIRsharing.53edcc)  the MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_1703 https://fairsharing.org/FAIRsharing.8b6wfq)  terms to the MONDO (URL_TO_INSERT_RECORD-ABBREV_1701 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD-NAME_1702 https://fairsharing.org/FAIRsharing.8b6wfq) . Users are expected to:
+Figure 2 shows how to map (URL_TO_INSERT_RECORD-NAME_1727 https://fairsharing.org/FAIRsharing.53edcc)  the MeSH and DOID (URL_TO_INSERT_RECORD-ABBREV_1729 https://fairsharing.org/FAIRsharing.8b6wfq)  terms to the MONDO (URL_TO_INSERT_RECORD-ABBREV_1726 https://fairsharing.org/FAIRsharing.b2979t)  disease ontology (URL_TO_INSERT_RECORD-NAME_1728 https://fairsharing.org/FAIRsharing.8b6wfq) . Users are expected to:
 - specify the target ontology
 - provide a list of source term IDs
 - indicate the expected mapping distance.
@@ -136,7 +136,7 @@ OxO mapping with direct user inputs
 ```
 ````
 
-Figure 3 shows the corresponding mapping results. Both terms have been mapped to 'MONDO (URL_TO_INSERT_RECORD-ABBREV_1705 https://fairsharing.org/FAIRsharing.b2979t) :0005148'. The results can be downloaded as flat-table(tsv) files.
+Figure 3 shows the corresponding mapping results. Both terms have been mapped to 'MONDO (URL_TO_INSERT_RECORD-ABBREV_1730 https://fairsharing.org/FAIRsharing.b2979t) :0005148'. The results can be downloaded as flat-table(tsv) files.
 
 
 ````{dropdown} 
@@ -153,7 +153,7 @@ OxO mapping results tabular view.
 
 ### Step 4: Review mapping results
 
-To ensure the quality of the mapping, users are recommended to review the mapping results, especially when the mapping distance increases. OxO (URL_TO_INSERT_RECORD-ABBREV_1706 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more information about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
+To ensure the quality of the mapping, users are recommended to review the mapping results, especially when the mapping distance increases. OxO (URL_TO_INSERT_RECORD-ABBREV_1731 https://fairsharing.org/FAIRsharing.0c6fea)  allows users to explore vocabulary term relationships (see figure 4) by providing a network view of all linked terms. Users can also find more information about each term in the [Ontology lookup service](https://www.ebi.ac.uk/ols/index).
 
 ````{dropdown} 
 :open:
@@ -169,7 +169,7 @@ OxO mapping results review - MONDO example.
 
 ## Using OxO service programmatically
 
-Besides the graphical user interface offered by OxO (URL_TO_INSERT_RECORD-ABBREV_1707 https://fairsharing.org/FAIRsharing.0c6fea)  at EMBL-EBI, a REST style API is also available.
+Besides the graphical user interface offered by OxO (URL_TO_INSERT_RECORD-ABBREV_1732 https://fairsharing.org/FAIRsharing.0c6fea)  at EMBL-EBI, a REST style API is also available.
 It is therefore possible to invoke the mapping service from the command line. See the [OxO API documentation](https://www.ebi.ac.uk/spot/oxo/docs/api) page.
 
 In the following code snippet, an API request invoked via `curl` performed the same mapping presented in the section above, at step 3:
@@ -220,25 +220,25 @@ The corresponding results are as follows:
 
 1. What about incorrect mappings?
 
-    OxO (URL_TO_INSERT_RECORD-ABBREV_1708 https://fairsharing.org/FAIRsharing.0c6fea)  imports term mapping information from ontologies and other curated databases. 
+    OxO (URL_TO_INSERT_RECORD-ABBREV_1733 https://fairsharing.org/FAIRsharing.0c6fea)  imports term mapping information from ontologies and other curated databases. 
     **It doesn't validate the mapping evidence**.
     Users are recommended to check the mapping results manually, especially when the mapping distance is above 1.
     
 2. Why is no mapping found?
 
-    OxO (URL_TO_INSERT_RECORD-ABBREV_1710 https://fairsharing.org/FAIRsharing.0c6fea)  relies on the ontology and other curated databases to improve the mapping coverage. Some terms describing the same concept might not be aligned in OxO (URL_TO_INSERT_RECORD-ABBREV_1711 https://fairsharing.org/FAIRsharing.0c6fea) . In this case, users are recommended to identify possible mappings by searching in OLS (URL_TO_INSERT_RECORD-ABBREV_1709 https://fairsharing.org/FAIRsharing.Mkl9RR) . 
+    OxO (URL_TO_INSERT_RECORD-ABBREV_1735 https://fairsharing.org/FAIRsharing.0c6fea)  relies on the ontology and other curated databases to improve the mapping coverage. Some terms describing the same concept might not be aligned in OxO (URL_TO_INSERT_RECORD-ABBREV_1736 https://fairsharing.org/FAIRsharing.0c6fea) . In this case, users are recommended to identify possible mappings by searching in OLS (URL_TO_INSERT_RECORD-ABBREV_1734 https://fairsharing.org/FAIRsharing.Mkl9RR) . 
     
     To help the ontology community improve the mapping, users can also submit an update request in corresponding ontologies. The guidance can be found here {ref}`fcb-interop-ontorequest`
     
 3. Ontology mapping service for internal databases
 
-    OxO (URL_TO_INSERT_RECORD-ABBREV_1712 https://fairsharing.org/FAIRsharing.0c6fea)  has been dockerized for local deployment and licensed under [Apache License 2.0](https://github.com/EBISPOT/OXO/blob/master/LICENSE). The source code can be found [here](https://github.com/EBISPOT/OXO).
+    OxO (URL_TO_INSERT_RECORD-ABBREV_1737 https://fairsharing.org/FAIRsharing.0c6fea)  has been dockerized for local deployment and licensed under [Apache License 2.0](https://github.com/EBISPOT/OXO/blob/master/LICENSE). The source code can be found [here](https://github.com/EBISPOT/OXO).
 
 
 ## Conclusion
 
-This recipe presented OxO (URL_TO_INSERT_RECORD-ABBREV_1713 https://fairsharing.org/FAIRsharing.0c6fea) , EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
-In the context of a FAIRification workflow, a tool such as OxO (URL_TO_INSERT_RECORD-ABBREV_1714 https://fairsharing.org/FAIRsharing.0c6fea)  comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
+This recipe presented OxO (URL_TO_INSERT_RECORD-ABBREV_1738 https://fairsharing.org/FAIRsharing.0c6fea) , EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
+In the context of a FAIRification workflow, a tool such as OxO (URL_TO_INSERT_RECORD-ABBREV_1739 https://fairsharing.org/FAIRsharing.0c6fea)  comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
 ### What to read next?
 

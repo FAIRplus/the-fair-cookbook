@@ -2,7 +2,7 @@
 
  ````{panels_fairplus}
 :identifier_text: FCBxxx
-:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_1887 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCBxxx'
+:identifier_link: 'https://w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_1912 https://fairsharing.org/FAIRsharing.S6BoUk) /faircookbook/FCBxxx'
 :difficulty_level: 5
 :recipe_type: hands_on
 :reading_time_minutes: 15
@@ -10,7 +10,7 @@
 :maturity_level: 1
 :maturity_indicator: 8
 :has_executable_code: nope
-:recipe_name: Registering SwissLipids (URL_TO_INSERT_RECORD-NAME_1889 https://fairsharing.org/FAIRsharing.pxr7x2)  identifiers in Wikidata (URL_TO_INSERT_RECORD-NAME_1888 https://fairsharing.org/FAIRsharing.6s749p) 
+:recipe_name: Registering SwissLipids (URL_TO_INSERT_RECORD-NAME_1914 https://fairsharing.org/FAIRsharing.pxr7x2)  identifiers in Wikidata (URL_TO_INSERT_RECORD-NAME_1913 https://fairsharing.org/FAIRsharing.6s749p) 
 ```` 
 
 ## Main Objectives

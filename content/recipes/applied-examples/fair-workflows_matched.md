@@ -658,7 +658,7 @@ Cloud based tools supported BCO specifications
 source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_219 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/chipseq_20200910.json
 
 
-* a BioCompute Object can be packaged as an RO (URL_TO_INSERT_RECORD-ABBREV_221 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD-ABBREV_222 https://fairsharing.org/FAIRsharing.504c6c)  (URL_TO_INSERT_RECORD-ABBREV_223 https://fairsharing.org/FAIRsharing.cp0ybc) -Crate (URL_TO_INSERT_RECORD-ABBREV_220 https://fairsharing.org/FAIRsharing.wUoZKE) . 
+* a BioCompute Object can be packaged as an RO (URL_TO_INSERT_RECORD-ABBREV_221 https://fairsharing.org/FAIRsharing.9w8ea0)  (URL_TO_INSERT_RECORD-ABBREV_222 https://fairsharing.org/FAIRsharing.cp0ybc)  (URL_TO_INSERT_RECORD-ABBREV_223 https://fairsharing.org/FAIRsharing.504c6c) -Crate (URL_TO_INSERT_RECORD-ABBREV_220 https://fairsharing.org/FAIRsharing.wUoZKE) . 
 
 ````{dropdown} View an RO-Crate json denoting a BCO
 ```json
@@ -1605,7 +1605,7 @@ source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_219 https://fairsharin
 ````
 source: https://github.com (URL_TO_INSERT_RECORD-HOMEPAGE_224 https://fairsharing.org/FAIRsharing.c55d5e) /biocompute-objects/bco-ro-example-chipseq/blob/main/data/ro-crate-metadata.json
 
-* a BioCompute Object can be integrated with HL7 (URL_TO_INSERT_RECORD-ABBREV_226 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_225 https://fairsharing.org/FAIRsharing.25k4yp)  as a Provenance Resource.
+* a BioCompute Object can be integrated with HL7 (URL_TO_INSERT_RECORD-ABBREV_225 https://fairsharing.org/FAIRsharing.ka5tfc)  FHIR (URL_TO_INSERT_RECORD-ABBREV_226 https://fairsharing.org/FAIRsharing.25k4yp)  as a Provenance Resource.
 
 ```json
 {

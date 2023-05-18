@@ -30,7 +30,7 @@ The framework presented in the recipe therefore represents an important tool to 
 responsible for human subject information. 
 
 > Learn what a Data Protection Impact Assessment is.
-> Learn how to express Data Protection Impact Assessment key information in RDF (URL_TO_INSERT_RECORD-ABBREV_2223 https://fairsharing.org/FAIRsharing.p77ph9) .
+> Learn how to express Data Protection Impact Assessment key information in RDF (URL_TO_INSERT_RECORD-ABBREV_2249 https://fairsharing.org/FAIRsharing.p77ph9) .
 ---
 
 
@@ -79,7 +79,7 @@ Flowchart to decide if a DPIA is needed
 | Data Formats  | Terminologies | Models  |
 | :------------- | :------------- | :------------- |
 | [RDF](https://www.w3.org/TR/rdf-syntax-grammar/)  | [DPV-OWL](https://w3c.github.io/dpv/dpv-owl/)  | |
-| [Terse RDF Triple Language - (Turtle)](https://doi.org/10.25504/FAIRsharing.3e194c)  | [DPV-SKO (URL_TO_INSERT_RECORD-ABBREV_2225 https://fairsharing.org/FAIRsharing.48e326) S]( https://www.w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_2224 https://fairsharing.org/FAIRsharing.S6BoUk) /dpv/dpv-skos)  | |
+| [Terse RDF Triple Language - (Turtle)](https://doi.org/10.25504/FAIRsharing.3e194c)  | [DPV-SKO (URL_TO_INSERT_RECORD-ABBREV_2251 https://fairsharing.org/FAIRsharing.48e326) S]( https://www.w3id.org (URL_TO_INSERT_RECORD-HOMEPAGE_2250 https://fairsharing.org/FAIRsharing.S6BoUk) /dpv/dpv-skos)  | |
 | |[DPV-NACE](https://w3c.github.io/dpv/dpv-nace/) ||
 ||[riskonto](https://raw.githubusercontent.com/coolharsh55/riskonto/master/riskonto.ttl)||
 ---
@@ -149,7 +149,7 @@ alt: DPIA_RDF
 A snippet of the Data Privacy Vocabulary as seen in Protégé ontology editor
 ```
 
-In the following RDF (URL_TO_INSERT_RECORD-ABBREV_2226 https://fairsharing.org/FAIRsharing.p77ph9)  fragment, we show how to express the goal of the data collection of an exemplar study.
+In the following RDF (URL_TO_INSERT_RECORD-ABBREV_2252 https://fairsharing.org/FAIRsharing.p77ph9)  fragment, we show how to express the goal of the data collection of an exemplar study.
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -267,7 +267,7 @@ When dealing with human centric sensitive information, the main privacy concerns
 - unauthorized access to the data
 - patient re-identification
 
-which can be represented by the following RDF (URL_TO_INSERT_RECORD-ABBREV_2227 https://fairsharing.org/FAIRsharing.p77ph9)  statements:
+which can be represented by the following RDF (URL_TO_INSERT_RECORD-ABBREV_2253 https://fairsharing.org/FAIRsharing.p77ph9)  statements:
 
 ```turtle
 @prefix dpv: <https://w3id.org/dpv#> .
@@ -411,7 +411,7 @@ In the context of data access requests, a DAC needs to appraise risks such as:
 1. Use for un-consented research
 2. Data transfer to a different jurisdiction: would the data be protected to the same level once outside EU?
 3. Nature of transfer tools, which fall into 3 possible categories:
-   1. Standard Contractual Clauses (SCC (URL_TO_INSERT_RECORD-ABBREV_2228 https://fairsharing.org/FAIRsharing.84ebcy) ): 18 statements which can be used to assemble a `boiler plate` agreement to 
+   1. Standard Contractual Clauses (SCC (URL_TO_INSERT_RECORD-ABBREV_2254 https://fairsharing.org/FAIRsharing.84ebcy) ): 18 statements which can be used to assemble a `boiler plate` agreement to 
       transfer data outside EU rule of law **but in ways which conform to the EU GDPR**.
    2. Binding Corporate Rules (BRC):
       These are legally binding rules to transfer data within the different branches of a Company, which may operate 
@@ -464,14 +464,14 @@ Based on all the information collected in the previous steps, a **data governanc
 > With this recipe, we have:
 > - highlighted the importance of the European legal framework devised to ensure protection of privacy.
 > - highlighted the existence of a dedicated vocabulary / semantic model to express key information about data protection impact assessment
-> - provided practical examples of how to produce an RDF (URL_TO_INSERT_RECORD-ABBREV_2229 https://fairsharing.org/FAIRsharing.p77ph9) -based representation exploiting the DPV vocabulary.
+> - provided practical examples of how to produce an RDF (URL_TO_INSERT_RECORD-ABBREV_2255 https://fairsharing.org/FAIRsharing.p77ph9) -based representation exploiting the DPV vocabulary.
 > 
 > The reader should understand that this is an active area of research and therefore, patterns for using the 
 vocabularies introduced in this recipe may evolve and be refined. The main point is to raise awareness about these resources. 
 which can be used for mapping DPIA documents which are in pure narrative form. 
 The recipe should also be used as guide when creating DPIA documents to ensure that key information is covered. 
 Finally, as more DPIA document data are represented using these resources, it is likely that new toolsets will be available to produce
-new DPIA documents which are FAIR (URL_TO_INSERT_RECORD-ABBREV_2230 https://fairsharing.org/FAIRsharing.WWI10U)  by design, available as textual documents for humans and as linked data graphs for machines. 
+new DPIA documents which are FAIR (URL_TO_INSERT_RECORD-ABBREV_2256 https://fairsharing.org/FAIRsharing.WWI10U)  by design, available as textual documents for humans and as linked data graphs for machines. 
 
 
 ```{warning}
@@ -489,7 +489,7 @@ It is the responsibility of the implementer to also ensure that the legal inform
 
 > ### What should I read next?
 >  We highly recommend following up this recipe with another relevant content type which looks at how to express permitted data uses
-> by relying on two standards, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (DUO (URL_TO_INSERT_RECORD-ABBREV_2231 https://fairsharing.org/FAIRsharing.5dnjs2) ).
+> by relying on two standards, the W3C Open Digital Rights Language (ODRL) and the GA4GH Data Use Ontology (DUO (URL_TO_INSERT_RECORD-ABBREV_2257 https://fairsharing.org/FAIRsharing.5dnjs2) ).
 > * [Provenance Information](fcb-reusability-provenance)
 > * [Data Use Ontology and ODRL](fcb-reusability-data_use)
 

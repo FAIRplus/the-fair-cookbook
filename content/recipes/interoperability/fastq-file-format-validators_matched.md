@@ -70,9 +70,9 @@ The table below lists common file validation use cases. This recipe provides sol
 
 [FASTQ](http://edamontology.org/format_2182) is the _de facto_ sequencing file format and one of the most common file formats in bioinformatics analysis {footcite}`ENAfastq`, {footcite}`NCBIformats`. Researchers receive FASTQ files from various sources. These files are used intensively in automated bioinformatics analysis pipelines. Therefore, it is important to validate FASTQ files to improve the data reusability and build error-proof data analysis processes.
 
-FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle (URL_TO_INSERT_RECORD-NAME_1596 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FASTQ files. 
+FASTQ validators detect truncated reads, base calls and quality score mismatches, invalid encoding, etc. For paired-end reads, they also check if the forward reads match with the reverse reads. Most validators can process different FASTQ variants automatically and handle (URL_TO_INSERT_RECORD-NAME_1620 https://fairsharing.org/FAIRsharing.0b7e54)  compressed FASTQ files. 
 
-[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive (URL_TO_INSERT_RECORD-NAME_1597 https://fairsharing.org/FAIRsharing.dj8nt8) (EN (URL_TO_INSERT_RECORD-ABBREV_1598 https://fairsharing.org/FAIRsharing.dj8nt8) A)](https://www.ebi.ac.uk/ena), and several research initiatives. 
+[FASTQ-utils](https://github.com/nunofonseca/fastq_utils) is an open-source software to validate and process FASTQ files. It has been applied in the [European Nucleotide Archive (URL_TO_INSERT_RECORD-NAME_1621 https://fairsharing.org/FAIRsharing.dj8nt8) (EN (URL_TO_INSERT_RECORD-ABBREV_1622 https://fairsharing.org/FAIRsharing.dj8nt8) A)](https://www.ebi.ac.uk/ena), and several research initiatives. 
 
 This recipe provides an example of validating FASTQ files with _FASTQ-utils_ on MacOS and Linux machines.
 
@@ -123,11 +123,11 @@ conda install -c bioconda fastq_utils
 ```
 
 
-In this step, we download example FASTQ files from ENA (URL_TO_INSERT_RECORD-ABBREV_1599 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
+In this step, we download example FASTQ files from ENA (URL_TO_INSERT_RECORD-ABBREV_1623 https://fairsharing.org/FAIRsharing.dj8nt8)  for testing. The first example file is a single read file, the other ones are paired-end read files.
 
 __Example 1: Get single read FASTQ file__
 
-The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD-ABBREV_1600 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
+The command below downloads an _Ion Torrent S5_ fastq file from ENA (URL_TO_INSERT_RECORD-ABBREV_1624 https://fairsharing.org/FAIRsharing.dj8nt8) . [This file](https://www.ebi.ac.uk/ena/browser/view/SRR12132977) is the whole genome sequencing file of SARS-CoV-2. The complete file is 192Mb. 
 
 ```shell
 wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR121/077/SRR12132977/SRR12132977.fastq.gz
@@ -145,7 +145,7 @@ A>A@@=@@F@D@C<999,:<@ABBBB@B=>=BB@BBB?@@><;;7>??=BBB>BDD;D>????@@;@CDC@@@BBB>BBB
 ```
 __Example 2: Get paired-read FASTQ files__
 
-The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD-ABBREV_1601 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
+The command below downloads Illumina iSeq 100 paired end sequencing files from ENA (URL_TO_INSERT_RECORD-ABBREV_1625 https://fairsharing.org/FAIRsharing.dj8nt8) . [These files](https://www.ebi.ac.uk/ena/data/view/SRR11542244) are raw sequence reads of a SARS-CoV-2 sample. Each file is 26 Mb.
 
 ```shell
 wget -c \
@@ -259,9 +259,9 @@ The table lists technical considerations when selecting the validator, including
 | |fastq-solexa|Validate the _fastq-solexa_ format|☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
-|Archieve compatiablity|EN (URL_TO_INSERT_RECORD-ABBREV_1602 https://fairsharing.org/FAIRsharing.dj8nt8) A|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD-ABBREV_1603 https://fairsharing.org/FAIRsharing.dj8nt8)  archive.|☑️|
-||ArrayExpress (URL_TO_INSERT_RECORD-NAME_1604 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
-||SRA (URL_TO_INSERT_RECORD-ABBREV_1605 https://fairsharing.org/FAIRsharing.g7t2hv) |File validated can be submitted to the SRA (URL_TO_INSERT_RECORD-ABBREV_1606 https://fairsharing.org/FAIRsharing.g7t2hv)  archive.|☑️|
+|Archieve compatiablity|EN (URL_TO_INSERT_RECORD-ABBREV_1626 https://fairsharing.org/FAIRsharing.dj8nt8) A|File validated can be submitted to the ENA (URL_TO_INSERT_RECORD-ABBREV_1627 https://fairsharing.org/FAIRsharing.dj8nt8)  archive.|☑️|
+||ArrayExpress (URL_TO_INSERT_RECORD-NAME_1628 https://fairsharing.org/FAIRsharing.6k0kwd) |File validated can be submitted to Array Express.|☑️|
+||SRA (URL_TO_INSERT_RECORD-ABBREV_1629 https://fairsharing.org/FAIRsharing.g7t2hv) |File validated can be submitted to the SRA (URL_TO_INSERT_RECORD-ABBREV_1630 https://fairsharing.org/FAIRsharing.g7t2hv)  archive.|☑️|
 |Interface|Command line interface|Can be used in shell and intergerated in pipe commands|☑️|
 |License|Licensed||☑️[GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)|
 | |Commercial use|Can be used for commercial purpose|☑️|
