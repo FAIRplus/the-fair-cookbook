@@ -117,7 +117,7 @@ ascp version 3.9.6.176292
 - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
 ````{rdmkit_panel}
 ````
-````{FAIRsharing_panel}
+````{fairsharing_panel}
 ````
 
 ## References
