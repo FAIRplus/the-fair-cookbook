@@ -8,7 +8,7 @@ from docutils.parsers.rst import directives
 from sphinx.util import logging
 
 logger = logging.getLogger(__name__)
-logger.info('Hello, this is "FAIRsharing_panel" extension!')
+logger.info('Hello, this is "fairaring_panel" extension!')
 
 
 class FAIRsharingPanel(Directive):
@@ -95,7 +95,7 @@ class FAIRsharingPanel(Directive):
 
 def setup(app):
     app.setup_extension("sphinx_panels")
-    app.add_directive("FAIRsharing_panel", FAIRsharingPanel)
+    app.add_directive("fairsharing_panel", FAIRsharingPanel)
     return {
         'version': '0.1',
         'parallel_read_safe': True,
