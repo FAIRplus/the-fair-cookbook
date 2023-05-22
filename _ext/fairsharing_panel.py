@@ -26,7 +26,7 @@ class FAIRsharingPanel(Directive):
                 content.append('<div class="card w-100 border-2 col-md-4 p-0 docutils">')
             content.extend([
                     '<div class="card-header bg-primary pa_dark docutils text-center">',
-                            '<img alt="FAIRsharing logo" height="40px" src="/_static/images/logo/fairsharing-logo.svg">',
+                            '<img alt="FAIRsharing logo" height="60px" src="/_static/images/logo/fairsharing-logo.svg">',
                     '</div>',
                     '<div class="card-body docutils">',
                         '<p class="mb-0">FAIRsharing records appearing in this recipe:</p>',
