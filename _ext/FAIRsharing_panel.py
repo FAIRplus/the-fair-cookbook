@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 logger.info('Hello, this is "FAIRsharing_panel" extension!')
 
 
-class RDMkitPanel(Directive):
+class FAIRsharingPanel(Directive):
     has_content = False
     option_spec = {
         "inline": directives.unchanged_required
@@ -20,32 +20,32 @@ class RDMkitPanel(Directive):
     def _create_content(self):
         self.parse_yaml()
         content = []
-        RDMkit_block = self.get_rdmkit_html()
-        if RDMkit_block:
+        FAIRsharing_block = self.get_FAIRsharing_html()
+        if FAIRsharing_block:
             if not 'inline' in self.options:
                 content.append('<div class="card w-100 border-2 col-md-4 p-0 docutils">')
             content.extend([
                     '<div class="card-header bg-primary pa_dark docutils text-center">',
-                            '<img alt="RDMkit logo" height="40px" src="/_static/images/logo/RDMkit_logo.svg">',
+                            '<img alt="FAIRsharing logo" height="40px" src="/_static/images/logo/fairsharing-logo.svg">',
                     '</div>',
                     '<div class="card-body docutils">',
-                        '<p class="mb-0">Learn more about:</p>',
-                        self.get_rdmkit_html(),
+                        '<p class="mb-0">FAIRsharing records appearing in this recipe:</p>',
+                        self.get_FAIRsharing_html(),
                     '</div>'
             ])
             if not 'inline' in self.options:
                 content.append('</div>')
         return content
 
-    def get_rdmkit_html(self):
+    def get_FAIRsharing_html(self):
         """
-        Creates the rdmkit html snippets for each link
+        Creates the FAIRsharing html snippets for each link
         :return str: 
         """
-        if self.fcb_rdmkit_links.items():
+        if self.fcb_FAIRsharing_links.items():
             output = '<ul>'
-            for rdmkit_title, rdmkit_filename in self.fcb_rdmkit_links.items():
-                output += f'<li><a href="https://rdmkit.elixir-europe.org/{rdmkit_filename}" target="_blank">{rdmkit_title}</a></li>'
+            for FAIRsharing_title, FAIRsharing_id in self.fcb_FAIRsharing_links.items():
+                output += f'<li><a href="https://fairsharing.org/{FAIRsharing_id}" target="_blank">{FAIRsharing_title}</a></li>'
             output += '</ul>'
             return output
 
@@ -53,8 +53,8 @@ class RDMkitPanel(Directive):
     def parse_yaml(self):
 
         here_path = path.dirname(path.abspath(__file__))
-        yaml_path = path.join(here_path, '..', '_static', 'faircookbook_rdmkit_mapping.yml')
-        json_path = path.join(here_path, '..', '_static', 'recipes.json')
+        yaml_path = path.join(here_path, '..', '_static', 'faircookbook_FAIRsharing_mapping.yml')
+        json_path = path.join(here_path, '..', '_static','recipes.json')
 
         with open(yaml_path, 'r') as f:
             yaml_data = yaml.load(f, Loader=SafeLoader)
@@ -64,12 +64,12 @@ class RDMkitPanel(Directive):
         latest_recipe = list(json_data)[-1]
         fcb_id = json_data[latest_recipe]['identifier']
 
-        self.fcb_rdmkit_links = {}
+        self.fcb_FAIRsharing_links = {}
 
-        for rdmkit_page in yaml_data:
-            for fcb_link in rdmkit_page['links']:
+        for FAIRsharing_page in yaml_data:
+            for fcb_link in FAIRsharing_page['links']:
                 if fcb_link['fcb_id'] == fcb_id:
-                    self.fcb_rdmkit_links[rdmkit_page['rdmkit_title']] = rdmkit_page['rdmkit_filename']
+                    self.fcb_FAIRsharing_links[FAIRsharing_page['FAIRsharing_title']] = FAIRsharing_page['FAIRsharing_id']
 
     def _parse_content_into_nodes(self, new_content):
         if len(self.content) > 0:
@@ -95,7 +95,7 @@ class RDMkitPanel(Directive):
 
 def setup(app):
     app.setup_extension("sphinx_panels")
-    app.add_directive("rdmkit_panel", RDMkitPanel)
+    app.add_directive("FAIRsharing_panel", FAIRsharingPanel)
     return {
         'version': '0.1',
         'parallel_read_safe': True,
