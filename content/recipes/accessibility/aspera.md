@@ -120,7 +120,10 @@ ascp version 3.9.6.176292
 :column: col-md-4
 :body: p-0
 ```{rdmkit_panel}
-{fairsharing_panel}
+:inline: true
+```
+:body: p-0
+```{fairsharing_panel}
 :inline: true
 ```
 ````
