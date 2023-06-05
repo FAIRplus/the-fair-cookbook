@@ -102,7 +102,7 @@
   - fcb_title: Introducing ontology-related tools and services
     fcb_id: FCB022
 
-- rdmkit_title: Sensitive data
+- rdmkit_title: Data sensitivity
   rdmkit_filename: sensitive_data
   links:
   - fcb_title: Declaring data permitted uses
