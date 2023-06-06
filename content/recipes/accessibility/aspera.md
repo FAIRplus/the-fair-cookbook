@@ -115,20 +115,8 @@ ascp version 3.9.6.176292
 
 - {ref}`fcb-sftp` 
 - <!-- TODO (which recipe would that reference to? why is FAIR evaluation needed here?) --> FAIR Evaluation
-
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
-
 
 ## References
 ````{dropdown} **References** 
@@ -146,4 +134,3 @@ Philippe: Writing - Review & Editing
 ````{license_fairplus}
 CC-BY-4.0
 ````
-
