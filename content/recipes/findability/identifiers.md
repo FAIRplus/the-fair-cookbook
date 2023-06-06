@@ -464,6 +464,11 @@ But we can not conclude this section on persistent identifiers without stressing
 ```{rdmkit_panel}
 :inline: true
 ```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

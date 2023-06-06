@@ -163,6 +163,8 @@ are not yet in Wikidata.
 
 This is the topic of a future recipe.
 
+````{fairsharing_panel}
+ 
 ## References
 ````{dropdown} **Reference**
 ```{footbibliography}

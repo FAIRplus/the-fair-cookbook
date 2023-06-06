@@ -384,7 +384,18 @@ These are aspects of information provenance which we plan to provide in the futu
 * {ref}`fcb-find-identifiers`
 * {ref}`fcb-identifier-mapping`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 ````
 
 ---

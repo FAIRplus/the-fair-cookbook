@@ -141,6 +141,8 @@ Cellosaurus also provides enriched information about different cell lines.
 and is supported by the EBI database submission platform.
 
 
+````{fairsharing_panel}
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

@@ -221,6 +221,8 @@ While it is essential that any transcriptomics metadata be annotated with ontolo
 |Nucleotide reference sequence|ReqSeq|Entity||
 
 
+````{fairsharing_panel}
+ 
 ## Conclusion
 
 Using common transcriptomics metadata standards, in particular the fields listed above as guidance, it is possible to

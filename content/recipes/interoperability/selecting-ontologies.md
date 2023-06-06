@@ -346,7 +346,18 @@ TODO : fill in the links to what-should-I-read-next recipes -->
 * How to deploy an ontology server? {ref}`fcb-select-onto-service-criteria`
 * [How to establish a minimal metadata profile?] {ref}`fcb-interop-covid-metadata` 
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 ````
 
 

@@ -155,6 +155,8 @@ UMLS is updated in May and November of each year.
 
 
 
+````{fairsharing_panel}
+ 
 ## References
 ````{dropdown} **References**
 ````

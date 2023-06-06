@@ -212,7 +212,18 @@ The [main profiles](https://bioschemas.org/profiles/) currently specified by the
 - {ref}`fcb-find-bs-catalog`
 - {ref}`fcb-find-bs-dataset`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 ````
 
 
