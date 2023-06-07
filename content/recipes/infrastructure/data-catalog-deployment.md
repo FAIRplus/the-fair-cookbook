@@ -218,17 +218,7 @@ as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 * {ref}`fcb-interop-metadataprofile`
 * {ref}`fcb-interop-txmetadata`
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 ## References
 ````{dropdown} **References**

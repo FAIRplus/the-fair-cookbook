@@ -245,17 +245,7 @@ In the context of a FAIRification workflow, a tool such as OxO comes particurlar
 * [How to build a data dictionary?](fcb-interop-datadictionary)
 * [How to build an ontology using robot?](fcb-interop-ontorobot)
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 

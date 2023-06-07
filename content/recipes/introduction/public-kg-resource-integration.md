@@ -381,17 +381,7 @@ It certainly should provide food for thoughts when engaging with a FAIRification
 * [Implications of Topological Imbalance for Representation Learning on Biomedical Knowledge Graphs](https://arxiv.org/abs/2112.06567) {footcite}`DBLP:journals/corr/abs-2112-06567`
 * [A Review of Biomedical Datasets Relating to Drug Discovery: A Knowledge Graph Perspective](https://doi.org/10.48550/arXiv.2102.10062) {footcite}`https://doi.org/10.48550/arxiv.2102.10062`
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 ---

@@ -280,17 +280,7 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 - 🐙[FASTQ file specification recipe](TODO include link to recipe https://www.TBD.org )
 - 🐙[FASTQ file validator in Biopython](TODO include link to recipe https://www.TBD.org)
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 
