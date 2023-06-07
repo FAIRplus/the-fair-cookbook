@@ -127,17 +127,7 @@ With this content, we intended to bring forward the experience gained *"from the
 - {ref}`fcb-interop-etl`
 - [FAIR+Q: FAIR data and data quality by the Pistoia Alliance](https://doi.org/10.1016/j.drudis.2022.01.006)
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 ## Reference

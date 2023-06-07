@@ -503,17 +503,7 @@ problem, but this is out of scope of this recipe.
 describing web crawling, robots.txt, sitemaps and possible roadblocks.
 * [Recipe](https://w3id.org/faircookbook/FCB026) on how to create a metadata profile.
 * [EHDEN Deliverable D4.5 - Interoperability roadmap](https://zenodo.org/record/4474373).
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 
