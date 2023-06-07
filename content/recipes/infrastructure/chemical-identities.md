@@ -93,7 +93,17 @@ with BridgeDb and its metabolite ID mapping databases to get additional identifi
 
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

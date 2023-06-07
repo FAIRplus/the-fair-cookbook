@@ -262,7 +262,17 @@ As a minimum, you should aim to link your dataset's persistant data identifiers 
 * {ref}`fcb-bridgedb-recipe`
 * [Dataset Descriptions for the Open Pharmacological Space](http://www.openphacts.org/specs/datadesc/)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 <!-- 
     > * [Identifier Resolution Services](./findability/id-resolution.html) 

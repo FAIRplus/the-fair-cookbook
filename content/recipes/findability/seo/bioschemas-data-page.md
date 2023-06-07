@@ -228,7 +228,17 @@ We will outline the steps for embedding machine processable mark up within a web
 - {ref}`fcb-find-bs-catalog`
 - {ref}`fcb-find-bs-dataset`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

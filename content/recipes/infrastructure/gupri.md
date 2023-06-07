@@ -222,7 +222,17 @@ However, if scale-up is required and millions of GUPRIs are needed, a different 
 - {ref}`fcb-find-id-minid` 
 - http://web.mit.edu/handle/www/purl-eval.html
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

@@ -521,7 +521,17 @@ Another improvement could be a better integration with repositories such FAIRsha
 * How to validate metadata with JSON Schema?<!-- TODO add a link to corresponding document -->
 * How to perform data integration with SPARQL?<!-- TODO add a link to corresponding document -->
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

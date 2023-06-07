@@ -280,7 +280,17 @@ The key take-homes of this recipe are:
 * [Interlinking data from different sources](../interoperability/identifier-mapping.md)
 * [Maturity models](../maturity.md)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 ## References:

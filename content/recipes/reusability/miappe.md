@@ -472,7 +472,17 @@ connect different data sources with each other, so that in general a higher degr
 - [Learn to make computational workflows FAIR](https://w3id.org/faircookbook/FCB062) 
 - [Check the following resources:]()
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

@@ -241,7 +241,17 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 - {ref}`fcb-find-bs-catalog`
 - {ref}`fcb-find-bs-dataset`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

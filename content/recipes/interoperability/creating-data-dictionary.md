@@ -203,7 +203,17 @@ Why? Simply because if affords several key data management processes to take pla
 - {ref}`fcb-interop-etl`
 - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 > 

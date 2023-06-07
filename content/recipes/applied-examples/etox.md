@@ -119,6 +119,9 @@ Example of textual analyses of terms / concept labels.
 ````
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ````

@@ -161,7 +161,17 @@ In this recipe, we introduced the concept of metadata and presented a possible t
 * [Provenance Information](https://w3id.org/faircookbook/FCB036)
 * [Declaring permitted use](https://w3id.org/faircookbook/FCB035)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 ---

@@ -1715,7 +1715,17 @@ or to decide whether to perform new ones.
 * {ref}`fcb-interop-metadataprofile`
 * {ref}`fcb-fairify-examples-datamatrix`
 * {ref}`fcb-reusability-provenance`
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+ :body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 
