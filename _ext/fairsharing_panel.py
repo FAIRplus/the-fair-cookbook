@@ -45,7 +45,7 @@ class FAIRsharingPanel(Directive):
         if self.fcb_FAIRsharing_links.items():
             output = '<ul>'
             for FAIRsharing_title, FAIRsharing_id in self.fcb_FAIRsharing_links.items():
-                output += f'<li><a href="https://fairsharing.org/{FAIRsharing_id}" target="_blank">{FAIRsharing_title}</a></li>'
+                output += f'<li><a href="{FAIRsharing_id}" target="_blank">{FAIRsharing_title}</a></li>'
             output += '</ul>'
             return output
 
