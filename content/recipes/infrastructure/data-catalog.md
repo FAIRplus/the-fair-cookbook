@@ -139,6 +139,9 @@ interoperability and reusability, see the following:
 ````
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ````
