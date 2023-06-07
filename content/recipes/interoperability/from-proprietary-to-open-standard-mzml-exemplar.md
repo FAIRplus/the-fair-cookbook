@@ -306,18 +306,7 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
 - How to produce an ISA metadata file from a set of mzML fles<!-- TODO add a link to corresponding document -->
 - [How to deposit data to Zenodo](fcb-find-zenodo)<!-- TODO add a link to corresponding document -->
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
- :body: p-0
-```{fairsharing_panel}
-:inline: true
-```
-````
+````{rdmkit_panel}
 ````
 
 

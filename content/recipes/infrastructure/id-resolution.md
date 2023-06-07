@@ -128,8 +128,6 @@ The PURL service is administered by the Internet Archive. Users can request doma
 
 
 
-````{fairsharing_panel}
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

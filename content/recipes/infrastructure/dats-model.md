@@ -130,8 +130,6 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 > * [Deploying the IMI data catalog](./data-catalog-deployment.md) 
 > * [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
 
-````{fairsharing_panel}
- 
 ## References:
 
 ````{dropdown} **References**

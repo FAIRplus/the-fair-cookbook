@@ -204,8 +204,6 @@ To show how these tools can be used in real life examples, please check the rela
 - [Building an application ontology with Robot](https://fairplus.github.io/the-fair-cookbook/content/recipes/interoperability/ontology-robot-recipe.html) -->
 
 
-````{fairsharing_panel}
- 
 ## References
 ````{dropdown} **References**
 

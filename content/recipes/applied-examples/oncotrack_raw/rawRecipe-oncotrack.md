@@ -265,8 +265,6 @@ Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database]
 ````
 
 
-````{fairsharing_panel}
- 
 ## References
 `````{dropdown} **References**
 ```{footbibliography}
