@@ -256,7 +256,17 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 - {ref}`fcb-find-bs-data`
 - {ref}`fcb-find-bs-dataset`
  
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 

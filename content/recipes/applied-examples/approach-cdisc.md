@@ -184,7 +184,17 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 * [Data dictionary](../interoperability/creating-data-dictionary.md)
 * [ETL processes](../interoperability/ETL-tools.md)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 ## References
