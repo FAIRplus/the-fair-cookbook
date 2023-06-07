@@ -480,11 +480,6 @@ this graph into a FAIR digital object of a reasonable maturity state.
  ```
  ^^^
  [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html) 
----
- :body: p-0
-```{fairsharing_panel}
-:inline: true
-```
 ````
 -->
 

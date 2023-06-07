@@ -478,17 +478,7 @@ r.status_code
 * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
 * [What is search engine optimization?](fcb-find-seo)
  
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
- :body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 ## References

@@ -323,17 +323,7 @@ Additionally, it provides the readers with a scorecard template that may be tran
 * [The Value of FAIR](fcb-intro-fair-values)
 * [Data Management Plan](https://rdmkit.elixir-europe.org/data_management_plan.html)
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
- :body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 ## References

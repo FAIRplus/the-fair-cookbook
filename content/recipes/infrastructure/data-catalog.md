@@ -135,17 +135,7 @@ interoperability and reusability, see the following:
 * {ref}`fcb-find-seo`
 * {ref}`fcb-interop-metadataprofile`
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
- :body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{rdmkit_panel}
 ````
 
 
