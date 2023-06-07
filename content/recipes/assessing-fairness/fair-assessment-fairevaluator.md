@@ -187,6 +187,9 @@ Services such as the FAIRevaluator are essential to gauge improvements of data m
 
 
 
+````{fairsharing_panel}
+````
+ 
 ## Reference
 ````{dropdown} **References**
 ```{footbibliography}

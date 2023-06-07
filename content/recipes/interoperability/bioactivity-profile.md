@@ -196,6 +196,9 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

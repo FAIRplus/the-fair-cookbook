@@ -138,6 +138,11 @@ DUO in OLS
 width: 400px
 ```
 
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ```` -->
 
 

@@ -210,6 +210,9 @@ To show how some of these tools may be used, the following related recipes provi
 -->
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

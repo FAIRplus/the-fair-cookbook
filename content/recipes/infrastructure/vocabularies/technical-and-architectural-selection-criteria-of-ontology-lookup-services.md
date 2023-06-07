@@ -557,7 +557,17 @@ To complement this recipe, reading the following chapter is highly encouraged.
 * [How to select an ontology?](https://w3id.org/faircookbook/FCB020)
 * [How to build an application ontology?](https://w3id.org/faircookbook/FCB023)
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 ## References
 ````{dropdown} **References**
