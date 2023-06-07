@@ -329,9 +329,6 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 -->
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

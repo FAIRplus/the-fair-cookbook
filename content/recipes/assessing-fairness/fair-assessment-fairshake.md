@@ -779,9 +779,6 @@ It should be noted that the process of using FAIRshake for performing assessment
 awareness about standards that digital object producers can apply to improve the FAIRness of the digital assets they produce and publish.
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

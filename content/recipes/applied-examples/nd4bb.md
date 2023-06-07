@@ -224,9 +224,6 @@ We also identified key FAIRification steps in the proposed process, some of whic
 Overall this dataset has been very useful to start our overall process and team activities.
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ````
