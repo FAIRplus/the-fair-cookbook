@@ -477,6 +477,9 @@ The OHDSI covid19 datasets can be found in Google Dataset Search, because Google
 ```
 ````
 
+````{fairsharing_panel}
+````
+ 
 ## Conclusion
 
 The key reusable element in this recipe is the use of Schema.org JSON-LD statements in any website to promote

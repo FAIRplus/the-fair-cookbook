@@ -179,6 +179,9 @@ This [Use Scholia and Wikidata to find scientific literature](https://laurendupu
 tutorial provides more information on how Wikidata uses keywords to further expose literature,
 but works identical to other research output, such as datasets.
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
