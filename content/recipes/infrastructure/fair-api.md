@@ -625,6 +625,9 @@ This content type focus on using OpenAPI.
 ````{rdmkit_panel}
 ````
 
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **Reference**
