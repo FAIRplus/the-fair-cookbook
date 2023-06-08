@@ -479,9 +479,6 @@ metadata, data about the data  in a FAIR way.
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **References** 

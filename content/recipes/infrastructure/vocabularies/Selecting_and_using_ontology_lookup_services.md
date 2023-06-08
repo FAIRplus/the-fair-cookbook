@@ -815,9 +815,6 @@ Twitter OBOFoundry account: 220 followers
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

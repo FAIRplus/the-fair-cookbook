@@ -270,9 +270,6 @@ As a minimum, you should aim to link your dataset's persistant data identifiers 
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
