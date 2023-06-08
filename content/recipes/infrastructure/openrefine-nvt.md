@@ -541,9 +541,6 @@ While a lot of material already exists about using OpenRefine for performing suc
 rests on the setting up of a Wikibase instance to provide the reconciliation reference.
 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next? 
 
 * [An inventory of tools for converting data to RDF](https://w3id.org/faircookbook/FCB051)

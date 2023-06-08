@@ -1710,9 +1710,6 @@ capable of ensure appropriate provenance tracking and information preservation.
 This knowledge could be harnessed to decide whether to trust the results of an analysis or a transformation process,
 or to decide whether to perform new ones.
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 * {ref}`fcb-interop-convertopen` 
 * {ref}`fcb-interop-metadataprofile`

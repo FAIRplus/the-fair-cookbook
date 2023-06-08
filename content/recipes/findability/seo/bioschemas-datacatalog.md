@@ -251,9 +251,6 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 ## Conclusion
 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 - {ref}`fcb-find-bs-data`

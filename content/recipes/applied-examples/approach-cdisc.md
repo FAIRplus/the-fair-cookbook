@@ -179,9 +179,6 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 * The CDISC-SDTM standard supports the interoperability between datasets due to its high level of standardisation, detailed modelling and widespread use.
 * The high level of detailed knowledge of the standard required to successfully convert a dataset to SDTM presents a significant hurdle 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 * [Ontology mappings](../interoperability/selecting-ontologies.md)
 * [Data dictionary](../interoperability/creating-data-dictionary.md)

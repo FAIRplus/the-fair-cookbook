@@ -497,9 +497,6 @@ Hosting the website on [IPFS](https://ipfs.io/) and using a pinning service coul
 problem, but this is out of scope of this recipe.
 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * Findability of data by search engines: [Search Engine Optimization](https://w3id.org/faircookbook/FCB010) recipe,

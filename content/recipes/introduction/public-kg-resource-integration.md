@@ -375,9 +375,6 @@ Finally, we wanted to highlight how some KGs are already used to train models an
 This is of particular interest in the context of the Innovative Medicine Initiative but not only, obviously.
 It certainly should provide food for thoughts when engaging with a FAIRification process and should help define FAIRification goals as well as the process to perform in order to be able to be compatible with specific resources for a specific task at hand.
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * [Knowledge graph completion with PyKEEN and neo4j](https://towardsdatascience.com/knowledge-graph-completion-with-pykeen-and-neo4j-6bca734edf43)

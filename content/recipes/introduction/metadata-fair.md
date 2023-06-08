@@ -154,9 +154,6 @@ As with all human things, there will be redundant, overlapping, competing effort
 In this recipe, we introduced the concept of metadata and presented a possible typology for it. We also showed the close relation between metadata and semantic models used to represent information as well as how, with the reliance on the Resource Description Framework, the boundary with syntax and semantics somehow becomes more fuzzy. We therefore encourage readers to delve into these other sections of the FAIR Cookbook.
 
  
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * [FAIR and Knowledge Graphs](https://w3id.org/faircookbook/FCB070)

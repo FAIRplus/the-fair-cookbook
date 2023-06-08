@@ -210,9 +210,6 @@ instructions in the [README file](https://github.com/FAIRplus/imi-data-catalogue
 This recipe provides a step-by-step guide to deploying the **IMI data catalogue** developed at [University of Luxembourg](https://wwwen.uni.lu/lcsb),
 as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * {ref}`fcb-infra-build-catalog`

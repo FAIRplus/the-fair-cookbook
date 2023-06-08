@@ -539,9 +539,6 @@ This more advanced recipe has identified and described all the different steps t
 While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date.
 It is therefore also critical to understand the benefits of contributing to existing open efforts.    
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * OBO Foundry Semantic Engineering training and the [Robot tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/) 

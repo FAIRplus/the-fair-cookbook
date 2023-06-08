@@ -613,9 +613,6 @@ Furthermore, existing tooling around OpenAPI can enable the accessibility and re
 programming languages and other standardized systems.
 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 This content type focus on using OpenAPI.

@@ -179,9 +179,6 @@ Remember to understand the data stewardship requirements that go along with hand
 <!-- 
 TODO : fill in the links to what-should-I-read-next recipes 
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 * How to request data access and deal with data access committees? < TODO add a link to corresponding document >
 * How to do NER on EHR with NLP?< TODO add a link to corresponding document >

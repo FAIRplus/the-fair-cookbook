@@ -318,9 +318,6 @@ Faced with a larger number of projects needing FAIRification, it is necessary to
 Hence, the aim of the recipe was to provide the readers with a wider perspective of criteria they could use for ordering projects or datasets for FAIRification and enable them to personalize the ranking of factors based on their needs or requirements. 
 Additionally, it provides the readers with a scorecard template that may be translated and used for their use cases.
  
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 * [Data catalog](fcb-find-bs-catalog)
 * [The Value of FAIR](fcb-intro-fair-values)

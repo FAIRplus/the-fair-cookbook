@@ -255,9 +255,6 @@ In this recipe, we have given an overview of the need to map between globally un
 Data identifier equivalences increase the interoperability between data sources since it allows data about an individual to be integrated together. 
 As a minimum, you should aim to link your dataset's persistant data identifiers to one major dataset within the community. The [ELIXIR Core Data Resources](https://elixir-europe.org/platforms/data/core-data-resources) provide a useful list of major datasets within the life sciences.
 
-````{fairsharing_panel}
-````
- 
 ### What to read next?
 
 * {ref}`fcb-find-identifiers`
