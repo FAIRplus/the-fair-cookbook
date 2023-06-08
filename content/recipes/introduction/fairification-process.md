@@ -272,6 +272,9 @@ The key take-homes of this recipe are:
 1. **Carefully define FAIRification goals, focusing on incrementally achievable targets**. Focus on achieving elements of FAIRness that matter most to the needs of the project to reach a balanced **“FAIR enough”** status.
 1. **Assemble a multi-disciplinary team**. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 * [Prioritization of projects for FAIRification](../introduction/priorization.md)
 * [Depositing in Zenodo generic repository](../findability/zenodo-deposition.md)

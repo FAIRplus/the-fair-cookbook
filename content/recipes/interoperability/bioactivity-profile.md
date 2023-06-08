@@ -190,6 +190,9 @@ The present dataset is a subset of [IMI CARE](https://www.imi.europa.eu/projects
 |AC50|Half maximal Activation Concentration|
 |CC50|Half maximal Cytotoxic Concentration|
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 - [InChI and SMILES identifiers for chemical structures](https://w3id.org/faircookbook/FCB007)
 - [ChEMBL interface documentation](https://chembl.gitbook.io/chembl-interface-documentation/)

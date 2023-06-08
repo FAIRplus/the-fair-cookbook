@@ -223,6 +223,9 @@ We will outline the steps for embedding machine processable mark up within a web
 ## Conclusion
 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 - {ref}`fcb-find-bs-catalog`

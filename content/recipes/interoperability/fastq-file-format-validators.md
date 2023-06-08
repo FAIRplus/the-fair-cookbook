@@ -274,6 +274,9 @@ _*See details in the [FASTQ specification recipe]( TODO include link)._
 In this recipe, we have shown how to validate fastq files, and proposed indicators to evaluate a FASTQ validator. We also identified common file validation related use cases and provided a general file validation workflow. This recipe can be expanded to other file formats and other use cases.
 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 - 🐙[From proprietary format to open standard format: an exemplar](https://github.com/FAIRplus/the-fair-cookbook/blob/mzml-format/docs/content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar.md) 

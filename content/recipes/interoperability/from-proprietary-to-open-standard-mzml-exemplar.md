@@ -300,6 +300,9 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
 
 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 - [How to calculate file checksums](fcb-checksum-create)<!-- TODO add a link to corresponding document -->
 - How to package data for shipping with BDbags<!-- TODO add a link to corresponding document -->

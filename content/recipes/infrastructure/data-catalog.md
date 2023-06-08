@@ -121,6 +121,9 @@ A number data Indexes/Data Catalogue are populated by harvest Dataset metadata f
 
 This recipe introduced the general concept of data catalogue and why they constitute a key capability to deliver data discoverability.
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 We encourage the readers to either delve deeper into the specific of data catalogues by consulting the following recipes

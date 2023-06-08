@@ -235,6 +235,9 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 ## Conclusion
 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 - {ref}`fcb-find-bs-data`

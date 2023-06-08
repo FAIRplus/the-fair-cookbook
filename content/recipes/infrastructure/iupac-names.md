@@ -85,6 +85,9 @@ chemical graph based identifiers, such as the InChIKey. The InChIKey identifier
 can be used to find more information about the chemicals represented by the
 original IUPAC names.
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)

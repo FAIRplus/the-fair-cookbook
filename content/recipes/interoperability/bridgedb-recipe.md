@@ -379,6 +379,9 @@ BridgeDb provides handy functionality to make 'omics' data more interoperable an
 As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
 These are aspects of information provenance which we plan to provide in the future.
  
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 * {ref}`fcb-find-identifiers`

@@ -216,6 +216,9 @@ One has to bear in mind that the service works well for projects like this one w
 However, if scale-up is required and millions of GUPRIs are needed, a different service may be needed.
 
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 - {ref}`fcb-find-identifiers` 

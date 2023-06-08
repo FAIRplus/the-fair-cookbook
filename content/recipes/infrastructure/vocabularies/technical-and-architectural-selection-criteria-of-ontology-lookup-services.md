@@ -549,6 +549,9 @@ This FAIR Cookbook recipe gave an overview of non-functional criteria to take in
 
 To complement this recipe, reading the following chapter is highly encouraged.
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 * [Key functional requirements to consider when selecting an ontology service?](https://w3id.org/faircookbook/FCB004)

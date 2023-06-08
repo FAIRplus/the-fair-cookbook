@@ -167,7 +167,17 @@ Clearly, declaring the semantic resources used to annotate a dataset also influe
 * {ref}`fcb-interop-ontorobot`
 * {ref}`fcb-interop-onto-op`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->

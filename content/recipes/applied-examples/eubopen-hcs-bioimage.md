@@ -201,6 +201,9 @@ python other_python_script.py other_input_file.extension
 With this content and the associated python scripts, we highlight path to deposit HCS imaging data the EMBL-EBI BioImage Archive.
 This therefore improves **Findability** and **Reusability** of such data.
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 - {ref}`fcb-access-aspera`
 - {ref}`fcb-find-zenodo`

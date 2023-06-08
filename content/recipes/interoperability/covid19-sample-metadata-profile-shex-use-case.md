@@ -514,6 +514,9 @@ The recipe therefore provides a piece of the jigsaw to establish a FAIR datasets
 There are some caveats or improvements which could be made. For instance, the devised shex expression and the associated instance RDF graph  could be assigned a persistent identifiers (PID).
 Another improvement could be a better integration with repositories such FAIRsharing or the main sequence data submission systems such as INSDC deposition pipelines.
 
+````{fairsharing_panel}
+````
+ 
 ### What to read next?
 
 * How to validate a FASTQ sequencing file?<!-- TODO add a link to corresponding document -->
