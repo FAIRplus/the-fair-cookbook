@@ -59,7 +59,7 @@
   links:
     - fcb_title: Unique, persistent identifiers
       fcb_id: FCB006
-    - fcb_title: InChI & SMILES identifiers for chemical structures
+    - fcb_title: InChI and SMILES identifiers for chemical structures
       fcb_id: FCB007
     - fcb_title: Minting identifiers with Minid
       fcb_id: FCB008
