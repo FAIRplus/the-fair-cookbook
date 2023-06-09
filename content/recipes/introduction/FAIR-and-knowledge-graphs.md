@@ -481,10 +481,6 @@ metadata, data about the data  in a FAIR way.
 
 ## References
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ````{dropdown} **References** 
 ```{footbibliography}
 ```
