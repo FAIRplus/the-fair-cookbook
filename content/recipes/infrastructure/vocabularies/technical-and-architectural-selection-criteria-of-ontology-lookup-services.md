@@ -559,9 +559,6 @@ To complement this recipe, reading the following chapter is highly encouraged.
 
 ````{rdmkit_panel}
 ````
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
