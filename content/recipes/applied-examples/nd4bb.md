@@ -225,6 +225,10 @@ Overall this dataset has been very useful to start our overall process and team 
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ````
 

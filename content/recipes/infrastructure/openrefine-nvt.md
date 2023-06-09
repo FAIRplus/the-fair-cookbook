@@ -551,6 +551,9 @@ rests on the setting up of a Wikibase instance to provide the reconciliation ref
 ````{rdmkit_panel}
 ````
 
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **Reference**
