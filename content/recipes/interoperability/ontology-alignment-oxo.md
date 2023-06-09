@@ -249,9 +249,6 @@ In the context of a FAIRification workflow, a tool such as OxO comes particurlar
 ````
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

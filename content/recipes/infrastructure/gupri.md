@@ -227,9 +227,6 @@ However, if scale-up is required and millions of GUPRIs are needed, a different 
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
