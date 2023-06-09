@@ -205,10 +205,6 @@ To show how these tools can be used in real life examples, please check the rela
 
 
 ## References
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ````{dropdown} **References**
 
 ````

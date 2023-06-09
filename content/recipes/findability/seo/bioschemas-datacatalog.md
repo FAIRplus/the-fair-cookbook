@@ -264,9 +264,6 @@ We will use [FAIRsharing](https://fairsharing.org/) as an example for this recip
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles
