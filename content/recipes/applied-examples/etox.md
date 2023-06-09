@@ -120,6 +120,10 @@ Example of textual analyses of terms / concept labels.
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ````
 
