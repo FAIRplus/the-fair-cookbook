@@ -526,6 +526,11 @@ It is the responsibility of the implementer to also ensure that the legal inform
 ````{dropdown} **References**
 ```{footbibliography}
 ```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 
