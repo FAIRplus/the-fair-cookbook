@@ -308,6 +308,10 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```

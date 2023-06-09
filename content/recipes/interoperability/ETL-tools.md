@@ -211,6 +211,10 @@ To show how some of these tools may be used, the following related recipes provi
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```

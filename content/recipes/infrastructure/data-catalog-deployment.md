@@ -220,6 +220,9 @@ as part of [IMI FAIRplus](https://fairplus-project.eu/) to a local system.
 
 ````{rdmkit_panel}
 ````
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ````

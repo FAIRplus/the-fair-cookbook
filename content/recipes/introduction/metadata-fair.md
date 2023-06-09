@@ -165,6 +165,9 @@ In this recipe, we introduced the concept of metadata and presented a possible t
 ````
 
 ---
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **References**
