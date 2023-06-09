@@ -16,6 +16,7 @@ class FAIRsharingPanel(Directive):
     option_spec = {
         "inline": directives.unchanged_required
     }
+ #   '<img alt="FAIRsharing logo" height="40px" width="191px" src="/_static/images/logo/fairsharing-logo.png">',
 
     def _create_content(self):
         self.parse_yaml()
@@ -26,7 +27,7 @@ class FAIRsharingPanel(Directive):
                 content.append('<div class="card w-100 border-2 col-md-4 p-0 docutils">')
             content.extend([
                     '<div class="card-header bg-primary pa_dark docutils text-center">',
-                            '<img alt="FAIRsharing logo" height="40px" width="191px" src="/_static/images/logo/fairsharing-logo.png">',
+                            '<img alt="FAIRsharing logo" height="40px" src="/_static/images/logo/fairsharing-logo.png">',
                     '</div>',
                     '<div class="card-body docutils">',
                         '<p class="mb-0">FAIRsharing records appearing in this recipe:</p>',
@@ -44,8 +45,10 @@ class FAIRsharingPanel(Directive):
         """
         if self.fcb_FAIRsharing_links.items():
             output = '<ul>'
-            aux = dict(sorted(self.fcb_FAIRsharing_links.items()))
-            for FAIRsharing_title, FAIRsharing_id in aux:
+            my_keys = list(self.fcb_FAIRsharing_links.keys())
+            my_keys.sort()
+            sorted_dict = {i: self.fcb_FAIRsharing_links[i] for i in my_keys}
+            for FAIRsharing_title, FAIRsharing_id in sorted_dict:
                 output += f'<li><a href="{FAIRsharing_id}" target="_blank">{FAIRsharing_title}</a></li>'
             output += '</ul>'
             return output
