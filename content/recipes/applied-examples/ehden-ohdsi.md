@@ -508,6 +508,9 @@ describing web crawling, robots.txt, sitemaps and possible roadblocks.
 
 
 
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ````
 
