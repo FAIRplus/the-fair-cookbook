@@ -180,6 +180,10 @@ tutorial provides more information on how Wikidata uses keywords to further expo
 but works identical to other research output, such as datasets.
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```

@@ -142,6 +142,10 @@ and is supported by the EBI database submission platform.
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```

@@ -330,6 +330,10 @@ To customize the local OLS user interface, for example, adding corporate logos, 
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```
