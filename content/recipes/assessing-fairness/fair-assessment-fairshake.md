@@ -780,6 +780,10 @@ awareness about standards that digital object producers can apply to improve the
 
 
 ## References
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ```{footbibliography}
 ```
