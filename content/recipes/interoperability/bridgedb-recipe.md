@@ -390,9 +390,6 @@ These are aspects of information provenance which we plan to provide in the futu
 ---
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **references**
