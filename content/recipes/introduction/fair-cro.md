@@ -130,9 +130,6 @@ With this content, we intended to bring forward the experience gained *"from the
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## Reference
 ````{dropdown} **Reference**
 ````

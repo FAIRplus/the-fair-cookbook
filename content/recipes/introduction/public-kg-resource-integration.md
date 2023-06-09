@@ -386,9 +386,6 @@ It certainly should provide food for thoughts when engaging with a FAIRification
 
 ---
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **Reference**

@@ -305,9 +305,6 @@ For Java the two most common libraries for working with RDF are [Apache Jena](ht
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ````{dropdown} **References**
 ````
 

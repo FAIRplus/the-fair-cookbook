@@ -326,9 +326,6 @@ Additionally, it provides the readers with a scorecard template that may be tran
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **Reference**
 ```{footbibliography}
