@@ -92,9 +92,6 @@ original IUPAC names.
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **References**

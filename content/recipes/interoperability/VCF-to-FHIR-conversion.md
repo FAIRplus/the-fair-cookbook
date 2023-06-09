@@ -472,9 +472,6 @@ The conversion from VCF to HL7 FHIR JSON message has to do with the `**I and R**
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
