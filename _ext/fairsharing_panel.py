@@ -47,8 +47,8 @@ class FAIRsharingPanel(Directive):
             output = '<ul>'
             my_keys = list(self.fcb_FAIRsharing_links.keys())
             my_keys.sort()
-            sorted_dict = {i: self.fcb_FAIRsharing_links[i] for i in self.fcb_FAIRsharing_links.items()}
-            for FAIRsharing_title, FAIRsharing_id in sorted_dict:
+            sorted_dict = {i: self.fcb_FAIRsharing_links[i] for i in my_keys}
+            for FAIRsharing_title, FAIRsharing_id in self.fcb_FAIRsharing_links.items():
                 output += f'<li><a href="{FAIRsharing_id}" target="_blank">{FAIRsharing_title}</a></li>'
             output += '</ul>'
             return output
