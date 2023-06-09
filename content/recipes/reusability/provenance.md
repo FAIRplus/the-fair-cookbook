@@ -423,11 +423,6 @@ material listed below:
 ```{rdmkit_panel}
 :inline: true
 ```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
 ````
 
 <!--
