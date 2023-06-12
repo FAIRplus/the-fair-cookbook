@@ -209,9 +209,6 @@ This therefore improves **Findability** and **Reusability** of such data.
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

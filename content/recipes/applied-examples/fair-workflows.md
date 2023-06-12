@@ -1721,9 +1721,6 @@ or to decide whether to perform new ones.
 
 
 
-````{fairsharing_panel}
-````
- 
 ## Reference
 ````{dropdown} **Reference**
 ```{footbibliography}

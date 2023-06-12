@@ -187,9 +187,6 @@ in the SDTM syntax itself, which is outside the scope of this specific document.
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **References**
