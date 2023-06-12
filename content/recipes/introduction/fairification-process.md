@@ -283,9 +283,6 @@ The key take-homes of this recipe are:
 ````{rdmkit_panel}
 ````
 
-````{fairsharing_panel}
-````
- 
 ## References:
 
 ````{dropdown} **References**

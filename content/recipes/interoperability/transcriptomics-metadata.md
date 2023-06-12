@@ -228,10 +228,6 @@ easily define a comprehensive metadata template to capture all the experimental 
 transcriptomics experiment in a FAIR-compliant way. A generic step-by-step guide for designing a metadata
 template is provided [here](creating-minimal-metadata-profiles.md)
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ````{dropdown} **References**
 ````
 
