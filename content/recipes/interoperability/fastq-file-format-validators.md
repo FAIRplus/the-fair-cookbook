@@ -285,6 +285,9 @@ In this recipe, we have shown how to validate fastq files, and proposed indicato
 
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

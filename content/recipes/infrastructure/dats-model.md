@@ -137,6 +137,10 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 ```
 ````
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}
