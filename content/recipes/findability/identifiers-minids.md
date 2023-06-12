@@ -319,10 +319,6 @@ Using the `Minid` service, resources can now generate stable, resolvable identif
 2. https://minid.readthedocs.io/en/develop/identifiers.html#minids-vs-handles -->
 
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}

@@ -228,10 +228,6 @@ Overall this dataset has been very useful to start our overall process and team 
 ````{dropdown} **References**
 ````
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 ````{authors_fairplus}
 Manfred: Writing - Original Draft

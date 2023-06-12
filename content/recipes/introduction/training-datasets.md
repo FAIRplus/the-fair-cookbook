@@ -187,9 +187,6 @@ TODO : fill in the links to what-should-I-read-next recipes
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **Reference**

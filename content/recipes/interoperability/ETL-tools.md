@@ -216,10 +216,6 @@ To show how some of these tools may be used, the following related recipes provi
 ```
 ````
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}
