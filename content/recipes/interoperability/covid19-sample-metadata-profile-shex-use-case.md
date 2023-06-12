@@ -527,9 +527,6 @@ Another improvement could be a better integration with repositories such FAIRsha
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 [1]. Avro - http://avro.apache.org

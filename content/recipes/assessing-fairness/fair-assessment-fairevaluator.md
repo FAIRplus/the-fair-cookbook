@@ -199,10 +199,6 @@ Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Re
  -->
 
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}
