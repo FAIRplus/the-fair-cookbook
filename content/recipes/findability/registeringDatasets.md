@@ -186,6 +186,10 @@ but works identical to other research output, such as datasets.
 ````
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

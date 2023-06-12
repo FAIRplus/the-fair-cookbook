@@ -200,6 +200,10 @@ https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Prese
  -->
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 ````{authors_fairplus}
 Philippe: Writing - Original Draft
