@@ -170,10 +170,6 @@ This is the topic of a future recipe.
 ````
 ---
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}

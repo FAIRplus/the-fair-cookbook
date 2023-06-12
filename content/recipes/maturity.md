@@ -222,11 +222,6 @@ Moving through maturity levels with ISA by running the following notebooks in th
 ```
 ^^^
 [The Pistoia Alliance FAIRtoolkit Data Capability Maturity Model](https://fairtoolkit.pistoiaalliance.org/methods/data-capability-maturity-model/)
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
 ````
 ````{rdmkit_panel}
 ````

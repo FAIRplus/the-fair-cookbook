@@ -483,9 +483,6 @@ this graph into a FAIR digital object of a reasonable maturity state.
 ````
 -->
 
-````{fairsharing_panel}
-````
- 
 ## References
 
 ````{dropdown} **references**

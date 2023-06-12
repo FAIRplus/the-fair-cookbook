@@ -107,10 +107,6 @@ A lot has been written about the values underpinning data sharing but little has
 ````{dropdown} **Reference**
 ````
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}

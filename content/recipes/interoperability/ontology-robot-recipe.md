@@ -550,9 +550,6 @@ It is therefore also critical to understand the benefits of contributing to exis
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}
