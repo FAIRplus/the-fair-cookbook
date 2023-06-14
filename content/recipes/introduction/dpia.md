@@ -497,18 +497,17 @@ It is the responsibility of the implementer to also ensure that the legal inform
 
 
 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} /_static/images/logo/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Protection` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_protection)
-> ````
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 <!-- > ---
 > :header: bg-primary pa_dark
 > ```{image} ../../../images/logos/pistoia_logo.png

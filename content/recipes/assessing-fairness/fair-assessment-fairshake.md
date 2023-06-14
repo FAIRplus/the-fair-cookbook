@@ -799,6 +799,10 @@ If you have access to the repository, you can access information in it about:
 
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

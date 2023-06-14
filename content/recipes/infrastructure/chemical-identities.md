@@ -97,6 +97,9 @@ with BridgeDb and its metabolite ID mapping databases to get additional identifi
 ````
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **References**
