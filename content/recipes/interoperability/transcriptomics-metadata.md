@@ -231,10 +231,6 @@ template is provided [here](creating-minimal-metadata-profiles.md)
 ````{dropdown} **References**
 ````
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 <!-- TODO clarify the contribution of Karsten and Peter -->

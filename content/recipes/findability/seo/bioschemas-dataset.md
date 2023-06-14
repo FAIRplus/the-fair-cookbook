@@ -246,9 +246,6 @@ We will use [UniProtKB](https://www.uniprot.org/uniprot/) as an example for this
 
 
 
-````{fairsharing_panel}
-````
- 
 ## References
 ````{dropdown} **References**
 <a name="bioschemas-validator">1</a>: The Bioschemas Validator is currently in an early alpha release and does not include all the profiles.

@@ -516,10 +516,6 @@ metadata, data about the data  in a FAIR way.
 -->
 
  
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 ````{authors_fairplus}
 Philippe: Writing - Original Draft, Editing, Conceptualization

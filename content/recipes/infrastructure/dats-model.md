@@ -137,17 +137,7 @@ We implemented DATS v2.0 in the [IMI Translational Data Catalog](https://datacat
 ```
 ````
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+## Authors
 
 ````{authors_fairplus}
 Danielle: Writing - original draft

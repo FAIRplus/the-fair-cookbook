@@ -210,10 +210,6 @@ To show how these tools can be used in real life examples, please check the rela
 ````
 
 
-### What to read next?
-````{fairsharing_panel}
-````
- 
 ## Authors
 
 ````{authors_fairplus}
