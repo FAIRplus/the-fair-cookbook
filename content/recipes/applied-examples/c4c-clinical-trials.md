@@ -121,7 +121,7 @@ The first step created a list of metadata items from the Advanced Search screen 
 The list of metadata items was reviewed by c4c partners, and those not considered cross cutting or common enough for paediatric clinical trials were removed from the list. The original list consisted of 36 items and this was reduced to 27. The following were identified for inclusion:
 
 | Considered cross cutting or common enough to be included in the metadata schema | Not considered cross cutting or common enough to be included in the Metadata Schema|
-| :------------- | :------------- | :------------- |
+| :------------- | :------------- |
 | Study IDs | Rare Disease (tick box yes/no) |
 | Title | Intervention Model |
 | Acronym | NCT Number |
@@ -161,8 +161,8 @@ https://ncit.nci.nih.gov/ncitbrowser/
 
 Example:
 
-| Term | Protocol | OMOP | Clinical Trials Ontology | NCI Thesaurus
-| :------------- | :------------- | :------------- |:------------- | :------------- | :------------- |
+| Term | Protocol | OMOP | Clinical Trials Ontology | NCI Thesaurus |
+| :------------- | :------------- | :------------- |:------------- | :------------- | 
 | Age Group | Child up to 15 years inclusive | 4305451 Infant 37016983 Toddler 4285883 Child 4305318 Adolescent |  NCIT:C49643 Infant & toddler NCIT:C16423 Child NCIT:C89342 Toddler NCIT:C49683 Children 2-11 years NCIT:C85405 School age child NCIT:C27954 Adolescent | C27956 Infant C89342 Toddler C16423 Child C27954 Adolescent |
 
 
