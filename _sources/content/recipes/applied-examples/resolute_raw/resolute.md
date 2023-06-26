@@ -148,6 +148,10 @@ and is supported by the EBI database submission platform.
 ````
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 ````{authors_fairplus}
 Fuqi: Writing - Original Draft

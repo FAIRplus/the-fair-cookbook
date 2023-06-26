@@ -204,7 +204,17 @@ This therefore improves **Findability** and **Reusability** of such data.
 ### What to read next?
 - {ref}`fcb-access-aspera`
 - {ref}`fcb-find-zenodo`
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ```` 
 
 
