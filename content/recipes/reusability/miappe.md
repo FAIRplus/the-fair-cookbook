@@ -12,7 +12,7 @@
 :has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 15,20
-:recipe_name: Improving dataset maturity - the MIAPPE use case
+:recipe_name: MIAPPE-compliant plant genomics data submission to EMBL-EBI databases
 ```` 
 
 ## Main Objective
