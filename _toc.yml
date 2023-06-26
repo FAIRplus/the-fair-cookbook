@@ -117,6 +117,8 @@
                 title: Building a community compliant metadata profile - The Covid19 sample profile use case #FCB028
               - file: content/recipes/interoperability/bioactivity-profile
                 title: Outlining a metadata profile for Bioactivity data #FCB057
+              - file: content/recipes/interoperability/c4c-clinical-trials
+                title: Creating a metadata profile for clinical trial protocols #FCB084
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
           - file: content/recipes/interoperability/fastq-file-format-validators
