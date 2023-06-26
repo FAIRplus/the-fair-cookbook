@@ -72,6 +72,7 @@ sphinx:
     license_fairplus: _ext/
     panels_fairplus: _ext/
     rdmkit_panel: _ext/
+    fairsharing_panel: _ext/
 
 parse:
   myst_url_schemes: [ mailto, http, https, ftp ]

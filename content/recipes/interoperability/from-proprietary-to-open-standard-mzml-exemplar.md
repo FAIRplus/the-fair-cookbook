@@ -310,6 +310,9 @@ Then, interrogating the [Biotools catalog](https://bio.tools/), it may well be a
 ````
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ```{footbibliography}

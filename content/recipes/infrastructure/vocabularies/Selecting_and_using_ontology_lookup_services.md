@@ -823,6 +823,10 @@ Twitter OBOFoundry account: 220 followers
 
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

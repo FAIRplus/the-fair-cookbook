@@ -844,7 +844,17 @@ dataset and defined by the data owners/data controllers.
 * {ref}`rr-licensing-software`
 * {ref}`rr-licensing-data`
 
-````{rdmkit_panel}
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
 ````
 
 
