@@ -100,6 +100,7 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 |                                           | GUI | CLI, automation | Reuse mappings | Messy data | Virtual graph |
 | ----------------------------------------- | --- | --------------- | -------------- | ---------- | ------------- |
 | OpenRefine + RDF extension                | ✅   | +/-         | +/-        | ✅          |               |
+| Tarql: SPARQL for Tables                  |     |✅                | +/-               |                        |
 | TopBraid Composer (ME)1                   | ✅   |                 |                |            |               |
 | RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
 | SPARQL-Generate                           |     | ✅               | ✅              |            |               |
