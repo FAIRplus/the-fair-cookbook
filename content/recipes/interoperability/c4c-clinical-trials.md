@@ -207,7 +207,7 @@ The metadata profile created using the steps described above was used to create 
 | product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class |
 
 
-This schema was used to create a survey in [REDCap](REDCap) to allow for more stringent review and testing. The creation of the survey resulted in changes to the schema which may not have been apparent without this additional step. For example, Race was removed from the survey as it was difficult to standardize responses due to geographic variance and text boxes were added for additional inclusion/exclusion criteria. The revised metadata schema is shown below.
+This schema was used to create a survey in [REDCap](https://www.project-redcap.org/) to allow for more stringent review and testing. The creation of the survey resulted in changes to the schema which may not have been apparent without this additional step. For example, Race was removed from the survey as it was difficult to standardize responses due to geographic variance and text boxes were added for additional inclusion/exclusion criteria. The revised metadata schema is shown below.
 
 
 | Variable/record_id | Form Name | Section Header | Field Type | Field Label |
