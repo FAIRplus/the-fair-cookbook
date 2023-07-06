@@ -83,7 +83,7 @@ Recipe Steps
 ## Introduction
 
 
-This recipe was created in collaboration with conect4children (c4c), a large collaborative European network that aims to facilitate the development of new drugs and other therapies for the entire paediatric population. This work was carried out as part of the WP5 data harmonization and standardization tasks within c4c.
+This recipe was created in collaboration with [conect4children (c4c)](https://conect4children.org/), a large collaborative European network that aims to facilitate the development of new drugs and other therapies for the entire paediatric population. This work was carried out as part of the WP5 data harmonization and standardization tasks within c4c.
 
 The creation of a clinical trial protocol metadata profile allows historic clinical trial data to be discovered, and increases the potential for data to be shared and reused. This may ultimately decrease the number of patients needed for new clinical trials, and potentially reduce the cost and effort of conducting those trials. For paediatric trials, the disease being studied is often rare and the number of patients enrolled is small, making the data scarce and valuable.  
 
@@ -113,7 +113,7 @@ The first step in the process defined and then refined a list of variables to be
 - [RDCA-DAP](https://portal.rdca.c-path.org/)
 - [European Genome-phenome Archive (EGA)](https://ega-archive.org/)
 
-The first step created a list of metadata items from the Advanced Search screen on ClinicalTrials.gov. Metadata items from each subsequent repository were compared against this list and mapped across if there was a match. For example, ‘Age Group’ and ‘Age Range’ or ‘Trial Phase’ and ‘Study Phase’. New metadata items that couldn’t be mapped against existing entries were added to the bottom of the list. This gave a good visual of which metadata items occurred most frequently across all of the repositories. The results of the mapping exercise were captured in a Google Sheet. We started with ClinicalTrials.gov because it is the most comprehensive and used repository.
+The first step created a list of metadata items from the Advanced Search screen on ClinicalTrials.gov. Metadata items from each subsequent repository were compared against this list and mapped across if there was a match. For example, ‘Age Group’ and ‘Age Range’ or ‘Trial Phase’ and ‘Study Phase’. New metadata items that couldn’t be mapped against existing entries were added to the bottom of the list. This gave a good visual of which metadata items occurred most frequently across all of the repositories. The results of the mapping exercise were captured in a [Google Sheet](./c4c_). We started with ClinicalTrials.gov because it is the most comprehensive and used repository.
 
 
 
@@ -207,7 +207,7 @@ The metadata profile created using the steps described above was used to create 
 | product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class |
 
 
-This schema was used to create a survey in REDCap to allow for more stringent review and testing. The creation of the survey resulted in changes to the schema which may not have been apparent without this additional step. For example, Race was removed from the survey as it was difficult to standardize responses due to geographic variance and text boxes were added for additional inclusion/exclusion criteria. The revised metadata schema is shown below.
+This schema was used to create a survey in [REDCap](REDCap) to allow for more stringent review and testing. The creation of the survey resulted in changes to the schema which may not have been apparent without this additional step. For example, Race was removed from the survey as it was difficult to standardize responses due to geographic variance and text boxes were added for additional inclusion/exclusion criteria. The revised metadata schema is shown below.
 
 
 | Variable/record_id | Form Name | Section Header | Field Type | Field Label |
@@ -254,7 +254,7 @@ This schema was used to create a survey in REDCap to allow for more stringent re
 | biospecimens_text | C4C Study Metadata Collection | Treatment Information | text box | Type of Biospecimens Retained |
 | product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class |
 
-The REDCap survey will be sent to studies within the c4c consortium for additional testing. A representative of the study will be asked to complete the survey with metadata from their study and provide feedback. This feedback will be used to further refine the list of metadata items collected. The final metadata schema will be used to create a FAIR Data Point for c4c studies.  In the future this will allow researchers to find sources of paediatric data from clinical trials. 
+The REDCap survey will be sent to studies within the c4c consortium for additional testing. A representative of the study will be asked to complete the survey with metadata from their study and provide feedback. This feedback will be used to further refine the list of metadata items collected. The final metadata schema will be used to create a [FAIR Data Point](https://www.fairdatapoint.org/) for c4c studies.  In the future this will allow researchers to find sources of paediatric data from clinical trials. 
 
 
 ---
@@ -292,6 +292,7 @@ Becca: Writing - Original Draft
 Anando: Writing - Original Draft
 Ronald: Writing - Original Draft
 Danielle:  Writing - Review & Editing
+Philippe: Writing - Review & Editing
 ````
 
 
