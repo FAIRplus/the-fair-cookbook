@@ -113,7 +113,7 @@ The first step in the process defined and then refined a list of variables to be
 - [RDCA-DAP](https://portal.rdca.c-path.org/)
 - [European Genome-phenome Archive (EGA)](https://ega-archive.org/)
 
-The first step created a list of metadata items from the Advanced Search screen on ClinicalTrials.gov. Metadata items from each subsequent repository were compared against this list and mapped across if there was a match. For example, ‘Age Group’ and ‘Age Range’ or ‘Trial Phase’ and ‘Study Phase’. New metadata items that couldn’t be mapped against existing entries were added to the bottom of the list. This gave a good visual of which metadata items occurred most frequently across all of the repositories. The results of the mapping exercise were captured in a Google Sheet (available in Excel format [here](./c4c_mappings.xlsx)). We started with ClinicalTrials.gov because it is the most comprehensive and used repository.
+The first step created a list of metadata items from the Advanced Search screen on ClinicalTrials.gov. Metadata items from each subsequent repository were compared against this list and mapped across if there was a match. For example, ‘Age Group’ and ‘Age Range’ or ‘Trial Phase’ and ‘Study Phase’. New metadata items that couldn’t be mapped against existing entries were added to the bottom of the list. This gave a good visual of which metadata items occurred most frequently across all of the repositories. The results of the mapping exercise were captured in a [Google Sheet](https://docs.google.com/spreadsheets/d/1JGaSJKHHOXtkEtV_NrkSdktlTw5g69W03NjL8deUoMw/edit?usp=sharing). We started with ClinicalTrials.gov because it is the most comprehensive and used repository.
 
 
 
