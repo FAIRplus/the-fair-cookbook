@@ -20,7 +20,7 @@
 
 ## Main Objectives
 
-The purpose of this recipe is to describe the process to define and standardize study and protocol-level (meta)data commonly collected in paediatric clinical trials, with the aim of making trial data more Findable. The recipe details how to:
+The purpose of this recipe is to describe the process to define and standardize study and protocol-level (meta)data commonly collected in paediatric clinical trials, with the aim of making trial data more Findable through a common Interoperable metadata profile. The recipe details how to:
 
 > * Collect & refine a list of representative variables
 * Represent protocol-level additional (meta)data in a complementary data model
