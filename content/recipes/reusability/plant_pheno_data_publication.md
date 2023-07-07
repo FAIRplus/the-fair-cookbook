@@ -40,11 +40,14 @@ TODO
 TODO
 |Data Formats|Terminologies|Model|
 |--- |--- |--- |
+|[MIAPPE](https://fairsharing.org/FAIRsharing.nd9ce9)|||
 
 ## Table of Software and Tools
 TODO
 |Tool Name|
 |--- |
+|[Dataverse](https://dataverse.org/)|
+|[e!DAL](https://edal.ipk-gatersleben.de/)|
 
 ## Step-by-Step process for data submission and publication in Dataverses
 
@@ -104,9 +107,15 @@ It is possible to ask partners to complete certain metadata by giving them the a
 * Save changes
 
 ### Step 2: Add mandatory metadata for plant phenotyping data
+
 ``` {note}
 This section is also applicable to Zenodo.
 ```
+
+```{note}
+Some dataverse instances (such as dmportal.biodata.pt) have a MIAPPE metadata section that allows the use of dataverse web pages to store Biological material, Observation Variable and Study metadata. In that case you can use your dataverse's MIAPPE metadata instead of the MIAPPE metadata files described in this step.
+```
+
 The description of the plant material used in the experimentation proposed by MIAPPE is common to all types of experimentation (phenotypic, genetic, omic, etc…) and enables long-term reuse and interoperability between data sets.
 You can either use the full [MIAPPE template](https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1/MIAPPE_templates) or only selected sheets, available as individual file templates which can be found below. 
 
@@ -152,7 +161,9 @@ It is recommended to list the experimentation done in this dataset, including in
 
 * Save your modifications
 
-### Step 3: Add metadata to the dataset 
+### Step 3: Add generic metadata to the dataset 
+
+These are the metadata that are not specific to plant sciences.
 Select the "Metadata" tab then click on the "add + edit metadata" button
 
 ![](https://hackmd.io/_uploads/SJH_gM4tn.png)
@@ -169,9 +180,6 @@ Recommended metadata:
 * Project Information
 * Time Period Covered (start and end date)
 * Geospatial Metadata > Geographic Coverage
-
-### Optional: Use the dataverse's MIAPPE metadata
-Some dataverse instances (TODO: which ones) have a MIAPPE metadata section that allows the use of dataverse web pages to store Biological material, Observation Variable and Study metadata.
 
 ### Step 4: Publish the dataset
 
