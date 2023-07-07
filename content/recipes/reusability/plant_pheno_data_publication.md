@@ -1,4 +1,4 @@
-# Publication of plant experimental data in generic repositories
+# Publication of plant experimental data in generic data repositories
 
 ````{panels_fairplus}
 :identifier_text: TODO
