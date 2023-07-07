@@ -14,23 +14,19 @@
 ```` 
 
 ## Main Objective
-TODO
+Generic data repositories offer high level metadata, but they are not sufficient to **guarantee interoperability and the possibility to reuse your data later**. They must be completed by the Minimum Information About Plant Phenotyping Experiments ([MIAPPE](https://www.miappe.org/)) international standard. The [Plant Sciences domain page](https://rdmkit.elixir-europe.org/plant_sciences) of the RDMkit describes how MIAPPE is needed and used to clearly document the biological material used as well as the traits, environmental and phenotypical, recorded and computed. Those MIAPPE metadata can be stored using: MIAPPE full template, selected sheets from the full template (recommended since it can be stored as CSV), and ISA Tab archives. The first is the easiest to use, while the latter require a certain level of automation and toolsets.
+
+The main objective of the recipe is to guide plant scientists during the submission of experimental data to generic repositories such as Dataverses, e!Dal-PGP, or Zenodo.
+This includes:
+1. Dataset creation
+2. Addition of mandatory metadata to the dataset
+3. Publication of the dataset.
 
 ## Summary
-This document describes best practices for submitting plant experimentation data to generic data repositories (e.g. [e!DAL-PGP](https://edal-pgp.ipk-gatersleben.de/), Dataverses such as [recherche.data.gouv](https://entrepot.recherche.data.gouv.fr/), [dmportal.biodata.pt](https://dmportal.biodata.pt/) and [Jülich DATA](https://data.fz-juelich.de/)).  This will allow data reuse according to [FAIR](https://en.wikipedia.org/wiki/FAIR_data) principles, and especially :
+This recipe describes best practices for submitting plant experimentation data to generic data repositories (e.g. [e!DAL-PGP](https://edal-pgp.ipk-gatersleben.de/), Dataverses such as [recherche.data.gouv](https://entrepot.recherche.data.gouv.fr/), [dmportal.biodata.pt](https://dmportal.biodata.pt/) and [Jülich DATA](https://data.fz-juelich.de/)).  This will allow data reuse according to [FAIR](https://en.wikipedia.org/wiki/FAIR_data) principles, and especially :
 * Ensure visibility and reuse of genetic and phenomic datasets via minimal and sufficient description: data type, organism, list of plant material used, experimental metadata including methods and protocols, etc.
 * Maximize data visibility by allowing their indexation in international portals
 * Ensure the interoperability of data sets in relation to a coherent identification of plant material used in experiments of various kinds (phenotyping, genotyping, genomics, etc.)
-
-### Why are there mandatory metadata for plant phenotyping data ?
-Generic data repositories offer high level metadata, but they are not sufficient to **guarantee interoperability and the possibility to reuse your data later**. They must be completed by the Minimum Information About Plant Phenotyping Experiments ([MIAPPE](https://www.miappe.org/)) international standard. The [Plant Sciences domain page](https://rdmkit.elixir-europe.org/plant_sciences) of the RDMkit describes how MIAPPE is needed and used to clearly document the biological material used as well as the traits, environmental and phenotypical, recorded and computed. Those MIAPPE metadata can be stored using: MIAPPE full template, selected sheets from the full template (recommended since it can be stored as CSV), and ISA Tab archives. The first is the easiest to use, while the latter require a certain level of automation and toolsets.
-
-
-Example of global dataset management scheme :
-![](https://hackmd.io/_uploads/HJsW0bltn.png)
-Figure 1: The global dataset management scheme for Recherche Data Gouv.
-
-Source: https://recherche.data.gouv.fr/en/category/9/guide/publication-process-schemas-for-a-dataset
 
 ## Graphical overview of the FAIRification Objectives
 TODO
@@ -51,6 +47,9 @@ TODO
 |--- |
 
 ## Step-by-Step process for data submission and publication in Dataverses
+
+Example of global dataset management scheme for dataverses ([Source](https://recherche.data.gouv.fr/en/category/9/guide/publication-process-schemas-for-a-dataset)):
+![The global dataset management scheme for Recherche Data Gouv](https://hackmd.io/_uploads/HJsW0bltn.png)
 
 ### Step 1: Dataset creation
 
@@ -105,8 +104,9 @@ It is possible to ask partners to complete certain metadata by giving them the a
 * Save changes
 
 ### Step 2: Add mandatory metadata for plant phenotyping data
-*Note: This section is also applicable to [Zenodo](https://zenodo.org/).*
-
+``` {note}
+This section is also applicable to Zenodo.
+```
 The description of the plant material used in the experimentation proposed by MIAPPE is common to all types of experimentation (phenotypic, genetic, omic, etc…) and enables long-term reuse and interoperability between data sets.
 You can either use the full [MIAPPE template](https://github.com/MIAPPE/MIAPPE/tree/master/MIAPPE_Checklist-Data-Model-v1.1/MIAPPE_templates) or only selected sheets, available as individual file templates which can be found below. 
 
