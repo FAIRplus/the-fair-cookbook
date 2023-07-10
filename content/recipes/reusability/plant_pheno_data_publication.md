@@ -82,7 +82,7 @@ Also, find the right sub-dataverse for your submission, like the one of the rese
    * Examples under subject ["Agricultural Sciences"](https://data.fz-juelich.de/dataverse/fzj?q=&fq1=subject_ss%3A%22Agricultural+Sciences%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets).
 
 * [dmportal.biodata.pt](https://dmportal.biodata.pt/) (PT)
-   * TODO: who is it open to ?
+   * Open to submission of biological data from Portuguese research & innovation institutions.
    * Example: [Plant BioDataVerse](https://dmportal.biodata.pt/dataverse/plant_biodataverse).
 
 #### Authenticate 
@@ -448,8 +448,8 @@ Documentation specific to:
 * Jülich DATA:
    * [repository details](https://doi.org/10.17616/R31NJMYC)
    * [guide](https://data.fz-juelich.de/guide/juelich/)
-* DMPortal BioData Pt:
-    * TODO
+* BioData.pt:
+    * [resources](https://biodata.pt/resourcewebsites)
 * e!DAL-PGP:
     * [manual](https://edal-pgp.ipk-gatersleben.de/document/manual.html)
 
@@ -463,7 +463,7 @@ Documentation specific to:
 ```
 ````
 
-## Authors:
+## Authors
 ````{authors_fairplus}
 Erwan: Writing - Original Draft
 Vanita: Writing - Original Draft
