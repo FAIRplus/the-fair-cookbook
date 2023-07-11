@@ -29,7 +29,19 @@ This recipe describes best practices for submitting plant experimentation data t
 * Ensure the interoperability of data sets in relation to a coherent identification of plant material used in experiments of various kinds (phenotyping, genotyping, genomics, etc.)
 
 ## Graphical overview of the FAIRification Objectives
-TODO
+
+````{dropdown} **FAIRification Objectives**
+:open:
+
+```{figure} ../../../images/pheno_data_publication_fairification_objectives.png
+---
+width: 700px
+name: FAIRification Objectives
+alt: FAIRification Objectives
+---
+FAIRification Objectives
+```
+````
 
 ## FAIRification Objectives, Inputs and Outputs
 
