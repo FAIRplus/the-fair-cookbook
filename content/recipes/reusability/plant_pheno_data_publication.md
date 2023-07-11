@@ -65,8 +65,6 @@ FAIRification Objectives
 ## Step-by-Step process for data submission and publication in Dataverses
 
 ````{dropdown} **Example of global dataset management scheme for dataverses**
-:open:
-
 ```{figure} ../../../images/global_dataset_management_scheme.png
 ---
 width: 700px
@@ -108,8 +106,6 @@ Connecting with an [ORCID](https://en.wikipedia.org/wiki/ORCID), Github account,
 #### Create a new dataset
 
 ````{dropdown} **Create a new dataset**
-:open:
-
 ```{figure} ../../../images/new_dataset.png
 ---
 width: 1000px
@@ -125,8 +121,6 @@ If you have permissions issues, ask for support from the dataverse owner (data.i
 #### Fill in the metadata
 
 ````{dropdown} **Fill in the metadata**
-:open:
-
 ```{figure} ../../../images/fill_in_metadata.png
 ---
 width: 1000px
@@ -202,8 +196,6 @@ It is recommended to list the experimentation done in this dataset, including in
 * Update the file labels by selecting "File options" > "Tags" for each file
 
 ````{dropdown} **Update the file labels**
-:open:
-
 ```{figure} ../../../images/update_labels.png
 ---
 width: 1000px
@@ -217,8 +209,6 @@ Update the file labels
 * Add a custom label, "Biological_Material" or "Observed_Variable" depending on the file type. If the label exists, it will be available in the "File labels" section, otherwise you will have to create it in the "Customize file label" section and apply it.
 
 ````{dropdown} **Add a custom label**
-:open:
-
 ```{figure} ../../../images/add_label.png
 ---
 width: 1000px
@@ -237,8 +227,6 @@ These are the metadata that are not specific to plant sciences.
 Select the "Metadata" tab then click on the "add + edit metadata" button
 
 ````{dropdown} **Add and edit generic metadata**
-:open:
-
 ```{figure} ../../../images/generic_metadata.png
 ---
 width: 1000px
@@ -268,8 +256,6 @@ Recommended metadata:
 Give access to an unpublished dataset (private URL): Edit dataset > Private URL
 
 ````{dropdown} **Give access to an unpublished dataset**
-:open:
-
 ```{figure} ../../../images/private_url.png  
 ---
 width: 1000px
@@ -283,8 +269,6 @@ Give access to an unpublished dataset
 The submitter of a dataset can generate a private URL, to give access to a dataset not yet published to a person who has no access rights on it.
 
 ````{dropdown} **Create a private URL**
-:open:
-
 ```{figure} ../../../images/create_private_url.png
 ---
 width: 1000px
@@ -296,8 +280,6 @@ Create a private URL
 ````
 
 ````{dropdown} **Unpublished dataset private URL**
-:open:
-
 ```{figure} ../../../images/unpublished_dataset_private_url.png
 ---
 width: 1000px
@@ -313,8 +295,6 @@ Unpublished dataset private URL
 Publish the dataset:
 
 ````{dropdown} **Publish the dataset**
-:open:
-
 ```{figure} ../../../images/publish_dataset.png
 ---
 width: 1000px
@@ -329,8 +309,6 @@ Publish the dataset
 Open your dataset page and login, then choose “Link Dataset”:
 
 ````{dropdown} **Add an existing dataset to a specific dataverse**
-:open:
-
 ```{figure} ../../../images/link_dataset.png
 ---
 width: 1000px
@@ -344,8 +322,6 @@ Add an existing dataset to a specific dataverse
 Find the dataverse in which you want to add your dataset, select it and click on "Save Linked Dataset".
 
 ````{dropdown} **Save Linked dataset**
-:open:
-
 ```{figure} ../../../images/save_linked_dataset.png
 ---
 width: 1000px
@@ -365,8 +341,6 @@ Major aim of the eDAL-PGP repository is FAIR sharing plant related research data
 The eDAL-PGP repository currently provides a local desktop application (Win/Unix/Mac) as well as a simple web-based submission tool to upload research data and initiate the intern review procedure. Both can be downloaded or rather accessed on the [main project website](https://edal-pgp.ipk-gatersleben.de). 
 
 ````{dropdown} **The PGP repository**
-:open:
-
 ```{figure} ../../../images/the_PGP_repository.png
 ---
 width: 1000px
@@ -383,8 +357,6 @@ To authenticate for the submission process the LS AAI (formerly known as ELIXIR 
 For submitting a new dataset some technical metadata are necessary to describe the data and provide the opportunity for assigning a DOI later. Therefore the submission client provides a simple form-based user interface guiding the user through the different attributes and gives feedback in case of missing attributes. Some of the fields like “Description” are simple free text fields, while others like “Authors” provide more options  when clicking into the field like the linkage to the ORCID registry to select the ORCID for every author.
 
 ````{dropdown} **Submit a new dataset**
-:open:
-
 ```{figure} ../../../images/submit_new_dataset.png
 ---
 width: 1000px
@@ -398,8 +370,6 @@ Submit a new dataset
 A dataset can contain single files as well as comprehensive folder structure. Compressed files like \*.zip should be avoided, because this would prevent a later navigation on the content page for the published datasets. After entering all necessary metadata, it is necessary to accept the “Deposition and License Agreement” to start the submission process.
 
 ````{dropdown} **Start the submission process**
-:open:
-
 ```{figure} ../../../images/start_submission_process.png
 ---
 width: 1000px
@@ -416,8 +386,6 @@ After finishing the upload process the submission is ready for the integrated re
 Due to the generic concept of the underlying e!DAL infrastructure software the e!DAL-PGP repository requires only a standardized set of technical metadata inspired by the DublinCore metadata schema as well as the derived DataCite schema, which is needed to assign DOIs. Because of the scope of e!DAL-PGP on sharing mainly plant genotypic and phenotypic datasets the internal review focuses on providing corresponding semantic metadata and domain-specific. To add these metadata files, the data provider can directly add them using a suitable format, such as ISA-Tab or ISA-JSON for MIAPPE-compliant metadata. 
 
 ````{dropdown} **Use the metadata folder to integrate metadata to the dataset**
-:open:
-
 ```{figure} ../../../images/dataset_landing_page.png
 ---
 width: 1000px
@@ -432,8 +400,6 @@ Landing page for a phenotypic dataset in e!DAL-PGP
 Every uploaded dataset will get at the end of the submission and review process a DOI, which resolves to a landing page providing access to the datasets and the corresponding metadata. This DOI is immutable and can be used to reference and cite the datasets persistently. Before the final publication every data provider will receive a temporary preview link and decide on his own if and when he makes his datasets public. The preview link allows sharing the data before for additional review and communication with colleagues, but it is not intended to be used for permanent sharing. Additionally the mail contains two links to assign the final DOI or cancel the submission in case of any necessary changes.
 
 ````{dropdown} **Final approval email for data provider**
-:open:
-
 ```{figure} ../../../images/confirm_dataset_publication.png
 ---
 width: 1000px
@@ -495,6 +461,7 @@ Daniel: Writing - Original Draft
 Daniel: Writing - Original Draft
 Inês: Writing - Original Draft
 Cyril: Review & Editing
+Philippe: Review & Editing
 ````
 
 ## Licence
