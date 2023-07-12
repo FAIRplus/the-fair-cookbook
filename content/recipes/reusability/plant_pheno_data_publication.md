@@ -460,6 +460,7 @@ Celia: Writing - Original Draft
 Daniel: Writing - Original Draft
 Daniel: Writing - Original Draft
 Inês: Writing - Original Draft
+Sebastian: Writing - Original Draft
 Cyril: Review & Editing
 Philippe: Review & Editing
 ````
