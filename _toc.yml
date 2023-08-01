@@ -196,6 +196,8 @@
       sections:
         - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - the MIAPPE use case
+        - file: content/recipes/reusability/plant_pheno_data_publication #TODO
+          title: Publishing plant phenotypic data
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
           sections:
