@@ -184,7 +184,7 @@ Each of the above variables were populated (where possible) with information fro
 
 ## The metadata profile in action
 
-The metadata profile created using the steps described above was used to create a metadata schema in MS Excel.
+The metadata profile created using the steps described above was used to create a metadata schema in tabular format, as shown in the following table:
 
 | Variable/record_id | Form Name | Section Header | Field Type | Field Label |
 | :------------- | :------------- | :------------- |:------------- | :------------- |
