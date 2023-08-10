@@ -118,49 +118,64 @@ The first step created a list of metadata items from the Advanced Search screen 
 
 
 ## Refining the initial metadata list
-The list of metadata items was reviewed by c4c partners, and those not considered cross cutting or common enough for paediatric clinical trials were removed from the list. The original list consisted of 36 items and this was reduced to 27. The following were identified for inclusion:
+The list of metadata items was reviewed by c4c partners, and those not considered cross cutting or common enough for paediatric clinical trials were removed from the list. The original list consisted of 36 items and this was reduced to 28. The following were identified for inclusion:
 
-| Considered cross cutting or common enough to be included in the metadata schema | Not considered cross cutting or common enough to be included in the Metadata Schema|
+| Considered cross cutting or common enough to be included in the metadata schema |
+| :------------- |
+| Study IDs |
+| Title |
+| Acronym |
+| Condition or Disease |
+| Therapeutic Area |
+| Indication | 
+| Study Type | 
+| Phase |
+| Funder Type | 
+| Study Start | 
+| Sample Size |  
+| Study Description |  
+| Status: Recruitment   |
+| Study Documents |  
+| Study Results |  
+| Country |  
+| Age |  
+| Age Group |  
+| Sex |  
+| Ethnicity |  
+| Race |  
+| Additional Inclusion Criteria |  
+| Additional Exclusion Criteria |  
+| Outcome Measures |  
+| Intervention/Treatment |  
+| IMP with Orphan Designation in the Indication |  
+| Biospecimens Retained |  
+| Product Class |  
+
+The following 8 terms were excluded after the initial review, either because they were unique to one particular registry's model and therefore not considered cross cutting enough, or because the information they represented could be abstracted into one of the selected variables.
+
+| Not considered cross cutting or common enough to be included in the Metadata Schema| Comment |
 | :------------- | :------------- |
-| Study IDs | Rare Disease (tick box yes/no) |
-| Title | Intervention Model |
-| Acronym | NCT Number |
-| Condition or Disease | Consent |
-| Therapeutic Area | Criterion |
-| Indication | Site Name |
-| Study Type | Formulation |
-| Phase | Route of Administration |
-| Funder Type |  |
-| Study Start |  |
-| Sample Size |  |
-| Study Description |  |
-| Status: Recruitment |  |
-| Study Documents |  |
-| Study Results |  |
-| Country |  |
-| Age |  |
-| Age Group |  |
-| Sex |  |
-| Ethnicity |  |
-| Race |  |
-| Additional Inclusion Criteria |  |
-| Additional Exclusion Criteria |  |
-| Outcome Measures |  |
-| Intervention/Treatment |  |
-| IMP with Orphan Designation in the Indication |  |
-| Biospecimens Retained |  |
-| Product Class |  |
+| Rare Disease (tick box yes/no) | There is no fixed defintion of "rare disease". The condition or disease studied in a trial is included in the final list of variables|
+| Intervention Model | Covered by existing variables |
+| NCT Number | Sub-type of study ID |
+| Consent | Legal frameworks around consent vary widely and consent conditions are not captured consistently, which would make mapping historical clinical trials to the new model problematic |
+| Criterion | Covered by existing variables |
+| Site Name | Covered by other location metadata |
+| Formulation | Covered by existing variables |
+| Route of Administration | Covered by existing variables |
 
 ## Testing the metadata profile with a representative clinical trial protocol
 
 Each of the above variables were populated (where possible) with information from a clinical trial protocol. They were also mapped to the following ontologies/vocabularies:
 
-- [OMOP vocabularies](https://athena.ohdsi.org/search-terms/start)
-- [Clinical Trials Ontology](https://www.ebi.ac.uk/ols/ontologies/cto)
-- [NCI Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/) 
+| Vocabulary| Reason for selection |
+| :------------- | :------------- |
+| [OMOP vocabularies](https://athena.ohdsi.org/search-terms/start) | OMOP CDM is commonly used for structuring trial results and study participant information |
+| [NCI Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/) | NCIt is aligned with the CDSIC vocabularies used to mark up data in CDISC SDTM format, mandated by the regulatory authorities in the USA for deposition |
+| [Clinical Trials Ontology](https://www.ebi.ac.uk/ols/ontologies/cto) | Potential to provide a semantic bridge between CDISC and OMOP representations and the preclinical world where [OBO Foundry](https://obofoundry.org/) resources are extensively used for semantic representation |
 
 
-Example:
+### Example:
 
 | Term | Protocol | OMOP | Clinical Trials Ontology | NCI Thesaurus |
 | :------------- | :------------- | :------------- |:------------- | :------------- | 
@@ -254,7 +269,7 @@ This schema was used to create a survey in [REDCap](https://www.project-redcap.o
 | biospecimens_text | C4C Study Metadata Collection | Treatment Information | text box | Type of Biospecimens Retained |
 | product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class |
 
-The REDCap survey will be sent to studies within the c4c consortium for additional testing. A representative of the study will be asked to complete the survey with metadata from their study and provide feedback. This feedback will be used to further refine the list of metadata items collected. The final metadata schema will be used to create a [FAIR Data Point](https://www.fairdatapoint.org/) for c4c studies.  In the future this will allow researchers to find sources of paediatric data from clinical trials. 
+The REDCap survey will be sent to studies within the c4c consortium for additional testing. A representative of the study will be asked to complete the survey with metadata from their study and provide feedback. This feedback will be used to further refine the list of metadata items collected. A [Shapes Constraint Language (ShaCL)](https://www.w3.org/TR/shacl/) representation of the final metadata schema will be used to create a [FAIR Data Point](https://www.fairdatapoint.org/) for c4c studies. A FAIR Data Point is a REST API and web client for creating, storing, and serving metadata in compliance with the FAIR principles through the use of standardised exchange formats. This will allow researchers to find sources of paediatric data from clinical trials. 
 
 
 ---
