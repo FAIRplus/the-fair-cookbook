@@ -229,21 +229,24 @@ This schema was used to create a survey in [REDCap](https://www.project-redcap.o
 | :------------- | :------------- | :------------- |:------------- | :------------- |
 | record_id | C4C Study Metadata Collection |  | autofill | Record ID |
 |  | C4C Study Metadata Collection | Study Information | begin new section |  |
-| study_id\_ct.gov | C4C Study Metadata Collection | Study Information | short text | ClinicalTrials.gov ID |
+| study_id\_ct.gov | C4C Study Metadata Collection | Study Information | short text | ClinicalTrials.gov ID |
 | study_id\_eudract | C4C Study Metadata Collection | Study Information | short text | EudraCT/CTIS ID |
 | study_id\_brand | C4C Study Metadata Collection | Study Information | short text | Study Brand Name ID (if applicable) |
 | study_id\_text | C4C Study Metadata Collection | Study Information | text box | Add Additional Study IDs |
 | study_title | C4C Study Metadata Collection | Study Information | text box | Study Title |
 | study_acronym | C4C Study Metadata Collection | Study Information | short text | Study Acronym |
-| disease | C4C Study Metadata Collection | Study Information | ontology field | Condition or Disease |
+| disease_snomed\_1 | C4C Study Metadata Collection | Study Information | ontology field | First Condition or Disease - SNOMED CT |
+| disease_snomed\_2 | C4C Study Metadata Collection | Study Information | ontology field | Second Condition or Disease (if applicable) - SNOMED CT |
+| disease_omim\_1 | C4C Study Metadata Collection | Study Information | ontology field | First Condition or Disease - OMIM |
+| disease_omim\_2 | C4C Study Metadata Collection | Study Information | ontology field | Second Condition or Disease (if applicable) - OMIM |
 | therapeutic_area | C4C Study Metadata Collection | Study Information | ontology field | Therapeutic Area |
 | indication | C4C Study Metadata Collection | Study Information | text box | Indication |
 | study_type | C4C Study Metadata Collection | Study Information | dropdown | Study Type |
 | study_type\_other | C4C Study Metadata Collection | Study Information | short text | Add Other Study Types |
-| phase | C4C Study Metadata Collection | Study Information | dropdown | Phase of Trial |
+| phase | C4C Study Metadata Collection | Study Information | multiple choice | Phase of Trial |
 | phase_other | C4C Study Metadata Collection | Study Information | short text | Add Additional Trial Phases |
 | funder_type | C4C Study Metadata Collection | Study Information | dropdown | Funder Type |
-| funder_type\_other | C4C Study Metadata Collection | Study Information | short text | Provide Information about 'Other' Funder Types |
+| funder_type\_other | C4C Study Metadata Collection | Study Information | short text | Provide Information about ‘Other’ Funder Types |
 | study_start | C4C Study Metadata Collection | Study Information | date field | Study Start Date |
 | sample_size | C4C Study Metadata Collection | Study Information | short text | Estimated Sample Size |
 | study_description | C4C Study Metadata Collection | Study Information | text box | Study Description |
@@ -263,11 +266,15 @@ This schema was used to create a survey in [REDCap](https://www.project-redcap.o
 | exclusion_criteria | C4C Study Metadata Collection | Inclusion/Exclusion Criteria | text box | Additional Exclusion Criteria |
 | outcome_measures | C4C Study Metadata Collection | Inclusion/Exclusion Criteria | text box | Outcome Measures |
 |  | C4C Study Metadata Collection | Treatment Information | begin new section |  |
-| intervention_treatment | C4C Study Metadata Collection | Treatment Information | ontology field | Intervention/Treatment |
+| intervention_treatment | C4C Study Metadata Collection | Treatment Information | ontology field | First Intervention/Treatment |
+| product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class - First Intervention/Treatment |
+| intervention_treatment\_2 | C4C Study Metadata Collection | Treatment Information | ontology field | Second Intervention/Treatment |
+| product_class\_2 | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class - Second Intervention/Treatment |
 | orphan_designation | C4C Study Metadata Collection | Treatment Information | dropdown | IMP with orphan designation in the indication |
 | biospecimens_retained | C4C Study Metadata Collection | Treatment Information | dropdown | Biospecimens Retained |
 | biospecimens_text | C4C Study Metadata Collection | Treatment Information | text box | Type of Biospecimens Retained |
-| product_class | C4C Study Metadata Collection | Treatment Information | ontology field | Product Class |
+|  | C4C Study Metadata Collection | Comments | begin new section |  |
+| comments | C4C Study Metadata Collection | Comments | text box | Comments |
 
 The REDCap survey will be sent to studies within the c4c consortium for additional testing. A representative of the study will be asked to complete the survey with metadata from their study and provide feedback. This feedback will be used to further refine the list of metadata items collected. A [Shapes Constraint Language (ShaCL)](https://www.w3.org/TR/shacl/) representation of the final metadata schema will be used to create a [FAIR Data Point](https://www.fairdatapoint.org/) for c4c studies. A FAIR Data Point is a REST API and web client for creating, storing, and serving metadata in compliance with the FAIR principles through the use of standardised exchange formats. This will allow researchers to find sources of paediatric data from clinical trials. 
 
