@@ -1,8 +1,6 @@
 (fcb-interop-onto-op)=
 # Ontology-related tools and services
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB022
@@ -212,6 +210,10 @@ To show how these tools can be used in real life examples, please check the rela
 ````
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

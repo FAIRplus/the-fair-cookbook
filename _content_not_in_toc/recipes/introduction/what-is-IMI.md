@@ -3,8 +3,7 @@
 
 # What is IMI?
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: RX.X

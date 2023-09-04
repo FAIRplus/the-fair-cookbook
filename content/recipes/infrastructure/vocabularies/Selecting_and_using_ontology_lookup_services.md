@@ -1,8 +1,7 @@
 (fcb-select-onto-service)=
 # Selecting an ontology lookup service
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB004
@@ -824,6 +823,10 @@ Twitter OBOFoundry account: 220 followers
 
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

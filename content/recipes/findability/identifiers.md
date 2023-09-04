@@ -1,8 +1,7 @@
 (fcb-find-identifiers)=
 # Unique, persistent identifiers
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB006
@@ -16,8 +15,7 @@
 :has_executable_code: nope
 :recipe_name: Introducing unique, persistent identifiers
 ```` 
-<br>
-<br>
+
 
 The **FAIR principles**, under the `Findability` and the `Accessibility` chapters respectively, state that: 
 > F1. (Meta)data are assigned a globally unique and persistent identifier
@@ -434,44 +432,44 @@ This is very useful for including unambiguous, global identifiers in scientific 
 
 ## Conclusion
 
-> In this recipe, we have given an overview of globally unique and persistent identifier {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR principle F1. We have covered:
->
-> - The difference between global and local identifiers;
-> - How to convert a local identifier into a global one;
-> - Opaque and transparent identifiers
->
-> We have given an overview of the different services available for handling identifiers.
-> 
-> But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI{footcite}`URL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF{footcite}`RDFconcepts` and HTTP.
-> 
->
-> ### What should I read next?
-* [Identifier Minting with Minid Client](fcb-find-id-minid)
+In this recipe, we have given an overview of globally unique and persistent identifier {footcite}`McMurry2017`, {footcite}`Ananthakrishnan2020`, i.e. FAIR principle F1. We have covered:
+
+- The difference between global and local identifiers;
+- How to convert a local identifier into a global one;
+- Opaque and transparent identifiers
+
+We have given an overview of the different services available for handling identifiers.
+ 
+But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on 3 W3C standards: URI{footcite}`URL`,{footcite}`cool-uri`,{footcite}`cool-urisemweb`, RDF{footcite}`RDFconcepts` and HTTP.
+
+### What to read next?
 <!-- > * [Why resolvable identifiers matter?](https://www.TODO.org/findability/why-identifiers.html) -->
-> * [Identifier Resolution Services](fcb-infra-idres)
-> * [Identifier Mapping Services](fcb-identifier-mapping)
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/pistoia_logo.png
-> :height: 40px
-> :align: center
-> :name: FAIRtoolkit_logo
-> ```
-> ^^^
->[The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> ---
-> :header: bg-primary pa_dark
-> :body: grey
-  > ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Identifiers` from the `RDMkit`](https://rdmkit.elixir-europe.org/identifiers.html)
-> ````
+* [Identifier Minting with Minid Client](fcb-find-id-minid)
+* [Identifier Resolution Services](fcb-infra-idres)
+* [Identifier Mapping Services](fcb-identifier-mapping)
+
+````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/pistoia_logo.png
+:height: 40px
+:align: center
+:name: FAIRtoolkit_logo
+```
+^^^
+- [The Pistoia Alliance FAIRtoolkit use cases: Adoption and Impact of an identifier policy at Astra-Zeneca](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 
 
 

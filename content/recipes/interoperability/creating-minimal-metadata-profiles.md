@@ -1,8 +1,6 @@
 (fcb-interop-metadataprofile)=
 # Creating a metadata profile
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB026
@@ -74,22 +72,13 @@ Without a set of competency questions, important variables may easily be forgott
 - Re-iterate the reality check until no more severe errors and gaps are occurring that are relevant for the previously defined competency questions
 
 
-> ###  What to read next?
->
-> - {ref}`fcb-interop-covid-metadata`
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
-> ````
+##  What to read next?
+
+- {ref}`fcb-interop-covid-metadata`
+
+````{rdmkit_panel}
+````
+
 
 
 ## Authors

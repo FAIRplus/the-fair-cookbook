@@ -1,6 +1,4 @@
 # Registering Datasets in Wikidata
-<br/>
-<br/>
 
  ````{panels_fairplus}
 :identifier_text: FCB060
@@ -188,6 +186,10 @@ but works identical to other research output, such as datasets.
 ````
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

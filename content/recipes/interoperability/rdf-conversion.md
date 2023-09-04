@@ -1,8 +1,6 @@
 (fcb-rdf-conversion)=
 # An inventory of tools for converting data to RDF
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -102,6 +100,7 @@ Based on these criteria, find the right tool in the table below. Jump to the sec
 |                                           | GUI | CLI, automation | Reuse mappings | Messy data | Virtual graph |
 | ----------------------------------------- | --- | --------------- | -------------- | ---------- | ------------- |
 | OpenRefine + RDF extension                | ✅   | +/-         | +/-        | ✅          |               |
+| Tarql: SPARQL for Tables                  |     |✅                | +/-               |                        |
 | TopBraid Composer (ME)1                   | ✅   |                 |                |            |               |
 | RML-based tools (RML mapper, SDM-RDFizer) |     | ✅               | ✅              |            |               |
 | SPARQL-Generate                           |     | ✅               | ✅              |            |               |
@@ -300,11 +299,16 @@ For python there’s the [RDFLib](https://rdflib.dev/) package. Working in Jupyt
 For Java the two most common libraries for working with RDF are [Apache Jena](https://jena.apache.org/) and [Eclipse RDF4J](https://rdf4j.org/).
 
 
-#### What should I read next?
+## What to read next?
 
 * [A data engineer's guide to semantic modelling - Ilaria Maresi](https://doi.org/10.5281/zenodo.3898519) (Zenodo)
 
+````{rdmkit_panel}
+````
 
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ````
 

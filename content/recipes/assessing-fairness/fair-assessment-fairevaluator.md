@@ -1,8 +1,6 @@
 (fcb-assess-fair-automatic-evaluator)=
 # FAIR Evaluator tool
 
-<br/>
-<br/>
 
 
 ````{panels_fairplus}
@@ -201,6 +199,10 @@ Clarke et al. FAIRshake: Toolkit to Evaluate the FAIRness of Research Digital Re
  -->
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

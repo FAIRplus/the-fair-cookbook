@@ -1,8 +1,6 @@
 (fcb-interop-txmetadata)=
 # Metadata profile for transcriptomics
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB027
@@ -233,6 +231,10 @@ template is provided [here](creating-minimal-metadata-profiles.md)
 ````{dropdown} **References**
 ````
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 <!-- TODO clarify the contribution of Karsten and Peter -->

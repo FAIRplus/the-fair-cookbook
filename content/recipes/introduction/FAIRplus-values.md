@@ -1,8 +1,7 @@
 (fcb-intro-fair-values)=
 # Reflections on the Ethical values of FAIR
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB072
@@ -108,6 +107,10 @@ A lot has been written about the values underpinning data sharing but little has
 ````{dropdown} **Reference**
 ````
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

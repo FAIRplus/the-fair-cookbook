@@ -2,8 +2,6 @@
 
 # FAIR and Knowledge graphs 
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB070
@@ -477,6 +475,10 @@ metadata, data about the data  in a FAIR way.
 >- {ref}`fcb-interop-covid-metadata`
 >- {ref}`fcb-interop-etl`
 
+
+````{rdmkit_panel}
+````
+
 ## References
 
 ````{dropdown} **References** 
@@ -513,6 +515,10 @@ metadata, data about the data  in a FAIR way.
 
 -->
 
+ 
+### What to read next?
+````{fairsharing_panel}
+````
  
 ## Authors
 ````{authors_fairplus}

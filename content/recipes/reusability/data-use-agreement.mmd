@@ -1,0 +1,40 @@
+graph TD
+
+subgraph 1
+  A0(1. Data Requester / Project researcher):::box1
+  A0 -->|produces|A1(research proposal):::box2
+end
+
+
+
+subgraph 2
+  A00(2. Research Project consortium):::box1 -->|produces|A11(Confidentiality Disclosure <br> & <br> Collaboration Agreement):::box2
+end
+
+subgraph 3
+ LT(3. legal team) -->|defines|Terms(legal terms)
+end
+
+subgraph 4
+  F(4. Data Use Agreement):::box2 -->|defines|G(data use limitations):::box5
+  G -->|allows|G1(disease specific research):::box5
+  F -->|imposes|F3(data use requirements, <br> e.g. `geographical restriction`):::box5
+  G -->|prohibits|F2(data redistribution):::box5
+end
+
+
+subgraph 5
+  DH(5.data hosting organization) -->|hosts|Data(data)
+end
+
+subgraph 6
+  B(Study Sponsor / IMI Project) -->|checks|C1
+  B -->|delegates decision to|E
+  E(data custodian) -->|checks|C1
+
+  C1[eligibility criteria]:::box2 -->|used by|D
+  B -->|performs|D{data access request <br> evaluation  process}:::box4
+  D -->|request rejected|A2(Negotiation Protocol ends):::box
+  D -->|request approved|D1(Negotiation Protocol procedes):::box3
+end
+

@@ -1,8 +1,6 @@
 (fcb-eubopen)=
 #  IMI EUBOPEN FAIR High-Content Screening data deposition
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB067
@@ -204,11 +202,21 @@ With this content and the associated python scripts, we highlight path to deposi
 This therefore improves **Findability** and **Reusability** of such data.
 
 ### What to read next?
->
-> {ref}`fcb-access-aspera`
-> {ref}`fcb-find-zenodo`
-> 
->
+- {ref}`fcb-access-aspera`
+- {ref}`fcb-find-zenodo`
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+```` 
+
 
 
 ## References

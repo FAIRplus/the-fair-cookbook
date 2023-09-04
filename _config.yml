@@ -44,7 +44,7 @@ launch_buttons:
 repository:
   url                       : https://github.com/FAIRplus/the-fair-cookbook  # The URL to your book's repository
   path_to_book              : ""  # A path to your book's folder, relative to the repository root.
-  branch                    : migrating  # Which branch of the repository should be used when creating links
+  branch                    : main  # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings 
@@ -71,6 +71,8 @@ sphinx:
     figure_fairplus: _ext/
     license_fairplus: _ext/
     panels_fairplus: _ext/
+    rdmkit_panel: _ext/
+    fairsharing_panel: _ext/
 
 parse:
   myst_url_schemes: [ mailto, http, https, ftp ]

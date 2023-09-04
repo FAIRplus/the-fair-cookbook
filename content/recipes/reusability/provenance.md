@@ -1,8 +1,6 @@
 (fcb-reusability-provenance)=
 # Provenance information
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB036
@@ -402,33 +400,36 @@ material listed below:
 
 ### What to read next?
 
-> * [Generating ISA based metadata and packaging it as a research object programmatically](https://w3id.org/faircookbook/FCB___)
-> * [Making workflow information FAIR and depositing to Workflowhub](https://w3id.org/faircookbook/FCB___)
-> * [How to meet community standards for annotation](fcb-interop-txmetadata) {ref}`fcb-interop-txmetadata`
-> * [FAIR data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
-> * [Minid identifiers](https://w3id.org/faircookbook/FCB008)
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Transfer` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_transfer.html)
-> ---
-> :header: bg-primary pa_dark
-> ```{image} ../../../images/logos/pistoia_logo.png
-> :height: 40px
-> :align: center
-> :name: FAIRtoolkit_logo
-> ```
-> ^^^
-> [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)
-> ````
+* [Generating ISA based metadata and packaging it as a research object programmatically](https://w3id.org/faircookbook/FCB___)
+* [Making workflow information FAIR and depositing to Workflowhub](https://w3id.org/faircookbook/FCB___)
+* [How to meet community standards for annotation](fcb-interop-txmetadata) {ref}`fcb-interop-txmetadata`
+* [FAIR data matrix](fcb-fairify-examples-datamatrix) {ref}`fcb-fairify-examples-datamatrix`
+* [Minid identifiers](https://w3id.org/faircookbook/FCB008)
+
+
+````{panels}
+:column: col-md-4
+:card: border-2
+:header: bg-primary pa_dark
+```{image} ../../../images/logos/pistoia_logo.png
+:height: 40px
+:align: center
+:name: FAIRtoolkit_logo
+```
+^^^	
+- [More about `Identifier` from the `Pistoia Alliance FAIR toolkit`](https://fairtoolkit.pistoiaalliance.org/use-cases/adoption-and-impact-of-an-identifier-policy-astrazeneca/)	
+---
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
+
 <!--
 > :header: bg-primary pa_dark
 > ```{image} ./../../../../../../_static/images/logo/TTW.svg

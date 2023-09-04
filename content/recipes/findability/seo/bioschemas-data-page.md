@@ -1,8 +1,6 @@
 (fcb-find-bs-data)=
 # Marking up Data pages with Schema.org & Bioschemas for SEO
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB011
@@ -227,26 +225,20 @@ We will outline the steps for embedding machine processable mark up within a web
 
 ### What to read next?
 
-> - {ref}`fcb-find-bs-catalog`
-> - {ref}`fcb-find-bs-dataset`
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Machine Actionability` from the `RDMkit`](https://rdmkit.elixir-europe.org/machine_actionability.html)
-> ````
+- {ref}`fcb-find-bs-catalog`
+- {ref}`fcb-find-bs-dataset`
+
+````{rdmkit_panel}
+````
 
 
 
 
 
+
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 <a name="draft-profiles">1</a>: If you do not see your data type listed, tick the `Include Draft Profiles` to see if there is a draft profile for your data type. Otherwise contact the Bioschemas community to suggest development of a new profile.  

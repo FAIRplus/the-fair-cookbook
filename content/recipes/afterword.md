@@ -16,7 +16,7 @@ The `FAIR Cookbook` is built using [jupyter-book](https://jupyterbook.org/intro.
 
 ## Support and contact
 
-Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or contact us at [fairplus-cookbook@elixir-europe.org](mailto:fairplus-cookbook@elixir-europe.org) and we will help you.
+Having troubles? Check out our [issue tracker](https://github.com/FAIRplus/the-fair-cookbook/issues) or contact us at [faircookbook-ed@elixir-europe.org](mailto:faircookbook-ed@elixir-europe.org) and we will help you.
 
 ---
 

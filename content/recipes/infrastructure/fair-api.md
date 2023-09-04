@@ -617,16 +617,17 @@ programming languages and other standardized systems.
 
 This content type focus on using OpenAPI.
 
-> [Grlc](http://grlc.io/): "converting your SPARQL queries into RESTful APIs"
->
-> [GraphQL](https://graphql.org/):  "a Query Language for your API"
-> 
-> [OpenAPI-to-GraphQL](https://github.com/IBM/openapi-to-graphql) "From OpenAPI-to-GraphQL "
-> 
-> [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL) "an example of a GraphQL querying mechanism built to interrogate ISA metadata".
+- [Grlc](http://grlc.io/): "converting your SPARQL queries into RESTful APIs"
+- [GraphQL](https://graphql.org/):  "a Query Language for your API"
+- [OpenAPI-to-GraphQL](https://github.com/IBM/openapi-to-graphql) "From OpenAPI-to-GraphQL "
+- [ISA-graphql](https://github.com/ISA-tools/isa-api/tree/develop/isatools/graphQL) "an example of a GraphQL querying mechanism built to interrogate ISA metadata".
 
+````{rdmkit_panel}
+````
 
-
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **Reference**

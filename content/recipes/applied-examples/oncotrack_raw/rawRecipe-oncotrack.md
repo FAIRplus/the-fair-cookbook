@@ -1,8 +1,6 @@
 (fcb-fairify-examples-oncotrack)=
 # Oncotrack - observational clinical cohort datasets
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB044
@@ -275,6 +273,10 @@ Supplementary figure 1: [Example of Sample 150-MET1-XEN2 in BioSamples database]
 
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

@@ -1,8 +1,6 @@
 (fcb-find-zenodo)=
 # Depositing to generic repositories - Zenodo use case
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB009
@@ -475,25 +473,23 @@ r.status_code
     
     
 
-> ### What should I read next?
-> * [How to build a data catalogue?](fcb-infra-build-catalog)
-> * How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
-> * [What is search engine optimization?](fcb-find-seo)
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Data Publication` from the `RDMkit`](https://rdmkit.elixir-europe.org/data_publication.html)
-> ````
-
-
+### What to read next?
+* [How to build a data catalogue?](fcb-infra-build-catalog)
+* How to deploy the FAIRPORT data catalogue?<!-- TODO add a link to corresponding document -->
+* [What is search engine optimization?](fcb-find-seo)
+ 
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 
 ## References
 ````{dropdown} **References**

@@ -1,8 +1,7 @@
 (fcb-infra-chemid)=
 # InChI and SMILES identifiers for chemical structures
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB007
@@ -90,11 +89,17 @@ This recipe explained who to validate the chemical structures in an SDF file,
 and convert them to SMILES, InChI, and InChIKey. The latter can then be used
 with BridgeDb and its metabolite ID mapping databases to get additional identifiers.
 
-### What should I read next?
+### What to read next?
+
 * [Identifier mapping with BridgeDb](https://w3id.org/faircookbook/FCB017)
 
+````{rdmkit_panel}
+````
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 
 ````{dropdown} **References**

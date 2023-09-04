@@ -1,8 +1,6 @@
 (fcb-interop-datadictionary)=
 # Creating data/variable dictionary
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB025
@@ -201,22 +199,23 @@ Why? Simply because if affords several key data management processes to take pla
 
 ### What to read next?
 
-> - {ref}`fcb-selecting-ontologies`
-> - {ref}`fcb-interop-etl`
-> - Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
-> 
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
-> ````
+- {ref}`fcb-selecting-ontologies`
+- {ref}`fcb-interop-etl`
+- Key issues to be aware of when planning [Extract-Transform-Load processes]( TODO add link)
+
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
+
 > 
 <!--
  >- {ref}`fcb-interop-ontomapping` (*in preparation*)

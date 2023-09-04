@@ -1,8 +1,6 @@
 (fcb-interop-ontorobot)=
 # Building an application ontology with ROBOT
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB023
@@ -536,20 +534,25 @@ robot query --input <input_ontology_file> \
 
 ## Conclusions
 
-> Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. 
-> This more advanced recipe has identified and described all the different steps that one needs to consider building such a resource.
-> While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date.
-> It is therefore also critical to understand the benefits of contributing to existing open efforts.    
+Creation an application ontology and semantic model to support knowledge discovery is an important process in the data management life cycle. 
+This more advanced recipe has identified and described all the different steps that one needs to consider building such a resource.
+While this is important, one should bear in mind the costs associated with maintaining those artefacts and keeping them up to date.
+It is therefore also critical to understand the benefits of contributing to existing open efforts.    
 
-> ### What should I read next?
->
+### What to read next?
+
 * OBO Foundry Semantic Engineering training and the [Robot tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-1/) 
 * {ref}`fcb-interop-metadataprofile`  <!-- How to establish a minimal metadata profile? --> <!-- TODO add a link to corresponding document -->
 * {ref}`fcb-interop-ontorequest` <!-- How to submit/request terms to an ontology ?--> <!-- TODO add a link to corresponding document -->
 
+````{rdmkit_panel}
+````
 
 
 
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

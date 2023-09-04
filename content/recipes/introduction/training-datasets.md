@@ -1,8 +1,6 @@
 (fcb-intro-training-datasets)=
 # Biomedical datasets of relevance for training in FAIRification
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB069
@@ -181,10 +179,10 @@ Remember to understand the data stewardship requirements that go along with hand
 <!-- 
 TODO : fill in the links to what-should-I-read-next recipes 
 
-> ### What should I read next?
-> * How to request data access and deal with data access committees? < TODO add a link to corresponding document >
-> * How to do NER on EHR with NLP?< TODO add a link to corresponding document >
-> * How to deal with unstructured text?< TODO add a link to corresponding document >
+### What to read next?
+* How to request data access and deal with data access committees? < TODO add a link to corresponding document >
+* How to do NER on EHR with NLP?< TODO add a link to corresponding document >
+* How to deal with unstructured text?< TODO add a link to corresponding document >
 --->
 
 <!-- {download}`bibliography-identifier-mapping.bib <./bibref/bibliography-identifier-mapping.bib>` -->
@@ -202,6 +200,10 @@ https://www.ohdsi.org/wp-content/uploads/2015/04/Lee_Evans_CDMV5_Test_Data_Prese
  -->
 
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 ````{authors_fairplus}
 Philippe: Writing - Original Draft

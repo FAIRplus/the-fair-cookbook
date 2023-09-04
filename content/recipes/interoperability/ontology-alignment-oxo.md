@@ -240,12 +240,18 @@ The corresponding results are as follows:
 This recipe presented OxO, EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
 In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
 
-> ### What should I read next?
-> * [How to build a data dictionary?](fcb-interop-datadictionary)
-> * [How to build an ontology using robot?](fcb-interop-ontorobot)
+### What to read next?
+
+* [How to build a data dictionary?](fcb-interop-datadictionary)
+* [How to build an ontology using robot?](fcb-interop-ontorobot)
+
+````{rdmkit_panel}
+````
 
 
-
+````{fairsharing_panel}
+````
+ 
 ## References
 ````{dropdown} **References**
 ```{footbibliography}

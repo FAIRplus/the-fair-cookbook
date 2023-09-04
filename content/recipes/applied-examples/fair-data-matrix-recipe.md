@@ -1,8 +1,7 @@
 (fcb-fairify-examples-datamatrix)=
 # Making omics data matrix FAIR
 
-+++
-<br/>
+
 
 ````{panels_fairplus}
 :identifier_text: FCB037
@@ -167,6 +166,10 @@ Lastly, we produced a study description file, in ISA-Tab format (https://doi.org
 Rocca-Serra, P., Sansone, S. Experiment design driven FAIRification of omics data matrices, an exemplar. Sci Data 6, 271 (2019) [doi:10.1038/s41597-019-0286-0](https://doi.org/10.1038/s41597-019-0286-0)
 ````
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 
 ````{authors_fairplus}

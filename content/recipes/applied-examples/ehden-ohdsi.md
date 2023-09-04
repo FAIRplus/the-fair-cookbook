@@ -1,8 +1,6 @@
 (fcb-ehden-ohdsi)=
 # FAIRification of observational studies and databases: the EHDEN and OHDSI use case
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB054
@@ -505,9 +503,14 @@ problem, but this is out of scope of this recipe.
 describing web crawling, robots.txt, sitemaps and possible roadblocks.
 * [Recipe](https://w3id.org/faircookbook/FCB026) on how to create a metadata profile.
 * [EHDEN Deliverable D4.5 - Interoperability roadmap](https://zenodo.org/record/4474373).
+````{rdmkit_panel}
+````
 
 
 
+````{fairsharing_panel}
+````
+ 
 ````{dropdown} **References**
 ````
 

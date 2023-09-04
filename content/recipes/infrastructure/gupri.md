@@ -217,13 +217,23 @@ However, if scale-up is required and millions of GUPRIs are needed, a different 
 
 
 ### What to read next?
->
-> {ref}`fcb-find-identifiers`
-> 
-> {ref}`fcb-find-id-minid`
-> 
-> http://web.mit.edu/handle/www/purl-eval.html
->
+
+- {ref}`fcb-find-identifiers` 
+- {ref}`fcb-find-id-minid` 
+- http://web.mit.edu/handle/www/purl-eval.html
+
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
 
 
 

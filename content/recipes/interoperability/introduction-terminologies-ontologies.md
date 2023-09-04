@@ -1,8 +1,6 @@
 (fcb-introduction-terminologies-ontologies)=
 # Introduction to terminologies and ontologies
 
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB019
@@ -163,25 +161,25 @@ These criteria are simply indicative and need to be modulated depending on the `
 Choosing an ontology and semantic resources is a complex issue, which requires careful consideration, taking into account the research context of the data production workflow and regulatory requirements that may apply. The choices made affect the integrative potential of a dataset as they influence the level of `interoperability`. 
 Clearly, declaring the semantic resources used to annotate a dataset also influences the `findability` and `reusability` and it is good practice to do so as it allows potential users to gauge the amount of mapping work that may be required to combine two datasets.
 
-> ###  What to read next?
-> * {ref}`fcb-selecting-ontologies`
-> * {ref}`fcb-interop-ontorequest`
-> * {ref}`fcb-interop-ontorobot`
-> * {ref}`fcb-interop-onto-op`
->
-> ````{panels}
-> :column: col-4
-> :card: border-2
-> :header: bg-primary pa_dark
-> :body: grey
-> ```{image} ../../../images/logos/RDMkit_logo.svg
-> :height: 40px
-> :name: rdmkit_logo
-> ```
-> ^^^
-> [More about `Metadata Management` from the `RDMkit`](https://rdmkit.elixir-europe.org/metadata_management.html)
-> ````
-> 
+###  What to read next?
+* {ref}`fcb-selecting-ontologies`
+* {ref}`fcb-interop-ontorequest`
+* {ref}`fcb-interop-ontorobot`
+* {ref}`fcb-interop-onto-op`
+
+````{panels}
+:column: col-md-4
+:body: p-0
+```{rdmkit_panel}
+:inline: true
+```
+---
+:body: p-0
+```{fairsharing_panel}
+:inline: true
+```
+````
+
 <!-- > * TODO: {ref}`fcb-find-biosolr` -->
 
 

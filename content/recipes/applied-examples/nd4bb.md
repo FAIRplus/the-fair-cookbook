@@ -5,8 +5,6 @@
 TODO: check whether all files can be put on Zenodo
 TODO: clarify authors
 -->
-<br/>
-<br/>
 
 ````{panels_fairplus}
 :identifier_text: FCB043
@@ -230,6 +228,10 @@ Overall this dataset has been very useful to start our overall process and team 
 ````{dropdown} **References**
 ````
 
+### What to read next?
+````{fairsharing_panel}
+````
+ 
 ## Authors
 ````{authors_fairplus}
 Manfred: Writing - Original Draft

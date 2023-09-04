@@ -34,7 +34,7 @@ work, there is urgency or risk to someone, nobody is intervening publicly and
 you don't feel comfortable speaking in public, etc.  For these or other
 reasons, structured follow-up may be necessary and here we provide the means
 for that: we welcome reports by emailing
-[*fairplus-cookbook@elixir-europe.org*](mailto:fairplus-cookbook@elixir-europe.org).
+[*faircookbook-ed@elixir-europe.org*](mailto:faircookbook-ed@elixir-europe.org).
 
 This code applies equally to founders, developers, mentors and new community
 members, in all spaces managed by FAIR Cookbook. This
@@ -105,7 +105,7 @@ a timely manner. Code of conduct violations reduce the value of the community
 for everyone and we take them seriously.
 
 You can file a report by emailing
-[*fairplus-cookbook@elixir-europe.org*](mailto:fairplus-cookbook@elixir-europe.org).
+[*faircookbook-ed@elixir-europe.org*](mailto:faircookbook-ed@elixir-europe.org).
 
 The online form gives you the option to keep your report anonymous or request
 that we follow up with you directly. While we cannot follow up on an anonymous
