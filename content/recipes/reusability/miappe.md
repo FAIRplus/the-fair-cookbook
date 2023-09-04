@@ -12,8 +12,7 @@
 :has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 15,20
-:recipe_name: MIAPPE-compliant plant genomic and genetic data submission to EMBL-EBI databases
-```` 
+          recipe_name: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
 
 ## Main Objective
 
