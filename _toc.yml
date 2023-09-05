@@ -196,7 +196,7 @@
     - file: content/recipes/maturity
       title: Changing culture with the Dataset Maturity Model
       sections:
-        - file: content/recipes/reusability/miappe #FCB061
+          - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - the MIAPPE use case
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
