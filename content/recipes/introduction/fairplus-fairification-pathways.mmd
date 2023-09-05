@@ -2,8 +2,29 @@ graph TD
 	A[FAIRification Context]:::box1-->C1[basic/fundamental <bR> research]:::box1
 	A -->C2[interventional, event centric <br> clinical research]:::box1
 	A -->C3[observational, patient centric <br> research]:::box1
-	
 
+	subgraph FAIRification Path 3
+		C3 --> R3(Retrospective):::box2
+		C3 --> P3(Prospective):::box3
+		R3 --> ExR3(IMI ):::box4
+		P3 --> ExP3(IMI EDHEN):::box5
+		subgraph FIP3<FAIR Implementation Profile>
+			ExP3 --> STD3.1(format:<br>OMOP):::box7
+			ExP3 --> STD3.2(terminology:<br>LOINC <br>SNOMED):::box6
+			ExP3 --> STD3.3(profile:<br>):::box8
+		end
+		end
+	subgraph FAIRification Path 2
+		C2 --> R2(Retrospective):::box2
+		C2 --> P2(Prospective):::box3
+		R2 --> ExR2(IMI IMIDIA):::box4
+		P2 --> ExP2(IMI RHAPSODY):::box5
+		subgraph FIP2<FAIR Implementation Profile>
+			ExP2 --> STD2.1(format:<br>CDISC:<br>-ADAM<br>- SDTM<br>- SDM<br>- ODM):::box7
+			ExP2 --> STD2.2(terminology:<br>-LOINC<br>-SNOMED):::box6
+			ExP2 --> STD2.3(profile:<br>CDISC therapeutic areas):::box8
+		end
+		end
 	subgraph FAIRification Path 1
 		C1 --> R1(Retrospective):::box2
 		C1 --> P1(Prospective):::box3
@@ -15,28 +36,6 @@ graph TD
 			ExP1 --> STD1.3(checklist:<br>MINSEQE<br>MIAPE<br>):::box8
 		end
 		end
-	subgraph FAIRification Path 2
-		C2 --> R2(Retrospective):::box2
-		C2 --> P2(Prospective):::box3
-		R2 --> ExR2(IMI IMIDIA):::box4
-		P2 --> ExP2(IMI RHAPSODY):::box5	
-		subgraph FIP2<FAIR Implementation Profile>
-			ExP2 --> STD2.1(format:<br>CDISC:<br>-ADAM<br>- SDTM<br>- SDM<br>- ODM):::box7
-			ExP2 --> STD2.2(terminology:<br>-LOINC<br>-SNOMED):::box6
-			ExP2 --> STD2.3(profile:<br>CDISC therapeutic areas):::box8
-		end		
-		end
-	subgraph FAIRification Path 3
-		C3 --> R3(Retrospective):::box2
-		C3 --> P3(Prospective):::box3
-		R3 --> ExR3(IMI ):::box4
-		P3 --> ExP3(IMI EDHEN):::box5	
-		subgraph FIP3<FAIR Implementation Profile>
-			ExP3 --> STD3.1(format:<br>OMOP):::box7
-			ExP3 --> STD3.2(terminology:<br>LOINC <br>SNOMED):::box6
-			ExP3 --> STD3.3(profile:<br>):::box8
-		end		
-		end	
 
 classDef box1 font-family:avenir,font-size:14px,fill:#2a9fc9,stroke:#222,color:#fff,stroke-width:1px
 classDef box2 font-family:avenir,font-size:14px,fill:orange,stroke:#222,color:#fff,stroke-width:1px
