@@ -454,13 +454,13 @@ Documentation specific to:
 ## Authors
 ````{authors_fairplus}
 Erwan: Writing - Original Draft
-Vanita: Writing - Original Draft
-Nicolas: Writing - Original Draft
-Celia: Writing - Original Draft
-Daniel: Writing - Original Draft
-Daniel: Writing - Original Draft
-Inês: Writing - Original Draft
+DanielArend: Writing - Original Draft
 Sebastian: Writing - Original Draft
+Ines: Writing - Original Draft
+DanielFaria: Writing - Original Draft
+Nicolas: Writing - Original Draft
+Vanita: Writing - Original Draft
+Celia: Writing - Original Draft
 Cyril: Review & Editing
 Philippe: Review & Editing
 ````
