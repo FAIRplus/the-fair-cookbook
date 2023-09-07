@@ -10,7 +10,7 @@
 :has_executable_code: nope
 :maturity_level: TODO
 :maturity_indicator: TODO
-:recipe_name: TODO
+:recipe_name: Publishing plant phenotypic data
 ```` 
 
 ## Main Objective
