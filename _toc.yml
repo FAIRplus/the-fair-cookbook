@@ -196,8 +196,8 @@
     - file: content/recipes/maturity
       title: Changing culture with the Dataset Maturity Model
       sections:
-    	- file: content/recipes/reusability/miappe #FCB061
-          title: Improving dataset maturity - the MIAPPE use case
+        - file: content/recipes/reusability/miappe #FCB061
+          title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
         - file: content/recipes/reusability/plant_pheno_data_publication #TODO
           title: Publishing plant phenotypic data
         - file: content/recipes/maturity/isa-maturity-progression
