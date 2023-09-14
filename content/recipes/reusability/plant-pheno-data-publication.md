@@ -1,15 +1,15 @@
 # Publication of plant experimental data in generic data repositories
 
 ````{panels_fairplus}
-:identifier_text: TODO
-:identifier_link: TODO
+:identifier_text: FC083
+:identifier_link: 'https://w3id.org/faircookbook/FCB083'
 :difficulty_level: 3
 :recipe_type: guidance
 :reading_time_minutes: 30
 :intended_audience:  everyone 
 :has_executable_code: nope
-:maturity_level: TODO
-:maturity_indicator: TODO
+:maturity_level: 3
+:maturity_indicator: 15,20
 :recipe_name: Publishing plant phenotypic data
 ```` 
 
@@ -444,12 +444,13 @@ Documentation specific to:
 ```
 ````
 
-## Reference
+<!-- ## Reference
 
 ````{dropdown} **References**
 ```{footbibliography}
 ```
 ````
+-->
 
 ## Authors
 ````{authors_fairplus}
