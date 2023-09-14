@@ -49,14 +49,10 @@ this recipe is a basic knowledge of the [MIAPPE standard](https://fairsharing.or
 The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF file is 
 also part of this recipe with examples and explanations (See details in Section 4.2).
 
-## Graphical overview of the FAIRification Objectives
+## Graphical Overview
 
-
-[comment]: <> (<!-- ![]&#40;https://i.imgur.com/iqdjWqo.png&#41; -->)
-
-````{dropdown} **FAIRification Objectives**
-:open:
-
+````{dropdown}
+:open:  
 ```{figure} ../../../images/iqdjWqo.png
 ---
 width: 700px
