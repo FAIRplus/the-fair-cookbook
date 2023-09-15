@@ -41,11 +41,11 @@ Having trouble with the page? Want to give feedback?
 
 - Using Docker:
 
-`zsh ./script/docker.sh` # for MacOS users 
+`zsh ./scripts/docker.sh` # for MacOS users 
 
 or 
 
-`bash ./script/docker.sh` # for unix users
+`bash ./scripts/docker.sh` # for unix users
 
 - From outside the project:
 `jupyter-book build -W -n --keep-going the-fair-cookbook`
