@@ -57,9 +57,9 @@ also part of this recipe with examples and explanations (See details in Section 
 ---
 width: 700px
 name: FAIRification Objectives
-alt: FAIRification Objectives
+alt: the purpose of the FAIRification
 ---
-FAIRification Objectives
+MIAPPE compliance
 ```
 ````
 
