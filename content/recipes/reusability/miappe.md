@@ -54,7 +54,7 @@ also part of this recipe with examples and explanations (See details in Section 
 ````{dropdown}
 :open:  
 ```{figure} ../../../images/iqdjWqo.png
----
+--- 
 width: 700px
 name: FAIRification Objectives
 alt: the purpose of the FAIRification
