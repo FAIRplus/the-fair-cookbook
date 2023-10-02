@@ -56,7 +56,7 @@ also part of this recipe with examples and explanations (See details in Section 
 ```{figure} ../../../images/iqdjWqo.png
 --- 
 width: 700px
-name: FAIRification Objectives
+name: MIAPPE-compliant submission to EMBL-EBI databases
 alt: the purpose of the FAIRification
 ---
 MIAPPE compliance

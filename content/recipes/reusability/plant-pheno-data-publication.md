@@ -36,7 +36,7 @@ This recipe describes best practices for submitting plant experimentation data t
 ```{figure} ../../../images/pheno_data_publication_fairification_objectives.png
 ---
 width: 700px
-name: FAIRification Objectives
+name: Publishing plant phenotypic data
 alt: Phenomic Data Publication
 ---
 Phenomic Data Publication
