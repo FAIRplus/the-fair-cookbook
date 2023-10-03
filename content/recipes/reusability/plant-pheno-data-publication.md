@@ -1,7 +1,7 @@
 # Publication of plant experimental data in generic data repositories
 
 ````{panels_fairplus}
-:identifier_text: FC083
+:identifier_text: FCB083
 :identifier_link: 'https://w3id.org/faircookbook/FCB083'
 :difficulty_level: 3
 :recipe_type: guidance
