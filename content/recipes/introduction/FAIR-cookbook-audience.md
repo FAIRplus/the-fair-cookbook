@@ -93,14 +93,26 @@ year = {2022}
 ````
 ````{tabbed} To cite the FAIR Cookbook manuscript:
 ```
-@article{
-    author      = {},
-    title       = {placeholder},
-    month       = sep,
-    year        = 2022,
-    publisher   = {bioRxiv},
-    doi         = {},
-    url         = {https://doi.org/xx.xxxx/biorxiv.xxxxxx }
+@article{Rocca-Serra2023-hk,
+    author      = {Rocca-Serra, Philippe and Gu, Wei and Ioannidis, Vassilios and
+              Abbassi-Daloii, Tooba and Capella-Gutierrez, Salvador and
+              Chandramouliswaran, Ishwar and Splendiani, Andrea and Burdett,
+              Tony and Giessmann, Robert T and Henderson, David and Batista,
+              Dominique and Emam, Ibrahim and Gadiya, Yojana and Giovanni,
+              Lucas and Willighagen, Egon and Evelo, Chris and Gray, Alasdair J
+              G and Gribbon, Philip and Juty, Nick and Welter, Danielle and
+              Quast, Karsten and Peeters, Paul and Plasterer, Tom and Wood,
+              Colin and van der Horst, Eelke and Reilly, Dorothy and van
+              Vlijmen, Herman and Scollen, Serena and Lister, Allyson and
+              Thurston, Milo and Granell, Ramon and {FAIR Cookbook
+              Contributors} and Sansone, Susanna-Assunta},
+    title       = {{The {FAIR} Cookbook - the essential resource for and by {FAIR}
+              doers}},
+    month       = may,
+    year        = 2023,
+    publisher   = {Sci. Data},
+    doi         = {10.1038/s41597-023-02166-3},
+    url         = {https://doi.org/10.1038/s41597-023-02166-3}
 }
 ```
 ````
