@@ -12,8 +12,8 @@
 :has_executable_code: nope
 :maturity_level: 3
 :maturity_indicator: 15,20
-:recipe_name: Improving dataset maturity - the MIAPPE use case
-```` 
+:recipe_name: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+````
 
 ## Main Objective
 
@@ -49,21 +49,17 @@ this recipe is a basic knowledge of the [MIAPPE standard](https://fairsharing.or
 The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF file is 
 also part of this recipe with examples and explanations (See details in Section 4.2).
 
-## Graphical overview of the FAIRification Objectives
+## Graphical Overview
 
-
-[comment]: <> (<!-- ![]&#40;https://i.imgur.com/iqdjWqo.png&#41; -->)
-
-````{dropdown} **FAIRification Objectives**
-:open:
-
+````{dropdown}
+:open:  
 ```{figure} ../../../images/iqdjWqo.png
----
+--- 
 width: 700px
-name: FAIRification Objectives
-alt: FAIRification Objectives
+name: MIAPPE-compliant submission to EMBL-EBI databases
+alt: the purpose of the FAIRification
 ---
-FAIRification Objectives
+MIAPPE compliance
 ```
 ````
 

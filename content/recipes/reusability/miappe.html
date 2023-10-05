@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
 
@@ -51,9 +51,9 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/mermaid.js"></script>
     <script src="../../../_static/js/mermaid.min.js"></script>
+    <script src="../../../_static/js/searchNodal.js"></script>
     <script src="../../../_static/js/mermaid.core.js"></script>
     <script src="../../../_static/js/vue.min.js"></script>
-    <script src="../../../_static/js/searchNodal.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -69,7 +69,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Maturity Progression" href="../maturity/isa-maturity-progression.html" />
+    <link rel="next" title="Publication of plant experimental data in generic data repositories" href="plant-pheno-data-publication.html" />
     <link rel="prev" title="Changing culture with the Dataset Maturity Model" href="../maturity.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en" />
@@ -571,6 +571,11 @@
        11.5.3. Outlining a metadata profile for Bioactivity data
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interoperability/c4c-clinical-trials.html">
+       11.5.4. Creating a metadata profile for clinical trial protocols
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -762,7 +767,12 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Improving dataset maturity - the MIAPPE use case
+     Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plant-pheno-data-publication.html">
+     Publishing plant phenotypic data
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -1015,7 +1025,7 @@
                                                 
   <div class="section" id="plant-genomic-and-genetic-variation-data-submission-to-embl-ebi-databases">
 <h1>Plant genomic and genetic variation data submission to EMBL-EBI databases<a class="headerlink" href="#plant-genomic-and-genetic-variation-data-submission-to-embl-ebi-databases" title="Permalink to this headline">¶</a></h1>
-<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB061", "sdo:name": "Improving dataset maturity - the MIAPPE use case", "sdo:description": "Improving dataset maturity - the MIAPPE use case", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Everyone|NA"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Guidance", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB061", "dso:url": "https://w3id.org/faircookbook/FCB061", "owl:sameAs": "https://identifiers.org/fcb:FCB061"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H30M0S", "sdo:totalTime": "PT0H30M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB061#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB061#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB061#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB061#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
+<script type="application/ld+json"> {"@context": {"bs": "https://bioschema.org/", "dc": "http://purl.org/dc/terms/", "owl": "http://www.w3.org/2002/07/owl#", "sdo": "https://schema.org/"}, "@type": ["sdo:HowTo", "sdo:LearningResource"], "@id": "https://w3id.org/faircookbook/FCB061", "sdo:name": "Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases", "sdo:description": "Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases", "sdo:keywords": [], "dc:conformsTo": {"@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE", "@type": "CreativeWork"}, "sdo:inLanguage": ["en-GB"], "sdo:audience": ["Everyone|NA"], "sdo:isPartOf": [{"@type": "CreativeWork", "@id": "https://fairplus.github.io/the-fair-cookbook/", "sdo:url": "https://fairplus.github.io/the-fair-cookbook/", "sdo:name": "The FAIR Cookbook"}], "sdo:learningResourceType": "Guidance", "sdo:identifier": {"@type": "PropertyValue", "@id": "", "sdo:name": "FCB061", "dso:url": "https://w3id.org/faircookbook/FCB061", "owl:sameAs": "https://identifiers.org/fcb:FCB061"}, "sdo:license": {"@type": "CreativeWork", "@id": "https://creativecommons.org/licenses/by/4.0/", "sdo:url": "https://creativecommons.org/licenses/by/4.0/", "sdo:name": "CC-BY-4.0"}, "sdo:timeRequired": "PT0H30M0S", "sdo:totalTime": "PT0H30M0S", "sdo:step": [{"@type": "sdo:HowToSection", "sdo:position": "1", "sdo:name": "Overview", "sdo:url": "https://w3id.org/faircookbook/FCB061#main-objectives", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "step-by-step section", "sdo:text": "Follow the step-by-step section.", "sdo:url": "https://w3id.org/faircookbook/FCB061#main-objectives"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}, {"@type": "sdo:HowToSection", "sdo:position": "2", "sdo:name": "Conclusion", "sdo:url": "https://w3id.org/faircookbook/FCB061#conclusion", "sdo:itemListElement": [{"@type": "sdo:HowToStep", "sdo:position": "1", "sdo:name": "", "sdo:itemListElement": [{"@type": "sdo:HowToDirection", "sdo:position": "1", "sdo:name": "conclusion section", "sdo:text": "What to read next?", "sdo:url": "https://w3id.org/faircookbook/FCB061#conclusion"}, {"@type": "sdo:HowToTip", "sdo:position": "2", "sdo:name": "Reporting an issue", "sdo:text": "Use our GitHub issue tracker to report any error. Thanks!", "sdo:url": "https://github.com/FAIRplus/the-fair-cookbook/issues/new/choose"}]}]}]} </script>
 <div class="card my-10 recipe d-flex">
 <div class="card-header purple-dark text--white">
 <div class="overview">
@@ -1050,7 +1060,7 @@ No
 </div>
 <div class="card-body text--purple-dark">
 <div class="title">
-<div style="flex-grow:1; margin-right:5px">Improving dataset maturity - the MIAPPE use case</div>
+<div style="flex-grow:1; margin-right:5px">Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases</div>
 <img src="https://fairplus.github.io/the-fair-cookbook/_static/images/fairplus-mini.png" alt="FAIRPlus logo"> </img>
 </div>
 <div class="section">
@@ -1116,18 +1126,25 @@ this recipe is a basic knowledge of the <a class="reference external" href="http
 <p>The exact listing of the metadata fields required for a FAIRification of the genotyping data set within a VCF file is
 also part of this recipe with examples and explanations (See details in Section 4.2).</p>
 </div>
-<div class="section" id="graphical-overview-of-the-fairification-objectives">
-<h2>Graphical overview of the FAIRification Objectives<a class="headerlink" href="#graphical-overview-of-the-fairification-objectives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="graphical-overview">
+<h2>Graphical Overview<a class="headerlink" href="#graphical-overview" title="Permalink to this headline">¶</a></h2>
 <details class="sphinx-bs dropdown card mb-3" open="open">
 <summary class="summary-title card-header">
-<strong>FAIRification Objectives</strong><div class="summary-down docutils">
+<svg viewBox="0 0 36 24" width="36" height="16" xmlns="http://www.w3.org/2000/svg"
+    class="octicon no-title" aria-hidden="true">
+  <g xmlns="http://www.w3.org/2000/svg" class="jp-icon3">
+    <circle cx="0" cy="12" r="6"></circle>
+    <circle cx="18" cy="12" r="6"></circle>
+    <circle cx="36" cy="12" r="6"></circle>
+  </g>
+</svg><div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="figure align-default" id="fairification-objectives">
-<a class="reference internal image-reference" href="../../../_images/iqdjWqo.png"><img alt="FAIRification Objectives" src="../../../_images/iqdjWqo.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">FAIRification Objectives</span><a class="headerlink" href="#fairification-objectives" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="miappe-compliant-submission-to-embl-ebi-databases">
+<a class="reference internal image-reference" href="../../../_images/iqdjWqo.png"><img alt="the purpose of the FAIRification" src="../../../_images/iqdjWqo.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">MIAPPE compliance</span><a class="headerlink" href="#miappe-compliant-submission-to-embl-ebi-databases" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details></div>
@@ -1727,8 +1744,8 @@ connect different data sources with each other, so that in general a higher degr
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#graphical-overview-of-the-fairification-objectives">
-   Graphical overview of the FAIRification Objectives
+  <a class="reference internal nav-link" href="#graphical-overview">
+   Graphical Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1867,7 +1884,7 @@ connect different data sources with each other, so that in general a higher degr
                                             <div class='pl-10 prev-next-bottom mr-10' style="width:82%">
                                                 
 <a class='left-prev' id="prev-link" href="../maturity.html" title="previous page">Changing culture with the Dataset Maturity Model</a>
-<a class='right-next' id="next-link" href="../maturity/isa-maturity-progression.html" title="next page">Maturity Progression</a>
+<a class='right-next' id="next-link" href="plant-pheno-data-publication.html" title="next page">Publication of plant experimental data in generic data repositories</a>
 
                                             </div>
                                         </v-row>

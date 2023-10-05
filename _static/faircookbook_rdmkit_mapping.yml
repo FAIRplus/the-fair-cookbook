@@ -24,8 +24,20 @@
   - fcb_title: Surveying extraction, transformation, load (ETL) tools
     fcb_id: FCB031
 
-- rdmkit_title: Data protection
-  rdmkit_filename: data_protection
+- rdmkit_title: Data security
+  rdmkit_filename: data_security
+  links:
+  - fcb_title: Downloading data with Aspera protocol
+    fcb_id: FCB015
+  - fcb_title: Transferring data with SFTP protocol
+    fcb_id: FCB014
+  - fcb_title: Creating file checksums
+    fcb_id: FCB052
+  - fcb_title: Validating checksums to verify file integrity
+    fcb_id: FCB053
+
+- rdmkit_title: GDPR compliance
+  rdmkit_filename: gdpr_compliance
   links:
   - fcb_title: Licensing Data
     fcb_id: FCB034
@@ -103,7 +115,7 @@
     fcb_id: FCB022
 
 - rdmkit_title: Data sensitivity
-  rdmkit_filename: sensitive_data
+  rdmkit_filename: data_sensitivity
   links:
   - fcb_title: Declaring data permitted uses
     fcb_id: FCB035
@@ -173,6 +185,6 @@
   - fcb_title: Making Computational Workflows FAIR
     fcb_id: FCB062
   - fcb_title: Depositing to generic repositories - Zenodo use case
-    fcb_id: FCB0009
+    fcb_id: FCB009
   - fcb_title: Registering datasets with Wikidata
     fcb_id: FCB060
