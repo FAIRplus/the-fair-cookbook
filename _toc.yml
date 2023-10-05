@@ -117,6 +117,8 @@
                 title: Building a community compliant metadata profile - The Covid19 sample profile use case #FCB028
               - file: content/recipes/interoperability/bioactivity-profile
                 title: Outlining a metadata profile for Bioactivity data #FCB057
+              - file: content/recipes/interoperability/c4c-clinical-trials
+                title: Creating a metadata profile for clinical trial protocols #FCB084PRE
           - file: content/recipes/interoperability/from-proprietary-to-open-standard-mzml-exemplar  
             title: Converting from proprietary to open format #FCB029
           - file: content/recipes/interoperability/fastq-file-format-validators
@@ -159,7 +161,7 @@
           - file: content/recipes/infrastructure/id-resolution
             title: Introducing identifier resolution services #FCB046
           - file: content/recipes/infrastructure/gupri
-            title: Creating resolvable identifiers #FCB077PRE
+            title: Creating resolvable identifiers #FCB077
           - file: content/recipes/infrastructure/data-catalog
             title: Building a catalogue of datasets #FCB047
           - file: content/recipes/infrastructure/dats-model
@@ -176,7 +178,7 @@
               - file: content/recipes/infrastructure/vocabularies/UC3_R13_local_ontology_services
                 title: Deploying EBI Ontology Loopkup Service #FCB005
           - file: content/recipes/infrastructure/openrefine-nvt
-            title: Using OpenRefine and Karma for FAIRification #FCB075PRE
+            title: Using OpenRefine and Karma for FAIRification #FCB075
           - file: content/recipes/infrastructure/fair-api #FCB073
             title: Developing FAIR API for the Web
 
@@ -195,7 +197,9 @@
       title: Changing culture with the Dataset Maturity Model
       sections:
         - file: content/recipes/reusability/miappe #FCB061
-          title: Improving dataset maturity - the MIAPPE use case
+          title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+        - file: content/recipes/reusability/plant-pheno-data-publication #FCB083PRE
+          title: Publishing plant phenotypic data
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
           sections:
@@ -243,7 +247,7 @@
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive #FCB067
         - file: content/recipes/applied-examples/approach-cdisc
-          title: Mapping IMI APPROACH datasets to CDISC-SDTM standard #FCB078PRE
+          title: Mapping IMI APPROACH datasets to CDISC-SDTM standard #FCB078
 
 - part: AFTERWORD
   chapters:
