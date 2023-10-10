@@ -296,7 +296,6 @@ The REDCap survey will be sent to c4c partners to allow for further testing of t
 ````{fairsharing_panel}
 ````
 
-
 <!--## References
 
 ````{dropdown} **References**
