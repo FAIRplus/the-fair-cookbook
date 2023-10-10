@@ -229,7 +229,7 @@ This schema was used to create a survey in [REDCap](https://www.project-redcap.o
 | :------------- | :------------- | :------------- |:------------- | :------------- |
 | record_id | C4C Study Metadata Collection |  | autofill | Record ID |
 |  | C4C Study Metadata Collection | Study Information | begin new section |  |
-| study_id\_ct.gov | C4C Study Metadata Collection | Study Information | short text | ClinicalTrials.gov ID |
+| study_id\_ct.gov | C4C Study Metadata Collection | Study Information | short text | ClinicalTrials.gov ID |
 | study_id\_eudract | C4C Study Metadata Collection | Study Information | short text | EudraCT/CTIS ID |
 | study_id\_brand | C4C Study Metadata Collection | Study Information | short text | Study Brand Name ID (if applicable) |
 | study_id\_text | C4C Study Metadata Collection | Study Information | text box | Add Additional Study IDs |
