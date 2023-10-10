@@ -293,8 +293,6 @@ The REDCap survey will be sent to c4c partners to allow for further testing of t
 * [Data dictionary](../interoperability/creating-data-dictionary.md)
 
 
-````{rdmkit_panel}
-````
 
 ````{fairsharing_panel}
 ````
