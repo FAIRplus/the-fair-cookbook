@@ -442,11 +442,6 @@ Documentation specific to:
 ```{fairsharing_panel}
 :inline: true
 ```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
 ````
 
 <!-- ## Reference
