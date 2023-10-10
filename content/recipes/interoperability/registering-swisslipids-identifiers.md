@@ -1,8 +1,8 @@
 # Registering SwissLipids identifiers in Wikidata
 
  ````{panels_fairplus}
-:identifier_text: FCBxxx
-:identifier_link: 'https://w3id.org/faircookbook/FCBxxx'
+:identifier_text: FCB085    
+:identifier_link: 'https://w3id.org/faircookbook/FCB085'
 :difficulty_level: 5
 :recipe_type: hands_on
 :reading_time_minutes: 15
