@@ -126,7 +126,7 @@
   - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
     fcb_id: FCB061
   - fcb_title: Publishing plant phenotypic data
-    fcb_id: FCB083
+    fcb_id: FCB083PRE
 
 - rdmkit_title: Plant Genomics
   rdmkit_filename: plant_genomics_assembly
@@ -138,7 +138,7 @@
   rdmkit_filename: plant_phenomics_assembly
   links:
   - fcb_title: Publishing plant phenotypic data
-    fcb_id: FCB083
+    fcb_id: FCB083PRE
 
 - rdmkit_title: Bioimaging data
   rdmkit_filename: bioimaging_data
