@@ -123,7 +123,8 @@
 - rdmkit_title: Plant sciences
   rdmkit_filename: plant_sciences
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI
+      databases
     fcb_id: FCB061
   - fcb_title: Publishing plant phenotypic data
     fcb_id: FCB083PRE
@@ -131,7 +132,8 @@
 - rdmkit_title: Plant Genomics
   rdmkit_filename: plant_genomics_assembly
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI
+      databases
     fcb_id: FCB061
 
 - rdmkit_title: Plant Phenomics
