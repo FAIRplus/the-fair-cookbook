@@ -127,7 +127,7 @@
       databases
     fcb_id: FCB061
   - fcb_title: Publishing plant phenotypic data
-    fcb_id: FCB083PRE
+    fcb_id: FCB083
 
 - rdmkit_title: Plant Genomics
   rdmkit_filename: plant_genomics_assembly
@@ -140,7 +140,7 @@
   rdmkit_filename: plant_phenomics_assembly
   links:
   - fcb_title: Publishing plant phenotypic data
-    fcb_id: FCB083PRE
+    fcb_id: FCB083
 
 - rdmkit_title: Bioimaging data
   rdmkit_filename: bioimaging_data
