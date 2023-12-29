@@ -34,12 +34,31 @@ The latter is done by the offical InChI library {footcite}`Goodman2021InChI`.
 
 [Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC names.
 In Colab we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
-to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:
+to access the OPSIN library. We would first set up Colab for Java, Maven, and [scyjava](https://pypi.org/project/scyjava/), followed
+by the download the Bacting libraries and create the Bacting manager objects.
+
+Java 17 and Maven are installed with (with a confirmation which Java is available):
+
+```python
+!apt-get install openjdk-17-jre-headless maven -qq > /dev/null
+import os
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-17-openjdk-amd64"
+!update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+!java -version
+```
+
+Scyjava is insall with:
+
+```python
+!pip install scyjava
+```
+
+We can then continue by installing Bacting and setting up the two Bacting managers, `inchi` and `opsin`:
 
 ```python
 from scyjava import config, jimport
-config.endpoints.append('io.github.egonw.bacting:managers-inchi:0.1.0')
-config.endpoints.append('io.github.egonw.bacting:managers-opsin:0.1.0')
+config.endpoints.append('io.github.egonw.bacting:managers-inchi:0.4.1')
+config.endpoints.append('io.github.egonw.bacting:managers-opsin:0.4.1')
 
 inchi_cls = jimport("net.bioclipse.managers.InChIManager")
 inchi = inchi_cls(".")
@@ -66,8 +85,8 @@ Because Bacting is written in Java and the libraries being available from
 The above code in Groovy looks like:
 
 ```groovy
-@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.1.0')
-@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.1.0')
+@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.4.1')
+@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.4.1')
 
 workspaceRoot = "."
 inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
