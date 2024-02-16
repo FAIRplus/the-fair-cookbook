@@ -40,7 +40,8 @@ by the download the Bacting libraries and create the Bacting manager objects.
 
 Java 17 and Maven are installed with (with a confirmation which Java is available):
 
-```python  
+```python
+# requires uncommenting the commands below
 # !apt-get install openjdk-17-jre-headless maven -qq > /dev/null
 import os
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-17-openjdk-amd64"
@@ -51,6 +52,7 @@ java -version
 Scyjava is then installed with:
 
 ```python
+# requires uncommenting the command below
 # !pip install scyjava
 ```
 
