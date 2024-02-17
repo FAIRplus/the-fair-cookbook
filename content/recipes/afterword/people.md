@@ -1,4 +1,4 @@
-git # Boards and contributors
+# Boards and contributors
 
 +++
 ---
