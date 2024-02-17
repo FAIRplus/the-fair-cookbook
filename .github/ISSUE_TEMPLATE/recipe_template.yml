@@ -1,0 +1,145 @@
+name: Recipe Template
+description: Please use this template to submit your new recipes
+title: "Recipe title"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for providing content for the FAIR Cookbook!
+  - type: dropdown
+    id: recipe-type
+    attributes:
+      label: Recipe Type
+      multiple: true
+      description: 
+      options:
+        - Background information
+        - Experience Report / Applied Example
+        - Guidance
+        - Hands-on
+        - Inventory
+        - Technical Guidance
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience
+      multiple: true
+      description: Who is your target audience?
+      options:
+        - Bioinformatician
+        - Chemoinformatician
+        - Data Consumer
+        - Data Curator
+        - Data Engineer
+        - Data Manager
+        - Data Producer
+        - Data Scientist
+        - Data Steward
+        - Everyone
+        - Funder
+        - Ontologist
+        - Principal Investigator
+        - Procurement Officer
+        - Software Engineer
+        - Software Developer
+        - System Administrator
+        - Terminology Manager
+    validations:
+      required: false
+  - type: dropdown
+    id: executable_code
+    attributes:
+      label: Executable Code
+      description: Does your recipe have executable codes?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false
+  - type: textarea
+    id: main_objectives
+    attributes:
+      label: Main Objectives
+      description: Please explain the main objective of the recipe. 
+    validations:
+      required: true
+  - type: textarea
+    id: graphical_overview
+    attributes:
+      label: Graphical Overview
+      description: If you have a graphical overview, please upload it. Tip, You can attach files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Please specify the technical and knowledge requirements to implement this recipe.
+    validations:
+      required: false
+  - type: textarea
+    id: fairification_objectives
+    attributes:
+      label: FAIRification Objectives, Inputs and Outputs
+      description: Examples of objectives are "formatting" and "text annotation". An example of input is "Waters MS format". An example of output is "mzML".
+    validations:
+      required: true
+  - type: textarea
+    id: data-standards
+    attributes:
+      label: Table of Data Standards
+      description: An example of "Data Formats" is "mzML". An example of "Terminologies" is "PSI-MS". 
+    validations:
+      required: false
+  - type: textarea
+    id: introduction
+    attributes:
+      label: Introduction
+      description: 
+    validations:
+      required: true
+  - type: textarea
+    id: ingredients
+    attributes:
+      label: Ingredients
+      description: Add a list of tools and software required to implement the recipe. 
+    validations:
+      required: false
+  - type: textarea
+    id: body
+    attributes:
+      label: Recipe body or step-by-step guidance 
+      description: 
+    validations:
+      required: true
+  - type: textarea
+    id: conclusion
+    attributes:
+      label: Conclusion
+      description: 
+    validations:
+      required: true
+  - type: textarea
+    id: read_next
+    attributes:
+      label: What to read next?
+      description: 
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: 
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: 
+    validations:
+      required: true
