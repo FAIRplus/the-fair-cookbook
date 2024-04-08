@@ -13,6 +13,8 @@
   links:
   - fcb_title: Introducing Provenance Information
     fcb_id: FCB036
+  - fcb_title: Making Computational Workflows FAIR
+    fcb_id: FCB062
 
 - rdmkit_title: Data organisation
   rdmkit_filename: data_organisation
