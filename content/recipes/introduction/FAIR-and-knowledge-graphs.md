@@ -52,7 +52,7 @@ Knowledge Graph (KG) and graph databases constitute a new approach to representa
 
 To understand the notion of `knowledge graphs`, we need to remind ourselves about some elements of information theory, data structure, and data storage, as well as some geometric interpretation of relationship between entities, which is often what turns data into knowledge.
 
-Information, in digital forms, relies on formal representations and an array of methods to store and retrieve information. Up until the last 10 years, Relational DataBase Management Systems (RDBMS) have been provided the backbone of information storage solutions, and still do so today. However, advances in both theoretical information representation models and technical solutions led to the development of so-called `NO-SQL` solutions (for 'Not-only Structured Query language'), supporting the onset of **graph-based representations of information**, in contrast to **relational-model based representation**. Knowledge graphs are knowledge bases which use graph-based data structure or topology to represent entities and the relationships between them.
+Information, in digital forms, relies on formal representations and an array of methods to store and retrieve it. Up until the last 10 years, Relational DataBase Management Systems (RDBMS) have been provided the backbone of information storage solutions, and still do so today. However, advances in both theoretical information representation models and technical solutions led to the development of so-called `NoSQL` solutions (for 'Not only SQL'), supporting the onset of **graph-based representations of information**, in contrast to **relational-model based representation**. Knowledge graphs are knowledge bases which use a graph-based data structure or topology to represent entities and the relationships between them.
 
 ```{admonition} **So how does graph theory come to meet knowledge representation?**
 
@@ -61,7 +61,7 @@ We need here to introduce the definition of a graph:
 A graph is a set of nodes (also known as vertex) connected via edges. 
 When the edges connected any two nodes carry a direction information, they defined a specific and important subfamily of graphs known as `directed graphs`. On the other hand, if there is absence of directionality information on the edges, such graphs are known as `undirected graphs`.
 
-A graph can also contain cycles. This means that when traversing the graph from a starting or source node to an ending or target node (terminologically referred to as a path), in case of cycles, the sorurce and target node are the same. Such graphs are commonly known as `cyclic graphs`.
+A graph can also contain cycles. This means that when traversing the graph from a starting or source node to an ending or target node (terminologically referred to as a path), in case of cycles, the source and the target node are the same. Such graphs are commonly known as `cyclic graphs`.
 
 When cycles aren't allowed, a new subtype of graph is defined. Such graphs are known as `directed acyclic graphs` (DAG).
 
@@ -84,19 +84,19 @@ While sophisticated optimization methods exist to ensure query performance does 
 An added criticism often leveled to RDBMS based database is the rigidity, which manifests itself in the difficulty and complexity of changing the underlying model, leading to potentially complex migration tasks. 
 This can become a limitation when knowledge representation in a particular domain requires frequent changes for whatever reason.
 
-So it is in this context that the advent of `graph (oriented) databases` (sometimes referred to as NoSQL database, for 'Not Only SQL database'), came about, with a new paradigm and bold claims. 
+<!--- NoSQL is already cited earlier, so we can omit it from here? --->
+So it is in this context that the advent of `graph (oriented) databases` (sometimes referred to as NoSQL database), came about, with a new paradigm and bold claims. 
 Over the last 20 years, the idea of storing knowledge as a graph `G=(v for vertex, e for edge)`,
-even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that a transition,
-in some sectors of the industry, is taking place.
+even if not new at all from a theoretical perspective, has undergone tremendous progress to the point that, in some sectoes of the industry, a transition is taking place.
 
 KGs and graph databases claim to be capable of offering new insights with better performance, 
-owning to the optimization of their query engine for fast traversals. 
-With description logics (DL), knowledge graphs represent knowledge to allow "intelligent" machines and algorithms to reason over and work with.
-Hence, for some domain specific representations and tasks, `Knowledge Graphs` (KG)
+owing to the optimization of their query engine for fast traversals. 
+With description logics (DL), KGs represent knowledge to allow "intelligent" machines and algorithms to reason over and work with.
+Hence, for some domain-specific representations and tasks, KGs
 and graph databases are seen as more suited than RDBMS storage.
 
 These benefits warrant the significant investments made to develop tools and frameworks to support KG storage solutions. 
-It also means that KG are becoming mainstream.
+It also means that KGs are becoming mainstream.
 
  It is not that graph-oriented data storage is replacing RDBMS storage. As always, with all technologies and tooling, one needs to understand the task at hand and choose the most suitable 
 solutions for addressing a specific challenge. 
