@@ -184,7 +184,7 @@ Overview of study component logic
 
 ````{dropdown}
 :open:
-```{figure} BIA_6-study_components_example.jpg
+```{figure} BIA_6_study_components_example.jpg
 ---
 width: 800px
 name: components-example
@@ -549,7 +549,7 @@ Once your dataset is public, you can associate it with your [ORCID](https://orci
 
 ````{dropdown}
 :open:
-```{figure} BIA_21_orcid.jpg
+```{figure} BIA_21_orcid_claiming.jpg
 ---
 width: 800px
 name: orcid
