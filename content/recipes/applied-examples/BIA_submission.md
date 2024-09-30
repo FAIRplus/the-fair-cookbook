@@ -353,7 +353,7 @@ As for the study-level metadata, information can be provided in free-text boxes 
 
 ````{dropdown}
 :open:
-```{figure} BIA_14_submission_image_aqusition.jpg
+```{figure} BIA_14_submission_image_aquisition.jpg
 ---
 width: 800px
 name: image_aqusition
