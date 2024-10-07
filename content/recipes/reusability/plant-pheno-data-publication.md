@@ -431,17 +431,7 @@ Documentation specific to:
 * e!DAL-PGP:
     * [manual](https://edal-pgp.ipk-gatersleben.de/document/manual.html)
 
-````{panels}
-:column: col-md-4
-:body: p-0
-```{rdmkit_panel}
-:inline: true
-```
----
-:body: p-0
-```{fairsharing_panel}
-:inline: true
-```
+````{fairsharing_panel}
 ````
 
 <!-- ## Reference

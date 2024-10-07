@@ -7,7 +7,7 @@
       fcb_id: FCB045
     - fcb_title: Validating file format - FASTQ example
       fcb_id: FCB030
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: The FAIR Principles (FAIR)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.WWI10U
@@ -26,8 +26,6 @@
       fcb_id: FCB045
     - fcb_title: Assessing with FAIR Evaluator
       fcb_id: FCB049
-    - fcb_title: Assessing with FAIRshake
-      fcb_id: FCB050
     - fcb_title: Introducing unique, persistent identifiers
       fcb_id: FCB006
     - fcb_title: Registering datasets with Wikidata
@@ -80,10 +78,14 @@
       fcb_id: FCB069
     - fcb_title: Changing culture with the Dataset Maturity Model
       fcb_id: FCB081
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
     - fcb_title: Introducing Provenance Information
       fcb_id: FCB036
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Sequence Read Archive (SRA)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.g7t2hv
   links:
@@ -104,6 +106,8 @@
       fcb_id: FCB078
     - fcb_title: Training for FAIRification with open or synthetic biomedical datasets
       fcb_id: FCB069
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: CDISC
   FAIRsharing_id: https://fairsharing.org/3525
   links:
@@ -119,6 +123,8 @@
       fcb_id: FCB020
     - fcb_title: Practical Considerations for CROs to play FAIR
       fcb_id: FCB056
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: Resource Description Framework (RDF)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.p77ph9
   links:
@@ -173,6 +179,8 @@
       fcb_id: FCB054
     - fcb_title: Training for FAIRification with open or synthetic biomedical datasets
       fcb_id: FCB069
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: Schema.org
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.hzdzq8
   links:
@@ -245,6 +253,8 @@
       fcb_id: FCB069
     - fcb_title: Declaring data permitted uses
       fcb_id: FCB035
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Hyper Text Markup Language (HTML)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.YugnuL
   links:
@@ -314,8 +324,10 @@
       fcb_id: FCB017
     - fcb_title: Raising Awareness in Public Knowledge Graphs for Life Sciences
       fcb_id: FCB071
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Ontology Lookup Service (OLS)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.Mkl9RR
   links:
@@ -368,6 +380,8 @@
       fcb_id: FCB023
     - fcb_title: Selecting terminologies and ontologies
       fcb_id: FCB020
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: Web Ontology Language (OWL)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.atygwy
   links:
@@ -430,6 +444,8 @@
       fcb_id: FCB051
     - fcb_title: Introducing our FAIRification framework
       fcb_id: FCB079
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: MetaboLights (MTBLS)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.kkdpxe
   links:
@@ -476,8 +492,10 @@
       fcb_id: FCB071
     - fcb_title: Declaring data permitted uses
       fcb_id: FCB035
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Data Package
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.3b861d
   links:
@@ -513,8 +531,10 @@
       fcb_id: FCB046
     - fcb_title: Converting from proprietary to open format
       fcb_id: FCB029
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: IUPAC International Chemical Identifier (InChI)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.ddk9t9
   links:
@@ -548,6 +568,8 @@
       fcb_id: FCB020
     - fcb_title: Outlining a metadata profile for transcriptomics
       fcb_id: FCB027
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Statistics Ontology (STATO)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.na5xp
   links:
@@ -586,16 +608,18 @@
   links:
     - fcb_title: Making an omics data matrix FAIR
       fcb_id: FCB037
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: Common Workflow Language (CWL)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.8y5ayx
   links:
     - fcb_title: Making Computational Workflows FAIR
       fcb_id: FCB062
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
     - fcb_title: Introducing Provenance Information
       fcb_id: FCB036
-- FAIRsharing_title: EMBRACE Data and Methods Ontology (EDAM)
+- FAIRsharing_title: The bioscientific data analysis and management ontology (EDAM)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.a6r7zs
   links:
     - fcb_title: Making Computational Workflows FAIR
@@ -773,7 +797,7 @@
       fcb_id: FCB020
     - fcb_title: Practical Considerations for CROs to play FAIR
       fcb_id: FCB056
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: UniProt Knowledgebase (UniProtKB)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.s1ne3g
@@ -958,6 +982,8 @@
       fcb_id: FCB020
     - fcb_title: Outlining a metadata profile for transcriptomics
       fcb_id: FCB027
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: Experimental Factor Ontology (EFO)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.1gr4tz
   links:
@@ -1033,6 +1059,8 @@
       fcb_id: FCB051
     - fcb_title: Raising Awareness in Public Knowledge Graphs for Life Sciences
       fcb_id: FCB071
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: BioPortal
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.4m97ah
   links:
@@ -1141,6 +1169,8 @@
       fcb_id: FCB003
     - fcb_title: Understanding the relation between FAIR and Knowledge Graphs
       fcb_id: FCB070
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: bio.tools
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.63520c
   links:
@@ -1183,7 +1213,7 @@
   links:
     - fcb_title: Expressing Clinical Genetic Information as FHIR JSON
       fcb_id: FCB058
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: Fast Healthcare Interoperability Resources (FHIR)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.25k4yp
@@ -1213,11 +1243,6 @@
       fcb_id: FCB071
 - FAIRsharing_title: PubChem
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.qt3w7z
-  links:
-    - fcb_title: Outlining a metadata profile for Bioactivity data
-      fcb_id: FCB057
-- FAIRsharing_title: European Chemical Biology Database (ECBD)
-  FAIRsharing_id: https://fairsharing.org/3717
   links:
     - fcb_title: Outlining a metadata profile for Bioactivity data
       fcb_id: FCB057
@@ -1305,7 +1330,7 @@
   links:
     - fcb_title: Validating file format - FASTQ example
       fcb_id: FCB030
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: HUPO Proteomics Standards Initiative (HUPO-PSI)
   FAIRsharing_id: https://fairsharing.org/3514
@@ -1383,6 +1408,8 @@
       fcb_id: FCB076
     - fcb_title: Selecting terminologies and ontologies
       fcb_id: FCB020
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: Medical Subject Headings (MESH)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.qnkw45
   links:
@@ -1471,6 +1498,8 @@
   links:
     - fcb_title: Inventorying tools for converting data to RDF
       fcb_id: FCB051
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
 - FAIRsharing_title: SwissLipids
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.pxr7x2
   links:
@@ -1750,32 +1779,34 @@
 - FAIRsharing_title: European Variation Archive (EVA)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.6824pv
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: Minimum Information about Plant Phenotyping Experiment (MIAPPE)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.nd9ce9
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
 - FAIRsharing_title: DNA Data Bank of Japan (DDBJ)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.k337f0
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: WorkflowHub
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.07cf72
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: Fungal Gross Anatomy Ontology (FAO)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.xs6t67
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: FASTA Sequence Format (FASTA)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.rz4vfg
   links:
-    - fcb_title: Improving dataset maturity - the MIAPPE use case
+    - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
       fcb_id: FCB061
 - FAIRsharing_title: Open Provenance Model (OPM)
   FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.7c683b
@@ -1787,8 +1818,38 @@
   links:
     - fcb_title: Introducing Provenance Information
       fcb_id: FCB036
-- FAIRsharing_title: RDF/XML Syntax Specification (RDF/XML)
-  FAIRsharing_id: https://fairsharing.org/336
+- FAIRsharing_title: ClinicalTrials.gov
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.mewhad
   links:
-    - fcb_title: Introducing Provenance Information
-      fcb_id: FCB036
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
+- FAIRsharing_title: Clinical Trials Ontology (CTO)
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.qp211a
+  links:
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
+- FAIRsharing_title: European Union Drug Regulating Authorities Clinical Trials (EudraCT)
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.w1y0c7
+  links:
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
+- FAIRsharing_title: Clinical Trials Information System (CTIS)
+  FAIRsharing_id: https://fairsharing.org/4990
+  links:
+    - fcb_title: Creating a metadata profile for clinical trial protocols
+      fcb_id: FCB084
+- FAIRsharing_title: Plant Genomics and Phenomics Research Data Repository (PGP)
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.rf3m4g
+  links:
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
+- FAIRsharing_title: DataCite Repository (DataCite)
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.yknezb
+  links:
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083
+- FAIRsharing_title: Recherche Data Gouv
+  FAIRsharing_id: https://doi.org/10.25504/FAIRsharing.59985a
+  links:
+    - fcb_title: Publishing plant phenotypic data
+      fcb_id: FCB083

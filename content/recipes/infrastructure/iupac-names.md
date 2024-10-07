@@ -35,6 +35,7 @@ The latter is done by the official InChI library {footcite}`Goodman2021InChI`.
 ### Automating translations with Google Colab
 
 [Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC names.
+
 In Colab, we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
 to access the OPSIN library. 
 
