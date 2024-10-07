@@ -246,8 +246,11 @@
           title: Enhancing discoverability of EHDEN OHDSI data with Schema.org markup #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive #FCB067
+        - file: content/recipes/applied-examples/BIA_submission
+          title: Depositing epifluorescence and confocal microscopy data to EBI BioImage Archive #FCB086
         - file: content/recipes/applied-examples/approach-cdisc
           title: Mapping IMI APPROACH datasets to CDISC-SDTM standard #FCB078
+
 
 - part: AFTERWORD
   chapters:

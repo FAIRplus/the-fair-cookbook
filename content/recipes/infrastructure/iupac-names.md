@@ -20,42 +20,45 @@
 
 The main purpose of this recipe is:
 
-> To take an IUPAC name and generate an InChIKey
+> To take an IUPAC name and generate an InChIKey from it.
 
 ---
 
 ### Using the OPSIN website
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
+
 OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
-The latter is done by the offical InChI library {footcite}`Goodman2021InChI`.
+
+The latter is done by the official InChI library {footcite}`Goodman2021InChI`.
 
 ### Automating translations with Google Colab
 
 [Google Colaboratory](https://colab.research.google.com/) (Colab for short) allows us to use Python to automate conversions of IUPAC names.
-In Colab we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
-to access the OPSIN library.  
-We would first set up Colab for Java, Maven, and [scyjava](https://pypi.org/project/scyjava/), followed
-by the download the Bacting libraries and create the Bacting manager objects.
 
-Java 17 and Maven are installed with (with a confirmation which Java is available):
+In Colab, we can use [Bacting](https://github.com/egonw/bacting) {footcite}`Willighagen2021`
+to access the OPSIN library. 
+
+We would first need to set up Colab for Java, Maven, and [scyjava](https://pypi.org/project/scyjava/), followed
+by the download of the Bacting libraries and creation of Bacting manager objects.
+
+Java 17 and Maven are installed with the following commands, (with a confirmation which Java is available):
 
 ```python
-# requires uncommenting the commands below
-# !apt-get install openjdk-17-jre-headless maven -qq > /dev/null
+apt-get install openjdk-17-jre-headless maven -qq > /dev/null
 import os
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-17-openjdk-amd64"
-# !update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
 java -version
 ```
 
-Scyjava is then installed with:
+Scyjava is installed with the following command:
 
 ```python
-# requires uncommenting the command below
-# !pip install scyjava
+pip install scyjava
 ```
 
+We can then continue by installing Bacting and setting up the two Bacting managers, `inchi` and `opsin`:
 
 ```python
 from scyjava import config, jimport
@@ -68,7 +71,7 @@ opsin_cls = jimport("net.bioclipse.managers.OpsinManager")
 opsin = opsin_cls(".")
 ```
 
-After that, we use the manager API to parse the IUPAC name and generate an InChI and InChIKey:
+After that, we use the manager API to parse the IUPAC name and generate an `InChI` and an `InChIKey`:
 
 ```python
 anInChI = inchi.generate(opsin.parseIUPACName("methane"))
@@ -84,11 +87,12 @@ including a button to open the notebook in Colab.
 Because Bacting is written in Java and the libraries being available from
 [Maven Central](https://search.maven.org/), it also be used in
 [Apache Groovy](http://www.groovy-lang.org/) and other Java-based environments.
+
 The above code in Groovy looks like:
 
 ```groovy
-@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.1.0')
-@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.1.0')
+@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.4.1')
+@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.4.1')
 
 workspaceRoot = "."
 inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
@@ -102,8 +106,9 @@ println "InchIKey: ${anInChI.getKey()}"
 ## Conclusion
 
 Cheminformatics provides us the tools to parse IUPAC names and convert them to
-chemical graph based identifiers, such as the InChIKey. The InChIKey identifier
-can be used to find more information about the chemicals represented by the
+chemical graph based identifiers, such as the InChIKey.
+
+The InChIKey identifier can be used to find more information about the chemicals represented by the
 original IUPAC names.
 
 ### What to read next?
