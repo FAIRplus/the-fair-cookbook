@@ -8,7 +8,7 @@ from docutils.parsers.rst import directives
 from sphinx.util import logging
 
 logger = logging.getLogger(__name__)
-logger.info('Hello, this is "fairaring_panel" extension!')
+logger.info('Hello, this is "fairsharing_panel" extension!')
 
 
 class FAIRsharingPanel(Directive):
