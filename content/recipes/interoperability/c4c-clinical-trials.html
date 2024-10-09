@@ -31,11 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -49,11 +49,11 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/js/vue.min.js"></script>
-    <script src="../../../_static/js/mermaid.min.js"></script>
-    <script src="../../../_static/js/mermaid.js"></script>
-    <script src="../../../_static/js/mermaid.core.js"></script>
     <script src="../../../_static/js/searchNodal.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
+    <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -883,8 +883,13 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/BIA_submission.html">
+     7. Depositing epifluorescence and confocal microscopy data to EBI BioImage Archive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/approach-cdisc.html">
-     7. Mapping IMI APPROACH datasets to CDISC-SDTM standard
+     8. Mapping IMI APPROACH datasets to CDISC-SDTM standard
     </a>
    </li>
   </ul>
@@ -1871,6 +1876,15 @@ No
 <li><p><a class="reference internal" href="selecting-ontologies.html"><span class="doc std std-doc">Ontology mappings</span></a></p></li>
 <li><p><a class="reference internal" href="creating-data-dictionary.html"><span class="doc std std-doc">Data dictionary</span></a></p></li>
 </ul>
+<div class="card w-100 border-2 col-md-4 p-0 docutils">
+<div class="card-header bg-primary pa_dark docutils text-center">
+<img alt="FAIRsharing logo" height="40px" src="/_static/images/logo/fairsharing-logo.png">
+</div>
+<div class="card-body docutils">
+<p class="mb-0">FAIRsharing records appearing in this recipe:</p>
+<ul><li><a href="https://fairsharing.org/3525" target="_blank">CDISC</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.s51qk5" target="_blank">CDISC Study Data Tabulation Model (CDISC SDTM)</a></li><li><a href="https://fairsharing.org/4990" target="_blank">Clinical Trials Information System (CTIS)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.qp211a" target="_blank">Clinical Trials Ontology (CTO)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.mewhad" target="_blank">ClinicalTrials.gov</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.w1y0c7" target="_blank">European Union Drug Regulating Authorities Clinical Trials (EudraCT)</a></li><li><a href="https://fairsharing.org/298" target="_blank">FAIR Data Point (FDP)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.4cvwxa" target="_blank">NCI Thesaurus (NCIt)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.847069" target="_blank">OBO Foundry (OBO)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.9qkaz9" target="_blank">Online Mendelian Inheritance in Man (OMIM)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.f1449d" target="_blank">Shapes Constraint Language (SHACL) (SHACL)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.WWI10U" target="_blank">The FAIR Principles (FAIR)</a></li><li><a href="https://doi.org/10.25504/FAIRsharing.qk984b" target="_blank">The Observational Medical Outcomes Partnership Common Data Model (OMOP CDM)</a></li></ul>
+</div>
+</div>
 <!--## References
 
 ````{dropdown} **References**
@@ -1926,7 +1940,7 @@ No
 <td><p class="card-text"><a target="_blank" href="https://orcid.org/0000-0002-1704-5980"><i class="fab fa-orcid fa-2x text--orange"></i></a></p></td>
 <td><p class="card-text">Amsterdam UMC</p></td>
 <td><p class="card-text"><i class="fas fa-graduation-cap fa-1x text--orange" alt="Academic"></i></p></td>
-<td><p class="card-text"></p></td>
+<td><p class="card-text"><img class="elixir-style" src="../../../_static/images/logo/Elixir/ELIXIR-NL.svg" ></img></p></td>
 <td><p class="card-text">Writing - Original Draft</p></td>
 </tr>
 <tr class="row-even"><td><p class="card-text"><div class="firstCol"><a target="_blank" href="https://github.com/{github_handle}"><img class="avatar-style" src="https://avatars.githubusercontent.com/daniwelter"></img><div class="d-block">Danielle Welter</div></a></div></p></td>

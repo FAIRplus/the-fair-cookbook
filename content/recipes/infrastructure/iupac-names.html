@@ -31,11 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/vuetify.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/search-wizard.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -49,11 +49,11 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/js/vue.min.js"></script>
-    <script src="../../../_static/js/mermaid.min.js"></script>
-    <script src="../../../_static/js/mermaid.js"></script>
-    <script src="../../../_static/js/mermaid.core.js"></script>
     <script src="../../../_static/js/searchNodal.js"></script>
+    <script src="../../../_static/js/mermaid.core.js"></script>
+    <script src="../../../_static/js/vue.min.js"></script>
+    <script src="../../../_static/js/mermaid.js"></script>
+    <script src="../../../_static/js/mermaid.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -883,8 +883,13 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../applied-examples/BIA_submission.html">
+     7. Depositing epifluorescence and confocal microscopy data to EBI BioImage Archive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../applied-examples/approach-cdisc.html">
-     7. Mapping IMI APPROACH datasets to CDISC-SDTM standard
+     8. Mapping IMI APPROACH datasets to CDISC-SDTM standard
     </a>
    </li>
   </ul>
@@ -1096,23 +1101,38 @@ Yes
 <h2><span class="section-number">3.1. </span>Main Objectives<a class="headerlink" href="#main-objectives" title="Permalink to this headline">¶</a></h2>
 <p>The main purpose of this recipe is:</p>
 <blockquote>
-<div><p>To take an IUPAC name and generate an InChIKey</p>
+<div><p>To take an IUPAC name and generate an InChIKey from it.</p>
 </div></blockquote>
 <hr class="docutils" />
 <div class="section" id="using-the-opsin-website">
 <h3><span class="section-number">3.1.1. </span>Using the OPSIN website<a class="headerlink" href="#using-the-opsin-website" title="Permalink to this headline">¶</a></h3>
-<p>The OPSIN library is an open source tool to parse IUPAC names into chemical graphs <a class="footnote-reference brackets" href="#lowe2011chemical" id="id1">2</a>.
-OPSIN has <a class="reference external" href="https://opsin.ch.cam.ac.uk/">a website</a> where IUPAC names are converted into other representations, including an InChIKey.
-The latter is done by the offical InChI library <a class="footnote-reference brackets" href="#goodman2021inchi" id="id2">1</a>.</p>
+<p>The OPSIN library is an open source tool to parse IUPAC names into chemical graphs <a class="footnote-reference brackets" href="#lowe2011chemical" id="id1">2</a>.</p>
+<p>OPSIN has <a class="reference external" href="https://opsin.ch.cam.ac.uk/">a website</a> where IUPAC names are converted into other representations, including an InChIKey.</p>
+<p>The latter is done by the official InChI library <a class="footnote-reference brackets" href="#goodman2021inchi" id="id2">1</a>.</p>
 </div>
 <div class="section" id="automating-translations-with-google-colab">
 <h3><span class="section-number">3.1.2. </span>Automating translations with Google Colab<a class="headerlink" href="#automating-translations-with-google-colab" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a> (Colab for short) allows us to use Python to automate conversions of IUPAC names.
-In Colab we can use <a class="reference external" href="https://github.com/egonw/bacting">Bacting</a> <a class="footnote-reference brackets" href="#willighagen2021" id="id3">3</a>
-to access the OPSIN library. We would first download the Bacting libraries and create the Bacting manager objects:</p>
+<p><a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a> (Colab for short) allows us to use Python to automate conversions of IUPAC names.</p>
+<p>In Colab, we can use <a class="reference external" href="https://github.com/egonw/bacting">Bacting</a> <a class="footnote-reference brackets" href="#willighagen2021" id="id3">3</a>
+to access the OPSIN library.</p>
+<p>We would first need to set up Colab for Java, Maven, and <a class="reference external" href="https://pypi.org/project/scyjava/">scyjava</a>, followed
+by the download of the Bacting libraries and creation of Bacting manager objects.</p>
+<p>Java 17 and Maven are installed with the following commands, (with a confirmation which Java is available):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">openjdk</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">jre</span><span class="o">-</span><span class="n">headless</span> <span class="n">maven</span> <span class="o">-</span><span class="n">qq</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;JAVA_HOME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;/usr/lib/jvm/java-17-openjdk-amd64&quot;</span>
+<span class="n">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="o">--</span><span class="nb">set</span> <span class="n">java</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">java</span>
+<span class="n">java</span> <span class="o">-</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Scyjava is installed with the following command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scyjava</span>
+</pre></div>
+</div>
+<p>We can then continue by installing Bacting and setting up the two Bacting managers, <code class="docutils literal notranslate"><span class="pre">inchi</span></code> and <code class="docutils literal notranslate"><span class="pre">opsin</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scyjava</span> <span class="kn">import</span> <span class="n">config</span><span class="p">,</span> <span class="n">jimport</span>
-<span class="n">config</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;io.github.egonw.bacting:managers-inchi:0.1.0&#39;</span><span class="p">)</span>
-<span class="n">config</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;io.github.egonw.bacting:managers-opsin:0.1.0&#39;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;io.github.egonw.bacting:managers-inchi:0.4.1&#39;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;io.github.egonw.bacting:managers-opsin:0.4.1&#39;</span><span class="p">)</span>
 
 <span class="n">inchi_cls</span> <span class="o">=</span> <span class="n">jimport</span><span class="p">(</span><span class="s2">&quot;net.bioclipse.managers.InChIManager&quot;</span><span class="p">)</span>
 <span class="n">inchi</span> <span class="o">=</span> <span class="n">inchi_cls</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
@@ -1120,7 +1140,7 @@ to access the OPSIN library. We would first download the Bacting libraries and c
 <span class="n">opsin</span> <span class="o">=</span> <span class="n">opsin_cls</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>After that, we use the manager API to parse the IUPAC name and generate an InChI and InChIKey:</p>
+<p>After that, we use the manager API to parse the IUPAC name and generate an <code class="docutils literal notranslate"><span class="pre">InChI</span></code> and an <code class="docutils literal notranslate"><span class="pre">InChIKey</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">anInChI</span> <span class="o">=</span> <span class="n">inchi</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">opsin</span><span class="o">.</span><span class="n">parseIUPACName</span><span class="p">(</span><span class="s2">&quot;methane&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;InChI: </span><span class="si">{</span><span class="n">anInChI</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;InchIKey: </span><span class="si">{</span><span class="n">anInChI</span><span class="o">.</span><span class="n">getKey</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1133,10 +1153,10 @@ including a button to open the notebook in Colab.</p>
 <h3><span class="section-number">3.1.3. </span>Automating translations with Apache Groovy<a class="headerlink" href="#automating-translations-with-apache-groovy" title="Permalink to this headline">¶</a></h3>
 <p>Because Bacting is written in Java and the libraries being available from
 <a class="reference external" href="https://search.maven.org/">Maven Central</a>, it also be used in
-<a class="reference external" href="http://www.groovy-lang.org/">Apache Groovy</a> and other Java-based environments.
-The above code in Groovy looks like:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="nd">@Grab</span><span class="o">(</span><span class="n">group</span><span class="o">=</span><span class="s1">&#39;io.github.egonw.bacting&#39;</span><span class="o">,</span> <span class="n">module</span><span class="o">=</span><span class="s1">&#39;managers-inchi&#39;</span><span class="o">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="o">)</span>
-<span class="nd">@Grab</span><span class="o">(</span><span class="n">group</span><span class="o">=</span><span class="s1">&#39;io.github.egonw.bacting&#39;</span><span class="o">,</span> <span class="n">module</span><span class="o">=</span><span class="s1">&#39;managers-opsin&#39;</span><span class="o">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="o">)</span>
+<a class="reference external" href="http://www.groovy-lang.org/">Apache Groovy</a> and other Java-based environments.</p>
+<p>The above code in Groovy looks like:</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="nd">@Grab</span><span class="o">(</span><span class="n">group</span><span class="o">=</span><span class="s1">&#39;io.github.egonw.bacting&#39;</span><span class="o">,</span> <span class="n">module</span><span class="o">=</span><span class="s1">&#39;managers-inchi&#39;</span><span class="o">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.4.1&#39;</span><span class="o">)</span>
+<span class="nd">@Grab</span><span class="o">(</span><span class="n">group</span><span class="o">=</span><span class="s1">&#39;io.github.egonw.bacting&#39;</span><span class="o">,</span> <span class="n">module</span><span class="o">=</span><span class="s1">&#39;managers-opsin&#39;</span><span class="o">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.4.1&#39;</span><span class="o">)</span>
 
 <span class="n">workspaceRoot</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
 <span class="n">inchi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">net</span><span class="o">.</span><span class="na">bioclipse</span><span class="o">.</span><span class="na">managers</span><span class="o">.</span><span class="na">InChIManager</span><span class="o">(</span><span class="n">workspaceRoot</span><span class="o">);</span>
@@ -1152,8 +1172,8 @@ The above code in Groovy looks like:</p>
 <div class="section" id="conclusion">
 <h2><span class="section-number">3.2. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>Cheminformatics provides us the tools to parse IUPAC names and convert them to
-chemical graph based identifiers, such as the InChIKey. The InChIKey identifier
-can be used to find more information about the chemicals represented by the
+chemical graph based identifiers, such as the InChIKey.</p>
+<p>The InChIKey identifier can be used to find more information about the chemicals represented by the
 original IUPAC names.</p>
 <div class="section" id="what-to-read-next">
 <h3><span class="section-number">3.2.1. </span>What to read next?<a class="headerlink" href="#what-to-read-next" title="Permalink to this headline">¶</a></h3>
