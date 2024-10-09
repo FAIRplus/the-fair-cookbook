@@ -32,7 +32,7 @@ jsonschema==3.2.0
 jupyter-book==0.10.2
 jupyter-cache==0.4.2
 jupyter-client==6.1.12
-jupyter-core==4.7.1
+jupyter-core==4.11.2
 jupyter-packaging==0.9.2
 jupyter-server==1.15.4
 jupyter-server-mathjax==0.2.2
