@@ -198,7 +198,7 @@
       sections:
         - file: content/recipes/reusability/miappe #FCB061
           title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
-        - file: content/recipes/reusability/plant-pheno-data-publication #FCB083PRE
+        - file: content/recipes/reusability/plant-pheno-data-publication #FCB083
           title: Publishing plant phenotypic data
         - file: content/recipes/maturity/isa-maturity-progression
           title: Moving through maturity levels with ISA
@@ -246,8 +246,11 @@
           title: Enhancing discoverability of EHDEN OHDSI data with Schema.org markup #FCB054
         - file: content/recipes/applied-examples/eubopen-hcs-bioimage
           title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive #FCB067
+        - file: content/recipes/applied-examples/BIA_submission
+          title: Depositing epifluorescence and confocal microscopy data to EBI BioImage Archive #FCB086
         - file: content/recipes/applied-examples/approach-cdisc
           title: Mapping IMI APPROACH datasets to CDISC-SDTM standard #FCB078
+
 
 - part: AFTERWORD
   chapters:

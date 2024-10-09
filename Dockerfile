@@ -7,7 +7,7 @@ FROM python:3.7.8-slim-buster AS jupyterbookbuilder-base-image
 RUN pip install                                  \
             alabaster==0.7.12                    \
             anyio==2.2.0                         \
-            argon2-cffi==20.1.0                  \
+            argon2-cffi==23.1.0                  \
             async-generator==1.10                \
             attrs==20.3.0                        \
             Babel==2.9.0                         \
