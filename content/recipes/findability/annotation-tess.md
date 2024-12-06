@@ -171,12 +171,7 @@ Suggest further reading using the following:
   [my-prefered-label](fcb-help-recipe-template)
 
 
-## References:
 
-````{dropdown} **References**
-```{footbibliography}
-```
-````
 
 
 
