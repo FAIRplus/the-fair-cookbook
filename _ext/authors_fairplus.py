@@ -84,7 +84,7 @@ class AuthorsFairplus(Directive):
             
 
             if github_handle != "":
-                github_link_start = '<a target="_blank" href="https://github.com/{github_handle}">'
+                github_link_start = f'<a target="_blank" href="https://github.com/{github_handle}">'
                 github_link_end   = '</a>'
                 github_image_block = f'<img class="avatar-style" src="https://avatars.githubusercontent.com/{github_handle}"></img>'
             else:
