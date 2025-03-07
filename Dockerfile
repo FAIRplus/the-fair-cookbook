@@ -25,7 +25,7 @@ RUN pip install                                  \
             docutils==0.16                       \
             entrypoints==0.3                     \
             gitdb==4.0.7                         \
-            GitPython==3.1.14                    \
+            GitPython==3.1.41                    \
             idna==2.10                           \
             imagesize==1.2.0                     \
             importlib-metadata==4.0.1            \
@@ -39,7 +39,7 @@ RUN pip install                                  \
             jupyter-book==0.10.2                 \
             jupyter-cache==0.4.2                 \
             jupyter-client==6.1.12               \
-            jupyter-core==4.7.1                  \
+            jupyter-core==4.11.2                  \
             jupyter-packaging==0.9.2             \
             jupyter-server==1.15.4               \
             jupyter-server-mathjax==0.2.2        \
