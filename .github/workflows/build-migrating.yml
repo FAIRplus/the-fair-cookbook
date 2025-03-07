@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout dev branch 🛎️
-      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      uses: actions/checkout@v4 # If you're using actions/checkout@v4 you must set persist-credentials to false in most cases for the deployment to work correctly.
       with:
         persist-credentials: false
         ref: main
     - name: Setup Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
     - name: Record Python version
@@ -65,7 +65,7 @@ jobs:
         # ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
         ssh-private-key: ${{ secrets.DEPLOY_GHPAGES_INTO_MAIN_REPO }}  ## for push into the-fair-cookbook
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
         SSH: true
         BASE_BRANCH: main #The branch of this repository which should be transfered from.
