@@ -93,6 +93,8 @@
     fcb_id: FCB026
   - fcb_title: Interlinking data from different sources
     fcb_id: FCB016
+  - fcb_title: Inventorying tools for converting data to RDF
+    fcb_id: FCB051
   - fcb_title: Introducing the DATS model
     fcb_id: FCB082
   - fcb_title: Creating knowledge graphs from unstructured text
@@ -150,6 +152,8 @@
   - fcb_title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage
       Archive
     fcb_id: FCB067
+  - fcb_title: Depositing Covid-19 image data to BioImage Archive
+    fcb_id: FCB086
 
 - rdmkit_title: Data brokering
   rdmkit_filename: data_brokering
