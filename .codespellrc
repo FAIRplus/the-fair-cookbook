@@ -1,0 +1,6 @@
+[codespell]
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+skip = .git*,*.svg,*.css,*.min.*,.codespellrc,_static,*.bib
+check-hidden = true
+ignore-regex = ^\s*"image/\S+": ".*|\b[A-Z][A-Z][A-Za-z]*|\b(Ines|Pont|Leary|Ontop)\b|\*\*[A-Z]\*\*[a-z]+\b|.*Lorem\ ipsum.*
+ignore-words-list = sme
