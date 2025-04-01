@@ -259,7 +259,7 @@ The table lists technical considerations when selecting the validator, including
 | |fastq-solexa|Validate the _fastq-solexa_ format|☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
-|Archieve compatibility|ENA|File validated can be submitted to the ENA archive.|☑️|
+|Achieve compatibility|ENA|File validated can be submitted to the ENA archive.|☑️|
 ||ArrayExpress|File validated can be submitted to Array Express.|☑️|
 ||SRA|File validated can be submitted to the SRA archive.|☑️|
 |Interface|Command line interface|Can be used in shell and integrated in pipe commands|☑️|

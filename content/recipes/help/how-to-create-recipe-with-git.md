@@ -242,7 +242,7 @@ pip install jupyter-book
 ```
 to update pip, issue `pip install pip --upgrade'
 ```
-		**Huzza!** You are now reading te test if your recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
+		**Huzza!** You are now reading to test if your recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
 
 
 
