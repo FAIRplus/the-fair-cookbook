@@ -190,7 +190,7 @@ on a MacOS system, invoke the following:
 https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 
 
-* Run the Proteowizard `pwiz tool` from the container over the WATERS raw data, by issueing the following command from the terminal:
+* Run the Proteowizard `pwiz tool` from the container over the WATERS raw data, by issuing the following command from the terminal:
 
 ```bash
 >docker run -it --rm -e WINEDEBUG=-all -v /Users/bob/Documents/IMI-FAIR+/Resolute/RESOLUTE_Targted_Metabolomics_of_parental_cell_lines/Raw/MCC025_p180_102024_102059_20190125/raw\ data/KIT2-0-8015_1024503073/:/data chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/KIT2-0-8015_1024503073_01_0_1_1_10_11000002.raw --mzML
@@ -291,7 +291,7 @@ The Python `pymzml` library rendering of a spectrum as extracted from an mzml fo
 ```
 ````
 
-In the follow-up recipe, we will show how to boostrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we'll show how to read an mzML file using a python library.
+In the follow-up recipe, we will show how to bootstrap the creation of an ISA metadata file from a bag of mzML documents. But in the following, we'll show how to read an mzML file using a python library.
 
 ## Conclusion
 

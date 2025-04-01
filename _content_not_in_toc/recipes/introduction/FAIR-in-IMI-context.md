@@ -25,7 +25,7 @@ As far as data are concerned, the adoption of the FAIR principles is aspirationa
 ## IMI and the FAIR principles
 
 
-IMI builds on the [Guidelines on FAIR Data Management in Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf) to articulate its suppport and endorsement of the FAIR principles (Wilkinson et al, 2016).
+IMI builds on the [Guidelines on FAIR Data Management in Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf) to articulate its support and endorsement of the FAIR principles (Wilkinson et al, 2016).
 
 Briefly, IMI states the following:
 > Research data should be:

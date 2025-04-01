@@ -239,7 +239,7 @@ graph TD;
 
 ## Conclusion
 
-Summerize Key Learnings of the recipe.
+Summarize Key Learnings of the recipe.
  
 Suggest further reading using the following:
 ### What to read next?

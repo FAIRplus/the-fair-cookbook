@@ -951,7 +951,7 @@ source: https://github.com/biocompute-objects/bco-ro-example-chipseq/blob/main/d
         "@id": "#db65dfb7-4867-400e-a12f-a1652d46a333"
       },
       "dateModified": "2020-09-10T13:20:49.143Z",
-      "description": "Nextflow outputs from examplar run of nf-core/ pipeline workflow.",
+      "description": "Nextflow outputs from exemplar run of nf-core/ pipeline workflow.",
       "hasPart": [
         {
           "@id": "results/bwa/"

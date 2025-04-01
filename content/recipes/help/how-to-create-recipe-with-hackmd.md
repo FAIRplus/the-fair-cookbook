@@ -174,7 +174,7 @@ use the split view to have what you type immediately rendered.
 ## Use the FAIRplus Recipe Template as guide
 
 The FAIRPlus Cookbook Team is working at establishing a standard layout for easing the creation of a new recipe.
-The template contains key sections and outlines, which will help boostrap the process.
+The template contains key sections and outlines, which will help bootstrap the process.
 
 [recipe template](https://github.com/FAIRplus/the-fair-cookbook/edit/dev/docs/content/recipes/help/recipe-template.md)
 

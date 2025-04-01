@@ -234,7 +234,7 @@ For more details about the full list of source, consult the publication {footcit
 The network is available in four formats:
 
 + **JSON** — see [`hetnet/json`](https://github.com/hetio/hetionet/tree/master/hetnet/json)
-+ **Neo4j** — see [`hetnet/neo4j`](https://github.com/hetio/hetionet/tree/master/hetnet/neo4j) annd [https://neo4j.het.io/browser/](https://neo4j.het.io/browser/)
++ **Neo4j** — see [`hetnet/neo4j`](https://github.com/hetio/hetionet/tree/master/hetnet/neo4j) and [https://neo4j.het.io/browser/](https://neo4j.het.io/browser/)
 + **TSV** — see [`hetnet/tsv`](https://github.com/hetio/hetionet/tree/master/hetnet/tsv)
 + **matrix** — see [`hetnet/matrix`](https://github.com/hetio/hetionet/tree/master/hetnet/matrix)
 

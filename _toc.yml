@@ -11,7 +11,7 @@
       title: Reflecting on the ethical values of FAIR
     - file: content/recipes/introduction/fairification-process #FCB079
       title: Introducing our FAIRification framework
-    - file: content/recipes/introduction/priorization #FCB055
+    - file: content/recipes/introduction/prioritization #FCB055
       title: Prioritizing projects for FAIRification
     - file: content/recipes/introduction/metadata-fair #FCB068
       title: Framing FAIR and the notion of metadata

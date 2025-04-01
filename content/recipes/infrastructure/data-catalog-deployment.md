@@ -103,7 +103,7 @@ os.urandom(24)
     * a container for `Solr`
  
 ```{note} 
-> ⚡ the data will be persistant between runs.
+> ⚡ the data will be persistent between runs.
 ```
 
 

@@ -46,7 +46,7 @@ Aspera Data Transfer Process.
 * For some sites, local rules are in place covering user access. For example only one username may be allowed per organisation, and the users must have demonstrable technical competencies and necessary familiarity with the data, and rules should be in place how to distribute the downloaded data further.
  
 ### Decide how you are going to access the data
-* A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera broswer plugin to be able to do download any files.
+* A Web browser is great for initial browsing and downloading of small occasional files. It will automatically prompt you to download the Aspera browser plugin to be able to do download any files.
 * For heavy duty downloading an Aspera command line client is needed. e.g. to download gigabytes or even terabytes of data.
  
 ### Decide on software needed and get it installed
