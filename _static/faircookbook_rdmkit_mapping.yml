@@ -37,6 +37,8 @@
     fcb_id: FCB052
   - fcb_title: Validating checksums to verify file integrity
     fcb_id: FCB053
+  - fcb_title: Data Protection Impact Assessment and Data Privacy
+    fcb_id: FCB074
 
 - rdmkit_title: GDPR compliance
   rdmkit_filename: gdpr_compliance
@@ -204,3 +206,11 @@
     fcb_id: FCB009
   - fcb_title: Registering datasets with Wikidata
     fcb_id: FCB060
+
+- rdmkit_title: Health data
+  rdmkit_filename: health_data
+  links:
+  - fcb_title: Creating a metadata profile for clinical trial protocols
+    fcb_id: FCB084
+  - fcb_title: Mapping IMI APPROACH datasets to CDISC-SDTM standard
+    fcb_id: FCB078
