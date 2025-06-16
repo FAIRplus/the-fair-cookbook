@@ -129,8 +129,8 @@
 - rdmkit_title: Plant sciences
   rdmkit_filename: plant_sciences
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI
-      databases
+  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to 
+      EMBL-EBI databases
     fcb_id: FCB061
   - fcb_title: Publishing plant phenotypic data
     fcb_id: FCB083
@@ -138,8 +138,8 @@
 - rdmkit_title: Plant Genomics
   rdmkit_filename: plant_genomics_assembly
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI
-      databases
+  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to 
+      EMBL-EBI databases
     fcb_id: FCB061
 
 - rdmkit_title: Plant Phenomics
@@ -151,10 +151,11 @@
 - rdmkit_title: Bioimaging data
   rdmkit_filename: bioimaging_data
   links:
-  - fcb_title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage
-      Archive
+  - fcb_title: Depositing IMI EUBOPEN High-Content Screening data to EBI 
+      BioImage Archive
     fcb_id: FCB067
-  - fcb_title: Depositing Covid-19 image data to BioImage Archive
+  - fcb_title: Depositing epifluorescence and confocal microscopy data to EBI 
+      BioImage Archive
     fcb_id: FCB086
 
 - rdmkit_title: Data brokering
