@@ -66,6 +66,8 @@
             title: Marking up Dataset page with Schema.org & Bioschemas for SEO #FCB012
           - file: content/recipes/findability/seo/bioschemas-datacatalog
             title: Marking up Data Catalogue page with Schema.org & Bioschemas for SEO #FCB013
+      - file: content/recipes/findability/annotation-tess
+        title: Annotating training materials in ELIXIR TeSS with interoperable keywords/registry entries #FCB087
 
     - file: content/recipes/accessibility
       title: Accessibility
