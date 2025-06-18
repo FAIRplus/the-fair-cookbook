@@ -42,7 +42,7 @@ jupyterlab-widgets==1.0.0
 jupytext==1.10.3
 latexcodec==2.0.1
 linkify-it-py==1.0.1
-markdown-it-py==0.6.2
+markdown-it-py==2.2.0
 MarkupSafe==1.1.1
 mdit-py-plugins==0.2.6
 mistune==0.8.4
