@@ -159,10 +159,10 @@ If everything goes without a glitch, your terminal should show something like th
 ```{figure} ../../../images/docker_success.png
 ---
 height: 600px
-name: Successfull Docker build 
-alt: Successfull Docker build
+name: Successful Docker build 
+alt: Successful Docker build
 ---
-Successfull Docker build.
+Successful Docker build.
 ```
 ````
 
@@ -242,7 +242,7 @@ pip install jupyter-book
 ```
 to update pip, issue `pip install pip --upgrade'
 ```
-		**Huzza!** You are now reading te test if yuor recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
+		**Huzza!** You are now reading to test if your recipe can be built in the jupyter-book. To just do this, you need to run the following command from the root of the github branch.
 
 
 

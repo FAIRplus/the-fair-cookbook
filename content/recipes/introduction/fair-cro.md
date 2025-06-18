@@ -100,7 +100,7 @@ It is important to keep in mind the potential benefits brought about FAIRificati
 - Enhanced methodology for target identification and drug repurposing.
 - Ability to pool data and perform ad-hoc analysis in an effective method. 
 - Reduction in study set-up times, high data quality and annotations can provide significant cost savings in the long term.
-- Increased capabilities for Artificial Intelligence and Machine Learning applications, as data scientists who rely on high quality searchable data which can be more easily mobilized and re-used to build algorithms – either to screen for compounds or run simulations to understand the drug’s mechanism of action (MOA).
+- Increased capabilities for Artificial Intelligence and Machine Learning applications, as data scientists who rely on high quality searchable data which can be more easily mobilized and reused to build algorithms – either to screen for compounds or run simulations to understand the drug’s mechanism of action (MOA).
 
 ## Key Performance Indicators:
 

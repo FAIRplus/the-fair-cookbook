@@ -2,7 +2,7 @@
 
 ## Data Usage Areas
 
-Each organization or research community might have different business goals for re-using data. These different re-use areas require different attention for improving findability, accessibility and interoperability of data sets. Following table provides an overview of these data re-use areas, and for each area what action can be taken to improve data management processes and potential benefits.
+Each organization or research community might have different business goals for reusing data. These different reuse areas require different attention for improving findability, accessibility and interoperability of data sets. Following table provides an overview of these data reuse areas, and for each area what action can be taken to improve data management processes and potential benefits.
 
 
 

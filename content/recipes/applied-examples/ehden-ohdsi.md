@@ -281,7 +281,7 @@ study_subject:
     concept_code_url: "http://purl.bioontology.org/ontology/RXNORM/1546359"
 ```
 
-The data in YAML gets converted into Turtle programatically:
+The data in YAML gets converted into Turtle programmatically:
 
 ```text
 @prefix ohdsi: <http://data.ohdsi.org/> .

@@ -191,7 +191,7 @@ Important support aspects for a vocabulary service/ontology lookup service are:
 Before looking into a concrete ontology service, some general thoughts are recommended. Two types of portal tools are available:
 
 - **Open data portal tool**
-**Open data portals** provide web-based interfaces designed to make it easier to find and access re-usable information. 
+**Open data portals** provide web-based interfaces designed to make it easier to find and access reusable information. 
 Some of them also support importing and exporting ontologies, including a SPARQL endpoint and provide ontology lookup 
 service core functionality.
 An **Open Portal Tool**` is the underlying software that is used to implement the ontology portal functionalities.
@@ -503,7 +503,7 @@ it is the only option that supports reasoning and versioning.
 #### Overview
 
 [European data portal](https://www.europeandataportal.eu/en)  (EDP) is an initiative by 
-the [Publications Office of the European Union](https://op.europa.eu/da/home) and by the [European Commission](https://ec.europa.eu/info/index_en) that aims to increase the impact of open data by making it easy to find and re-use by everyone.
+the [Publications Office of the European Union](https://op.europa.eu/da/home) and by the [European Commission](https://ec.europa.eu/info/index_en) that aims to increase the impact of open data by making it easy to find and reuse by everyone.
 
 It uses only open source software with extensions that are all available to the public for own use. 
 

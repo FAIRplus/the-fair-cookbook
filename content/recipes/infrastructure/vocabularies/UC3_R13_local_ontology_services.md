@@ -128,7 +128,7 @@ title: Experimental Factor Ontology // Short title of the ontology
 uri: http://www.ebi.ac.uk/efo // The ontology URI * description: "The Experimental Factor Ontology (EFO) provides a…" // Full ontology description
 ontology_purl: http://www.ebi.ac.uk/efo/efo.owl // URL to get the ontology from *
 homepage: http://www.ebi.ac.uk/efo // homepage of the ontology
-mailing_list: efo-users@lists.sourceforge.net // assocaited mailing list
+mailing_list: efo-users@lists.sourceforge.net // associated mailing list
 definition_property: // predicates that are used for term definitions
  - http://www.ebi.ac.uk/efo/definition
 synonym_property: // prediates used for synonyms
@@ -140,7 +140,7 @@ hidden_property: // any predicates that should be ignored when indexing
  - http://www.ebi.ac.uk/efo/has_flag
 base_uri: // base URIs for local terms
  - http://www.ebi.ac.uk/efo/EFO_
-reasoner: OWL2 // can be one of OWL2, EL, NONE - deafult is EL
+reasoner: OWL2 // can be one of OWL2, EL, NONE - default is EL
 oboSlims: false // contains OBO style slim annotations
 ```
 

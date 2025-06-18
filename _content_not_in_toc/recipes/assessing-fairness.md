@@ -8,7 +8,7 @@ This Chapter is dedicated to FAIR Evaluation and FAIR assessment processes.
 We will therefore cover topics such as:
 
 
-1. Using and Developping FAIR Indicators 
+1. Using and Developing FAIR Indicators 
 2. Carrying out FAIR assessments manually:
 3. Automatic Assessment with FAIREvaluator
 4. Automatic Assessment with FAIRShake

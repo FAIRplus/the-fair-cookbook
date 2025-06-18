@@ -129,7 +129,7 @@ Data Dictionary.
 * **Unique (combined with):** If the combination of several fields should be unique (e.g. Sample ID and Visit Number).
 * **Required:** If the field should NOT allow empty value.
 * **Collection Form Name:** Optional, if the field is collected in certain forms (e.g. in Case Report Forms from a clinical trial).
-* **Comments:** Optional, for futher information.
+* **Comments:** Optional, for further information.
 
 
 ### What fields to include in a data dictionary?
