@@ -208,6 +208,18 @@
   - fcb_title: Registering datasets with Wikidata
     fcb_id: FCB060
 
+- rdmkit_title: Data discoverability
+  rdmkit_filename: data_discoverability
+  links:
+  - fcb_title: Depositing to generic repositories - Zenodo use case
+    fcb_id: FCB009
+  - fcb_title: Introducing unique, persistent identifiers
+    fcb_id: FCB006
+  - fcb_title: Registering datasets with Wikidata
+    fcb_id: FCB060
+  - fcb_title: Introducing Search Engine Optimization (SEO)
+    fcb_id: FCB010
+
 - rdmkit_title: Health data
   rdmkit_filename: health_data
   links:
