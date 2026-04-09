@@ -6,14 +6,14 @@
 ````{panels_fairplus}
 :identifier_text: FCB___
 :identifier_link: https://w3id.org/faircookbook/FCB___
-:difficulty_level: 2
-:recipe_type: background_information
-:reading_time_minutes: 15
-:intended_audience: principal_investigator, data_manager, data_scientist, funder
-:maturity_level: 0  
-:maturity_indicator: 0
+:difficulty_level: 1
+:recipe_type: technical_guidance
+:reading_time_minutes: 20
+:intended_audience: trainer, data_curator, data_manager
+:maturity_level: 3  
+:maturity_indicator: 33
 :has_executable_code: nope
-:recipe_name: Recipe Template
+:recipe_name: Annotating training materials in ELIXIR TeSS
 ```` 
 
 
@@ -37,7 +37,7 @@ This recipe requires working with the following resources:
 * FAIRsharing: [A registry of (meta)data standards, databases, and policies](https://fairsharing.org/)
 * bio.tools: [A registry of software tools for bioinformatics and the life sciences](https://bio.tools/)
 * EDAM: [The ontology of data analysis and data management](https://edamontology.org/)  
-may be used via BioPortal: [A repository of biomedical ontologies](https://bioportal.bioontology.org/ontologies/EDAM)
+** EDAM can be browsed via BioPortal: [A repository of biomedical ontologies](https://bioportal.bioontology.org/ontologies/EDAM)
 
 ```{note} 
 The recipe can be completed using only TeSS, as the implemented integration allows browsing via API the registries and ontology on the TeSS portal. It is, however, recommended also looking at the entries on the various portals to get a more precise view and, possibly, find other relevant elements that can be used for annotation.
@@ -77,7 +77,8 @@ This annotations can be used for filtered queries on TeSS using the syntax:
 
 `https://tess.elixir-europe.org/` + "__TeSS SUBREGISTRY__" + `standard_database_or_policy=` + "__FAIRSHARING NAME__"
 
-where "__TeSS SUBREGISTRY__" is one of the subregistries of TeSS (e.g. "materials") and "__FAIRSHARING NAME__" is the name (not the DOI) associated with the FAIRsharing entry. In the case of training materials for the European Nucleotide Archive, for example, the query sting would be:
+where "__TeSS SUBREGISTRY__" is one of the subregistries of TeSS (e.g. "materials") and "__FAIRSHARING NAME__" is the name (not the DOI) associated with the FAIRsharing entry.  
+In the case of training materials for the European Nucleotide Archive, for example, the query sting would be:
 
 [https://tess.elixir-europe.org/__materials__?standard_database_or_policy=__European+Nucleotide+Archive__](https://tess.elixir-europe.org/materials?standard_database_or_policy=European+Nucleotide+Archive)
 
@@ -95,6 +96,15 @@ These identifiers provide a reference to a "Tool Cards" of essential information
 1. Click on the "+" symbol to add the identifier to the page.
 1. Scroll to the bottom and click the orange "update" button to publish your updates.
 1. The annotation will appear on the materials page in the "External resources" section
+
+These annotations can be used for filtered queries on TeSS using the syntax:   
+
+`https://tess.elixir-europe.org/` + "__TeSS SUBREGISTRY__" + `?tools=` + "__BIOTOOLS_NAME__"
+
+where "__TeSS SUBREGISTRY__" is one of the subregistries of TeSS (e.g. "materials") and "__BIOTOOLS_NAME__" is the name (not the tool ID) associated with the bio.tools entry.   
+In the case of training materials for the Data Stewardship Wizard, for example, the query string would be: 
+
+[https://tess.elixir-europe.org/__materials__?tools=__Data+Stewardship+Wizard__](https://tess.elixir-europe.org/materials?tools=Data+Stewardship+Wizard)
 
 ### Annotating TeSS with EDAM ontology
 
@@ -120,7 +130,21 @@ In the current integration ([Version: 1.4.1](https://github.com/ElixirTeSS/TeSS/
 1. Open the "Classes" tab and type your desired term. This will search also through synonyms and provide a better suggestion than the native TeSS implementation. 
 1. Use the "preferred name" as the main EDAM term when following the block of instructions above.  
 
-Note that EDAM supports a wide range on synonyms with various degrees of semantic proximity to the main term. 
+```{note} 
+EDAM supports a wide range on synonyms with various degrees of semantic proximity to the main term.
+```
+
+EDAM-annotated entries can be retrieved using filtered queries on TeSS with the syntax: 
+
+* for EDAM’s Topics  
+`https://tess.elixir-europe.org/` + "__TeSS SUBREGISTRY__" + `?scientific_topic=` + "__EDAM_NAME__"
+
+* for EDAM’s Operations  
+`https://tess.elixir-europe.org/` + "__TeSS SUBREGISTRY__" + `?operations=` + "__EDAM_NAME__"
+
+where "__TeSS SUBREGISTRY__" is one of the subregistries of TeSS (e.g. “materials”) and "__EDAM_NAME__" is the name (not the ID) associated with the EDAM class.   
+In the case of training events with “data management” as a topic, for example, the query string would be: 
+[https://tess.elixir-europe.org/__events__?scientific_topics=__Data+management__](https://tess.elixir-europe.org/events?scientific_topics=Data+management)
 
 ---
 
