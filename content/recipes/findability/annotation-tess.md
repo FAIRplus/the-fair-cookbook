@@ -1,8 +1,6 @@
 (fcb-find-training-material-TeSS)=
 # Annotating training materials in ELIXIR TeSS with interoperable keywords/registry entries
 
----
-
 ````{panels_fairplus}
 :identifier_text: FCB___
 :identifier_link: https://w3id.org/faircookbook/FCB___
