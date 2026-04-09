@@ -1,4 +1,3 @@
-(fcb-help-recipe-template)=
 # Annotating training materials in ELIXIR TeSS with interoperable keywords/registry entries
 
 ---
