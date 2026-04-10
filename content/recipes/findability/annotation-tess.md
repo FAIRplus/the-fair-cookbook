@@ -35,7 +35,7 @@ This recipe requires working with the following resources:
 * FAIRsharing: [A registry of (meta)data standards, databases, and policies](https://fairsharing.org/)
 * bio.tools: [A registry of software tools for bioinformatics and the life sciences](https://bio.tools/)
 * EDAM: [The ontology of data analysis and data management](https://edamontology.org/)  
-** EDAM can be browsed via BioPortal: [A repository of biomedical ontologies](https://bioportal.bioontology.org/ontologies/EDAM)
+  - EDAM can be browsed via BioPortal: [A repository of biomedical ontologies](https://bioportal.bioontology.org/ontologies/EDAM)
 
 ```{note} 
 The recipe can be completed using only TeSS, as the implemented integration allows browsing via API the registries and ontology on the TeSS portal. It is, however, recommended also looking at the entries on the various portals to get a more precise view and, possibly, find other relevant elements that can be used for annotation.
