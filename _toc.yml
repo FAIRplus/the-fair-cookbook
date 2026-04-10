@@ -153,6 +153,8 @@
           title: Declaring data permitted uses #FCB035
         - file: content/recipes/reusability/provenance
           title: Introducing Provenance Information #FCB036
+        - file: content/recipes/reusability/edal
+          title: Publishing Data with the e!DAL-PGP Repository
 
     - file: content/recipes/infrastructure
       title: Infrastructure
@@ -299,5 +301,3 @@
           title: Tips and tricks
         - file: content/recipes/help/myst
           title: Markdown cheatsheet
-
-

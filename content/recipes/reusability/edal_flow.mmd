@@ -1,0 +1,15 @@
+graph TD
+  A[Start Submission] --> B{Accept DDLA?}
+  B -- No --> Z[Cancel]
+  B -- Yes --> C[Basic Info]
+  C --> D[Creators & Affiliations]
+  D --> E[Upload Data]
+  E --> F[Review & Submit]
+  F --> G[QC Process]
+  G --> H([DOI Assigned])
+
+  classDef default fill:#E1F5FE,stroke:#01579B,stroke-width:2px;
+  classDef decision fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px;
+  classDef term fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px;
+  class B decision;
+  class H term;
