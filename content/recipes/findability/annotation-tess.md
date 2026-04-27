@@ -2,8 +2,8 @@
 # Annotating training materials in ELIXIR TeSS with interoperable keywords/registry entries
 
 ````{panels_fairplus}
-:identifier_text: FCB___
-:identifier_link: https://w3id.org/faircookbook/FCB___
+:identifier_text: FCB087
+:identifier_link: https://w3id.org/faircookbook/FCB087
 :difficulty_level: 1
 :recipe_type: technical_guidance
 :reading_time_minutes: 20
