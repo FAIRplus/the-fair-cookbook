@@ -28,7 +28,7 @@ The main purpose of this recipe is:
 
 The OPSIN library is an open source tool to parse IUPAC names into chemical graphs {footcite}`Lowe2011Chemical`.
 
-OPSIN has [a website](https://opsin.ch.cam.ac.uk/) where IUPAC names are converted into other representations, including an InChIKey.
+OPSIN has [a website](https://www.ebi.ac.uk/opsin/) where IUPAC names are converted into other representations, including an InChIKey.
 
 The latter is done by the official InChI library {footcite}`Goodman2021InChI`.
 
@@ -45,10 +45,10 @@ by the download of the Bacting libraries and creation of Bacting manager objects
 Java 17 and Maven are installed with the following commands, (with a confirmation which Java is available):
 
 ```python
-apt-get install openjdk-17-jre-headless maven -qq > /dev/null
+apt-get install openjdk-21-jre-headless maven -qq > /dev/null
 import os
-os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-17-openjdk-amd64"
-update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-21-openjdk-amd64"
+update-alternatives --set java /usr/lib/jvm/java-21-openjdk-amd64/bin/java
 java -version
 ```
 
@@ -62,8 +62,10 @@ We can then continue by installing Bacting and setting up the two Bacting manage
 
 ```python
 from scyjava import config, jimport
-config.endpoints.append('io.github.egonw.bacting:managers-inchi:0.4.1')
-config.endpoints.append('io.github.egonw.bacting:managers-opsin:0.4.1')
+config.set_java_constraints(fetch=True, vendor='zulu', version='21')
+
+config.endpoints.append('io.github.egonw.bacting:managers-inchi:1.0.12')
+config.endpoints.append('io.github.egonw.bacting:managers-opsin:1.0.12')
 
 inchi_cls = jimport("net.bioclipse.managers.InChIManager")
 inchi = inchi_cls(".")
@@ -91,8 +93,8 @@ Because Bacting is written in Java and the libraries being available from
 The above code in Groovy looks like:
 
 ```groovy
-@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='0.4.1')
-@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='0.4.1')
+@Grab(group='io.github.egonw.bacting', module='managers-inchi', version='1.0.12')
+@Grab(group='io.github.egonw.bacting', module='managers-opsin', version='1.0.12')
 
 workspaceRoot = "."
 inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
