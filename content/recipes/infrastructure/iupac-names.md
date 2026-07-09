@@ -42,7 +42,7 @@ to access the OPSIN library.
 We would first need to set up Colab for Java, Maven, and [scyjava](https://pypi.org/project/scyjava/), followed
 by the download of the Bacting libraries and creation of Bacting manager objects.
 
-Java 17 and Maven are installed with the following commands, (with a confirmation which Java is available):
+Java 21 and Maven are installed with the following commands, (with a confirmation which Java is available):
 
 ```python
 apt-get install openjdk-21-jre-headless maven -qq > /dev/null
