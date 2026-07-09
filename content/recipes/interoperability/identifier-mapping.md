@@ -275,7 +275,7 @@ As a minimum, you should aim to link your dataset's persistant data identifiers 
 ```
 ````
 <!-- 
-    > * [Identifier Resolution Services](./findability/id-resolution.html) 
+    > * [Identifier Resolution Services](fcb-infra-idres) 
 -->
 
 
