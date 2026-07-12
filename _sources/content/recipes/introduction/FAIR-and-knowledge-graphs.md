@@ -336,10 +336,10 @@ CYPHER query example on Reactome: Comparison with SQL. From Fabregat et al,2018.
 ```
 ````
 
-* The [PDBe-KB](PDBe-KG https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download) is another relevant resources in the fields of
+* The [PDBe-KB](https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download) is another relevant resources in the fields of
 bioinformatics which is available as a Neo4j graph database. PDBe-KB is a community-driven resource managed by the PDBe
 team, collating functional annotations and predictions for structure data in the PDB archive, the content of which is distributed
-under CC-BY-4 license. PDFe-KB can be downloaded [here](PDBe-KG https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download).
+under CC-BY-4 license. PDBe-KB can be downloaded [here](https://www.ebi.ac.uk/pdbe/pdbe-kb/graph-download).
 
 
 
