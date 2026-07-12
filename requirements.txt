@@ -45,7 +45,7 @@ linkify-it-py==1.0.1
 markdown-it-py==0.6.2
 MarkupSafe==1.1.1
 mdit-py-plugins==0.2.6
-mistune==0.8.4
+mistune==2.0.3
 myst-nb==0.12.0
 myst-parser==0.13.6
 nbclient==0.5.3
