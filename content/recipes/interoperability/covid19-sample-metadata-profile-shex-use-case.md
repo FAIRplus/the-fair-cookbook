@@ -73,7 +73,7 @@ This recipe is adapted from work carried during the Elixir Covid-19 biohackathon
 
 >:information_source: 
 [Robert Hoendorf](https:// "title"), [Jose Emilio Labra Gayo](https:// "title"),[Thomas Liener](https:// "title"), [Nuria Queralt Rosinach](https:// "title")
-, [Tazro  Ohta](https:// "title"), [Philippe Rocca-Serra](https:// "title"), [Claus Weilland](https:// "title"), [Piotr Prins](https:// "title"),  [Danielle Welter](https:// "title"). Thomas Liener  and Danielle Welter acted as coordinator between the ontology track and the workflow track led by Piotr Prins. 
+, [Tazro  Ohta](https:// "title"), [Philippe Rocca-Serra](https:// "title"), [Clause Weilland](https:// "title"), [Piotr Prins](https:// "title"),  [Danielle Welter](https:// "title"). Thomas Liener  and Danielle Welter acted as coordinator between the ontology track and the workflow track led by Piotr Prins. 
 
 
 
@@ -211,7 +211,7 @@ $graph:
           _type: "@id"
           noLinkCheck: true
     host_id:
-        doc: Identifer for the host. If you submit multiple samples from the same host, use the same host_id for those samples
+        doc: Identifier for the host. If you submit multiple samples from the same host, use the same host_id for those samples
         type: string?
         jsonldPredicate:
           _id: http://semanticscience.org/resource/SIO_000115
@@ -290,7 +290,7 @@ The corresponding metadata acquisition web form
 ## 2. Exemplar instance data:
 
 
-When users submit information via the form (or by other programatic means), an instance YAML file is generated, which looks like this:
+When users submit information via the form (or by other programmatic means), an instance YAML file is generated, which looks like this:
 
 
 ```bash

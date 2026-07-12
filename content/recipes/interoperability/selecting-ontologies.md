@@ -32,7 +32,7 @@ width: 1000px
 name: selecting-ontologies-figure1
 alt:  Which ontology should be used?
 ---
- Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimantal Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.
+ Which ontology should be used? Depending on dataset context, domain specific resources may be mandated, such as Clinical Data Interchange Standards Consortium (CDISC), Observational Health Data Sciences and Informatics (OHDSI) or Open Biomedical Ontologies (OBO). The Experimental Factor Ontology (EFO) is specifically used by EMBL-EBI ArrayExpress to annotated dataset.
 ```
 ````
 
@@ -174,7 +174,7 @@ In research, many different model organisms are used (e.g. Dogs, Monkeys...) and
 
 #### Diseases and Phenotype
 
-Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependant on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
+Biology is a complex field and observable manifestations of biological processes in living organisms vary, dependent on genetic background and environmental factors. Working on correlating genetic features with observable (phenotypic) ones, biologists rely heavily on such variables in the quest of disease biomarkers, which could be used to identify possible therapeutic targets. The main challenge is to ensure efficient machine actionable descriptions of these observable features.
 
 
 |Scope|Name|File location|Top-Level Ontology|Licence|Issue Tracker URI|
@@ -193,7 +193,7 @@ Biology is a complex field and observable manifestations of biological processes
 | | Mammalian Phenotype (MP) | http://purl.obolibrary.org/obo/mp.owl | | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | https://github.com/obophenotype/mammalian-phenotype-ontology/issues | 
 
 
-> _<sup>*</sup>MONDO was born of an effort to harmonise disease definitions from a number sources, includig [OMIM](https://www.omim.org/) (Online Mendelian Inheritance in Man), [Orphanet](https://www.orpha.net/), EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO & NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (e.g. use of NCItaxon as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list._
+> _<sup>*</sup>MONDO was born of an effort to harmonise disease definitions from a number sources, including [OMIM](https://www.omim.org/) (Online Mendelian Inheritance in Man), [Orphanet](https://www.orpha.net/), EFO and DOID, with work in progress to include NCIt. The OWL version includes axiomatisation using CL, Uberon, GO, HP, RO & NCBITaxon. The ontology is under active development by a range of ontology and domain experts. If no other limiting requirements dictate the use of an alternative ontology (e.g. use of NCItaxon as part of a CDISC-compliant dataset), it is therefore the most recommended open source ontology from the above list._
 
 As with anatomy in the previous section, there is a growing body of organism-specific phenotype resources, such as C. elegans, Drosophila, Fission Yeast, Xenopus and Zebrafish. 
 

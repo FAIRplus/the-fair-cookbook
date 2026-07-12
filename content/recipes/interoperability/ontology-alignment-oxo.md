@@ -238,7 +238,7 @@ The corresponding results are as follows:
 ## Conclusion
 
 This recipe presented OxO, EMBL-EBI tool for performing ontology mapping as an example to demonstrate the ontology mapping workflow.
-In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercice for instance. 
+In the context of a FAIRification workflow, a tool such as OxO comes particurlary handy to augment a dataset with cross-references or replace an annotation set with another in a data integration exercise for instance. 
 
 ### What to read next?
 

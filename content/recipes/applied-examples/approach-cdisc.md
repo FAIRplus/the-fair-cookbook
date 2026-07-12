@@ -150,7 +150,7 @@ Mapping of data dictionary properties to SDTMIG variables falls into several cat
 
 For most of the scenarios listed above, with the exception of direct one-to-one matches, ETL scripts will need to be implemented in order to convert the data into an SDTM-compliant format. As the implementation of scripts was outside the scope of our mapping work, we instead implemented a template that could be used as a basis to generate the scripts. A copy of our template can be downloaded from [this URL](https://webdav-r3lab.uni.lu/public/datacatalog_documents//dataset/df780ac2-c79d-11ec-9b1d-acde48001122/APPROACH_CDISC-SDTM_mappings.xlsx).
 
-A recipe on ETL processes is available [elswhere in this resource](../interoperability/ETL-tools.md)
+A recipe on ETL processes is available [elsewhere in this resource](../interoperability/ETL-tools.md)
 
 
 ### Issues, pitfalls and caveats

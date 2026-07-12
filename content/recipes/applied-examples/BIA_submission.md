@@ -59,7 +59,7 @@ datasets.
 
 
 
-## Chosing repositories for bioimaging data
+## Choosing repositories for bioimaging data
 
 Over the last decade, the field of bioimaging has sought to develop a robust and effective bioimaging data ecosystem by
 creating bioimaging repositories and working towards their widespread adoption. There are a number of resources 
@@ -602,10 +602,10 @@ already have been described in the general metadata section.
 |Biosample | time |days post infection |
 |Biosample | genetic alteration |IFN-λ gene knockout using CRISPR/Cas9 |
 |Biosample | IFN-addition |concentration of IFN-addition |
-|Image Acqusition | microscope-type |confocal, widefield or electron microscopy |
-|Image Acqusition | magnification | from 10x to 6000x|
-|Image Acqusition | x,y resolution | in nm|
-|Image Acqusition | z resolution | in mn|
+|Image Acquisition | microscope-type |confocal, widefield or electron microscopy |
+|Image Acquisition | magnification | from 10x to 6000x|
+|Image Acquisition | x,y resolution | in nm|
+|Image Acquisition | z resolution | in mn|
 |Image file | view | X,Y,Z-section or hyperstack|
 |Image file | channels | how many channels are present in the image|
 |Image file | stained cell type |goblet, basal or ciliated cells |

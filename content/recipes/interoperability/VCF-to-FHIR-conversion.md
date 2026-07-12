@@ -71,13 +71,13 @@ The table below lists relevant use cases.
 ---
 
 The `Variant Call File` or [VCF](http://edamontology.org/format_3016) is a file format specified by the [Global Alliance for Genomic Health](https://www.ga4gh.org/genomic-data-toolkit/) to report on genetic variation as detected by a range of molecular biology techniques (e.g., PCR, GeneChip, nucleic acid sequencing). 
-It is considered to be the _de facto_ standard for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Worflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
+It is considered to be the _de facto_ standard for reporting genetic variations in their various forms. It is therefore the output for most genetic analysis pipelines (e.g., the [Galaxy Workflow](https://toolshed.g2.bx.psu.edu/) tool [`affy2vcf`](https://github.com/gregvonkuster/galaxy_tools/tree/master/tools/convert_formats/affy2vcf) )
 
 The latest version of `Variant Call File` format is v4.3, the detailed specifications of which can be found [here](http://samtools.github.io/hts-specs/VCFv4.3.pdf) 
 
 The VCF format is species agnostic, making it suitable for use in any context, from agronomy to clinical practice. In fact, it is this last use case that this particular recipe will be focusing on. Indeed, this is when bioinformatics meets medical informatics and the need to translate data into different format arises. In the world of clinical informatics, exchanging information between systems increasingly relies on Health Level 7 data standards and in particular on the Fast Healthcare Interoperability Resource (FHIR). A number of working groups focus on how to best fit clinical information within the paradigm of the HL7 FHIR representation.
 
-In this FAIR Cookbook recipe, we will highlight a software component allowing to convert a specific type of genetic variation information stored in VCF files into an HL7 FHIR compliant, JSON formated message. 
+In this FAIR Cookbook recipe, we will highlight a software component allowing to convert a specific type of genetic variation information stored in VCF files into an HL7 FHIR compliant, JSON formatted message. 
 
 The aptly named `vcf2fhir` library is a python package designed to perform this task. It is the result of work recently published by Dolin et al, 2021. {footcite}`pmid33653260`.
 
@@ -110,7 +110,7 @@ In order for the `vcf2fhir` python library to run, the following libraries need 
 
 Users running a python environment (virtual or otherwise) need to install `cython` and `wheel`, which respectively provide C-implemented extensions for speed and a code packaging library which allows installations to run without the need for building and compiling. The 'wget' component will be used to obtain test files from a web address via a command line call.
 
-Both python modules can be installed with a single invokation of the python installation `pip` command as follows:
+Both python modules can be installed with a single invocation of the python installation `pip` command as follows:
 
 ```bash
 pip install cython wheel

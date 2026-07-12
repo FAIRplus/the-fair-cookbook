@@ -149,7 +149,7 @@ At this phase, the FAIRification work has been completed by the team. The techni
 together to assess the output of FAIRification. At this point, the technical team packages all the work done and hands
 it over to the data owners. Decisions on the key learning as well as future aspects of the work take place. 
 Finally, to ensure that the work done is sustainable, the deposition of workflows and the information on steps is 
-deposited on online catalogs and recipe books such as teh Cookbook, RDMKit, IMI Data Catalog to name a few.
+deposited on online catalogs and recipe books such as the Cookbook, RDMKit, IMI Data Catalog to name a few.
 
 ### The FAIRification Template
 
@@ -273,7 +273,7 @@ The key take-homes of this recipe are:
 1. **Assemble a multi-disciplinary team**. A successful FAIRification process starts with bringing together diverse teams that include the data owners as well professionals who can tackle the legal, curatorial and technical infrastructure aspects. 
 
 ### What to read next?
-* [Prioritization of projects for FAIRification](../introduction/priorization.md)
+* [Prioritization of projects for FAIRification](../introduction/prioritization.md)
 * [Depositing in Zenodo generic repository](../findability/zenodo-deposition.md)
 * [Introduction to terminologies and ontologies](../interoperability/introduction-terminologies-ontologies.md)
 * [Creating data/variable dictionary](../interoperability/creating-data-dictionary.md)

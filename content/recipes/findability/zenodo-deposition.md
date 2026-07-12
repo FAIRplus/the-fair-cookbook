@@ -73,7 +73,7 @@ To cite `Zenodo's documentation`, here are a few reasons why using the repositor
 * Open or closed — Share e.g. anonymized clinical trial data with only medical professionals via our restricted access mode.
 * Versioning — Easily update your dataset with our versioning feature.
 * GitHub integration — Easily preserve your GitHub repository in Zenodo.
-* Usage statisics — All uploads display standards compliant usage statistics.
+* Usage statistics — All uploads display standards compliant usage statistics.
 
 
 ## 1. How to use Zenodo Deposition Web Interface?
@@ -89,7 +89,7 @@ This section guides users through the key steps to perform to organize a deposit
 ```{admonition} Tip
 :class: tip
 
-[Zenodo](https://zenodo.org/) has integrated authentication mechanism key partners such as [github](https://github.com)  and [Orcid](https://orcid.org). For [IMI](https://www.imi.europa.eu/) and for [FAIRplus](https://fairplus-project.eu), this means that consortium members can easyly login if they already have credentials on these 2 services. 
+[Zenodo](https://zenodo.org/) has integrated authentication mechanism key partners such as [github](https://github.com)  and [Orcid](https://orcid.org). For [IMI](https://www.imi.europa.eu/) and for [FAIRplus](https://fairplus-project.eu), this means that consortium members can easily login if they already have credentials on these 2 services. 
 ```
 
 ---
@@ -197,7 +197,7 @@ Setting keywords associated with the Zenodo deposition .
 
 ###  Zenodo Compatible Data Collection - Access and License information
 
-* Zenodo provides facilities to set `Access Conditions` and `License`, `Data Controler Contact Information`, as well as `Embargo Duration` if applicable.
+* Zenodo provides facilities to set `Access Conditions` and `License`, `Data Controller Contact Information`, as well as `Embargo Duration` if applicable.
 * As indicated above, it is possible to `set an Embargo Period`, if the option `embargoed access` is selected under the `Access right` section.
 
 <!-- <img src="/images/fSxOjXe.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
@@ -219,7 +219,7 @@ Choosing a License is essential.
   * Zenodo places no limit when it comes to duration of the embargo period. So submitters should check EC and IMI guidelines or local institutional requirements for guidance.
 
 
-* Setting Access Conditions/License, Data Controler Contact Information, Embargo Duration if applicable
+* Setting Access Conditions/License, Data Controller Contact Information, Embargo Duration if applicable
 
 <!-- <img src="/images/ty9rpXF.png" alt="drawing" style="width:750px;" border="1px solid black" align="top" /> -->
 
@@ -444,7 +444,7 @@ Miscellaneous Information about the Zenodo Submission.
 
 ### Finalize request and post
 
-* Finally, combine metadata and data payload in order to send a properlly formed request and obtain a DOI.
+* Finally, combine metadata and data payload in order to send a properly formed request and obtain a DOI.
 
 ```python
 data_2 = {'filename': 'rose-aroma-naturegenetics2018-treatment-group-mean-sem-report-table-example.csv'}

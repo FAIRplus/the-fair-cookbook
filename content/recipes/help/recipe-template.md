@@ -55,7 +55,7 @@ For the `Recipe Type` section, the allowed values should be picked from the foll
 
 The main purpose of this recipe is:
 
-> Provid a summary statement about the purpose of the recipe.
+> Provide a summary statement about the purpose of the recipe.
 
 ---
 
@@ -239,7 +239,7 @@ graph TD;
 
 ## Conclusion
 
-Summerize Key Learnings of the recipe.
+Summarize Key Learnings of the recipe.
  
 Suggest further reading using the following:
 ### What to read next?

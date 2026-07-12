@@ -25,7 +25,7 @@
 
 This document aims to identify the values underlying or correlated with the FAIR principles (whether they are based on ethics principles or other valuable grounds) that could be considered when data providers choose to engage in making their data or part of them FAIR. Legal measures are also included insofar as there are certain legal rules that must be respected, that are based on fundamental rights.
 
-The list, non-exhaustive, is oriented towards answering the following question: “Why to share or re-use data?” [and as a first step in this process, “Why FAIRify data?”]. 
+The list, non-exhaustive, is oriented towards answering the following question: “Why to share or reuse data?” [and as a first step in this process, “Why FAIRify data?”]. 
 
 As there will be projects related to different subjects and/or with different kinds of datasets and different stakeholders involved, the FAIRification of some of the data sets could rely on values that are not yet listed here. In that respect, all data providers, partners and participants of FAIRplus and stakeholders are invited to discuss and add any other motivations they have to make data FAIR. 
 
@@ -37,7 +37,7 @@ As there will be projects related to different subjects and/or with different ki
 ### 1. Values correlated with the FINDABLE character: universality and recognition of research
 
 
-- **Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data re-use. 
+- **Better and more inclusive research**: Findable data help overcoming barriers to data sharing among research communities, facilitating data access and data reuse. 
 
 - **Transparency**: to make data findable, data providers have to give information on the origin, process and sharing process of their FAIR data (metadata).  
 
@@ -55,7 +55,7 @@ As there will be projects related to different subjects and/or with different ki
 ### 2. Values correlated with the ACCESSIBLE character: Responsibility
 
 
-- **Accountability**:  Accessible data give the opportunity for data providers to organise a fair and clear distribution of responsibilities along the data re-use chain. Data providers must adopt efficient mechanisms to make these rules applicable.
+- **Accountability**:  Accessible data give the opportunity for data providers to organise a fair and clear distribution of responsibilities along the data reuse chain. Data providers must adopt efficient mechanisms to make these rules applicable.
 
 - **Trust**: data providers can only make their data accessible on the background of trust between them, patients, data users and medical community.  
 
@@ -81,17 +81,17 @@ As there will be projects related to different subjects and/or with different ki
 ### 4.  Values correlated with the REUSABLE character: a sense of eternity!
 
 
-- **Reciprocity**: data providers can make their data re-usable and in consequence receive recognition by the scientific community and/or the general public of their contribution beyond their initial expectation, as multiple uses increase the data impact. 
+- **Reciprocity**: data providers can make their data reusable and in consequence receive recognition by the scientific community and/or the general public of their contribution beyond their initial expectation, as multiple uses increase the data impact. 
 
-- **Benefit sharing**: making good quality data re-used is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
+- **Benefit sharing**: making good quality data reused is increasing the benefit in terms of research output of the efforts to generate these data, and multiple publications will come out of the (re) use of the same data..
 
-- **Non maleficence**: as respect of privacy and data protection are part of the requirements for re-use of data, the “non nocere” principle is at the heart of the system. FAIR data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
+- **Non maleficence**: as respect of privacy and data protection are part of the requirements for reuse of data, the “non nocere” principle is at the heart of the system. FAIR data must at the same time ensure individuals’ rights related to privacy and data protection and promote a societal good associated to research use for the benefit of society. 
 
-- **Long term view and generosity**: data re-use gives a temporal dimension to the original work done to produce the data that tends towards eternity.
+- **Long term view and generosity**: data reuse gives a temporal dimension to the original work done to produce the data that tends towards eternity.
 
-- **Freedom of research**: by allowing data to be re-used for multiple researches that might otherwise be impossible, the freedom of research is enhanced.
+- **Freedom of research**: by allowing data to be reused for multiple researches that might otherwise be impossible, the freedom of research is enhanced.
 
-- **Legitimacy of research**: the potential for re-use of data can be considered as a possibility to increase the legitimacy of an initial research and its place in society.
+- **Legitimacy of research**: the potential for reuse of data can be considered as a possibility to increase the legitimacy of an initial research and its place in society.
 
 - **Human dignity and respect for human autonomy**: making data reused can facilitate respect for the dignity of every human person. The principle of autonomy implies the respect of human freedom. In that sense, it implies that individuals have to be able to decide if they want to share or not their data. It also means that individuals have to be aware of the terms of collection and of sharing data process, the purposes of data sharing, and that they can withdraw their consent anytime. At the same time being aware of multiple research uses can give a perception of a higher societal importance of their participation in research. 
 

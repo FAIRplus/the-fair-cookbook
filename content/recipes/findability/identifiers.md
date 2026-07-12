@@ -27,7 +27,7 @@ The **FAIR principles**, under the `Findability` and the `Accessibility` chapter
 The main goals of this recipe are therefore:
 
 > To understand the purpose of a globally unique and persistent identifier and how they can be used to retrieve the associated (meta)data using a standardized communication protocol.
-> To provide explanations on how to generate globaly unique identifiers, explain what IRIs are and how they can be generated, retrieved and resolved.
+> To provide explanations on how to generate globally unique identifiers, explain what IRIs are and how they can be generated, retrieved and resolved.
 
 
 From these principles, it is necessary to explain three key processes, which are: 
@@ -250,7 +250,7 @@ URI = scheme:[//authority]path[?query][#fragment]
 ### `scheme`:
 In this structure, the `scheme` defines the protocol or application to use to obtain the resource. The list of official `scheme` is maintained by the **Internet Assigned Numbers Authority** and the following link (https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) holds the most up to date version.
 
-The most relevant `URI scheme` in the context of FAIR data and Linked Open Data are `http` and `https` which denote the `Hypertext Transfer Protocol` and the `Hypertext Tranfer Protocol Secure`.
+The most relevant `URI scheme` in the context of FAIR data and Linked Open Data are `http` and `https` which denote the `Hypertext Transfer Protocol` and the `Hypertext Transfer Protocol Secure`.
 
 ### `authority`:
 
@@ -286,15 +286,15 @@ it is often the case the `authority` is reduced to the `host` , which is then re
 ---
 
 ### `path`: 
-The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zero or more path segements separated by a `/`.
+The `path` defines the directory on the `host` where the resource is located and consists of a sequence of zero or more path segments separated by a `/`.
 
 ### `query`:
 The `query` is an optional part of the URL syntax that starts with a `?`. Typically the `query` component consists of a service of key-value pairs separated by an `&` deliminator.
 
-In the context resolvable identiers, `query` components should be avoided.
+In the context resolvable identifiers, `query` components should be avoided.
 
 ### `fragment`
-The `fragement` is an optional part of the URL syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
+The `fragment` is an optional part of the URL syntax that starts with a `#`. It identifies a component within the returned resource and is used for client side processing, e.g. to scroll to a particular section within a webpage.
 
 ## Generating Resolvable URLs
 
@@ -312,7 +312,7 @@ In a virtual example which uses a UUID for the local identifier and does not use
 https://www.example.com/5b6d0be2-d47f-11e8-9f9d-ccaf789d94a0
 ```
 
-Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI - commonly referred to as a URL) by appending the local identifier onto a namesapce.
+Taking a real life example, to make the `UniProt accession number` globally unique, one needs to provide the context in which the accession number is unique. This can be done by converting it into an `International Resource Identifier` (IRI - commonly referred to as a URL) by appending the local identifier onto a namespace.
 
 ---
 

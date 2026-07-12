@@ -155,7 +155,7 @@ The following 8 terms were excluded after the initial review, either because the
 
 | Not considered cross cutting or common enough to be included in the Metadata Schema| Comment |
 | :------------- | :------------- |
-| Rare Disease (tick box yes/no) | There is no fixed defintion of "rare disease". The condition or disease studied in a trial is included in the final list of variables|
+| Rare Disease (tick box yes/no) | There is no fixed definition of "rare disease". The condition or disease studied in a trial is included in the final list of variables|
 | Intervention Model | Covered by existing variables |
 | NCT Number | Sub-type of study ID |
 | Consent | Legal frameworks around consent vary widely and consent conditions are not captured consistently, which would make mapping historical clinical trials to the new model problematic |

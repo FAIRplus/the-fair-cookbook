@@ -396,7 +396,7 @@ You can find ready-made methods to map using R and Python for the given use case
 
 We showed how to use BridgeDb's webservices and R package to map identifiers from different data sources using a minimal dataset. 
 BridgeDb provides handy functionality to make 'omics' data more interoperable and reusable.
-As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invokation has been performed.
+As with all annotation services, it is important to bear in mind the version of the service being used as well as the data on which the service invocation has been performed.
 These are aspects of information provenance which we plan to provide in the future.
  
 ### What to read next?

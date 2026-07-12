@@ -30,7 +30,7 @@
 A software license governs the extent of use or redistribution of software, with or without software documentation.
 
 There are many software licenses in existence.
-Many of those allow the licensee to do very little, but some give you more freedom to use and re-use the licensed software.
+Many of those allow the licensee to do very little, but some give you more freedom to use and reuse the licensed software.
 
 The [https://choosealicense.com/](https://choosealicense.com/) website offers a straightforward mechanism to help you pick the best license for your project.
 

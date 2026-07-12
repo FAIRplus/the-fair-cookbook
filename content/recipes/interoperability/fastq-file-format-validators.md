@@ -259,10 +259,10 @@ The table lists technical considerations when selecting the validator, including
 | |fastq-solexa|Validate the _fastq-solexa_ format|☑️|
 |Performance| Memory||`N/A`|
 | |Speed| |`N/A`|
-|Archieve compatiablity|ENA|File validated can be submitted to the ENA archive.|☑️|
+|Achieve compatibility|ENA|File validated can be submitted to the ENA archive.|☑️|
 ||ArrayExpress|File validated can be submitted to Array Express.|☑️|
 ||SRA|File validated can be submitted to the SRA archive.|☑️|
-|Interface|Command line interface|Can be used in shell and intergerated in pipe commands|☑️|
+|Interface|Command line interface|Can be used in shell and integrated in pipe commands|☑️|
 |License|Licensed||☑️[GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html)|
 | |Commercial use|Can be used for commercial purpose|☑️|
 |Code|Open source|Source code available on public platforms|☑️|

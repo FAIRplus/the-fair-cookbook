@@ -233,7 +233,7 @@ The process involves:
 > - It works in most cases, especially if the file transfer is "one-time" batch of files.
 > - It can be considered a good short term or “one-off” solution.
 
-This common process is described in a number of publically available resources, examples in the `What to read next?` section below.
+This common process is described in a number of publicly available resources, examples in the `What to read next?` section below.
 
 
 ## Possible improvements from the state of this recipe:
