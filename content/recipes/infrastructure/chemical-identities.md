@@ -42,7 +42,7 @@ The main purpose of this recipe is:
 ## Creating InChI and SMILES identifiers for chemical structures
 
 To run the below scripts, you need a [Groovy](https://groovy.apache.org/download.html) installation.
-The Groovy scripts use version 2.7.1 of the [Chemistry Development Kit](https://cdk.github.io/)
+The Groovy scripts use version 2.12 of the [Chemistry Development Kit](https://cdk.github.io/)
 (see {footcite}`Willighagen2017`). This library and its use in Groovy is further explain in
 the book [Groovy Cheminformatics with the Chemistry Development Kit](https://egonw.github.io/cdkbook/).
 Check this git repository for more detailed use instructions and where to find the tools:
@@ -110,7 +110,7 @@ with BridgeDb and its metabolite ID mapping databases to get additional identifi
 ## Authors
 
 ````{authors_fairplus}
-Egon: Writing - Original Draft, Conceptualization
+Egon: Writing - Original Draft, Conceptualization, Writing - Review & Editing
 Philippe: Writing - Review & Editing
 ````
 
